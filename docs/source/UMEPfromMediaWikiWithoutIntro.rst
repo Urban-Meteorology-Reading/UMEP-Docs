@@ -1,0 +1,3512 @@
+Getting Started
+---------------
+
+``OverviewUMEP is developed as a plugin for ``\ ```QGIS`` <http://www.qgis.org>`__\ ``. Two versions are available:``
+
+-  *Long term release* - This version is recommended for most users.
+-  *Development release* - This version is for testing. Could be
+   unstable.
+
+For a more detailed description including how to install QGIS on a
+Windows PC (see below) or watch this instruction
+`video <https://www.youtube.com/watch?v=ZEw_DVl772Q>`__. You can find
+more introductory videos on how to use UMEP on our
+`YouTube-channel <https://www.youtube.com/channel/UCTPkXncD3ghb5ZTdZe_u7gA>`__.
+
+UMEP has been developed using Python 2.7.x and QGIS 2.x in a Windows
+environment. Since QGIS is a multi-platform software system it works on
+other platforms as well. UMEP is still under development so there may be
+missing documentation and instability. Please report any issues to the
+`code repository <https://bitbucket.org/fredrik_ucg/umep>`__. Also, have
+a look in `FAQ <http://urban-climate.net/umep/UMEP_Manual#FAQ>`__ for
+further installation tips and issues.
+
+``Recommended Installation Steps of QGIS on Windows ``
+
+-  Visit `QGIS <http://www.qgis.org>`__ and go to the download page.
+   Preferably, choose the `**OSGEO4W Network Installer
+   (64-bit)** <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__,
+   start the installation and choose *installation (64-bit) For Advanced
+   Users*
+
+-  Start the installation and choose *Express Desktop Install*. This
+   includes a number of OSGEO-software as well as a separate python
+   installation.
+
+**``Long-term``\ ````\ ``release``**\ `` - Download and installation of the UMEP-plugin from within QGIS ``
+
+#. Start **QGIS**
+#. Go to: *Plugins -> Manage and Install Plugins...*
+#. Search for **UMEP**
+#. Click **Install Plugin** (or *Upgrade* if already have an older
+   version installed from before).
+
+**``Development``\ ````\ ``release``**\ `` - Download and installation of the UMEP-plugin from the UMEP code repository (unstable)``
+
+#. If you have an installed version of UMEP in your QGIS, uninstall it
+   by going to "Plugins -> Manage and Install Plugins -> Installed ->
+   UMEP" and click **Uninstall plugin**
+#. To download UMEP from the repository click this
+   `link <https://bitbucket.org/fredrik_ucg/umep/downloads>`__ and
+   download repository
+#. Close QGIS if open
+#. Extract the downloaded zip archive into the folder
+   **C:\Users\\\\.qgis2\python\plugins**. If the folder **plugins** does
+   not exist, install any plugin using *Plugins -> Manage and Install
+   Plugins* and the folder should appear.
+#. Rename the extracted folder to **UMEP**
+#. Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If
+   not, go to "Plugins -> Manage and Install Plugins -> All" and search
+   for UMEP. Make sure that you also tick in the box *Show also
+   experimental plugins* in the "Settings"-tab.
+
+**NOTE**: Remove old versions of UMEP from the plugin directory before
+you update.
+
+``Test dataset Can be used try some of the tools out (``\ ```testdata_UMEP.zip`` <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__\ ``).``
+
+Adding missing Python libraries and other OSGeo functionalities
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Some of the plugins in the UMEP tool, for example The WATCH data plugin,
+requires some Python libraries such as **pandas** and **scipy** that
+might not been included when you installed QGIS. If so, it is necessary
+to install them to make this plugin work. Below are instructions on how
+to this for different operation systems. The same procedures can also be
+used to obtain other tools and functionalities from the OSGeo
+repository. **Note**: In order for scipy to work you will also need to
+make sure *pillow* is installed.
+
+! Operating System ! Installation instructions
+
+``Linux  Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use ``\ **``pip``**\ `` (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type ``\ *``sudo``\ ````\ ``pip``\ ````\ ``install``\ ````\ ``pandas``*\ `` if you want to install this library. In order to install pip open a terminal and type: ``\ *``sudo``\ ````\ ``easy_install``\ ````\ ``pip``*\ ``. You might need to restart QGIS to get it to work.``
+
+Or refer to
+`startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
+to modify start up file of QGIS by including the paths to **pandas** and
+**scipy**. An example of startup.py may look like:
+
+| ``import sys``
+| ``sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')``
+
+``Windows  There are two options available:``
+
+1. As Windows has no Python installation included, QGIS make use of a
+separate Python installation added when QGIS was installed on your PC.
+This results in that pip cannot be used directly. However, if you
+installed QGIS according to the recommendations in `Getting
+started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+you should have a **OSGeo4W shell** installed where you can use pip to
+add desired Python libraries. **OSGeo4W shell** is found in the Windows
+start menu. You need to run as an administrator of your PC. To do this,
+right-click on **OSGeo4W shell** and choose *run as administrator*. In
+the command window that appear, write:
+
+``pip install pandas``
+
+2. |pandas.png_frame_right_Installation_of_pandas|\ Restart the
+*installation (64-bit) For Advanced Users* (see Getting started) and
+choose *Advanced Install*. When you come up to Select Packages search
+for pandas and click on *Skip* until you see a version number of pandas
+(see left picture). Finish the installation. **This method can also be
+used to include other missing libraries such as gdal etc.**
+
+\ **PLEASE NOTICE!**\ 
+
+Due to a recent update of **netCDF4** library (1.3.0), the **netCDF4**
+library has a version conflict related to the **numpy** version
+currently used in QGIS 2.18.x. This results in that some plugins in UMEP
+will fail, e.g. LQf.
+
+We have submitted an issue regarding this to the QGIS community.
+Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to
+**1.2.9**. This is easiest done by opening the **OSGeo4W shell** and run
+the two following commands:
+
+``  pip uninstall netCDF4``
+
+``  pip install netCDF4==1.2.9``
+
+``Mac OS X  Follow the instructions for Linux. ``\ ***``Note``***\ ``: this approach is tested to be working under Mac OS X 10.11.5. ``
+
+Other platforms require the packages to be installed to the QGIS Python
+path, which differs depending on operating system. Or refer to
+`startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
+to modify start up file of QGIS by including the paths to **pandas** and
+**scipy**. An example of startup.py may look like:
+
+| ``import sys``
+| ``sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')``
+
+Pre-Processor
+-------------
+
+Meteorological Data: MetPreprocessor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Contributors/Developers  Fredrik Lindberg``
+
+``Introduction MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well. ``
+
+*Input data* can include any number of header lines and should be
+separated by conventional separators (e.g. comma, space, tab, etc). The
+*output format* is space-separated and includes time-related variables
+of year, day of year, hour and minute. The plugin is able to process
+other input time formats including month, day of month, etc.
+
+``Location ``
+
+The Meteorological data pre-processor is located at
+
+-  UMEP
+
+   -  Pre-processor
+
+      -  Meteorological data
+
+``Dialog box ``\ |``MetPreProcessor.jpg_frame_left_Interface_for_inputting_an_ascii_data_file_into_the_correct_format_for_SUEWS``|
+
+| `` Dialog sections``
+
+``top left  Select an existing text file with meteorological data at a temporal resolution between 5 min and 180 min (3 hours) that is divisible by 5 min. ``
+
+-  Note the model runs at a time step of 5-min.
+-  At least hourly resolution is recommended.
+-  The current version of the SEBE-model (April, 2018) requires hourly
+   data.
+
+``middle left  Specify time-related columns in the imported data file.``
+
+``lower left  Perform quality control (``\ **``recommended``**\ ``)``
+
+Select to perform a simple quality control which will check the input
+data for unreasonable values of each variable.
+
+``right  Choose columns from imported data file that correspond to the meteorological variables used in UMEP.  ``
+
+`` colspan="2"   ``
+
+-  Click **Export data** to generate the UMEP meteorological input file.
+   (a window will open allowing the location to be specified).
+-  **Close** closes the plugin.
+
+| `` Variables included in UMEP meteorological input file``
+| `` * if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact us``
+
+!No. !Header name !Description !Accepted range\* !Comments
+
+| ``1``
+| ``iy``
+| ``Year [YYYY]``
+| ``Not applicable``
+
+| ``2``
+| ``id``
+| ``Day of year [DOY]``
+| ``1 to 365 (366 if leap year)``
+
+| ``3``
+| ``it``
+| ``Hour [H]``
+| ``0 to 23``
+
+| ``4``
+| ``imin``
+| ``Minute [M]``
+| ``0 to 59``
+
+| ``5  ``
+| ``qn``
+| ``Net all-wave radiation [W m``\ :sup:```-2```\ ``]``
+| `` -200 to 800``
+
+| ``6``
+| ``qh``
+| ``Sensible heat flux [W m``\ :sup:```-2```\ ``]``
+| `` -200 to 750``
+
+| ``7``
+| ``qe``
+| ``Latent heat flux [W m``\ :sup:```-2```\ ``]``
+| `` -100 to 650``
+
+| ``8``
+| ``qs``
+| ``Storage heat flux [W m``\ :sup:```-2```\ ``]``
+| `` -200 to 650``
+
+| ``9``
+| ``qf``
+| ``Anthropogenic heat flux [W m``\ :sup:```-2```\ ``]``
+| ``0 to 1500``
+
+| ``10``
+| ``U``
+| ``Wind speed [m s``\ :sup:```-1```\ ``]``
+| ``0.001 to 60``
+
+| ``11``
+| ``RH``
+| ``Relative Humidity [%]``
+| ``5 to 100``
+
+| ``12``
+| ``Tair``
+| ``Air temperature [Â°C]``
+| `` -30 to 55``
+
+| ``13``
+| ``pres``
+| ``Surface barometric pressure [kPa]``
+| ``90 to 107``
+
+| ``14``
+| ``rain``
+| ``Rainfall [mm]``
+| ``0 to 30  ``
+| ``(per 5 min) this should be scaled based on time step used``
+
+| ``15``
+| ``kdown``
+| ``Incoming shortwave radiation [W m``\ :sup:```-2```\ ``]``
+| ``0 to 1200``
+
+| ``16``
+| ``snow``
+| ``Snow [mm]``
+| ``0 to 300``
+| ``(per 5 min) this should be scaled based on time step used``
+
+| ``17``
+| ``ldown``
+| ``Incoming longwave radiation [W m``\ :sup:```-2```\ ``]``
+| ``100 to 600``
+
+| ``18``
+| ``fcld``
+| ``Cloud fraction [tenths]``
+| ``0 to 1``
+
+| ``19``
+| ``wuh``
+| ``External water use [m``\ :sup:```3```\ ``]``
+| ``0 to 10``
+| ``(per 5 min) scale based on time step being used``
+
+| ``20``
+| ``xsmd``
+| ``(Observed) soil moisture [m``\ :sup:```3```\ `` m``\ :sup:```-3```\ `` or kg kg``\ :sup:```-1```\ ``]``
+| ``0.01  to 0.5``
+
+| ``21``
+| ``lai``
+| ``(Observed) leaf area index [m``\ :sup:```2```\ `` m``\ :sup:```-2```\ ``]``
+| ``0 to 15``
+
+| ``22``
+| ``kdiff``
+| ``Diffuse shortwave radiation [W m``\ :sup:```-2```\ ``]``
+| ``0 to 600``
+
+| ``23``
+| ``kdir``
+| ``Direct shortwave radiation [W m``\ :sup:```-2```\ ``]``
+| ``0 to 1200``
+| ``Should be perpendicular to the Sun beam. One way to check this is to compare direct and global radiation and see if kdir is higher than global radiation during clear weather. Then kdir is measured perpendicular to the solar beam.``
+
+| ``24``
+| ``wdir   ``
+| ``Wind direction [Â°]``
+| ``0 to 360``
+
+| ``Remarks``
+
+#. If decimal time is ticked in, **day of year column** must be stated
+   and the **decimal time column** should be numbers between 0 and 1.
+#. If you have problems with importing a data set. Do a time series plot
+   using small points. Check (1) are there any data gaps (there can be
+   no gaps) (2) are the columns lined up throughout the data setes (e.g
+   if variable suddenly changes incorrectly, you may have columns
+   misaligned).
+#. Gapfilling - there are a number of techniques that can be used for
+   this
+
+   #. A fast way to get started (you can come back and refine to a more
+      appropriate method)
+
+      #. Linear fit between one or two missing periods using the data on
+         either side
+      #. Create diurnal average for each variabel for short periods
+         (e.g. 2 weeks) and use these values to fill missing data
+
+Meteorological Data: Download data (WATCH)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Contributors  ``
+
+Andy Gabey (University of Reading), Ting Sun (Reading), Helen Ward
+(Reading), Lingbo Xue (Reading), Zhe Zhang (Reading), Tom Kokkonen
+(University of Helsinki), Leena JÃ¤rvi (Helsinki), Sue Grimmond
+(Reading)
+
+``Introduction Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global ``\ ```WATCH`` <http://www.eu-watch.org/>`__\ `` forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information. ``
+
+The WATCH data downloader allows climate reanalysis data to be extracted
+for a specific location and period of interest, and (optionally)
+transformed into annual files in a format suitable for models within
+UMEP.
+
+-  The `WFD <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+   dataset is based on 40-year
+   `ECMWF <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+   Re-analysis data (ERA-40) and is available at half-degree resolution
+   for 1901-2001.
+-  The
+   `WFDEI <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+   dataset is based on
+   `ERA <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__-interim
+   re-analysis data and is available at half-degree resolution for
+   1979-2012.
+
+! Variables available ! Comments
+
+``Wind speed [m s``\ :sup:```-1```\ ``]  10 m instantaneous``
+
+`` Air temperature [K]  2 m instantaneous``
+
+`` Specific humidity [kg kg``\ :sup:```-1```\ ``]  2 m instantaneous``
+
+`` Pressure [Pa]  Instantaneous surface pressure``
+
+`` Incoming shortwave radiation [W m``\ :sup:```-2```\ ``]  Average over previous 3 hours in WFDEI and over next 3 hours in WFD, surface flux``
+
+`` Incoming longwave radiation [W m``\ :sup:```-2```\ ``]  Average over previous 3 hours in WFDEI and over next 3 hours in WFD, surface flux ``
+
+`` Rainfall rate [kg m``\ :sup:```-2```\ `` s``\ :sup:```-1```\ ``]  Average over previous 3 hours in WFDEI and over next 3 hours in WFD. CRU and GPCC bias correction options. ``
+
+`` Snowfall rate [kg m``\ :sup:```-2```\ `` s``\ :sup:```-1```\ ``]  Average over previous 3 hours in WFDEI and over next 3 hours in WFD. CRU and GPCC bias correction options. ``
+
+***Note:***
+
+-  The current downscaling procedure **only** deals with WFDEI data; a
+   module for WFD is under development.
+-  All precipitation corrections are currently conducted based on
+   **CRU** option.
+-  Data is drawn from a subset of the full WATCH dataset that does not
+   cover the entire globe but includes Europe and the majority of Asian
+   countries excluding Russia at this time. More regions may be added in
+   the future. The map below shows current coverage:
+
+.. figure:: watch_masked.png_center_thumb_350px_Available_data_in_WATCH_downloader_(overlaid_on_countries)
+   :alt: watch_masked.png_center_thumb_350px_Available_data_in_WATCH_downloader_(overlaid_on_countries)
+
+   watch_masked.png_center_thumb_350px_Available_data_in_WATCH_downloader_(overlaid_on_countries)
+
+``Location``
+
+The WATCH data pre-processor is located at:
+
+-  UMEP
+
+   -  Pre-processor
+
+      -  Meteorological data
+
+         -  WATCH data
+
+| ``Message about missing Python libraries``
+| ``Follow the instruction at ``\ ```link`` <http://urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries>`__\ ``.``
+
+| ``Obtaining WATCH data via UMEP``
+
+.. figure:: watch_downloader_2.png_frame_left_Integrated_WATCH_data_downloader:_control_panel
+   :alt: watch_downloader_2.png_frame_left_Integrated_WATCH_data_downloader:_control_panel
+
+   watch_downloader_2.png_frame_left_Integrated_WATCH_data_downloader:_control_panel
+
+| ``Running the tool``
+| `` The downloader is separated into two sections:``
+
+#. **Download climate data**: Retrieves WATCH data for all variables for
+   the location and period of interest. This saves a NetCDF (.nc) file
+   that contains all variables at 3 h resolution that can be used
+   directly by ExtremeFinder.
+
+   -  *Latitude* and *longitude*: WGS84 co-ordinates of the study
+      location. Data is extracted from the WATCH grid cell that contains
+      these co-ordinates.
+   -  *Start time* and *End Time*: The time range of data to be
+      downloaded (inclusive; to the nearest month)
+
+#. **Refine downloaded data**: Before the WATCH data can be loaded into
+   models such as SUEWS, it must be downscaled, separated into annual
+   files and refined. These controls perform the refinement on the .nc
+   file downloaded in part (1) and save the results as a text file that
+   can be loaded into further models. The resulting file contains data
+   at 1 hour intervals, with estimates or placeholders for
+   meteorological variables not present in WATCH.
+
+   -  *Site height*: Height above sea level of the desired measurement
+      site. This applies adjustments to meteorological parameters based
+      on the height above ground level. Data are available from 1
+      January 1979 to 31 December 2015.
+   -  *UTC offset*: Adjusts the UTC time used in the original WATCH
+      dataset to a local time (e.g., for Beijing time, UTC Offset = 8 h
+      should be specified). **NOTE:** As of now the tool does not
+      support half hour-timezones.
+   -  *Rain hours per 3h*: Rain events in the location of interest may
+      be very short â€“ information that is lost because the WATCH data
+      is produced at 3 h intervals, within which it is assumed rain is
+      continuous. This control limits the duration of rain in the 1-hour
+      file to 1, 2 or 3 hours within each 3 hour interval.
+   -  *Path to LQF results*: Incorporates results data from the LQF
+      model into the disaggregated data. Note that this feature produces
+      one file per LQF grid cell and year.
+
+``Considerations ``
+
+-  **Spatial resolution**: The WATCH data are provided for half-degree
+   grid boxes. In regions with substantial heterogeneity within these
+   grid boxes data at the grid-box scale may be not be representative of
+   your study site (e.g. mountainous regions, urban areas).
+-  **Temporal resolution**: The data are downloaded at 3 h resolution
+   and are linearly downscaled to 1 h time steps during the refinement
+   step, during which radiation data are corrected for sunrise/sunset.
+
+``References``
+
+-  Kokkonen et al. (2017, in review)
+-  Ward et al. (2017, in review)
+-  Weedon GP, Gomes S, Viterbo P, Shuttleworth WJ, Blyth E, Ã–sterle H,
+   Adam JC, Bellouin N, Boucher O and Best MJ (2011) Creation of the
+   WATCH Forcing Data and Its Use to Assess Global and Regional
+   Reference Crop Evaporation over Land during the Twentieth Century.
+   `Journal of Hydrometeorology 12,
+   823-848 <http://journals.ametsoc.org/doi/abs/10.1175/2011JHM1369.1>`__
+-  Weedon GP, Balsamo G, Bellouin N, Gomes S, Best MJ and Viterbo P
+   (2014) The WFDEI meteorological forcing data set: WATCH Forcing Data
+   methodology applied to ERA-Interim reanalysis data. `Water Resour.
+   Res. 50,
+   7505-7514 <http://onlinelibrary.wiley.com/doi/10.1002/2014WR015638/abstract>`__
+-  Tan YS (2015) MSc Thesis, University of Reading
+-  Xue L (2016) MSc Thesis, University of Reading
+
+Spatial Data: Spatial Data Downloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Developer  Andy Gabey (Univiersity of Reading)``
+
+``Introduction The Spatial Data Downloader downloads geo-datasets useful for UMEP applications. Only the necessary section of the data is downloaded, so that disk use and download time are minimised. ``
+
+`` Location ``
+
+The spatial data downloader resides at:
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Spatial Data
+
+         -  Spatial Data Downloader
+
+``Dialog box ``
+
+.. figure:: Downloader.png_650px_Dialog_for_the_Spatial_Data_Downloader_plugin
+   :alt: Downloader.png_650px_Dialog_for_the_Spatial_Data_Downloader_plugin
+
+   Downloader.png_650px_Dialog_for_the_Spatial_Data_Downloader_plugin
+
+`` Category and available datasets  Each category contains multiple datasets, which are revealed by clicking the category name. To download a dataset, select it from the list, specify the geographic extent and press "Download"``
+
+`` Abstract  Information about the selected dataset, including citation information. ``
+
+``Bounding box The geographic extent of the region to download (maximum download size is 500x500 pixels in the case of raster data). The current QGIS canvas extent can also be used by clicking ``\ **``Use``\ ````\ ``canvas``\ ````\ ``extent``**
+
+``Reproject to current project CRS  The downloaded data is saved in its original CRS by default. This option reprojects the saved data to the project CRS and performs resampling, the resolution of which is controlled by the "Pixel resolution in CRS units" box.``
+
+``Get data  Begins the processing and download of the selected dataset. A prompt will appear asking where to save the data, and it will be loaded into QGIS upon completion. ``
+
+``Update list  Refreshes the catalogue of available datasets. This is also updated when QGIS starts. ``
+
+``Close  Closes the plugin.``
+
+Spatial Data: DSM Generator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`` Developer Nils Wallenberg``
+
+``Introduction Digital Surface Models (DSMs) is not always available for the area you want to investigate. The ``\ **``DSM``\ ````\ ``Generator``**\ `` can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from ``\ ```Open``\ ````\ ``Street``\ ````\ ``Map`` <http://www.openstreetmap.org>`__\ `` data, is also available.``
+
+`` Location ``
+
+The DSM Generator is located at
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Spatial Data
+
+         -  DSM Generator
+
+``Dialog box ``
+
+.. figure:: DSMGenerator.png_none_Dialog_for_the_DSM_Generator_plugin
+   :alt: DSMGenerator.png_none_Dialog_for_the_DSM_Generator_plugin
+
+   DSMGenerator.png_none_Dialog_for_the_DSM_Generator_plugin
+
+``Dialog sections ``
+
+``top  input DEM data is specified``
+
+``middle upper  input polygon with height data or OSM is specified``
+
+``middle  map extent is specified``
+
+``middle lower  to specify the output DSM and output resolution``
+
+``bottom  to run the calculations``
+
+`` Digital Elevation Model  A raster file containing elevation values needed to create the DSM``
+
+`` Polygon Vector File  A polygon vector file including height values of buildings needed to create the DSM``
+
+`` Necessary attributes  Building height values in meters``
+
+`` Use Open Street Map  Tick this in if you do not have a polygon layer with building heights. Open Street Map (Â© OpenStreetMap contributors) data will be used instead. If no building height is found ``\ **``building``\ ````\ ``level``\ ````\ ``height``**\ `` will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 * 3 = 9 meters high.``
+
+`` Save OSM as shapefile  Tick this in if you want to save the Open Street Map data as a polygon layer. This can be used if you want to look at what values has been used and if you want to add values manually.``
+
+`` Map extent  Set either to map canvas extent or extent from layer. Extent have to be smaller or equal to the raster DEM extent specified in the top section.``
+
+`` Digital Surface Model  Set output for the generated DSM. Also set output resolution.``
+
+`` Run  Starts the calculations``
+
+`` Close  Closes the plugin.``
+
+`` Output One GeoTIFF is created, a DSM.``
+
+``Remarks ``
+
+-  The DEM raster and map canvas should be in a projection with meters
+   as units.
+-  Raster elevation data (DEM) can be retrieved from e.g.
+   `OpenDEM <http://www.opendem.info/>`__.
+-  If you use Open Street Map make sure you read `Open Street
+   Map <http://www.openstreetmap.org/copyright>`__ Â© OpenStreetMap
+   contributors.
+
+Spatial Data: Tree Generator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`` Developer Fredrik Lindberg``
+
+``Introduction Information 3d vegetation is not a common spatial information available. The ``\ **``Tree``\ ````\ ``Generator``**\ `` can be used to create or alter a vegetation CDSM and TDSM (see ``\ ```abbreviations`` <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__\ ``). Be using information from a point layer where the location of the points specifies the tree positions and the attributes sets the shape of the trees, it is possible to produce a the 3d vegetation needed for e.g. Mean radiant temperature modelling (SOLWEIG) or Urban Energy Balance modelling (SUEWS) in UMEP.``
+
+`` Location ``
+
+The Tree Generator is located at
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Spatial Data
+
+         -  Tree Generator
+
+``Dialog box ``
+
+.. figure:: Treegeneratorsolweig.png_none_Dialog_for_the_Tree_Generator_plugin
+   :alt: Treegeneratorsolweig.png_none_Dialog_for_the_Tree_Generator_plugin
+
+   Treegeneratorsolweig.png_none_Dialog_for_the_Tree_Generator_plugin
+
+``Dialog sections ``
+
+``top  input data is specified``
+
+``bottom  to specify the output and to run the calculations``
+
+`` Point vector file  A point vector file including the appropriate attributes for generating the vegetation DSMs``
+
+`` Necessary attributes ``
+
+``Tree typeTwo different tree types (shapes) are currently included: 1 = conifer and 2 = decidouos. There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.``
+
+``Total heightThis is the total height of the tree from the ground (magl).``
+
+``Trunk height This is the height up to the bottom of the canopy (magl).``
+
+``Diameter This is the circular diameter of the tree in meter.``
+
+`` Bollean building grid exist  Tick this in if a boolen building grid exist for your model domain. This can be generated from the SOLWEIG-plugin.``
+
+`` Building and Ground DSM  A DSM consisting of ground and building heights.``
+
+`` Ground DEM  A DEM cosisting of ground heights.``
+
+``Building grid A grid where building pixels are 0 and all other pixels are 1.``
+
+``Merge with existing Vegetation DSMs  Tick this in if you want to add/remove vegetation units from existing Vegetation DSMs.``
+
+``Vegetation Canopy DSMA DSM consisting of pixels with vegetation heights above ground.``
+
+``Vegetation Trunk Zone DSM A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground.``
+
+`` Output Folder A specified folder where the result will be saved.``
+
+`` Run  starts the calculations``
+
+`` Close  closes the plugin.``
+
+`` Output Two geoTIFFs are created, one CDSM and one TDSM.``
+
+``Remarks ``
+
+-  All DSMs need to have the same extent and pixel size.
+-  To ceate a bush, set trunk height to 0.
+-  The SOLWEIG plugin cn be used to create the boolean building grid as
+   well as a TDSM based on a CDSM.
+
+Spatial Data: LCZ Converter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``class="wikitable"``
+
+``Contributors  ``
+
+Natalie Theeuwes (University of Reading), Andy Gabey (Reading), Fredrik
+Lindberg (Gothenburg), Sue Grimmond (Reading)
+
+``Introduction The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the ``\ ```WUDAPT``\ ````\ ``portal`` <http://www.wudapt.org/>`__\ ``. The local climate zone are urban area classified based on the ``\ ```Stewart``\ ````\ ``and``\ ````\ ``Oke``\ ````\ ``(2012)`` <http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1>`__\ `` scheme. ``
+
+The raster LCZ maps can be converted into maps of land cover fraction
+and morphometric properties. For this conversion we use paved, building
+and pervious fraction for each LCZ from `Stewart et al.
+(2014) <http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract>`__.
+However, what exactly the pervious fraction consists of (grass, trees,
+bare soil or water) needs to be user-specified. Similarly, morphometric
+properties for the buildings are specified in this scheme, but the
+vegetation morphometric properties still need to be specified by the
+user.
+
+.. figure:: LCZ_description.png_700px_thumb_left_The_definition_of_the_different_local_climate_zones_(LCZ)
+   :alt: LCZ_description.png_700px_thumb_left_The_definition_of_the_different_local_climate_zones_(LCZ)
+
+   LCZ_description.png_700px_thumb_left_The_definition_of_the_different_local_climate_zones_(LCZ)
+
+Note: In UMEP we refer to the rural LCZ's as 101, 102, 103, 104, 105,
+106 and 107 instead of A, B, C, D, E, F and G.
+
+``Location``
+
+The Image Morphometric Parameters Calculator (Point) is located at
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Spatial data
+
+         -  LCZ converter
+
+``Dialog box``
+
+|LCZdialog1.png_700px_thumb_right| |LCZdialog2.png_700px_thumb_left|
+|LCZdialog3.png_700px_thumb_right|
+
+The first tab in the LCZ converter dialog shows a table. This table
+includes land cover fractions and morphometric properties for buildings
+and vegetation for each local climate zone. If the default values in the
+table are not appropriate for the selected city the user has a choice
+between editing the table directly or using the "pervious distribution"
+tab in order to provide approximate values for the distribution between
+grass, bare soil, trees and water and the height of the vegetation.
+
+Within the "pervious distribution" tab there are two options to change
+the pervious fraction distribution: Either per LCZ using the "Separate
+LCZâ€™s" button or for all LCZ's together using "Same for all LCZâ€™s".
+When selecting the first option **make sure to select the LCZ raster
+first**. Based on the LCZ raster, the dropdown boxes will show the LCZ
+classes ordered by the frequency of occurrence. Select the classes to
+specify the pervious distributions for and select the most appropriate
+pervious land cover options and vegetation heights.
+
+When choosing the "Same for all LCZâ€™s" option: choose the appropriate
+pervious land cover fractions and vegetation heights for all urban and
+all rural LCZ classes.
+
+| ``Dialog sections``
+| ``class="wikitable"``
+
+``upper Select the LCZ raster layer and the vector grid the land cover fractions should be computed for. ``
+
+``middle Tab: Pervious distribution ``
+
+Set the distribution of pervious surface fractions for each LCZ
+separately or all at the same time.
+
+``middle Tab: Table Alters the land cover fractions and building and vegetation heights for each LCZ towards more accurate values.``
+
+``lower  Specify output and run the calculations.``
+
+`` LCZ raster  Select the LCZ raster from the ``\ ```WUDAPT``\ ````\ ``database.`` <http://www.wudapt.org>`__
+
+`` Vector grid Select your predefined polygon grid (seeÂ Vector -> Research Tools -> Vector Grid; select polygons not lines)``
+
+``Adjust default parameters Tick this box if you would like to edit the table below with the land use fractions and tree and building heights for each of the local climate zones.``
+
+| `` Separate LCZâ€™s Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ. ``
+| ``class="wikitable"``
+
+``LCZâ€™s:  List of LCZâ€™s in the raster, ordered by most frequent occurrence. Select the LCZ(s) for which you would like to specify the pervious fraction. ``
+
+``Fraction distributions: Select the percentages of each pervious land cover class for the selected LCZ. ``
+
+``Height of trees: Select the range of tree heights most applicable for that LCZ. ``
+
+Note for rural classes you are only able to specify the distribution of
+tree species. For more detailed distribution of pervious fractions,
+please alter the table.
+
+| `` Same for all LCZâ€™s: Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time. ``
+| ``class="wikitable"``
+
+``Urban:  Select the percentages of each pervious land cover class for all urban LCZâ€™s.``
+
+``Rural: Select the percentages of each pervious land cover class for all rural LCZâ€™s. Note for rural classes you are only able to specify the distribution of tree species. ``
+
+``Height of trees: Select the range of tree heights most applicable for the urban and rural LCZâ€™s.``
+
+For more detailed distribution of pervious fractions, please alter the
+table.
+
+``Update Table  This updates the table from the default values to the user-specified distributions of the pervious fractions. Please check the table, to make sure your changes have taken effect.``
+
+``File PrefixA prefix that will be included in the beginning of the output files.``
+
+``Add results to polygon gridTick this in if you would like to save the results in the attribute table for your polygon vector grid.``
+
+``Output Folder A specified folder where result will be saved.``
+
+``RunStarts the calculation``
+
+``Close  Closes the plugin.``
+
+``Output Three files are saved after a successful run. ``
+
+-  One with the landcover fractions for each grid cell
+-  One with the morphometric properties for the building for each grid
+   cell
+-  One with the morphometric properties for vegetation for each grid
+   cell
+
+``Remarks``
+
+-  Rural LCZ's are marked as 101, 102, etc instead of A, B, etc.
+-  Issues using .sdat rasters has been reported. GeoTiffs are
+   recommended.
+
+``References  ``
+
+Stewart, I.D. and Oke, T.R. 2012. Local Climate Zones for urban
+temperature studies. Bulletin of the American Meteorological Society,
+93:
+`1879-1900 <http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1>`__.
+
+Stewart, I.D., Oke, T.R., and E.S. Krayenhoff. 2014. Evaluation of the
+â€˜local climate zoneâ€™ scheme using temperature observations and model
+simulations. International Journal of Climatology, 34:
+`1062-80 <http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract>`__.
+
+Urban Geometry: Sky View Factor Calculator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`` Contributor ``
+
+Fredrik Lindberg (Gothenburg), Sue Grimmond (Reading)
+
+``Introduction``
+
+The Sky View Factor plugin can be used to generate pixel wise sky view
+factor (SVF) using ground and building digital surface models (DSM).
+Optionally, vegetation DSMs could also be used. By definition, SVF is
+the ratio of the radiation received (or emitted) by a planar surface to
+the radiation emitted (or received) by the entire hemispheric
+environment (Watson and Johnson 1987). It is a dimensionless measure
+between zero and one, representing totally obstructed and free spaces,
+respectively. The methodology that is used to generate SVF here is
+described in Lindberg and Grimmond (2010).
+
+`` LocationThe Sky View Factor Calculator is located at ``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Geometry
+
+         -  Sky View Factor
+
+``Dialog box ``
+
+.. figure:: SVFCalculator.png_none_Sky_View_Factor_Calculator_start_window
+   :alt: SVFCalculator.png_none_Sky_View_Factor_Calculator_start_window
+
+   SVFCalculator.png_none_Sky_View_Factor_Calculator_start_window
+
+`` Dialog sections``
+
+``top  Specify input data``
+
+bottom Specify output data and run calculation
+
+| ``Building and Ground DSM``
+| ``A DSM (geoTIFF) consisting of ground and building heights.``
+
+| ``Vegetation Canopy DSM ``
+| ``A DSM (geoTIFF) consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+| ``Vegetation Trunk Zone DSM ``
+| ``A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+| `` Use Vegetation DSMs ``
+| ``Tick this box if you want to include vegetation (trees and bushes) in the final SVF.``
+
+| ``Trunk Zone DSM Exist``
+| ``Tick this box if a trunk zone DSM already exists.``
+
+| ``Transmissivity of Light Through Vegetation (%)``
+| ``Percentage of light that is penetrating through vegetation. The default value is set to 3 % according to Konarska et al. (2013).``
+
+| ``Percentage of Canopy height ``
+| ``If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.``
+
+``Output Folder Specify folder where results will be saved.``
+
+`` Run  Starts the calculations.``
+
+``Add Result to Project  If ticked, the total SVF raster will be added to the map canvas.``
+
+`` Close  Closes the plugin.``
+
+| ``Output 16 files (geoTIFF) will be saved if vegetation DSM is used. Otherwise, 5 SVFs are saved. ``
+| ``class="wikitable"``
+
+!File !Description
+
+``SkyViewFactor.tif Total SVF, i.e. amount of sky that is seen from each pixel. ``
+
+`` SVF different directions Four cardinal points``
+
+`` SVF based on various fractions  Only buildings, only vegetation etc. For a detailed description, see Lindberg and Grimmond (2011). ``
+
+``Example``\ |``Output_Skyview.jpg_frame_none_Example_of_(left)_input_data_-_ground_and_building_DSM_(grayscale),_DSM_overlaid_with_a_canopy_DSM_(yellow_to_green)._Right:_the_resulting_SVF_-light_highest_SVF``|
+
+| ``Remarks ``
+
+-  All DSMs need to have the same extent and pixel size.
+-  This plugin is computationally intensive i.e. large grids will take a
+   lot of time and very large grids will not be possible to use. Large
+   grids e.g. larger than 4,000,000 pixels should be tiled before.
+
+``References ``
+
+-  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B (2013).
+   Transmissivity of solar radiation through crowns of single urban
+   treesâ€”application for outdoor thermal comfort modelling. `Theoret.
+   Appl. Climatol.,
+   1â€“14 <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
+-  Lindberg F, Grimmond CSB (2010) Continuous sky view factor maps from
+   high resolution urban digital elevation models. `Clim Res
+   42:177â€“183 <http://www.int-res.com/abstracts/cr/v42/n3/p177-183/>`__
+-  Lindberg, F., Grimmond, C.S.B., 2011a. The influence of vegetation
+   and building morphology on shadow patterns and mean radiant
+   temperatures in urban areas: model development and evaluation.
+   `Theoret. Appl. Climatol. 105,
+   311â€“323 <http://link.springer.com/article/10.1007/s00704-010-0382-8>`__
+-  Watson ID, Johnson GT (1987) Graphical estimation of skyview-factors
+   in urban environments. `J Climatol 7:
+   193â€“197 <http://onlinelibrary.wiley.com/doi/10.1002/joc.3370070210/abstract>`__
+
+Urban Geometry: Wall Height and Aspect
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``IntroductionThe wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.``
+
+`` Location The Sky View Factor Calculator is located at ``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Geometry
+
+         -  Wall Height and Aspect
+
+``Dialog box``
+
+.. figure:: WallHeight.png_none_Wall_Height_and_Aspect_Calculator_start_window
+   :alt: WallHeight.png_none_Wall_Height_and_Aspect_Calculator_start_window
+
+   WallHeight.png_none_Wall_Height_and_Aspect_Calculator_start_window
+
+| ``Building and Ground DSM``
+| ``A DSM (geoTIFF) consisting of ground and building heights.``
+
+| ``Calculate Wall Aspect``
+| ``Tick this box if you want to include estimation and output of a wall aspect grid. This calculation is computational intensive and will make your computer work for a while (depending on the size of the input DSM).``
+
+| ``Lower Limit for Wall Height (m)``
+| ``This limit gives the lowest height of a building wall.``
+
+| ``Output File for Wall Aspect Raster ``
+| ``Name of the output file of the aspect raster.``
+
+| ``Output File for Wall Height Raster ``
+| ``Name of the output file of the aspect raster.``
+
+| `` Run ``
+| `` Starts the calculations.``
+
+| `` Add Result to Project ``
+| ``If ticked, raster(s) will be added to the map canvas.``
+
+``Close  Closes the plugin.``
+
+| ``Output ``
+| ``Two different files (geoTIFF) will be saved if wall aspect is calculated.    ``
+
+``Example ``
+
+.. figure:: Output_Wall_Height.jpg_none_Example_of_input_data_(left)_and_the_resulting_wall_height_raster_(right).
+   :alt: Output_Wall_Height.jpg_none_Example_of_input_data_(left)_and_the_resulting_wall_height_raster_(right).
+
+   Output_Wall_Height.jpg_none_Example_of_input_data_(left)_and_the_resulting_wall_height_raster_(right).
+
+`` Remarks ``
+
+-  This plugin make use of **Scipy** which in turn make use of
+   **Pillow**. If this plugin is malfunctioning, try to
+   install/reinstall these packages (see
+   `here <http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities>`__).
+-  **NOTE**: The azimuth of the wall is estimated based on a 9 meter
+   linear feature. This implies that coarser pixel resolution gives less
+   pixels and thus a more imprecise measure of wall azimuth as the
+   number of pixels will be lower. It it therefore recommended that use
+   pixel resolution not greater than 2 meter in order to obtain a
+   reasonable result.
+-  Wall pixels will be located â€˜insideâ€™ of the building footprint.
+-  The aspect algorithm gives reasonable result but improvements could
+   be made by e.g. using a vector line layer which could be used to
+   populate the wall pixels with aspect values.
+
+``References ``
+
+-  Goodwin NR, Coops NC, Tooke TR, Christen A, Voogt JA (2009)
+   Characterizing urban surface cover and structure with airborne lidar
+   technology. `Can J Remote Sens
+   35:297â€“309 <http://www.tandfonline.com/doi/abs/10.5589/m09-015>`__
+-  Lindberg F., Jonsson, P. & Honjo, T. and WÃ¤stberg, D. (2015) Solar
+   energy on building envelopes - 3D modelling in a 2D environment
+   `Solar Energy 115
+   369â€“378 <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
+-  Lindberg F., Grimmond, C.S.B. and Martilli, A. (2015) Sunlit
+   fractions on urban facets - Impact of spatial resolution and approach
+   `Urban Climate DOI:
+   10.1016/j.uclim.2014.11.006 <http://www.sciencedirect.com/science/article/pii/S221209551400090X>`__
+
+Urban Land Cover: Land Cover Reclassifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`` Contributor  Fredrik Lindberg (Gothenburg) ``
+
+``Introduction The Land Cover Reclassifier is a simple plugin that can be used to create a UMEP land cover raster grid. The land cover fractions included in UMEP are:``
+
+``1 Paved  Paved surfaces (e.g. roads, car parks)``
+
+``2  Buildings  Building surfaces``
+
+``3 Evergreen Trees  Evergreen trees and shrubs``
+
+``4 Deciduous Trees  Deciduous trees and shrubs``
+
+``5  Grass  Grass surfaces``
+
+``6 Bare soil  Bare soil surfaces and unmanaged land``
+
+``7 Water  Open water (e.g. lakes, ponds, rivers, fountain)``
+
+It is not necessary to use this plugin to reclassify into a UMEP land
+cover dataset. This reclassification can also be done in other
+reclassification tools such a r.reclass in GRASS etc., just as long as
+the seven different land cover types is populated with the correct
+values (above).
+
+``Location``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Land Cover
+
+         -  Land Cover Reclassifier
+
+``Dialog box ``
+
+.. figure:: landcoverreclassifier.png
+   :alt: landcoverreclassifier.png
+
+   landcoverreclassifier.png
+
+``Dialog sections``
+
+``upper Select raster land cover dataset to be reclassified into the UMEP land cover classes``
+
+`` middle Choose interval values to be classified into a certain UMEP land cover class. ``
+
+-  Not all lines and boxes need to be filled in, but multiple lines are
+   available in case many different intervals are to be classified as
+   the same land cover class.
+
+``lower  Specify the output file (.tiff) etc.``
+
+``Input raster Any valid raster dataset (float or integer) loaded into QGIS will appear in this dropdown list. Choose the one that includes your land cover information.``
+
+``Land cover classes Fill the interval values that you want to reclassify into a certain cover class. All values not included will appear as 0 in the output land cover raster. This should be avoided.``
+
+``Output file Location and filename (geoTIFF) are specified here.``
+
+``Run Starts the reclassification.``
+
+``Close Closes the plugin.``
+
+Urban Land Cover: Land Cover Fraction (Point)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorsFredrik Lindberg (Gothenburg), Niklas Krave (Gothenburg)``
+
+``IntroductionThe Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see ``\ ```#Pre-Processor:``\ ````\ ``Urban``\ ````\ ``Land``\ ````\ ``Cover:``\ ````\ ``Land``\ ````\ ``Cover``\ ````\ ``Reclassifier``\ ````\ ``Land``\ ````\ ``Cover``\ ````\ ``Reclassifier`` <#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier_Land_Cover_Reclassifier>`__\ ``) from a point location based on a land cover raster grid.``
+
+A land cover grid suitable for the processor in UMEP can be derived
+using the Land Cover Classifier. The fraction will vary depending on
+what angle (wind direction) you are interested in. Thus, this plugin is
+able to derive the land cover fractions for different directions.
+
+``LocationThe Land Cover Fraction (Point) is located at ``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Land Cover
+
+         -  Land Cover Fraction (Point)
+
+``Dialog box ``
+
+.. figure:: Land_Cover_Reclass.png_none_Start_Dialog_for_the_Land_cover_Fraction_(Point)_package
+   :alt: Land_Cover_Reclass.png_none_Start_Dialog_for_the_Land_cover_Fraction_(Point)_package
+
+   Land_Cover_Reclass.png_none_Start_Dialog_for_the_Land_cover_Fraction_(Point)_package
+
+``Dialog section``
+
+`` upper  Select a point on the map canvas by either clicking a location or selecting an existing point from a point vector layer. ``
+
+`` middle  Specify the area of interest where the morphometric parameters are calculated. Set the search interval in degrees. ``
+
+`` lower  Specify the input data regarding land cover fraction raster as well as specifying output and for running the calculations.``
+
+| ``Select Point on Canvas ``
+| ``Click to create a point from where the calculations will take place. When you click the button, the plugin will be disabled until you have clicked the map canvas.``
+
+| ``Use Existing Single Point Vector Layer``
+| ``Select if you want to use a point from a vector layer that already exists and is loaded to the QGIS-project. The Vector point layer drop down list will be enabled and include all point vector layers available.``
+
+| ``Generate Study Area``
+| ``This button is connected to the Search distance (m). When you click it, a circular polygon layer (Study area) is generated. This is the area that will be used to obtain the land cover fractions.``
+
+| `` Wind Direction Search Interval (Degrees) ``
+| ``This decides the interval in search directions for which the morphometric parameters will be calculated.``
+
+| ``UMEP Land Cover Grid ``
+| ``A integer raster land cover grid (e.g. geoTIFF) consisting of the various land covers specified above.``
+
+| ``File Prefix ``
+| ``A prefix that will be included in the beginning of the output files.``
+
+`` Output Folder Where the result will be saved.``
+
+``Run  Starts the calculations.``
+
+`` Close  Closes the plugin.``
+
+| ``Output``
+| ``Two different files are saved after a successful run. ``
+
+#. **anisotropic** results: land cover fractions for each wind direction
+   as specified are included.
+#. **isotropic** results: all directions are integrated into one value
+   for each land cover fraction.
+
+Urban Land Cover: Land Cover Fraction (Grid)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg), Niklas Krave (Gothenburg)``
+
+``Introduction  The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see ``\ ```#Urban``\ ````\ ``Land``\ ````\ ``Cover:``\ ````\ ``Land``\ ````\ ``Cover``\ ````\ ``Reclassifier``\ ````\ ``Land``\ ````\ ``Cover``\ ````\ ``Reclassifier`` <#Urban_Land_Cover:_Land_Cover_Reclassifier_Land_Cover_Reclassifier>`__\ ``) from a point location based on a land cover raster grid. ``
+
+A land cover grid suitable for the processor in UMEP can be derived
+using the Land Cover Classifier. The fraction will vary depending on
+what angle (wind direction) you are interested in. Thus, this plugin is
+able to derive the land cover fractions for different directions. It is
+the same as the Land Cover Fraction (Point) except that this plugin
+calculates the fractions for each polygon object in polygon vector
+layer. The polygons should preferable be squares or any other regular
+shape. To create such a grid, built in functions in QGIS can be used
+(see *Vector -> Research Tools -> Vector Grid...*).
+
+``Location The Land Cover Fraction (Grid) pre-processor is located at ``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Morphology
+
+         -  Land Cover Fraction (Grid)
+
+`` Dialog Box  ``
+
+.. figure:: LandCoverFractionGrid2.png_none_Start_dialog_for_the_Land_Cover_Fraction_(Grid)
+   :alt: LandCoverFractionGrid2.png_none_Start_dialog_for_the_Land_Cover_Fraction_(Grid)
+
+   LandCoverFractionGrid2.png_none_Start_dialog_for_the_Land_Cover_Fraction_(Grid)
+
+``Dialog sections``
+
+`` upper  Sets the parameters for the area of interest where the fractions are calculated. You also set the search interval in degrees and from where the search should take place within each grid. ``
+
+``middle  Specifies the input data regarding polygon layer and the land cover raster grid that should be used. ``
+
+``lower  Specifies output and runs the calculations.``
+
+| ``Search Throughout the Grid Extent ``
+| ``Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the ``\ **``Search``\ ````\ ``distance``**\ `` can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.``
+
+.. figure:: Grid_Extent.png_none_Search_Throughout_the_Grid_Extent
+   :alt: Grid_Extent.png_none_Search_Throughout_the_Grid_Extent
+
+   Grid_Extent.png_none_Search_Throughout_the_Grid_Extent
+
+``Wind Direction Search Interval (Degrees)  This decides the interval in search directions for which the morphometric parameters will be calculated.``
+
+| ``Vector Polygon Grid ``
+| ``Here the grid polygon layer should be specified.``
+
+| ``ID Field ``
+| ``Choose an attribute from the selected polygon layer that will be used to separate the different polygon objects from each other. An attribute field of unique numbers or letters should be used.``
+
+| ``Add results to polygon grid ``
+| ``Tick this in if you would like to save a isotropic results in the attribute table for your polygon vector grid.``
+
+| ``UMEP Land Cover Grid ``
+| ``An integer raster land cover grid (e.g. geoTIFF) consisting of the various land covers specified above.``
+
+| ``File Prefix ``
+| ``A prefix that will be included in the beginning of the output files.``
+
+| ``Ignore NoData pixels``
+| ``Tick this in if NoData pixels should be ignored and calculation of grid should be performed eventhough NoData pixels exists within that grid. Nodata pixels are set to bare soil (6).``
+
+| ``Output Folder``
+| ``A specified folder where result will be saved.``
+
+``Run Starts the calculations.``
+
+``Close Closes the plugin.``
+
+`` Output Two different files per polygon objects are saved after a successful run. ``
+
+#. **anisotropic** results: land cover fractions for each wind direction
+   as specified are included.
+#. **isotropic** results: all directions are integrated into one value
+   for each land cover fraction.
+
+If the raster data includes no data values within a polygon object, this
+grid will not be considered in the calculation.
+
+``Remarks Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the ``\ ```repository`` <https://bitbucket.org/fredrik_ucg/umep/issues>`__\ ``).``
+
+Urban Morphology: Morphometric Calculator (Point)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| ``class="wikitable"``
+| ``How to Cite Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).``
+
+-  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH
+   Halios 2017: Evaluation of urban local-scale aerodynamic parameters:
+   implications for the vertical profile of wind and source areas
+   Boundary Layer Meteorology 164 183â€“213 doi:
+   [10.1007/s10546-017-0248-z
+   https://link.springer.com/article/10.1007/s10546-017-0248-z]
+-  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in
+   cities: inclusion of vegetation Journal of Wind Engineering &
+   Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+
+``Contributors``
+
+Fredrik Lindberg (Gothenburg), Christoph Kent (Reading), Brian Offerle
+(previously Indiana University; Tyrens), Sue Grimmond (Reading), Niklas
+Krave (Gothenburg)
+
+``Introduction The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and a DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.``
+
+``class="wikitable"``
+
+!Morphometric parameters !Description
+
+`` Mean building height (z``\ :sub:```H```\ ``)  Average building height measured from ground level [m].``
+
+`` Standard deviation of building heights (z``\ :sub:```Hs```\ ``).  Standard deviation of building heights [m].``
+
+`` Maximum building height (z``\ :sub:```Hmax```\ ``).  Height of the tallest building within the study area [m]``
+
+`` Plan area index (?``\ :sub:```P```\ ``)  Area of building surfaces relative to the total ground area.``
+
+`` Frontal area index (?``\ :sub:```F```\ ``) Area of building walls normal to wind direction relative to the total ground area.``
+
+`` Roughness length (z``\ :sub:```0```\ ``) A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].``
+
+``Zero-plane displacement height (z``\ :sub:```d```\ ``) Height above ground where the wind speed is 0 m s``\ :sup:```-1```\ `` as a result of obstacles to the flow such as trees or buildings [m].``
+
+``Location``
+
+The Morphometric Calculator (Point) is located at
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Morphology
+
+         -  Morphometric Parameters (Point)
+
+``Dialog box``
+
+.. figure:: Morph_Calc_point.png_none_Start_Dialog_for_the_Morphometric_Calculator_(Point)_package
+   :alt: Morph_Calc_point.png_none_Start_Dialog_for_the_Morphometric_Calculator_(Point)_package
+
+   Morph_Calc_point.png_none_Start_Dialog_for_the_Morphometric_Calculator_(Point)_package
+
+| ``Dialog sections``
+| ``class="wikitable"``
+
+``upper Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer. ``
+
+``middle upper ``
+
+-  Set the parameters for the area of interest where the morphometric
+   parameters are calculated.
+-  Set the search interval in degrees.
+
+``middle lower  Specify the input data regarding buildings and ground. ``
+
+``lower  Specify output and run the calculations.``
+
+`` Select Point on Canvas Click on this button to create a point from where the calculations will take place. When you click button, the plugin will be disabled until you have clicked the map canvas.``
+
+`` Use Existing Single Point Vector Layer Select if you want to use a point from a vector layer that already exist and are loaded to the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.``
+
+`` Generate Study Area This button is connected to the Search distance (m) and when you click the button a circular polygon layer (Study area) is generated. This is the area that will be used to obtain the morphometric parameters.``
+
+`` Wind Direction Search Interval (Degrees) This decides the interval in search directions for which the morphometric parameters will be calculated.``
+
+`` Raster DSM (only Building or Vegetation) ExistSelect if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.``
+
+``Raster DSM (3D Object and Ground) A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (meters above sea level).``
+
+`` Raster DEM (only Ground) A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).``
+
+``Raster DSM (only 3D Objects) A DSM (e.g. geoTIFF) consisting of pixels with object (e.g. buildings or vegetation) heights above ground. Pixels where no objects are present should be set to zero.``
+
+`` Roughness Calculation MethodOptions to choose methods for roughness calculations regarding zero displacement height (zd) and roughness length (z0) are available. ``
+
+``File PrefixA prefix that will be included in the beginning of the output files.``
+
+``Output Folder A specified folder where result will be saved.``
+
+`` RunStarts the calculation``
+
+``Close  Closes the plugin.``
+
+`` Output Two different files are saved after a successful run. ``
+
+#. **Anisotropic** result where the morphometric parameters for each
+   wind direction as selected are included.
+#. **Isotropic** results where all directions are integrated into one
+   value for each parameter.
+
+``Remarks``
+
+All DSMs need to have the same extent and pixel size.
+
+``References  ``
+
+Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas
+derived from analysis of surface form. `J Appl Meteorol 38:
+1262-1292 <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
+
+Urban Morphology: Morphometric Calculator (Grid)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| ``class="wikitable"``
+| ``How to citeKent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).``
+
+-  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH
+   Halios 2017: Evaluation of urban local-scale aerodynamic parameters:
+   implications for the vertical profile of wind and source areas
+   Boundary Layer Meteorology 164 183â€“213 `doi:
+   10.1007/s10546-017-0248-z <https://link.springer.com/article/10.1007/s10546-017-0248-z>`__
+-  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in
+   cities: inclusion of vegetation Journal of Wind Engineering &
+   Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+
+``Contributors Christoph Kent (Reading),Fredrik Lindberg (Gothenburg), Brian Offerle (previously Indiana University; Tyrens), Sue Grimmond (Reading), Niklas Krave (Gothenburg)``
+
+``IntroductionThe Morphometric Calculator (Grid) pre-processor calculates various morphometric parameters based on digital surface models. ``
+
+This plugin is the same as Morphometric Calulator (Point) except that it
+calculates the parameters for each polygon object in the polygon vector
+layer. The polygons should preferably be squares or any other regular
+shape. To create such a grid, built in functions in QGIS can be used
+(see Vector -> Research Tools -> Vector Grid...).
+
+`` Location``
+
+The Morphometric Calculator (Grid) is located at
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Morphology
+
+         -  Morphometric Calculator (Grid)
+
+``Dialog box ``
+
+.. figure:: Morph_Calc.png_none_Start_Dialog_for_the_Morphometric_Calculator_package
+   :alt: Morph_Calc.png_none_Start_Dialog_for_the_Morphometric_Calculator_package
+
+   Morph_Calc.png_none_Start_Dialog_for_the_Morphometric_Calculator_package
+
+| `` Dialog sections ``
+| ``class="wikitable"``
+
+``upperSpecifies the area of interest where the morphometric parameters are calculated. ``
+
+-  Set the search interval in degrees and from where the search should
+   take place within each grid.
+
+| ``middle  Specifies the input data regarding 3D objects and ground as well as specifying what grid that should be used. ``
+| ``lower  Specifies output and runs the calculations.``
+
+`` Search Throughout the Grid Extent ``
+
+-  Select if the search should be performed from one side of the grid to
+   the opposite side.
+-  Select the other option (Search from Grid Centroid if the search
+   should start from the centroid of the grid. Setting the **Search
+   distance** can then allow for the search to extent beyond the grid.
+   See the figure below for illustration. The left one performs a search
+   using the grid extent whereas the right illustrates a search from the
+   centroid and extending outside of the grid.
+
+.. figure:: Grid_Extent.png_none_Grid_Extent_Options
+   :alt: Grid_Extent.png_none_Grid_Extent_Options
+
+   Grid_Extent.png_none_Grid_Extent_Options
+
+`` Wind Direction Search Interval (degrees) This decides the interval in search directions for which the morphometric parameters will be calculated.``
+
+``Vector Polygon Grid Here the grid polygon layer should be specified.``
+
+``ID FieldChoose an attribute from the selected polygon layer that will be used to separated the different polygon objects from each other. An attribute field of unique numbers or letters should be used.``
+
+| ``Add results to polygon grid ``
+| ``Tick this in if you would like to save a isotropic results in the attribute table for your polygon vector grid.``
+
+`` Raster DSM (only 3D Objects) Exist Tick this in if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.``
+
+`` Raster DSM (3D Objects and Ground) A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (metres above sea level).``
+
+`` Raster DEM (only Ground)A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).``
+
+``Raster DSM (only 3D Objects) A DSM (e.g. geoTIFF) consisting of pixels with object (e.g. buildings or vegetation) heights above ground. Pixels where no objects are present should be set to zero.``
+
+``Roughness calculation Method Options to choose methods for roughness calculations regarding zero-plane displacement height (zd) and roughness length (z0) are available. ``
+
+``File Prefix A prefix that will be included in the beginning of the output files.``
+
+| `` Ignore NoData pixels``
+| ``Tick this in if NoData pixels should be ignored and calculation of grid should be performed eventhough NoData pixels exists within that grid. Nodata pixels are set to the average pixel values of the DEM.``
+
+`` Output Folder A specified folder where result will be saved.``
+
+`` RunStarts the calculations``
+
+``Close Closes the plugin``
+
+`` Output Two different files are saved after a successful run. ``
+
+#. **Anisotropic** result where the morphometric parameters for each
+   wind direction as selected are included.
+#. **Isotropic** results where all directions are integrated into one
+   value for each parameter. If the raster data include no data values
+   within a polygon object, this grid will not be considered in the
+   calculation.
+
+``Remarks``
+
+-  All DSMs need to have the same extent and pixel size.
+-  Polygon grids must be squared (or rectangular) and allinged with the
+   CRS used. This will be fixed in future versions so that any shaped
+   grid can be used (see issue #12 in the
+   `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__).
+
+``References  ``
+
+-  Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas
+   derived from analysis of surface form. `J Appl Meteorol 38:
+   1262-1292 <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
+-  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH
+   Halios 2017: Evaluation of urban local-scale aerodynamic parameters:
+   implications for the vertical profile of wind and source areas
+   Boundary Layer Meteorology 164 183â€“213 `doi:
+   10.1007/s10546-017-0248-z <https://link.springer.com/article/10.1007/s10546-017-0248-z>`__
+-  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in
+   cities: inclusion of vegetation Journal of Wind Engineering &
+   Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+
+Urban Morphology: Source Area (Point)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``class="wikitable"``
+
+``How to cite Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b). ``
+
+-  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH
+   Halios 2017: Evaluation of urban local-scale aerodynamic parameters:
+   implications for the vertical profile of wind and source areas
+   Boundary Layer Meteorology 164 183â€“213 `doi:
+   10.1007/s10546-017-0248-z <https://link.springer.com/article/10.1007/s10546-017-0248-z>`__
+-  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in
+   cities: inclusion of vegetation Journal of Wind Engineering &
+   Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+
+`` Contributors Christoph Kent (Reading), Fredrik Lindberg (Gothenburg),  Kormann and Mexiner (2001), Kljun et al. (2015)``
+
+``IntroductionThe Source Area or ``\ *``Footprint``\ ````\ ``Model``*\ `` plugin calculates various morphometric parameters based on digital surface models and source area calculations. Footprint models can be used to determine the likely position and influence of the surface area which is contributing to a turbulent flux measurement at a specific point in time and space with imposed boundary conditions (e.g. meteorological conditions, sources/sinks of passive scalars or surface characteristics). The principle of footprint models is that the measured flux is the integral of all contributing surface elements, with a â€˜footprint functionâ€™ describing the relative fractional contribution of a discretisized area.``
+
+Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001)
+analytical footprint model; (ii) Kljun et al. (2015).
+
+The mathematical basis of Kormann and Meixner (2001) includes a
+stationary gradient diffusion formulation, height independent cross-wind
+dispersion, power law profiles of mean wind velocity and eddy
+diffusivity and a power law solution of the two-dimensional
+advection-diffusion equation. The final solution of the footprint
+function is calculated by fitting the power laws (mean wind and eddy
+diffusivity) to Monin-Obukhov similarity profiles. As with all models
+the limitations should be appreciated which include (but are not limited
+to) assumptions of Monin-Obukhov similarity theory, the use of power law
+profiles, assumptions of horizontally homogeneous flow and assumptions
+of stationarity during the meteorological or scalar variable input
+period (i.e. their averaging period; typically 30 â€“ 60 minutes).
+
+Kljun et al. (2015) is a two-dimensional parameterisation for
+flux-footprint prediction which builds upon the footprint
+parameterisation of Kljun et al. (2004b) by providing the width and
+shape of footprint estimates, as well as explicitly considering surface
+roughness length. It is developed and evaluated from simulations of the
+backward Lagrangian stochastic particle dispersion model LPDM-B (Kljun
+et al., 2002) and demonstrated to be appropriate for a wide range of
+boundary layer conditions and measurement heights. It can therefore
+provide footprint estimates for a wide range of real-case applications.
+
+When using pre-determined values of z\ :sub:`d` and z\ :sub:`0`, the
+horizontal wind speed is calculated internally to the respective source
+area models. This ensures the boundary layer equations used within the
+models are internally consistent.
+
+A ground and 3D object DSM and a DEM should be used as input data. In
+addition if vegetation heights above ground level (i.e. trees and
+bushes) are available (CDSM) this can also be used. However, a CDSM need
+not be used and it is also possible to only use a 3D object DSM with no
+ground heights.
+
+Note that the source area calculations are for one iteration. For the
+determination of roughness parameters, several iterations are
+recommended until the values converge (see Kent et al. 2017a).
+
+| `` Tutorial Available ``
+| `` Yes``
+
+`` Location The pre-processor Footprint Model (Point) is located at ``
+
+-  UMEP
+
+   -  Pre-Processor
+
+      -  Urban Morphology
+
+         -  Image Morphometric Parameters (Point)
+
+`` Dialog box ``
+
+.. figure:: Footprint.png_none_Start_dialog_for_the_Source_Area_Model_(Point)_package
+   :alt: Footprint.png_none_Start_dialog_for_the_Source_Area_Model_(Point)_package
+
+   Footprint.png_none_Start_dialog_for_the_Source_Area_Model_(Point)_package
+
+| ``Dialog sections``
+| ``class="wikitable"``
+
+``upper  Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer. ``
+
+``middle upper  ``
+
+-  Select if only buildings or both buildings and ground heights are
+   available.
+-  Specify the input data for buildings and ground.
+
+``middle upper 2 ``
+
+-  Select if vegetation heights are available.
+-  Specify the input data for buildings and ground.
+-  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully
+   porous)
+
+``middle lower ``
+
+Select input parameters to source area model: specify if a file is used,
+or values from the dialog box.
+
+``lower  Specify output options and run calculations.``
+
+``Select Point on Canvas  To create a point for where the calculations will take place. When you click the button, the plugin will be disabled until you have clicked the map canvas.``
+
+``Use Existing Single Point Vector LayerSelect if you want to use a point from a vector layer that already exist and is loaded in the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.``
+
+``Raster DSM (only Building) ExistSelect if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.``
+
+`` Raster DSM (3D Objects and Ground)A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (metres above sea level).``
+
+``Raster DEM (only Ground)A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).``
+
+`` Vegetation Canopy DSM A CDSM (e.g. geoTIFF) consisting of pixels with vegetation heights above ground. Pixels where no objects are present should be set to zero.``
+
+Use Input File on Specify Input Parameters An input text file (.txt or
+.csv) containing the required inputs to the model (see below) with
+associated time stamps. For example:
+
+| ``iy id it imin z_0_input z_d_input z_m_input sigv Obukhov ustar dir h por ``
+| ``2014 1 0 0 1.1671 8.1697 50.3 1.4805 -5457.9644 0.8460 193.8650 1000.0000 60.0000``
+| ``2014 1 0 30 1.4007 9.8050 50.3 0.9616 1081.7260 0.5046 185.5874 1000.0000 60.0000``
+| ``2014 1 1 0 1.3738 9.6168 50.3 0.9870 854.9901 0.4849 189.0444 1000.0000 60.0000``
+| ``2014 1 1 30 1.2768 9.3872 50.3 1.2345 1002.2290 0.5876 202.3300 1000.0000 60.0000``
+
+``[Header: year, day of year, hour, minutes of averaging period, roughness length for momentum, zero plane displacement height for momentum, measurement height of sensor, standard deviation of lateral wind, Obukhov length, friction velocity, wind direction, boundary layer height, vegetation porosity].``
+
+ Note In this example, the measurement height of the sensor (z_m_input)
+is 50.3 m
+
+.. raw:: html
+
+   <div id="ConditionsAnchor">
+
+Conditions for analysis
+
+.. raw:: html
+
+   </div>
+
+``class="wikitable"``
+
+! Parameter/Variable ! Defintion
+
+`` Roughness Length for Momentum First order estimation of roughness length for momentum (z``\ :sub:```0```\ ``) for this wind direction [m].``
+
+``Zero Displacement Height for Momentum First order estimation of the zero-plane displacement height for momentum (z``\ :sub:```d```\ ``) for this wind direction. [m].``
+
+``Measurement Height Height of sensor above ground level [m].``
+
+``Standard Deviation (sigma) of Cross Wind Standard deviation of the wind in the y direction (lateral wind) [m s``\ :sup:```-1```\ ``].``
+
+`` Obukhov LengthIndication of atmospheric stability for use in Monin-Obukhov similarity theory [m].``
+
+``Friction Velocity Shear stress represented in units of velocity for non-dimensional scaling [m s``\ :sup:```-1```\ ``].``
+
+`` Wind Direction Prevailing wind direction during averaging period [degrees].``
+
+`` Boundary layer height Height of planetary boundary layer during averaging period [m].``
+
+`` Vegetation porosity Aerodynamic porosity of vegetation, 0% is impermeable, 100 % is fully porous [%].``
+
+``Maximum Fetch Considered in metres The furthest distance upwind considered in the calculation of the footprint function [m].``
+
+Footprint model Specify the footprint model to use: Kormann and Meixner
+(2001) or Kljun et al. (2015)
+
+Roughness Calculation Method Here, options to choose methods for
+roughness calculations regarding zero displacement height (z:sub:`d`)
+and roughness length (z:sub:`0`) are available.
+
+`` RT Rule of thumb (c.f. Grimmond and Oke 1998)``
+
+| `` Rau  Raupach (1994)``
+| `` Bot  Bottema (1998)``
+
+`` Mac MacDonald et al. (1998)``
+
+``  Mho  Millward-Hopkins et al. (2011)``
+
+`` Kan Kanda et al. (2013)``
+
+``File Prefix A prefix that will be included in the beginning of the output files.``
+
+`` Output Folder A specified folder where result will be saved.``
+
+`` RunStarts the calculations.``
+
+`` Close Closes the plugin.``
+
+`` Output Two different outputs are generated:``
+
+#. A raster grid which represents the fractional contribution of each
+   pixel in the array to turbulent fluxes measured at the sensor (i.e.
+   the footprint function). Each pixel of this grid will be of the same
+   order to the input grid. Because the user can determine the maximum
+   fetch extent that is considered, each pixel in the footprint function
+   is weighted as a percentage of the pixel of maximum contribution. If
+   the footprint model is set to run for more than one time period (i.e.
+   integrated over time), the footprint functions are summed and
+   weighted as a percentage of the pixel of maximum contribution.
+#. A text file which specifies the time dimensions of measurements, the
+   initial aerodynamic and meteorological parameters which were input to
+   the model and finally the weighted geometry in the footprint and thus
+   the newly calculated roughness length (z:sub:`0`) and displacement
+   height (z:sub:`d`) according to the user specified method. This is of
+   the form:
+
+*``â€œiy``\ ````\ ``id``\ ````\ ``it``\ ````\ ``imin``\ ````\ ``z_0_input``\ ````\ ``z_d_input``\ ````\ ``z_m_input``\ ````\ ``sigv``\ ````\ ``Obukhov``\ ````\ ``ustar``\ ````\ ``dir``\ ````\ ``fai``\ ````\ ``pai``\ ````\ ``zH``\ ````\ ``zMax``\ ````\ ``zSdev``\ ````\ ``zd``\ ````\ ``z0â€``*
+
+``[Header: year, day of year, hour, minutes of averaging period, roughness length for momentum, zero plane displacement height for momentum, measurement height of sensor, standard deviation of lateral wind, Obukhov length, friction velocity, wind direction, building frontal area weighted according to footprint function, building plan area weighted according to footprint, average height of buildings weighted according to footprint, maximum building height, standard deviation of building heights, footprint specific displacement height for specified method, footprint specific roughness length for specified method]``
+
+Remarks
+
+-  All DSMs need to have the same extent and pixel size.
+-  Make certain that have set the projection correctly
+
+   -  After you haved opened the the GeoTiff files (in a new project),
+      right click on the layer name
+
+      -  Set Project CRS from this layer
+
+         -  Now you are ready to start adding the source areas to the
+            image.
+
+References Footprint Model
+
+-  Kormann R and Meixner FX (2001) An analytical footprint model for
+   non-neutral stratification. `Bound-Layer Meteorol, 99,
+   207-224 <http://link.springer.com/article/10.1023/A:1018991015119>`__.
+-  Kljun N, Calanca P, Rotach MW, Schmid HP (2015) A simple
+   two-dimensional parameterisation for Flux Footprint Prediction (FFP).
+   `Geoscientific Model
+   Development.8(11):3695-713 <http://www.geosci-model-dev.net/8/3695/2015/gmd-8-3695-2015.html>`__.
+
+Roughness Calculations
+
+-  Bottema M and Mestayer PG (1997) Urban roughness mappingâ€“validation
+   techniques and some first results. `J Wind Eng Ind Aerodyn, 74,
+   163-173 <http://www.sciencedirect.com/science/article/pii/S0167610598000142>`__.
+-  Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas
+   derived from analysis of surface form. `J Appl Meteorol, 38,
+   1262-1292 <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__.
+-  Kanda M, Inagaki A, Miyamoto T, Gryschka M and Raasch S (2013) A new
+   aerodynamic parametrization for real urban surfaces. `Bound-Layer
+   Meteorol, 148,
+   357-377 <http://link.springer.com/article/10.1007/s10546-013-9818-x>`__.
+-  Macdonald R, Griffiths R and Hall D (1998) An improved method for the
+   estimation of surface roughness of obstacle arrays. `Atmos Environ,
+   32,
+   1857-1864 <http://www.sciencedirect.com/science/article/pii/S1352231097004032>`__.
+-  Millward-Hopkins J, Tomlin A, Ma L, Ingham D and Pourkashanian M
+   (2011) Estimating aerodynamic parameters of urban-like surfaces with
+   heterogeneous building heights. `Bound-Layer Meteorol, 141,
+   443-465 <http://link.springer.com/article/10.1007%2Fs10546-011-9640-2>`__.
+-  Raupach M (1994) Simplified expressions for vegetation roughness
+   length and zero-plane displacement as functions of canopy height and
+   area index. `Bound-Layer Meteorol, 71,
+   211-216 <http://link.springer.com/article/10.1007%2FBF00709229>`__.
+
+How to cite Kent et al. (2017a) unless you are including the impact of
+vegetation in the roughness calculations then your should cite Kent et
+al. (2017b).
+
+-  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH
+   Halios 2017: Evaluation of urban local-scale aerodynamic parameters:
+   implications for the vertical profile of wind and source areas
+   Boundary Layer Meteorology 164 183â€“213 `doi:
+   10.1007/s10546-017-0248-z <https://link.springer.com/article/10.1007/s10546-017-0248-z>`__
+-  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in
+   cities: inclusion of vegetation Journal of Wind Engineering &
+   Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+
+SUEWS Prepare
+~~~~~~~~~~~~~
+
+``Contributors Niklas Krave (Gothenburg), Fredrik Lindberg (Gothenburg), Frans Olofson (Gothenburg), Sue Grimmond (Reading)``
+
+``Introduction The pre-processor SUEWS Prepare generates surface-related input data from geographical data for ``\ ```SUEWS`` <http://urban-climate.net/umep/SUEWS>`__\ ``, the Surface Urban Energy and Water Balance Scheme. SUEWS (JÃ¤rvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.   ``
+
+``colspan="2"   ``\ **``Terminology``**
+
+| ``Components of the plugin window``
+| `` ``
+
+.. figure:: SuewsPrepareTerminology.jpg_frame_left_Some_naming_conventions_used_in_this_document_relating_to_the_components_of_the_plugin.
+   :alt: SuewsPrepareTerminology.jpg_frame_left_Some_naming_conventions_used_in_this_document_relating_to_the_components_of_the_plugin.
+
+   SuewsPrepareTerminology.jpg_frame_left_Some_naming_conventions_used_in_this_document_relating_to_the_components_of_the_plugin.
+
+``Plugin windowDialog window of the plugin. Any user interface components that are part of the plugin will be a part of the plugin window.  ``
+
+``Tab The plugin contains many tabs. The tabs can be cycled through to reveal different kinds of information. ``
+
+``Widget One tab can contain one or more widgets. One widget contains two boxes, the selection box and the variable box. ``
+
+``Variable boxRight part of a widget It contains a number of variables. One variable is comprised of a variable title and a variable text box.``
+
+``Variable titleThe variable title is a short description of the variable.``
+
+| ``Variable text box The variable text box contains the value of the variable for one site entry.``
+
+``Selection box The selection box is the left part of a widget. It contains a number of user interface components such as buttons and drop down menus.``
+
+``Drop down menu The drop down menu allows a selection from a predetermined range of values. ``
+
+`` colspan="2"   ``\ **``Terms``\ ````\ ``relating``\ ````\ ``to``\ ````\ ``data``\ ````\ ``used``\ ````\ ``by``\ ````\ ``the``\ ````\ ``plugin``**\ `` (For more info see developer section below)``
+
+``Site LibraryThe site library contains all collected sites (i.e. study areas) and information about those sites. ``
+
+``Site codeA site code separates site entries of one kind from each other. It needs to be a unique integer number.``
+
+``Identification code The identification code is used when there is a need to separate site entries into categories. If two site entries share the same identification code they belong to the same category.``
+
+``colspan="2"   ``\ **``Using``\ ````\ ``the``\ ````\ ``plugin``\ ````\ ``-``\ ````\ ``The``\ ````\ ``different``\ ````\ ``components``\ ````\ ``of``\ ````\ ``the``\ ````\ ``plugin``\ ````\ ``and``\ ````\ ``the``\ ````\ ``plugin``\ ````\ ``output.``**
+
+``Main window  The main window contains all the user interface components of the plugin. Navigation uses tabs, with each providing some of the information needed. The are two categories:``
+
+-  main settings tab and
+-  site library tabs.
+
+.. figure:: SP_static.jpg_frame_center_Static_part_of_the_plugin_window_that_does_not_change_when_switching_between_different_tabs.
+   :alt: SP_static.jpg_frame_center_Static_part_of_the_plugin_window_that_does_not_change_when_switching_between_different_tabs.
+
+   SP_static.jpg_frame_center_Static_part_of_the_plugin_window_that_does_not_change_when_switching_between_different_tabs.
+
+The main window has buttons to specify to:
+
+-  indicate the folder where the output will be generated
+-  to start the process of generating the output
+-  to close the main window.
+
+``Note: If the folder selected for the output files already contains files generated from SUEWS Prepare these files will be ``\ **``overwritten``**\ ``.``
+
+``Main settings tab The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.``
+
+.. figure:: SUEWSPrepare_main.png_frame_center_Plugin_window_with_the_main_settings_tab_selected.
+   :alt: SUEWSPrepare_main.png_frame_center_Plugin_window_with_the_main_settings_tab_selected.
+
+   SUEWSPrepare_main.png_frame_center_Plugin_window_with_the_main_settings_tab_selected.
+
+| ``Polygon grid``
+
+.. figure:: SP_Polygon.jpg_frame_right_Selection_of_a_polygon_grid_layer_and_the_correlating_ID_field_in_the_main_tab_of_the_plugin.
+   :alt: SP_Polygon.jpg_frame_right_Selection_of_a_polygon_grid_layer_and_the_correlating_ID_field_in_the_main_tab_of_the_plugin.
+
+   SP_Polygon.jpg_frame_right_Selection_of_a_polygon_grid_layer_and_the_correlating_ID_field_in_the_main_tab_of_the_plugin.
+
+The polygon grid is used to provide the plugin with further information
+through the grid attribute table. Each part of the grid will create a
+separate entry in the plugins output. The polygon grid can be in any
+vector file format compatible with QGIS, however, it is recommended to
+use the shape file format.
+
+To use an existing polygon grid layer in the plugin add the layer to the
+QGIS interface. This can be done either by dragging and dropping the
+file into the QGIS program or by using the menu **Layers**. Any polygon
+layers added to the QGIS interface can then be selected for use in the
+plugin from the drop down menu in the main settings tab marked **Vector
+polygon grid** If no polygon grid layer is available, there are several
+opportunities to create these in QGIS. We recommend to make use of the
+built-in **Vector tool** (Vector -> Research tools menu)>
+
+When a relevant polygon grid has been selected for the plugin several
+separate drop down menus allow for data to be collected from the fields
+in the polygon grid attribute table. The initial selections in these
+drops down menus might not be correct and needs to be manually corrected
+by the user.
+
+The input in the drop down menu marked **ID field** in the box for
+polygon grid selection needs to correlate with the polygon layers
+attribute field for feature ids or any attribute field containing unique
+integer numbers. The polygon layer should be in a coordinate system that
+can be related to both lat/lon coordinates as well as meters. The
+polygon features included in the polygon vector grid can be of any shape
+and size.
+
+``Data for land cover fractions, building morphology and tree morphology To use SUEWS land cover and morphology data for buildings and vegetation are needed. This information can be acquired through other plugins in UMEP. This data can then be added into SUEWSPrepare by two different options: ``
+
+-  Import the data as text files.
+
+To do this click the buttons in the boxes associated with these types of
+data and follow the import dialogs to select the correct text file. When
+a file has been selected the file path will be shown in the text boxes
+above the buttons. The text files on land cover and morphology are
+generated with the `#Urban Land Cover: Land Cover Fraction (Point) Land
+Cover
+Fraction <#Urban_Land_Cover:_Land_Cover_Fraction_(Point)_Land_Cover_Fraction>`__
+plugin and the `#Urban Morphology: Image Morphometric Parameters
+Calculator (Point) Image Morphometric
+Calculator <#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_(Point)_Image_Morphometric_Calculator>`__,
+respectively.
+
+.. figure:: SP_landcover.jpg_frame_right_Box_associated_with_land_cover_fractions_data._The_button_has_been_used_to_import_a_file_containing_land_cover_fraction_data.
+   :alt: SP_landcover.jpg_frame_right_Box_associated_with_land_cover_fractions_data._The_button_has_been_used_to_import_a_file_containing_land_cover_fraction_data.
+
+   SP_landcover.jpg_frame_right_Box_associated_with_land_cover_fractions_data._The_button_has_been_used_to_import_a_file_containing_land_cover_fraction_data.
+
+-  Alternatively, the data need to be available in the attribute table
+   of the polygon layer. If the data are available in this format simply
+   check the check boxes below the buttons to change the interface from
+   buttons into drop down menus. In the drop down menus select the
+   correct attribute fields for the data and the selection is done.
+
+.. figure:: SP_landcover2.jpg_frame_right_Box_associated_with_land_cover_fractions_when_the_checkbox_is_checked._The_drop_down_menus_can_be_used_to_import_land_cover_fraction_data.
+   :alt: SP_landcover2.jpg_frame_right_Box_associated_with_land_cover_fractions_when_the_checkbox_is_checked._The_drop_down_menus_can_be_used_to_import_land_cover_fraction_data.
+
+   SP_landcover2.jpg_frame_right_Box_associated_with_land_cover_fractions_when_the_checkbox_is_checked._The_drop_down_menus_can_be_used_to_import_land_cover_fraction_data.
+
+| ``Meteorological data``
+| |``SP_met.jpg_frame_right_Box_for_meteorological_data._The_button_has_been_used_to_import_a_file_containing_meteorological_data.``|
+
+The meteorological data have to be imported from a **text file**. Use
+the button in the box for meteorological data, follow the dialog and
+select the correct text file. The meteorological data used in the
+various UMEP-plugins is format specific and can be generated from other
+data sources using the `#Meteorological Data: MetPreprocessor
+MetPreprocessor <#Meteorological_Data:_MetPreprocessor_MetPreprocessor>`__
+plugin. There you can also find more information on what parameters are
+required in the meteorological dataset.
+
+``Daylight savings time ``\ |``SP_DLS.jpg_frame_right_Box_used_for_setting_the_start_and_end_of_day_lights_savings_time.``|
+
+The plugin needs to have access to the correct days in which the
+switches to and from daylight savings time occurs in the region. The
+numbers in the text boxes represent the `days of
+year <http://disc.sci.gsfc.nasa.gov/julian_calendar.html>`__. For
+example, the 21st of January is day of year 21 and the 2nd of February
+is day of year be 33 and so on. Make sure the days in the text boxes for
+daylight savings time in the main settings tab are correct for `your
+region <https://en.wikipedia.org/wiki/Daylight_saving_time_by_country>`__.
+
+| ``Population density``
+| |``SP_pop.jpg_frame_right_Box_associated_with_population_density._A_field_from_the_polygon_grid_containing_population_density_data_needs_to_be_selected_from_the_drop_down_menu.``|
+
+This data needs to be added through the polygon grid attribute table.
+Make sure that the data exist as an attribute field and select it in the
+drop down menu.
+
+| ``Wall area (optional)``
+| |``SUEWSPrepare_wallarea.png_frame_right_Box_for_wall_area_data.``|\ ``   ``
+
+This data needs to be added through the polygon grid attribute table.
+Make sure that the data exist as an attribute field and select it in the
+drop down menu. This can be calculated from a DSM using the `Wall height
+and aspect
+calculator <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__.
+
+| ``Land use fraction (optional)``
+| |``SUEWSPrepare_landuse.png_frame_right_Box_for_land_use_data.``|\ ``  ``
+
+This data needs to be added through a text file. Information needed is
+land use fractions for impervious and building land cover classes. It is
+possible to include three impervious and five building classes. The
+format of the text file should be:
+
+*ID fLUp1 fLUp2 fLUp3 Code_LUpaved1 Code_LUpaved2 Code_LUpaved3 fLUb1
+fLUb2 fLUb3 fLUb4 fLUb5 Code_LUbuilding1 Code_LUbuilding2
+Code_LUbuilding3 Code_LUbuilding4 Code_LUbuilding5*
+
+*1 0 0.62 0.38 806 807 808 0.90 0.10 0 0 0 801 802 803 804 805*
+
+...
+
+where *f* is fraction, *LU* is land use and *p* is paved. Fractions must
+add up to 1 for paved and buildings respectively. A plugin to generate
+this text file is not yet created.
+
+| ``Initial conditions``
+| |``SUEWSPrepare_init.png_frame_right_Box_for_initial_conditions.``|\ ``  ``
+
+The SUEWS model requires information of initial conditions. SUEWSPRepare
+generates some basic information used to create a file called
+**InitialConditionsXXXX_YYYY.nml** where XXXX is the ID grid number.
+
+| ``Site library tabs``
+| `` The remaining tabs besides the main settings tab all fall under the same category, namely site library tabs. A site library tab represents certain characteristics of an area. A tab can consist of one or more widgets. Each widget has a predetermined layout but will represent different kinds of information. The left part of a widget can be used to select a site entry for the plugin output or to create a new entry to the site library. The right part of a widget will show information about a site through variables.``
+
+.. figure:: SP_siteLib.jpg_frame_right_Some_of_the_components_of_a_site_library_tab.
+   :alt: SP_siteLib.jpg_frame_right_Some_of_the_components_of_a_site_library_tab.
+
+   SP_siteLib.jpg_frame_right_Some_of_the_components_of_a_site_library_tab.
+
+| ``Selecting a site``
+| |``SP_siteCode.jpg_frame_right_Site_code_selection_in_a_site_library_tab``|
+
+|Figure12.png_frame_right_Using_more_than_one_site_code.| The selection
+of a site is done through a drop down menu marked â€œCodeâ€. The codes
+in the drop down menu represent the site codes for a site. Each code
+represents one site entry. Selecting a code will show the values of the
+variables for the site entry in the variable box the right side of the
+tab. The code selected will be used in the output of the plugin.
+
+It is possible to use separate codes for each feature in the polygon
+grid. This requires a field in the polygon grid attribute table that
+represent the code that is to be used for each feature. If there is such
+a field click the checkbox marked â€œUse unique codes for each entryâ€
+and select the correct field from the drop down menu.
+
+| ``Creating a new site entry``
+| ``To create a new site entry click the button marked â€œEdit valuesâ€. This will make the text boxes for the variables in the right box available for editing. When you are satisfied with the changes press the button marked â€œMake changesâ€. This will show a dialog window that will ask you to provide a site code for your new entry and some description of the site you are adding. After this information is provided you are also able to add an optional url to a picture that represent the site.``
+
+`` Plugin Output In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with ``\ ```SUEWS/BLUEWS``\ ````\ ``(Advanced)`` <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29>`__\ ``. Also, see the ``\ ```SUEWS``\ ````\ ``manual`` <http://urban-climate.net/umep/SUEWS>`__\ `` for more information.``
+
+Processor
+---------
+
+Outdoor Thermal Comfort: SOLWEIG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``IntroductionThe ``\ **``SOLWEIG``**\ `` plugin can be used to calculate spatial variations of mean radiant temperature (T``\ :sub:```mrt```\ ``) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.``
+
+The full manual of the SOLWEIG model can be found
+`here <http://urban-climate.net/umep/SOLWEIG>`__.
+
+`` Location ``
+
+The SOLWEIG model is located at
+
+-  UMEP
+
+   -  Processor
+
+      -  Outdoor Thermal Comfort
+
+         -  SOLWEIG
+
+``Related Preprocessors   ``\ ```MetdataPreprocessor`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__\ ``, ``\ ```Download``\ ````\ ``data``\ ````\ ``(WATCH)`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__\ ``, ``\ ```SkyViewFactor``\ ````\ ``Calculator`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Sky_View_Factor_Calculator>`__\ ``, ``\ ```Wall``\ ````\ ``Height``\ ````\ ``and``\ ````\ ``Aspect`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__\ ``, ``\ ```LandCoverReclassifier`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__
+
+``Dialog box ``
+
+.. figure:: SOLWEIG.png_none_Dialog_for_the_SOLWEIG_model
+   :alt: SOLWEIG.png_none_Dialog_for_the_SOLWEIG_model
+
+   SOLWEIG.png_none_Dialog_for_the_SOLWEIG_model
+
+``Dialog sections ``
+
+``Spatial data Spatial input data is specified``
+
+``Meteorological data Meteorological input data is specified, as a continuous file or specific momentary values. ``
+
+``Environmental parameters  Possibilities to alter emissiveties and albedos for the different urban surfaces.``
+
+``Optional settings  Here additional setting such as including POIs (Points of Interest) is found.``
+
+``Human exposure parameters  Settings for calculating mean radiant temperature.``
+
+``Output maps Options to choose the geotiffs to be saved for each iteration.``
+
+``Spatial data ``
+
+``Building and Ground DSM  A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of Sun position.``
+
+``Vegetation Canopy DSMA DSM consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Vegetation Trunk Zone DSM A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Use vegetation scheme Tick this box if you want to include vegetation (trees and bushes) in the calculations.``
+
+``Trunk Zone DSM Exist Tick this in if a trunk zone DSM already exist.``
+
+``Transmissivity of Light Through Vegetation (%) Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).``
+
+``Percent of Canopy Height If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.``
+
+``Save generated Trunk zone DSM  Tick this in if you want to save your TDSM that is generated.``
+
+``Use land cover scheme Available since v2015a. Land cover grid should be in the UMEP standard format ``\ **``except``**\ `` for the two tree classes (deciduous and conifer) as the land cover grid should represent what is on the ground surface. UMEP land cover grid can be prepared in the Pre-processor.``
+
+``Use land cover grid to produce building grid Tick this in if the building grid should be created from the land cover grid. Otherwise, a DEM including only ground heights must be added. This will then be used to derive a building grid together with the ground and building DSM.``
+
+``Save generated building grid  Tick this in if you want to save the boolean building grid that is generated.``
+
+``SkyViewFactor grids The SOLWEIG model make use of SVFs to calculate T``\ :sub:```mrt```\ ``. The zip-file needed can be created with the SkyViewFactor calculator found in the UMEP Pre-processor.``
+
+``Wall height raster The SOLWEIG model make use of wall height raster to calculate T``\ :sub:```mrt```\ ``. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor``
+
+``Wall aspect raster The SOLWEIG model make use of wall height raster to calculate T``\ :sub:```mrt```\ ``. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor.``
+
+`` Meteorological data``
+
+``Use continuous meteorological datasetTick this in if a time series of data should be used. The specific format could be prepared in the UMEP Pre-processor.``
+
+``Estimate diffuse and direct components from global radiationTick this box if diffuse and direct shortwave radiation is unavailable. The Reindl et al. (1990) model is used to calculate diffuse radiation. Direct radiation perpendicular to the solar beam should be considered.``
+
+``Settings for one iteration.If a meteorological dataset is not used there is a possibility to run the model for one iteration using the calendar and spin-boxes to set meteorological variables present here. The default values are for a clear Summer day at 1230 in GÃ¶teborg, Sweden.``
+
+``UTC offsetTime zone needs to be specified. Positive numbers moving east (e.g. Stockholm UTC +1).``
+
+Optional settings
+
+Include POIs By ticking in the option to include POIs (Point of
+Interest), a vector point layer can be added and full model output are
+written out to text files for the specific POI. Multiple POIs can be
+used by including many points in the vector file. See the `full
+manual <http://www.urban-climate.net/umep/SOLWEIG>`__ for more
+information.
+
+Adjust sky-emissivity according to Jonsson et al. (2006) Tick this box
+to include adjustment (0.04) of sky emissivity which was present in the
+earlier versions of the SOLWEIG model (not recommended).
+
+Consider human as cylinder instead of box Tick this box to consider man
+as a cylinder instead of a box according to Holmer at al. (2015).
+
+Environmental parameters
+
+``Albedo (buildings)Albedo of building walls and roofs.``
+
+``Albedo (ground)Albedo of ground surfaces. Not used if land cover scheme is active.``
+
+``Emissivity (walls)Emissivity of building walls and roofs.``
+
+``Emissivity (ground)Emissivity of ground. Not used if land cover scheme is activated.``
+
+``Human exposure parameters ``
+
+``Absorption of shortwave radiationAmount of shortwave radiation that the human body absorb.``
+
+``Absorption of longwave radiationAmount of longwave radiation that the human body absorb.``
+
+``Posture of the human bodyChoose between standing (default) and sitting.``
+
+``Output mapsA number of different outputs can be chosen here. All grids will be written out as GeoTIFFs at the location specified as the output folder.``
+
+``Run  Starts the calculations. As SOLWEIG is a 2.5D model, large grids (i.e. high number of pixels) will take a relatively long time to compute. The model is embedded in a so called worker which means that you can continue working with QGIS while the model runs.``
+
+``Add Average mean radiant temperature to the map canvasIf ticked, an average T``\ :sub:```mrt```\ `` map will be added to the current project.``
+
+``Close  Closes the plugin.``
+
+``Quick example on how to run SOLWEIG  Here, an example on how to run the model, using our test dataset, is presented:``
+
+#. Download and extract (unzip) the test dataset
+   (`testdata_UMEP.zip <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__).
+#. Add the raster layers (DSM, CDSM and land cover) from the Goteborg
+   folder into a new QGIS session. The coordinate system of the grids is
+   **Sweref99 1200 (EPSG:3007)**.
+#. In order to run SOLWEIG, some additional datasets must be created
+   based on the raster grids you just added. Open the SkyViewFactor
+   Calculator from the UMEP Pre-processor and calculate SVFs using both
+   your DSM and CDSM. Leave all other settings as default.
+#. Open the Wall height and aspect plugin from the UMEP Pre-processor
+   and calculate both wall height and aspect using the DSM and your
+   input raster. Tick in the box to add them to your project. Leave all
+   other settings as default.
+#. Now you are ready to generate your first T\ :sub:`mrt` map. Open
+   SOLWEIG and use the settings as shown in the figure below but replace
+   the paths to the fit your computer environment. When you are
+   finished, press *Run*.
+
+|SOLWEIGfirsttry.png_none_Dialog_for_the_SOLWEIG_model| There is also a
+meteorological file present in the test dataset that can be used to run
+the model for a whole day.
+
+``Remarks ``
+
+-  All DSMs need to have the same extent and pixel size.
+-  This plugin is computationally intensive i.e. large grids will take a
+   lot of time and very large grids will not be possible to use. Large
+   grids e.g. larger than 4000000 pixels should preferably be tiled
+   before.
+-  SOLWEIG focus on pedestrian radiation fluxes and it is not
+   recommended to consider fluxes on building roofs.
+
+`` References``
+
+-  Holmer, B., Lindberg, F., Rayner, D. and Thorsson, S. 2015: How to
+   transform the standing man from a box to a cylinder â€“ a modified
+   methodology to calculate mean radiant temperature in field studies
+   and models, ICUC9 â€“ 9 th International Conference on Urban Climate
+   jointly with 12th Symposium on the Urban Environment, BPH5: Human
+   perception and new indicators. Toulouse, July 2015.
+-  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013.
+   Transmissivity of solar radiation through crowns of single urban
+   treesâ€”application for outdoor thermal comfort modelling. `Theoret.
+   Appl. Climatol.,
+   1â€“14 <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
+-  Lindberg, F., Grimmond, C.S.B., 2011a. The influence of vegetation
+   and building morphology on shadow patterns and mean radiant
+   temperatures in urban areas: model development and evaluation.
+   `Theoret. Appl. Climatol. 105,
+   311â€“323 <http://link.springer.com/article/10.1007/s00704-010-0382-8>`__
+-  Riendl D.T., Beckman W.A. and Duffie J.A. (1990), Diffuse Fraction
+   Correlations, Solar Energy, Vol. 45, No.1, pp. 1-7.
+
+Outdoor Thermal Comfort: ExtremeFinder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorBei Huang (Reading), Andy Gabey (Reading)``
+
+| ``Current Options``
+| ``Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.``
+
+| ``Data must be provided by the user, and can be:``
+
+-  Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be
+   obtained from the WATCH downloader)
+-  Other NetCDF (.nc) file containing sub-daily measurements, or daily
+   maximum/mean/minimum values. Must contain a **'time**' dimension, and
+   variable(s) with name(s) matching those being analysed using the
+   ExtremeFinder.
+-  Text (.txt) file, daily T\ :sub:`max`, T\ :sub:`avg` or T\ :sub:`min`
+   (`file
+   sample <http://www.urban-climate.net/watch_data/data%20set%20sample.txt>`__:
+   1979-01-01 to 2009-12-31). Only temperature analysis can be performed
+   using a text file.
+
+| `` Method``
+| `` Basis for thresholds - set into Input.nml (namelist)``
+
+-  `Meehl and Tebaldi
+   (2004) <http://science.sciencemag.org/content/305/5686/994>`__: 81st,
+   97.5th
+-  `Fischer and SchÃ¤r
+   (2010) <http://www.nature.com/ngeo/journal/v3/n6/full/ngeo866.html>`__:
+   90th
+-  `Vautard et al.
+   (2013) <https://link.springer.com/article/10.1007%2Fs00382-013-1714-z>`__:
+   90th
+-  `Schoetter et al.
+   (2014) <https://link.springer.com/article/10.1007/s00382-014-2434-8>`__:
+   98th
+-  `Sirje Keevallik
+   (2015) <http://www.kirj.ee/26593/?tpl=1061&c_tpl=1064>`__: 10th
+-  `A. K. Srivastava
+   (2009) <http://onlinelibrary.wiley.com/doi/10.1002/asl.232/abstract>`__:
+   3 Â°C
+-  Busuioc et al. (2010): 5 Â°C
+
+| ``Location``
+
+-  UMEP
+
+   -  Processor
+
+      -  Outdoor Themal Comfort
+
+         -  ExtremeFinder
+
+``Dialog box ``\ |``Extremefinder3.png_frame_left_The_interface_for_the_ExtremeFinder_plugin``|
+
+| ``Steps to use``
+
+#. Select climate data: The ExtremeFinder will use all the data
+   available in its analysis. You will be prompted for a text (.txt) or
+   NetCDF (.nc) file:
+
+   -  *NetCDF file*: The latitude, longitude, start and end date boxes
+      will be populated automatically, if the data is available in the
+      NetCDF file.
+   -  *Text file*: The latitude, longitude, start and end date boxes
+      must be filled in by the user, as the information is needed in
+      calculations:
+
+      -  *Latitude* (degrees N) and *Longitude* (degrees E) are WGS84
+         co-ordinates
+      -  *Start* and *end date* are inclusive and must match the data
+         extent
+
+#. Select the *extreme event type* and the *calculation method*:
+
+   -  Event types are either Extreme *high* (e.g. Heat wave) or *low*
+      (e.g. Cold wave)
+   -  There are several different ways to identify extremes, depending
+      on the event type
+   -  Choose the *meteorological variable* to analyse for extremes
+
+      -  **Note:** The methods in the Extreme Finder are based on Tair
+         and may not be appropriate for other variables
+
+#. Select Output File: A list of extreme events will be written to the
+   file
+
+   -  Note: this will be overwritten if not a new name
+
+#. Run: Performs the analysis
+
+| ``Output: Extreme events (heat waves used as example below)``
+
+#. Daily T\ :sub:`max` (or T\ :sub:`avg` / T\ :sub:`min`) with time (Y=
+   Year, X=Month)
+
+   -  Colour gives Temperature (see key)
+   -  Yellow Box Highlights Heatwave (Coldwave) periods This loads the
+      model interface dialog box:
+      |TMax1.jpg_center_thumb_350px_Heat/Cold_wave_periods|
+
+#. Box plot of distribution of heat (cold) wave by year.
+
+   -  whiskers =1.5\* IQR
+   -  + outliers - any data beyond the whiskers
+      |HW_Box.jpg_center_thumb_350px_Box-and-whisker_plot_of_Heat/Cold_wave_days_each_year|
+
+#. Number of heat (cold) waves days per year
+   |HWDays.jpg_center_thumb_350px_Plot_Histogram_showing_number_of_Heat/Cold_wave_days_each_year|
+
+Urban Energy Balance: GQ\ :sub:`F`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`` Contributors ``
+
+Andy Gabey (Reading), Izzy Capel Timms (Reading), Sue Grimmond (Reading)
+
+| `` How to Cite``
+| `` ``
+
+-  Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux:
+   advisable spatial resolutions when input data are scarce Theoretical
+   and Applied Climatology https://doi.org/10.1007/s00704-018-2367-y
+-  Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE
+   Theeuwes, L JÃ¤rvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N
+   Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D WÃ¤stberg, L Xue, Z
+   Zhang 2018: Urban multiscale environmental predictor (UMEP) - An
+   integrated tool for city-based climate services Environmental
+   Modelling and Software 99, 70â€“87 10.1016/j.envsoft.2017.09.020
+
+``Introduction  ``\ ```See``\ ````\ ``separate``\ ````\ ``manual`` <http://urban-climate.net/umep/GQF_Manual>`__
+
+``Location ``
+
+The GreaterQF plugin is located at
+
+-  UMEP
+
+   -  Processor
+
+      -  Urban Energy Balance
+
+         -  GreaterQF
+
+``Dialog box ``\ |``GQF.png_none_Start_dialog_for_Greater_QF``|
+
+``Dialog sections  ``
+
+The model run is configured using the dialog box:
+
+-  *Start date* and *end date*: The first and final dates for which the
+   model should be run.
+-  *Output areas*: Two options are currently available: Local authority
+   areas and 1km grid. These select the spatial units of the model
+   calculations.
+-  *Include QF components*: The components of anthropogenic heat flux
+   for the model to include in calculations.
+-  *Output path*: A directory that houses model outputs.
+
+``Model outputs ``
+
+**Example map**
+
+The total anthropogenic heat flux for the first time step is displayed
+in QGIS to demonstrate model output and the output areas. In order for
+these areas to be displayed correctly, the coordinate reference system
+must be selected. The QGIS â€œSelect CRSâ€ screen will appear, and EPSG
+27700 (British National Grid) must be chosen.
+
+The layer displaying model output also contains the other contributions
+to QF (e.g. car transport). These can be visualised using standard QGIS
+methods of styling the layer according to the selected component, or
+inspecting the layer attributes table.
+
+''' CSV files '''
+
+A CSV file is generated for each of the 19 contributions to QF (e.g. car
+travel, wastewater heating) and the total QF. Each file contains a
+column per output area (shown in the example map) and a row per time
+step. These are labelled accordingly. The filenames are abbreviated
+where necessary for compatibility, with the following convention used:
+
+El Electricity
+
+Gas Gas
+
+DmDomestic use
+
+IdIndustrial use
+
+TsptTransport
+
+UnreUnrestricted electricity (non-Economy 7)
+
+Eco7Economy 7 electricity
+
+``Everything  Grand total QF across all sources``
+
+**Python data object** (For internal use)
+
+A â€œpickledâ€ Python data object containing the results is also saved
+in the local temporary folder for future use with other UMEP components.
+
+`` References``
+
+-  Iamarino M, Beevers S & Grimmond CSB (2012) High-resolution (space,
+   time) anthropogenic heat emissions: London 1970-2025 `International
+   J. of Climatology 32, 11,
+   1754-1767 <http://doi.wiley.com/10.1002/joc.2390>`__
+-  Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux:
+   advisable spatial resolutions when input data are scarce Theoretical
+   and Applied Climatology https://doi.org/10.1007/s00704-018-2367-y
+-  Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE
+   Theeuwes, L JÃ¤rvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N
+   Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D WÃ¤stberg, L Xue, Z
+   Zhang 2018: Urban multiscale environmental predictor (UMEP) - An
+   integrated tool for city-based climate services Environmental
+   Modelling and Software 99, 70â€“87 10.1016/j.envsoft.2017.09.020
+
+Urban Energy Balance: LQ\ :sub:`F`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``Contributors Andy Gabey (Reading), Izzy Capel-Timms (Reading), Sue Grimmond (Reading), Sam Jackson (Reading), XY Ao (SIMS), Bei Huang(Tsinghua Unviersity)``
+
+``Introduction ``\ ```See``\ ````\ ``separate``\ ````\ ``manual`` <http://urban-climate.net/umep/LQF_Manual>`__
+
+`` References ``
+
+-  Allen, L., Lindberg, F. and Grimmond, C. (2011) Global to city scale
+   urban anthropogenic heat flux: model and variability. `International
+   Journal of Climatology 31:13,
+   1990-2005. <http://onlinelibrary.wiley.com/doi/10.1002/joc.2210/abstract>`__
+-  Lindberg, F., Grimmond, C., Yogeswaran, N., Kotthaus, S. and Allen,
+   L. (2013a) Impact of city changes and weather on anthropogenic heat
+   flux in Europe 1995â€“2015. `Urban Climate 4,
+   1-15. <http://www.sciencedirect.com/science/article/pii/S2212095513000059>`__
+-  Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux:
+   advisable spatial resolutions when input data are scarce Theoretical
+   and Applied Climatology https://doi.org/10.1007/s00704-018-2367-y
+-  Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE
+   Theeuwes, L JÃ¤rvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N
+   Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D WÃ¤stberg, L Xue, Z
+   Zhang 2018: Urban multiscale environmental predictor (UMEP) - An
+   integrated tool for city-based climate services Environmental
+   Modelling and Software 99, 70â€“87
+   https://10.1016/j.envsoft.2017.09.020
+
+Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorsFredrik Lindberg (Gothenburg), Sue Grimmond (Reading)``
+
+`` Introduction   SUEWS can be run as a standalone or via UMEP (see ``\ ```SUEWS``\ ````\ ``Manual`` <http://urban-climate.net/umep/SUEWS>`__\ ``).``
+
+This plugin makes it possible to run a simplified version of the Surface
+Urban Energy and Water Balance Scheme (SUEWS). For a full version of the
+model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also
+available as a separate program.
+
+SUEWS (JÃ¤rvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the
+urban radiation, energy and water balances using commonly
+measured/modeled meteorological variables and information about the
+surface cover. It utilizes an evaporation-interception approach
+(Grimmond et al. 1991), similar to that used in forests, to model
+evaporation from urban surfaces.
+
+The model uses seven surface types: paved, buildings, evergreen
+trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The
+surface state for each surface type at each time step is calculated from
+the running water balance of the canopy where the evaporation is
+calculated from the Penman-Monteith equation. The soil moisture below
+each surface type (excluding water) is taken into account.
+
+The model distributed with this manual can be run in two standard ways:
+
+-  For an individual area
+-  For multiple areas that are contiguous. There is no requirement for
+   the areas to be of any particular shape but here we refer to them as
+   â€˜gridsâ€™.
+
+Model applicability: Local scale â€“ so forcing data should be above the
+height of the roughness elements (trees, buildings). SUEWS Simple is
+designed to be executed for a single location but the model is also able
+to be executed on a grid.
+
+``Location``
+
+The SUEWS Simple plugin is located at
+
+-  UMEP
+
+   -  Processor
+
+      -  Urban Energy Balance
+
+         -  Urban Energy Balance (SUEWS, Simple)
+
+``Related Preprocessors  ``\ ```MetdataPreprocessor`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__\ ``, ``\ ```Download``\ ````\ ``data``\ ````\ ``(WATCH)`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__\ ``, ``\ ```LandCoverReclassifier`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__\ ``, ``\ ```LandCoverFraction``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Point.29>`__\ ``, ``\ ```Image``\ ````\ ``Morphometric``\ ````\ ``Parameters``\ ````\ ``Calculator``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_.28Point.29>`__\ ``, ``\ ```Foot``\ ````\ ``Print``\ ````\ ``Model``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
+
+`` Dialog Box``
+
+.. figure:: SuewsSimple.png_none_Start_dialog_for_SUEWS_Simple
+   :alt: SuewsSimple.png_none_Start_dialog_for_SUEWS_Simple
+
+   SuewsSimple.png_none_Start_dialog_for_SUEWS_Simple
+
+``Dialog sections ``
+
+`` far right  provides some tips and tricks for running the model. ``
+
+`` other four  to specify user-defined input data, either manually or by using the appropriate UMEP-plugin in the per-processor. ``
+
+``bottom  to make some additional settings as well as running the model.``
+
+`` prepared datasetSUEWS Simple comes with a prepared dataset that can be used for testing. This can be utilized by pressing ``\ **``Add``\ ````\ ``settings``\ ````\ ``from``\ ````\ ``test``\ ````\ ``dataset``**\ ``. This dataset is a fictitious dataset from the central parts of London.``
+
+`` Building Morphology The three site specific building morphology parameters needed are usually derived from Digital Surface Models DSMs. However, they also can be entered manually.``
+
+-  To use an already generated text file from the Image Morphometric
+   Calculator (Point) plugin.
+-  To open the plugin from SUEWS Simple and generate the data.
+
+If an already generated text file is used, the **isotropic file** should
+be used (see Image Morphometric Calculator (Point)).
+
+``Tree Morphology Three site specific tree morphology parameters need to be specified. These can be derived from a Canopy DSMs that include vegetation heights. This can be entered manually or from the Image Morphometric Calculator (Point) plugin. When the plugin is used there are two options:``
+
+-  To use an already generated text file from the Image Morphometric
+   Calculator (Point) plugin.
+-  To open the plugin from SUEWS Simple and generate the data.
+
+If an already generated text file is used, the **isotropic file** should
+be used (see Image Morphometric Calculator (Point)).
+
+``Land Cover Fractions Land cover fractions should add up to a total of 1. Values can be derived from a UMEP land cover dataset which can be generated via the Land Cover Reclassifier plugin in UMEP. The values can be entered manually or directly from the Land Cover Fraction (Point) plugin.  If the plugin is used, there are two options:``
+
+-  To use an already generated text file from the Land Cover Fraction
+   (Point) plugin.
+-  To open the plugin from SUEWS Simple and generate the data.
+
+``Initial ConditionsThe initial conditions are entered here. These relate to time of year, days since rain, soil moisture state and daily mean air temperature at the beginning of a model run. The state of the leaf cycle sets a rough estimate of leaf area index based on season. To adjust this in more detail, the SUEWS, BLUEWS (Advanced) plugin should be used.``
+
+`` Meteorological File The location and filename (.txt) of the meteorological file should be specified here. The format used in most UMEP-related plugins where meteorological data is required can be generated using the Metdata Processor in UMEP. For details, see the help section in the Metdata Processor or the SUEWS manual (Ward et al. 2016a).``
+
+``Output Folder Specify a folder where you would like all the model results to be saved to. Make sure that you have write capabilities to the specified folder.``
+
+*Note if you put it within the UMEP plugin folderâ€“ be careful that you
+do not lose any results if you update the plugin by deleting it first.*
+
+``Year Specify what year you are running.``
+
+`` Latitude Specify the latitude in decimal degrees. Positive numbers indicate Northern Hemisphere.``
+
+``LongitudeSpecify the longitude in decimal degrees. Positive numbers are to the West.``
+
+`` Population Density Specify the population density in people/ha (hectare) around the area of interest.``
+
+``Show Basic Plots of Model Results Tick this box in if you would like to generate some simple plots of the result from a model run. This requires that the matplotlib library is added to your QGIS installation.``
+
+`` Add Settings from Test DatasetThis is recommended if you want to try the model for the first time. This uses a year long dataset from London, UK.``
+
+``Run Button starts the model. All inputs must be set prior to this button being available.``
+
+``CloseButton closes the plugin.``
+
+``References ``
+
+-  JÃ¤rvi L, Grimmond CSB & Christen A (2011) The Surface Urban Energy
+   and Water Balance Scheme (SUEWS): Evaluation in Los Angeles and
+   Vancouver `J. Hydrol. 411,
+   219-237. <http://www.sciencedirect.com/science/article/pii/S0022169411006937>`__
+-  JÃ¤rvi L, Grimmond CSB, Taka M, Nordbo A, SetÃ¤lÃ¤ H &Strachan IB
+   (2014) Development of the Surface Urban Energy and Water balance
+   Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7,
+   1691-1711,
+   `doi:10.5194/gmd-7-1691-2014 <http://www.geosci-model-dev.net/7/1691/2014/>`__.
+-  Ward HC, L JÃ¤rvi, S Onomura, F Lindberg, CSB Grimmond (2016a) `SUEWS
+   Manual <http://urban-climate.net/umep/SUEWS>`__: Version 2016a
+-  Ward HC. S Kotthaus, L JÃ¤rvi, CSB Grimmond (2016b) Surface Urban
+   Energy and Water Balance Scheme (SUEWS): development and evaluation
+   at two UK sites `:File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf
+   Urban Climate (in
+   press) <:File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf_Urban_Climate_(in_press)>`__.
+
+Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``Introduction ``
+
+This plugin makes it possible to run the Surface Urban Energy and Water
+Balance Scheme (SUEWS). SUEWS is also available as a separate program
+and a simplified version within UMEP (SUEWS Simple).
+
+SUEWS (JÃ¤rvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the
+urban radiation, energy and water balances using commonly
+measured/modeled meteorological variables and information about the
+surface cover. It utilizes an evaporation-interception approach
+(Grimmond et al. 1991), similar to that used in forests, to model
+evaporation from urban surfaces.
+
+The model uses seven surface types: paved, buildings, evergreen
+trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The
+surface state for each surface type at each time step is calculated from
+the running water balance of the canopy where the evaporation is
+calculated from the Penman-Monteith equation. The soil moisture below
+each surface type (excluding water) is taken into account.
+
+Model applicability: Local scale â€“ so forcing data should be above the
+height of the roughness elements (trees, buildings)
+
+SUEWS is designed to be executed for a single location but the model is
+also able to be executed on a grid.
+
+``Location ``
+
+The SUEWS Simple plugin is located at
+
+-  UMEP
+
+   -  Processor
+
+      -  Urban Energy Balance
+
+         -  Urban Energy Balance (SUEWS/BLUEWS, Advanced)
+
+``Related Preprocessors  ``\ ```MetdataPreprocessor`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__\ ``, ``\ ```Download``\ ````\ ``data``\ ````\ ``(WATCH)`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__\ ``, ``\ ```LandCoverReclassifier`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__\ ``, ``\ ```LandCoverFraction``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Point.29>`__\ ``, ``\ ```LandCoverFraction``\ ````\ ``(Grid)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Grid.29>`__\ ``, ``\ ```Image``\ ````\ ``Morphometric``\ ````\ ``Parameters``\ ````\ ``Calculator``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_.28Point.29>`__\ ``, ``\ ```Image``\ ````\ ``Morphometric``\ ````\ ``Parameters``\ ````\ ``Calculator``\ ````\ ``(Grid)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameter_Calculator_.28Grid.29>`__\ ``, ``\ ```Foot``\ ````\ ``Print``\ ````\ ``Model``\ ````\ ``(Point)`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
+
+``Dialog box ``\ |``SuewsAdvanced.png_none_Start_dialog_for_SUEWS``|
+
+``Dialog sections  ``
+
+When you run the plugin, you will see the dialog shown below. To use
+this plugin, all input data needs to be prepared beforehand. This can be
+done using the various plugins in the pre-processor in UMEP. The
+settings available in this plugin is used for specifying the settings
+for a specific model run. You should consult the manual
+(`1 <http://www.urban-climate.net/umep/SUEWS>`__) for instructions and
+information on what settings to use. For extensive models run it is
+recommended to execute the model outside of QGIS (see manual). The
+interface below creates a so-called namelist (**RunControl.nml**) that
+is used be the model for general settings. After running the model, this
+file can be found in the suewsmodel directory in the UMEP plugin
+directory.
+
+`` References``
+
+-  JÃ¤rvi L, Grimmond CSB & Christen A (2011) The Surface Urban Energy
+   and Water Balance Scheme (SUEWS): Evaluation in Los Angeles and
+   Vancouver `J. Hydrol. 411,
+   219-237. <http://www.sciencedirect.com/science/article/pii/S0022169411006937>`__
+-  JÃ¤rvi L, Grimmond CSB, Taka M, Nordbo A, SetÃ¤lÃ¤ H &Strachan IB
+   (2014) Development of the Surface Urban Energy and Water balance
+   Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7,
+   1691-1711,
+   `doi:10.5194/gmd-7-1691-2014 <http://www.geosci-model-dev.net/7/1691/2014/>`__.
+-  Ward HC, L JÃ¤rvi, S Onomura, F Lindberg, CSB Grimmond (2016a) `SUEWS
+   Manual <http://urban-climate.net/umep/SUEWS>`__: Version 2016a
+-  Ward HC. S Kotthaus, L JÃ¤rvi, CSB Grimmond (2016b) Surface Urban
+   Energy and Water Balance Scheme (SUEWS): development and evaluation
+   at two UK sites `:File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf
+   Urban Climate (in
+   press) <:File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf_Urban_Climate_(in_press)>`__.
+
+Solar Radiation: Daily Shadow Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``IntroductionThe ``\ **``Shadow``\ ````\ ``generator``**\ `` plugin can be used to generate pixel wise shadow analysis using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011). Position of the Sun is calculated using ``\ **``PySolar``**\ ``, a python library for various Sun related applications (``\ ```2`` <http://pysolar.org/>`__\ ``).``
+
+`` Location ``
+
+The Shadow Generator is located at
+
+-  UMEP
+
+   -  Processor
+
+      -  Solar Radiation
+
+         -  Daily Shadow Pattern
+
+``Dialog box ``
+
+.. figure:: shadow_generator.jpg_none_Start_Dialog_for_the_Shadow_Generator_package
+   :alt: shadow_generator.jpg_none_Start_Dialog_for_the_Shadow_Generator_package
+
+   shadow_generator.jpg_none_Start_Dialog_for_the_Shadow_Generator_package
+
+``Dialog sections ``
+
+``top  input data is specified``
+
+``middle setting for positioning the Sun on the hemisphere  ``
+
+``bottom  to specify the output and to run the calculations``
+
+``Building and Ground DSM  A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of Sun position.``
+
+``Vegetation Canopy DSMA DSM consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Vegetation Trunk Zone DSM A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Use vegetation DSMs Tick this box if you want to include vegetation (trees and bushes) when shadows are generated.``
+
+``Trunk Zone DSM Exist Tick this in if a trunk zone DSM already exist.``
+
+``Transmissivity of Light Through Vegetation (%) Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).``
+
+``Percent of Canopy Height If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.``
+
+``Specify Data The data need to be set in the middle section.``
+
+``Cast Shadows Only Once Tick this box if you only want to cast one shadow. Below this tick box you can set the time that is needed to decide the position of the sun.``
+
+``Time Interval between Casting of each Interval If the above tick box (Cast shadows only once) is not ticked in, a number of shadows is generated based on the interval set.``
+
+``UTC Offset (Hours) Time zone needs to be specified. Positive numbers moving east(e.g. Stockholm UTC +1).``
+
+``Output Folder A specified folder where the result will be saved.``
+
+``Run Starts the calculations``
+
+``Add Results to ProjectIf ticked, the shadow raster will be added to the map canvas.``
+
+`` Close Closes the plugin.``
+
+`` OutputIf only one shadow image is generated, one geoTIFF will be produced where pixel values of zero indicates shadow and one indicates sunlit. If daily shadow casting is used (Cast shadows only once ticked off), one shadow image for each time step as well as one shadow fraction image is generated. The shadow fraction image is given in percent where 100% meaning the a pixel is sunlit throughout the day used in the calculation.  ``
+
+``Example of input data and result  shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).``
+
+.. figure:: Shadow2.jpg_none_Example_of_Input_Data_and_the_Resulting_Shadow_Image_in_Gothenburg_(1_m_Resolution),_Sweden_at_1_pm_on_the_2nd_of_October_2015_(Daylight_Savings_Time).
+   :alt: Shadow2.jpg_none_Example_of_Input_Data_and_the_Resulting_Shadow_Image_in_Gothenburg_(1_m_Resolution),_Sweden_at_1_pm_on_the_2nd_of_October_2015_(Daylight_Savings_Time).
+
+   Shadow2.jpg_none_Example_of_Input_Data_and_the_Resulting_Shadow_Image_in_Gothenburg_(1_m_Resolution),_Sweden_at_1_pm_on_the_2nd_of_October_2015_(Daylight_Savings_Time).
+
+``Remarks ``
+
+-  All DSMs need to have the same extent and pixel size.
+-  This plugin is computationally intensive i.e. large grids will take a
+   lot of time and very large grids will not be possible to use. Large
+   grids e.g. larger than 4000000 pixels should be tiled before.
+
+`` References``
+
+-  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013.
+   Transmissivity of solar radiation through crowns of single urban
+   treesâ€”application for outdoor thermal comfort modelling. `Theoret.
+   Appl. Climatol.,
+   1â€“14 <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
+-  Lindberg, F., Grimmond, C.S.B., 2011a. The influence of vegetation
+   and building morphology on shadow patterns and mean radiant
+   temperatures in urban areas: model development and evaluation.
+   `Theoret. Appl. Climatol. 105,
+   311â€“323 <http://link.springer.com/article/10.1007/s00704-010-0382-8>`__
+-  Ratti CF, Richens P (1999) Urban texture analysis with image
+   processing techniques. In: Proceedings of the CAADFutures99,
+   Atalanta, GA
+
+Solar Radiation: Solar Energy on Building Envelopes (SEBE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg), Dag WÃ¤srberg (TyrÃ©ns)``
+
+``IntroductionThe ``\ **``SEBE``**\ `` plugin (Solar Energy on Building Envelopes) can be used to calculate pixel wise potential solar energy using ground and building digital surface models (DSM). SEBE is also able to estimate irradiance on building walls. Optionally, vegetation DSMs could also be used. The methodology that is used to generate irradiance is presented in Lindberg et al. (2015).``
+
+`` Location The SEBE plugin is located at ``
+
+-  UMEP
+
+   -  Processor
+
+      -  Solar Radiation
+
+         -  Solar Energy on Building Envelopes (SEBE)
+
+``Related Preprocessors   ``\ ```MetdataPreprocessor`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__\ ``, ``\ ```Download``\ ````\ ``data``\ ````\ ``(WATCH)`` <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__\ ``, ``\ ```Wall``\ ````\ ``Height``\ ````\ ``and``\ ````\ ``Aspect`` <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__
+
+``Dialog box Consists of ``
+
+-  top section where input data is specified
+-  bottom section for specifying the output and for running the
+   calculations
+
+.. figure:: SEBE1.png_none_Start_Dialog_for_the_Solar_Energy_on_Building_Envelopes_package
+   :alt: SEBE1.png_none_Start_Dialog_for_the_Solar_Energy_on_Building_Envelopes_package
+
+   SEBE1.png_none_Start_Dialog_for_the_Solar_Energy_on_Building_Envelopes_package
+
+``Building and Ground DSMA DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of the Sun position.``
+
+`` Vegetation Canopy DSM A DSM consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Vegetation Trunk Zone DSM A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.``
+
+``Use Vegetation DSMs Tick this box if you want to include vegetation (trees and bushes) into the analysis.``
+
+``Trunk Zone DSM ExistTick this in if a trunk zone DSM already exist.``
+
+``Transmissivity of Light Through Vegetation (%) Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).``
+
+``Percent of Canopy HeightIf a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.``
+
+``Wall Height Raster A raster of the same size and extent as the ground and building DSM including information of the wall pixels and its height in meters above ground should be specified here. Non wall pixels should be set to zero. This raster is used to estimate irradiance on building walls and can be generated using the Wall Height and Aspect plugin located at UMEP -> Pre-processing -> Urban Geometry -> Wall Height and Aspect.``
+
+``Wall Aspect Raster A raster of the same size and extent as the ground and building DSM including information of the wall pixels and its aspect, i.e. angle, should be specified here. For example a wall facing towards the south has a value of 180Â°. Non wall pixels should be set to zero. This raster are used to estimate irradiance on building walls and can be generated using the Wall Height and Aspect plugin located at UMEP -> Pre-processing -> Urban Geometry -> Wall Height and Aspect.``
+
+``Albedo This parameter specifies the reflectivity of shortwave radiation of all surfaces (ground, roofs, walls and vegetation). It should be a value between 0 and 1. The default value is set to 0.15.``
+
+`` UTC Offset (Hours)Time zone needs to be specified. Positive numbers increase when moving east (e.g. Stockholm UTC +1).``
+
+``Estimate Diffuse and Direct Shortwave Components from Global Radiation Tick this in if only global radiation is present. Diffuse and direct shortwave components will then be estimated from global radiation based on the statistical model presented by Reindl et al. (1990). If air temperature and relative humidity is present, the statistical model will perform better but it is able to estimate the components using only global shortwave radiation.``
+
+``Input Meteorological File Input meteorological data specifically formatted to be used in UMEP. This specific format can be created using UMEP -> Pre-processing -> Meteorological data -> Prepare existing data. A dataset with ``\ **``hourly``**\ `` time resolution should be used for SEBE, preferably at least ``\ **``one``\ ````\ ``year``\ ````\ ``in``\ ````\ ``length``**\ ``. The time should be in ``\ ```LST`` <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__\ `` for the specific location to be modelled. Multiple years can also be used to improve the model outcome. Model output is dependent on the meteorological input data so if a short dataset is used, potential solar energy would be valid for that particular time period only.``
+
+Mandatory data is global shortwave radiation, but the model will perform
+best if also diffuse and direct components are available.
+
+The direct radiation component used as input in the SOLWEIG model is not
+the direct shortwave radiation on a horizontal surface but on a surface
+perpendicular to the light source. Hence, the relationship between
+global radiation and the two separate components are:
+
+Global radiation = direct radiation \* sin(h) + diffuse radiation
+
+where h is the sun altitude. Since diffuse and direct components of
+short wave radiation is not common data, it is also possible to
+calculate diffuse and direct shortwave radiation (see above).
+
+``Save Sky Irradiance Distribution When the box is ticked in, it is possible to save the radiation distribution from the sky vault calculated from the meteorological file. SEBE first distributes the radiation on 145 sky patches on the sky vault and then generates shadows on the DSMs based on these patches, i.e. the core loop in the model iterates 145 times. For more detailed information on this, see Lindberg et al. (2015).``
+
+``Output Folder A specified folder where result will be saved should be specified here. One raster showing irradiance on ground and building roofs named Energyyearroof.tif is saved as well as a text file of wall irradiance (Energyyearwall.txt). Also, the ground and building DSM is saved in the output folder to be used later in a SEBE visualization plugin (UMEP -> Post-processing -> Solar Energy -> SEBE (Visualisation)).``
+
+`` Run This starts the calculations.``
+
+``Add Roof and Ground Irradiance Result Raster to Project If this is ticked in, ``\ **``Energyyearroof.tif``**\ `` will be loaded into to the map canvas.``
+
+``Close This button closes the plugin.``
+
+``Output As mentioned earlier, three mandatory datasets are save is the model was successful. The geoTIFF ``\ **``Energyyearroof.tif``**\ `` show pixel wise total irradiance in kWh. ``\ **``Energyyearwall.txt``**\ `` show total wall irradiance for each wall column. The column voxel is decided based on the pixel resolution of the input data. Also, the ground and building DSM is saved in the output folder for later use. If the vegetation DSMs were added, one additional file (``\ **``Vegetationdata.txt``**\ ``) including information of vegetation height and location are also saved. This file is also be used in the SBEB visualization plugin.``
+
+``Example of input data and result Input DSM (left) and irradiance image (right) in Gothenburg using data from 1977.``
+
+.. figure:: SEBE2.jpg_none_Example_of_Input_Data_and_the_Resulting_Irradiance_Image_in_Gothenburg_(1977)
+   :alt: SEBE2.jpg_none_Example_of_Input_Data_and_the_Resulting_Irradiance_Image_in_Gothenburg_(1977)
+
+   SEBE2.jpg_none_Example_of_Input_Data_and_the_Resulting_Irradiance_Image_in_Gothenburg_(1977)
+
+`` Remarks ``
+
+-  All DSMs need to have the same extent and pixel size.
+-  This plugin is computationally intensive i.e. large grids will take a
+   lot of time and very large grids will not be possible to use. Large
+   grids e.g. larger than 4000000 pixels should be tiled before.
+
+``References``
+
+-  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013.
+   Transmissivity of solar radiation through crowns of single urban
+   treesâ€”application for outdoor thermal comfort modelling. Theoret.
+   Appl. Climatol., 1â€“14 `Link to
+   Paper <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
+-  Lindberg, F., Jonsson, P. & Honjo, T. and WÃ¤stberg, D. (2015) Solar
+   energy on building envelopes - 3D modelling in a 2D environment.
+   Solar Energy. 115 (2015) 369â€“378 `Link to
+   Paper <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
+-  Reindl DT, Beckman WA, Duffie JA (1990) Diffuse fraction correlation.
+   Sol Energy 45:1â€“7. `Link to
+   paper <http://www.sciencedirect.com/science/article/pii/0038092X9090060P>`__
+
+Post-Processor
+--------------
+
+Solar Radiation: SEBE (Visualisation)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorNiklas Krave (Gothenburg)``
+
+``IntroductionThe ``\ **``SEBE``\ ````\ ``(Visualisation)``**\ `` plugin can be used to visulise 3D output from model results generated by the SEBE plugin. ``
+
+`` Location ``
+
+The Shadow Generator is located at
+
+-  UMEP
+
+   -  Post-Processor
+
+      -  Solar Radiation
+
+         -  SEBE (Visualisation)
+
+``Dialog box ``
+
+.. figure:: SEBEvisualisation.png_none_Dialog_for_the_SEBE_(Visualisation)_plugin
+   :alt: SEBEvisualisation.png_none_Dialog_for_the_SEBE_(Visualisation)_plugin
+
+   SEBEvisualisation.png_none_Dialog_for_the_SEBE_(Visualisation)_plugin
+
+``Dialog sections ``
+
+``top Canvas for visualisation``
+
+``bottom Input data and settings``
+
+``Select input folderThe directory where results from a previous model run in SEBE is located.``
+
+``Area of visualisation  When this pushbutton is clicked, a recanglge can be drawn on the map canvas. This is the area that will be visulised.``
+
+``Visulise When this button is clicked, the selected rectangular area will be visulised in the SEBE (visualisation) canvas at the top of the GUI.``
+
+``CloseThis closes the plugin.``
+
+Outdoor Thermal Comfort: SOLWEIG Analyzer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``IntroductionThe ``\ **``SOLWEIG``\ ````\ ``Analyzer``**\ `` plugin can be used to make basic analysis of model results generated by the SOLWEIG plugin. ``
+
+`` Location ``
+
+The SOLWEIG Analyzer is located at
+
+-  UMEP
+
+   -  Post-Processor
+
+      -  Outdoor Thermal Comfort
+
+         -  SOLWEIG Analyzer
+
+``Dialog box ``
+
+.. figure:: SOLWEIGAnalyzer.png_none_Dialog_for_the_SOLWEIG_Analyzer_plugin
+   :alt: SOLWEIGAnalyzer.png_none_Dialog_for_the_SOLWEIG_Analyzer_plugin
+
+   SOLWEIGAnalyzer.png_none_Dialog_for_the_SOLWEIG_Analyzer_plugin
+
+``Dialog sections ``
+
+``top Input data is specified``
+
+``left Plotting of time series derived from Points of Interest during model calculations in SOLWEIG  ``
+
+``bottom Analysis of spatial results from model calculations in SOLWEIG``
+
+``Load model resultThe directory where results from a previous model run in SOLWEIG is located.``
+
+| ``Point of Interest data ``
+
+``POIs availableHere, a list of all available POI files are listed. Specify one of the POIs. If no variable is available, then no data if found in the Model output folder.``
+
+``VariableSpecify one of the available variables to plot.``
+
+``Add another POI / variableTick this in to add another variable in the plot.``
+
+``ScatterplotTick this in to generate a scatterplot between the two variables specified above.``
+
+``PlotPlot the data selected above``
+
+| ``Spatial data ``
+
+``Variable to visualizeSelect a listed variable to process. If no variable is available, then no data if found in the Model output folder.``
+
+``Show animationThis produces a time-related animation of the selected variable scaled based on the settings to the left in the GUI.``
+
+``Exclude building pixelsTick this in to exclude building pixels using a building grid generated from the SOLWEIG run. The building grid must have the same extent and pixel resolution as the generated output maps in the model output folder.``
+
+``Diurnal averageTick this in to include all grids for the selected variable to derive a pixelwise average.``
+
+``Daytime averageTick this in to include all daytime grids for the selected variable to derive a pixelwise average.``
+
+``Nightime averageTick this in to include all nighttime grids for the selected variable to derive a pixelwise average.``
+
+``MaximumTick this in to get the pixelwise maximum for the selected variable.``
+
+``MinimumTick this in to get the pixelwise minimum for the selected variable.``
+
+``Average of specific time of dayThe average of the selected time of day for the variable selected is generated. If 'Not Specified' is highlighted, no grid will be generated.``
+
+``Maximum of specific time of dayThe maximum of the selected time of day for the variable selected is generated. If 'Not Specified' is highlighted, no grid will be generated.``
+
+``Minimum of specific time of dayThe minimum of the selected time of day for the variable selected is generated. If 'Not Specified' is highlighted, no grid will be generated.``
+
+``T``\ :sub:```mrt```\ ``: Percent of time above threshold (degC)If T``\ :sub:```mrt```\ `` is the selected variable, this box become active and calculates the percent of time that T``\ :sub:```mrt```\ `` for each is above the threshold specified to the right.``
+
+``T``\ :sub:```mrt```\ ``: Percent of time below threshold (degC)If T``\ :sub:```mrt```\ `` is the selected variable, this box become active and calculates the percent of time that T``\ :sub:```mrt```\ `` for each is below the threshold specified to the right.``
+
+``Output folderDirectory where the results specified above will be saved.``
+
+``Add analysis to map canvasAll analysis specified above will be added to the map canvas if this box is ticked in.``
+
+``GenerateStarts the spatial processing/analysis.``
+
+``CloseThis closes the plugin.``
+
+Urban Energy Balance: SUEWS Analyser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``ContributorFredrik Lindberg (Gothenburg)``
+
+``IntroductionThe ``\ **``SUEWS``\ ````\ ``Analyzer``**\ `` plugin can be used to make basic analysis of model results generated by the ``\ *``SUEWS``\ ````\ ``Simple``*\ `` and ``\ *``SUEWS``\ ````\ ``Advanced``*\ `` plugins. ``
+
+`` Location ``
+
+The SUEWS Analyzer is located at
+
+-  UMEP
+
+   -  Post-Processor
+
+      -  Urban Energy Balance
+
+         -  SUEWS Analyzer
+
+``Dialog box ``
+
+.. figure:: SUEWSAnalyzer.png_none_Dialog_for_the_SUEWS_Analyzer_plugin
+   :alt: SUEWSAnalyzer.png_none_Dialog_for_the_SUEWS_Analyzer_plugin
+
+   SUEWSAnalyzer.png_none_Dialog_for_the_SUEWS_Analyzer_plugin
+
+``Dialog sections ``
+
+``top Model results to be analyzer is specified. ``
+
+``left Plotting of time series derived from Points of Interest during model calculations in SUEWS  ``
+
+``bottom Analysis of spatial results from model calculations in SUEWS``
+
+``Load model resultA namelist (``\ *``RunControl.nml``*\ ``) used for the model run should be specified. This can be located in the ``\ **``suewsmodel``**\ `` directory found as a sub-directory of the ``\ **``UMEP``**\ ``-plugin directory. Note that the namelist includes information on the last model run performed. ``
+
+| ``Point data ``
+
+``GridHere, a list of all available modeled grids are listed. Specify one of the grid IDs. If no grid is available, then no data if found in the model output folder.``
+
+``Year to investigateSpecify one of the available years to plot.``
+
+``Plot basic dataTick this in to plot a summary of the most essential output variables.``
+
+``Time Period (DOY)Specify the time period to plot.``
+
+``VariableSpecify one of the available variables to plot.``
+
+``Include another variableTick this in to add another variable in the plot.``
+
+``GridHere, a list of all available modeled grids are listed. Specify one of the grid IDs. If no grid is available, then no data if found in the model output folder.``
+
+``VariableSpecify one of the available variables to plot.``
+
+``ScatterplotTick this in to generate a scatterplot between the two variables specified above.``
+
+``PlotPlot the data selected above``
+
+| ``Spatial data ``
+
+``Variable to analyzeSelect a listed variable to process. If no variable is available, then no data if found in the Model output folder.``
+
+``Year to investigateSpecify one of the available years to plot.``
+
+``Time Period (DOY)Specify the time period to plot.``
+
+``AverageTick this in to derive a grid-wise average.``
+
+``MaximumTick this in to derive a grid-wise maximum.``
+
+``MinimumTick this in to derive a grid-wise minimum.``
+
+``MedianTick this in to derive a grid-wise median value.``
+
+``IQRTick this in to derive a grid-wise interquartile range.``
+
+``DiurnalTick this in to include diurnal (all) data.``
+
+``DaytimeTick this in to include daytime data.``
+
+``NightimeTick this in to include nighttime data.``
+
+``Vector polygon grid used in the SUEWS modelSpecify the grid that was used to generate the input data to the SUEWS model run of interest.``
+
+``IDSpecify the attribute ID used to generate the input data to the SUEWS model run of interest.``
+
+``Add result to polygon gridTick this box to add the results in the attribute table of the grid specified.``
+
+``Save of GeoTIFFTick this in to generate a raster grid from the analyze settings specified.``
+
+``Irregular grid (not squared)Tick this in if a grid is irregular i.e. not squared and aligned north to south.``
+
+``Pixel resolution (m)When a irregular grid is used, a pixel resolution in meters must be specified.``
+
+``Output filenameName of the GeoTIFF to be saved.``
+
+``Add analysis to map canvasAll analysis specified above will be added to the map canvas if this box is ticked in.``
+
+``GenerateStarts the spatial processing/analysis.``
+
+``CloseThis closes the plugin.``
+
+Benchmark System
+~~~~~~~~~~~~~~~~
+
+``Contributors  ``
+
+Ting Sun (Reading), Sue Grimmond (Reading)
+
+``Overview``
+
+**Note**: the current version runs in a command-line interface (CLI)
+driven by Python and the GUI-based version is under construction.
+
+The Benchmark System for SUEWS (BSS) can be used with SUEWS to assess
+the model performance between different configurations and model
+generations. BSS is written in Python and shipped with an example
+namelist and an MS Excel spreadsheet for header lookup between different
+SUEWS versions.
+
+`` Location ``
+
+The SUEWS Analyzer is located at
+
+-  UMEP
+
+   -  Post-Processor
+
+      -  Benchmark
+
+``Benchmark results ``
+
+Two types of metrics are provided:
+|BSS-result.png_thumb_alt=Alt_text_Figure_1:_BSS_results_for_(a)_the_overall_performance_and_(b)_a_specific_statistics_(e.g.,_RMSE)|
+
+-  overall performance score: a score between 0 and 100 with larger
+   score denoting better overall performance
+-  specific statistics: a range of statistics, including Mean absolute
+   error (MAE), root mean square error (RMSE), standard deviation (Std),
+   etc., to indicate detailed performance in specific variables.
+
+The users can use the overall performance score to get the performance
+overview of all configurations (Fig. 1a) and specific statistics to
+examine the performance details (Fig. 1b).
+
+``Usage ``
+
+|BSS-file-layout.png_thumb_Figure_2:_Required_file_organisation_by_BSS.|
+To use BSS, in addition to the mandatory BSS files (i.e.,
+Benchmark_SUEWS.py, benchmark.nml and head-2016to2017.xlsx), the SUEWS
+output results are required to be placed in a separate folder (e.g.,
+â€œinputâ€) that contains the sub-folders of results produced by
+different configurations. A sample layout of the BSS test case refers to
+Fig. 2. It must be noted that the output files to be benchmarked should
+be of consistent temporal organisation (i.e., identical length and
+resolution) while the headers of different files are not necessarily to
+be identical as BSS will handle the header inconsistency automatically.
+Besides, two sub-folders, "base" and "ref", which contain the baseline
+results to be tested against and reference results to be compared with,
+respectively, must exist otherwise the BSS will stop.
+
+When the SUEWS output files are prepared, the namelist (i.e.,
+benchmark.nml) needs to be set for the benchmarking. The benchmark
+namelist is fairly self-explanatory and consists two sections, "file"
+and "benchmark", to play with. One tip is about the variable list (i.e.,
+var_list): if one non-string value is set (e.g., 123, 3.2, etc.), all
+valid variables will be included in the benchmarking. Then the user can
+execute the Benchmark_SUEWS.py script and a PDF file with benchmark
+results will be generated (e.g., benchmark.pdf in Fig. 2).
+
+``Namelist: benchmark.nml ``
+
+The benchmark namelist is fairly self-explanatory and consists two
+sections, "file" and "benchmark", to play with.
+
+One tip is about the variable list (i.e., var_list): if one non-string
+value is set (e.g., 123, 3.2, etc.), all valid variables will be
+included in the benchmarking.
+
+A sample namelist is as follows:
+
+| ``&file``
+| ``  input_dir = 'input'``
+| ``  output_pdf = 'benchmark'``
+| ``/``
+| ``&benchmark``
+| ``  list_var='QN' 'QS' 'QE' 'QH'``
+| ``  list_metric='MAE' 'MBE' 'RMSE'``
+| ``  method_score=1 ! not used yet``
+| ``/``
+
+People Involved & Acknowledgements
+----------------------------------
+
+!Group ! Institution & Support Acknowledged ! Team
+
+| `` Sue Grimmond ``
+| `` ``\ *``University``\ ````\ ``of``\ ````\ ``Reading,``\ ````\ ``UK``*
+
+**``Met``\ ````\ ``Office/Newton``\ ````\ ``Fund``\ ````\ ``CSSP``\ ````\ ``-``\ ````\ ``China``**
+
+| ``NERC TRUC ``
+| ``NERC ClearfLo``
+
+| ``EPSRC LoHCool``
+| ``EPSRC PhD Studentships``
+
+| ``EUf7 Bridge ``
+| ``EUf7 emBRACE``
+
+| ``H2020 UrbanFluxes``
+| ``NERC Case Studentship``
+
+``Christoph W. Kent ``
+
+``Helen Ward ``
+
+``Ting Sun``
+
+``Izzy Capel-Timms``
+
+``Andy Gabey``
+
+``Bei HUANG``
+
+| ``Fredrik Lindberg ``
+| *``University``\ ````\ ``of``\ ````\ ``Gothenburg,``\ ````\ ``Sweden``*
+
+``H2020 UrbanFluxes``
+
+``FORMAS Climplan``
+
+``Frans Olofsson ``
+
+``Niklas Krave``
+
+``Shiho Onomura``
+
+| ``Leena JÃ¤rvi ``
+| *``University``\ ````\ ``of``\ ````\ ``Helsinki,``\ ````\ ``Finland``*
+
+``Maj and Tor Nessling foundation``
+
+``Academy of Finland``
+
+``EUf7 Bridge``
+
+``Tom Kokkonen``
+
+| ``Jian Guo Tan``
+| *``Shanghai``\ ````\ ``Institute``\ ````\ ``of``\ ````\ ``Meteorological``\ ````\ ``Sciences,``\ ````\ ``SMS,``\ ````\ ``CMA,``\ ````\ ``China``*
+
+``Yuan Yong Chang``
+
+``Dongwei Liu``
+
+``XY Ao``
+
+Tutorials
+---------
+
+To help users getting started with UMEP, the community is working on
+setting up tutorials and instructions for different parts of the UMEP
+tool. The following gives what are available and planned. `To get the
+Password to access the data for the different
+tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__.
+
+! Topic ! Parts of UMEP ! Name ! Application
+
+| ``Source Area Footprint``
+| ``Pre-Processor          ``
+| ```Footprint`` <http://www.urban-climate.net/umep/UMEP/_Tutorials/_Footprint>`__
+| ``Interpretation of eddy covariance flux source areas``
+
+| ``Urban energy balance``
+| ``Processor              ``
+| ```Introduction``\ ````\ ``to``\ ````\ ``SUEWS`` <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/IntroductionToSuews>`__
+| ``Energy, water and radiation fluxes``
+
+| ``Urban energy balance``
+| ``Pre-Processor and Processor                ``
+| ```SUEWS``\ ````\ ``Advanced`` <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/_SUEWS_Advanced>`__
+| ``Energy, water and radiation fluxes``
+
+| ``Potential solar energy production on building envelopes``
+| ``Processor and Post-Processor``
+| ```SEBE`` <http://www.urban-climate.net/umep/UMEP_Manual/_Tutorials/SEBE>`__\ ``       ``
+| ``Amount of solar energy received on building facets``
+
+| ``Outdoor thermal comfort``
+| ``Pre-Processor and Processor                ``
+| ```Introduction``\ ````\ ``to``\ ````\ ``SOLWEIG`` <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/IntroductionToSolweig>`__
+| ``Mean radiation temperature modelling in complex urban settings``
+
+| ``Anthropogenic heat``
+| ``Processor              ``
+| ```UMEP_Manual/_Tutorials/GQF``\ ````\ ``GQ<sub>F</sub>`` <UMEP_Manual/_Tutorials/GQF_GQ<sub>F</sub>>`__
+| ``Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)``
+
+| ``Anthropogenic heat``
+| ``Processor              ``
+| ```UMEP_Manual/_Tutorials/LQF``\ ````\ ``LQ<sub>F</sub>`` <UMEP_Manual/_Tutorials/LQF_LQ<sub>F</sub>>`__
+| ``Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)``
+
+How to Contribute
+-----------------
+
+UMEP is an an open source tool that we are keen to get others inputs and
+contributions. There are two main ways to contribute:
+
+#. Submit comments or issues to the
+   `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
+#. Participate in `Coding or adding new
+   features <http://urban-climate.net/umep/DevelopmentGuidelines>`__.
+#. Create new tutorials for the UMEP-plugin.
+
+Reporting a Bug
+~~~~~~~~~~~~~~~
+
+-  As a good citizen of the open source community please report bugs. If
+   it is a UMEP plugin related issue - report this to the
+   `https://bitbucket.org/fredrik_ucg/umep/issues UMEP
+   plugin <https://bitbucket.org/fredrik_ucg/umep/issues>`__. You can
+   see if your bug is already reported. In order for the UMEP team to
+   solve your issue as easy as fast as possible, please provide a full
+   description of the problem including steps to repeat it. The more
+   info given, the easier it is for us to solve your issues.
+-  **Please have a look at Known Issues and FAQ (found below) before
+   submitting an issue to the repository**.
+-  A bug may also be caused by `QGIS <http://hub.qgis.org/issues>`__. By
+   reporting bugs (and also maybe helping out to solve them) is
+   essential to the open source community. At [www.qgis.org
+   www.qgis.org] you can find out more on what you can do to get
+   involved.
+-  QGIS: how to report a QGIS issue:
+   `http://qgis.org/en/site/getinvolved/development/index.html#qgis-bugreporting <http://qgis.org/en/site/getinvolved/development/index.html#qgis-bugreporting>`__.
+
+Known Issues
+------------
+
+-  QGIS (27/September/2017) **had** an issue using gdal which causes
+   QGIS to create a minidump when the software is closed. This issue has
+   now been fixed (issue
+   #\ `13061 <https://hub.qgis.org/issues/13061>`__). Other issues found
+   should be reported to our
+   `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
+-  UMEP plugin is not compatible with matplotlib versions 2.x. Use
+   instead 1.5.x. (23/August/2017)
+-  Mac users might have issue pointing at non-existing directories. Work
+   around is to manually create directories before starting any
+   UMEP-process.
+-  Only use standard English alpha-numeric characters (e.g. no space,
+   Ã¥, % etc.)
+-  Issues has been reported using .sdat rasters. GeoTiff are
+   recommended.
+
+FAQ (Frequently Asked Questions)
+--------------------------------
+
+! Question ! Answer
+
+| `` How do I upgrade the plugin?  ``
+| `` When a new LTR version is released it will be available from the repository. In QGIS to check for updates, go to ``\ *``Plugins>Manage``\ ````\ ``and``\ ````\ ``Install``\ ````\ ``Plugins...``*\ ``.``
+
+If the UMEP plugin is in bold, a new version is available. On how to
+upgrade to the development version, see `Getting
+started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__.
+
+| `` How do I uninstall the plugin?    ``
+| `` Go to ``\ *``Plugins>Manage``\ ````\ ``and``\ ````\ ``Install``\ ````\ ``Plugins...``*\ ``. Locate the UMEP plugin and click ``\ *``Uninstall``*\ ``.``
+
+i
+
+| `` How do I install other python packages (e.g. pandas) as well as other libraries not included in the ``\ *``Desktop``\ ````\ ``Express``\ ````\ ``Install``*\ `` of QGIS?``
+| `` Follow the instruction from this ``\ ```link`` <http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities>`__\ ``.``
+| `` MY new raster is just black after using e.g. the ``\ *``Wall``\ ````\ ``Height``\ ````\ ``and``\ ````\ ``Aspect``*\ `` plugin. What is wrong?``
+| `` Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.``
+
+| `` Can the UMEP-plugin be used when ``\ **``Nodata``**\ ``-values are present in the input rasters?``
+| `` Yes, it can but we strongly recommend you to reclassify Nodata values to e.g. 0 before using them in UMEP. Here is a forum discussion that can help: ``\ ```https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis`` <https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis>`__
+| `` Why is UMEP having problems saving output files?``
+| `` Check that your path contains only English characters. For Mac users: the UMEP graphical interface will occasionally want to create a folder instead of selecting a folder. In this case in ``\ *``Save``\ ````\ ``As:``*\ `` write the folder name you would like to save your output, press ``\ *``Save``*\ ``, when it asks ``\ *``â€œ...folder``\ ````\ ``name...â€``\ ````\ ``already``\ ````\ ``exists.``\ ````\ ``Do``\ ````\ ``you``\ ````\ ``want``\ ````\ ``to``\ ````\ ``replace``\ ````\ ``it?``*\ `` press ``\ *``Replace``*\ ``.``
+
+| `` How is frontal area index calculated in ``\ *``Image``\ ````\ ``Morphometric``\ ````\ ``Parameters``*\ `` plugins?    ``
+| ``Our method is only using one line through the center of the grid for each wind direction. This is because we rotate the DSM and hence it is only the center line that includes height information. We do this since we are using a pure raster-based approach and if we were to instead rotate the search direction vector we would end up with different lengths for each wind direction. If you want to investigate a certain wind direction I suggest that you use a section of wind directions; e.g. 45 degrees.``
+
+| `` How do I report a bug?``
+| `` Report it at the ``\ ```repository`` <http://bitbucket.org/fredrik_ucg/umep/issues/>`__\ `` ``
+
+| `` What can UMEP do?``
+| `` ``\ ```Tool``\ ````\ ``Architecture`` <http://www.urban-climate.net/umep/UMEP_Manual#Tool_Architecture>`__\ `` provides an overview``
+
+| `` Who has developed this?``
+| `` ``\ ```People`` <http://www.urban-climate.net/umep/UMEP_Manual#People_Involved_.26_Acknowledgements>`__\ `` involved in development``
+
+| `` What are the development guidelines?``
+| ```http://urban-climate.net/umep/DevelopmentGuidelines`` <http://urban-climate.net/umep/DevelopmentGuidelines>`__\ `` ``
+
+| `` How can I uninstall QGIS?``
+| `` ``\ |``uninstall.png_frame_right``|
+
+Uninstalling QGIS on a Windows PC is not done via the Control Panel as
+most other software. To uninstall completely, start the OSGeo4W setup
+(found in your start menu) and choose *Advanced install*. Continue until
+you come up to the window where you can add, remove and upgrade the
+different packages in your QGIS installation. Click on the small wheel
+with two arrows next to *Desktop* until *Uninstall* is seen. This
+removes shortcuts and most of the files related to QGIS. However, not
+all OSGeo products are removed. IF you want remove everything, open your
+File Explorer and remove the folder manually where you installed the
+OSGEO products (usually under *C:\OSGeo4W64*).
+
+| `` How do I ask other questions?``
+| `` There is an email list. Or  you can ask them at the ``\ ```repository`` <http://bitbucket.org/fredrik_ucg/umep/issues/>`__\ `` ``
+
+Abbreviations
+-------------
+
+``class="wikitable"``
+
+! Acronym ! Defintion ! Comments
+
+| ``CDSM ``
+| ``Canopy Digital Surface Model``
+| ``A vegetation raster grid where vegetation heights is given in meter above ground level. Pixels with no vegetation should be zero.``
+
+| ``CRS``
+| ``Coordinate Reference System``
+
+| ``CRU``
+| ``Climatic Research Unit``
+
+| ``DEM  Digtial Elevation Model``
+| ``Here, same definition as DTM.``
+
+| ``DSM ``
+| ``Digital Surface Model``
+| ``A raster grid including both buildings and ground given in meter above sea level.``
+
+| ``DTM  Digtial Terrain Model``
+| ``A raster grid including only ground heights given in meter above sea level.``
+
+| ``ECMWF``
+| ``European Centre for Medium-Range Weather Forecasts``
+
+| ``GIS ``
+| ``Geographical Information System``
+
+| ``LCZ``
+| ``Local Climate Zone``
+
+| ``LST``
+| ``Local Standard Time``
+
+| ``LTR``
+| ``Long term release``
+
+| ``LUCY ``
+| ``Large scale Urban Consumption of energy model ``
+
+| ``m agl  metres above ground level``
+
+| ``m asl  metres above sea level``
+
+| ``OTF ``
+| ``On the Fly ``
+| ``Used in QGIS when different geodatasets with different coordinate systems are projected in the same automatically. ``
+
+| ``Q``\ :sub:```F```\ `` ``
+| ``Anthropogenic heat flux``
+
+| ``SEBE``
+| ``Solar Energy on Building Envelopes``
+
+| ``SOLWEIG ``
+| ``Solar and longwave environmental irradiance geometry model``
+
+| ``SUEWS ``
+| ```http://urban-climate.net/umep/SUEWS`` <http://urban-climate.net/umep/SUEWS>`__\ ``   Surface urban energy and water balance scheme``
+
+| ``SVF ``
+| ``Sky View Factor``
+
+| ``TDSM``
+| ``Trunk zone Digital Surface Model``
+| ``A raster grid specifying the height up to the buttom of a vegetation canopy in meter above ground level. Pixels with no trunk height should be zero.``
+
+| ``UMEP ``
+| ``Urban Multi-scale Environmental Predictor``
+
+| ``WFDEI``
+| ``WATCH Forcing Data methodology applied to ERA-Interim data``
+
+| ``WUDAPT``
+| ``The World Urban Database and Access Portal Tools``
+
+.. |pandas.png_frame_right_Installation_of_pandas| image:: pandas.png_frame_right_Installation_of_pandas
+.. |``MetPreProcessor.jpg_frame_left_Interface_for_inputting_an_ascii_data_file_into_the_correct_format_for_SUEWS``| image:: MetPreProcessor.jpg_frame_left_Interface_for_inputting_an_ascii_data_file_into_the_correct_format_for_SUEWS
+.. |LCZdialog1.png_700px_thumb_right| image:: LCZdialog1.png_700px_thumb_right
+.. |LCZdialog2.png_700px_thumb_left| image:: LCZdialog2.png_700px_thumb_left
+.. |LCZdialog3.png_700px_thumb_right| image:: LCZdialog3.png_700px_thumb_right
+.. |``Output_Skyview.jpg_frame_none_Example_of_(left)_input_data_-_ground_and_building_DSM_(grayscale),_DSM_overlaid_with_a_canopy_DSM_(yellow_to_green)._Right:_the_resulting_SVF_-light_highest_SVF``| image:: Output_Skyview.jpg_frame_none_Example_of_(left)_input_data_-_ground_and_building_DSM_(grayscale),_DSM_overlaid_with_a_canopy_DSM_(yellow_to_green)._Right:_the_resulting_SVF_-light_highest_SVF
+.. |``SP_met.jpg_frame_right_Box_for_meteorological_data._The_button_has_been_used_to_import_a_file_containing_meteorological_data.``| image:: SP_met.jpg_frame_right_Box_for_meteorological_data._The_button_has_been_used_to_import_a_file_containing_meteorological_data.
+.. |``SP_DLS.jpg_frame_right_Box_used_for_setting_the_start_and_end_of_day_lights_savings_time.``| image:: SP_DLS.jpg_frame_right_Box_used_for_setting_the_start_and_end_of_day_lights_savings_time.
+.. |``SP_pop.jpg_frame_right_Box_associated_with_population_density._A_field_from_the_polygon_grid_containing_population_density_data_needs_to_be_selected_from_the_drop_down_menu.``| image:: SP_pop.jpg_frame_right_Box_associated_with_population_density._A_field_from_the_polygon_grid_containing_population_density_data_needs_to_be_selected_from_the_drop_down_menu.
+.. |``SUEWSPrepare_wallarea.png_frame_right_Box_for_wall_area_data.``| image:: SUEWSPrepare_wallarea.png_frame_right_Box_for_wall_area_data.
+.. |``SUEWSPrepare_landuse.png_frame_right_Box_for_land_use_data.``| image:: SUEWSPrepare_landuse.png_frame_right_Box_for_land_use_data.
+.. |``SUEWSPrepare_init.png_frame_right_Box_for_initial_conditions.``| image:: SUEWSPrepare_init.png_frame_right_Box_for_initial_conditions.
+.. |``SP_siteCode.jpg_frame_right_Site_code_selection_in_a_site_library_tab``| image:: SP_siteCode.jpg_frame_right_Site_code_selection_in_a_site_library_tab
+.. |Figure12.png_frame_right_Using_more_than_one_site_code.| image:: Figure12.png_frame_right_Using_more_than_one_site_code.
+.. |SOLWEIGfirsttry.png_none_Dialog_for_the_SOLWEIG_model| image:: SOLWEIGfirsttry.png_none_Dialog_for_the_SOLWEIG_model
+.. |``Extremefinder3.png_frame_left_The_interface_for_the_ExtremeFinder_plugin``| image:: Extremefinder3.png_frame_left_The_interface_for_the_ExtremeFinder_plugin
+.. |TMax1.jpg_center_thumb_350px_Heat/Cold_wave_periods| image:: TMax1.jpg_center_thumb_350px_Heat/Cold_wave_periods
+.. |HW_Box.jpg_center_thumb_350px_Box-and-whisker_plot_of_Heat/Cold_wave_days_each_year| image:: HW_Box.jpg_center_thumb_350px_Box-and-whisker_plot_of_Heat/Cold_wave_days_each_year
+.. |HWDays.jpg_center_thumb_350px_Plot_Histogram_showing_number_of_Heat/Cold_wave_days_each_year| image:: HWDays.jpg_center_thumb_350px_Plot_Histogram_showing_number_of_Heat/Cold_wave_days_each_year
+.. |``GQF.png_none_Start_dialog_for_Greater_QF``| image:: GQF.png_none_Start_dialog_for_Greater_QF
+.. |``SuewsAdvanced.png_none_Start_dialog_for_SUEWS``| image:: SuewsAdvanced.png_none_Start_dialog_for_SUEWS
+.. |BSS-result.png_thumb_alt=Alt_text_Figure_1:_BSS_results_for_(a)_the_overall_performance_and_(b)_a_specific_statistics_(e.g.,_RMSE)| image:: BSS-result.png_thumb_alt=Alt_text_Figure_1:_BSS_results_for_(a)_the_overall_performance_and_(b)_a_specific_statistics_(e.g.,_RMSE)
+.. |BSS-file-layout.png_thumb_Figure_2:_Required_file_organisation_by_BSS.| image:: BSS-file-layout.png_thumb_Figure_2:_Required_file_organisation_by_BSS.
+.. |``uninstall.png_frame_right``| image:: uninstall.png_frame_right
+
