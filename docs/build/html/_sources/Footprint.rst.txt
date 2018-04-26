@@ -1,4 +1,4 @@
-Introduction
+﻿Introduction
 ------------
 
 Each meteorological instrument has a ‘\ *source area*\ ’ (sometimes
@@ -48,9 +48,10 @@ When you open it on the top toolbar you will see **UMEP**.
 Data for Tutorial
 ~~~~~~~~~~~~~~~~~
 
-Use the appropriate data a) Reading -- `Download BB - week
-5 <https://www.bb.reading.ac.uk>`__ or
-`here <http://www.urban-climate.net/UMEPTutorials/Reading/DataReading.zip>`__
+Use the appropriate data
+
+a) Reading -- `Download BB  - week 5 <https://www.bb.reading.ac.uk>`__  or `here`<http://www.urban-climate.net/UMEPTutorials/Reading/DataReading.zip>`__
+
 b) London -
 `download <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
 
