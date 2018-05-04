@@ -148,6 +148,57 @@
             
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Overview：</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>UMEP is developed as a plugin for <a class="reference external" href="http://www.qgis.org">QGIS</a>. Two versions are available:</dt>
+<dd><ul class="first last">
+<li><em>Long term release</em> - This version is recommended for most users.</li>
+<li><em>Development release</em> - This version is for testing. Could be unstable.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>For a more detailed description including how to install QGIS on a Windows PC (see below) or watch this instruction <a class="reference external" href="https://www.youtube.com/watch?v=ZEw_DVl772Q">video</a>. You can find more introductory videos on how to use UMEP on our <a class="reference external" href="https://www.youtube.com/channel/UCTPkXncD3ghb5ZTdZe_u7gA">YouTube-channel</a>.</li>
+<li>UMEP has been developed using Python 2.7.x and QGIS 2.x in a Windows environment. Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is still under development so there may be missing documentation and instability. Please report any issues to the <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep">code repository</a>. Also, have a look in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#FAQ">FAQ</a> for further installation tips and issues.</li>
+</ul>
+</dd>
+<dt>Recommended Installation Steps of QGIS on Windows：</dt>
+<dd><ul class="first last simple">
+<li>Visit <a class="reference external" href="http://www.qgis.org">QGIS</a> and go to the download page. Preferably, choose the <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">**OSGEO4W Network Installer (64-bit)**</a>, start the installation and choose <em>installation (64-bit) For Advanced Users</em></li>
+<li>Start the installation and choose <em>Express Desktop Install</em>. This includes a number of OSGEO-software as well as a separate python installation.</li>
+</ul>
+</dd>
+<dt><strong>Long-term release</strong> - Download and installation of the UMEP-plugin from within QGIS：</dt>
+<dd><ol class="first last arabic simple">
+<li>Start <strong>QGIS</strong></li>
+<li>Go to: <em>Plugins -&gt; Manage and Install Plugins...</em></li>
+<li>Search for <strong>UMEP</strong></li>
+<li>Click <strong>Install Plugin</strong> (or <em>Upgrade</em> if already have an older version installed from before).</li>
+</ol>
+</dd>
+<dt><strong>Development release</strong> - Download and installation of the UMEP-plugin from the UMEP code repository (unstable)</dt>
+<dd><blockquote class="first">
+<div><ol class="arabic simple">
+<li>If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -&gt; Manage and Install Plugins -&gt; Installed -&gt; UMEP” and click <strong>Uninstall plugin</strong></li>
+<li>To download UMEP from the repository click this <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/downloads">link</a> and download repository</li>
+<li>Close QGIS if open</li>
+<li>Extract the downloaded zip archive into the folder <strong>C:\Users\\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
+<li>Rename the extracted folder to <strong>UMEP</strong></li>
+<li>Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -&gt; Manage and Install Plugins -&gt; All” and search for UMEP. Make sure that you also tick in the box <em>Show also experimental plugins</em> in the “Settings”-tab.</li>
+</ol>
+</div></blockquote>
+<ul class="last simple">
+<li><strong>NOTE</strong>: Remove old versions of UMEP from the plugin directory before you update.</li>
+</ul>
+</dd>
+<dt>Test dataset ：</dt>
+<dd><ul class="first last simple">
+<li>Can be used try some of the tools out (<a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip">testdata_UMEP.zip</a>).</li>
+</ul>
+</dd>
+</dl>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
