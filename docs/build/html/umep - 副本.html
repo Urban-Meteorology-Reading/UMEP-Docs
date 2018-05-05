@@ -133,7 +133,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/umep.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/umep - 副本.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -221,169 +221,109 @@ to this for different operation systems. The same procedures can also be
 used to obtain other tools and functionalities from the OSGeo
 repository. <strong>Note</strong>: In order for scipy to work you will also need to
 make sure <em>pillow</em> is installed.</p>
-</div>
-</div>
-<div class="section" id="operating-system-and-installation-instructions">
-<h2><strong>Operating System and Installation instructions</strong><a class="headerlink" href="#operating-system-and-installation-instructions" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic">
-<li><dl class="first docutils">
-<dt>Linux</dt>
-<dd><ul class="first last">
-<li><p class="first">Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use <strong>pip</strong> (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type <em>sudo pip install pandas</em> if you want to install this library. In order to install pip open a terminal and type: <em>sudo easy_install pip</em>. You might need to restart QGIS to get it to work.</p>
-</li>
-<li><p class="first">Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a> to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like:</p>
-<div class="line-block">
+<table border="1" class="docutils">
+<colgroup>
+<col width="3%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operating System</th>
+<th class="head">Installation instructions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Linux</td>
+<td><p class="first">Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use <strong>pip</strong> (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type <em>sudo pip install pandas</em> if you want to install this library. In order to install pip open a terminal and type: <em>sudo easy_install pip</em>. You might need to restart QGIS to get it to work.</p>
+<p>Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a> to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like:</p>
+<div class="last line-block">
 <div class="line"><code class="docutils literal"><span class="pre">import&nbsp;sys</span></code></div>
 <div class="line"><code class="docutils literal"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
 </div>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Windows</dt>
-<dd><ul class="first simple">
-<li>There are two options available:</li>
-</ul>
-<blockquote class="last">
-<div><ol class="arabic simple">
-<li>As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC.</li>
-</ol>
-<blockquote>
-<div><p>This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu.</p>
-<p>You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Windows</td>
+<td><p class="first">There are two options available: 1. As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC. This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu. You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
 <p><code class="docutils literal"><span class="pre">pip&nbsp;install&nbsp;pandas</span></code></p>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li>Installation of pandas Restart the <em>installation (64-bit) For Advanced Users</em> (see Getting started) and choose <em>Advanced Install</em>. When you come up to Select Packages search for pandas and click on <em>Skip</em> until you see a version number of pandas (see left picture). Finish the installation.</li>
+<ol class="arabic" start="2">
+<li><div class="first line-block">
+<div class="line">frame |right|Installation of pandas|Restart the <em>installation (64-bit) For Advanced Users</em> (see Getting started) and choose <em>Advanced Install</em>. When you come up to Select Packages search for pandas and click on <em>Skip</em> until you see a version number of pandas (see left picture). Finish the installation. <strong>This method can also be used to include other missing libraries such as gdal etc.</strong></div>
+</div>
+</li>
 </ol>
-<blockquote>
-<div><p><strong>This method can also be used to include other missing libraries such as gdal etc.</strong></p>
 <p><strong>PLEASE NOTICE!</strong></p>
-<p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong> library has a version conflict related to the <strong>numpy</strong> version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.
-We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to <strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run the two following commands:</p>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">pip&nbsp;uninstall&nbsp;netCDF4</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">pip&nbsp;install&nbsp;netCDF4==1.2.9</span></code></div>
-</div>
-<div class="figure">
-<img alt="_images/pandas.png" src="_images/pandas.png" />
-</div>
-<p><strong>Installation of pandas</strong></p>
-</div></blockquote>
-</div></blockquote>
-</dd>
-</dl>
-</li>
-<li><p class="first">Mac OS X</p>
-</li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li>Follow the instructions for Linux. <strong>*Note*</strong>: this approach is tested to be working under Mac OS X 10.11.5.</li>
-</ul>
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li>Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a></li>
-</ol>
-<blockquote>
-<div><p>to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
+<p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong> library has a version conflict related to the <strong>numpy</strong> version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.</p>
+<p>We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to <strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run the two following commands:</p>
+<p><code class="docutils literal"><span class="pre">&nbsp;&nbsp;pip&nbsp;uninstall&nbsp;netCDF4</span></code></p>
+<p class="last"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;pip&nbsp;install&nbsp;netCDF4==1.2.9</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td>Mac OS X</td>
+<td>Follow the instructions for Linux. <strong>*Note*</strong>: this approach is tested to be working under Mac OS X 10.11.5.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Other platforms require the packages to be installed to the QGIS Python
+path, which differs depending on operating system. Or refer to
+<a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a>
+to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
 <strong>scipy</strong>. An example of startup.py may look like:</p>
 <div class="line-block">
 <div class="line"><code class="docutils literal"><span class="pre">import&nbsp;sys</span></code></div>
 <div class="line"><code class="docutils literal"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
 </div>
-</div></blockquote>
-</div></blockquote>
+</div>
 </div>
 </div>
 <div class="section" id="pre-processor">
 <h1>Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="contributors-developers-fredrik-lindberg">
-<h2>Contributors/Developers:  <em>Fredrik Lindberg</em><a class="headerlink" href="#contributors-developers-fredrik-lindberg" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul>
-<li><div class="first line-block">
-<div class="line">MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.</div>
-</div>
-<div class="line-block">
-<div class="line"><em>Input data</em> can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The <em>output format</em> is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.</div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="location">
-<h2>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li><dl class="first docutils">
-<dt>The Meteorological data pre-processor is located at</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>UMEP</dt>
-<dd><ul class="first last">
-<li>Pre-processor
-• Meteorological data</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="dialog-box">
-<h2>Dialog box<a class="headerlink" href="#dialog-box" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><div class="figure">
-<img alt="_images/MetPreProcessor.jpg" src="_images/MetPreProcessor.jpg" />
-</div>
-<p>Interface for inputting an ascii data file into the correct format for SUEWS</p>
-</div></blockquote>
-</div>
-<div class="section" id="dialog-sections">
-<h2>Dialog sections<a class="headerlink" href="#dialog-sections" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col width="8%" />
+<col width="92%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>top</td>
-<td>input DEM data is specified</td>
+<tr class="row-odd"><td>Contributors/Developers</td>
+<td>Fredrik Lindberg</td>
 </tr>
-<tr class="row-even"><td>middle upper</td>
-<td>input polygon with height data or OSM is specified</td>
+<tr class="row-even"><td>Introduction</td>
+<td>MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well. <em>Input data</em> can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The <em>output format</em> is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.</td>
 </tr>
-<tr class="row-odd"><td>middle</td>
-<td>map extent is specified</td>
-</tr>
-<tr class="row-even"><td>middle lower</td>
-<td>to specify the output DSM and output resolution</td>
-</tr>
-<tr class="row-odd"><td>bottom</td>
-<td>to run the calculations</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="variables-included-in-umep-meteorological-input-file">
-<h2>Variables included in UMEP meteorological input file<a class="headerlink" href="#variables-included-in-umep-meteorological-input-file" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li>if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact</li>
+<tr class="row-odd"><td>Location</td>
+<td><p class="first">The Meteorological data pre-processor is located at</p>
+<ul class="last simple">
+<li>UMEP<ul>
+<li>Pre-processor<ul>
+<li>Meteorological data</li>
 </ul>
-</div></blockquote>
-<table border="1" class="docutils">
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>Dialog box</td>
+<td><div class="first last figure">
+<img alt="frame |left|Interface for inputting an ascii data file into the correct format for SUEWS" src="MetPreProcessor.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Dialog sections</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><div class="first line-block">
+<div class="line">Variables included in UMEP</div>
+</div>
+<div class="last line-block">
+<div class="line">meteorological input file</div>
+</div>
+</td>
+<td><ul class="first simple">
+<li>if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact us</li>
+</ul>
+<table border="1" class="last docutils">
 <colgroup>
 <col width="2%" />
 <col width="4%" />
@@ -392,28 +332,11 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <col width="65%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><div class="first last line-block">
-<div class="line">No.</div>
-</div>
-</th>
-<th class="head"><div class="first last line-block">
-<div class="line">Header</div>
-<div class="line">named</div>
-</div>
-</th>
-<th class="head"><div class="first last line-block">
-<div class="line">Description</div>
-</div>
-</th>
-<th class="head"><div class="first last line-block">
-<div class="line">Accepted</div>
-<div class="line">range*</div>
-</div>
-</th>
-<th class="head"><div class="first last line-block">
-<div class="line">Comments</div>
-</div>
-</th>
+<tr class="row-odd"><th class="head">No.</th>
+<th class="head">Header name</th>
+<th class="head">Description</th>
+<th class="head">Accepted range*</th>
+<th class="head">Comments</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -426,11 +349,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <tr class="row-odd"><td>2</td>
 <td>id</td>
 <td>Day of year [DOY]</td>
-<td><div class="first last line-block">
-<div class="line">1 to 365</div>
-<div class="line">(366 if leap year)</div>
-</div>
-</td>
+<td>1 to 365 (366 if leap year)</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>3</td>
@@ -537,11 +456,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 <tr class="row-odd"><td>20</td>
 <td>xsmd</td>
-<td><div class="first last line-block">
-<div class="line">(Observed) soil moisture</div>
-<div class="line">[m:sup:<cite>3</cite> m<sup>-3</sup> or kg kg<sup>-1</sup>]</div>
-</div>
-</td>
+<td>(Observed) soil moisture [m:sup:<cite>3</cite> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
 <td>0.01 to 0.5</td>
 <td>&nbsp;</td>
 </tr>
@@ -571,31 +486,28 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-<blockquote>
-<div><div class="figure">
-<img alt="_images/table.png" src="_images/table.png" />
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="remarks">
-<h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">If decimal time is ticked in, <strong>day of year column</strong> must be stated and the <strong>decimal time column</strong> should be numbers between 0 and 1.</p>
-</li>
-<li><p class="first">If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).</p>
-</li>
-<li><p class="first">Gapfilling - there are a number of techniques that can be used for this
-1. A fast way to get started (you can come back and refine to a more appropriate method)</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Linear fit between one or two missing periods using the data on either</li>
+</td>
+</tr>
+<tr class="row-even"><td>Remarks</td>
+<td><ol class="first last arabic simple">
+<li>If decimal time is ticked in, <strong>day of year column</strong> must be stated and the <strong>decimal time column</strong> should be numbers between 0 and 1.</li>
+<li>If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).</li>
+<li>Gapfilling - there are a number of techniques that can be used for this<ol class="arabic">
+<li>A fast way to get started (you can come back and refine to a more appropriate method)<ol class="arabic">
+<li>Linear fit between one or two missing periods using the data on either side</li>
 <li>Create diurnal average for each variabel for short periods (e.g. 2 weeks) and use these values to fill missing data</li>
 </ol>
-</div></blockquote>
 </li>
 </ol>
-<div class="section" id="meteorological-data-download-data-watch">
-<h3>Meteorological Data: Download data (WATCH)<a class="headerlink" href="#meteorological-data-download-data-watch" title="Permalink to this headline">¶</a></h3>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -726,9 +638,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="spatial-data-spatial-data-downloader">
-<h3>Spatial Data: Spatial Data Downloader<a class="headerlink" href="#spatial-data-spatial-data-downloader" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -790,9 +699,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="spatial-data-dsm-generator">
-<h3>Spatial Data: DSM Generator<a class="headerlink" href="#spatial-data-dsm-generator" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="6%" />
@@ -897,12 +803,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="spatial-data-tree-generator">
-<h3>Spatial Data: Tree Generator<a class="headerlink" href="#spatial-data-tree-generator" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="spatial-data-lcz-converter">
-<h3>Spatial Data: LCZ Converter<a class="headerlink" href="#spatial-data-lcz-converter" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="5%" />
@@ -1064,9 +964,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-geometry-sky-view-factor-calculator">
-<h3>Urban Geometry: Sky View Factor Calculator<a class="headerlink" href="#urban-geometry-sky-view-factor-calculator" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="8%" />
@@ -1202,9 +1099,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-geometry-wall-height-and-aspect">
-<h3>Urban Geometry: Wall Height and Aspect<a class="headerlink" href="#urban-geometry-wall-height-and-aspect" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="6%" />
@@ -1291,9 +1185,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-land-cover-land-cover-reclassifier">
-<h3>Urban Land Cover: Land Cover Reclassifier<a class="headerlink" href="#urban-land-cover-land-cover-reclassifier" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="7%" />
@@ -1408,9 +1299,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-land-cover-land-cover-fraction-point">
-<h3>Urban Land Cover: Land Cover Fraction (Point)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-point" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -1507,9 +1395,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-land-cover-land-cover-fraction-grid">
-<h3>Urban Land Cover: Land Cover Fraction (Grid)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-grid" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="5%" />
@@ -1618,9 +1503,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-morphology-morphometric-calculator-point">
-<h3>Urban Morphology: Morphometric Calculator (Point)<a class="headerlink" href="#urban-morphology-morphometric-calculator-point" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="7%" />
@@ -1783,9 +1665,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-morphology-morphometric-calculator-grid">
-<h3>Urban Morphology: Morphometric Calculator (Grid)<a class="headerlink" href="#urban-morphology-morphometric-calculator-grid" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
@@ -1916,9 +1795,6 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="urban-morphology-source-area-point">
-<h3>Urban Morphology: Source Area (Point)<a class="headerlink" href="#urban-morphology-source-area-point" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="5%" />
@@ -2202,11 +2078,6 @@ cities: inclusion of vegetation Journal of Wind Engineering &amp;
 Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10.1016/j.jweia.2017.07.016">http://dx.doi.org/10.1016/j.jweia.2017.07.016</a></li>
 </ul>
 <p>|}</p>
-</div>
-<div class="section" id="suews-prepare">
-<h3>SUEWS Prepare<a class="headerlink" href="#suews-prepare" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
 </div>
 <div class="section" id="processor">
 <h1>Processor<a class="headerlink" href="#processor" title="Permalink to this headline">¶</a></h1>
