@@ -1,0 +1,491 @@
+.. _Pre-Processor:
+
+
+
+Pre-Processor
+================
+
+Meteorological Data: MetPreprocessor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Contributors/Developers：
+  ::
+     Fredrik Lindberg
+* Introduction：
+
+        + | MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.
+
+          | *Input data* can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The *output format* is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.
+
+* Location：
+
+        + The Meteorological data pre-processor is located at
+            * UMEP
+                ⁃ Pre-processor
+                     ‣ Meteorological data
+* Dialog box：
+
+        .. figure::  /images/MetPreProcessor.jpg
+        Interface for inputting an ascii data file into the correct format for SUEWS
+      Dialog sections
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      +----------------+------------------------------------------------------+
+      | top            | input DEM data is specified                          |
+      +----------------+------------------------------------------------------+
+      | middle upper   | input polygon with height data or OSM is specified   |
+      +----------------+------------------------------------------------------+
+      | middle         | map extent is specified                              |
+      +----------------+------------------------------------------------------+
+      | middle lower   | to specify the output DSM and output resolution      |
+      +----------------+------------------------------------------------------+
+      | bottom         | to run the calculations                              |
+      +----------------+------------------------------------------------------+
+
+* Variables included in UMEP meteorological input file：
+         -  if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | | No. | | Header      | | Description                                                           | | Accepted                    |  | Comments                                                                                                                                                                                                                             |
+      |       | | named       |                                                                         | | range\*                     |                                                                                                                                                                                                                                         |
+      +=======+===============+=========================================================================+===============================+=========================================================================================================================================================================================================================================+
+      | 1     | iy            | Year [YYYY]                                                             | Not applicable                |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 2     | id            | Day of year [DOY]                                                       |  | 1 to 365                   |                                                                                                                                                                                                                                         |
+      |       |               |                                                                         |  | (366 if leap year)         |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 3     | it            | Hour [H]                                                                | 0 to 23                       |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 4     | imin          | Minute [M]                                                              | 0 to 59                       |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 5     | qn            | Net all-wave radiation [W m\ :sup:`-2`]                                 | -200 to 800                   |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 6     | qh            | Sensible heat flux [W m\ :sup:`-2`]                                     | -200 to 750                   |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 7     | qe            | Latent heat flux [W m\ :sup:`-2`]                                       | -100 to 650                   |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 8     | qs            | Storage heat flux [W m\ :sup:`-2`]                                      | -200 to 650                   |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 9     | qf            | Anthropogenic heat flux [W m\ :sup:`-2`]                                | 0 to 1500                     |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 10    | U             | Wind speed [m s\ :sup:`-1`]                                             | 0.001 to 60                   |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 11    | RH            | Relative Humidity [%]                                                   | 5 to 100                      |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 12    | Tair          | Air temperature [°C]                                                    | -30 to 55                     |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 13    | pres          | Surface barometric pressure [kPa]                                       | 90 to 107                     |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 14    | rain          | Rainfall [mm]                                                           | 0 to 30                       | (per 5 min) this should be scaled based on time step used                                                                                                                                                                               |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 15    | kdown         | Incoming shortwave radiation [W m\ :sup:`-2`]                           | 0 to 1200                     |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 16    | snow          | Snow [mm]                                                               | 0 to 300                      | (per 5 min) this should be scaled based on time step used                                                                                                                                                                               |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 17    | ldown         | Incoming longwave radiation [W m\ :sup:`-2`]                            | 100 to 600                    |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 18    | fcld          | Cloud fraction [tenths]                                                 | 0 to 1                        |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 19    | wuh           | External water use [m:sup:`3`]                                          | 0 to 10                       | (per 5 min) scale based on time step being used                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 20    | xsmd          | | \(Observed) soil moisture                                             | 0.01 to 0.5                   |                                                                                                                                                                                                                                         |
+      |       |               | | [m:sup:`3` m\ :sup:`-3` or kg kg\ :sup:`-1`]                          |                               |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 21    | lai           | (Observed) leaf area index [m:sup:`2` m\ :sup:`-2`]                     | 0 to 15                       |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 22    | kdiff         | Diffuse shortwave radiation [W m\ :sup:`-2`]                            | 0 to 600                      |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 23    | kdir          | Direct shortwave radiation [W m\ :sup:`-2`]                             | 0 to 1200                     | Should be perpendicular to the Sun beam.\  One way to check this is to compare direct and global radiation and see if kdir is higher than global radiation during clear weather. Then kdir is measured perpendicular to the solar beam. |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | 24    | wdir          | Wind direction [°]                                                      | 0 to 360                      |                                                                                                                                                                                                                                         |
+      +-------+---------------+-------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+        .. figure::  table.png
+
+
+* Remarks：
+
+      #. If decimal time is ticked in, **day of year column** must be stated and the **decimal time column** should be numbers between 0 and 1.
+      #. If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).
+      #. Gapfilling - there are a number of techniques that can be used for this
+         1. A fast way to get started (you can come back and refine to a more appropriate method)
+            1. Linear fit between one or two missing periods using the data on either
+            #. Create diurnal average for each variabel for short periods (e.g. 2 weeks) and use these values to fill missing data
+
+Meteorological Data: Download data (WATCH)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Contributors：
+  ::
+      Andy Gabey (University of Reading), Ting Sun (Reading),
+      Helen Ward (Reading), Lingbo Xue (Reading), Zhe Zhang (Reading),
+      Tom Kokkonen (University of Helsinki), Leena Järvi (Helsinki), Sue Grimmond
+
+* Introduction：
+      #. Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
+      #. The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.
+        -  The `WFD <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ dataset is based on 40-year `ECMWF <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.
+        -  The `WFDEI <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ dataset is based on `ERA <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__-interim re-analysis data and is available at half-degree resolution for 1979-2012.
+
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | Variables available                             | Comments                                                                                                     |
+        +=================================================+==============================================================================================================+
+        | Wind speed [m s\ :sup:`-1`]                     | 10 m instantaneous                                                                                           |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | Air temperature [K]                             | 2 m instantaneous                                                                                            |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | Specific humidity [kg kg\ :sup:`-1`]            | 2 m instantaneous                                                                                            |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | Pressure [Pa]                                   | Instantaneous surface pressure                                                                               |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | | Incoming shortwave radiation                  | | Average over previous 3 hours in WFDEI and over next                                                       |
+        | | [W m\ :sup:`-2`]                              | | 3 hours in WFD, surface flux                                                                               |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | | Incoming longwave radiation                   | | Average over previous 3 hours in WFDEI and over next                                                       |
+        | | [W m\ :sup:`-2`]                              | | 3 hours in WFD, surface flux                                                                               |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | | Rainfall rate                                 | | Average over previous 3 hours in WFDEI and over next                                                       |
+        | | [kg m\ :sup:`-2` s\ :sup:`-1`]                | | 3 hours in WFD. CRU and GPCC bias correction options.                                                      |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        | | Snowfall rate                                 | | Average over previous 3 hours in WFDEI and over next                                                       |
+        | | [kg m\ :sup:`-2` s\ :sup:`-1`]                | | 3 hours in WFD. CRU and GPCC bias correction options.                                                      |
+        +-------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+        **Note:**
+        -  The current downscaling procedure **only** deals with WFDEI data; a module for WFD is under development.
+        -  All precipitation corrections are currently conducted based on **CRU** option.
+        -  Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:
+
+        .. figure::  /images/350px-Watch_masked.png
+        Available data in WATCH downloader (overlaid on countries)
+
+* Location：
+      - The WATCH data pre-processor is located at:
+        + UMEP
+             + Pre-processor
+                   + Meteorological data
+                          + WATCH data
+
+      Message about missing Python libraries
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      - Follow the instruction at `link <http://urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries>`__.
+
+* Obtaining WATCH data via UMEP：
+      .. figure::  /images/Watch_downloader_2.png
+      Integrated WATCH data downloader: control panel
+
+* Running the tool：
+      + The downloader is separated into two sections:
+          #. **Download climate data**: Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.
+              -  *Latitude* and *longitude*: WGS84 co-ordinates of the study location. Data is extracted from the WATCH grid cell that contains these co-ordinates.
+              -  *Start time* and *End Time*: The time range of data to be downloaded (inclusive; to the nearest month)
+          #. **Refine downloaded data**: Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.
+               -  *Site height*: Height above sea level of the desired measurement site. This applies adjustments to meteorological parameters based on the height above ground level. Data are available from 1 January 1979 to 31 December 2015.
+               -  *UTC offset*: Adjusts the UTC time used in the original WATCH dataset to a local time (e.g., for Beijing time, UTC Offset = 8 h should be specified). **NOTE:** As of now the tool does not support half hour-timezones.
+               -  *Rain hours per 3h*: Rain events in the location of interest may be very short – information that is lost because the WATCH data is produced at 3 h intervals, within which it is assumed rain is continuous. This control limits the duration of rain in the 1-hour file to 1, 2 or 3 hours within each 3 hour interval.
+               -  *Path to LQF results*: Incorporates results data from the LQF model into the disaggregated data. Note that this feature produces one file per LQF grid cell and year.
+
+* Considerations：
+      -  **Spatial resolution**: The WATCH data are provided for half-degree grid boxes. In regions with substantial heterogeneity within these grid boxes data at the grid-box scale may be not be representative of your study site (e.g. mountainous regions, urban areas).
+      -  **Temporal resolution**: The data are downloaded at 3 h resolution and are linearly downscaled to 1 h time steps during the refinement step, during which radiation data are corrected for sunrise/sunset.
+
+* References：
+      -  Kokkonen et al. (2017, in review)
+      -  Ward et al. (2017, in review)
+      -  Weedon GP, Gomes S, Viterbo P, Shuttleworth WJ, Blyth E, Österle H, Adam JC, Bellouin N, Boucher O and Best MJ (2011) Creation of the WATCH Forcing Data and Its Use to Assess Global and Regional Reference Crop Evaporation over Land during the Twentieth Century. `Journal of Hydrometeorology 12, 823-848 <http://journals.ametsoc.org/doi/abs/10.1175/2011JHM1369.1>`__
+      -  Weedon GP, Balsamo G, Bellouin N, Gomes S, Best MJ and Viterbo P (2014) The WFDEI meteorological forcing data set: WATCH Forcing Data methodology applied to ERA-Interim reanalysis data. `Water Resour. Res. 50, 7505-7514       <http://onlinelibrary.wiley.com/doi/10.1002/2014WR015638/abstract>`__                                                                                                                                                                                                                                                                                                                                                                                                                     |
+      -  Tan YS (2015) MSc Thesis, University of Reading
+      -  Xue L (2016) MSc Thesis, University of Reading
+
+
+Spatial Data: Spatial Data Downloader：
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Developer：
+  ::
+    Andy Gabey (Univiersity of Reading)
+
+* Introduction：
+   - The Spatial Data Downloader downloads geo-datasets useful for UMEP applications. Only the necessary section of the data is downloaded, so that disk use and download time are minimised.
+
+* Location:
+   - The spatial data downloader resides at:
+        + UMEP
+            + Pre-processor
+                  + Spatial Data
+                      + Spatial Data Downloader
+
+* Dialog box:
+    .. figure:: /images/650px-Downloader.png
+    Dialog for the Spatial Data Downloader plugin
+
+* Category and available datasets:
+    - Each category contains multiple datasets, which are revealed by clicking the category name. To download a dataset, select it from the list, specify the geographic extent and press “Download”
+
+* Abstract：
+    - Information about the selected dataset, including citation information.
+
+* Bounding box：
+    - The geographic extent of the region to download (maximum download size is 500x500 pixels in the case of raster data). The current QGIS canvas extent can also be used by clicking **Use canvas extent**
+
+* Reproject to current project CRS：
+    - The downloaded data is saved in its original CRS by default. This option reprojects the saved data to the project CRS and performs resampling, the resolution of which is controlled by the “Pixel resolution in CRS units” box.
+
+* Get data：
+    - Refreshes the catalogue of available datasets. This is also updated when QGIS starts.
+
+* Update list:
+    - Refreshes the catalogue of available datasets. This is also updated when QGIS starts.
+
+* Close:
+    - Closes the plugin.
+
+Spatial Data: DSM Generator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Developer:
+  ::
+    Nils Wallenberg
+
+* Introduction:
+    - Digital Surface Models (DSMs) is not always available for the area you want to investigate. The **DSM Generator** can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from [Open Street Map](http://www.openstreetmap.org) data, is also available.
+
+* Location:
+  - The DSM Generator is located at
+      -  UMEP
+        -  Pre-Processor
+          -  Spatial Data
+            -  DSM Generator
+
+* Dialog box:
+    .. figure:: /images/DSMGenerator.png
+
+* Dialog sections:
++----------------+------------------------------------------------------+
+| top            | input DEM data is specified                          |
++----------------+------------------------------------------------------+
+| middle upper   | input polygon with height data or OSM is specified   |
++----------------+------------------------------------------------------+
+| middle         | map extent is specified                              |
++----------------+------------------------------------------------------+
+| middle lower   | to specify the output DSM and output resolution      |
++----------------+------------------------------------------------------+
+| bottom         | to run the calculations                              |
++----------------+------------------------------------------------------+
+
+* Digital Elevation Model:
+    -  A raster file containing elevation values needed to create the DSM
+
+* Polygon Vector File:
+    -  A polygon vector file including height values of buildings needed to create the DSM
+
+* Necessary attributes:
+    - Building height values in meters
+
+* Use Open Street Map:
+    -  Tick this in if you do not have a polygon layer with building heights. Open Street Map (© OpenStreetMap contributors) data will be used instead. If no building height is found **building level height** will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 \* 3 = 9 meters high.
+
+* Save OSM as shapefile:
+    -  Tick this in if you want to save the Open Street Map data as a polygon layer. This can be used if you want to look at what values has been used and if you want to add values manually.
+
+* Map extent:
+    - Set either to map canvas extent or extent from layer. Extent have to be smaller or equal to the raster DEM extent specified in the top section.
+
+* Digital Surface Model:
+    -  Set output for the generated DSM. Also set output resolution.
+
+* Run:
+    -  Starts the calculations
+
+* Close:
+    -  Closes the plugin.
+
+* Output:
+    - One GeoTIFF is created, a DSM.
+
+* Remarks:
+    -  The DEM raster and map canvas should be in a projection with meters as units.
+    -  Raster elevation data (DEM) can be retrieved from e.g. `OpenDEM <http://www.opendem.info/>`__.
+    -  If you use Open Street Map make sure you read `Open Street Map <http://www.openstreetmap.org/copyright>`__ © OpenStreetMap contributors.
+
+
+Spatial Data: Tree Generator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Developer:
+  ::
+    Fredrik Lindberg
+
+* Introduction:
+     - Information 3d vegetation is not a common spatial information available. The **Tree Generator** can be used to create or alter a vegetation CDSM and TDSM (see [abbreviations](http://urban-climate.net/umep/UMEP_Manual#Abbreviations)). Be using information from a point layer where the location of the points specifies the tree positions and the attributes sets the shape of the trees, it is possible to produce a the 3d vegetation needed for e.g. Mean radiant temperature modelling (SOLWEIG) or Urban Energy Balance modelling (SUEWS) in UMEP.
+* Location:
+ - The Tree Generator is located at
+     -  UMEP
+       -  Pre-Processor
+         -  Spatial Data
+            -  Tree Generator
+* Dialog box:
+    .. figure:: /images/Treegeneratorsolweig.png
+
+* Dialog sections:
++----------+-----------------------------------------------------+
+| top      | input data is specified                             |
++----------+-----------------------------------------------------+
+| bottom   | to specify the output and to run the calculations   |
++----------+-----------------------------------------------------+
+
+* Point vector file:
+     -  A point vector file including the appropriate attributes for generating the vegetation DSMs
+
+* Necessary attributes:
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Tree type      | | Two different tree types (shapes) are currently included: 1 = conifer and 2 = decidouos.                                                                                                                                                           |
+|                | | There is also a possibility to remove vegetation by setting tree type = 0                                                                                                                                                                          |
+|                | | and with an appropriate diameter to remove all vegetation pixels from the DSMs.                                                                                                                                                                    |
+|                |                                                                                                                                                                                                                                                      |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Total height   | This is the total height of the tree from the ground (magl).                                                                                                                                                                                         |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Trunk height   | This is the height up to the bottom of the canopy (magl).                                                                                                                                                                                            |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Diameter       | This is the circular diameter of the tree in meter.                                                                                                                                                                                                  |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Bollean building grid exist:
+     -  Tick this in if a boolen building grid exist for your model domain. This can be generated from the SOLWEIG-plugin.
+
+* Building and Ground DSM:
+     -  A DSM consisting of ground and building heights.
+
+* Ground DEM:
+     - A DEM cosisting of ground heights.
+
+* Building grid:
+     -  A grid where building pixels are 0 and all other pixels are 1.
+
+* Vegetation Canopy DSM:
+     -  A DSM consisting of pixels with vegetation heights above ground.
+
+* Vegetation Trunk Zone DSM:
+     -  A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground.
+
+* Output Folder:
+     -  A specified folder where the result will be saved.
+
+* Run:
+     -  starts the calculations
+
+* Close:
+     -  closes the plugin.
+
+* Output:
+     - Two geoTIFFs are created, one CDSM and one TDSM.
+
+* Remarks:
+      -  All DSMs need to have the same extent and pixel
+
+      -  To ceate a bush, set trunk height to
+
+      -  The SOLWEIG plugin cn be used to create the boolean building grid as well as a TDSM based on a
+
+
+Spatial Data: LCZ Converter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Contributors:
+  ::
+      Natalie Theeuwes (University of Reading),
+      Andy Gabey (Reading), Fredrik Lindberg (Gothenburg),
+      Sue Grimmond (Reading)
+* Introduction:
+    - The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the `WUDAPT portal <http://www.wudapt.org/>`__. The local climate zone are urban area classified based on the `Stewart and Oke (2012) <http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1>`__ scheme.
+
+    - The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from `Stewart et al. (2014) <http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract>`__. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.
+  .. figure:: /images/700px-LCZ_description.png
+  The definition of the different local climate zones (LCZ)
+
+  Note: In UMEP we refer to the rural LCZ's as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.
+* Location:
+   - The Tree Generator is located at
+       -  UMEP
+         -  Pre-Processor
+           -  Spatial Data
+              -  LCZ converter
+
+* Dialog box:
+    - The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.
+
+    - Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ's together using “Same for all LCZ’s”. When selecting the first option **make sure to select the LCZ raster first**. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.
+
+    - When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.
+    .. figure:: /images/700px-LCZdialog1.png
+    .. figure:: /images/700px-LCZdialog2.png
+    .. figure:: /images/700px-LCZdialog3.png
+
+* Dialog sections:
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| upper                               | | Select the LCZ raster layer and the vector grid the land cover                                                 |
+|                                     | | fractions should be computed for.                                                                              |
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| middle Tab: Pervious distribution   | | Set the distribution of pervious surface fractions for                                                         |
+|                                     | | each LCZ separately or all at the same time.                                                                   |
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| middle Tab: Table                   | | Alters the land cover fractions and building and                                                               |
+|                                     | | vegetation heights for each LCZ towards more accurate values.                                                  |
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| lower                               | Specify output and run the calculations.                                                                         |
++-------------------------------------+------------------------------------------------------------------------------------------------------------------+
+
+* LCZ raster:
+     - Select the LCZ raster from the [WUDAPT database.](http://www.wudapt.org)
+
+* Vector grid:
+     -  Select your predefined polygon grid (see Vector -&gt; Research Tools -&gt; Vector Grid; select polygons not lines)
+
+* Adjust default parameters:
+     -  Tick this box if you would like to edit the table below with the land use fractions and tree and building heights for each of the local climate zones.
+
+* Separate LCZ’s:
+     - Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.
+ +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+ | LCZ’s:                    | List of LCZ’s in the raster, ordered by most frequent occurrence. Select the LCZ(s) for which you would like to specify the pervious fraction.   |
+ +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+ | Fraction distributions:   | Select the percentages of each pervious land cover class for the selected LCZ.                                                                   |
+ +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+ | Height of trees:          | Select the range of tree heights most applicable for that LCZ.                                                                                   |
+ +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+     Note for rural classes you are only able to specify the distribution of tree species. For more detailed distribution of pervious fractions, please alter the table.
+
+* Same for all LCZ’s:
+          -  Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.
++--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Urban:             | Select the percentages of each pervious land cover class for all urban LCZ’s.                                                                                         |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Rural:             | | Select the percentages of each pervious land cover class for all rural LCZ’s.                                                                                       |
+|                    | | Note for rural classes you are only able to specify the distribution of tree species.                                                                               |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Height of trees:   | Select the range of tree heights most applicable for the urban and rural LCZ’s.                                                                                       |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+          For more detailed distribution of pervious fractions, please alter the table.
+
+* Update Table:
+     - This updates the table from the default values to the user-specified distributions of the pervious fractions. Please check the table, to make sure your changes have taken effect.
+
+* File Prefix:
+     -  A prefix that will be included in the beginning of the output files.
+
+* Add results to polygon grid:
+     -  Tick this in if you would like to save the results in the attribute table for your polygon vector grid.
+
+* Output Folder:
+     -  A specified folder where result will be saved.
+
+* Run:
+     -  Starts the calculation
+
+* Close:
+     -  Closes the plugin.
+
+* Output:
+      - Three files are saved after a successful run.
+          -  One with the landcover fractions for each grid cell
+          -  One with the morphometric properties for the building for each grid cell
+          -  One with the morphometric properties for vegetation for each grid cell
+
+* Remarks:
+               -  Rural LCZ's are marked as 101, 102, etc instead of A, B, etc.
+               -  Issues using .sdat rasters has been reported. GeoTiffs are recommended.
+
+* References:
+    - Stewart, I.D. and Oke, T.R. 2012. Local Climate Zones for urban temperature studies. Bulletin of the American Meteorological Society, 93: `1879-1900 <http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1>`__.
+    - Stewart, I.D., Oke, T.R., and E.S. Krayenhoff. 2014. Evaluation of the ‘local climate zone’ scheme using temperature observations and model simulations. International Journal of Climatology, 34: `1062-80 <http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract>`__.

@@ -1,7 +1,7 @@
 .. _index_page:
 
 .. figure:: /images/UMEP_logo.png
-   :alt:  none 
+   :alt:  none
    :align: right
    :scale: 35%
 
@@ -54,7 +54,7 @@ releases:
 Started <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
 
 --------------
-   
+
 The UMEP plugin consist of three
 parts; a pre-processor, a processor and a post-processor. The
 pre-processor prepares spatial and meteorological data as inputs to the
@@ -67,7 +67,7 @@ Architecture <http://urban-climate.net/umep/UMEP_Manual#Tool_Architecture>`__.
 
 --------------
 
-\ **PLEASE NOTICE!**\ 
+\ **PLEASE NOTICE!**\
 
 Due to a recent update of **netCDF4** library (1.3.0), the **netCDF4**
 library has a version conflict related to the **numpy** version
@@ -103,7 +103,14 @@ UMEP.
    :hidden:
 
    Introduction
-   MetPreprocessor
-   WATCH
-   SpatialDataDownloader
-
+   Getting_Started
+   Pre-Processor
+   Processor
+   Post-Processor
+   People_Involved_&_Acknowledgements
+   Tutorials
+   How_to_Contribute
+   Reporting a Bug
+   Known_Issues
+   FAQ
+   Abbreviations

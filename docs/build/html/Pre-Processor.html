@@ -1,0 +1,1499 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Pre-Processor &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Processor.html" />
+    <link rel="prev" title="2. Getting Started" href="Getting_Started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Pre-Processor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#meteorological-data-metpreprocessor">3.1. Meteorological Data: MetPreprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#meteorological-data-download-data-watch">3.2. Meteorological Data: Download data (WATCH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-data-spatial-data-downloader">3.3. Spatial Data: Spatial Data Downloader：：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-data-dsm-generator">3.4. Spatial Data: DSM Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-data-tree-generator">3.5. Spatial Data: Tree Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatial-data-lcz-converter">3.6. Spatial Data: LCZ Converter</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Pre-Processor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Pre-Processor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pre-processor">
+<span id="id1"></span><h1>3. Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="meteorological-data-metpreprocessor">
+<h2>3.1. Meteorological Data: MetPreprocessor<a class="headerlink" href="#meteorological-data-metpreprocessor" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Contributors/Developers：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Introduction：</p>
+<blockquote>
+<div><ul>
+<li><div class="first line-block">
+<div class="line">MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.</div>
+</div>
+<div class="line-block">
+<div class="line"><em>Input data</em> can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The <em>output format</em> is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.</div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Location：</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>The Meteorological data pre-processor is located at</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>UMEP</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Pre-processor</dt>
+<dd><ul class="first last">
+<li>Meteorological data</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Dialog box：</p>
+<blockquote>
+<div><blockquote>
+<div><div class="figure">
+<img alt="_images/MetPreProcessor.jpg" src="_images/MetPreProcessor.jpg" />
+</div>
+<p>Interface for inputting an ascii data file into the correct format for SUEWS</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>top</td>
+<td>input DEM data is specified</td>
+</tr>
+<tr class="row-even"><td>middle upper</td>
+<td>input polygon with height data or OSM is specified</td>
+</tr>
+<tr class="row-odd"><td>middle</td>
+<td>map extent is specified</td>
+</tr>
+<tr class="row-even"><td>middle lower</td>
+<td>to specify the output DSM and output resolution</td>
+</tr>
+<tr class="row-odd"><td>bottom</td>
+<td>to run the calculations</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Variables included in UMEP meteorological input file：</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact</li>
+</ul>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="2%" />
+<col width="4%" />
+<col width="20%" />
+<col width="9%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><div class="first last line-block">
+<div class="line">No.</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Header</div>
+<div class="line">named</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Description</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Accepted</div>
+<div class="line">range*</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Comments</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>iy</td>
+<td>Year [YYYY]</td>
+<td>Not applicable</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>id</td>
+<td>Day of year [DOY]</td>
+<td><div class="first last line-block">
+<div class="line">1 to 365</div>
+<div class="line">(366 if leap year)</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>it</td>
+<td>Hour [H]</td>
+<td>0 to 23</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>imin</td>
+<td>Minute [M]</td>
+<td>0 to 59</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>qn</td>
+<td>Net all-wave radiation [W m<sup>-2</sup>]</td>
+<td>-200 to 800</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>qh</td>
+<td>Sensible heat flux [W m<sup>-2</sup>]</td>
+<td>-200 to 750</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>qe</td>
+<td>Latent heat flux [W m<sup>-2</sup>]</td>
+<td>-100 to 650</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>qs</td>
+<td>Storage heat flux [W m<sup>-2</sup>]</td>
+<td>-200 to 650</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>qf</td>
+<td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
+<td>0 to 1500</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>U</td>
+<td>Wind speed [m s<sup>-1</sup>]</td>
+<td>0.001 to 60</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>RH</td>
+<td>Relative Humidity [%]</td>
+<td>5 to 100</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>Tair</td>
+<td>Air temperature [°C]</td>
+<td>-30 to 55</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>pres</td>
+<td>Surface barometric pressure [kPa]</td>
+<td>90 to 107</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>rain</td>
+<td>Rainfall [mm]</td>
+<td>0 to 30</td>
+<td>(per 5 min) this should be scaled based on time step used</td>
+</tr>
+<tr class="row-even"><td>15</td>
+<td>kdown</td>
+<td>Incoming shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 1200</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>16</td>
+<td>snow</td>
+<td>Snow [mm]</td>
+<td>0 to 300</td>
+<td>(per 5 min) this should be scaled based on time step used</td>
+</tr>
+<tr class="row-even"><td>17</td>
+<td>ldown</td>
+<td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
+<td>100 to 600</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>18</td>
+<td>fcld</td>
+<td>Cloud fraction [tenths]</td>
+<td>0 to 1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>19</td>
+<td>wuh</td>
+<td>External water use [m:sup:<cite>3</cite>]</td>
+<td>0 to 10</td>
+<td>(per 5 min) scale based on time step being used</td>
+</tr>
+<tr class="row-odd"><td>20</td>
+<td>xsmd</td>
+<td><div class="first last line-block">
+<div class="line">(Observed) soil moisture</div>
+<div class="line">[m:sup:<cite>3</cite> m<sup>-3</sup> or kg kg<sup>-1</sup>]</div>
+</div>
+</td>
+<td>0.01 to 0.5</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>21</td>
+<td>lai</td>
+<td>(Observed) leaf area index [m:sup:<cite>2</cite> m<sup>-2</sup>]</td>
+<td>0 to 15</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>kdiff</td>
+<td>Diffuse shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 600</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>23</td>
+<td>kdir</td>
+<td>Direct shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 1200</td>
+<td>Should be perpendicular to the Sun beam. One way to check this is to compare direct and global radiation and see if kdir is higher than global radiation during clear weather. Then kdir is measured perpendicular to the solar beam.</td>
+</tr>
+<tr class="row-odd"><td>24</td>
+<td>wdir</td>
+<td>Wind direction [°]</td>
+<td>0 to 360</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="last">
+<div><div class="figure">
+<img alt="_images/table.png" src="_images/table.png" />
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><p class="first">Remarks：</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">If decimal time is ticked in, <strong>day of year column</strong> must be stated and the <strong>decimal time column</strong> should be numbers between 0 and 1.</p>
+</li>
+<li><p class="first">If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).</p>
+</li>
+<li><p class="first">Gapfilling - there are a number of techniques that can be used for this
+1. A fast way to get started (you can come back and refine to a more appropriate method)</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Linear fit between one or two missing periods using the data on either</li>
+<li>Create diurnal average for each variabel for short periods (e.g. 2 weeks) and use these values to fill missing data</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="meteorological-data-download-data-watch">
+<h2>3.2. Meteorological Data: Download data (WATCH)<a class="headerlink" href="#meteorological-data-download-data-watch" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Contributors：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span> <span class="n">Ting</span> <span class="n">Sun</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
+<span class="n">Helen</span> <span class="n">Ward</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Lingbo</span> <span class="n">Xue</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Zhe</span> <span class="n">Zhang</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
+<span class="n">Tom</span> <span class="n">Kokkonen</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Helsinki</span><span class="p">),</span> <span class="n">Leena</span> <span class="n">Järvi</span> <span class="p">(</span><span class="n">Helsinki</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction：</dt>
+<dd><ol class="first arabic simple">
+<li>Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global <a class="reference external" href="http://www.eu-watch.org/">WATCH</a> forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.</li>
+<li>The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.</li>
+</ol>
+<blockquote class="last">
+<div><ul class="simple">
+<li>The <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">WFD</a> dataset is based on 40-year <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">ECMWF</a> Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.</li>
+<li>The <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">WFDEI</a> dataset is based on <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">ERA</a>-interim re-analysis data and is available at half-degree resolution for 1979-2012.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variables available</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Wind speed [m s<sup>-1</sup>]</td>
+<td>10 m instantaneous</td>
+</tr>
+<tr class="row-odd"><td>Air temperature [K]</td>
+<td>2 m instantaneous</td>
+</tr>
+<tr class="row-even"><td>Specific humidity [kg kg<sup>-1</sup>]</td>
+<td>2 m instantaneous</td>
+</tr>
+<tr class="row-odd"><td>Pressure [Pa]</td>
+<td>Instantaneous surface pressure</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Incoming shortwave radiation</div>
+<div class="line">[W m<sup>-2</sup>]</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Average over previous 3 hours in WFDEI and over next</div>
+<div class="line">3 hours in WFD, surface flux</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Incoming longwave radiation</div>
+<div class="line">[W m<sup>-2</sup>]</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Average over previous 3 hours in WFDEI and over next</div>
+<div class="line">3 hours in WFD, surface flux</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Rainfall rate</div>
+<div class="line">[kg m<sup>-2</sup> s<sup>-1</sup>]</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Average over previous 3 hours in WFDEI and over next</div>
+<div class="line">3 hours in WFD. CRU and GPCC bias correction options.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last line-block">
+<div class="line">Snowfall rate</div>
+<div class="line">[kg m<sup>-2</sup> s<sup>-1</sup>]</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Average over previous 3 hours in WFDEI and over next</div>
+<div class="line">3 hours in WFD. CRU and GPCC bias correction options.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong>
+-  The current downscaling procedure <strong>only</strong> deals with WFDEI data; a module for WFD is under development.
+-  All precipitation corrections are currently conducted based on <strong>CRU</strong> option.
+-  Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:</p>
+<div class="figure">
+<img alt="_images/350px-Watch_masked.png" src="_images/350px-Watch_masked.png" />
+</div>
+<p>Available data in WATCH downloader (overlaid on countries)</p>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Location：</dt>
+<dd><ul class="first">
+<li><p class="first">The WATCH data pre-processor is located at:
++ UMEP</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>Pre-processor</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Meteorological data</dt>
+<dd><ul class="first last">
+<li>WATCH data</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<ul class="last simple">
+<li>Follow the instruction at <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries">link</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Obtaining WATCH data via UMEP：</dt>
+<dd><div class="first figure">
+<img alt="_images/Watch_downloader_2.png" src="_images/Watch_downloader_2.png" />
+</div>
+<p class="last">Integrated WATCH data downloader: control panel</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Running the tool：</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>The downloader is separated into two sections:</dt>
+<dd><ol class="first last arabic">
+<li><dl class="first docutils">
+<dt><strong>Download climate data</strong>: Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.</dt>
+<dd><ul class="first last">
+<li><em>Latitude</em> and <em>longitude</em>: WGS84 co-ordinates of the study location. Data is extracted from the WATCH grid cell that contains these co-ordinates.</li>
+<li><em>Start time</em> and <em>End Time</em>: The time range of data to be downloaded (inclusive; to the nearest month)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Refine downloaded data</strong>: Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.</dt>
+<dd><ul class="first last">
+<li><em>Site height</em>: Height above sea level of the desired measurement site. This applies adjustments to meteorological parameters based on the height above ground level. Data are available from 1 January 1979 to 31 December 2015.</li>
+<li><em>UTC offset</em>: Adjusts the UTC time used in the original WATCH dataset to a local time (e.g., for Beijing time, UTC Offset = 8 h should be specified). <strong>NOTE:</strong> As of now the tool does not support half hour-timezones.</li>
+<li><em>Rain hours per 3h</em>: Rain events in the location of interest may be very short – information that is lost because the WATCH data is produced at 3 h intervals, within which it is assumed rain is continuous. This control limits the duration of rain in the 1-hour file to 1, 2 or 3 hours within each 3 hour interval.</li>
+<li><em>Path to LQF results</em>: Incorporates results data from the LQF model into the disaggregated data. Note that this feature produces one file per LQF grid cell and year.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Considerations：</dt>
+<dd><ul class="first last simple">
+<li><strong>Spatial resolution</strong>: The WATCH data are provided for half-degree grid boxes. In regions with substantial heterogeneity within these grid boxes data at the grid-box scale may be not be representative of your study site (e.g. mountainous regions, urban areas).</li>
+<li><strong>Temporal resolution</strong>: The data are downloaded at 3 h resolution and are linearly downscaled to 1 h time steps during the refinement step, during which radiation data are corrected for sunrise/sunset.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>References：</dt>
+<dd><ul class="first last simple">
+<li>Kokkonen et al. (2017, in review)</li>
+<li>Ward et al. (2017, in review)</li>
+<li>Weedon GP, Gomes S, Viterbo P, Shuttleworth WJ, Blyth E, Österle H, Adam JC, Bellouin N, Boucher O and Best MJ (2011) Creation of the WATCH Forcing Data and Its Use to Assess Global and Regional Reference Crop Evaporation over Land during the Twentieth Century. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/2011JHM1369.1">Journal of Hydrometeorology 12, 823-848</a></li>
+<li>Weedon GP, Balsamo G, Bellouin N, Gomes S, Best MJ and Viterbo P (2014) The WFDEI meteorological forcing data set: WATCH Forcing Data methodology applied to ERA-Interim reanalysis data. <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/2014WR015638/abstract">Water Resour. Res. 50, 7505-7514</a>                                                                                                                                                                                                                                                                                                                                                                                                                     |</li>
+<li>Tan YS (2015) MSc Thesis, University of Reading</li>
+<li>Xue L (2016) MSc Thesis, University of Reading</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="spatial-data-spatial-data-downloader">
+<h2>3.3. Spatial Data: Spatial Data Downloader：：<a class="headerlink" href="#spatial-data-spatial-data-downloader" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Developer：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Univiersity</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction：</dt>
+<dd><ul class="first last simple">
+<li>The Spatial Data Downloader downloads geo-datasets useful for UMEP applications. Only the necessary section of the data is downloaded, so that disk use and download time are minimised.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Location:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>The spatial data downloader resides at:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>UMEP</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Pre-processor</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Spatial Data</dt>
+<dd><ul class="first last">
+<li>Spatial Data Downloader</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><div class="first figure">
+<img alt="_images/650px-Downloader.png" src="_images/650px-Downloader.png" />
+</div>
+<p class="last">Dialog for the Spatial Data Downloader plugin</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Category and available datasets:</dt>
+<dd><ul class="first last simple">
+<li>Each category contains multiple datasets, which are revealed by clicking the category name. To download a dataset, select it from the list, specify the geographic extent and press “Download”</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Abstract：</dt>
+<dd><ul class="first last simple">
+<li>Information about the selected dataset, including citation information.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Bounding box：</dt>
+<dd><ul class="first last simple">
+<li>The geographic extent of the region to download (maximum download size is 500x500 pixels in the case of raster data). The current QGIS canvas extent can also be used by clicking <strong>Use canvas extent</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Reproject to current project CRS：</dt>
+<dd><ul class="first last simple">
+<li>The downloaded data is saved in its original CRS by default. This option reprojects the saved data to the project CRS and performs resampling, the resolution of which is controlled by the “Pixel resolution in CRS units” box.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Get data：</dt>
+<dd><ul class="first last simple">
+<li>Refreshes the catalogue of available datasets. This is also updated when QGIS starts.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Update list:</dt>
+<dd><ul class="first last simple">
+<li>Refreshes the catalogue of available datasets. This is also updated when QGIS starts.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last simple">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="spatial-data-dsm-generator">
+<h2>3.4. Spatial Data: DSM Generator<a class="headerlink" href="#spatial-data-dsm-generator" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Developer:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Nils</span> <span class="n">Wallenberg</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last simple">
+<li>Digital Surface Models (DSMs) is not always available for the area you want to investigate. The <strong>DSM Generator</strong> can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from [Open Street Map](<a class="reference external" href="http://www.openstreetmap.org">http://www.openstreetmap.org</a>) data, is also available.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Location:
+- The DSM Generator is located at</p>
+<blockquote>
+<div><ul class="simple">
+<li>UMEP</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Spatial Data</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>DSM Generator</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><div class="first last figure">
+<img alt="_images/DSMGenerator.png" src="_images/DSMGenerator.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dialog sections:</p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>top</td>
+<td>input DEM data is specified</td>
+</tr>
+<tr class="row-even"><td>middle upper</td>
+<td>input polygon with height data or OSM is specified</td>
+</tr>
+<tr class="row-odd"><td>middle</td>
+<td>map extent is specified</td>
+</tr>
+<tr class="row-even"><td>middle lower</td>
+<td>to specify the output DSM and output resolution</td>
+</tr>
+<tr class="row-odd"><td>bottom</td>
+<td>to run the calculations</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Digital Elevation Model:</dt>
+<dd><ul class="first last">
+<li>A raster file containing elevation values needed to create the DSM</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Polygon Vector File:</dt>
+<dd><ul class="first last">
+<li>A polygon vector file including height values of buildings needed to create the DSM</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Necessary attributes:</dt>
+<dd><ul class="first last">
+<li>Building height values in meters</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use Open Street Map:</dt>
+<dd><ul class="first last">
+<li>Tick this in if you do not have a polygon layer with building heights. Open Street Map (© OpenStreetMap contributors) data will be used instead. If no building height is found <strong>building level height</strong> will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 * 3 = 9 meters high.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Save OSM as shapefile:</dt>
+<dd><ul class="first last">
+<li>Tick this in if you want to save the Open Street Map data as a polygon layer. This can be used if you want to look at what values has been used and if you want to add values manually.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Map extent:</dt>
+<dd><ul class="first last">
+<li>Set either to map canvas extent or extent from layer. Extent have to be smaller or equal to the raster DEM extent specified in the top section.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Digital Surface Model:</dt>
+<dd><ul class="first last">
+<li>Set output for the generated DSM. Also set output resolution.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last">
+<li>Starts the calculations</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output:</dt>
+<dd><ul class="first last">
+<li>One GeoTIFF is created, a DSM.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks:</dt>
+<dd><ul class="first last">
+<li>The DEM raster and map canvas should be in a projection with meters as units.</li>
+<li>Raster elevation data (DEM) can be retrieved from e.g. <a class="reference external" href="http://www.opendem.info/">OpenDEM</a>.</li>
+<li>If you use Open Street Map make sure you read <a class="reference external" href="http://www.openstreetmap.org/copyright">Open Street Map</a> © OpenStreetMap contributors.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="spatial-data-tree-generator">
+<h2>3.5. Spatial Data: Tree Generator<a class="headerlink" href="#spatial-data-tree-generator" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Developer:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last simple">
+<li>Information 3d vegetation is not a common spatial information available. The <strong>Tree Generator</strong> can be used to create or alter a vegetation CDSM and TDSM (see [abbreviations](<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">http://urban-climate.net/umep/UMEP_Manual#Abbreviations</a>)). Be using information from a point layer where the location of the points specifies the tree positions and the attributes sets the shape of the trees, it is possible to produce a the 3d vegetation needed for e.g. Mean radiant temperature modelling (SOLWEIG) or Urban Energy Balance modelling (SUEWS) in UMEP.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Location:</p>
+</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>The Tree Generator is located at</dt>
+<dd><ul class="first simple">
+<li>UMEP</li>
+</ul>
+<blockquote class="last">
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Spatial Data
+-  Tree Generator</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><div class="first last figure">
+<img alt="_images/Treegeneratorsolweig.png" src="_images/Treegeneratorsolweig.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dialog sections:</p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>top</td>
+<td>input data is specified</td>
+</tr>
+<tr class="row-even"><td>bottom</td>
+<td>to specify the output and to run the calculations</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Point vector file:</dt>
+<dd><ul class="first last">
+<li>A point vector file including the appropriate attributes for generating the vegetation DSMs</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Necessary attributes:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="94%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Tree type</td>
+<td><div class="first last line-block">
+<div class="line">Two different tree types (shapes) are currently included: 1 = conifer and 2 = decidouos.</div>
+<div class="line">There is also a possibility to remove vegetation by setting tree type = 0</div>
+<div class="line">and with an appropriate diameter to remove all vegetation pixels from the DSMs.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Total height</td>
+<td>This is the total height of the tree from the ground (magl).</td>
+</tr>
+<tr class="row-odd"><td>Trunk height</td>
+<td>This is the height up to the bottom of the canopy (magl).</td>
+</tr>
+<tr class="row-even"><td>Diameter</td>
+<td>This is the circular diameter of the tree in meter.</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Bollean building grid exist:</dt>
+<dd><ul class="first last">
+<li>Tick this in if a boolen building grid exist for your model domain. This can be generated from the SOLWEIG-plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Building and Ground DSM:</dt>
+<dd><ul class="first last">
+<li>A DSM consisting of ground and building heights.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Ground DEM:</dt>
+<dd><ul class="first last">
+<li>A DEM cosisting of ground heights.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Building grid:</dt>
+<dd><ul class="first last">
+<li>A grid where building pixels are 0 and all other pixels are 1.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Vegetation Canopy DSM:</dt>
+<dd><ul class="first last">
+<li>A DSM consisting of pixels with vegetation heights above ground.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Vegetation Trunk Zone DSM:</dt>
+<dd><ul class="first last">
+<li>A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output Folder:</dt>
+<dd><ul class="first last">
+<li>A specified folder where the result will be saved.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last">
+<li>starts the calculations</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last">
+<li>closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output:</dt>
+<dd><ul class="first last">
+<li>Two geoTIFFs are created, one CDSM and one TDSM.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks:</dt>
+<dd><ul class="first last">
+<li>All DSMs need to have the same extent and pixel</li>
+<li>To ceate a bush, set trunk height to</li>
+<li>The SOLWEIG plugin cn be used to create the boolean building grid as well as a TDSM based on a</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="spatial-data-lcz-converter">
+<h2>3.6. Spatial Data: LCZ Converter<a class="headerlink" href="#spatial-data-lcz-converter" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Contributors:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Natalie</span> <span class="n">Theeuwes</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span>
+<span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
+<span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last simple">
+<li>The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the <a class="reference external" href="http://www.wudapt.org/">WUDAPT portal</a>. The local climate zone are urban area classified based on the <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">Stewart and Oke (2012)</a> scheme.</li>
+<li>The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">Stewart et al. (2014)</a>. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.</li>
+</ul>
+</dd>
+</dl>
+<div class="figure">
+<img alt="_images/700px-LCZ_description.png" src="_images/700px-LCZ_description.png" />
+</div>
+<p>The definition of the different local climate zones (LCZ)</p>
+<p>Note: In UMEP we refer to the rural LCZ&#8217;s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Location:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>The Tree Generator is located at</dt>
+<dd><ul class="first simple">
+<li>UMEP</li>
+</ul>
+<blockquote class="last">
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Spatial Data
+-  LCZ converter</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><ul class="first simple">
+<li>The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.</li>
+<li>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ&#8217;s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</li>
+<li>When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.</li>
+</ul>
+<div class="figure">
+<img alt="_images/700px-LCZdialog1.png" src="_images/700px-LCZdialog1.png" />
+</div>
+<div class="figure">
+<img alt="_images/700px-LCZdialog2.png" src="_images/700px-LCZdialog2.png" />
+</div>
+<div class="last figure">
+<img alt="_images/700px-LCZdialog3.png" src="_images/700px-LCZdialog3.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dialog sections:</p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>upper</td>
+<td><div class="first last line-block">
+<div class="line">Select the LCZ raster layer and the vector grid the land cover</div>
+<div class="line">fractions should be computed for.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>middle Tab: Pervious distribution</td>
+<td><div class="first last line-block">
+<div class="line">Set the distribution of pervious surface fractions for</div>
+<div class="line">each LCZ separately or all at the same time.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>middle Tab: Table</td>
+<td><div class="first last line-block">
+<div class="line">Alters the land cover fractions and building and</div>
+<div class="line">vegetation heights for each LCZ towards more accurate values.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>lower</td>
+<td>Specify output and run the calculations.</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>LCZ raster:</dt>
+<dd><ul class="first last">
+<li>Select the LCZ raster from the [WUDAPT database.](<a class="reference external" href="http://www.wudapt.org">http://www.wudapt.org</a>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Vector grid:</dt>
+<dd><ul class="first last">
+<li>Select your predefined polygon grid (see Vector -&amp;gt; Research Tools -&amp;gt; Vector Grid; select polygons not lines)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Adjust default parameters:</dt>
+<dd><ul class="first last">
+<li>Tick this box if you would like to edit the table below with the land use fractions and tree and building heights for each of the local climate zones.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Separate LCZ’s:</dt>
+<dd><ul class="first last">
+<li>Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>LCZ’s:</td>
+<td>List of LCZ’s in the raster, ordered by most frequent occurrence. Select the LCZ(s) for which you would like to specify the pervious fraction.</td>
+</tr>
+<tr class="row-even"><td>Fraction distributions:</td>
+<td>Select the percentages of each pervious land cover class for the selected LCZ.</td>
+</tr>
+<tr class="row-odd"><td>Height of trees:</td>
+<td>Select the range of tree heights most applicable for that LCZ.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>Note for rural classes you are only able to specify the distribution of tree species. For more detailed distribution of pervious fractions, please alter the table.</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Same for all LCZ’s:</dt>
+<dd><ul class="first last">
+<li>Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Urban:</td>
+<td>Select the percentages of each pervious land cover class for all urban LCZ’s.</td>
+</tr>
+<tr class="row-even"><td>Rural:</td>
+<td><div class="first last line-block">
+<div class="line">Select the percentages of each pervious land cover class for all rural LCZ’s.</div>
+<div class="line">Note for rural classes you are only able to specify the distribution of tree species.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Height of trees:</td>
+<td>Select the range of tree heights most applicable for the urban and rural LCZ’s.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>For more detailed distribution of pervious fractions, please alter the table.</div></blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Update Table:</dt>
+<dd><ul class="first last">
+<li>This updates the table from the default values to the user-specified distributions of the pervious fractions. Please check the table, to make sure your changes have taken effect.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>File Prefix:</dt>
+<dd><ul class="first last">
+<li>A prefix that will be included in the beginning of the output files.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Add results to polygon grid:</dt>
+<dd><ul class="first last">
+<li>Tick this in if you would like to save the results in the attribute table for your polygon vector grid.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output Folder:</dt>
+<dd><ul class="first last">
+<li>A specified folder where result will be saved.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last">
+<li>Starts the calculation</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Three files are saved after a successful run.</dt>
+<dd><ul class="first last">
+<li>One with the landcover fractions for each grid cell</li>
+<li>One with the morphometric properties for the building for each grid cell</li>
+<li>One with the morphometric properties for vegetation for each grid cell</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks:</dt>
+<dd><ul class="first last">
+<li>Rural LCZ&#8217;s are marked as 101, 102, etc instead of A, B, etc.</li>
+<li>Issues using .sdat rasters has been reported. GeoTiffs are recommended.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>References:</dt>
+<dd><ul class="first last">
+<li>Stewart, I.D. and Oke, T.R. 2012. Local Climate Zones for urban temperature studies. Bulletin of the American Meteorological Society, 93: <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">1879-1900</a>.</li>
+<li>Stewart, I.D., Oke, T.R., and E.S. Krayenhoff. 2014. Evaluation of the ‘local climate zone’ scheme using temperature observations and model simulations. International Journal of Climatology, 34: <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">1062-80</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Processor.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Getting_Started.html" class="btn btn-neutral" title="2. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
