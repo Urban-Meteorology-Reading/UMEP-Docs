@@ -25,17 +25,26 @@
   
 
   
+  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -100,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -108,10 +117,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -187,7 +195,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li>Start <strong>QGIS</strong></li>
-<li>Go to: <em>Plugins -&gt; Manage and Install Plugins...</em></li>
+<li>Go to: <em>Plugins -&gt; Manage and Install Plugins…</em></li>
 <li>Search for <strong>UMEP</strong></li>
 <li>Click <strong>Install Plugin</strong> (or <em>Upgrade</em> if already have an older version installed from before).</li>
 </ol>
@@ -201,7 +209,7 @@
 <li>If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -&gt; Manage and Install Plugins -&gt; Installed -&gt; UMEP” and click <strong>Uninstall plugin</strong></li>
 <li>To download UMEP from the repository click this <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/downloads">link</a> and download repository</li>
 <li>Close QGIS if open</li>
-<li>Extract the downloaded zip archive into the folder <strong>C:\Users\\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
+<li>Extract the downloaded zip archive into the folder <strong>C:\Users\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
 <li>Rename the extracted folder to <strong>UMEP</strong></li>
 <li>Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -&gt; Manage and Install Plugins -&gt; All” and search for UMEP. Make sure that you also tick in the box <em>Show also experimental plugins</em> in the “Settings”-tab.</li>
 </ol>
@@ -243,14 +251,14 @@ make sure <em>pillow</em> is installed.</p>
 <td><p class="first">Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use <strong>pip</strong> (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type <em>sudo pip install pandas</em> if you want to install this library. In order to install pip open a terminal and type: <em>sudo easy_install pip</em>. You might need to restart QGIS to get it to work.</p>
 <p>Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a> to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like:</p>
 <div class="last line-block">
-<div class="line"><code class="docutils literal"><span class="pre">import&nbsp;sys</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">import&nbsp;sys</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>Windows</td>
 <td><p class="first">There are two options available: 1. As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC. This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu. You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
-<p><code class="docutils literal"><span class="pre">pip&nbsp;install&nbsp;pandas</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip&nbsp;install&nbsp;pandas</span></code></p>
 <ol class="arabic" start="2">
 <li><div class="first line-block">
 <div class="line">frame |right|Installation of pandas|Restart the <em>installation (64-bit) For Advanced Users</em> (see Getting started) and choose <em>Advanced Install</em>. When you come up to Select Packages search for pandas and click on <em>Skip</em> until you see a version number of pandas (see left picture). Finish the installation. <strong>This method can also be used to include other missing libraries such as gdal etc.</strong></div>
@@ -260,15 +268,15 @@ make sure <em>pillow</em> is installed.</p>
 <p><strong>PLEASE NOTICE!</strong></p>
 <p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong> library has a version conflict related to the <strong>numpy</strong> version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.</p>
 <p>We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to <strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run the two following commands:</p>
-<p><code class="docutils literal"><span class="pre">&nbsp;&nbsp;pip&nbsp;uninstall&nbsp;netCDF4</span></code></p>
-<p class="last"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;pip&nbsp;install&nbsp;netCDF4==1.2.9</span></code></p>
+<p>``&nbsp;&nbsp;pip&nbsp;uninstall&nbsp;netCDF4``</p>
+<p class="last">``&nbsp;&nbsp;pip&nbsp;install&nbsp;netCDF4==1.2.9``</p>
 </td>
 </tr>
 <tr class="row-even"><td>Mac OS X</td>
 <td>Follow the instructions for Linux. <strong>*Note*</strong>: this approach is tested to be working under Mac OS X 10.11.5.</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -278,8 +286,8 @@ path, which differs depending on operating system. Or refer to
 to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
 <strong>scipy</strong>. An example of startup.py may look like:</p>
 <div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">import&nbsp;sys</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">import&nbsp;sys</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')</span></code></div>
 </div>
 </div>
 </div>
@@ -313,12 +321,12 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="frame |left|Interface for inputting an ascii data file into the correct format for SUEWS" src="1\MetPreProcessor.jpg" />
+<img alt="frame |left|Interface for inputting an ascii data file into the correct format for SUEWS" src="1/MetPreProcessor.jpg" />
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td>Dialog sections</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td><div class="first line-block">
 <div class="line">Variables included in UMEP</div>
@@ -351,79 +359,79 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>iy</td>
 <td>Year [YYYY]</td>
 <td>Not applicable</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>id</td>
 <td>Day of year [DOY]</td>
 <td>1 to 365 (366 if leap year)</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>it</td>
 <td>Hour [H]</td>
 <td>0 to 23</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>imin</td>
 <td>Minute [M]</td>
 <td>0 to 59</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>5</td>
 <td>qn</td>
 <td>Net all-wave radiation [W m<sup>-2</sup>]</td>
 <td>-200 to 800</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>qh</td>
 <td>Sensible heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 750</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>7</td>
 <td>qe</td>
 <td>Latent heat flux [W m<sup>-2</sup>]</td>
 <td>-100 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>8</td>
 <td>qs</td>
 <td>Storage heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>9</td>
 <td>qf</td>
 <td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
 <td>0 to 1500</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>10</td>
 <td>U</td>
 <td>Wind speed [m s<sup>-1</sup>]</td>
 <td>0.001 to 60</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>11</td>
 <td>RH</td>
 <td>Relative Humidity [%]</td>
 <td>5 to 100</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>12</td>
 <td>Tair</td>
 <td>Air temperature [°C]</td>
 <td>-30 to 55</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>13</td>
 <td>pres</td>
 <td>Surface barometric pressure [kPa]</td>
 <td>90 to 107</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>14</td>
 <td>rain</td>
@@ -435,7 +443,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>kdown</td>
 <td>Incoming shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 1200</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>16</td>
 <td>snow</td>
@@ -447,37 +455,37 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>ldown</td>
 <td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
 <td>100 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>18</td>
 <td>fcld</td>
 <td>Cloud fraction [tenths]</td>
 <td>0 to 1</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>19</td>
 <td>wuh</td>
-<td>External water use [m:sup:<cite>3</cite>]</td>
+<td>External water use [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">3</span></code>]</td>
 <td>0 to 10</td>
 <td>(per 5 min) scale based on time step being used</td>
 </tr>
 <tr class="row-odd"><td>20</td>
 <td>xsmd</td>
-<td>(Observed) soil moisture [m:sup:<cite>3</cite> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
+<td>(Observed) soil moisture [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">3</span></code> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
 <td>0.01 to 0.5</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>21</td>
 <td>lai</td>
-<td>(Observed) leaf area index [m:sup:<cite>2</cite> m<sup>-2</sup>]</td>
+<td>(Observed) leaf area index [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">2</span></code> m<sup>-2</sup>]</td>
 <td>0 to 15</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>22</td>
 <td>kdiff</td>
 <td>Diffuse shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>23</td>
 <td>kdir</td>
@@ -489,7 +497,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>wdir</td>
 <td>Wind direction [°]</td>
 <td>0 to 360</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -510,8 +518,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </ol>
 </td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -565,8 +573,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-odd"><td>Snowfall rate [kg m<sup>-2</sup> s<sup>-1</sup>]</td>
 <td>Average over previous 3 hours in WFDEI and over next 3 hours in WFD. CRU and GPCC bias correction options.</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -577,7 +585,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <li>Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:</li>
 </ul>
 <div class="last figure" id="id1">
-<a class="reference internal image-reference" href="1\watch_masked.png"><img alt="Available data in WATCH downloader (overlaid on countries)" src="1\watch_masked.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="1/watch_masked.png"><img alt="Available data in WATCH downloader (overlaid on countries)" src="1/watch_masked.png" style="width: 350px;" /></a>
 <p class="caption"><span class="caption-text">Available data in WATCH downloader (overlaid on countries)</span></p>
 </div>
 </td>
@@ -603,7 +611,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Obtaining WATCH data via UMEP</td>
 <td><div class="first last figure">
-<img alt="frame |left|Integrated WATCH data downloader: control panel" src="1\watch_downloader_2.png" />
+<img alt="frame |left|Integrated WATCH data downloader: control panel" src="1/watch_downloader_2.png" />
 </div>
 </td>
 </tr>
@@ -675,7 +683,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure" id="id2">
-<a class="reference internal image-reference" href="1\Downloader.png"><img alt="Dialog for the Spatial Data Downloader plugin" src="1\Downloader.png" style="width: 650px;" /></a>
+<a class="reference internal image-reference" href="1/Downloader.png"><img alt="Dialog for the Spatial Data Downloader plugin" src="1/Downloader.png" style="width: 650px;" /></a>
 <p class="caption"><span class="caption-text">Dialog for the Spatial Data Downloader plugin</span></p>
 </div>
 </td>
@@ -701,8 +709,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-odd"><td>Close</td>
 <td>Closes the plugin.</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -736,7 +744,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure" id="id3">
-<img alt="Dialog for the DSM Generator plugin" src="1\DSMGenerator.png" />
+<img alt="Dialog for the DSM Generator plugin" src="1/DSMGenerator.png" />
 <p class="caption"><span class="caption-text">Dialog for the DSM Generator plugin</span></p>
 </div>
 </td>
@@ -805,8 +813,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -823,7 +831,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td><p class="first">The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the <a class="reference external" href="http://www.wudapt.org/">WUDAPT portal</a>. The local climate zone are urban area classified based on the <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">Stewart and Oke (2012)</a> scheme.</p>
 <p>The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">Stewart et al. (2014)</a>. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.</p>
 <p><a class="reference external" href="File:LCZ_description.png">700px |thumb|left|The definition of the different local climate zones (LCZ)</a></p>
-<p class="last">Note: In UMEP we refer to the rural LCZ&#8217;s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
+<p class="last">Note: In UMEP we refer to the rural LCZ’s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>Location</td>
@@ -847,7 +855,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <div class="line">right| | left| | right|</div>
 </div>
 <p>The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.</p>
-<p>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ&#8217;s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</p>
+<p>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ’s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</p>
 <p class="last">When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.</p>
 </td>
 </tr>
@@ -956,7 +964,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Remarks</td>
 <td><ul class="first last simple">
-<li>Rural LCZ&#8217;s are marked as 101, 102, etc instead of A, B, etc.</li>
+<li>Rural LCZ’s are marked as 101, 102, etc instead of A, B, etc.</li>
 <li>Issues using .sdat rasters has been reported. GeoTiffs are recommended.</li>
 </ul>
 </td>
@@ -966,8 +974,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <p class="last">Stewart, I.D., Oke, T.R., and E.S. Krayenhoff. 2014. Evaluation of the ‘local climate zone’ scheme using temperature observations and model simulations. International Journal of Climatology, 34: <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">1062-80</a>.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1001,7 +1009,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none| Sky View Factor Calculator start window" src="1\SVFCalculator.png" />
+<img alt="none| Sky View Factor Calculator start window" src="1/SVFCalculator.png" />
 </div>
 </td>
 </tr>
@@ -1083,7 +1091,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Example</td>
 <td><div class="first last figure">
-<img alt="Example of (left) input data - ground and building DSM (grayscale), DSM overlaid with a canopy DSM (yellow to green). Right: the resulting SVF -light highest SVF" src="1\Output_Skyview.jpg" />
+<img alt="Example of (left) input data - ground and building DSM (grayscale), DSM overlaid with a canopy DSM (yellow to green). Right: the resulting SVF -light highest SVF" src="1/Output_Skyview.jpg" />
 </div>
 </td>
 </tr>
@@ -1136,7 +1144,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none| Wall Height and Aspect Calculator start window" src="1\WallHeight.png" />
+<img alt="none| Wall Height and Aspect Calculator start window" src="1/WallHeight.png" />
 </div>
 </td>
 </tr>
@@ -1169,7 +1177,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Example</td>
 <td><div class="first last figure">
-<img alt="none| Example of input data (left) and the resulting wall height raster (right)." src="1\Output_Wall_Height.jpg" />
+<img alt="none| Example of input data (left) and the resulting wall height raster (right)." src="1/Output_Wall_Height.jpg" />
 </div>
 </td>
 </tr>
@@ -1260,7 +1268,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Dialog box</td>
 <td><div class="first last figure" id="id4">
-<img alt="landcoverreclassifier.png" src="1\landcoverreclassifier.png" />
+<img alt="landcoverreclassifier.png" src="1/landcoverreclassifier.png" />
 <p class="caption"><span class="caption-text">landcoverreclassifier.png</span></p>
 </div>
 </td>
@@ -1338,7 +1346,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start Dialog for the Land cover Fraction (Point) package" src="1\Land_Cover_Reclass.png" />
+<img alt="none|Start Dialog for the Land cover Fraction (Point) package" src="1/Land_Cover_Reclass.png" />
 </div>
 </td>
 </tr>
@@ -1358,8 +1366,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-odd"><td>lower</td>
 <td>Specify the input data regarding land cover fraction raster as well as specifying output and for running the calculations.</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1412,7 +1420,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>Fredrik Lindberg (Gothenburg), Niklas Krave (Gothenburg)</td>
 </tr>
 <tr class="row-even"><td>Introduction</td>
-<td>The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference external" href="#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid...</em>).</td>
+<td>The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference external" href="#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid…</em>).</td>
 </tr>
 <tr class="row-odd"><td>Location</td>
 <td><p class="first">The Land Cover Fraction (Grid) pre-processor is located at</p>
@@ -1432,7 +1440,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog Box</td>
 <td><div class="first last figure">
-<img alt="none| Start dialog for the Land Cover Fraction (Grid)" src="1\LandCoverFractionGrid2.png" />
+<img alt="none| Start dialog for the Land Cover Fraction (Grid)" src="1/LandCoverFractionGrid2.png" />
 </div>
 </td>
 </tr>
@@ -1459,7 +1467,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-even"><td>Search Throughout the Grid Extent</td>
 <td><p class="first">Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the <strong>Search distance</strong> can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.</p>
 <div class="last figure">
-<img alt="none| Search Throughout the Grid Extent" src="1\Grid_Extent.png" />
+<img alt="none| Search Throughout the Grid Extent" src="1/Grid_Extent.png" />
 </div>
 </td>
 </tr>
@@ -1505,8 +1513,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-even"><td>Remarks</td>
 <td>Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/issues">repository</a>).</td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1540,25 +1548,25 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Mean building height (z:sub:<cite>H</cite>)</td>
+<tr class="row-even"><td>Mean building height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">H</span></code>)</td>
 <td>Average building height measured from ground level [m].</td>
 </tr>
-<tr class="row-odd"><td>Standard deviation of building heights (z:sub:<cite>Hσ</cite>).</td>
+<tr class="row-odd"><td>Standard deviation of building heights (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">Hσ</span></code>).</td>
 <td>Standard deviation of building heights [m].</td>
 </tr>
-<tr class="row-even"><td>Maximum building height (z:sub:<cite>Hmax</cite>).</td>
+<tr class="row-even"><td>Maximum building height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">Hmax</span></code>).</td>
 <td>Height of the tallest building within the study area [m]</td>
 </tr>
-<tr class="row-odd"><td>Plan area index (λ:sub:<cite>P</cite>)</td>
+<tr class="row-odd"><td>Plan area index (λ:sub:<code class="xref any docutils literal notranslate"><span class="pre">P</span></code>)</td>
 <td>Area of building surfaces relative to the total ground area.</td>
 </tr>
-<tr class="row-even"><td>Frontal area index (λ:sub:<cite>F</cite>)</td>
+<tr class="row-even"><td>Frontal area index (λ:sub:<code class="xref any docutils literal notranslate"><span class="pre">F</span></code>)</td>
 <td>Area of building walls normal to wind direction relative to the total ground area.</td>
 </tr>
-<tr class="row-odd"><td>Roughness length (z:sub:<cite>0</cite>)</td>
+<tr class="row-odd"><td>Roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>)</td>
 <td>A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].</td>
 </tr>
-<tr class="row-even"><td>Zero-plane displacement height (z:sub:<cite>d</cite>)</td>
+<tr class="row-even"><td>Zero-plane displacement height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>)</td>
 <td>Height above ground where the wind speed is 0 m s<sup>-1</sup> as a result of obstacles to the flow such as trees or buildings [m].</td>
 </tr>
 </tbody>
@@ -1583,7 +1591,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start Dialog for the Morphometric Calculator (Point) package" src="1\Morph_Calc_point.png" />
+<img alt="none|Start Dialog for the Morphometric Calculator (Point) package" src="1/Morph_Calc_point.png" />
 </div>
 </td>
 </tr>
@@ -1667,8 +1675,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-even"><td>References</td>
 <td>Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas derived from analysis of surface form. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2">J Appl Meteorol 38: 1262-1292</a></td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1691,7 +1699,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Introduction</td>
 <td><p class="first">The Morphometric Calculator (Grid) pre-processor calculates various morphometric parameters based on digital surface models.</p>
-<p class="last">This plugin is the same as Morphometric Calulator (Point) except that it calculates the parameters for each polygon object in the polygon vector layer. The polygons should preferably be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see Vector -&gt; Research Tools -&gt; Vector Grid...).</p>
+<p class="last">This plugin is the same as Morphometric Calulator (Point) except that it calculates the parameters for each polygon object in the polygon vector layer. The polygons should preferably be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see Vector -&gt; Research Tools -&gt; Vector Grid…).</p>
 </td>
 </tr>
 <tr class="row-even"><td>Location</td>
@@ -1712,12 +1720,12 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-odd"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start Dialog for the Morphometric Calculator package" src="1\Morph_Calc.png" />
+<img alt="none|Start Dialog for the Morphometric Calculator package" src="1/Morph_Calc.png" />
 </div>
 </td>
 </tr>
 <tr class="row-even"><td>Dialog sections</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>Search Throughout the Grid Extent</td>
 <td><ul class="first simple">
@@ -1725,7 +1733,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <li>Select the other option (Search from Grid Centroid if the search should start from the centroid of the grid. Setting the <strong>Search distance</strong> can then allow for the search to extent beyond the grid. See the figure below for illustration. The left one performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.</li>
 </ul>
 <div class="last figure">
-<img alt="none|Grid Extent Options" src="1\Grid_Extent.png" />
+<img alt="none|Grid Extent Options" src="1/Grid_Extent.png" />
 </div>
 </td>
 </tr>
@@ -1786,8 +1794,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>References</td>
 <td><ul class="first last simple">
@@ -1797,8 +1805,8 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1850,7 +1858,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure" id="id5">
-<img alt="Start dialog for the Source Area Model (Point) package" src="1\Footprint.png" />
+<img alt="Start dialog for the Source Area Model (Point) package" src="1/Footprint.png" />
 <p class="caption"><span class="caption-text">Start dialog for the Source Area Model (Point) package</span></p>
 </div>
 </td>
@@ -1911,13 +1919,13 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <tr class="row-even"><td>Use Input File on Specify Input Parameters</td>
 <td><p class="first">An input text file (.txt or .csv) containing the required inputs to the model (see below) with associated time stamps. For example:</p>
 <div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">iy&nbsp;id&nbsp;it&nbsp;imin&nbsp;z_0_input&nbsp;z_d_input&nbsp;z_m_input&nbsp;sigv&nbsp;Obukhov&nbsp;ustar&nbsp;dir&nbsp;h&nbsp;por</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">2014&nbsp;1&nbsp;0&nbsp;0&nbsp;1.1671&nbsp;8.1697&nbsp;50.3&nbsp;1.4805&nbsp;-5457.9644&nbsp;0.8460&nbsp;193.8650&nbsp;1000.0000&nbsp;60.0000</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">2014&nbsp;1&nbsp;0&nbsp;30&nbsp;1.4007&nbsp;9.8050&nbsp;50.3&nbsp;0.9616&nbsp;1081.7260&nbsp;0.5046&nbsp;185.5874&nbsp;1000.0000&nbsp;60.0000</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">2014&nbsp;1&nbsp;1&nbsp;0&nbsp;1.3738&nbsp;9.6168&nbsp;50.3&nbsp;0.9870&nbsp;854.9901&nbsp;0.4849&nbsp;189.0444&nbsp;1000.0000&nbsp;60.0000</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">2014&nbsp;1&nbsp;1&nbsp;30&nbsp;1.2768&nbsp;9.3872&nbsp;50.3&nbsp;1.2345&nbsp;1002.2290&nbsp;0.5876&nbsp;202.3300&nbsp;1000.0000&nbsp;60.0000</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">iy&nbsp;id&nbsp;it&nbsp;imin&nbsp;z_0_input&nbsp;z_d_input&nbsp;z_m_input&nbsp;sigv&nbsp;Obukhov&nbsp;ustar&nbsp;dir&nbsp;h&nbsp;por</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">2014&nbsp;1&nbsp;0&nbsp;0&nbsp;1.1671&nbsp;8.1697&nbsp;50.3&nbsp;1.4805&nbsp;-5457.9644&nbsp;0.8460&nbsp;193.8650&nbsp;1000.0000&nbsp;60.0000</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">2014&nbsp;1&nbsp;0&nbsp;30&nbsp;1.4007&nbsp;9.8050&nbsp;50.3&nbsp;0.9616&nbsp;1081.7260&nbsp;0.5046&nbsp;185.5874&nbsp;1000.0000&nbsp;60.0000</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">2014&nbsp;1&nbsp;1&nbsp;0&nbsp;1.3738&nbsp;9.6168&nbsp;50.3&nbsp;0.9870&nbsp;854.9901&nbsp;0.4849&nbsp;189.0444&nbsp;1000.0000&nbsp;60.0000</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">2014&nbsp;1&nbsp;1&nbsp;30&nbsp;1.2768&nbsp;9.3872&nbsp;50.3&nbsp;1.2345&nbsp;1002.2290&nbsp;0.5876&nbsp;202.3300&nbsp;1000.0000&nbsp;60.0000</span></code></div>
 </div>
-<p><code class="docutils literal"><span class="pre">[Header:&nbsp;year,&nbsp;day&nbsp;of&nbsp;year,&nbsp;hour,&nbsp;minutes&nbsp;of&nbsp;averaging&nbsp;period,&nbsp;roughness&nbsp;length&nbsp;for&nbsp;momentum,&nbsp;zero&nbsp;plane&nbsp;displacement&nbsp;height&nbsp;for&nbsp;momentum,&nbsp;measurement&nbsp;height&nbsp;of&nbsp;sensor,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;lateral&nbsp;wind,&nbsp;Obukhov&nbsp;length,&nbsp;friction&nbsp;velocity,&nbsp;wind&nbsp;direction,&nbsp;boundary&nbsp;layer&nbsp;height,&nbsp;vegetation&nbsp;porosity].</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">[Header:&nbsp;year,&nbsp;day&nbsp;of&nbsp;year,&nbsp;hour,&nbsp;minutes&nbsp;of&nbsp;averaging&nbsp;period,&nbsp;roughness&nbsp;length&nbsp;for&nbsp;momentum,&nbsp;zero&nbsp;plane&nbsp;displacement&nbsp;height&nbsp;for&nbsp;momentum,&nbsp;measurement&nbsp;height&nbsp;of&nbsp;sensor,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;lateral&nbsp;wind,&nbsp;Obukhov&nbsp;length,&nbsp;friction&nbsp;velocity,&nbsp;wind&nbsp;direction,&nbsp;boundary&nbsp;layer&nbsp;height,&nbsp;vegetation&nbsp;porosity].</span></code></p>
 <blockquote class="last">
 <div>Note In this example, the measurement height of the sensor (z_m_input) is 50.3 m</div></blockquote>
 </td>
@@ -1936,10 +1944,10 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Roughness Length for Momentum</td>
-<td>First order estimation of roughness length for momentum (z:sub:<cite>0</cite>) for this wind direction [m].</td>
+<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) for this wind direction [m].</td>
 </tr>
 <tr class="row-odd"><td>Zero Displacement Height for Momentum</td>
-<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<cite>d</cite>) for this wind direction. [m].</td>
+<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) for this wind direction. [m].</td>
 </tr>
 <tr class="row-even"><td>Measurement Height</td>
 <td>Height of sensor above ground level [m].</td>
@@ -1973,7 +1981,7 @@ to modify start up file of QGIS by including the paths to <strong>pandas</strong
 <td>Specify the footprint model to use: Kormann and Meixner (2001) or Kljun et al. (2015)</td>
 </tr>
 <tr class="row-odd"><td>Roughness Calculation Method</td>
-<td>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<cite>d</cite>) and roughness length (z:sub:<cite>0</cite>) are available.{|class=“wikitable”</td>
+<td>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) and roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) are available.{|class=“wikitable”</td>
 </tr>
 <tr class="row-even"><td>RT</td>
 <td>Rule of thumb (c.f. Grimmond and Oke 1998)</td>
@@ -2014,12 +2022,12 @@ weighted as a percentage of the pixel of maximum contribution.</li>
 <li>A text file which specifies the time dimensions of measurements, the
 initial aerodynamic and meteorological parameters which were input to
 the model and finally the weighted geometry in the footprint and thus
-the newly calculated roughness length (z:sub:<cite>0</cite>) and displacement
-height (z:sub:<cite>d</cite>) according to the user specified method. This is of
+the newly calculated roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) and displacement
+height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) according to the user specified method. This is of
 the form:</li>
 </ol>
 <p><em>``“iy```` ````id```` ````it```` ````imin```` ````z_0_input```` ````z_d_input```` ````z_m_input```` ````sigv```` ````Obukhov```` ````ustar```` ````dir```` ````fai```` ````pai```` ````zH```` ````zMax```` ````zSdev```` ````zd```` ````z0”``</em></p>
-<p><code class="docutils literal"><span class="pre">[Header:&nbsp;year,&nbsp;day&nbsp;of&nbsp;year,&nbsp;hour,&nbsp;minutes&nbsp;of&nbsp;averaging&nbsp;period,&nbsp;roughness&nbsp;length&nbsp;for&nbsp;momentum,&nbsp;zero&nbsp;plane&nbsp;displacement&nbsp;height&nbsp;for&nbsp;momentum,&nbsp;measurement&nbsp;height&nbsp;of&nbsp;sensor,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;lateral&nbsp;wind,&nbsp;Obukhov&nbsp;length,&nbsp;friction&nbsp;velocity,&nbsp;wind&nbsp;direction,&nbsp;building&nbsp;frontal&nbsp;area&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint&nbsp;function,&nbsp;building&nbsp;plan&nbsp;area&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint,&nbsp;average&nbsp;height&nbsp;of&nbsp;buildings&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint,&nbsp;maximum&nbsp;building&nbsp;height,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;building&nbsp;heights,&nbsp;footprint&nbsp;specific&nbsp;displacement&nbsp;height&nbsp;for&nbsp;specified&nbsp;method,&nbsp;footprint&nbsp;specific&nbsp;roughness&nbsp;length&nbsp;for&nbsp;specified&nbsp;method]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">[Header:&nbsp;year,&nbsp;day&nbsp;of&nbsp;year,&nbsp;hour,&nbsp;minutes&nbsp;of&nbsp;averaging&nbsp;period,&nbsp;roughness&nbsp;length&nbsp;for&nbsp;momentum,&nbsp;zero&nbsp;plane&nbsp;displacement&nbsp;height&nbsp;for&nbsp;momentum,&nbsp;measurement&nbsp;height&nbsp;of&nbsp;sensor,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;lateral&nbsp;wind,&nbsp;Obukhov&nbsp;length,&nbsp;friction&nbsp;velocity,&nbsp;wind&nbsp;direction,&nbsp;building&nbsp;frontal&nbsp;area&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint&nbsp;function,&nbsp;building&nbsp;plan&nbsp;area&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint,&nbsp;average&nbsp;height&nbsp;of&nbsp;buildings&nbsp;weighted&nbsp;according&nbsp;to&nbsp;footprint,&nbsp;maximum&nbsp;building&nbsp;height,&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;building&nbsp;heights,&nbsp;footprint&nbsp;specific&nbsp;displacement&nbsp;height&nbsp;for&nbsp;specified&nbsp;method,&nbsp;footprint&nbsp;specific&nbsp;roughness&nbsp;length&nbsp;for&nbsp;specified&nbsp;method]</span></code></p>
 <p>|- |Remarks ||</p>
 <ul class="simple">
 <li>All DSMs need to have the same extent and pixel size.</li>
@@ -2098,7 +2106,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <td>Fredrik Lindberg (Gothenburg)</td>
 </tr>
 <tr class="row-even"><td>Introduction</td>
-<td><p class="first">The <strong>SOLWEIG</strong> plugin can be used to calculate spatial variations of mean radiant temperature (T:sub:<cite>mrt</cite>) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.</p>
+<td><p class="first">The <strong>SOLWEIG</strong> plugin can be used to calculate spatial variations of mean radiant temperature (T:sub:<code class="xref any docutils literal notranslate"><span class="pre">mrt</span></code>) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.</p>
 <p class="last">The full manual of the SOLWEIG model can be found <a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">here</a>.</p>
 </td>
 </tr>
@@ -2123,7 +2131,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-odd"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Dialog for the SOLWEIG model" src="1\SOLWEIG.png" />
+<img alt="none|Dialog for the SOLWEIG model" src="1/SOLWEIG.png" />
 </div>
 </td>
 </tr>
@@ -2355,7 +2363,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <tr class="row-odd"><td>Data must be provided by the user, and can be:</td>
 <td><ul class="first last simple">
 <li>Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)</li>
-<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>&#8216;time</strong>&#8216; dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
+<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>‘time</strong>’ dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
 <li>Text (.txt) file, daily T<sub>max</sub>, T<sub>avg</sub> or T<sub>min</sub> (<a class="reference external" href="http://www.urban-climate.net/watch_data/data%20set%20sample.txt">file sample</a>: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.</li>
 </ul>
 </td>
@@ -2390,7 +2398,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="frame |left|The interface for the ExtremeFinder plugin" src="1\Extremefinder3.png" />
+<img alt="frame |left|The interface for the ExtremeFinder plugin" src="1/Extremefinder3.png" />
 </div>
 </td>
 </tr>
@@ -2426,13 +2434,13 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <td><ol class="first last arabic simple">
 <li>Daily T<sub>max</sub> (or T<sub>avg</sub> / T<sub>min</sub>) with time (Y= Year, X=Month)<ul>
 <li>Colour gives Temperature (see key)</li>
-<li>Yellow Box Highlights Heatwave (Coldwave) periods This loads the model interface dialog box: <a class="reference internal" href="1\TMax1.jpg"><img alt="Heat/Cold wave periods" src="1\TMax1.jpg" style="width: 350px;" /></a></li>
+<li>Yellow Box Highlights Heatwave (Coldwave) periods This loads the model interface dialog box: <a class="reference internal" href="1/TMax1.jpg"><img alt="Heat/Cold wave periods" src="1/TMax1.jpg" style="width: 350px;" /></a></li>
 </ul>
 </li>
 <li>Box plot of distribution of heat (cold) wave by year.<ul>
 <li>whiskers =1.5* IQR</li>
 <li><ul class="first">
-<li>outliers - any data beyond the whiskers <a class="reference internal" href="1\HW_Box.jpg"><img alt="Box-and-whisker plot of Heat/Cold wave days each year" src="1\HW_Box.jpg" style="width: 350px;" /></a></li>
+<li>outliers - any data beyond the whiskers <a class="reference internal" href="1/HW_Box.jpg"><img alt="Box-and-whisker plot of Heat/Cold wave days each year" src="1/HW_Box.jpg" style="width: 350px;" /></a></li>
 </ul>
 </li>
 </ul>
@@ -2441,8 +2449,8 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </ol>
 </td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -2483,7 +2491,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-odd"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start dialog for Greater QF" src="1\GQF.png" />
+<img alt="none|Start dialog for Greater QF" src="1/GQF.png" />
 </div>
 </td>
 </tr>
@@ -2501,7 +2509,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <td><p class="first"><strong>Example map</strong></p>
 <p>The total anthropogenic heat flux for the first time step is displayed in QGIS to demonstrate model output and the output areas. In order for these areas to be displayed correctly, the coordinate reference system must be selected. The QGIS “Select CRS” screen will appear, and EPSG 27700 (British National Grid) must be chosen.</p>
 <p>The layer displaying model output also contains the other contributions to QF (e.g. car transport). These can be visualised using standard QGIS methods of styling the layer according to the selected component, or inspecting the layer attributes table.</p>
-<p>&#8216;&#8217;&#8217; CSV files &#8216;&#8217;&#8216;</p>
+<p>‘’’ CSV files ‘’‘</p>
 <p>A CSV file is generated for each of the 19 contributions to QF (e.g. car travel, wastewater heating) and the total QF. Each file contains a column per output area (shown in the example map) and a row per time step. These are labelled accordingly. The filenames are abbreviated where necessary for compatibility, with the following convention used:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2539,8 +2547,8 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <p class="last">A “pickled” Python data object containing the results is also saved in the local temporary folder for future use with other UMEP components.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>References</td>
 <td><ul class="first last simple">
@@ -2573,8 +2581,8 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -2621,7 +2629,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-odd"><td>Dialog Box</td>
 <td><div class="first last figure">
-<img alt="none|Start dialog for SUEWS Simple" src="1\SuewsSimple.png" />
+<img alt="none|Start dialog for SUEWS Simple" src="1/SuewsSimple.png" />
 </div>
 </td>
 </tr>
@@ -2758,7 +2766,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-odd"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start dialog for SUEWS" src="1\SuewsAdvanced.png" />
+<img alt="none|Start dialog for SUEWS" src="1/SuewsAdvanced.png" />
 </div>
 </td>
 </tr>
@@ -2806,7 +2814,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Start Dialog for the Shadow Generator package" src="1\shadow_generator.jpg" />
+<img alt="none|Start Dialog for the Shadow Generator package" src="1/shadow_generator.jpg" />
 </div>
 </td>
 </tr>
@@ -2881,7 +2889,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <tr class="row-even"><td>Example of input data and result</td>
 <td><p class="first">shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).</p>
 <div class="last figure">
-<img alt="none|Example of Input Data and the Resulting Shadow Image in Gothenburg (1 m Resolution), Sweden at 1 pm on the 2nd of October 2015 (Daylight Savings Time)." src="1\Shadow2.jpg" />
+<img alt="none|Example of Input Data and the Resulting Shadow Image in Gothenburg (1 m Resolution), Sweden at 1 pm on the 2nd of October 2015 (Daylight Savings Time)." src="1/Shadow2.jpg" />
 </div>
 </td>
 </tr>
@@ -2940,7 +2948,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <li>bottom section for specifying the output and for running the calculations</li>
 </ul>
 <div class="last figure">
-<img alt="none|Start Dialog for the Solar Energy on Building Envelopes package" src="1\SEBE1.png" />
+<img alt="none|Start Dialog for the Solar Energy on Building Envelopes package" src="1/SEBE1.png" />
 </div>
 </td>
 </tr>
@@ -3009,7 +3017,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <tr class="row-odd"><td>Example of input data and result</td>
 <td><p class="first">Input DSM (left) and irradiance image (right) in Gothenburg using data from 1977.</p>
 <div class="last figure">
-<img alt="none|Example of Input Data and the Resulting Irradiance Image in Gothenburg (1977)" src="1\SEBE2.jpg" />
+<img alt="none|Example of Input Data and the Resulting Irradiance Image in Gothenburg (1977)" src="1/SEBE2.jpg" />
 </div>
 </td>
 </tr>
@@ -3063,7 +3071,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Dialog for the SEBE (Visualisation) plugin" src="1\SEBEvisualisation.png" />
+<img alt="none|Dialog for the SEBE (Visualisation) plugin" src="1/SEBEvisualisation.png" />
 </div>
 </td>
 </tr>
@@ -3128,7 +3136,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Dialog for the SOLWEIG Analyzer plugin" src="1\SOLWEIGAnalyzer.png" />
+<img alt="none|Dialog for the SOLWEIG Analyzer plugin" src="1/SOLWEIGAnalyzer.png" />
 </div>
 </td>
 </tr>
@@ -3213,13 +3221,13 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <td>Tick this in to get the pixelwise minimum for the selected variable.</td>
 </tr>
 <tr class="row-odd"><td>Average of specific time of day</td>
-<td>The average of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The average of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-even"><td>Maximum of specific time of day</td>
-<td>The maximum of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The maximum of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-odd"><td>Minimum of specific time of day</td>
-<td>The minimum of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The minimum of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-even"><td>T<sub>mrt</sub>: Percent of time above threshold (degC)</td>
 <td>If T<sub>mrt</sub> is the selected variable, this box become active and calculates the percent of time that T<sub>mrt</sub> for each is above the threshold specified to the right.</td>
@@ -3275,7 +3283,7 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 </tr>
 <tr class="row-even"><td>Dialog box</td>
 <td><div class="first last figure">
-<img alt="none|Dialog for the SUEWS Analyzer plugin" src="1\SUEWSAnalyzer.png" />
+<img alt="none|Dialog for the SUEWS Analyzer plugin" src="1/SUEWSAnalyzer.png" />
 </div>
 </td>
 </tr>
@@ -3467,15 +3475,15 @@ Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10
 <p>One tip is about the variable list (i.e., var_list): if one non-string value is set (e.g., 123, 3.2, etc.), all valid variables will be included in the benchmarking.</p>
 <p>A sample namelist is as follows:</p>
 <div class="last line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;file</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;input_dir&nbsp;=&nbsp;'input'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;output_pdf&nbsp;=&nbsp;'benchmark'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&amp;benchmark</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;list_var='QN'&nbsp;'QS'&nbsp;'QE'&nbsp;'QH'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;list_metric='MAE'&nbsp;'MBE'&nbsp;'RMSE'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;method_score=1&nbsp;!&nbsp;not&nbsp;used&nbsp;yet</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&amp;file</span></code></div>
+<div class="line">``&nbsp;&nbsp;input_dir&nbsp;=&nbsp;‘input’``</div>
+<div class="line">``&nbsp;&nbsp;output_pdf&nbsp;=&nbsp;‘benchmark’``</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">/</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&amp;benchmark</span></code></div>
+<div class="line">``&nbsp;&nbsp;list_var=’QN’&nbsp;‘QS’&nbsp;‘QE’&nbsp;‘QH’``</div>
+<div class="line">``&nbsp;&nbsp;list_metric=’MAE’&nbsp;‘MBE’&nbsp;‘RMSE’``</div>
+<div class="line">``&nbsp;&nbsp;method_score=1&nbsp;!&nbsp;not&nbsp;used&nbsp;yet``</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">/</span></code></div>
 </div>
 </td>
 </tr>
@@ -3636,23 +3644,23 @@ tutorials</a>.</p>
 </tr>
 <tr class="row-odd"><td>Anthropogenic heat</td>
 <td>Processor</td>
-<td><cite>GQ:sub:`F</cite> &lt;UMEP_Manual/_Tutorials/GQF&gt;`__</td>
+<td><code class="xref any docutils literal notranslate"><span class="pre">GQ:sub:`F</span></code> &lt;UMEP_Manual/_Tutorials/GQF&gt;`__</td>
 <td>Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>Anthropogenic heat</td>
 <td>Processor</td>
-<td><cite>LQ:sub:`F</cite> &lt;UMEP_Manual/_Tutorials/LQF&gt;`__</td>
+<td><code class="xref any docutils literal notranslate"><span class="pre">LQ:sub:`F</span></code> &lt;UMEP_Manual/_Tutorials/LQF&gt;`__</td>
 <td>Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -3717,7 +3725,9 @@ recommended.</li>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -3730,7 +3740,7 @@ recommended.</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -3749,7 +3759,6 @@ recommended.</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -3767,13 +3776,14 @@ recommended.</li>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

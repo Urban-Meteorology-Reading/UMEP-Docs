@@ -25,17 +25,26 @@
   
 
   
+  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="UMEP Manual  documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -100,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">UMEP Manual</a>
@@ -108,10 +117,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -185,7 +193,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li>Start <strong>QGIS</strong></li>
-<li>Go to: <em>Plugins -&gt; Manage and Install Plugins...</em></li>
+<li>Go to: <em>Plugins -&gt; Manage and Install Plugins…</em></li>
 <li>Search for <strong>UMEP</strong></li>
 <li>Click <strong>Install Plugin</strong> (or <em>Upgrade</em> if already have an older version installed from before).</li>
 </ol>
@@ -198,7 +206,7 @@
 <li>If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -&gt; Manage and Install Plugins -&gt; Installed -&gt; UMEP” and click <strong>Uninstall plugin</strong></li>
 <li>To download UMEP from the repository click this <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/downloads">link</a> and download repository</li>
 <li>Close QGIS if open</li>
-<li>Extract the downloaded zip archive into the folder <strong>C:\Users\\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
+<li>Extract the downloaded zip archive into the folder <strong>C:\Users\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
 <li>Rename the extracted folder to <strong>UMEP</strong></li>
 <li>Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -&gt; Manage and Install Plugins -&gt; All” and search for UMEP. Make sure that you also tick in the box <em>Show also experimental plugins</em> in the “Settings”-tab.</li>
 </ol>
@@ -237,7 +245,7 @@ make sure <em>pillow</em> is installed.</p>
 <li><p class="first">Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use <strong>pip</strong> (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type <em>sudo pip install pandas</em> if you want to install this library. In order to install pip open a terminal and type: <em>sudo easy_install pip</em>. You might need to restart QGIS to get it to work.</p>
 </li>
 <li><p class="first">Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a> to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;/usr/local/lib/python2.7/site-packages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -258,7 +266,7 @@ make sure <em>pillow</em> is installed.</p>
 <blockquote>
 <div><p>This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu.</p>
 <p>You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -270,7 +278,7 @@ make sure <em>pillow</em> is installed.</p>
 <p><strong>PLEASE NOTICE!</strong></p>
 <p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong> library has a version conflict related to the <strong>numpy</strong> version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.
 We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to <strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run the two following commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">netCDF4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">netCDF4</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">netCDF4</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">9</span>
 </pre></div>
 </div>
@@ -297,7 +305,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <blockquote>
 <div><p>to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
 <strong>scipy</strong>. An example of startup.py may look like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;/usr/local/lib/python2.7/site-packages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -313,7 +321,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Meteorological Data: MetPreprocessor<a class="headerlink" href="#meteorological-data-metpreprocessor" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributors/Developers：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
 </pre></div>
 </div>
 </li>
@@ -436,7 +444,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <td>iy</td>
 <td>Year [YYYY]</td>
 <td>Not applicable</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>id</td>
@@ -446,73 +454,73 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <div class="line">(366 if leap year)</div>
 </div>
 </td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>it</td>
 <td>Hour [H]</td>
 <td>0 to 23</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>imin</td>
 <td>Minute [M]</td>
 <td>0 to 59</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>5</td>
 <td>qn</td>
 <td>Net all-wave radiation [W m<sup>-2</sup>]</td>
 <td>-200 to 800</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>qh</td>
 <td>Sensible heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 750</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>7</td>
 <td>qe</td>
 <td>Latent heat flux [W m<sup>-2</sup>]</td>
 <td>-100 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>8</td>
 <td>qs</td>
 <td>Storage heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>9</td>
 <td>qf</td>
 <td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
 <td>0 to 1500</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>10</td>
 <td>U</td>
 <td>Wind speed [m s<sup>-1</sup>]</td>
 <td>0.001 to 60</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>11</td>
 <td>RH</td>
 <td>Relative Humidity [%]</td>
 <td>5 to 100</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>12</td>
 <td>Tair</td>
 <td>Air temperature [°C]</td>
 <td>-30 to 55</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>13</td>
 <td>pres</td>
 <td>Surface barometric pressure [kPa]</td>
 <td>90 to 107</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>14</td>
 <td>rain</td>
@@ -524,7 +532,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <td>kdown</td>
 <td>Incoming shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 1200</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>16</td>
 <td>snow</td>
@@ -536,17 +544,17 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <td>ldown</td>
 <td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
 <td>100 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>18</td>
 <td>fcld</td>
 <td>Cloud fraction [tenths]</td>
 <td>0 to 1</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>19</td>
 <td>wuh</td>
-<td>External water use [m:sup:<cite>3</cite>]</td>
+<td>External water use [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">3</span></code>]</td>
 <td>0 to 10</td>
 <td>(per 5 min) scale based on time step being used</td>
 </tr>
@@ -554,23 +562,23 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <td>xsmd</td>
 <td><div class="first last line-block">
 <div class="line">(Observed) soil moisture</div>
-<div class="line">[m:sup:<cite>3</cite> m<sup>-3</sup> or kg kg<sup>-1</sup>]</div>
+<div class="line">[m:sup:<code class="xref any docutils literal notranslate"><span class="pre">3</span></code> m<sup>-3</sup> or kg kg<sup>-1</sup>]</div>
 </div>
 </td>
 <td>0.01 to 0.5</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>21</td>
 <td>lai</td>
-<td>(Observed) leaf area index [m:sup:<cite>2</cite> m<sup>-2</sup>]</td>
+<td>(Observed) leaf area index [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">2</span></code> m<sup>-2</sup>]</td>
 <td>0 to 15</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>22</td>
 <td>kdiff</td>
 <td>Diffuse shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>23</td>
 <td>kdir</td>
@@ -582,7 +590,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <td>wdir</td>
 <td>Wind direction [°]</td>
 <td>0 to 360</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -619,7 +627,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Meteorological Data: Download data (WATCH)<a class="headerlink" href="#meteorological-data-download-data-watch" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributors：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span> <span class="n">Ting</span> <span class="n">Sun</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span> <span class="n">Ting</span> <span class="n">Sun</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
 <span class="n">Helen</span> <span class="n">Ward</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Lingbo</span> <span class="n">Xue</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Zhe</span> <span class="n">Zhang</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
 <span class="n">Tom</span> <span class="n">Kokkonen</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Helsinki</span><span class="p">),</span> <span class="n">Leena</span> <span class="n">Järvi</span> <span class="p">(</span><span class="n">Helsinki</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
 </pre></div>
@@ -814,7 +822,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Spatial Data: Spatial Data Downloader：：<a class="headerlink" href="#spatial-data-spatial-data-downloader" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Developer：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Univiersity</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Univiersity</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -933,7 +941,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Spatial Data: DSM Generator<a class="headerlink" href="#spatial-data-dsm-generator" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Developer:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Nils</span> <span class="n">Wallenberg</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nils</span> <span class="n">Wallenberg</span>
 </pre></div>
 </div>
 </li>
@@ -1099,7 +1107,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Spatial Data: Tree Generator<a class="headerlink" href="#spatial-data-tree-generator" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Developer:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
 </pre></div>
 </div>
 </li>
@@ -1292,7 +1300,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Spatial Data: LCZ Converter<a class="headerlink" href="#spatial-data-lcz-converter" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributors:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Natalie</span> <span class="n">Theeuwes</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Natalie</span> <span class="n">Theeuwes</span> <span class="p">(</span><span class="n">University</span> <span class="n">of</span> <span class="n">Reading</span><span class="p">),</span>
 <span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
 <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
 </pre></div>
@@ -1310,7 +1318,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <img alt="_images/700px-LCZ_description.png" src="_images/700px-LCZ_description.png" />
 </div>
 <p>The definition of the different local climate zones (LCZ)</p>
-<p>Note: In UMEP we refer to the rural LCZ&#8217;s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
+<p>Note: In UMEP we refer to the rural LCZ’s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
 </li>
 <li><p class="first">Location:
 - The Tree LCZ converter is located at</p>
@@ -1339,7 +1347,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <dt>Dialog box:</dt>
 <dd><ul class="first simple">
 <li>The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.</li>
-<li>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ&#8217;s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</li>
+<li>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ’s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</li>
 <li>When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.</li>
 </ul>
 <div class="figure">
@@ -1550,7 +1558,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <li><dl class="first docutils">
 <dt>Remarks:</dt>
 <dd><ul class="first last">
-<li>Rural LCZ&#8217;s are marked as 101, 102, etc instead of A, B, etc.</li>
+<li>Rural LCZ’s are marked as 101, 102, etc instead of A, B, etc.</li>
 <li>Issues using .sdat rasters has been reported. GeoTiffs are recommended.</li>
 </ul>
 </dd>
@@ -1571,7 +1579,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Urban Geometry: Sky View Factor Calculator<a class="headerlink" href="#urban-geometry-sky-view-factor-calculator" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
 </pre></div>
 </div>
 </li>
@@ -1784,7 +1792,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Urban Geometry: Wall Height and Aspect<a class="headerlink" href="#urban-geometry-wall-height-and-aspect" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -1932,7 +1940,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Urban Land Cover: Land Cover Reclassifier<a class="headerlink" href="#urban-land-cover-land-cover-reclassifier" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -2091,7 +2099,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Urban Land Cover: Land Cover Fraction (Point)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-point" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -2153,8 +2161,8 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <tr class="row-odd"><td>lower</td>
 <td>Specify the input data regarding land cover fraction raster as well as specifying output and for running the calculations.</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -2253,14 +2261,14 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <h2>Urban Land Cover: Land Cover Fraction (Grid)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-grid" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><dl class="first docutils">
 <dt>Introduction:</dt>
 <dd><ul class="first last simple">
-<li>The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference external" href="#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid...</em>).   |</li>
+<li>The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference external" href="#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid…</em>).   |</li>
 </ul>
 </dd>
 </dl>
@@ -2463,7 +2471,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </dl>
 </li>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
 <span class="n">Brian</span> <span class="n">Offerle</span> <span class="p">(</span><span class="n">previously</span> <span class="n">Indiana</span> <span class="n">University</span><span class="p">;</span> <span class="n">Tyrens</span><span class="p">),</span>
 <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span>
 </pre></div>
@@ -2485,25 +2493,25 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Mean building height (z:sub:<cite>H</cite>)</td>
+<tr class="row-even"><td>Mean building height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">H</span></code>)</td>
 <td>Average building height measured from ground level [m].</td>
 </tr>
-<tr class="row-odd"><td>Standard deviation of building heights (z:sub:<cite>Hσ</cite>).</td>
+<tr class="row-odd"><td>Standard deviation of building heights (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">Hσ</span></code>).</td>
 <td>Standard deviation of building heights [m].</td>
 </tr>
-<tr class="row-even"><td>Maximum building height (z:sub:<cite>Hmax</cite>).</td>
+<tr class="row-even"><td>Maximum building height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">Hmax</span></code>).</td>
 <td>Height of the tallest building within the study area [m]</td>
 </tr>
-<tr class="row-odd"><td>Plan area index (λ:sub:<cite>P</cite>)</td>
+<tr class="row-odd"><td>Plan area index (λ:sub:<code class="xref any docutils literal notranslate"><span class="pre">P</span></code>)</td>
 <td>Area of building surfaces relative to the total ground area.</td>
 </tr>
-<tr class="row-even"><td>Frontal area index (λ:sub:<cite>F</cite>)</td>
+<tr class="row-even"><td>Frontal area index (λ:sub:<code class="xref any docutils literal notranslate"><span class="pre">F</span></code>)</td>
 <td>Area of building walls normal to wind direction relative to the total ground area.</td>
 </tr>
-<tr class="row-odd"><td>Roughness length (z:sub:<cite>0</cite>)</td>
+<tr class="row-odd"><td>Roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>)</td>
 <td>A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].</td>
 </tr>
-<tr class="row-even"><td>Zero-plane displacement height (z:sub:<cite>d</cite>)</td>
+<tr class="row-even"><td>Zero-plane displacement height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>)</td>
 <td>Height above ground where the wind speed is 0 m s<sup>-1</sup> as a result of obstacles to the flow such as trees or buildings [m].</td>
 </tr>
 </tbody>
@@ -2722,7 +2730,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </dl>
 </li>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
 <span class="n">Brian</span> <span class="n">Offerle</span> <span class="p">(</span><span class="n">previously</span> <span class="n">Indiana</span> <span class="n">University</span><span class="p">;</span> <span class="n">Tyrens</span><span class="p">),</span>
 <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
@@ -2973,7 +2981,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </dl>
 </li>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Christoph</span> <span class="n">Kent</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
 <span class="n">Kormann</span> <span class="ow">and</span> <span class="n">Mexiner</span> <span class="p">(</span><span class="mi">2001</span><span class="p">),</span> <span class="n">Kljun</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span> <span class="p">(</span><span class="mi">2015</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3120,7 +3128,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <dt>Use Input File on Specify Input Parameters:</dt>
 <dd><ul class="first">
 <li><p class="first">An input text file (.txt or .csv) containing the required inputs to the model (see below) with associated time stamps. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">iy</span> <span class="nb">id</span> <span class="n">it</span> <span class="n">imin</span> <span class="n">z_0_input</span> <span class="n">z_d_input</span> <span class="n">z_m_input</span> <span class="n">sigv</span> <span class="n">Obukhov</span> <span class="n">ustar</span> <span class="nb">dir</span> <span class="n">h</span> <span class="n">por</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iy</span> <span class="nb">id</span> <span class="n">it</span> <span class="n">imin</span> <span class="n">z_0_input</span> <span class="n">z_d_input</span> <span class="n">z_m_input</span> <span class="n">sigv</span> <span class="n">Obukhov</span> <span class="n">ustar</span> <span class="nb">dir</span> <span class="n">h</span> <span class="n">por</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1.1671</span> <span class="mf">8.1697</span> <span class="mf">50.3</span> <span class="mf">1.4805</span> <span class="o">-</span><span class="mf">5457.9644</span> <span class="mf">0.8460</span> <span class="mf">193.8650</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">30</span> <span class="mf">1.4007</span> <span class="mf">9.8050</span> <span class="mf">50.3</span> <span class="mf">0.9616</span> <span class="mf">1081.7260</span> <span class="mf">0.5046</span> <span class="mf">185.5874</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">1.3738</span> <span class="mf">9.6168</span> <span class="mf">50.3</span> <span class="mf">0.9870</span> <span class="mf">854.9901</span> <span class="mf">0.4849</span> <span class="mf">189.0444</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
@@ -3153,10 +3161,10 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Roughness Length for Momentum</td>
-<td>First order estimation of roughness length for momentum (z:sub:<cite>0</cite>) for this wind direction [m].</td>
+<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) for this wind direction [m].</td>
 </tr>
 <tr class="row-odd"><td>Zero Displacement Height for Momentum</td>
-<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<cite>d</cite>) for this wind direction. [m].</td>
+<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) for this wind direction. [m].</td>
 </tr>
 <tr class="row-even"><td>Measurement Height</td>
 <td>Height of sensor above ground level [m].</td>
@@ -3196,7 +3204,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <li><dl class="first docutils">
 <dt>Roughness Calculation Method:</dt>
 <dd><ul class="first simple">
-<li>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<cite>d</cite>) and roughness length (z:sub:<cite>0</cite>) are available.</li>
+<li>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) and roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) are available.</li>
 </ul>
 <table border="1" class="colwidths-given last docutils">
 <colgroup>
@@ -3278,10 +3286,10 @@ weighted as a percentage of the pixel of maximum contribution.</p>
 <li><p class="first">A text file which specifies the time dimensions of measurements, the
 initial aerodynamic and meteorological parameters which were input to
 the model and finally the weighted geometry in the footprint and thus
-the newly calculated roughness length (z:sub:<cite>0</cite>) and displacement
-height (z:sub:<cite>d</cite>) according to the user specified method. This is of
+the newly calculated roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) and displacement
+height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) according to the user specified method. This is of
 the form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>“iy id it imin z_0_input z_d_input z_m_input sigv Obukhov
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“iy id it imin z_0_input z_d_input z_m_input sigv Obukhov
  ustar dir fai pai zH zMax zSdev zd z0”
 
  [Header: year, day of year, hour, minutes of averaging period,
@@ -3379,7 +3387,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>SUEWS Prepare<a class="headerlink" href="#suews-prepare" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span>
 <span class="n">Frans</span> <span class="n">Olofson</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3529,7 +3537,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <li><p class="first">to start the process of generating the output</p>
 </li>
 <li><p class="first">to close the main window.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Note</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">folder</span> <span class="n">selected</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">files</span> <span class="n">already</span> <span class="n">contains</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Note</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">folder</span> <span class="n">selected</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">files</span> <span class="n">already</span> <span class="n">contains</span>
 <span class="n">files</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">SUEWS</span> <span class="n">Prepare</span> <span class="n">these</span> <span class="n">files</span> <span class="n">will</span> <span class="n">be</span> <span class="o">**</span><span class="n">overwritten</span><span class="o">**</span>
 </pre></div>
 </div>
@@ -3643,7 +3651,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <dt>Land use fraction (optional) ：</dt>
 <dd><ul class="first last">
 <li><p class="first">his data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="n">fLUp1</span> <span class="n">fLUp2</span> <span class="n">fLUp3</span> <span class="n">Code_LUpaved1</span> <span class="n">Code_LUpaved2</span> <span class="n">Code_LUpaved3</span> <span class="n">fLUb1</span> <span class="n">fLUb2</span> <span class="n">fLUb3</span> <span class="n">fLUb4</span> <span class="n">fLUb5</span> <span class="n">Code_LUbuilding1</span> <span class="n">Code_LUbuilding2</span> <span class="n">Code_LUbuilding3</span> <span class="n">Code_LUbuilding4</span> <span class="n">Code_LUbuilding5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="n">fLUp1</span> <span class="n">fLUp2</span> <span class="n">fLUp3</span> <span class="n">Code_LUpaved1</span> <span class="n">Code_LUpaved2</span> <span class="n">Code_LUpaved3</span> <span class="n">fLUb1</span> <span class="n">fLUb2</span> <span class="n">fLUb3</span> <span class="n">fLUb4</span> <span class="n">fLUb5</span> <span class="n">Code_LUbuilding1</span> <span class="n">Code_LUbuilding2</span> <span class="n">Code_LUbuilding3</span> <span class="n">Code_LUbuilding4</span> <span class="n">Code_LUbuilding5</span>
 <span class="mi">1</span> <span class="mi">0</span> <span class="mf">0.62</span> <span class="mf">0.38</span> <span class="mi">806</span> <span class="mi">807</span> <span class="mi">808</span> <span class="mf">0.90</span> <span class="mf">0.10</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">801</span> <span class="mi">802</span> <span class="mi">803</span> <span class="mi">804</span> <span class="mi">805</span>
 <span class="o">...</span>
 </pre></div>
@@ -3732,7 +3740,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Outdoor Thermal Comfort: SOLWEIG<a class="headerlink" href="#outdoor-thermal-comfort-solweig" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span>
 </pre></div>
 </div>
 </li>
@@ -4044,7 +4052,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Outdoor Thermal Comfort: ExtremeFinder<a class="headerlink" href="#outdoor-thermal-comfort-extremefinder" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Bei</span> <span class="n">Huang</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bei</span> <span class="n">Huang</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -4060,7 +4068,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <dt>Data must be provided by the user, and can be:</dt>
 <dd><ul class="first last simple">
 <li>Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)</li>
-<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>&#8216;time</strong>&#8216; dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
+<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>‘time</strong>’ dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
 <li>Text (.txt) file, daily T<sub>max</sub>, T<sub>avg</sub> or T<sub>min</sub> (<a class="reference external" href="http://www.urban-climate.net/watch_data/data%20set%20sample.txt">file sample</a>: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.</li>
 </ul>
 </dd>
@@ -4192,7 +4200,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Urban Energy Balance: GQ<sub>F</sub><a class="headerlink" href="#urban-energy-balance-gqf" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Izzy</span> <span class="n">Capel</span> <span class="n">Timms</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Izzy</span> <span class="n">Capel</span> <span class="n">Timms</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -4347,7 +4355,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Urban Energy Balance: LQ<sub>F</sub><a class="headerlink" href="#urban-energy-balance-lqf" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Izzy</span> <span class="n">Capel</span><span class="o">-</span><span class="n">Timms</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Andy</span> <span class="n">Gabey</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Izzy</span> <span class="n">Capel</span><span class="o">-</span><span class="n">Timms</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
 <span class="n">Sue</span> <span class="n">Grimmond</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Sam</span> <span class="n">Jackson</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span>
 <span class="n">XY</span> <span class="n">Ao</span> <span class="p">(</span><span class="n">SIMS</span><span class="p">),</span> <span class="n">Bei</span> <span class="n">Huang</span><span class="p">(</span><span class="n">Tsinghua</span> <span class="n">Unviersity</span><span class="p">)</span>
 </pre></div>
@@ -4378,7 +4386,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Urban Energy Balance: Urban Energy Balance (SUEWS, simple)<a class="headerlink" href="#urban-energy-balance-urban-energy-balance-suews-simple" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
 </pre></div>
 </div>
 </li>
@@ -4641,7 +4649,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)<a class="headerlink" href="#urban-energy-balance-urban-energy-balance-suews-bluews-advanced" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -4727,7 +4735,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Solar Radiation: Daily Shadow Pattern<a class="headerlink" href="#solar-radiation-daily-shadow-pattern" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -4967,7 +4975,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Solar Radiation: Solar Energy on Building Envelopes (SEBE)<a class="headerlink" href="#solar-radiation-solar-energy-on-building-envelopes-sebe" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Dag</span> <span class="n">Wäsrberg</span> <span class="p">(</span><span class="n">Tyréns</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">),</span> <span class="n">Dag</span> <span class="n">Wäsrberg</span> <span class="p">(</span><span class="n">Tyréns</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -5246,7 +5254,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Solar Radiation: SEBE (Visualisation)<a class="headerlink" href="#solar-radiation-sebe-visualisation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Niklas</span> <span class="n">Krave</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -5352,7 +5360,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Outdoor Thermal Comfort: SOLWEIG Analyzer<a class="headerlink" href="#outdoor-thermal-comfort-solweig-analyzer" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -5490,13 +5498,13 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <td>Tick this in to get the pixelwise minimum for the selected variable.</td>
 </tr>
 <tr class="row-odd"><td>Average of specific time of day</td>
-<td>The average of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The average of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-even"><td>Maximum of specific time of day</td>
-<td>The maximum of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The maximum of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-odd"><td>Minimum of specific time of day</td>
-<td>The minimum of the selected time of day for the variable selected is generated. If &#8216;Not Specified&#8217; is highlighted, no grid will be generated.</td>
+<td>The minimum of the selected time of day for the variable selected is generated. If ‘Not Specified’ is highlighted, no grid will be generated.</td>
 </tr>
 <tr class="row-even"><td>T<sub>mrt</sub>: Percent of time above threshold (degC)</td>
 <td>If T<sub>mrt</sub> is the selected variable, this box become active and calculates the percent of time that T<sub>mrt</sub> for each is above the threshold specified to the right.</td>
@@ -5530,7 +5538,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Urban Energy Balance: SUEWS Analyser<a class="headerlink" href="#urban-energy-balance-suews-analyser" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fredrik</span> <span class="n">Lindberg</span> <span class="p">(</span><span class="n">Gothenburg</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -5732,7 +5740,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 <h2>Benchmark System<a class="headerlink" href="#benchmark-system" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Contributor:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Ting</span> <span class="n">Sun</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ting</span> <span class="n">Sun</span> <span class="p">(</span><span class="n">Reading</span><span class="p">),</span> <span class="n">Sue</span> <span class="n">Grimmond</span>
 </pre></div>
 </div>
 </li>
@@ -5814,7 +5822,7 @@ Figure 2: Required file organisation by BSS.</li>
 <li><p class="first">One tip is about the variable list (i.e., var_list): if one non-string value is set (e.g., 123, 3.2, etc.), all valid variables will be included in the benchmarking.</p>
 </li>
 <li><p class="first">A sample namelist is as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;file
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;file
   input_dir = &#39;input&#39;
   output_pdf = &#39;benchmark&#39;
 /
@@ -5987,23 +5995,23 @@ tutorials</a>.</p>
 </tr>
 <tr class="row-odd"><td>Anthropogenic heat</td>
 <td>Processor</td>
-<td><cite>GQ:sub:`F</cite> &lt;UMEP_Manual/_Tutorials/GQF&gt;`__</td>
+<td><code class="xref any docutils literal notranslate"><span class="pre">GQ:sub:`F</span></code> &lt;UMEP_Manual/_Tutorials/GQF&gt;`__</td>
 <td>Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>Anthropogenic heat</td>
 <td>Processor</td>
-<td><cite>LQ:sub:`F</cite> &lt;UMEP_Manual/_Tutorials/LQF&gt;`__</td>
+<td><code class="xref any docutils literal notranslate"><span class="pre">LQ:sub:`F</span></code> &lt;UMEP_Manual/_Tutorials/LQF&gt;`__</td>
 <td>Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -6086,11 +6094,11 @@ recommended.</li>
 </tr>
 <tr class="row-odd"><td>CRS</td>
 <td>Coordinate Reference System</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>CRU</td>
 <td>Climatic Research Unit</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>DEM</td>
 <td>Digtial Elevation Model</td>
@@ -6106,35 +6114,35 @@ recommended.</li>
 </tr>
 <tr class="row-even"><td>ECMWF</td>
 <td>European Centre for Medium-Range Weather Forecasts</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>GIS</td>
 <td>Geographical Information System</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>LCZ</td>
 <td>Local Climate Zone</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>LST</td>
 <td>Local Standard Time</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>LTR</td>
 <td>Long term release</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>LUCY</td>
 <td>Large scale Urban Consumption of energy model</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>m agl</td>
 <td>metres above ground level</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>m asl</td>
 <td>metres above sea level</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>OTF</td>
 <td>On the Fly</td>
@@ -6142,23 +6150,23 @@ recommended.</li>
 </tr>
 <tr class="row-odd"><td>Q<sub>F</sub></td>
 <td>Anthropogenic heat flux</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>SEBE</td>
 <td>Solar Energy on Building Envelopes</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>SOLWEIG</td>
 <td>Solar and longwave environmental irradiance geometry model</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>SUEWS</td>
 <td><a class="reference external" href="http://urban-climate.net/umep/SUEWS">http://urban-climate.net/umep/SUEWS</a> | Surface urban energy and water balance scheme</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>SVF</td>
 <td>Sky View Factor</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>TDSM</td>
 <td>Trunk zone Digital Surface Model</td>
@@ -6166,19 +6174,19 @@ recommended.</li>
 </tr>
 <tr class="row-odd"><td>UMEP</td>
 <td>Urban Multi-scale Environmental Predictor</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>WFDEI</td>
 <td>WATCH Forcing Data methodology applied to ERA-Interim data</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>WUDAPT</td>
 <td>The World Urban Database and Access Portal Tools</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -6186,7 +6194,9 @@ recommended.</li>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -6199,7 +6209,7 @@ recommended.</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -6218,7 +6228,6 @@ recommended.</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -6236,13 +6245,14 @@ recommended.</li>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

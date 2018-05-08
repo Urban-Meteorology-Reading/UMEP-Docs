@@ -68,7 +68,23 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
+# default interpretation of `role` markups
+default_role = 'any'
 
+# some text replacement defintions
+rst_prolog = """
+.. |mm^-1| replace:: mm\ :sup:`-1`
+.. |m^-1| replace:: m\ :sup:`-1`
+.. |m^-2| replace:: m\ :sup:`-2`
+.. |m^-3| replace:: m\ :sup:`-3`
+.. |m^3| replace:: m\ :sup:`3`
+.. |s^-1| replace:: s\ :sup:`-1`
+.. |kg^-1| replace:: kg\ :sup:`-1`
+.. |K^-1| replace:: K\ :sup:`-1`
+.. |W^-1| replace:: W\ :sup:`-1`
+.. |h^-1| replace:: h\ :sup:`-1`
+.. |QF| replace:: Q\ :sub:`F`
+"""
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -153,3 +169,8 @@ texinfo_documents = [
      author, 'UMEPManual', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# Fix for scrolling tables in the RTD-theme
+# https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
+def setup(app):
+    app.add_stylesheet('theme_overrides.css')
