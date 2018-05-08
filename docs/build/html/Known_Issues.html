@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; UMEP Manual  documentation</title>
+  <title>9. Known Issues &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -29,7 +29,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="FAQ.html" /> 
+    <link rel="next" title="10. FAQ (Frequently Asked Questions)" href="FAQ.html" />
+    <link rel="prev" title="8. How to Contribute" href="How_to_Contribute.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -78,10 +79,18 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Getting_Started.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pre-Processor.html">3. Pre-Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Processor.html">4. Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Post-Processor.html">5. Post-Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">7. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="How_to_Contribute.html">8. How to Contribute</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">11. Abbreviations</a></li>
 </ul>
 
             
@@ -127,7 +136,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>9. Known Issues</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -146,7 +155,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="known-issues"></span>
+  <div class="section" id="known-issues">
+<span id="id1"></span><h1>9. Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>QGIS (27/September/2017) <strong>had</strong> an issue using gdal which causes
+QGIS to create a minidump when the software is closed. This issue has
+now been fixed (issue
+#<a class="reference external" href="https://hub.qgis.org/issues/13061">13061</a>). Other issues found
+should be reported to our
+<a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/issues">repository</a>.</li>
+<li>UMEP plugin is not compatible with matplotlib versions 2.x. Use
+instead 1.5.x. (23/August/2017)</li>
+<li>Mac users might have issue pointing at non-existing directories. Work
+around is to manually create directories before starting any
+UMEP-process.</li>
+<li>Only use standard English alpha-numeric characters (e.g. no space, å,
+% etc.)</li>
+<li>Issues has been reported using .sdat rasters. GeoTiff are
+recommended.</li>
+</ul>
+</div>
+
 
            </div>
            
@@ -155,8 +184,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="FAQ.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="FAQ.html" class="btn btn-neutral float-right" title="10. FAQ (Frequently Asked Questions)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="How_to_Contribute.html" class="btn btn-neutral" title="8. How to Contribute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
