@@ -28,95 +28,113 @@ Outdoor Thermal Comfort: SOLWEIG
       .. figure:: /images/SOLWEIG.png
 
 * Dialog sections ：
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Spatial data                | Spatial input data is specified                                                              |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Meteorological data         | Meteorological input data is specified, as a continuous file or specific momentary values.   |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Environmental parameters    | Possibilities to alter emissiveties and albedos for the different urban surfaces.            |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Optional settings           | Here additional setting such as including POIs (Points of Interest) is found.                |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Human exposure parameters   | Settings for calculating mean radiant temperature.                                           |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-      | Output maps                 | Options to choose the geotiffs to be saved for each iteration.                               |
-      +-----------------------------+----------------------------------------------------------------------------------------------+
-* Spatial data ：
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
 
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Building and Ground DSM                          | A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of Sun position.                                                                                                                               |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Vegetation Canopy DSM                            | A DSM consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.                                                                                                                                                 |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Vegetation Trunk Zone DSM                        | A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.                                                                                                                            |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Use vegetation scheme                            | Tick this box if you want to include vegetation (trees and bushes) in the calculations.                                                                                                                                                                                       |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Trunk Zone DSM Exist                             | Tick this in if a trunk zone DSM already exist.                                                                                                                                                                                                                               |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Transmissivity of Light Through Vegetation (%)   | Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).                                                                                                                                                  |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Percent of Canopy Height                         | If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.                                                                                                                                  |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Save generated Trunk zone DSM                    | Tick this in if you want to save your TDSM that is generated.                                                                                                                                                                                                                 |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Use land cover scheme                            | Available since v2015a. Land cover grid should be in the UMEP standard format **except** for the two tree classes (deciduous and conifer) as the land cover grid should represent what is on the ground surface. UMEP land cover grid can be prepared in the Pre-processor.   |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Use land cover grid to produce building grid     | Tick this in if the building grid should be created from the land cover grid. Otherwise, a DEM including only ground heights must be added. This will then be used to derive a building grid together with the ground and building DSM.                                       |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Save generated building grid                     | Tick this in if you want to save the boolean building grid that is generated.                                                                                                                                                                                                 |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SkyViewFactor grids                              | The SOLWEIG model make use of SVFs to calculate T\ :sub:`mrt`. The zip-file needed can be created with the SkyViewFactor calculator found in the UMEP Pre-processor.                                                                                                          |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Wall height raster                               | The SOLWEIG model make use of wall height raster to calculate T\ :sub:`mrt`. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor                                                                                                   |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Wall aspect raster                               | The SOLWEIG model make use of wall height raster to calculate T\ :sub:`mrt`. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor.                                                                                                  |
-+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   * - Spatial data
+     - Spatial input data is specified
+   * - Meteorological data
+     - Meteorological input data is specified, as a continuous file or specific momentary values.
+   * - Environmental parameters
+     - Possibilities to alter emissiveties and albedos for the different urban surfaces.
+   * - Optional settings
+     - Here additional setting such as including POIs (Points of Interest) is found.
+   * - Human exposure parameters
+     - Settings for calculating mean radiant temperature.
+   * - Output maps
+     - Options to choose the geotiffs to be saved for each iteration.
+
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Building and Ground DSM
+     - A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of Sun position.
+   * - Vegetation Canopy DSM
+     - A DSM consisting of pixels with vegetation heights above ground. Pixels where no vegetation is present should be set to zero.
+   * - Vegetation Trunk Zone DSM
+     - A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground. Pixels where no vegetation is present should be set to zero.
+   * - Use vegetation scheme
+     - Tick this box if you want to include vegetation (trees and bushes) in the calculations.
+   * - Trunk Zone DSM Exist
+     - Tick this in if a trunk zone DSM already exist.
+   * - Transmissivity of Light Through Vegetation (%)
+     - Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).
+   * - Percent of Canopy Height
+     - If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.
+   * - Save generated Trunk zone DSM
+     - Tick this in if you want to save your TDSM that is generated.
+   * - Use land cover scheme
+     - Available since v2015a. Land cover grid should be in the UMEP standard format **except** for the two tree classes (deciduous and conifer) as the land cover grid should represent what is on the ground surface. UMEP land cover grid can be prepared in the Pre-processor.
+   * - Use land cover grid to produce building grid
+     - Tick this in if the building grid should be created from the land cover grid. Otherwise, a DEM including only ground heights must be added. This will then be used to derive a building grid together with the ground and building DSM.
+   * - Save generated building grid
+     - Tick this in if you want to save the boolean building grid that is generated.
+   * - SkyViewFactor grids
+     - The SOLWEIG model make use of SVFs to calculate T\ :sub:`mrt`. The zip-file needed can be created with the SkyViewFactor calculator found in the UMEP Pre-processor.
+   * - Wall height raster
+     - The SOLWEIG model make use of wall height raster to calculate T\ :sub:`mrt`. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor
+   * - Wall aspect raster
+     - The SOLWEIG model make use of wall height raster to calculate T\ :sub:`mrt`. This can be calculated using the Wall height and aspect plugin found in the UMEP Pre-processor.
 
 *  Meteorological data：
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Use continuous meteorological dataset                          | Tick this in if a time series of data should be used. The specific format could be prepared in the UMEP Pre-processor.                                                                                                                                         |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Estimate diffuse and direct components from global radiation   | Tick this box if diffuse and direct shortwave radiation is unavailable. The Reindl et al. (1990) model is used to calculate diffuse radiation. Direct radiation perpendicular to the solar beam should be considered.                                          |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Settings for one iteration.                                    | If a meteorological dataset is not used there is a possibility to run the model for one iteration using the calendar and spin-boxes to set meteorological variables present here. The default values are for a clear Summer day at 1230 in Göteborg, Sweden.   |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| UTC offset                                                     | Time zone needs to be specified. Positive numbers moving east (e.g. Stockholm UTC +1).                                                                                                                                                                         |
-+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Use continuous meteorological dataset
+     - Tick this in if a time series of data should be used. The specific format could be prepared in the UMEP Pre-processor.
+   * - Estimate diffuse and direct components from global radiation
+     - Tick this box if diffuse and direct shortwave radiation is unavailable. The Reindl et al. (1990) model is used to calculate diffuse radiation. Direct radiation perpendicular to the solar beam should be considered.
+   * - Settings for one iteration.
+     - If a meteorological dataset is not used there is a possibility to run the model for one iteration using the calendar and spin-boxes to set meteorological variables present here. The default values are for a clear Summer day at 1230 in Göteborg, Sweden.
+   * - UTC offset
+     - Time zone needs to be specified. Positive numbers moving east (e.g. Stockholm UTC +1).
 
 
 *  Optional settings：
 
-+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Include POIs                                               | By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <http://www.urban-climate.net/umep/SOLWEIG>`__ for more information.   |
-+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Adjust sky-emissivity according to Jonsson et al. (2006)   | Tick this box to include adjustment (0.04) of sky emissivity which was present in the earlier versions of the SOLWEIG model (not recommended).                                                                                                                                                                                               |
-+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Consider human as cylinder instead of box                  | Tick this box to consider man as a cylinder instead of a box according to Holmer at al. (2015).                                                                                                                                                                                                                                              |
-+------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Include POIs
+     - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <http://www.urban-climate.net/umep/SOLWEIG>`__ for more information.
+   * - Adjust sky-emissivity according to Jonsson et al. (2006)
+     - Tick this box to include adjustment (0.04) of sky emissivity which was present in the earlier versions of the SOLWEIG model (not recommended).
+   * - Consider human as cylinder instead of box
+     - Tick this box to consider man as a cylinder instead of a box according to Holmer at al. (2015).
 
 * Environmental parameters：
       - Emissivity (ground)||Emissivity of ground. Not used if land cover scheme is activated.
-      +-----------------------+-----------------------------------------------------------------------+
-      | Albedo (buildings)    | Albedo of building walls and roofs.                                   |
-      +-----------------------+-----------------------------------------------------------------------+
-      | Albedo (ground)       | Albedo of ground surfaces. Not used if land cover scheme is active.   |
-      +-----------------------+-----------------------------------------------------------------------+
-      | Emissivity (walls)    | Emissivity of building walls and roofs.                               |
-      +-----------------------+-----------------------------------------------------------------------+
-      | Emissivity (ground)   | Emissivity of ground. Not used if land cover scheme is activated.     |
-      +-----------------------+-----------------------------------------------------------------------+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Albedo (buildings)
+     - Albedo of building walls and roofs.
+   * - Albedo (ground)
+     - Albedo of ground surfaces. Not used if land cover scheme is active.
+   * - Emissivity (walls)
+     - Emissivity of building walls and roofs.
+   * - Emissivity (ground)
+     - Emissivity of ground. Not used if land cover scheme is activated.
 
 * Human exposure parameters ：
       -  Posture of the human body||Choose between standing (default) and sitting.
 
-      +-------------------------------------+-------------------------------------------------------------+
-      | Absorption of shortwave radiation   | Amount of shortwave radiation that the human body absorb.   |
-      +-------------------------------------+-------------------------------------------------------------+
-      | Absorption of longwave radiation    | Amount of longwave radiation that the human body absorb.    |
-      +-------------------------------------+-------------------------------------------------------------+
-      | Posture of the human body           | Choose between standing (default) and sitting.              |
-      +-------------------------------------+-------------------------------------------------------------+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Absorption of shortwave radiation
+     - Amount of shortwave radiation that the human body absorb.
+   * - Absorption of longwave radiation
+     - Amount of longwave radiation that the human body absorb.
+   * - Posture of the human body
+     - Choose between standing (default) and sitting.
 
 
 * Output maps:
@@ -266,24 +284,27 @@ Urban Energy Balance: GQ\ :sub:`F`
           - The layer displaying model output also contains the other contributions to QF (e.g. car transport). These can be visualised using standard QGIS methods of styling the layer according to the selected component, or inspecting the layer attributes table.
       - **CSV files**
           -  A CSV file is generated for each of the 19 contributions to QF (e.g. car travel, wastewater heating) and the total QF. Each file contains a column per output area (shown in the example map) and a row per time step. These are labelled accordingly. The filenames are abbreviated where necessary for compatibility, with the following convention used:
-          +-----------------+--------------------------------------------+
-          |   El            | Electricity                                |
-          +-----------------+--------------------------------------------+
-          |   Gas           | Gas                                        |
-          +-----------------+--------------------------------------------+
-          |   Dm            | Domestic use                               |
-          +-----------------+--------------------------------------------+
-          |   Id            | Industrial use                             |
-          +-----------------+--------------------------------------------+
-          |   Tspt          | Transport                                  |
-          +-----------------+--------------------------------------------+
-          |   Unre          | Unrestricted electricity (non-Economy 7)   |
-          +-----------------+--------------------------------------------+
-          |   Eco7          | Economy 7 electricity                      |
-          +-----------------+--------------------------------------------+
-          |    Everything   | Grand total QF across all sources          |
-          +-----------------+--------------------------------------------+
-      - **Python data object** (For internal use)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - El
+     - Electricity
+   * - Gas
+     - Gas
+   * - Dm
+     - Domestic use
+   * - Id
+     - Industrial use
+   * - Tspt
+     - Transport
+   * - Unre
+     - Unrestricted electricity (non-Economy 7)
+   * - Eco7
+     - Economy 7 electricity
+   * - Everything
+     - Grand total QF across all sources
+
           -  A “pickled” Python data object containing the results is also saved in the local temporary folder for future use with other UMEP components.
 
 *  References  ：

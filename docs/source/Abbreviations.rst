@@ -55,7 +55,7 @@ Abbreviations
    * - OTF
      - On the Fly
      - Used in QGIS when different geodatasets with different coordinate systems are projected in the same automatically.
-   * - Q\:sub:`F`
+   * - Q\ :sub:`F`
      - Anthropogenic heat flux
      -
    * - SEBE

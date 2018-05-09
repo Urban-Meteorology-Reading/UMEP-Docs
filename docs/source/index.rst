@@ -101,12 +101,13 @@ UMEP.
    :maxdepth: 2
    :numbered:
    :hidden:
+   :glob:
 
    Introduction
    Getting_Started
-   Pre-Processor
-   Processor
-   Post-Processor
+   pre-processor/*
+   processor/*
+   post-processor/*
    People_Involved_&_Acknowledgements
    Tutorials
    How_to_Contribute
