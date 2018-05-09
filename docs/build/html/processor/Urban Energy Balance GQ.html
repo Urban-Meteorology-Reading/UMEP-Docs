@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.5. Urban Energy Balance: GQF &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.6. Urban Energy Balance: LQF" href="Urban Energy Balance LQ.html" />
+    <link rel="prev" title="4.4. Solar Radiation: Solar Energy on Building Envelopes (SEBE)" href="Solar Radiation Solar Energy on Building Envelopes (SEBE).html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pre-processor/Pre-Processor.html">3. Pre-Processor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Processor.html">4. Processor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Outdoor Thermal Comfort ExtremeFinder.html">4.1. Outdoor Thermal Comfort: ExtremeFinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Outdoor Thermal Comfort SOLWEIG.html">4.2. Outdoor Thermal Comfort: SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Solar Radiation Daily Shadow Pattern.html">4.3. Solar Radiation: Daily Shadow Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Solar Radiation Solar Energy on Building Envelopes (SEBE).html">4.4. Solar Radiation: Solar Energy on Building Envelopes (SEBE)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.5. Urban Energy Balance: GQ<sub>F</sub></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance LQ.html">4.6. Urban Energy Balance: LQ<sub>F</sub></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance Urban Energy Balance (SUEWS, simple).html">4.7. Urban Energy Balance: Urban Energy Balance (SUEWS, simple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance Urban Energy Balance (SUEWS.BLUEWS, advanced).html">4.8. Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Processor.html">4. Processor</a> &raquo;</li>
+        
+      <li>4.5. Urban Energy Balance: GQ<sub>F</sub></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/processor/Urban Energy Balance GQ.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urban-energy-balance-gqf">
+<h1>4.5. Urban Energy Balance: GQ<sub>F</sub><a class="headerlink" href="#urban-energy-balance-gqf" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Contributor:</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Andy Gabey</td>
+<td>Reading</td>
+</tr>
+<tr class="row-even"><td>Izzy Capel Timms</td>
+<td>Reading</td>
+</tr>
+<tr class="row-odd"><td>Sue Grimmond</td>
+<td>Reading</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>How to Cite:</dt>
+<dd><ul class="first last simple">
+<li>Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux: advisable spatial resolutions when input data are scarce Theoretical and Applied Climatology <a class="reference external" href="https://doi.org/10.1007/s00704-018-2367-y">https://doi.org/10.1007/s00704-018-2367-y</a></li>
+<li>Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE Theeuwes, L Järvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D Wästberg, L Xue, Z Zhang 2018: Urban multiscale environmental predictor (UMEP) - An integrated tool for city-based climate services Environmental Modelling and Software 99, 70–87 10.1016/j.envsoft.2017.09.020</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><p class="first last"><a class="reference external" href="http://urban-climate.net/umep/GQF_Manual">See separate manual</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Location:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>The GreaterQF plugin is located at</dt>
+<dd><ul class="first simple">
+<li>UMEP</li>
+</ul>
+<blockquote class="last">
+<div><ul class="simple">
+<li>Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Urban Energy Balance</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>GreaterQF</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box：</dt>
+<dd><div class="first last figure">
+<img alt="../_images/GQF.png" src="../_images/GQF.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog sections：</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>The model run is configured using the dialog box:</dt>
+<dd><ul class="first last">
+<li><em>Start date</em> and <em>end date</em>: The first and final dates for which the model should be run.</li>
+<li><em>Output areas</em>: Two options are currently available: Local authority areas and 1km grid. These select the spatial units of the model calculations.</li>
+<li><em>Include QF components</em>: The components of anthropogenic heat flux for the model to include in calculations.</li>
+<li><em>Output path</em>: A directory that houses model outputs.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Model outputs ；</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><strong>Example map</strong></dt>
+<dd><ul class="first last">
+<li>The total anthropogenic heat flux for the first time step is displayed in QGIS to demonstrate model output and the output areas. In order for these areas to be displayed correctly, the coordinate reference system must be selected. The QGIS “Select CRS” screen will appear, and EPSG 27700 (British National Grid) must be chosen.</li>
+<li>The layer displaying model output also contains the other contributions to QF (e.g. car transport). These can be visualised using standard QGIS methods of styling the layer according to the selected component, or inspecting the layer attributes table.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>CSV files</strong></dt>
+<dd><ul class="first last">
+<li>A CSV file is generated for each of the 19 contributions to QF (e.g. car travel, wastewater heating) and the total QF. Each file contains a column per output area (shown in the example map) and a row per time step. These are labelled accordingly. The filenames are abbreviated where necessary for compatibility, with the following convention used:</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>El</td>
+<td>Electricity</td>
+</tr>
+<tr class="row-even"><td>Gas</td>
+<td>Gas</td>
+</tr>
+<tr class="row-odd"><td>Dm</td>
+<td>Domestic use</td>
+</tr>
+<tr class="row-even"><td>Id</td>
+<td>Industrial use</td>
+</tr>
+<tr class="row-odd"><td>Tspt</td>
+<td>Transport</td>
+</tr>
+<tr class="row-even"><td>Unre</td>
+<td>Unrestricted electricity (non-Economy 7)</td>
+</tr>
+<tr class="row-odd"><td>Eco7</td>
+<td>Economy 7 electricity</td>
+</tr>
+<tr class="row-even"><td>Everything</td>
+<td><p class="first">Grand total QF across all sources</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>A “pickled” Python data object containing the results is also saved in the local temporary folder for future use with other UMEP components.</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>References  ：</dt>
+<dd><ul class="first last">
+<li>Iamarino M, Beevers S &amp; Grimmond CSB (2012) High-resolution (space, time) anthropogenic heat emissions: London 1970-2025 <a class="reference external" href="http://doi.wiley.com/10.1002/joc.2390">International J. of Climatology 32, 11, 1754-1767</a></li>
+<li>Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux: advisable spatial resolutions when input data are scarce Theoretical and Applied Climatology <a class="reference external" href="https://doi.org/10.1007/s00704-018-2367-y">https://doi.org/10.1007/s00704-018-2367-y</a></li>
+<li>Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE Theeuwes, L Järvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D Wästberg, L Xue, Z Zhang 2018: Urban multiscale environmental predictor (UMEP) - An integrated tool for city-based climate services Environmental Modelling and Software 99, 70–87 10.1016/j.envsoft.2017.09.020</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Urban Energy Balance LQ.html" class="btn btn-neutral float-right" title="4.6. Urban Energy Balance: LQF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Solar Radiation Solar Energy on Building Envelopes (SEBE).html" class="btn btn-neutral" title="4.4. Solar Radiation: Solar Energy on Building Envelopes (SEBE)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

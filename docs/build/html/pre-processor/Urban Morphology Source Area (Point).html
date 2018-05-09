@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.15. Urban Morphology: Source Area (Point) &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Processor" href="../processor/Processor.html" />
+    <link rel="prev" title="3.14. Urban Morphology: Morphometric Calculator (Point)" href="Urban Morphology Morphometric Calculator (Point).html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Pre-Processor.html">3. Pre-Processor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data Download data (WATCH).html">3.1. Meteorological Data: Download data (WATCH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data MetPreprocessor.html">3.2. Meteorological Data: MetPreprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SUEWS Prepare.html">3.3. SUEWS Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data DSM Generator.html">3.4. Spatial Data: DSM Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data LCZ Converter.html">3.5. Spatial Data: LCZ Converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Spatial Data Downloader.html">3.6. Spatial Data: Spatial Data Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Tree Generator.html">3.7. Spatial Data: Tree Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Sky View Factor Calculator.html">3.8. Urban Geometry: Sky View Factor Calculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Wall Height and Aspect.html">3.9. Urban Geometry: Wall Height and Aspect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Grid).html">3.10. Urban Land Cover: Land Cover Fraction (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Point).html">3.11. Urban Land Cover: Land Cover Fraction (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html">3.12. Urban Land Cover: Land Cover Reclassifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Grid).html">3.13. Urban Morphology: Morphometric Calculator (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Point).html">3.14. Urban Morphology: Morphometric Calculator (Point)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.15. Urban Morphology: Source Area (Point)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Pre-Processor.html">3. Pre-Processor</a> &raquo;</li>
+        
+      <li>3.15. Urban Morphology: Source Area (Point)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pre-processor/Urban Morphology Source Area (Point).rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urban-morphology-source-area-point">
+<h1>3.15. Urban Morphology: Source Area (Point)<a class="headerlink" href="#urban-morphology-source-area-point" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>How to Cite：</dt>
+<dd><ul class="first last">
+<li>Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).</li>
+<li>Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z <a class="reference external" href="https://link.springer.com/article/10.1007/s10546-017-0248-z">https://link.springer.com/article/10.1007/s10546-017-0248-z</a>]</li>
+<li>Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering &amp; Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10.1016/j.jweia.2017.07.016">http://dx.doi.org/10.1016/j.jweia.2017.07.016</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Contributor:</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Christoph Kent</td>
+<td>Reading</td>
+</tr>
+<tr class="row-even"><td>Fredrik Lindberg</td>
+<td>Gothenburg</td>
+</tr>
+<tr class="row-odd"><td>Brian Offerle</td>
+<td>previously Indiana University; Tyrens</td>
+</tr>
+<tr class="row-even"><td>Kormann and Mexiner</td>
+<td>2001</td>
+</tr>
+<tr class="row-odd"><td>Kljun et al.</td>
+<td>2015</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last simple">
+<li>The Source Area or <em>Footprint Model</em> plugin calculates various morphometric parameters based on digital surface models and source area calculations. Footprint models can be used to determine the likely position and influence of the surface area which is contributing to a turbulent flux measurement at a specific point in time and space with imposed boundary conditions (e.g. meteorological conditions, sources/sinks of passive scalars or surface characteristics). The principle of footprint models is that the measured flux is the integral of all contributing surface elements, with a ‘footprint function’ describing the relative fractional contribution of a discretisized area.                                                                                                                                        |</li>
+<li>Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al. (2015).</li>
+<li>The mathematical basis of Kormann and Meixner (2001) includes a stationary gradient diffusion formulation, height independent cross-wind dispersion, power law profiles of mean wind velocity and eddy diffusivity and a power law solution of the two-dimensional advection-diffusion equation. The final solution of the footprint function is calculated by fitting the power laws (mean wind and eddy diffusivity) to Monin-Obukhov similarity profiles. As with all models the limitations should be appreciated which include (but are not limited to) assumptions of Monin-Obukhov similarity theory, the use of power law profiles, assumptions of horizontally homogeneous flow and assumptions of stationarity during the meteorological or scalar variable input period (i.e. their averaging period; typically 30 – 60 minutes).   |</li>
+<li>Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al.</li>
+<li>Kljun et al. (2015) is a two-dimensional parameterisation for flux-footprint prediction which builds upon the footprint parameterisation of Kljun et al. (2004b) by providing the width and shape of footprint estimates, as well as explicitly considering surface roughness length. It is developed and evaluated from simulations of the backward Lagrangian stochastic particle dispersion model LPDM-B (Kljun et al., 2002) and demonstrated to be appropriate for a wide range of boundary layer conditions and measurement heights. It can therefore provide footprint estimates for a wide range of real-case applications.</li>
+<li>When using pre-determined values of z<sub>d</sub> and z<sub>0</sub>, the horizontal wind speed is calculated internally to the respective source area models. This ensures the boundary layer equations used within the models are internally consistent.</li>
+<li>A ground and 3D object DSM and a DEM should be used as input data. In addition if vegetation heights above ground level (i.e. trees and bushes) are available (CDSM) this can also be used. However, a CDSM need not be used and it is also possible to only use a 3D object DSM with no ground heights.</li>
+<li>Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Tutorial Available ：</dt>
+<dd><ul class="first last simple">
+<li>yes</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Location:
+- The pre-processor Footprint Model (Point) is located at</p>
+<blockquote>
+<div><ul class="simple">
+<li>UMEP</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Urban Morphology</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Image Morphometric Parameters (Point)</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box：</dt>
+<dd><div class="first last figure">
+<img alt="../_images/Footprint.png" src="../_images/Footprint.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dialog sections：</p>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>upper</td>
+<td>Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.</td>
+</tr>
+<tr class="row-even"><td>middle upper</td>
+<td><ul class="first last simple">
+<li>Select if only buildings or both buildings and ground heights are available.</li>
+<li>Specify the input data for buildings and ground.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>middle upper 2</td>
+<td><ul class="first last simple">
+<li>Select if vegetation heights are available.</li>
+<li>Specify the input data for buildings and ground.</li>
+<li>Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>middle lower</td>
+<td>Select input parameters to source area model: specify if a file is used, or values from the dialog box.</td>
+</tr>
+<tr class="row-odd"><td>lower</td>
+<td>Specify output options and run calculations.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Select Point on Canvas：</dt>
+<dd><ul class="first last simple">
+<li>To create a point for where the calculations will take place. When you click the button, the plugin will be disabled until you have clicked the map canvas.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use Existing Single Point Vector Layer：</dt>
+<dd><ul class="first last simple">
+<li>Select if you want to use a point from a vector layer that already exist and is loaded in the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DSM (only Building) Exist：</dt>
+<dd><ul class="first last simple">
+<li>Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DSM (3D Objects and Ground)：</dt>
+<dd><ul class="first last simple">
+<li>A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (metres above sea level).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DEM (only Ground)：</dt>
+<dd><ul class="first last simple">
+<li>A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Vegetation Canopy DSM:</dt>
+<dd><ul class="first last simple">
+<li>A CDSM (e.g. geoTIFF) consisting of pixels with vegetation heights above ground. Pixels where no objects are present should be set to zero.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use Input File on Specify Input Parameters:</dt>
+<dd><ul class="first">
+<li><p class="first">An input text file (.txt or .csv) containing the required inputs to the model (see below) with associated time stamps. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">iy</span> <span class="nb">id</span> <span class="n">it</span> <span class="n">imin</span> <span class="n">z_0_input</span> <span class="n">z_d_input</span> <span class="n">z_m_input</span> <span class="n">sigv</span> <span class="n">Obukhov</span> <span class="n">ustar</span> <span class="nb">dir</span> <span class="n">h</span> <span class="n">por</span>
+<span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1.1671</span> <span class="mf">8.1697</span> <span class="mf">50.3</span> <span class="mf">1.4805</span> <span class="o">-</span><span class="mf">5457.9644</span> <span class="mf">0.8460</span> <span class="mf">193.8650</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
+<span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">30</span> <span class="mf">1.4007</span> <span class="mf">9.8050</span> <span class="mf">50.3</span> <span class="mf">0.9616</span> <span class="mf">1081.7260</span> <span class="mf">0.5046</span> <span class="mf">185.5874</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
+<span class="mi">2014</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">1.3738</span> <span class="mf">9.6168</span> <span class="mf">50.3</span> <span class="mf">0.9870</span> <span class="mf">854.9901</span> <span class="mf">0.4849</span> <span class="mf">189.0444</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
+<span class="mi">2014</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">30</span> <span class="mf">1.2768</span> <span class="mf">9.3872</span> <span class="mf">50.3</span> <span class="mf">1.2345</span> <span class="mf">1002.2290</span> <span class="mf">0.5876</span> <span class="mf">202.3300</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
+
+<span class="p">[</span><span class="n">Header</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span> <span class="n">day</span> <span class="n">of</span> <span class="n">year</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minutes</span> <span class="n">of</span> <span class="n">averaging</span> <span class="n">period</span><span class="p">,</span> <span class="n">roughness</span> <span class="n">length</span> <span class="k">for</span>
+<span class="n">momentum</span><span class="p">,</span><span class="n">zero</span> <span class="n">plane</span> <span class="n">displacement</span> <span class="n">height</span> <span class="k">for</span> <span class="n">momentum</span><span class="p">,</span> <span class="n">measurement</span> <span class="n">height</span> <span class="n">of</span> <span class="n">sensor</span><span class="p">,</span>
+<span class="n">standard</span> <span class="n">deviation</span> <span class="n">of</span> <span class="n">lateral</span> <span class="n">wind</span><span class="p">,</span><span class="n">Obukhov</span> <span class="n">length</span><span class="p">,</span> <span class="n">friction</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">wind</span> <span class="n">direction</span><span class="p">,</span>
+<span class="n">boundary</span> <span class="n">layer</span> <span class="n">height</span><span class="p">,</span> <span class="n">vegetation</span> <span class="n">porosity</span><span class="p">]</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p class="last">Note In this example, the measurement height of the sensor (z_m_input) is 50.3</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Conditions for analysis:</p>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Parameter/Variable</td>
+<td>Defintion</td>
+</tr>
+<tr class="row-even"><td>Roughness Length for Momentum</td>
+<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) for this wind direction [m].</td>
+</tr>
+<tr class="row-odd"><td>Zero Displacement Height for Momentum</td>
+<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) for this wind direction. [m].</td>
+</tr>
+<tr class="row-even"><td>Measurement Height</td>
+<td>Height of sensor above ground level [m].</td>
+</tr>
+<tr class="row-odd"><td>Standard Deviation (sigma) of Cross Wind</td>
+<td>Standard deviation of the wind in the y direction (lateral wind) [m s<sup>-1</sup>].</td>
+</tr>
+<tr class="row-even"><td>Obukhov Length</td>
+<td>Indication of atmospheric stability for use in Monin-Obukhov similarity theory [m].</td>
+</tr>
+<tr class="row-odd"><td>Friction Velocity</td>
+<td>Shear stress represented in units of velocity for non-dimensional scaling [m s<sup>-1</sup>].</td>
+</tr>
+<tr class="row-even"><td>Wind Direction</td>
+<td>Prevailing wind direction during averaging period [degrees].</td>
+</tr>
+<tr class="row-odd"><td>Boundary layer height</td>
+<td>Height of planetary boundary layer during averaging period [m].</td>
+</tr>
+<tr class="row-even"><td>Vegetation porosity</td>
+<td>Aerodynamic porosity of vegetation, 0% is impermeable, 100 % is fully porous [%].</td>
+</tr>
+<tr class="row-odd"><td>Maximum Fetch Considered in metres</td>
+<td>The furthest distance upwind considered in the calculation of the footprint function [m].</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Footprint model:</dt>
+<dd><ul class="first last simple">
+<li>Specify the footprint model to use: Kormann and Meixner (2001) or Kljun et al. (2015)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Roughness Calculation Method:</dt>
+<dd><ul class="first simple">
+<li>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) and roughness length (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) are available.</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>RT</td>
+<td>Rule of thumb (c.f. Grimmond and Oke 1998)</td>
+</tr>
+<tr class="row-even"><td>Rau</td>
+<td>Raupach (1994)</td>
+</tr>
+<tr class="row-odd"><td>Bot</td>
+<td>Bottema (1998)</td>
+</tr>
+<tr class="row-even"><td>Mac</td>
+<td>MacDonald et al. (1998)</td>
+</tr>
+<tr class="row-odd"><td>Mho</td>
+<td>Millward-Hopkins et al. (2011)</td>
+</tr>
+<tr class="row-even"><td>Kan</td>
+<td>Kanda et al. (2013)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>File Prefix:</dt>
+<dd><ul class="first last simple">
+<li>A prefix that will be included in the beginning of the output files.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output Folder:</dt>
+<dd><ul class="first last simple">
+<li>A specified folder where result will be saved.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last simple">
+<li>Starts the calculations.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last simple">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Two different outputs are generated:</dt>
+<dd><ol class="first last arabic">
+<li><p class="first">A raster grid which represents the fractional contribution of each
+pixel in the array to turbulent fluxes measured at the sensor (i.e.
+the footprint function). Each pixel of this grid will be of the same
+order to the input grid. Because the user can determine the maximum
+fetch extent that is considered, each pixel in the footprint function
+is weighted as a percentage of the pixel of maximum contribution. If
+the footprint model is set to run for more than one time period (i.e.
+integrated over time), the footprint functions are summed and
+weighted as a percentage of the pixel of maximum contribution.</p>
+</li>
+<li><p class="first">A text file which specifies the time dimensions of measurements, the
+initial aerodynamic and meteorological parameters which were input to
+the model and finally the weighted geometry in the footprint and thus
+the newly calculated roughness length (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) and displacement
+height (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) according to the user specified method. This is of
+the form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>“iy id it imin z_0_input z_d_input z_m_input sigv Obukhov
+ ustar dir fai pai zH zMax zSdev zd z0”
+
+ [Header: year, day of year, hour, minutes of averaging period,
+  roughness length for momentum, zero plane displacement height
+  for momentum, measurement height of sensor, standard deviation
+  of lateral wind, Obukhov length, friction velocity, wind direction,
+  building frontal area weighted according to footprint function,
+  building plan area weighted according to footprint, average height
+  of buildings weighted according to footprint, maximum building height,
+  standard deviation of building heights, footprint specific displacement
+  height for specified method, footprint specific roughness length for
+  specified method]
+</pre></div>
+</div>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks：</dt>
+<dd><ul class="first last">
+<li><p class="first">All DSMs need to have the same extent and pixel size.</p>
+</li>
+<li><p class="first">Make certain that have set the projection correctly
+- After you haved opened the the GeoTiff files (in a new project), right click on the layer name</p>
+<blockquote>
+<div><ul class="simple">
+<li>Set Project CRS from this layer
+- Now you are ready to start adding the source areas to the image.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>References：</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>Footprint Model</dt>
+<dd><ul class="first last">
+<li>Kormann R and Meixner FX (2001) An analytical footprint model for
+non-neutral stratification. <a class="reference external" href="http://link.springer.com/article/10.1023/A:1018991015119">Bound-Layer Meteorol, 99,
+207-224</a>.</li>
+<li>Kljun N, Calanca P, Rotach MW, Schmid HP (2015) A simple
+two-dimensional parameterisation for Flux Footprint Prediction (FFP).
+<a class="reference external" href="http://www.geosci-model-dev.net/8/3695/2015/gmd-8-3695-2015.html">Geoscientific Model
+Development.8(11):3695-713</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Roughness Calculations</dt>
+<dd><ul class="first last">
+<li>Bottema M and Mestayer PG (1997) Urban roughness mapping–validation
+techniques and some first results. <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0167610598000142">J Wind Eng Ind Aerodyn, 74,
+163-173</a>.</li>
+<li>Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas
+derived from analysis of surface form. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2">J Appl Meteorol, 38,
+1262-1292</a>.</li>
+<li>Kanda M, Inagaki A, Miyamoto T, Gryschka M and Raasch S (2013) A new
+aerodynamic parametrization for real urban surfaces. <a class="reference external" href="http://link.springer.com/article/10.1007/s10546-013-9818-x">Bound-Layer
+Meteorol, 148,
+357-377</a>.</li>
+<li>Macdonald R, Griffiths R and Hall D (1998) An improved method for the
+estimation of surface roughness of obstacle arrays. <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S1352231097004032">Atmos Environ,
+32,
+1857-1864</a>.</li>
+<li>Millward-Hopkins J, Tomlin A, Ma L, Ingham D and Pourkashanian M
+(2011) Estimating aerodynamic parameters of urban-like surfaces with
+heterogeneous building heights. <a class="reference external" href="http://link.springer.com/article/10.1007%2Fs10546-011-9640-2">Bound-Layer Meteorol, 141,
+443-465</a>.</li>
+<li>Raupach M (1994) Simplified expressions for vegetation roughness
+length and zero-plane displacement as functions of canopy height and
+area index. <a class="reference external" href="http://link.springer.com/article/10.1007%2FBF00709229">Bound-Layer Meteorol, 71,
+211-216</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../processor/Processor.html" class="btn btn-neutral float-right" title="4. Processor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Urban Morphology Morphometric Calculator (Point).html" class="btn btn-neutral" title="3.14. Urban Morphology: Morphometric Calculator (Point)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

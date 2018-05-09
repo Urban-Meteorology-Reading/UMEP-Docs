@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.9. Urban Geometry: Wall Height and Aspect &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.10. Urban Land Cover: Land Cover Fraction (Grid)" href="Urban Land Cover Land Cover Fraction (Grid).html" />
+    <link rel="prev" title="3.8. Urban Geometry: Sky View Factor Calculator" href="Urban Geometry Sky View Factor Calculator.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Pre-Processor.html">3. Pre-Processor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data Download data (WATCH).html">3.1. Meteorological Data: Download data (WATCH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data MetPreprocessor.html">3.2. Meteorological Data: MetPreprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SUEWS Prepare.html">3.3. SUEWS Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data DSM Generator.html">3.4. Spatial Data: DSM Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data LCZ Converter.html">3.5. Spatial Data: LCZ Converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Spatial Data Downloader.html">3.6. Spatial Data: Spatial Data Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Tree Generator.html">3.7. Spatial Data: Tree Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Sky View Factor Calculator.html">3.8. Urban Geometry: Sky View Factor Calculator</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.9. Urban Geometry: Wall Height and Aspect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Grid).html">3.10. Urban Land Cover: Land Cover Fraction (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Point).html">3.11. Urban Land Cover: Land Cover Fraction (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html">3.12. Urban Land Cover: Land Cover Reclassifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Grid).html">3.13. Urban Morphology: Morphometric Calculator (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Point).html">3.14. Urban Morphology: Morphometric Calculator (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Source Area (Point).html">3.15. Urban Morphology: Source Area (Point)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Pre-Processor.html">3. Pre-Processor</a> &raquo;</li>
+        
+      <li>3.9. Urban Geometry: Wall Height and Aspect</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pre-processor/Urban Geometry Wall Height and Aspect.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urban-geometry-wall-height-and-aspect">
+<h1>3.9. Urban Geometry: Wall Height and Aspect<a class="headerlink" href="#urban-geometry-wall-height-and-aspect" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Contributor:</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Fredrik Lindberg</td>
+<td>Gothenburg</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><p class="first last">-The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Location:
+- The Wall Height and Aspect is located at</p>
+<blockquote>
+<div><ul class="simple">
+<li>UMEP</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Urban Geometry</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Wall Height and Aspect</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box</dt>
+<dd><div class="first last figure">
+<img alt="../_images/WallHeight.png" src="../_images/WallHeight.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Building and Ground DSM:</dt>
+<dd><ul class="first last simple">
+<li>A DSM (geoTIFF) consisting of ground and building heights.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Calculate Wall Aspect:</dt>
+<dd><ul class="first last simple">
+<li>Tick this box if you want to include estimation and output of a wall aspect grid. This calculation is computational intensive and will make your computer work for a while (depending on the size of the input DSM).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Lower Limit for Wall Height (m):</dt>
+<dd><ul class="first last simple">
+<li>This limit gives the lowest height of a building wall.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output File for Wall Aspect Raster:</dt>
+<dd><ul class="first last simple">
+<li>Name of the output file of the aspect raster.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output File for Wall Height Raster:</dt>
+<dd><ul class="first last simple">
+<li>Name of the output file of the aspect raster.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last simple">
+<li>Starts the calculations.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Add Result to Project:</dt>
+<dd><ul class="first last simple">
+<li>If ticked, raster(s) will be added to the map canvas.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last simple">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output:</dt>
+<dd><ul class="first last simple">
+<li>Two different files (geoTIFF) will be saved if wall aspect is calculated.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Example:</dt>
+<dd><div class="first last figure">
+<img alt="../_images/Output_Wall_Height.jpg" src="../_images/Output_Wall_Height.jpg" />
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks：</dt>
+<dd><ul class="first last simple">
+<li>This plugin make use of <strong>Scipy</strong> which in turn make use of <strong>Pillow</strong>. If this plugin is malfunctioning, try to install/reinstall these packages (see <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities">here</a>).</li>
+<li><strong>NOTE</strong>: The azimuth of the wall is estimated based on a 9 meter linear feature. This implies that coarser pixel resolution gives less pixels and thus a more imprecise measure of wall azimuth as the number of pixels will be lower. It it therefore recommended that use pixel resolution not greater than 2 meter in order to obtain a reasonable result.</li>
+<li>Wall pixels will be located ‘inside’ of the building footprint.</li>
+<li>The aspect algorithm gives reasonable result but improvements could be made by e.g. using a vector line layer which could be used to populate the wall pixels with aspect values.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>References：</dt>
+<dd><ul class="first last simple">
+<li>Goodwin NR, Coops NC, Tooke TR, Christen A, Voogt JA (2009) Characterizing urban surface cover and structure with airborne lidar technology. <a class="reference external" href="http://www.tandfonline.com/doi/abs/10.5589/m09-015">Can J Remote Sens 35:297–309</a></li>
+<li>Lindberg F., Jonsson, P. &amp; Honjo, T. and Wästberg, D. (2015) Solar energy on building envelopes - 3D modelling in a 2D environment <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0038092X15001164">Solar Energy 115 369–378</a></li>
+<li>Lindberg F., Grimmond, C.S.B. and Martilli, A. (2015) Sunlit fractions on urban facets - Impact of spatial resolution and approach <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S221209551400090X">Urban Climate DOI: 10.1016/j.uclim.2014.11.006</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Urban Land Cover Land Cover Fraction (Grid).html" class="btn btn-neutral float-right" title="3.10. Urban Land Cover: Land Cover Fraction (Grid)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Urban Geometry Sky View Factor Calculator.html" class="btn btn-neutral" title="3.8. Urban Geometry: Sky View Factor Calculator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

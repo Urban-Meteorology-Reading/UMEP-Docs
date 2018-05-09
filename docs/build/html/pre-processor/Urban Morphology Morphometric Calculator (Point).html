@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.14. Urban Morphology: Morphometric Calculator (Point) &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.15. Urban Morphology: Source Area (Point)" href="Urban Morphology Source Area (Point).html" />
+    <link rel="prev" title="3.13. Urban Morphology: Morphometric Calculator (Grid)" href="Urban Morphology Morphometric Calculator (Grid).html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Pre-Processor.html">3. Pre-Processor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data Download data (WATCH).html">3.1. Meteorological Data: Download data (WATCH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data MetPreprocessor.html">3.2. Meteorological Data: MetPreprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SUEWS Prepare.html">3.3. SUEWS Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data DSM Generator.html">3.4. Spatial Data: DSM Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data LCZ Converter.html">3.5. Spatial Data: LCZ Converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Spatial Data Downloader.html">3.6. Spatial Data: Spatial Data Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Tree Generator.html">3.7. Spatial Data: Tree Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Sky View Factor Calculator.html">3.8. Urban Geometry: Sky View Factor Calculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Wall Height and Aspect.html">3.9. Urban Geometry: Wall Height and Aspect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Grid).html">3.10. Urban Land Cover: Land Cover Fraction (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Point).html">3.11. Urban Land Cover: Land Cover Fraction (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html">3.12. Urban Land Cover: Land Cover Reclassifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Grid).html">3.13. Urban Morphology: Morphometric Calculator (Grid)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.14. Urban Morphology: Morphometric Calculator (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Source Area (Point).html">3.15. Urban Morphology: Source Area (Point)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Pre-Processor.html">3. Pre-Processor</a> &raquo;</li>
+        
+      <li>3.14. Urban Morphology: Morphometric Calculator (Point)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pre-processor/Urban Morphology Morphometric Calculator (Point).rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="urban-morphology-morphometric-calculator-point">
+<h1>3.14. Urban Morphology: Morphometric Calculator (Point)<a class="headerlink" href="#urban-morphology-morphometric-calculator-point" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>How to Cite：</dt>
+<dd><ul class="first last">
+<li>Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).</li>
+<li>Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z <a class="reference external" href="https://link.springer.com/article/10.1007/s10546-017-0248-z">https://link.springer.com/article/10.1007/s10546-017-0248-z</a>]</li>
+<li>Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering &amp; Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10.1016/j.jweia.2017.07.016">http://dx.doi.org/10.1016/j.jweia.2017.07.016</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Contributor:</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Fredrik Lindberg</td>
+<td>Gothenburg</td>
+</tr>
+<tr class="row-even"><td>Christoph Kent</td>
+<td>Reading</td>
+</tr>
+<tr class="row-odd"><td>Brian Offerle</td>
+<td>previously Indiana University; Tyrens</td>
+</tr>
+<tr class="row-even"><td>Sue Grimmond</td>
+<td>Reading</td>
+</tr>
+<tr class="row-odd"><td>Niklas Krave</td>
+<td>Gothenburg</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last">
+<li>The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Morphometric parameters</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Mean building height (z:sub:<code class="xref any docutils literal"><span class="pre">H</span></code>)</td>
+<td>Average building height measured from ground level [m].</td>
+</tr>
+<tr class="row-odd"><td>Standard deviation of building heights (z:sub:<code class="xref any docutils literal"><span class="pre">Hσ</span></code>).</td>
+<td>Standard deviation of building heights [m].</td>
+</tr>
+<tr class="row-even"><td>Maximum building height (z:sub:<code class="xref any docutils literal"><span class="pre">Hmax</span></code>).</td>
+<td>Height of the tallest building within the study area [m]</td>
+</tr>
+<tr class="row-odd"><td>Plan area index (λ:sub:<code class="xref any docutils literal"><span class="pre">P</span></code>)</td>
+<td>Area of building surfaces relative to the total ground area.</td>
+</tr>
+<tr class="row-even"><td>Frontal area index (λ:sub:<code class="xref any docutils literal"><span class="pre">F</span></code>)</td>
+<td>Area of building walls normal to wind direction relative to the total ground area.</td>
+</tr>
+<tr class="row-odd"><td>Roughness length (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>)</td>
+<td>A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].</td>
+</tr>
+<tr class="row-even"><td>Zero-plane displacement height (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>)</td>
+<td>Height above ground where the wind speed is 0 m s<sup>-1</sup> as a result of obstacles to the flow such as trees or buildings [m].</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p class="first">Location:
+- The Morphometric Calculator (Point) is located at</p>
+<blockquote>
+<div><ul class="simple">
+<li>UMEP</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Pre-Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Urban Morphology</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Morphometric Parameters (Point)</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><div class="first last figure">
+<img alt="../_images/Morph_Calc_point.png" src="../_images/Morph_Calc_point.png" />
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dialog sections：</p>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>upper</td>
+<td>Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.</td>
+</tr>
+<tr class="row-even"><td>middle upper</td>
+<td><ul class="first last simple">
+<li>Set the parameters for the area of interest where the morphometric parameters are calculated.</li>
+<li>Set the search interval in degrees.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>middle lower</td>
+<td>Specify the input data regarding buildings and ground.</td>
+</tr>
+<tr class="row-even"><td>lower</td>
+<td>Specify output and run the calculations.</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Select Point on Canvas:</dt>
+<dd><ul class="first last">
+<li>Click on this button to create a point from where the calculations will take place. When you click button, the plugin will be disabled until you have clicked the map canvas.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use Existing Single Point Vector Layer:</dt>
+<dd><ul class="first last">
+<li>Select if you want to use a point from a vector layer that already exist and are loaded to the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Generate Study Area:</dt>
+<dd><ul class="first last">
+<li>This button is connected to the Search distance (m) and when you click the button a circular polygon layer (Study area) is generated. This is the area that will be used to obtain the morphometric parameters.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Wind Direction Search Interval (Degrees):</dt>
+<dd><ul class="first last">
+<li>This decides the interval in search directions for which the morphometric parameters will be calculated.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DSM (only Building or Vegetation) Exist:</dt>
+<dd><ul class="first last">
+<li>Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DSM (3D Object and Ground):</dt>
+<dd><ul class="first last">
+<li>A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (meters above sea level).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DEM (only Ground):</dt>
+<dd><ul class="first last">
+<li>A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Raster DSM (only 3D Objects):</dt>
+<dd><ul class="first last">
+<li>A DSM (e.g. geoTIFF) consisting of pixels with object (e.g. buildings or vegetation) heights above ground. Pixels where no objects are present should be set to zero.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Roughness Calculation Method:</dt>
+<dd><ul class="first last">
+<li>Options to choose methods for roughness calculations regarding zero displacement height (zd) and roughness length (z0) are available.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>File Prefix:</dt>
+<dd><ul class="first last">
+<li>A prefix that will be included in the beginning of the output files.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output Folder:</dt>
+<dd><ul class="first last">
+<li>A specified folder where result will be saved.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run:</dt>
+<dd><ul class="first last">
+<li>Starts the calculation</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close:</dt>
+<dd><ul class="first last">
+<li>Closes the plugin.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Output:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Two different files are saved after a successful run.</dt>
+<dd><ol class="first last arabic">
+<li><strong>Anisotropic</strong> result where the morphometric parameters for each wind direction as selected are included.</li>
+<li><strong>Isotropic</strong> results where all directions are integrated into one value for each parameter.</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Remarks:</dt>
+<dd><ul class="first last">
+<li>All DSMs need to have the same extent and pixel size.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>References:</dt>
+<dd><ul class="first last">
+<li>Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas derived from analysis of surface form. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2">J Appl Meteorol 38: 1262-1292</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Urban Morphology Source Area (Point).html" class="btn btn-neutral float-right" title="3.15. Urban Morphology: Source Area (Point)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Urban Morphology Morphometric Calculator (Grid).html" class="btn btn-neutral" title="3.13. Urban Morphology: Morphometric Calculator (Grid)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

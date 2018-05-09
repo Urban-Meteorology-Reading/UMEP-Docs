@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.3. SUEWS Prepare &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.4. Spatial Data: DSM Generator" href="Spatial Data DSM Generator.html" />
+    <link rel="prev" title="3.2. Meteorological Data: MetPreprocessor" href="Meteorological Data MetPreprocessor.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Pre-Processor.html">3. Pre-Processor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data Download data (WATCH).html">3.1. Meteorological Data: Download data (WATCH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Meteorological Data MetPreprocessor.html">3.2. Meteorological Data: MetPreprocessor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. SUEWS Prepare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data DSM Generator.html">3.4. Spatial Data: DSM Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data LCZ Converter.html">3.5. Spatial Data: LCZ Converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Spatial Data Downloader.html">3.6. Spatial Data: Spatial Data Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Spatial Data Tree Generator.html">3.7. Spatial Data: Tree Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Sky View Factor Calculator.html">3.8. Urban Geometry: Sky View Factor Calculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Geometry Wall Height and Aspect.html">3.9. Urban Geometry: Wall Height and Aspect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Grid).html">3.10. Urban Land Cover: Land Cover Fraction (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Fraction (Point).html">3.11. Urban Land Cover: Land Cover Fraction (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html">3.12. Urban Land Cover: Land Cover Reclassifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Grid).html">3.13. Urban Morphology: Morphometric Calculator (Grid)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Morphometric Calculator (Point).html">3.14. Urban Morphology: Morphometric Calculator (Point)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Morphology Source Area (Point).html">3.15. Urban Morphology: Source Area (Point)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Pre-Processor.html">3. Pre-Processor</a> &raquo;</li>
+        
+      <li>3.3. SUEWS Prepare</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pre-processor/SUEWS Prepare.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="suews-prepare">
+<h1>3.3. SUEWS Prepare<a class="headerlink" href="#suews-prepare" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Contributor:</li>
+</ul>
+<ul>
+<li><dl class="first docutils">
+<dt>Introduction:</dt>
+<dd><ul class="first last simple">
+<li>The pre-processor SUEWS Prepare generates surface-related input data from geographical data for <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS</a>, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.   |</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Terminology</strong> ：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Components of the plugin window:</dt>
+<dd><div class="first figure">
+<img alt="../_images/SuewsPrepareTerminology.jpg" src="../_images/SuewsPrepareTerminology.jpg" />
+</div>
+<p class="last">Some naming conventions used in this document relating to the components of the plugin.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Plugin window:</dt>
+<dd><ul class="first last simple">
+<li>Dialog window of the plugin. Any user interface components that are part of the plugin will be a part of the plugin window.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Tab:</dt>
+<dd><ul class="first last simple">
+<li>The plugin contains many tabs. The tabs can be cycled through to reveal different kinds of information.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Widget:</dt>
+<dd><ul class="first last simple">
+<li>One tab can contain one or more widgets. One widget contains two boxes, the selection box and the variable box.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Variable box:</dt>
+<dd><ul class="first last simple">
+<li>Right part of a widget It contains a number of variables. One variable is comprised of a variable title and a variable text box.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Variable title:</dt>
+<dd><ul class="first last simple">
+<li>The variable title is a short description of the variable.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Variable text box:</dt>
+<dd><ul class="first last simple">
+<li>The variable text box contains the value of the variable for one site entry.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Selection box:</dt>
+<dd><ul class="first last simple">
+<li>The selection box is the left part of a widget. It contains a number of user interface components such as buttons and drop down menus.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Drop down menu:</dt>
+<dd><ul class="first last simple">
+<li>The drop down menu allows a selection from a predetermined range of values.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Terms relating to data used by the plugin</strong> (For more info see developer section below)：</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt>Site Library:</dt>
+<dd><ul class="first last">
+<li>The site library contains all collected sites (i.e. study areas) and information about those sites.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Site code:</dt>
+<dd><ul class="first last">
+<li>A site code separates site entries of one kind from each other. It needs to be a unique integer number.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Identification code:</dt>
+<dd><ul class="first last">
+<li>The identification code is used when there is a need to separate site entries into categories. If two site entries share the same identification code they belong to the same category.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Using the plugin - The different components of the plugin and the plugin output.</strong>：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Main window:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>The main window contains all the user interface components of the plugin. Navigation uses tabs, with each providing some of the information needed. The are two categories:</dt>
+<dd><ul class="first simple">
+<li>main settings tab</li>
+<li>site library</li>
+</ul>
+<div class="last figure">
+<img alt="../_images/SP_static.jpg" src="../_images/SP_static.jpg" />
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The main window has buttons to specify to:</dt>
+<dd><ul class="first last">
+<li><p class="first">indicate the folder where the output will be generated</p>
+</li>
+<li><p class="first">to start the process of generating the output</p>
+</li>
+<li><p class="first">to close the main window.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Note</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">folder</span> <span class="n">selected</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">files</span> <span class="n">already</span> <span class="n">contains</span>
+<span class="n">files</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">SUEWS</span> <span class="n">Prepare</span> <span class="n">these</span> <span class="n">files</span> <span class="n">will</span> <span class="n">be</span> <span class="o">**</span><span class="n">overwritten</span><span class="o">**</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Main settings tab：</dt>
+<dd><ul class="first simple">
+<li>The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SUEWSPrepare_main.png" src="../_images/SUEWSPrepare_main.png" />
+</div>
+<p class="last">Plugin window with the main settings tab selected.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Polygon grid：</dt>
+<dd><ul class="first simple">
+<li>The polygon grid is used to provide the plugin with further information through the grid attribute table. Each part of the grid will create a separate entry in the plugins output. The polygon grid can be in any vector file format compatible with QGIS, however, it is recommended to use the shape file format.</li>
+<li>To use an existing polygon grid layer in the plugin add the layer to the QGIS interface. This can be done either by dragging and dropping the file into the QGIS program or by using the menu <strong>Layers</strong>. Any polygon layers added to the QGIS interface can then be selected for use in the plugin from the drop down menu in the main settings tab marked <strong>Vector polygon grid</strong> If no polygon grid layer is available, there are several opportunities to create these in QGIS. We  recommend to make use of the built-in <strong>Vector tool</strong> (Vector -&gt; Research tools menu)&gt;</li>
+<li>When a relevant polygon grid has been selected for the plugin several separate drop down menus allow for data to be collected from the fields in the polygon grid attribute table. The initial selections in these drops down menus might not be correct and needs to be manually corrected by the user.</li>
+<li>The input in the drop down menu marked <strong>ID field</strong> in the box for polygon grid selection needs to correlate with the polygon layers attribute field for feature ids or any attribute field containing unique integer numbers. The polygon layer should be in a coordinate system that can be related to both lat/lon coordinates as well as meters. The polygon features included in the polygon vector grid can be of any shape and size.</li>
+</ul>
+<div class="last figure">
+<img alt="../_images/SP_Polygon.jpg" src="../_images/SP_Polygon.jpg" />
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Data for land cover fractions, building morphology and tree morphology ：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>To use SUEWS land cover and morphology data for buildings and vegetation are needed. This information can be acquired through other plugins in UMEP. This data can then be added into SUEWSPrepare by two different options:</dt>
+<dd><ul class="first last simple">
+<li>Import the data as text</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>To do this click the buttons in the boxes associated with these types of data and follow the import dialogs to select the correct text file. When a file has been selected the file path will be shown in the text boxes above the buttons. The text files on land cover and morphology are generated with the <a class="reference external" href="#Urban_Land_Cover:_Land_Cover_Fraction_(Point)">Land Cover Fraction</a> plugin and the <a class="reference external" href="#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_(Point)">Image Morphometric Calculator</a>, respectively.</dt>
+<dd><ul class="first simple">
+<li>Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SP_landcover.jpg" src="../_images/SP_landcover.jpg" />
+</div>
+<p>Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.</p>
+<div class="figure">
+<img alt="../_images/SP_landcover2.jpg" src="../_images/SP_landcover2.jpg" />
+</div>
+<p class="last">Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Meteorological data：</dt>
+<dd><ul class="first simple">
+<li>The meteorological data have to be imported from a <strong>text file</strong>. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the <a class="reference external" href="#Meteorological_Data:_MetPreprocessor">MetPreprocessor</a> plugin. There you can also find more information on what parameters are required in the meteorological dataset.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SP_met.jpg" src="../_images/SP_met.jpg" />
+</div>
+<p class="last">Box for meteorological data. The button has been used to import a file containing meteorological data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Daylight savings time：</dt>
+<dd><ul class="first simple">
+<li>The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the <a class="reference external" href="http://disc.sci.gsfc.nasa.gov/julian_calendar.html">days of year</a>. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for <a class="reference external" href="https://en.wikipedia.org/wiki/Daylight_saving_time_by_country">your region</a>.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SP_DLS.jpg" src="../_images/SP_DLS.jpg" />
+</div>
+<p class="last">Box used for setting the start and end of day lights savings time.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Population density：</dt>
+<dd><ul class="first last simple">
+<li>This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Wall area (optional) ：</dt>
+<dd><ul class="first simple">
+<li>This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">Wall height and aspect calculator</a>.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SUEWSPrepare_wallarea.png" src="../_images/SUEWSPrepare_wallarea.png" />
+</div>
+<p class="last">Box for wall area data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Land use fraction (optional) ：</dt>
+<dd><ul class="first last">
+<li><p class="first">his data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="n">fLUp1</span> <span class="n">fLUp2</span> <span class="n">fLUp3</span> <span class="n">Code_LUpaved1</span> <span class="n">Code_LUpaved2</span> <span class="n">Code_LUpaved3</span> <span class="n">fLUb1</span> <span class="n">fLUb2</span> <span class="n">fLUb3</span> <span class="n">fLUb4</span> <span class="n">fLUb5</span> <span class="n">Code_LUbuilding1</span> <span class="n">Code_LUbuilding2</span> <span class="n">Code_LUbuilding3</span> <span class="n">Code_LUbuilding4</span> <span class="n">Code_LUbuilding5</span>
+<span class="mi">1</span> <span class="mi">0</span> <span class="mf">0.62</span> <span class="mf">0.38</span> <span class="mi">806</span> <span class="mi">807</span> <span class="mi">808</span> <span class="mf">0.90</span> <span class="mf">0.10</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">801</span> <span class="mi">802</span> <span class="mi">803</span> <span class="mi">804</span> <span class="mi">805</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>where <em>f</em> is fraction, <em>LU</em> is land use and <em>p</em> is paved. Fractions must add up to 1 for paved and buildings respectively. A plugin to generate this text file is not yet created.</p>
+<div class="figure">
+<img alt="../_images/SUEWSPrepare_landuse.png" src="../_images/SUEWSPrepare_landuse.png" />
+</div>
+<p>Box for land use data.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Initial conditions ：</dt>
+<dd><ul class="first simple">
+<li>The SUEWS model requires information of initial conditions. SUEWSPRepare generates some basic information used to create a file called <strong>InitialConditionsXXXX_YYYY.nml</strong> where XXXX is the ID grid number.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SUEWSPrepare_init.png" src="../_images/SUEWSPrepare_init.png" />
+</div>
+<p class="last">Box for initial conditions.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Site library tabs ：</dt>
+<dd><ul class="first simple">
+<li>The remaining tabs besides the main settings tab all fall under the same category, namely site library tabs. A site library tab represents certain characteristics of an area. A tab can consist of one or more widgets. Each widget has a predetermined layout but will represent different kinds of information. The left part of a widget can be used to select a site entry for the plugin output or to create a new entry to the site library. The right part of a widget will show information about a site through variables.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SP_siteLib.jpg" src="../_images/SP_siteLib.jpg" />
+</div>
+<p class="last">Some of the components of a site library tab.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Selecting a site ：</dt>
+<dd><ul class="first simple">
+<li>The selection of a site is done through a drop down menu marked “Code”. The codes in the drop down menu represent the site codes for a site. Each code represents one site entry. Selecting a code will show the values of the variables for the site entry in the variable box the right side of the tab. The code selected will be used in the output of the plugin.</li>
+<li>It is possible to use separate codes for each feature in the polygon grid. This requires a field in the polygon grid attribute table that represent the code that is to be used for each feature. If there is such a field click the checkbox marked “Use unique codes for each entry” and select the correct field from the drop down menu.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/SP_siteCode.jpg" src="../_images/SP_siteCode.jpg" />
+</div>
+<p>Site code selection in a site library tab</p>
+<div class="figure">
+<img alt="../_images/Figure12.png" src="../_images/Figure12.png" />
+</div>
+<p class="last">Using more than one site code.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Creating a new site entry:</dt>
+<dd><ul class="first last simple">
+<li>To create a new site entry click the button marked “Edit values”. This will make the text boxes for the variables in the right box available for editing. When you are satisfied with the changes press the button marked “Make changes”. This will show a dialog window that will ask you to provide a site code for your new entry and some description of the site you are adding. After this information is provided you are also able to add an optional url to a picture that represent the site.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Plugin Output:</dt>
+<dd><ul class="first last simple">
+<li>In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29">SUEWS/BLUEWS (Advanced)</a>. Also, see the <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS manual</a> for more information.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Spatial Data DSM Generator.html" class="btn btn-neutral float-right" title="3.4. Spatial Data: DSM Generator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Meteorological Data MetPreprocessor.html" class="btn btn-neutral" title="3.2. Meteorological Data: MetPreprocessor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

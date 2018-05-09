@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.1. Outdoor Thermal Comfort: ExtremeFinder &mdash; UMEP Manual  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.2. Outdoor Thermal Comfort: SOLWEIG" href="Outdoor Thermal Comfort SOLWEIG.html" />
+    <link rel="prev" title="4. Processor" href="Processor.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UMEP Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Getting_Started.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pre-processor/Pre-Processor.html">3. Pre-Processor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Processor.html">4. Processor</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Outdoor Thermal Comfort: ExtremeFinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Outdoor Thermal Comfort SOLWEIG.html">4.2. Outdoor Thermal Comfort: SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Solar Radiation Daily Shadow Pattern.html">4.3. Solar Radiation: Daily Shadow Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Solar Radiation Solar Energy on Building Envelopes (SEBE).html">4.4. Solar Radiation: Solar Energy on Building Envelopes (SEBE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance GQ.html">4.5. Urban Energy Balance: GQ<sub>F</sub></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance LQ.html">4.6. Urban Energy Balance: LQ<sub>F</sub></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance Urban Energy Balance (SUEWS, simple).html">4.7. Urban Energy Balance: Urban Energy Balance (SUEWS, simple)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Urban Energy Balance Urban Energy Balance (SUEWS.BLUEWS, advanced).html">4.8. Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">10. Abbreviations</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UMEP Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="Processor.html">4. Processor</a> &raquo;</li>
+        
+      <li>4.1. Outdoor Thermal Comfort: ExtremeFinder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/processor/Outdoor Thermal Comfort ExtremeFinder.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="outdoor-thermal-comfort-extremefinder">
+<h1>4.1. Outdoor Thermal Comfort: ExtremeFinder<a class="headerlink" href="#outdoor-thermal-comfort-extremefinder" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Contributor:</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Bei Huang</td>
+<td>Reading</td>
+</tr>
+<tr class="row-even"><td>Andy Gabey</td>
+<td>Reading</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Current Options:</dt>
+<dd><ul class="first last simple">
+<li>Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Data must be provided by the user, and can be:</dt>
+<dd><ul class="first last simple">
+<li>Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)</li>
+<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>&#8216;time</strong>&#8216; dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
+<li>Text (.txt) file, daily T<sub>max</sub>, T<sub>avg</sub> or T<sub>min</sub> (<a class="reference external" href="http://www.urban-climate.net/watch_data/data%20set%20sample.txt">file sample</a>: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Method ：</dt>
+<dd><dl class="first last docutils">
+<dt>—  Basis for thresholds - set into Input.nml (namelist)</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://science.sciencemag.org/content/305/5686/994">Meehl and Tebaldi (2004)</a>: 81st, 97.5th</li>
+<li><a class="reference external" href="http://www.nature.com/ngeo/journal/v3/n6/full/ngeo866.html">Fischer and Schär (2010)</a>: 90th</li>
+<li><a class="reference external" href="https://link.springer.com/article/10.1007%2Fs00382-013-1714-z">Vautard et al. (2013)</a>: 90th</li>
+<li><a class="reference external" href="https://link.springer.com/article/10.1007/s00382-014-2434-8">Schoetter et al. (2014)</a>: 98th</li>
+<li><a class="reference external" href="http://www.kirj.ee/26593/?tpl=1061&amp;c_tpl=1064">Sirje Keevallik (2015)</a>: 10th</li>
+<li><a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/asl.232/abstract">A. K. Srivastava (2009)</a>: 3 °C</li>
+<li>Busuioc et al. (2010): 5 °C</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><p class="first">Location:
+-  UMEP</p>
+<blockquote>
+<div><ul class="simple">
+<li>Processor</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>Outdoor Themal Comfort</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>ExtremeFinder</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Dialog box:</dt>
+<dd><div class="first figure">
+<img alt="../_images/Extremefinder3.png" src="../_images/Extremefinder3.png" />
+</div>
+<p class="last">The interface for the ExtremeFinder plugin</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Steps to use:</dt>
+<dd><ol class="first last arabic simple">
+<li>Select climate data: The ExtremeFinder will use all the data available in its analysis. You will be prompted for a text (.txt) or NetCDF (.nc) file:<ul>
+<li><em>NetCDF file</em>: The latitude, longitude, start and end date boxes will be populated automatically, if the data is available in the NetCDF file.</li>
+<li><em>Text file</em>: The latitude, longitude, start and end date boxes must be filled in by the user, as the information is needed in calculations:<ul>
+<li><em>Latitude</em> (degrees N) and <em>Longitude</em> (degrees E) are WGS84 co-ordinates</li>
+<li><em>Start</em> and <em>end date</em> are inclusive and must match the data extent</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Select the <em>extreme event type</em> and the <em>calculation method</em>:<ul>
+<li>Event types are either Extreme <em>high</em> (e.g. Heat wave) or <em>low</em> (e.g. Cold wave)</li>
+<li>There are several different ways to identify extremes, depending on the event type</li>
+<li>Choose the <em>meteorological variable</em> to analyse for extremes<ul>
+<li><strong>Note:</strong> The methods in the Extreme Finder are based on Tair and may not be appropriate for other variables</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Select Output File: A list of extreme events will be written to the file<ul>
+<li>Note: this will be overwritten if not a new name</li>
+</ul>
+</li>
+<li>Run: Performs the analysis</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt># Output: Extreme events (heat waves used as example below) ：</dt>
+<dd><ol class="first last arabic">
+<li><p class="first">Daily T<sub>max</sub> (or T<sub>avg</sub> / T<sub>min</sub>) with time (Y= Year, X=Month)</p>
+<ul>
+<li><p class="first">Colour gives Temperature (see key)</p>
+</li>
+<li><dl class="first docutils">
+<dt>Yellow Box Highlights Heatwave (Coldwave) periods This loads the model interface dialog box:</dt>
+<dd><div class="first figure">
+<img alt="../_images/350px-TMax1.jpg" src="../_images/350px-TMax1.jpg" />
+</div>
+<p class="last">Heat/Cold wave periods</p>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first">Box plot of distribution of heat (cold) wave by year.</p>
+<ul>
+<li><p class="first">whiskers =1.5* IQR</p>
+</li>
+<li><p class="first">outliers
+- any data beyond the whiskers</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/350px-HW_Box.jpg" src="../_images/350px-HW_Box.jpg" />
+</div>
+<p>Box-and-whisker plot of Heat/Cold wave days each year</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><dl class="first docutils">
+<dt>Number of heat (cold) waves days per year</dt>
+<dd><div class="first figure">
+<img alt="../_images/350px-HWDays.jpg" src="../_images/350px-HWDays.jpg" />
+</div>
+<p class="last">Histogram showing number of Heat/Cold wave days each year</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Outdoor Thermal Comfort SOLWEIG.html" class="btn btn-neutral float-right" title="4.2. Outdoor Thermal Comfort: SOLWEIG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Processor.html" class="btn btn-neutral" title="4. Processor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
