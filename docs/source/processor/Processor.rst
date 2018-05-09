@@ -7,8 +7,12 @@ Processor
 Outdoor Thermal Comfort: SOLWEIG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Fredrik Lindberg
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
 
 * Introduction:
     -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T~mrt~) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.
@@ -30,7 +34,7 @@ Outdoor Thermal Comfort: SOLWEIG
 * Dialog sections ：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Spatial data
      - Spatial input data is specified
@@ -48,7 +52,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Building and Ground DSM
      - A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of Sun position.
@@ -82,7 +86,7 @@ Outdoor Thermal Comfort: SOLWEIG
 *  Meteorological data：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Use continuous meteorological dataset
      - Tick this in if a time series of data should be used. The specific format could be prepared in the UMEP Pre-processor.
@@ -98,7 +102,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Include POIs
      - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <http://www.urban-climate.net/umep/SOLWEIG>`__ for more information.
@@ -111,7 +115,7 @@ Outdoor Thermal Comfort: SOLWEIG
       - Emissivity (ground)||Emissivity of ground. Not used if land cover scheme is activated.
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Albedo (buildings)
      - Albedo of building walls and roofs.
@@ -127,7 +131,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Absorption of shortwave radiation
      - Amount of shortwave radiation that the human body absorb.
@@ -176,8 +180,15 @@ Outdoor Thermal Comfort: SOLWEIG
 Outdoor Thermal Comfort: ExtremeFinder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Bei Huang (Reading), Andy Gabey (Reading)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Bei Huang
+     - Reading
+   * - Andy Gabey
+     - Reading
+
 
 * Current Options:
      -  Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.
@@ -254,8 +265,17 @@ Outdoor Thermal Comfort: ExtremeFinder
 Urban Energy Balance: GQ\ :sub:`F`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Andy Gabey (Reading), Izzy Capel Timms (Reading), Sue Grimmond (Reading)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Andy Gabey
+     - Reading
+   * - Izzy Capel Timms
+     - Reading
+   * - Sue Grimmond
+     - Reading
+
 * How to Cite:
      -  Gabey A, S Grimmond, I Capel-Timms 2018: Anthropogenic Heat Flux: advisable spatial resolutions when input data are scarce Theoretical and Applied Climatology https://doi.org/10.1007/s00704-018-2367-y
      -  Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE Theeuwes, L Järvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D Wästberg, L Xue, Z Zhang 2018: Urban multiscale environmental predictor (UMEP) - An integrated tool for city-based climate services Environmental Modelling and Software 99, 70–87 10.1016/j.envsoft.2017.09.020
@@ -286,7 +306,7 @@ Urban Energy Balance: GQ\ :sub:`F`
           -  A CSV file is generated for each of the 19 contributions to QF (e.g. car travel, wastewater heating) and the total QF. Each file contains a column per output area (shown in the example map) and a row per time step. These are labelled accordingly. The filenames are abbreviated where necessary for compatibility, with the following convention used:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - El
      - Electricity
@@ -315,10 +335,23 @@ Urban Energy Balance: GQ\ :sub:`F`
 Urban Energy Balance: LQ\ :sub:`F`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-      Andy Gabey (Reading), Izzy Capel-Timms (Reading),
-      Sue Grimmond (Reading), Sam Jackson (Reading),
-      XY Ao (SIMS), Bei Huang(Tsinghua Unviersity)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Andy Gabey
+     - Reading
+   * - Izzy Capel Timms
+     - Reading
+   * - Sue Grimmond
+     - Reading
+   * - Sam Jackson
+     - Reading
+   * - XY Ao
+     - SIMS
+   * - Bei Huang
+     - Tsinghua Unviersity
+
 
 * Introduction  ：
           - `See separate manual <http://urban-climate.net/umep/LQF_Manual>`__
@@ -332,8 +365,16 @@ Urban Energy Balance: LQ\ :sub:`F`
 Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Fredrik Lindberg (Gothenburg), Sue Grimmond
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Sue Grimmond
+     - Reading
+
+
  * Introduction：
         - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <http://urban-climate.net/umep/SUEWS>`__).
         - This plugin makes it possible to run a simplified version of the Surface Urban Energy and Water Balance Scheme (SUEWS). For a full version of the model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also available as a separate program.
@@ -433,8 +474,13 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
 Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Fredrik Lindberg (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+
 
 * Introduction:
      - This plugin makes it possible to run the Surface Urban Energy and Water Balance Scheme (SUEWS). SUEWS is also available as a separate program and a simplified version within UMEP (SUEWS Simple).
@@ -468,8 +514,13 @@ Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 Solar Radiation: Daily Shadow Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Fredrik Lindberg (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+
 
 * Introduction:
      -  The **Shadow generator** plugin can be used to generate pixel wise shadow analysis using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011). Position of the Sun is calculated using **PySolar**, a python library for various Sun related applications ([2](http://pysolar.org/)).
@@ -562,8 +613,15 @@ Solar Radiation: Daily Shadow Pattern
 Solar Radiation: Solar Energy on Building Envelopes (SEBE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Fredrik Lindberg (Gothenburg), Dag Wäsrberg (Tyréns)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Dag Wäsrberg
+     - Tyréns
+
 
 * Introduction:
      -  The **SEBE** plugin (Solar Energy on Building Envelopes) can be used to calculate pixel wise potential solar energy using ground and building digital surface models (DSM). SEBE is also able to estimate irradiance on building walls. Optionally, vegetation DSMs could also be used. The methodology that is used to generate irradiance is presented in Lindberg et al. (2015).

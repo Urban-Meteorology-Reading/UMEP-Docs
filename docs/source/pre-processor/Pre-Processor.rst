@@ -7,9 +7,14 @@ Pre-Processor
 
 Meteorological Data: MetPreprocessor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Contributors/Developers：
-  ::
-     Fredrik Lindberg
+* Contributor:
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+
 * Introduction：
 
         + | MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.
@@ -26,22 +31,26 @@ Meteorological Data: MetPreprocessor
 
         .. figure::  /images/MetPreProcessor.jpg
         Interface for inputting an ascii data file into the correct format for SUEWS
-      Dialog sections
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Dialog sections
+
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
-   * - top
-     - input DEM data is specified
-   * - middle upper
-     - input polygon with height data or OSM is specified
-   * - middle
+   * - top left
+     - Select an existing text file with meteorological data at a temporal resolution between 5 min and 180 min (3 hours) that is divisible by 5 min.
+          - Note the model runs at a time step of 5-min.
+          - At least hourly resolution is recommended.
+          - The current version of the SEBE-model (April, 2018) requires hourly data.
+   * - middle left
+     - Specify time-related columns in the imported data file.
+   * - lower left
      - map extent is specified
-   * - middle lower
-     - to specify the output DSM and output resolution
-   * - bottom
-     - to run the calculations
+   * - lower left
+     - Perform quality control (recommended)
+          - Select to perform a simple quality control which will check the input data for unreasonable values of each variable.
+   * - right
+     - Choose columns from imported data file that correspond to the meteorological variables used in UMEP.
 
 * Variables included in UMEP meteorological input file：
          -  if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact
@@ -64,7 +73,7 @@ Meteorological Data: MetPreprocessor
      - Day of year [DOY]
      -
      - 1 to 365
-     -   * - 
+     -   * -
      -
      -
      -
@@ -160,7 +169,7 @@ Meteorological Data: MetPreprocessor
      -
      - \(Observed) soil moisture
      - 0.01 to 0.5
-     -   * - 
+     -   * -
      -
      -
      - [m:sup:`3` m\ :sup:`-3` or kg kg\ :sup:`-1`]
@@ -344,7 +353,7 @@ Spatial Data: DSM Generator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - input DEM data is specified
@@ -415,7 +424,7 @@ Spatial Data: Tree Generator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - input data is specified
@@ -428,10 +437,13 @@ Spatial Data: Tree Generator
 * Necessary attributes:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Tree type
-     - Two different tree types (shapes) are currently included: 1 = conifer and 2 = decidouos.There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.
+     - Two different tree types (shapes) are currently included:
+        - 1 = conifer
+        - 2 = decidouos.
+        - There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.
    * - Total height
      - This is the total height of the tree from the ground (magl).
    * - Trunk height
@@ -514,7 +526,7 @@ Spatial Data: LCZ Converter
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select the LCZ raster layer and the vector grid the land cover fractions should be computed for.
@@ -538,7 +550,7 @@ Spatial Data: LCZ Converter
      - Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - LCZ’s:
      - List of LCZ’s in the raster, ordered by most frequent occurrence. Select the LCZ(s) for which you would like to specify the pervious fraction.
@@ -552,7 +564,7 @@ Spatial Data: LCZ Converter
           -  Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Urban:
      - Select the percentages of each pervious land cover class for all urban LCZ’s.
@@ -597,8 +609,16 @@ Spatial Data: LCZ Converter
 Urban Geometry: Sky View Factor Calculator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg), Sue Grimmond
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Sue Grimmond
+     - Reading
+
+
 
 * Introduction:
      -  The Sky View Factor plugin can be used to generate pixel wise sky view factor (SVF) using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. By definition, SVF is the ratio of the radiation received (or emitted) by a planar surface to the radiation emitted (or received) by the entire hemispheric environment (Watson and Johnson 1987). It is a dimensionless measure between zero and one, representing totally obstructed and free spaces, respectively. The methodology that is used to generate SVF here is described in Lindberg and Grimmond (2010).
@@ -616,7 +636,7 @@ Urban Geometry: Sky View Factor Calculator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - Specify input data
@@ -692,8 +712,14 @@ Urban Geometry: Wall Height and Aspect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+
+
 * Introduction:
     -The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.
 
@@ -752,13 +778,19 @@ Urban Geometry: Wall Height and Aspect
 Urban Land Cover: Land Cover Reclassifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+
+
 * Introduction:
      -  The Land Cover Reclassifier is a simple plugin that can be used to create a UMEP land cover raster grid. The land cover fractions included in UMEP are:
 .. list-table::
    :widths: 33 33 33
-   :header-rows: 1
+   :header-rows: 0
 
    * - 1
      - Paved
@@ -795,19 +827,13 @@ Urban Land Cover: Land Cover Reclassifier
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select raster land cover dataset to be reclassified into the UMEP land cover classes
    * - middle
-     -
-     - Choose interval values to be classified into   * - 
-     -
-     - a certain UMEP land cover class.   * - 
-     - -
-     - Not all lines and boxes need to be filled in, but multiple lines are available   * - 
-     -
-     - in case many different intervals are to be classified as the same land cover class.
+     - Choose interval values to be classified into a certain UMEP land cover class.
+        - Not all lines and boxes need to be filled in, but multiple lines are available in case many different intervals are to be classified as the same land cover class.
    * - lower
      - Specify the output file (.tiff) etc.
 
@@ -829,8 +855,15 @@ Urban Land Cover: Land Cover Reclassifier
 Urban Land Cover: Land Cover Fraction (Point)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg), Niklas Krave (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Niklas Krave
+     - Gothenburg
+
 
 * Introduction:
       - The Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier>`__) from a point location based on a land cover raster grid.
@@ -849,7 +882,7 @@ Urban Land Cover: Land Cover Fraction (Point)
 * Dialog section：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking a location or selecting an existing point from a point vector layer.
@@ -896,8 +929,16 @@ Urban Land Cover: Land Cover Fraction (Point)
 Urban Land Cover: Land Cover Fraction (Grid)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg), Niklas Krave (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Niklas Krave
+     - Gothenburg
+
+
 
 * Introduction:
       - The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <#Urban_Land_Cover:_Land_Cover_Reclassifier>`__) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see *Vector -> Research Tools -> Vector Grid...*).   |
@@ -915,19 +956,16 @@ Urban Land Cover: Land Cover Fraction (Grid)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
-     -
-     - Sets the parameters for the area of interest where the fractions are calculated.   * - 
-     -
-     - You also set the search interval in degrees and from where the search should take place within each grid.
+     - Sets the parameters for the area of interest where the fractions are calculated. You also set the search interval in degrees and from where the search should take place within each grid.
    * - middle
      - Specifies the input data regarding polygon layer and the land cover raster grid that should be used.
    * - lower
      - Specifies output and runs the calculations.
 
-
+* Search Throughout the Grid Extent :
      - Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the **Search distance** can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.
 
      .. figure:: /images/Grid_Extent.png
@@ -979,11 +1017,25 @@ Urban Morphology: Morphometric Calculator (Point)
       -  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]
       -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
+
 * Contributor:
-  ::
-    Fredrik Lindberg (Gothenburg), Christoph Kent (Reading),
-    Brian Offerle (previously Indiana University; Tyrens),
-    Sue Grimmond (Reading), Niklas Krave
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Christoph Kent
+     - Reading
+   * - Brian Offerle
+     - previously Indiana University; Tyrens
+   * - Sue Grimmond
+     - Reading
+   * - Niklas Krave
+     - Gothenburg
+
+
+
 
 * Introduction:
      -  The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.
@@ -1021,13 +1073,13 @@ Urban Morphology: Morphometric Calculator (Point)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
    * - middle upper
-     - -  Set the parameters for the area of interest where the morphometric parameters are calculated.   * - 
-     - -  Set the search interval in degrees.
+     - -  Set the parameters for the area of interest where the morphometric parameters are calculated.
+       -  Set the search interval in degrees.
    * - middle lower
      - Specify the input data regarding buildings and ground.
    * - lower
@@ -1091,11 +1143,25 @@ Urban Morphology: Morphometric Calculator (Grid)
       -  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]
       -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
+
 * Contributor:
-  ::
-    Christoph Kent (Reading),Fredrik Lindberg (Gothenburg),
-    Brian Offerle (previously Indiana University; Tyrens),
-    Sue Grimmond (Reading), Niklas Krave (Gothenburg)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Christoph Kent
+     - Reading
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Brian Offerle
+     - previously Indiana University; Tyrens
+   * - Sue Grimmond
+     - Reading
+   * - Niklas Krave
+     - Gothenburg
+
+
+
 * Introduction:
      -  The Morphometric Calculator (Grid) pre-processor calculates various morphometric parameters based on digital surface models.
 
@@ -1112,12 +1178,11 @@ Urban Morphology: Morphometric Calculator (Grid)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
-     - Specifies the area of interest where the morphometric parameters are calculated.   * - 
-     -   * - 
-     - -  Set the search interval in degrees and from where the search should take place within each grid.
+     - Specifies the area of interest where the morphometric parameters are calculated.
+          -  Set the search interval in degrees and from where the search should take place within each grid.
    * - middle
      - Specifies the input data regarding 3D objects and ground as well as specifying what grid that should be used.
    * - lower
@@ -1194,9 +1259,21 @@ Urban Morphology: Source Area (Point)
       -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
 * Contributor:
-  ::
-    Christoph Kent (Reading), Fredrik Lindberg (Gothenburg),
-    Kormann and Mexiner (2001), Kljun et al. (2015)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Christoph Kent
+     - Reading
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Brian Offerle
+     - previously Indiana University; Tyrens
+   * - Kormann and Mexiner
+     - 2001
+   * - Kljun et al.
+     - 2015
+
 
 
 * Introduction:
@@ -1226,17 +1303,17 @@ Urban Morphology: Source Area (Point)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
    * - middle upper
-     - -  Select if only buildings or both buildings and ground heights are available.   * - 
-     - -  Specify the input data for buildings and ground.
+     - -  Select if only buildings or both buildings and ground heights are available.
+       -  Specify the input data for buildings and ground.
    * - middle upper 2
-     - -  Select if vegetation heights are available.   * - 
-     - -  Specify the input data for buildings and ground.   * - 
-     - -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
+     - -  Select if vegetation heights are available.
+       -  Specify the input data for buildings and ground.
+       -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
    * - middle lower
      - Select input parameters to source area model: specify if a file is used, or values from the dialog box.
    * - lower
@@ -1278,7 +1355,7 @@ Urban Morphology: Source Area (Point)
 * Conditions for analysis:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Parameter/Variable
      - Defintion
@@ -1414,9 +1491,20 @@ Urban Morphology: Source Area (Point)
 SUEWS Prepare
 ~~~~~~~~~~~~~
 * Contributor:
-  ::
-     Niklas Krave (Gothenburg), Fredrik Lindberg (Gothenburg),
-     Frans Olofson (Gothenburg), Sue Grimmond (Reading)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+   * - Niklas Krave
+     - Gothenburg
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Frans Olofson
+     - Gothenburg
+   * - Sue Grimmond
+     - Reading
+   * - Kljun et al.
+
 
 * Introduction:
      - The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <http://urban-climate.net/umep/SUEWS>`__, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.   |

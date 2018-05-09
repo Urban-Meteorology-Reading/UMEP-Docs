@@ -26,22 +26,26 @@ Meteorological Data: MetPreprocessor
 
         .. figure::  /images/MetPreProcessor.jpg
         Interface for inputting an ascii data file into the correct format for SUEWS
-      Dialog sections
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Dialog sections
+
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
-   * - top
-     - input DEM data is specified
-   * - middle upper
-     - input polygon with height data or OSM is specified
-   * - middle
+   * - top left
+     - Select an existing text file with meteorological data at a temporal resolution between 5 min and 180 min (3 hours) that is divisible by 5 min.
+          - Note the model runs at a time step of 5-min.
+          - At least hourly resolution is recommended.
+          - The current version of the SEBE-model (April, 2018) requires hourly data.
+   * - middle left
+     - Specify time-related columns in the imported data file.
+   * - lower left
      - map extent is specified
-   * - middle lower
-     - to specify the output DSM and output resolution
-   * - bottom
-     - to run the calculations
+   * - lower left
+     - Perform quality control (recommended)
+          - Select to perform a simple quality control which will check the input data for unreasonable values of each variable.
+   * - right
+     - Choose columns from imported data file that correspond to the meteorological variables used in UMEP.
 
 * Variables included in UMEP meteorological input file：
          -  if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact
@@ -64,7 +68,7 @@ Meteorological Data: MetPreprocessor
      - Day of year [DOY]
      -
      - 1 to 365
-     -   * - 
+     -   * -
      -
      -
      -
@@ -160,7 +164,7 @@ Meteorological Data: MetPreprocessor
      -
      - \(Observed) soil moisture
      - 0.01 to 0.5
-     -   * - 
+     -   * -
      -
      -
      - [m:sup:`3` m\ :sup:`-3` or kg kg\ :sup:`-1`]
@@ -344,7 +348,7 @@ Spatial Data: DSM Generator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - input DEM data is specified
@@ -415,7 +419,7 @@ Spatial Data: Tree Generator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - input data is specified
@@ -428,10 +432,13 @@ Spatial Data: Tree Generator
 * Necessary attributes:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Tree type
-     - Two different tree types (shapes) are currently included: 1 = conifer and 2 = decidouos.There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.
+     - Two different tree types (shapes) are currently included:
+        - 1 = conifer
+        - 2 = decidouos.
+        - There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.
    * - Total height
      - This is the total height of the tree from the ground (magl).
    * - Trunk height
@@ -514,7 +521,7 @@ Spatial Data: LCZ Converter
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select the LCZ raster layer and the vector grid the land cover fractions should be computed for.
@@ -538,7 +545,7 @@ Spatial Data: LCZ Converter
      - Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - LCZ’s:
      - List of LCZ’s in the raster, ordered by most frequent occurrence. Select the LCZ(s) for which you would like to specify the pervious fraction.
@@ -552,7 +559,7 @@ Spatial Data: LCZ Converter
           -  Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Urban:
      - Select the percentages of each pervious land cover class for all urban LCZ’s.
@@ -616,7 +623,7 @@ Urban Geometry: Sky View Factor Calculator
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - top
      - Specify input data
@@ -758,7 +765,7 @@ Urban Land Cover: Land Cover Reclassifier
      -  The Land Cover Reclassifier is a simple plugin that can be used to create a UMEP land cover raster grid. The land cover fractions included in UMEP are:
 .. list-table::
    :widths: 33 33 33
-   :header-rows: 1
+   :header-rows: 0
 
    * - 1
      - Paved
@@ -795,19 +802,13 @@ Urban Land Cover: Land Cover Reclassifier
 * Dialog sections:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select raster land cover dataset to be reclassified into the UMEP land cover classes
    * - middle
-     -
-     - Choose interval values to be classified into   * - 
-     -
-     - a certain UMEP land cover class.   * - 
-     - -
-     - Not all lines and boxes need to be filled in, but multiple lines are available   * - 
-     -
-     - in case many different intervals are to be classified as the same land cover class.
+     - Choose interval values to be classified into a certain UMEP land cover class.
+        - Not all lines and boxes need to be filled in, but multiple lines are available in case many different intervals are to be classified as the same land cover class.
    * - lower
      - Specify the output file (.tiff) etc.
 
@@ -849,7 +850,7 @@ Urban Land Cover: Land Cover Fraction (Point)
 * Dialog section：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking a location or selecting an existing point from a point vector layer.
@@ -915,19 +916,16 @@ Urban Land Cover: Land Cover Fraction (Grid)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
-     -
-     - Sets the parameters for the area of interest where the fractions are calculated.   * - 
-     -
-     - You also set the search interval in degrees and from where the search should take place within each grid.
+     - Sets the parameters for the area of interest where the fractions are calculated. You also set the search interval in degrees and from where the search should take place within each grid.
    * - middle
      - Specifies the input data regarding polygon layer and the land cover raster grid that should be used.
    * - lower
      - Specifies output and runs the calculations.
 
-
+* Search Throughout the Grid Extent :
      - Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the **Search distance** can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.
 
      .. figure:: /images/Grid_Extent.png
@@ -1021,13 +1019,13 @@ Urban Morphology: Morphometric Calculator (Point)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
    * - middle upper
-     - -  Set the parameters for the area of interest where the morphometric parameters are calculated.   * - 
-     - -  Set the search interval in degrees.
+     - -  Set the parameters for the area of interest where the morphometric parameters are calculated.
+       -  Set the search interval in degrees.
    * - middle lower
      - Specify the input data regarding buildings and ground.
    * - lower
@@ -1112,12 +1110,11 @@ Urban Morphology: Morphometric Calculator (Grid)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
-     - Specifies the area of interest where the morphometric parameters are calculated.   * - 
-     -   * - 
-     - -  Set the search interval in degrees and from where the search should take place within each grid.
+     - Specifies the area of interest where the morphometric parameters are calculated.
+          -  Set the search interval in degrees and from where the search should take place within each grid.
    * - middle
      - Specifies the input data regarding 3D objects and ground as well as specifying what grid that should be used.
    * - lower
@@ -1226,17 +1223,17 @@ Urban Morphology: Source Area (Point)
 * Dialog sections：
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - upper
      - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
    * - middle upper
-     - -  Select if only buildings or both buildings and ground heights are available.   * - 
-     - -  Specify the input data for buildings and ground.
+     - -  Select if only buildings or both buildings and ground heights are available.
+       -  Specify the input data for buildings and ground.
    * - middle upper 2
-     - -  Select if vegetation heights are available.   * - 
-     - -  Specify the input data for buildings and ground.   * - 
-     - -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
+     - -  Select if vegetation heights are available.
+       -  Specify the input data for buildings and ground.
+       -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
    * - middle lower
      - Select input parameters to source area model: specify if a file is used, or values from the dialog box.
    * - lower
@@ -1278,7 +1275,7 @@ Urban Morphology: Source Area (Point)
 * Conditions for analysis:
 .. list-table::
    :widths: 50 50
-   :header-rows: 1
+   :header-rows: 0
 
    * - Parameter/Variable
      - Defintion
