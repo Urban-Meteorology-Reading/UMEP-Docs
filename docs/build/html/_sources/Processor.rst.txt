@@ -334,7 +334,7 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
       -  `MetdataPreprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__, `Download data (WATCH) <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__, `LandCoverReclassifier <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__, `LandCoverFraction (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Point.29>`__, `Image Morphometric Parameters Calculator (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_.28Point.29>`__, `Foot Print Model (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
 
 * Dialog Box：
-    .. figure:: SuewsSimple.png
+    .. figure:: /images/SuewsSimple.png
 
 * Dialog sections：
       .. list-table::

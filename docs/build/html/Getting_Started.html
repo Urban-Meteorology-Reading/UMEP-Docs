@@ -25,28 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="index.html"/>
-        <link rel="next" title="3. Pre-Processor" href="Pre-Processor.html"/>
-        <link rel="prev" title="1. Introduction" href="Introduction.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Pre-Processor" href="Pre-Processor.html" />
+    <link rel="prev" title="1. Introduction" href="Introduction.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -114,7 +106,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">UMEP Manual</a>
@@ -122,9 +114,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -198,7 +191,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li>Start <strong>QGIS</strong></li>
-<li>Go to: <em>Plugins -&gt; Manage and Install Plugins…</em></li>
+<li>Go to: <em>Plugins -&gt; Manage and Install Plugins...</em></li>
 <li>Search for <strong>UMEP</strong></li>
 <li>Click <strong>Install Plugin</strong> (or <em>Upgrade</em> if already have an older version installed from before).</li>
 </ol>
@@ -211,7 +204,7 @@
 <li>If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -&gt; Manage and Install Plugins -&gt; Installed -&gt; UMEP” and click <strong>Uninstall plugin</strong></li>
 <li>To download UMEP from the repository click this <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/downloads">link</a> and download repository</li>
 <li>Close QGIS if open</li>
-<li>Extract the downloaded zip archive into the folder <strong>C:\Users\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
+<li>Extract the downloaded zip archive into the folder <strong>C:\Users\\.qgis2\python\plugins</strong>. If the folder <strong>plugins</strong> does not exist, install any plugin using <em>Plugins -&gt; Manage and Install Plugins</em> and the folder should appear.</li>
 <li>Rename the extracted folder to <strong>UMEP</strong></li>
 <li>Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -&gt; Manage and Install Plugins -&gt; All” and search for UMEP. Make sure that you also tick in the box <em>Show also experimental plugins</em> in the “Settings”-tab.</li>
 </ol>
@@ -250,7 +243,7 @@ make sure <em>pillow</em> is installed.</p>
 <li><p class="first">Linux comes with its own Python installation which QGIS makes use of. This makes it possible to directly use <strong>pip</strong> (an installation tool of Python libraries) to add missing libraries. Simply open a terminal window and type <em>sudo pip install pandas</em> if you want to install this library. In order to install pip open a terminal and type: <em>sudo easy_install pip</em>. You might need to restart QGIS to get it to work.</p>
 </li>
 <li><p class="first">Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a> to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;/usr/local/lib/python2.7/site-packages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -271,7 +264,7 @@ make sure <em>pillow</em> is installed.</p>
 <blockquote>
 <div><p>This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu.</p>
 <p>You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -283,7 +276,7 @@ make sure <em>pillow</em> is installed.</p>
 <p><strong>PLEASE NOTICE!</strong></p>
 <p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong> library has a version conflict related to the <strong>numpy</strong> version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.
 We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to <strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run the two following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">netCDF4</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">netCDF4</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="n">netCDF4</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">9</span>
 </pre></div>
 </div>
@@ -310,7 +303,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 <blockquote>
 <div><p>to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
 <strong>scipy</strong>. An example of startup.py may look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;/usr/local/lib/python2.7/site-packages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -323,9 +316,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -347,7 +338,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -366,6 +357,7 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -383,14 +375,13 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

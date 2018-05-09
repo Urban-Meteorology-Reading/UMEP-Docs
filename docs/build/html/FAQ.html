@@ -25,28 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="index.html"/>
-        <link rel="next" title="11. Abbreviations" href="Abbreviations.html"/>
-        <link rel="prev" title="9. Known Issues" href="Known_Issues.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11. Abbreviations" href="Abbreviations.html" />
+    <link rel="prev" title="9. Known Issues" href="Known_Issues.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -111,7 +103,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">UMEP Manual</a>
@@ -119,9 +111,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -165,13 +158,122 @@
             
   <div class="section" id="faq-frequently-asked-questions">
 <span id="faq"></span><h1>10. FAQ (Frequently Asked Questions)<a class="headerlink" href="#faq-frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><dl class="first docutils">
+<dt>How do I upgrade the plugin?</dt>
+<dd><ul class="first last simple">
+<li>When a new LTR version is released it will be available from the repository. In QGIS to check for updates, go to <em>Plugins&gt;Manage and Install Plugins...</em>. If the UMEP plugin is in bold, a new version is available. On how to upgrade to the development version, see <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How do I uninstall the plugin?</dt>
+<dd><ul class="first last simple">
+<li>Go to <em>Plugins&gt;Manage and Install Plugins...</em>. Locate the UMEP plugin and click <em>Uninstall</em>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How do I install other python packages (e.g. pandas) as well as other libraries not included in the Desktop Express Install of QGIS?</dt>
+<dd><ul class="first last simple">
+<li>Follow the instruction from this <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities">link</a>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>MY new raster is just black after using e.g. the <em>Wall Height and Aspect</em> plugin. What is wrong?</dt>
+<dd><ul class="first last simple">
+<li>Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Can the UMEP-plugin be used when <strong>Nodata</strong>-values are present in the input rasters?</dt>
+<dd><ul class="first last simple">
+<li>Yes, it can but we strongly recommend you to reclassify Nodata values to e.g. 0 before using them in UMEP. Here is a forum discussion that can help: <a class="reference external" href="https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis">https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Why is UMEP having problems saving output files?</dt>
+<dd><ul class="first last simple">
+<li>Check that your path contains only English characters. For Mac users: the UMEP graphical interface will occasionally want to create a folder instead of selecting a folder. In this case in <em>Save As:</em> write the folder name you would like to save your output, press <em>Save</em>, when it asks <em>“...folder name...” already exists. Do you want to replace it?</em> press <em>Replace</em>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How is frontal area index calculated in <em>Image Morphometric Parameters</em> plugins?</dt>
+<dd><ul class="first last simple">
+<li>Our method is only using one line through the center of the grid for each wind direction. This is because we rotate the DSM and hence it is only the center line that includes height information. We do this since we are using a pure raster-based approach and if we were to instead rotate the search direction vector we would end up with different lengths for each wind direction. If you want to investigate a certain wind direction I suggest that you use a section of wind directions; e.g. 45 degrees.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How do I report a bug?</dt>
+<dd><ul class="first last simple">
+<li>Report it at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>What can UMEP do?</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Tool_Architecture">Tool Architecture</a> provides an overview</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Who has developed this?</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#People_Involved_.26_Acknowledgements">People</a> involved in development</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>What are the development guidelines?</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://urban-climate.net/umep/DevelopmentGuidelines">http://urban-climate.net/umep/DevelopmentGuidelines</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How can I uninstall QGIS?</dt>
+<dd><ul class="first simple">
+<li>Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose <em>Advanced install</em>. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to <em>Desktop</em> until <em>Uninstall</em> is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under <em>C:\OSGeo4W64</em>).</li>
+</ul>
+<blockquote class="last">
+<div><div class="figure">
+<img alt="_images/uninstall.png" src="_images/uninstall.png" />
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>How do I ask other questions?</dt>
+<dd><ul class="first last simple">
+<li>There is an email list. Or you can ask them at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -193,7 +295,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -212,6 +314,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -229,14 +332,13 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

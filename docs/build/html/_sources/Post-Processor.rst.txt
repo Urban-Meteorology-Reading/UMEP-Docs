@@ -145,7 +145,7 @@ Urban Energy Balance: SUEWS Analyser
               -  SUEWS Analyzer
 
 * Dialog box  :
-      .. figure:: /IMAGES/SUEWSAnalyzer.png
+      .. figure:: /images/SUEWSAnalyzer.png
 
 * Dialog sections  :
 +----------+----------------------------------------------------------------------------------------------+
@@ -257,8 +257,8 @@ Benchmark System
 * Usage:
     -  To use BSS, in addition to the mandatory BSS files (i.e., Benchmark\_SUEWS.py, benchmark.nml and head-2016to2017.xlsx), the SUEWS output results are required to be placed in a separate folder (e.g., “input”) that contains the sub-folders of results produced by different configurations. A sample layout of the BSS test case refers to Fig. 2. It must be noted that the output files to be benchmarked should be of consistent temporal organisation (i.e., identical length and resolution) while the headers of different files are not necessarily to be identical as BSS will handle the header inconsistency automatically. Besides, two sub-folders, “base” and “ref”, which contain the baseline results to be tested against and reference results to be compared with, respectively, must exist otherwise the BSS will stop.   |
     -   When the SUEWS output files are prepared, the namelist (i.e., benchmark.nml) needs to be set for the benchmarking. The benchmark namelist is fairly self-explanatory and consists two sections, “file” and “benchmark”, to play with. One tip is about the variable list (i.e., var\_list): if one non-string value is set (e.g., 123, 3.2, etc.), all valid variables will be included in the benchmarking. Then the user can execute the Benchmark\_SUEWS.py script and a PDF file with benchmark results will be generated (e.g., benchmark.pdf in Fig. 2).
-        .. figure:: /IMAGES/300px-BSS-file-layout.png
-        Figure 2: Required file organisation by BSS.
+          .. figure:: /IMAGES/300px-BSS-file-layout.png
+          Figure 2: Required file organisation by BSS.
 * Namelist: benchmark.nml:
      -  The benchmark namelist is fairly self-explanatory and consists two sections, “file” and “benchmark”, to play with.
      -  One tip is about the variable list (i.e., var\_list): if one non-string value is set (e.g., 123, 3.2, etc.), all valid variables will be included in the benchmarking.
