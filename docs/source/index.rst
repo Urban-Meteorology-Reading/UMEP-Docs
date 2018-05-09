@@ -94,8 +94,7 @@ contributions from others. There are two main ways to contribute:
 
 It is also possible to contribute by writing `tutorials and
 guidelines <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__ for
-other users to give examples of the many application possibilities of
-UMEP.
+other users to give examples of the many application possibilities of UMEP.
 
 .. toctree::
    :maxdepth: 2
@@ -111,7 +110,7 @@ UMEP.
    People_Involved_&_Acknowledgements
    Tutorials
    How_to_Contribute
-   Reporting a Bug
+
    Known_Issues
    FAQ
    Abbreviations

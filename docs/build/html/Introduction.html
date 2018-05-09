@@ -173,7 +173,7 @@ climatologists, and meteorologists. This tool can be used for a variety
 of applications related to outdoor thermal comfort, urban energy
 consumption, climate change mitigation etc. <strong>UMEP</strong> consists of a
 coupled modelling system which combines “state of the art” 1D and 2D
-models related to the processes essential for urban climate
+models related to the processes essen tial for urban climate
 interactions.</p>
 <p><strong>UMEP</strong> is a <a class="reference external" href="http://urban-climate.net/umep/People">community</a> open
 source model that users can contribute to improve and extend the
@@ -218,6 +218,168 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>IMPORTANT!</strong> It is strongly recommended to transform all geodatasets
 into the same projected coordinate system (CRS) before any processing
 starts.</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>UMEP</strong></th>
+<th class="head">Description/<em>Applications</em></th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Pre-Processor</strong></td>
+<td>Meteorological Data</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor">Prepare Existing Data</a></td>
+<td>Transforms meteorological data into UMEP format</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29">Download data (WATCH)</a></td>
+<td>Prepare meteorological dataset from <a class="reference external" href="http://www.eu-watch.org/data_availability">WATCH</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Spatial Data</td>
+<td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_Spatial_Data_Downloader">Spatial Data Downloader</a></td>
+<td>Plugin for retrieving geodata from online services suitable for various UMEP related tools</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_DSM_Generator">DSM generator</a></td>
+<td>Creation/manipulation of a DSM based on user-specified building footprint vector data and/or <a class="reference external" href="http://www.openstreetmap.org">Open Street Map</a> data (if available)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_Tree_Generator">Tree generator</a></td>
+<td>Creation/manipulation of vegetation input data</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_LCZ_Converter">LCZ Converter</a></td>
+<td>Conversion from Local Climate Zones (LCZs) in the WUDAPT database into SUEWS input data</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Urban geometry</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Sky_View_Factor_Calculator">Sky View Factor</a></td>
+<td>Calculation of continuous maps of Sky View Factors (SVF) based on high resolution digital surface models (DSM). <em>Solar access, urban heat island</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">Wall Height and Aspect</a></td>
+<td>Calculation of height and aspect of building walls based on a DSM</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Urban land cover</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a></td>
+<td>Reclassifies a grid into UMEP format land cover grid. <em>Land surface models</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Fraction (Point)</a></td>
+<td>Land cover fractions estimates from a land cover grid based on a specific point in space</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Grid.29">Land Cover Fraction (Grid)</a></td>
+<td>Land cover fractions estimates from a land cover grid based on a polygon grid</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Urban Morphology</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Point.29">Morphometric Calculator (Point)</a></td>
+<td>Morphometric parameters from a DSM based on a specific point in space</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Grid.29">Morphometric Calculator (Grid)</a></td>
+<td>Morphometric parameters estimated from a DSM based on a polygon grid</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29">Source Area Model (Point)</a></td>
+<td>Source area calculated from a DSM based on a specific point in space. <em>Interpretation of observations</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_SUEWS_Prepare">SUEWS Prepare</a></td>
+<td>Preprocessing and preparing input data for the SUEWS model</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>Processor</strong></td>
+<td>Outdoor Thermal Comfort</td>
+<td>Comfort Index (PET/UTCI)</td>
+<td>Spatial variations of thermal comfort indices in complex urban environments</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_SOLWEIG">Mean Radiant Temperature (SOLWEIG)</a></td>
+<td>Spatial variations of T<sub>mrt</sub> in complex urban environments. <em>Human Health: Outdoor thermal comfort; Park planning; Heat/Health warning; Daily Operations: visitors to parks</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Pedestrian Wind Speed</td>
+<td>Spatial variations of pedestrian wind speed in complex urban environments</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_ExtremeFinder">ExtremeFinder</a></td>
+<td>Identify heat waves and cold waves for a certain location. <em>Human Health: Outdoor thermal comfort; Daily City Operations: Energy use; Gas consumption</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Urban Energy Balance</td>
+<td>Anthropogenic Heat (Q:sub:<code class="xref any docutils literal"><span class="pre">F</span></code>) (LQF)</td>
+<td>Spatial variations anthropogenic heat release for urban areas</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_GQF">GQF</a></td>
+<td>Anthropogenic Heat (Q:sub:<code class="xref any docutils literal"><span class="pre">F</span></code>). <em>Daily City Operations: Energy use; Gas consumption; Traffic heat loads</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2C_simple.29">SUEWS (Simple)</a></td>
+<td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29">SUEWS (Advanced)</a></td>
+<td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Solar Radiation</td>
+<td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Solar_Energy_on_Building_Envelopes_.28SEBE.29">Solar Energy on Building Envelopes (SEBE)</a></td>
+<td>Solar irradiance on building roofs and walls in urban environments. <em>Economy and planning: Energy production, resource planning</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Daily_Shadow_Pattern">Daily Shadow Patterns</a></td>
+<td>Shadow patterns on a DSM and CDSM. <em>Economy and planning: Resource planning Human Health: Outdoor thermal comfort; Park planning</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>Post-Processor</strong></td>
+<td>Solar Radiation</td>
+<td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_SEBE_.28Visualisation.29">SEBE Visualisation</a></td>
+<td>Visualisation of solar irradiation on building roofs and walls based on SEBE model results</td>
+</tr>
+<tr class="row-even"><td>Outdoor Thermal Comfort</td>
+<td><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_SOLWEIG_Analyzer">SOLWEIG analyzer</a></td>
+<td>Plugin for plotting, statistical analysis and post-processing of model results from SOLWEIG</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Urban Energy Balance</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_SUEWS_Analyser">SUEWS analyser</a></td>
+<td>Plugin for plotting and statistical analysis of model results from SUEWS simple and SUEWS advanced</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Benchmark</td>
+<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Benchmark_System">Benchmark System</a></td>
+<td>For statistical analysis of model results, such as SUEWS</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="tool-applications">
 <h2>1.4. Tool Applications<a class="headerlink" href="#tool-applications" title="Permalink to this headline">¶</a></h2>
@@ -230,14 +392,14 @@ you can find some examples on applications and workflows for the
 modelling procedure in UMEP and what tools that are connected to each
 other.</p>
 <div class="figure" id="id2">
-<img alt="centre| Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="SUEWSworkflow.png" />
+<img alt="centre| Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="_images/SUEWSworkflow.png" />
 <p class="caption"><span class="caption-text">centre| Workflow and geodata used for analysing urban energy balance
 using the SUEWS model. Bold outlined boxes are mandatory items.
 Yellow, orange and red indicates pre-processor, processor and
 post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 </div>
 <div class="figure" id="id3">
-<img alt="centre| Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="SOLWEIGworkflow.png" />
+<img alt="centre| Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="_images/SOLWEIGworkflow.png" />
 <p class="caption"><span class="caption-text">centre| Workflow and geodata used for analysing mean radiant
 temperature using the SOLWEIG model. Bold outlines are mandatory
 items. Yellow, orange and red indicates pre-processor, processor and
@@ -247,6 +409,356 @@ post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 <a class="reference external" href="http://www.urban-climate.net/umep/Example_Applications">here</a>.</p>
 <div class="section" id="evaluation-and-application-studies">
 <h3>1.4.1. Evaluation and application studies<a class="headerlink" href="#evaluation-and-application-studies" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>Mean Radiant Temperature (<a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">SOLWEIG</a>)</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-008-0162-7">Lindberg et al. (2008)</a></td>
+</tr>
+<tr class="row-odd"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00704-010-0382-8">Lindberg and Grimmond (2011)</a></td>
+</tr>
+<tr class="row-even"><td>Freiburg, Germany</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00704-010-0382-8">Lindberg and Grimmond (2011)</a></td>
+</tr>
+<tr class="row-odd"><td>Kassel, Germany</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00704-010-0382-8">Lindberg and Grimmond (2011)</a></td>
+</tr>
+<tr class="row-even"><td>London, UK</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-016-1135-x">Lindberg et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Hong Kong, China</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0378778815300645">Lau et al. (2016)</a></td>
+</tr>
+<tr class="row-even"><td>Shanghai, China</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S037877881630812X">Chen et al. (2016)</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>References: Application</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>London, UK</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s11252-011-0184-5">Lindberg and Grimmond (2011)</a></td>
+</tr>
+<tr class="row-odd"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-013-0638-y">Lindberg et al. (2013)</a></td>
+</tr>
+<tr class="row-even"><td>Stockholm, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-013-0638-y">Lindberg et al. (2013)</a></td>
+</tr>
+<tr class="row-odd"><td>Luleå, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-013-0638-y">Lindberg et al. (2013)</a></td>
+</tr>
+<tr class="row-even"><td>Adelaide, Australia</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S1618866716301297">Thom et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Berlin, Germany</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095515300341">Jänicke et al. (2015)</a></td>
+</tr>
+<tr class="row-even"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-014-0898-1">Lau et al. (2014)</a></td>
+</tr>
+<tr class="row-odd"><td>Frankfurt, Germany</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-014-0898-1">Lau et al. (2014)</a></td>
+</tr>
+<tr class="row-even"><td>Porto, Portugal</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00484-014-0898-1">Lau et al. (2014)</a></td>
+</tr>
+<tr class="row-odd"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2210670716300579">Lindberg et al. (2016)</a></td>
+</tr>
+<tr class="row-even"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.2231/abstract">Thorsson et al. (2011)</a></td>
+</tr>
+<tr class="row-odd"><td>Stockholm, Sweden</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095514000054">Thorsson et al. (2014)</a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pedestrian Wind Speed</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Global</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00704-015-1405-2">Johansson et al. (2015)</a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Anthropogenic Heat (Qf) (LUCY)</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Global</td>
+<td><a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.2210/abstract">Allen et al. (2011)</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>References: Application</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Europe</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095513000059">Lindberg et al. (2013)</a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Urban Energy and Water Balance (<a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS</a>)</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Vancouver, Canada</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0022169411006937">Järvi et al. (2011)</a></td>
+</tr>
+<tr class="row-odd"><td>Los Angeles, USA</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0022169411006937">Järvi et al. (2011)</a></td>
+</tr>
+<tr class="row-even"><td>Helsinki, Finland</td>
+<td><a class="reference external" href="http://www.geosci-model-dev.net/7/1691/2014/">Järvi et al. (2014)</a></td>
+</tr>
+<tr class="row-odd"><td>Montreal, Canada</td>
+<td><a class="reference external" href="http://www.geosci-model-dev.net/7/1691/2014/">Järvi et al. (2014)</a></td>
+</tr>
+<tr class="row-even"><td>Dublin, Ireland</td>
+<td><a class="reference external" href="http://dx.doi.org/10.1016/j.uclim.2015.05.001">Alexander et al. (2015)</a></td>
+</tr>
+<tr class="row-odd"><td>Swindon, UK</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095516300256">Ward et al. (2016)</a></td>
+</tr>
+<tr class="row-even"><td>London, UK</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095516300256">Ward et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Helsinki, Finlamd</td>
+<td><a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/qj.2659/full">Karsisto et al. (2016)</a></td>
+</tr>
+<tr class="row-even"><td>Shanghai, China</td>
+<td>(Radiation) <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/JAMC-D-16-0082.1">Ao et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Sacramento, US</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095514000856">Onomura et al. (2015)</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>References: Application</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>London, UK</td>
+<td>Ward and Grimmond (2017)</td>
+</tr>
+<tr class="row-odd"><td>Helsinki, Finland</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S221209551500019X">Nordbo et al. (2015)</a></td>
+</tr>
+<tr class="row-even"><td>Dublin, Ireland</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0169204616000128">Alexander et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Porto, Portugal</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0048969716312086">Rafael et al. (2016)</a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solar Energy on Building Envelopes (SEBE)</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0038092X15001164">Lindberg et al. (2015)</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>References: Application</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Dar es Salam, Tanzania</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2210670716304267">Lau et al. (2016)</a></td>
+</tr>
+<tr class="row-odd"><td>Stockholm, Sweden</td>
+<td><a class="reference external" href="http://www.energiradgivningen.se/sites/all/themes/energi/map/index.html">Online mapping service (in Swedish)</a></td>
+</tr>
+<tr class="row-even"><td>Uppsala, Sweden</td>
+<td><a class="reference external" href="http://ec2-54-77-203-12.eu-west-1.compute.amazonaws.com/uppsala/">Online mapping service (in Swedish)</a></td>
+</tr>
+<tr class="row-odd"><td>Gothenburg, Sweden</td>
+<td><a class="reference external" href="http://www.goteborgenergi.se/Privat/Projekt_och_etableringar/Fornybar_energi/Solceller/Solkartan/">Online mapping service (in Swedish)</a></td>
+</tr>
+<tr class="row-even"><td>Eskilstuna, Sweden</td>
+<td><a class="reference external" href="http://karta.eskilstuna.se/eskilstunakartan/x/#maps/1069">Online mapping service (in Swedish)</a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Daily Shadow Patterns</dt>
+<dd><ul class="first simple">
+<li>References: Evaluation</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Borås, Sweden</td>
+<td><a class="reference external" href="http://link.springer.com/article/10.1007/s00704-015-1508-9">Hu et al. (2015)</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>References: Application</li>
+</ul>
+<table border="1" class="colwidths-given last docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Spatial reference</th>
+<th class="head">Reference</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>London, UK</td>
+<td><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S221209551400090X">Lindberg et al. (2015)</a></td>
+</tr>
+<tr class="row-odd"><td>Gothenburg, Sweden</td>
+<td><p class="first"><a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0266352X11000693">Lindberg et al. (2011)</a></p>
+<blockquote class="last">
+<div><div class="figure">
+<img alt="_images/Header_umep.png" src="_images/Header_umep.png" />
+</div>
+<p>Source area modelling with UMEP</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 </div>
 </div>

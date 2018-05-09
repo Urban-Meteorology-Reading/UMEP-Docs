@@ -1,1 +1,0 @@
-.. _Reporting a Bug:
