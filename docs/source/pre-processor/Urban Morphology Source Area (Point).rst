@@ -9,7 +9,10 @@ Urban Morphology: Source Area (Point)
 * Contributor:
 .. list-table::
    :widths: 50 50
-   :header-rows: 0
+   :header-rows: 1
+
+   * - Name
+     - Institution
 
    * - Christoph Kent
      - Reading

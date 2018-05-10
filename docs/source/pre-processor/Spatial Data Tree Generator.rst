@@ -5,6 +5,9 @@ Spatial Data: Tree Generator
 .. list-table::
    :widths: 50 50
    :header-rows: 0
+   
+   * - Name
+     - Institution
 
    * - Fredrik Lindberg
      - Gothenburg

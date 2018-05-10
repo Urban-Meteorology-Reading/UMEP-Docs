@@ -3,7 +3,10 @@ Meteorological Data: Download data (WATCH)
 * Contributors：
 .. list-table::
    :widths: 50 50
-   :header-rows: 0
+   :header-rows: 1
+
+   * - Name
+     - Institution
 
    * - Andy Gabey
      - Reading

@@ -246,4 +246,3 @@ Authors of this document: Kent, Grimmond (2016). Lindberg
 `UMEP Repository <https://bitbucket.org/fredrik_ucg/umep/>`__
 
 .. |UMEP\_location.png| image:: UMEP_location.png
-

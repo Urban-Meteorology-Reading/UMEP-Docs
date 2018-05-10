@@ -83,7 +83,7 @@ make sure *pillow* is installed.
                 ::
                    pip uninstall netCDF4
                    pip install netCDF4==1.2.9
-                .. figure::  /images/pandas.png
+                .. figure::  /images/Pandas.png
                 **Installation of pandas**
 
 
@@ -95,6 +95,3 @@ make sure *pillow* is installed.
           ::
              import sys
              sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
-
-
-  

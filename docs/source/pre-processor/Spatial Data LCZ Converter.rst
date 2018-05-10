@@ -1,11 +1,22 @@
 
 Spatial Data: LCZ Converter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Contributors:
-  ::
-      Natalie Theeuwes (University of Reading),
-      Andy Gabey (Reading), Fredrik Lindberg (Gothenburg),
-      Sue Grimmond (Reading)
+* Contributor:
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Name
+     - Institution
+   * - Natalie Theeuwes
+     - Reading
+   * - Andy Gabey
+     - Reading
+   * - Fredrik Lindberg
+     - Gothenburg
+   * - Sue Grimmond
+     - Reading
+
 * Introduction:
     - The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the `WUDAPT portal <http://www.wudapt.org/>`__. The local climate zone are urban area classified based on the `Stewart and Oke (2012) <http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1>`__ scheme.
 

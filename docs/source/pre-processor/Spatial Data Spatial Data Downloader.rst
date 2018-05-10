@@ -7,6 +7,9 @@ Spatial Data: Spatial Data Downloader
    :widths: 50 50
    :header-rows: 0
 
+   * - Name
+     - Institution
+
    * - Andy Gabey
      - Reading
 
