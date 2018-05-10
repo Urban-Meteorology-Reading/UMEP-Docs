@@ -19,11 +19,7 @@ stability, turbulence characteristics (friction velocity, variance of
 the lateral or crosswind wind velocity) and roughness parameters. Kljun
 et al. (2015) requires the boundary layer height.
 
-.. figure:: /images/ReadingSourceArea.png
-   :alt:  Example result
-   :width: 1100px
-
-
+    .. figure:: /images/ReadingSourceArea.png
 
 Initial Practical steps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,7 +80,7 @@ Prior to Starting
    -  Go to: Layer > Add layer > Add Raster Layer > Locate downloaded
       files
 
-      .. figure:: /images/Add_Raster_Layer.png
+        .. figure:: /images/Add_Raster_Layer.png
 
 
 -  Have a look at the **layers** (see lower left) - if you untick the
@@ -100,8 +96,8 @@ Source Area Modelling
 #. To access the Source area model or Footprint model:
 
    -  UMEP -> Pre-processor > Urban Morphology > Source Area Model
-      (Point) `this appears like this <Media:UMEP_location.png>`__
-          figure:: /IMAGES/750px-Footprint1.png
+      (Point) `this appears like this <Media:/images/UMEP_location.png>`__
+                .. figure:: /images/750px-Footprint1.png
 
 
            #. Click on *Select Point on Canvas* – then select a point (*e.g. where an Eddy Covariance (EC) tower site is located*)
