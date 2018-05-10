@@ -25,20 +25,29 @@
   
 
   
+  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Processor" href="../processor/Processor.html" />
-    <link rel="prev" title="3.14. Urban Morphology: Morphometric Calculator (Point)" href="Urban Morphology Morphometric Calculator (Point).html" /> 
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/>
+        <link rel="up" title="3. Pre-Processor" href="Pre-Processor.html"/>
+        <link rel="next" title="4. Processor" href="../processor/Processor.html"/>
+        <link rel="prev" title="3.14. Urban Morphology: Morphometric Calculator (Point)" href="Urban Morphology Morphometric Calculator (Point).html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -104,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../post-processor/Post-Processor.html">Post-Processor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">5. People Involved &amp; Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">6. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">6. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">8. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">9. FAQ (Frequently Asked Questions)</a></li>
@@ -120,7 +129,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -128,10 +137,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -356,7 +364,7 @@
 <dt>Use Input File on Specify Input Parameters:</dt>
 <dd><ul class="first">
 <li><p class="first">An input text file (.txt or .csv) containing the required inputs to the model (see below) with associated time stamps. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">iy</span> <span class="nb">id</span> <span class="n">it</span> <span class="n">imin</span> <span class="n">z_0_input</span> <span class="n">z_d_input</span> <span class="n">z_m_input</span> <span class="n">sigv</span> <span class="n">Obukhov</span> <span class="n">ustar</span> <span class="nb">dir</span> <span class="n">h</span> <span class="n">por</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iy</span> <span class="nb">id</span> <span class="n">it</span> <span class="n">imin</span> <span class="n">z_0_input</span> <span class="n">z_d_input</span> <span class="n">z_m_input</span> <span class="n">sigv</span> <span class="n">Obukhov</span> <span class="n">ustar</span> <span class="nb">dir</span> <span class="n">h</span> <span class="n">por</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">1.1671</span> <span class="mf">8.1697</span> <span class="mf">50.3</span> <span class="mf">1.4805</span> <span class="o">-</span><span class="mf">5457.9644</span> <span class="mf">0.8460</span> <span class="mf">193.8650</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">30</span> <span class="mf">1.4007</span> <span class="mf">9.8050</span> <span class="mf">50.3</span> <span class="mf">0.9616</span> <span class="mf">1081.7260</span> <span class="mf">0.5046</span> <span class="mf">185.5874</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
 <span class="mi">2014</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">1.3738</span> <span class="mf">9.6168</span> <span class="mf">50.3</span> <span class="mf">0.9870</span> <span class="mf">854.9901</span> <span class="mf">0.4849</span> <span class="mf">189.0444</span> <span class="mf">1000.0000</span> <span class="mf">60.0000</span>
@@ -387,10 +395,10 @@
 <td>Defintion</td>
 </tr>
 <tr class="row-even"><td>Roughness Length for Momentum</td>
-<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) for this wind direction [m].</td>
+<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) for this wind direction [m].</td>
 </tr>
 <tr class="row-odd"><td>Zero Displacement Height for Momentum</td>
-<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) for this wind direction. [m].</td>
+<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) for this wind direction. [m].</td>
 </tr>
 <tr class="row-even"><td>Measurement Height</td>
 <td>Height of sensor above ground level [m].</td>
@@ -430,7 +438,7 @@
 <li><dl class="first docutils">
 <dt>Roughness Calculation Method:</dt>
 <dd><ul class="first simple">
-<li>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) and roughness length (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) are available.</li>
+<li>Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) and roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) are available.</li>
 </ul>
 <table border="1" class="colwidths-given last docutils">
 <colgroup>
@@ -512,10 +520,10 @@ weighted as a percentage of the pixel of maximum contribution.</p>
 <li><p class="first">A text file which specifies the time dimensions of measurements, the
 initial aerodynamic and meteorological parameters which were input to
 the model and finally the weighted geometry in the footprint and thus
-the newly calculated roughness length (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) and displacement
-height (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) according to the user specified method. This is of
+the newly calculated roughness length (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">0</span></code>) and displacement
+height (z:sub:<code class="xref any docutils literal notranslate"><span class="pre">d</span></code>) according to the user specified method. This is of
 the form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>“iy id it imin z_0_input z_d_input z_m_input sigv Obukhov
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“iy id it imin z_0_input z_d_input z_m_input sigv Obukhov
  ustar dir fai pai zH zMax zSdev zd z0”
 
  [Header: year, day of year, hour, minutes of averaging period,
@@ -612,7 +620,9 @@ area index. <a class="reference external" href="http://link.springer.com/article
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -634,7 +644,7 @@ area index. <a class="reference external" href="http://link.springer.com/article
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -653,7 +663,6 @@ area index. <a class="reference external" href="http://link.springer.com/article
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -671,13 +680,14 @@ area index. <a class="reference external" href="http://link.springer.com/article
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

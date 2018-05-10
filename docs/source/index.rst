@@ -77,8 +77,7 @@ will fail, e.g. LQf.
 We have submitted an issue regarding this to the QGIS community.
 Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to
 **1.2.9**. This is easiest done by opening the **OSGeo4W shell** and run
-the two following commands:
-::
+the two following commands::
     pip uninstall netCDF4
     pip install netCDF4==1.2.9
 
@@ -105,12 +104,10 @@ other users to give examples of the many application possibilities of UMEP.
    Getting_Started
    pre-processor/Pre-Processor
    processor/Processor
-   post-processor/Post-Processor
-
+   post_processor/Post-Processor
    People_Involved_&_Acknowledgements
    Tutorials/Tutorials
    How_to_Contribute
-
    Known_Issues
    FAQ
    Abbreviations
