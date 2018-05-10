@@ -108,7 +108,7 @@ other users to give examples of the many application possibilities of UMEP.
    post-processor/Post-Processor
 
    People_Involved_&_Acknowledgements
-   Tutorials
+   Tutorials/Tutorials
    How_to_Contribute
 
    Known_Issues

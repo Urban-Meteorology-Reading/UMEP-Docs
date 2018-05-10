@@ -84,6 +84,9 @@ rst_prolog = """
 .. |W^-1| replace:: W\ :sup:`-1`
 .. |h^-1| replace:: h\ :sup:`-1`
 .. |QF| replace:: Q\ :sub:`F`
+.. |GQF| replace:: GQ\ :sub:`F`
+.. |LQF| replace:: LQ\ :sub:`F`
+
 
 
 """

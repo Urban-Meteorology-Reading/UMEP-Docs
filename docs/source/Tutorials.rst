@@ -20,7 +20,7 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Application
    * - Source Area Footprint
      - Pre-Processor
-     - `Footprint <http://www.urban-climate.net/umep/UMEP/_Tutorials/_Footprint>`__
+     - `Footprint <Footprint>`__
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor
@@ -40,10 +40,10 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Mean radiation temperature modelling in complex urban settings
    * - Anthropogenic heat
      - Processor
-     - `GQ\ :sub:`F` <UMEP_Manual/_Tutorials/GQF>`__
+     - |GQF| **<UMEP_Manual/_Tutorials/GQF>**
      - Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)
 
    * - Anthropogenic heat
      - Processor
-     - `LQ\ :sub:`F` <UMEP_Manual/_Tutorials/LQF>`__
+     - |LQF| **<UMEP_Manual/_Tutorials/LQF>**
      - Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)
