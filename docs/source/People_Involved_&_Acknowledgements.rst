@@ -17,7 +17,7 @@ People Involved & Acknowledgements
    * - Group
      - Institution
      - Team
-     - Acknowledged
+     - Acknowledgement
    * - Sue Grimmond
      - *University of Reading, UK*
      - - Christoph W. Kent
