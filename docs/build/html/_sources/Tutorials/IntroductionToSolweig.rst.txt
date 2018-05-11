@@ -30,7 +30,7 @@ a schematic flowchart of SOLWEIG in shown. The `full
 manual <http://www.urban-climate.net/umep/SOLWEIG>`__ provides more
 detail.
 
-.. figure:: SOLWEIG_flowchart.png
+.. figure:: /images/SOLWEIG_flowchart.png
    :alt:  Figure 1: Overview of SOLWEIG
 
     Figure 1: Overview of SOLWEIG
@@ -105,40 +105,80 @@ appropriate values if applicable. The table below provides an overview
 of the parameters that can be modified in the Simple application of
 SOLWEIG.
 
--  R: required O: Optional N : not needed
+*  R: required O: Optional N : not needed
 
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Type                                                                     | Definition                                                                                   | Use   | Reference/Comments                                                                                                                       |
-+==========================================================================+==============================================================================================+=======+==========================================================================================================================================+
-| **Spatial data**                                                         |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Ground and building DSM (DSDM)                                           | High resolution surface model of ground and building heights                                 | R     | Given in metres above sea level (m asl)                                                                                                  |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Digital elevation model (DEM)                                            | High resolution surface model of the ground                                                  | R\*   | R\* if land cover is absent to identify buildings. Given in m asl. Must be same resolution as the DSM.                                   |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Digital canopy surface model (CDSM)                                      | High resolution surface model of 3D vegetation                                               | O     | Given in metres above ground level (m agl). Must be same resolution as the DSM.                                                          |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Digital trunk zone surface model (TDSM)                                  | High resolution surface model of trunk zone heights (underneath tree canopy)                 | O     | Given in m agl. Must be same resolution as the DSM.                                                                                      |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Land (ground) cover information (LC)                                     | High resolution surface model of ground cover                                                | O     | Must be same resolution as the DSM. Five different ground covers are currently available (building, paved, grass, bare soil and water)   |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **Meteorological data**                                                  |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| UMEP formatted meteorological data                                       | Meteorological data from one nearby observation station, preferably at 1-2 m above ground.   | R     | Any time resolution can be given.                                                                                                        |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **Other**                                                                |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Latitude (°)                                                             | Solar related calculations                                                                   | R     | Obtained from the ground and building CRS                                                                                                |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Longitude (°)                                                            | Solar related calculations                                                                   | R     | Obtained from the ground and building CRS                                                                                                |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| `UTC (h) <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`__   | Time zone                                                                                    | R     | Influences solar related calculations. Set in the interface of the model.                                                                |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Human exposure parameters                                                | Absorption of radiation and posture                                                          | R     | Set in the interface of the model.                                                                                                       |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Environmental parameters                                                 | e.g. albedos and emissivites of surrounding urban fabrics                                    | R     | Set in the interface of the model.                                                                                                       |
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
-+--------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
+* **Spatial data**
+        .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+
+         * - Type
+           - Definition
+           - Use
+           - Reference/Comments
+         * - Ground and building DSM (DSDM)
+           - High resolution surface model of ground and building heights
+           - R
+           - Given in metres above sea level (m asl)
+         * - Digital elevation model (DEM)
+           - High resolution surface model of the ground
+           - R\*
+           - R\* if land cover is absent to identify buildings. Given in m asl. Must be same resolution as the DSM.
+         * - Digital canopy surface model (CDSM)
+           - High resolution surface model of 3D vegetation
+           - O
+           - Given in metres above ground level (m agl). Must be same resolution as the DSM.
+         * - Digital trunk zone surface model (TDSM)
+           - High resolution surface model of trunk zone heights (underneath tree canopy)
+           - O
+           - Given in m agl. Must be same resolution as the DSM.
+         * - Land (ground) cover information (LC)
+           - High resolution surface model of ground cover
+           - O
+           - Must be same resolution as the DSM. Five different ground covers are currently available (building, paved, grass, bare soil and water)
+* **Meteorological data**
+         .. list-table::
+          :widths: 25 25 25 25
+          :header-rows: 1
+
+          * - Type
+            - Definition
+            - Use
+            - Reference/Comments
+          * - UMEP formatted meteorological data
+            - Meteorological data from one nearby observation station, preferably at 1-2 m above ground.
+            - R
+            - Any time resolution can be given.
+*  **Other**
+        .. list-table::
+         :widths: 25 25 25 25
+         :header-rows: 1
+
+          * - Type
+            - Definition
+            - Use
+            - Reference/Comments
+          * - Latitude (°)
+            - Solar related calculations
+            - R
+            - Obtained from the ground and building CRS
+          * - Longitude (°)
+            - Solar related calculations
+            - R
+            - Obtained from the ground and building CRS
+          * - `UTC (h) <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`__
+            - Time zone
+            - R
+            - Influences solar related calculations. Set in the interface of the model.
+          * - Human exposure parameters
+            - Absorption of radiation and posture
+            - R
+            - Set in the interface of the model.
+          * - Environmental parameters
+            - e.g. albedos and emissivites of surrounding urban fabrics
+            - R
+            - Set in the interface of the model.
+
 
 Meterological input data should be in UMEP format. You can use the
 `Meterological
@@ -148,57 +188,110 @@ point in time in the plugin.
 
 -  R: required O: Optional N : not needed
 
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| No.   | USE   | Column name   | Description                                                                  |
-+=======+=======+===============+==============================================================================+
-| 1     | R     | iy            | Year [YYYY]                                                                  |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 2     | R     | id            | Day of year [DOY]                                                            |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 3     | R     | it            | Hour [H]                                                                     |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 4     | R     | imin          | Minute [M]                                                                   |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 5     | N     | qn            | Net all-wave radiation [W m\ :sup:`-2`]                                      |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 6     | N     | qh            | Sensible heat flux [W m\ :sup:`-2`]                                          |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 7     | N     | qe            | Latent heat flux [W m\ :sup:`-2`]                                            |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 8     | N     | qs            | Storage heat flux [W m\ :sup:`-2`]                                           |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 9     | N     | qf            | Anthropogenic heat flux [W m\ :sup:`-2`]                                     |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 10    | N     | U             | Wind speed [m s\ :sup:`-1`]                                                  |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 11    | R     | RH            | Relative Humidity [%]                                                        |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 12    | R     | Tair          | Air temperature [°C]                                                         |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 13    | O     | pres          | Barometric pressure [kPa]                                                    |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 14    | N     | rain          | Rainfall [mm]                                                                |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 15    | R     | kdown         | Incoming shortwave radiation [W m\ :sup:`-2`] Must be >= 0 W m\ :sup:`-2`.   |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 16    | N     | snow          | Snow [mm]                                                                    |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 17    | N     | ldown         | Incoming longwave radiation [W m\ :sup:`-2`]                                 |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 18    | N     | fcld          | Cloud fraction [tenths]                                                      |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 19    | N     | Wuh           | External water use [m:sup:`3`]                                               |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 20    | N     | xsmd          | Observed soil moisture [m3 m\ :sup:`-3` or kg kg\ :sup:`-1`]                 |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 21    | N     | lai           | Observed leaf area index [m2 m\ :sup:`-2`]                                   |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 22    | O     | kdiff         | Diffuse radiation [W m\ :sup:`-2`]                                           |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 23    | O     | kdir          | Direct radiation [W m\ :sup:`-2`]                                            |
-+-------+-------+---------------+------------------------------------------------------------------------------+
-| 24    | N     | wdir          | Wind direction [°]                                                           |
-+-------+-------+---------------+------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - No.
+     - USE
+     - Column name
+     - Description
+   * - 1
+     - R
+     - iy
+     - Year [YYYY]
+   * - 2
+     - R
+     - id
+     - Day of year [DOY]
+   * - 3
+     - R
+     - it
+     - Hour [H]
+   * - 4
+     - R
+     - imin
+     - Minute [M]
+   * - 5
+     - N
+     - qn
+     - Net all-wave radiation [W m\ :sup:`-2`]
+   * - 6
+     - N
+     - qh
+     - Sensible heat flux [W m\ :sup:`-2`]
+   * - 7
+     - N
+     - qe
+     - Latent heat flux [W m\ :sup:`-2`]
+   * - 8
+     - N
+     - qs
+     - Storage heat flux [W m\ :sup:`-2`]
+   * - 9
+     - N
+     - qf
+     - Anthropogenic heat flux [W m\ :sup:`-2`]
+   * - 10
+     - N
+     - U
+     - Wind speed [m s\ :sup:`-1`]
+   * - 11
+     - R
+     - RH
+     - Relative Humidity [%]
+   * - 12
+     - R
+     - Tair
+     - Air temperature [°C]
+   * - 13
+     - O
+     - pres
+     - Barometric pressure [kPa]
+   * - 14
+     - N
+     - rain
+     - Rainfall [mm]
+   * - 15
+     - R
+     - kdown
+     - Incoming shortwave radiation [W m\ :sup:`-2`] Must be >= 0 W m\ :sup:`-2`.
+   * - 16
+     - N
+     - snow
+     - Snow [mm]
+   * - 17
+     - N
+     - ldown
+     - Incoming longwave radiation [W m\ :sup:`-2`]
+   * - 18
+     - N
+     - fcld
+     - Cloud fraction [tenths]
+   * - 19
+     - N
+     - Wuh
+     - External water use [m:sup:`3`]
+   * - 20
+     - N
+     - xsmd
+     - Observed soil moisture [m3 m\ :sup:`-3` or kg kg\ :sup:`-1`]
+   * - 21
+     - N
+     - lai
+     - Observed leaf area index [m2 m\ :sup:`-2`]
+   * - 22
+     - O
+     - kdiff
+     - Diffuse radiation [W m\ :sup:`-2`]
+   * - 23
+     - O
+     - kdir
+     - Direct radiation [W m\ :sup:`-2`]
+   * - 24
+     - N
+     - wdir
+     - Wind direction [°]
 
 How to Run SOLWEIG from the UMEP-plugin
 ---------------------------------------
@@ -208,7 +301,10 @@ How to Run SOLWEIG from the UMEP-plugin
 
    -  Some additional information about the plugin is found in the lower
       left window. You will make use of a test dataset from observations
-      for Gothenburg, Sweden. |Figure 2: Dialog for the SOLWEIG model|
+      for Gothenburg, Sweden.
+
+          .. figure:: /images/SOLWEIG.png
+          Figure 2: Dialog for the SOLWEIG model
 
 #. To be able to run the model some additional spatial datasets needs to
    be created.
@@ -222,8 +318,9 @@ How to Run SOLWEIG from the UMEP-plugin
       for details).
    -  You can create all SVFs needed (vegetation and buildings) at the
       same time. Use the settings as shown below. Use an appropriate
-      output folder for your computer. |Figure 3: Settings for the
-      SkyViewFactorCalculator.|
+      output folder for your computer.
+          .. figure:: /images/Svf_solweig.png
+          Figure 3: Settings for the SkyViewFactorCalculator.
    -  When the calculation is done, map will appear in the map canvas.
       This is the 'total' SVF i.e., including both buildings and
       vegetation. Examine the dataset.
@@ -234,13 +331,20 @@ How to Run SOLWEIG from the UMEP-plugin
 #. Another preprocessing plugin needed is to create the building wall
    heights and aspect. Open *UMEP -> Pre-Processor -> Urban geometry ->
    Wall height and aspect* and use the settings as shown below (Figure
-   4).\ |Figure 4: Settings for the Wall height and aspect plugin.|
+   4).
+
+      .. figure:: /images/Wall_solweig.png
+      Figure 4: Settings for the Wall height and aspect plugin.
+
 #. Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
    use the GUI to set one point in time (i.e. a summer hour in
    Gothenburg, Sweden) hence, no input meteorological file is needed for
    now. No information on vegetation and ground cover is added for this
-   first try. Click **Run**. |Figure 5: The settings for your first
-   SOLWEIG run.|
+   first try. Click **Run**.
+
+   .. figure:: /images/Tmrt1_solweig.png
+   Figure 5: The settings for your first SOLWEIG run.
+
 #. Examine the output (Average T\ :sub:`mrt` [°C]. What is the main
    driver to the spatial variations in T\ :sub:`mrt`?
 #. Add 3D vegetation information by ticking in *Use vegetation scheme
@@ -273,11 +377,21 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
    (EPSG: 3007).
 #. Now you should add two points within the study area. To add points to
    the layer it has to be editable and Add Feature should be activated
-   (Figure 6). |Figure 6: Setting to add points| Two points should be
+   (Figure 6).
+
+          .. figure:: /images/Addpoint.png
+          Figure 6: Setting to add points
+
+   Two points should be
    added and the attributes should be id=\ **1** and
    name=\ **courtyard** for the right point and id=\ **2** and
    name=\ **park** for the left point. See Figure 7 for the locations of
-   the two points. |Figure 7: Location of the two POIs| When you are
+   the two points.
+
+        .. figure:: /images/Pointskr.png
+        Figure 7: Location of the two POIs
+
+   When you are
    finished, save layer edits (box in-between the two marked boxes in
    Figure 6). Close the editing by pressing Toggle editing (the pencil).
 #. Now open the SOLWEIG plugin. Use both the vegetation and land cover
@@ -297,8 +411,11 @@ the SOLWEIG Analyzer plug-in.
    Thermal Comfort -> SOLWEIG Analyzer*. Here you can analyze both data
    from your POIs as well as perform statistical analysis based on saved
    output maps. Start by locating your output folder in the top section
-   (*Load Model Result*). |Figure 2: Dialog for the SOLWEIG Analyzer
-   plug-in|
+   (*Load Model Result*).
+
+        .. figure:: /images/SOLWEIG.png
+        Figure 2: Dialog for the SOLWEIG model
+
 #. Firstly you will compare differences in T\ :sub:`mrt` for the two
    locations (courtyard and park). This can done using the left frame
    (*Point of Interest data*). Specify *courtyard* as *POI* and *Mean
@@ -345,13 +462,19 @@ balance modelling with SUEWS.
    totheight, diameter*). The attributes should all be decimal (float)
    numbers (see table below). The location of the three new trees are
    shown in Figure 8. The values for all three vegetation units should
-   be **ttype=2, trunk=4, totheight=15, diameter=10**. |Figure 8:
-   Location of the three new vegetation units|.
+   be **ttype=2, trunk=4, totheight=15, diameter=10**.
+
+         .. figure:: /images/TreesKR.png
+         Figure 8: Location of the three new vegetation units
+
 #. Add your created trunk zone dsm (TDSM.tif) that was created
    previously (located in your output directory).
 #. Open the TreeGenerator (UMEP -> PreProcessor -> TreeGenerator) and
-   use the settings as shown in Figure 9. |Figure 9: The settings for
-   the Tree Generator|
+   use the settings as shown in Figure 9.
+
+         .. figure:: /images/ Treegeneratorsolweig.png
+         Figure 9: The settings for the Tree Generator
+
 #. As the vegetation DSMs have been changed, the SVFs has to be
    recalculated. This time use the two generated vegetation DSMs.
 #. Now re-run SOLWEIG using the same settings as before but now use the
@@ -362,28 +485,25 @@ balance modelling with SUEWS.
 
 The table below show the input variables needed for each tree point.
 
-+------------------+-----------------------------+--------------------------------------------+
-| Attribute name   | Name                        | Description                                |
-+==================+=============================+============================================+
-| ttype            | Tree type                   | Two shapes are available:                  |
-|                  |                             |                                            |
-|                  |                             | -  conifer = 1 and                         |
-|                  |                             | -  deciduous = 2.                          |
-|                  |                             | -  To remove vegetation set ttype = 0.     |
-+------------------+-----------------------------+--------------------------------------------+
-| trunk            | Trunk zone height (m agl)   | Height of the trunk zone.                  |
-+------------------+-----------------------------+--------------------------------------------+
-| totheight        | Total tree height (m agl)   | Maximum height of the vegetation unit      |
-+------------------+-----------------------------+--------------------------------------------+
-| diameter         | Canopy diameter (m)         | Circular diameter of the vegetation unit   |
-+------------------+-----------------------------+--------------------------------------------+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 1
 
-.. |Figure 2: Dialog for the SOLWEIG model| image:: SOLWEIG.png
-.. |Figure 3: Settings for the SkyViewFactorCalculator.| image:: Svf_solweig.png
-.. |Figure 4: Settings for the Wall height and aspect plugin.| image:: Wall_solweig.png
-.. |Figure 5: The settings for your first SOLWEIG run.| image:: Tmrt1_solweig.png
-.. |Figure 6: Setting to add points| image:: Addpoint.png
-.. |Figure 7: Location of the two POIs| image:: Pointskr.png
-.. |Figure 2: Dialog for the SOLWEIG Analyzer plug-in| image:: SOLWEIGAnalyzer.png
-.. |Figure 8: Location of the three new vegetation units| image:: TreesKR.png
-.. |Figure 9: The settings for the Tree Generator| image:: Treegeneratorsolweig.png
+   * - Attribute name
+     - Name
+     - Description
+   * - ttype
+     - Tree type
+     - Two shapes are available:
+          -  conifer = 1 and
+          -  deciduous = 2.
+          -  To remove vegetation set ttype = 0.
+   * - trunk
+     - Trunk zone height (m agl)
+     - Height of the trunk zone.
+   * - totheight
+     - Total tree height (m agl)
+     - Maximum height of the vegetation unit
+   * - diameter
+     - Canopy diameter (m)
+     - Circular diameter of the vegetation unit
