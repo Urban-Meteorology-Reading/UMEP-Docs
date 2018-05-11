@@ -26,7 +26,7 @@ People Involved & Acknowledgements
        - Izzy Capel-Timms
        - Andy Gabey
        - Bei HUANG
-     - **Met Office/Newton Fund CSSP - China**
+     -  - Met Office/Newton Fund CSSP - China
         - NERC TRUC
         - NERC ClearfLo
         - EPSRC LoHCool
