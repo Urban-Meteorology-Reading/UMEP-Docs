@@ -20,7 +20,7 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Application
    * - Source Area Footprint
      - Pre-Processor
-     - `Footprint <../Tutorials/Footprint.html>`__
+     - `Footprint`
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor

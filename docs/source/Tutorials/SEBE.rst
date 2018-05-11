@@ -301,7 +301,7 @@ SEBE without vegetation.|
 
    -  Save your result in a subfolder called **Veg**.
 
-.. figure:: /images/File_SEBE_noVeg.htm
+.. figure:: /images/SEBE_noVeg.png
 
 Irradiance on building envelopes (alternatively see the tips below – currrently better)
 ---------------------------------------------------------------------------------------
