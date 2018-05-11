@@ -20,30 +20,30 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Application
    * - Source Area Footprint
      - Pre-Processor
-     - `Footprint <../Tutorials/Footprint.html>`__
+     - `Footprint`
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor
-     - `Introduction to SUEWS <../Tutorials/IntroductionToSolweig.html>`__
+     - `Introduction to SUEWS`
      - Energy, water and radiation fluxes
    * - Urban energy balance
      - Pre-Processor and Processor
-     - `SUEWS Advanced <../Tutorials/SUEWSAdvanced.html>`__
+     - `SUEWS/BLUEWS (Advanced)`
      - Energy, water and radiation fluxes
    * - Potential solar energy production on building envelopes
      - Processor and Post-Processor
-     - `SEBE <../Tutorials/SEBE.html>`__
+     - `SEBE`
      - Amount of solar energy received on building facets
    * - Outdoor thermal comfort
      - Pre-Processor and Processor
-     - `Introduction to SOLWEIG <../Tutorials/IntroductionToSuews.html>`__
+     - `Introduction to SOLWEIG`
      - Mean radiation temperature modelling in complex urban settings
    * - Anthropogenic heat
      - Processor
-     - `|GQF| <../Tutorials/GQF.html>`__
+     - `GQF`
      - Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)
 
    * - Anthropogenic heat
      - Processor
-     - `|LQF| <../Tutorials/LQF.html>`__
+     - `LQF`
      - Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)

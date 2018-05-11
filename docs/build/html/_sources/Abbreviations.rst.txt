@@ -2,83 +2,76 @@
 
 Abbreviations
 -------------
+.. glossary::
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 1
-
-   * - Acronym
-     - Defintion
-     - Comments
-   * - CDSM
+CDSM
      - Canopy Digital Surface Model
      - A vegetation raster grid where vegetation heights is given in meter above ground level. Pixels with no vegetation should be zero.
-   * - CRS
+CRS
      - Coordinate Reference System
-     -
-   * - CRU
+
+CRU
      - Climatic Research Unit
-     -
-   * - DEM
+
+DEM
      - Digtial Elevation Model
      - Here, same definition as DTM.
-   * - DSM
+DSM
      - Digital Surface Model
      - A raster grid including both buildings and ground given in meter above sea level.
-   * - DTM
+DTM
      - Digtial Terrain Model
      - A raster grid including only ground heights given in meter above sea level.
-   * - ECMWF
+ECMWF
      - European Centre for Medium-Range Weather Forecasts
-     -
-   * - GIS
+
+GIS
      - Geographical Information System
-     -
-   * - LCZ
+
+LCZ
      - Local Climate Zone
-     -
-   * - LST
+
+LST
      - Local Standard Time
      -
-   * - LTR
+LTR
      - Long term release
-     -
-   * - LUCY
+
+LUCY
      - Large scale Urban Consumption of energy model
-     -
-   * - m agl
+
+m agl
      - metres above ground level
      -
-   * - m asl
+m asl
      - metres above sea level
-     -
-   * - OTF
+
+OTF
      - On the Fly
      - Used in QGIS when different geodatasets with different coordinate systems are projected in the same automatically.
-   * - Q\ :sub:`F`
+|QF|
      - Anthropogenic heat flux
-     -
-   * - SEBE
+
+SEBE
      - Solar Energy on Building Envelopes
-     -
-   * - SOLWEIG
+
+SOLWEIG
      - Solar and longwave environmental irradiance geometry model
-     -
-   * - SUEWS
+
+SUEWS
      - Surface urban energy and water balance scheme
-     -
-   * - SVF
+
+SVF
      - Sky View Factor
-     -
-   * - TDSM
+
+TDSM
      - Trunk zone Digital Surface Model
      - A raster grid specifying the height up to the buttom of a vegetation canopy in meter above ground level. Pixels with no trunk height should be zero.
-   * - UMEP
+UMEP
      - Urban Multi-scale Environmental Predictor
-     -
-   * - WFDEI
+
+WFDEI
      - WATCH Forcing Data methodology applied to ERA-Interim data
-     -
-   * - WUDAPT
+
+WUDAPT
      - The World Urban Database and Access Portal Tools
-     -

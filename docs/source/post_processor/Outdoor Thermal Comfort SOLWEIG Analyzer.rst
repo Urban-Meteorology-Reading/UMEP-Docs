@@ -21,7 +21,7 @@ Outdoor Thermal Comfort: SOLWEIG Analyzer
               -  SOLWEIG Analyzer
 
 * Dialog box  :
-      .. figure:: /IMAGES/SOLWEIGAnalyzer.png
+      .. figure:: /images/SOLWEIGAnalyzer.png
 
 * Dialog sections  :
 .. list-table::

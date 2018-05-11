@@ -20,7 +20,7 @@ Solar Radiation: SEBE (Visualisation)
               -  SEBE (Visualisation)
 
 * Dialog box  :
-      .. figure:: /IMAGES/SEBEvisualisation.png
+      .. figure:: /images/SEBEvisualisation.png
 
 * Dialog sections  :
 .. list-table::
@@ -43,3 +43,4 @@ Solar Radiation: SEBE (Visualisation)
 
 * Close:
      -  This closes the plugin.
+images

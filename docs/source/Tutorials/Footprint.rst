@@ -73,8 +73,8 @@ Prior to Starting
    -  London -
       `download <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
 
-#. Load the Raster data (`DEM, DSM,
-   CDSM <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__)
+#. Load the Raster data (DEM, DSM,
+   CDSM
    files – DOES A CDSM EXIST? Yes for London, No for Reading
 
    -  Go to: Layer > Add layer > Add Raster Layer > Locate downloaded

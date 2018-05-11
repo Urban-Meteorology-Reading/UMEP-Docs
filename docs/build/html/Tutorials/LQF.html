@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LQF &mdash; UMEP Manual  documentation</title>
+  <title>Aim &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -135,7 +135,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>LQF</li>
+      <li>Aim</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,16 +154,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lqf">
-<h1>LQF<a class="headerlink" href="#lqf" title="Permalink to this headline">¶</a></h1>
+  <p id="lqf">LQ<sub>F</sub></p>
+<hr class="docutils" />
 <div class="section" id="aim">
-<h2>Aim<a class="headerlink" href="#aim" title="Permalink to this headline">¶</a></h2>
+<h1>Aim<a class="headerlink" href="#aim" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial demonstrates how the LQF software is used to simulate
 anthropogenic heat fluxes for London, UK, in the year 2015, using a
 mixture of administrative and meteorological data.</p>
 </div>
 <div class="section" id="initial-practical-steps">
-<h2>Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
+<h1>Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h1>
 <p>UMEP is a python plugin used in conjunction with
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. To install the software and the UMEP
 plugin see the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">getting
@@ -176,7 +176,7 @@ section in the UMEP manual.</p>
 and/or there may be instability. Please report any issues or suggestions
 to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 <div class="section" id="data-for-this-exercise">
-<h3>Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
+<h2>Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h2>
 <p>In order to proceed, you will need the zip file named LQF_Inputs_1.zip
 and a copy of the LQF database. These are available at the following
 locations:</p>
@@ -203,14 +203,14 @@ population counts</li>
 <li>dailyTemperature_2015.csv: Daily mean air temperature in London</li>
 </ul>
 <div class="section" id="lqf-tutorial-1-simple-qf-modelling">
-<h4>LQF Tutorial 1: Simple QF modelling<a class="headerlink" href="#lqf-tutorial-1-simple-qf-modelling" title="Permalink to this headline">¶</a></h4>
+<h3>LQF Tutorial 1: Simple QF modelling<a class="headerlink" href="#lqf-tutorial-1-simple-qf-modelling" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
 <div class="section" id="preparing-data">
-<h2>Preparing data<a class="headerlink" href="#preparing-data" title="Permalink to this headline">¶</a></h2>
+<h1>Preparing data<a class="headerlink" href="#preparing-data" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="manage-input-data-files">
-<h3>Manage input data files<a class="headerlink" href="#manage-input-data-files" title="Permalink to this headline">¶</a></h3>
+<h2>Manage input data files<a class="headerlink" href="#manage-input-data-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Extract the contents of LQF_Inputs_1.zip into a folder on your
 local machine and note the path to each file (e.g.
@@ -219,7 +219,7 @@ C:\LQFData\LondonBuildingProfiles.csv)</li>
 </ul>
 </div>
 <div class="section" id="gather-information-about-output-areas-shapefile">
-<h3>Gather information about output areas shapefile<a class="headerlink" href="#gather-information-about-output-areas-shapefile" title="Permalink to this headline">¶</a></h3>
+<h2>Gather information about output areas shapefile<a class="headerlink" href="#gather-information-about-output-areas-shapefile" title="Permalink to this headline">¶</a></h2>
 <p>The input data comes with one shapefile
 (griddedResidentialPopulation.shp) (a collection of files with the same
 name, one of which ends in .shp). For convenience, the same shapefile is
@@ -246,20 +246,17 @@ which this dataset should be used</li>
 change depending on the file used. <a class="reference external" href="LQF_Manual#Appendix_B:_Gathering_information_about_shapefiles_for_QF_modelling">Click
 here</a>
 for a guide to finding the EPSG code and feature ID field using QGIS.</p>
-</div>
-</div>
-</div>
-<div class="section" id="verify-the-population-attribute-name">
-<h1>Verify the population attribute name<a class="headerlink" href="#verify-the-population-attribute-name" title="Permalink to this headline">¶</a></h1>
 <p>The shapefile used for population data in LQF must always contain an
 attribute “Pop” that holds the total number of people in that spatial
 unit. Check this is the case (a similar process to finding the Feature
 ID field name). The population data was gridded using an algorithm, so
 the number of people in each area may not be a whole number.</p>
+</div>
+</div>
 <div class="section" id="set-up-the-datasources-nml-file">
-<h2>Set up the DataSources.nml file<a class="headerlink" href="#set-up-the-datasources-nml-file" title="Permalink to this headline">¶</a></h2>
+<h1>Set up the DataSources.nml file<a class="headerlink" href="#set-up-the-datasources-nml-file" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="add-shapefile-information">
-<h3>Add shapefile information<a class="headerlink" href="#add-shapefile-information" title="Permalink to this headline">¶</a></h3>
+<h2>Add shapefile information<a class="headerlink" href="#add-shapefile-information" title="Permalink to this headline">¶</a></h2>
 <p>The data sources file needs to be updated so that it can find the
 various data files, and understands what to do with them. A full
 description of the Data sources file contents is available
@@ -295,7 +292,7 @@ this:</p>
 </div>
 </div>
 <div class="section" id="add-the-lqf-database-and-mean-daily-temperature-files">
-<h3>Add the LQF database and mean daily temperature files<a class="headerlink" href="#add-the-lqf-database-and-mean-daily-temperature-files" title="Permalink to this headline">¶</a></h3>
+<h2>Add the LQF database and mean daily temperature files<a class="headerlink" href="#add-the-lqf-database-and-mean-daily-temperature-files" title="Permalink to this headline">¶</a></h2>
 <p>LQF needs to know the location of its database of national parameters.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite&#39;</span>
@@ -323,7 +320,7 @@ to the data sources file.</p>
 </div>
 </div>
 <div class="section" id="run-lqf">
-<h2>Run LQF<a class="headerlink" href="#run-lqf" title="Permalink to this headline">¶</a></h2>
+<h1>Run LQF<a class="headerlink" href="#run-lqf" title="Permalink to this headline">¶</a></h1>
 <p>Under UMEP &gt; Processor &gt; Urban Energy Balance, choose LQf (LUCY)</p>
 <div class="figure">
 <a class="reference internal image-reference" href="../_images/LQF_Tutorial_RunUMEP.png"><img alt="LQF_Tutorial_RunUMEP.png" src="../_images/LQF_Tutorial_RunUMEP.png" style="width: 300px;" /></a>
@@ -333,7 +330,7 @@ to the data sources file.</p>
 <img alt="../_images/LQF_Tutorial_RunLQF.png" src="../_images/LQF_Tutorial_RunLQF.png" />
 </div>
 <div class="section" id="choose-configuration-files-and-output-folder">
-<h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
+<h2>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h2>
 <p>Working from the top of the dialog box to the bottom...</p>
 <ol class="arabic simple">
 <li>Click the … buttons in the “Configuration and raw input data” panel
@@ -359,7 +356,7 @@ disaggregated data. It will then be copied to the new output folder and
 used as normal.</p>
 </div>
 <div class="section" id="run-the-model-for-1-week">
-<h3>Run the model for 1 week<a class="headerlink" href="#run-the-model-for-1-week" title="Permalink to this headline">¶</a></h3>
+<h2>Run the model for 1 week<a class="headerlink" href="#run-the-model-for-1-week" title="Permalink to this headline">¶</a></h2>
 <p>Choose a start date of 11 May 2015, using the start and end date boxes,
 then select “Run”.</p>
 <div class="figure">
@@ -368,7 +365,7 @@ then select “Run”.</p>
 </div>
 </div>
 <div class="section" id="visualise-results">
-<h2>Visualise results<a class="headerlink" href="#visualise-results" title="Permalink to this headline">¶</a></h2>
+<h1>Visualise results<a class="headerlink" href="#visualise-results" title="Permalink to this headline">¶</a></h1>
 <p>Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.</p>
 <div class="figure" id="id1">
@@ -376,7 +373,7 @@ some of the model results to open the visualisation tool.</p>
 <p class="caption"><span class="caption-text">LQF_Tutorial_Visualise.png</span></p>
 </div>
 <div class="section" id="create-a-map-of-total-qf-at-noon">
-<h3>Create a map of total QF at noon<a class="headerlink" href="#create-a-map-of-total-qf-at-noon" title="Permalink to this headline">¶</a></h3>
+<h2>Create a map of total QF at noon<a class="headerlink" href="#create-a-map-of-total-qf-at-noon" title="Permalink to this headline">¶</a></h2>
 <p>Use the visualisation tool to create a map of all the QF components at
 noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
 “Add to canvas”. This may take a moment to process. Close the
@@ -400,7 +397,7 @@ colour the same as the fill colour.</p>
 </div>
 </div>
 <div class="section" id="plot-a-time-series-of-qf-in-the-centre-of-the-city">
-<h3>Plot a time series of QF in the centre of the city<a class="headerlink" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city" title="Permalink to this headline">¶</a></h3>
+<h2>Plot a time series of QF in the centre of the city<a class="headerlink" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city" title="Permalink to this headline">¶</a></h2>
 <p>A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool</p>
 <div class="figure">
@@ -432,7 +429,7 @@ building emissions on Thursday 15th when the weather is colder.</p>
 </div></blockquote>
 </div>
 <div class="section" id="recycling-of-input-data">
-<h3>Recycling of input data<a class="headerlink" href="#recycling-of-input-data" title="Permalink to this headline">¶</a></h3>
+<h2>Recycling of input data<a class="headerlink" href="#recycling-of-input-data" title="Permalink to this headline">¶</a></h2>
 <p>Ideally the model is run only for dates covered by the daily temperature
 data, but the data is recycled if the model runs beyond the end of the
 available temperature data. In this tutorial, only 2015 temperatures are
@@ -441,7 +438,7 @@ temperature data would be selected based on the time of year. Except at
 the very start or end of the year, the date from 2015 used will be
 within a few days of the same date in 2016.</p>
 <div class="section" id="tutorials-ii-refining-lqf-results">
-<h4>Tutorials II: Refining LQF results<a class="headerlink" href="#tutorials-ii-refining-lqf-results" title="Permalink to this headline">¶</a></h4>
+<h3>Tutorials II: Refining LQF results<a class="headerlink" href="#tutorials-ii-refining-lqf-results" title="Permalink to this headline">¶</a></h3>
 <p>Once a basic QF estimate has been made (as in the previous section),
 there are several options to refining this using additional data that
 may be available.</p>
@@ -452,7 +449,7 @@ case.</p>
 </div>
 </div>
 <div class="section" id="tutorial-2a-custom-diurnal-profiles">
-<h2>Tutorial 2a: Custom diurnal profiles<a class="headerlink" href="#tutorial-2a-custom-diurnal-profiles" title="Permalink to this headline">¶</a></h2>
+<h1>Tutorial 2a: Custom diurnal profiles<a class="headerlink" href="#tutorial-2a-custom-diurnal-profiles" title="Permalink to this headline">¶</a></h1>
 <p>In this scenario, new diurnal profiles for building energy consumption
 and road vehicle traffic are available for London. These profiles are
 assumed to better represent the city than the default profiles in the
@@ -500,7 +497,7 @@ different days of the week. This is especially noticeable in transport
 emissions on the final 3 days of the week.</p>
 </div>
 <div class="section" id="tutorial-2b-updating-national-parameters-in-the-lqf-database">
-<h2>Tutorial 2b: Updating national parameters in the LQF database<a class="headerlink" href="#tutorial-2b-updating-national-parameters-in-the-lqf-database" title="Permalink to this headline">¶</a></h2>
+<h1>Tutorial 2b: Updating national parameters in the LQF database<a class="headerlink" href="#tutorial-2b-updating-national-parameters-in-the-lqf-database" title="Permalink to this headline">¶</a></h1>
 <p>LQF takes the latest national attributes (population, vehicle count and
 energy consumption) up to and including the year(s) modelled. The copy
 of the LQF database used in this tutorial contains national UK
@@ -565,7 +562,7 @@ The following example shows the 2014 value of energy consumption
 parameters stored in the LQF database.</p>
 </div>
 <div class="section" id="tutorial-2c-custom-temperature-response-function">
-<h2>Tutorial 2c: Custom temperature response function<a class="headerlink" href="#tutorial-2c-custom-temperature-response-function" title="Permalink to this headline">¶</a></h2>
+<h1>Tutorial 2c: Custom temperature response function<a class="headerlink" href="#tutorial-2c-custom-temperature-response-function" title="Permalink to this headline">¶</a></h1>
 <p>Building emissions are governed by a function that relates the daily
 mean air temperature to energy consumption. This is a simple treatment
 that may not capture the full relationship, so a custom function with
@@ -608,7 +605,6 @@ metabolism emissions remains the same as before.</p>
 <li><a class="reference external" href="UMEP_Manual/_Tutorials/GQF">UMEP_Manual/_Tutorials/GQF</a>:
 Modelling anthropogenic heat flux in London, UK using the GQF model.</li>
 </ul>
-</div>
 </div>
 
 

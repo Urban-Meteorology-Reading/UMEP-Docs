@@ -1,3 +1,5 @@
+.. _Introduction to SOLWEIG:
+
 Introduction To Solweig
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 

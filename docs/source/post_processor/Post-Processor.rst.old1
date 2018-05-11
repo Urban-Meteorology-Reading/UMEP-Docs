@@ -26,7 +26,7 @@ Solar Radiation: SEBE (Visualisation)
               -  SEBE (Visualisation)
 
 * Dialog box  :
-      .. figure:: /IMAGES/SEBEvisualisation.png
+      .. figure:: /images/SEBEvisualisation.png
 
 * Dialog sections  :
 .. list-table::
@@ -73,7 +73,7 @@ Outdoor Thermal Comfort: SOLWEIG Analyzer
               -  SOLWEIG Analyzer
 
 * Dialog box  :
-      .. figure:: /IMAGES/SOLWEIGAnalyzer.png
+      .. figure:: /images/SOLWEIGAnalyzer.png
 
 * Dialog sections  :
 .. list-table::
