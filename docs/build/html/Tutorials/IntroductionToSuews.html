@@ -161,24 +161,17 @@
 <p>In this tutorial you will use a land-surface model,
 <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS</a> to simulate energy
 exchanges in a city (London is the test case).</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="89%" />
-<col width="11%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><p class="first">SUEWS (Surface Urban Energy and Water Balance Scheme) allows the energy and water balance exchanges for urban areas to be modelled (Järvi et al. 2011, 2014, Ward et al. 2016a). The model is applicable at the neighbourhood scale (e.g. 10<sup>2</sup> to 10<sup>4</sup> m). The fluxes calculated are applicable to height of about 2-3 times the mean height of the roughness elements; i.e. above the <a class="reference external" href="http://glossary.ametsoc.org/wiki/Roughness_sublayer">roughness sublayer (RSL)</a>. The use of SUEWS within Urban Multi-scale Environmental Predictor (UMEP) provides an introduction to the model and the processes simulated, the parameters used and the impact on the resulting fluxes.</p>
-<p>Tools such as this, once appropriately assessed for an area, can be used for a broad range of applications. For example, for climate services (e.g. <a class="reference external" href="http://www.wmo.int/gfcs/">http://www.wmo.int/gfcs/</a>). Running a model can allow analyses, assessments, and long-term projections and scenarios. Most applications require not only meteorological data but also information about the activities that occur in the area of interest (e.g. agriculture, population, road and infrastructure, and socio-economic variables).</p>
-<p class="last">Model output may be needed in many formats depending on a users’ needs. Thus, the format must be useful, while ensuring the science included within the model is appropriate. Figure 1 provides an overview of <a class="reference external" href="http://urban-climate.net/umep/UMEP">UMEP</a>, a city based climate service tool (CBCST). Within UMEP there are a number of models which can predict and diagnose a range of meteorological processes. In this activity we are concerned with SUEWS, initially the central components of the model. See <a class="reference external" href="http://urban-climate.net/umep/SUEWS">manual</a> or published <strong>papers</strong> for more detailed information of the model.</p>
-</td>
-<td><div class="first last figure" id="id2">
-<img alt="Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)" src="Tutorials\UMEP_overview.png" />
-<p class="caption"><span class="caption-text">Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)</span></p>
+<p>SUEWS (Surface Urban Energy and Water Balance Scheme) allows the energy and water balance exchanges for urban areas to be modelled (Järvi et al. 2011, 2014, Ward et al. 2016a). The model is applicable at the neighbourhood scale (e.g. 10<sup>2</sup> to 10<sup>4</sup> m). The fluxes calculated are applicable to height of about 2-3 times the mean height of the roughness elements; i.e. above the <a class="reference external" href="http://glossary.ametsoc.org/wiki/Roughness_sublayer">roughness sublayer (RSL)</a>. The use of SUEWS within Urban Multi-scale Environmental Predictor (UMEP) provides an introduction to the model and the processes simulated, the parameters used and the impact on the resulting fluxes.</p>
+<p>Tools such as this, once appropriately assessed for an area, can be used for a broad range of applications. For example, for climate services (e.g. <a class="reference external" href="http://www.wmo.int/gfcs/">http://www.wmo.int/gfcs/</a>). Running a model can allow analyses, assessments, and long-term projections and scenarios. Most applications require not only meteorological data but also information about the activities that occur in the area of interest (e.g. agriculture, population, road and infrastructure, and socio-economic variables).                                                                                    |</p>
+<blockquote>
+<div><p>Model output may be needed in many formats depending on a users’ needs. Thus, the format must be useful, while ensuring the science included within the model is appropriate. Figure 1 provides an overview of <a class="reference external" href="http://urban-climate.net/umep/UMEP">UMEP</a>, a city based climate service tool (CBCST). Within UMEP there are a number of models which can predict and diagnose a range of meteorological processes. In this activity we are concerned with SUEWS, initially the central components of the model. See <a class="reference external" href="http://urban-climate.net/umep/SUEWS">manual</a> or published <strong>papers</strong> for more detailed information of the model.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/UMEP_overview.png" src="../_images/UMEP_overview.png" />
 </div>
-</td>
-</tr>
-</tbody>
-</table>
+<p>Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)</p>
+</div></blockquote>
+</div></blockquote>
 <p>SUEWS can be run in a number of different ways:</p>
 <ol class="arabic simple">
 <li>Within UMEP via the Simple selection. This is useful for becoming
@@ -226,11 +219,11 @@ parameters are shown. Other versions allow many other parameters to be
 modified to more appropriate values if applicable. The table below
 provides an overview of the parameters that can be modified in the
 Simple application of SUEWS.</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="17%" />
-<col width="31%" />
-<col width="52%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
@@ -328,8 +321,8 @@ Simple application of SUEWS.</p>
 </div>
 <div class="section" id="how-to-run-suewssimple-from-the-umep-plugin">
 <h2>How to Run SuewsSimple from the UMEP-plugin<a class="headerlink" href="#how-to-run-suewssimple-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Open SuewsSimple from <em>UMEP -&gt; Processor -&gt; Urban Energy Balance -&gt;
+<ol class="arabic">
+<li><p class="first">Open SuewsSimple from <em>UMEP -&gt; Processor -&gt; Urban Energy Balance -&gt;
 Urban Energy Balance, SUEWS (Simple)</em>. The GUI that opens looks quite
 extensive but it is actually not that complicated to start a basic
 model run (Figure 2). Some additional information about the plugin is
@@ -338,26 +331,38 @@ observations for London, UK (<a class="reference external" href="http://www.scie
 2014</a>,
 <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095516300256">Ward et al.
 2016a</a>)
-is included in within the plugin. <a class="reference internal" href="Tutorials\Simple2.png"><img alt="Figure 2: The interface for SUEWS, simple version." src="Tutorials\Simple2.png" style="width: 900px;" /></a></li>
-<li>To make use of this dataset click on <strong>Add settings from test
+is included in within the plugin.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/Simple2.png" src="../_images/Simple2.png" />
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">To make use of this dataset click on <strong>Add settings from test
 dataset</strong> (see near bottom of the box). The land cover fractions and
 all other settings originate from Kotthaus and Grimmond (2014). They
 used a source area model to obtain the different input parameters
 (their <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095513000497">Fig. 7 in Kotthaus and Grimmond,
-2014</a>).</li>
-<li>Before you start the model, change the location of the output data to
+2014</a>).</p>
+</li>
+<li><p class="first">Before you start the model, change the location of the output data to
 any location of your choice. Also, make notes on the settings such as
-<em>Year</em> etc.</li>
-<li>Do a model run and explore the results by clicking <strong>Run</strong>. A command
+<em>Year</em> etc.</p>
+</li>
+<li><p class="first">Do a model run and explore the results by clicking <strong>Run</strong>. A command
 window appears, when SUEWS performs the calculations using the
 settings from the interface. Once the calculations are done, some of
-the results are shown in two summary plots.</li>
-</ol>
-<div class="line-block">
-<div class="line">900px|center|Figure 3a: Model output from SUEWS (simple) using the</div>
+the results are shown in two summary plots.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/1350px-SuewsSimplefig1.png" src="../_images/1350px-SuewsSimplefig1.png" />
 </div>
-<p>default settings and data.| | 900px|center|Figure 3b: Model output
-from SUEWS (simple) using the default settings and data.|</p>
+<div class="figure">
+<img alt="../_images/1350px-SuewsSimplefig2.png" src="../_images/1350px-SuewsSimplefig2.png" />
+</div>
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="model-results">
 <h2>Model results<a class="headerlink" href="#model-results" title="Permalink to this headline">¶</a></h2>
@@ -370,9 +375,11 @@ detail.</p>
 a period of interest. For example, the Zoom in to about the last ten
 days in March (Figure 4). This was a period with clear relatively
 weather.</p>
-<div class="figure">
-<img alt="900px|center|Figure 4: Zoom in on end of March from the daily plot in Figure 3b." src="Tutorials\SuewsSimplefig2zoom.png" />
+<blockquote>
+<div><div class="figure">
+<img alt="900px|center|Figure 4: Zoom in on end of March from the daily plot in Figure 3b." src="../_images/SuewsSimplefig2zoom.png" />
 </div>
+</div></blockquote>
 </div>
 <div class="section" id="saving-a-figure">
 <h2>Saving a Figure<a class="headerlink" href="#saving-a-figure" title="Permalink to this headline">¶</a></h2>
@@ -408,7 +415,12 @@ manual</a>.</p>
 </div>
 <div class="section" id="sensitivity-to-land-surface-fractions">
 <h2>Sensitivity to land surface fractions<a class="headerlink" href="#sensitivity-to-land-surface-fractions" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="Tutorials\LCFs.png"><img alt="LCFs.png" src="Tutorials\LCFs.png" style="width: 300px;" /></a> The previous results are for a densely build-up area in
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/450px-LCFs.png" src="../_images/450px-LCFs.png" />
+</div>
+</div></blockquote>
+<p>The previous results are for a densely build-up area in
 London, UK. In order to test the sensitivity of SUEWS to some surface
 properties you can think about changing some of the surface properties
 in the SUEWS Simple. For example, change the land cover fraction by:</p>
@@ -420,7 +432,7 @@ select other values as long as all the fractions <em>add up to 1.0</em>.</li>
 </ol>
 </div>
 <div class="section" id="advanced-suews-tutorial">
-<h2><a class="reference external" href="http://urban-climate.net/umep/index.php?title=UMEP_Manual/_Tutorials/_SUEWS_Advanced">Advanced SUEWS Tutorial</a><a class="headerlink" href="#advanced-suews-tutorial" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="../Tutorials/SUEWSAdvanced.html">Advanced SUEWS Tutorial</a><a class="headerlink" href="#advanced-suews-tutorial" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="reporting-a-bug">
 <h2><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#How_to_Contribute">Reporting a bug</a><a class="headerlink" href="#reporting-a-bug" title="Permalink to this headline">¶</a></h2>
@@ -474,12 +486,12 @@ suburban and woodland areas of southern England. <a class="reference external" h
 <p>To help you find further information about the acronyms they are
 classified by <strong>T</strong>: Type of term: <strong>C</strong>: computer term, <strong>S</strong>: science
 term, <strong>G</strong>: GIS term.</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="9%" />
-<col width="23%" />
-<col width="2%" />
-<col width="66%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">&nbsp;</th>

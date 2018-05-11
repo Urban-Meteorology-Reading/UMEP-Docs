@@ -23,22 +23,22 @@ Overview of steps
 
 How to Run from the UMEP-plugin
 -------------------------------
+**How to run SUEWS Advanced:**
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
-| **How to run SUEWS Advanced:**                                                                                                                                                                                                                                                                                | .. figure:: SuewsAdvanced.png                              |
-|                                                                                                                                                                                                                                                                                                               |    :alt: Figure 1: Interface for SUEWS Advanced version.   |
-| #. Open the plugin which is located at UMEP -> Processor -> Urban Energy Balance -> Urban Energy Balance, SUEWS/BLUEWS (Advanced). This has most of the general settings (e.g. activate the snow module etc.) which are related to `RunControl.nml <http://urban-climate.net/umep/SUEWS#RunControl.nml>`__.   |                                                            |
-| #. Use the Input folder:                                                                                                                                                                                                                                                                                      |    Figure 1: Interface for SUEWS Advanced version.         |
-|                                                                                                                                                                                                                                                                                                               |                                                            |
-|    -  *C:/Users/your\_user\_name/.qgis2/python/plugins/UMEP/suewsmodel/Input*                                                                                                                                                                                                                                 |                                                            |
-|                                                                                                                                                                                                                                                                                                               |                                                            |
-| #. Create or enter an Output directory of your choice.                                                                                                                                                                                                                                                        |                                                            |
-| #. From the Input folder – confirm the data are in there.                                                                                                                                                                                                                                                     |                                                            |
-| #. Fill in the following. File Code: should be Kc, UTC: should be 0 (London).                                                                                                                                                                                                                                 |                                                            |
-| #. Run                                                                                                                                                                                                                                                                                                        |                                                            |
-| #. Make sure that output files are created.                                                                                                                                                                                                                                                                   |                                                            |
-| #. You can now close the SUEWS/BLUEWS (Advanced) again.                                                                                                                                                                                                                                                       |                                                            |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------+
+#. Open the plugin which is located at UMEP -> Processor -> Urban Energy Balance -> Urban Energy Balance, SUEWS/BLUEWS (Advanced). This has most of the general settings (e.g. activate the snow module etc.) which are related to `RunControl.nml <http://urban-climate.net/umep/SUEWS#RunControl.nml>`__.
+#. Use the Input folder:
+
+   -  *C:/Users/your\_user\_name/.qgis2/python/plugins/UMEP/suewsmodel/Input*
+
+#. Create or enter an Output directory of your choice.
+#. From the Input folder – confirm the data are in there.
+#. Fill in the following. File Code: should be Kc, UTC: should be 0 (London).
+#. Run
+#. Make sure that output files are created.
+#. You can now close the SUEWS/BLUEWS (Advanced) again.
+
+.. figure:: /images/SuewsAdvanced.png
+Figure 1: Interface for SUEWS Advanced version.
 
 Sensitivity Test
 ~~~~~~~~~~~~~~~~
@@ -59,15 +59,18 @@ and writing capabilities.
 Data for the tutorial can be downloaded
 `here <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
 
-+---------------------------------------------------+------------------------------------+
-| Ground and building DSM (digital surface model)   | DSM\_LondonCity\_1m.tif (m asl)    |
-+---------------------------------------------------+------------------------------------+
-| Vegetation DSM                                    | CDSM\_LondonCity\_1m.tif (m agl)   |
-+---------------------------------------------------+------------------------------------+
-| DEM (digital elevation model)                     | DEM\_LondonCity\_1m.tif (masl)     |
-+---------------------------------------------------+------------------------------------+
-| land cover                                        | LC\_londoncity\_UMEP\_32631        |
-+---------------------------------------------------+------------------------------------+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Ground and building DSM (digital surface model)
+     - DSM\_LondonCity\_1m.tif (m asl)
+   * - Vegetation DSM
+     - CDSM\_LondonCity\_1m.tif (m agl)
+   * - DEM (digital elevation model)
+     - DEM\_LondonCity\_1m.tif (masl)
+   * - land cover
+     - LC\_londoncity\_UMEP\_32631
 
 They are all projected in UTM 31N (EPSG:32631). The three surface models
 originate from a LiDAR dataset. The land cover data is a mixture of
@@ -93,42 +96,51 @@ Ordnance Survey and the LiDAR data.
 
 Generating data from the geodatasets
 ------------------------------------
+#. Make certain that you have the geodatafiles open. The file at the top (left hand side (LHS)) of the list is the one that is shown in the centre. You can swap their order using the LHS box.
+#. Open SUEWS Simple.
+#. Begin by adding the test dataset again.
+#. Update the building morphology parameters (top left panel in Suews Simple).
+#. To generate new values, click on Open tool….
+#. This is another plugin within UMEP that can be used to generate morphometric parameters
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
-| #. Make certain that you have the geodatafiles open. The file at the top (left hand side (LHS)) of the list is the one that is shown in the centre. You can swap their order using the LHS box.   | .. figure:: QGIS_SuewsSimple.png                                                        |
-| #. Open SUEWS Simple.                                                                                                                                                                             |    :alt: QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.   |
-| #. Begin by adding the test dataset again.                                                                                                                                                        |                                                                                         |
-| #. Update the building morphology parameters (top left panel in Suews Simple).                                                                                                                    |    QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.         |
-| #. To generate new values, click on Open tool….                                                                                                                                                   |                                                                                         |
-| #. This is another plugin within UMEP that can be used to generate morphometric parameters                                                                                                        |                                                                                         |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+        .. figure:: /images/QGIS_SuewsSimple.png
+        QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| #. First, clear the map canvas from your two other plugin windows, e.g. as above.                                                                                                                                                                    | |Settings for Image Morphometric Parameters for buildings| |Settings for Image Morphometric Parameters for vegetation|   |
-| #. If you use the default test data in SUEWS Simple – you can overwrite is as you go.                                                                                                                                                                |                                                                                                                          |
-| #. Locate the eddy covariance tower position on the Strand building, King’s College London. To find the position, consult Figure 1 (KSS) in `Kotthaus and Grimmond (2014) <http://www.sciencedirect.com/science/article/pii/S2212095513000503>`__.   |                                                                                                                          |
-| #. Use Select point on canvas and put a point at that location (left).                                                                                                                                                                               |                                                                                                                          |
-| #. Generate a study area. Use 500 m search distance, 5 degree interval and click Generate study area.                                                                                                                                                |                                                                                                                          |
-| #. A circular area will be considered. Enter the DSM and DEM files (i.e. the files you currently have in the viewer)                                                                                                                                 |                                                                                                                          |
-| #. Click Run.                                                                                                                                                                                                                                        |                                                                                                                          |
-| #. In the folder you specified two additional files will be present (i) isotropic - averages of the morphometric parameters (ii) anisotropic - values for each wind sector you specified (5 degrees).                                                |                                                                                                                          |
-| #. Close this plugin                                                                                                                                                                                                                                 |                                                                                                                          |
-| #. Click on Fetch file from… in the building morphology panel                                                                                                                                                                                        |                                                                                                                          |
-| #. Choose the isotropic file (just generated).                                                                                                                                                                                                       |                                                                                                                          |
-| #. Do the same for vegetation (upper left panel, right).                                                                                                                                                                                             |                                                                                                                          |
-| #. Instead of locating the point again you can use the existing point.                                                                                                                                                                               |                                                                                                                          |
-| #. You still need to generate a separate study area for the vegetation calculation.                                                                                                                                                                  |                                                                                                                          |
-| #. Examine the CDSM (vegetation file) in your map canvas. As you can see, this data has no ground heights (ground = 0). Therefore, this time Tick in the box Raster DSM (only buildings) exist.                                                      |                                                                                                                          |
-| #. Enter the CDSM as your Raster DSM (only buildings).                                                                                                                                                                                               |                                                                                                                          |
-| #. A warning appears that your vegetation fractions between the morphology dataset and land cover dataset are large. You can ignore this for now since the land cover dataset also will change.                                                      |                                                                                                                          |
-| #. Repeat the same procedure for land cover using the Land Cover Fraction (Point) plugin.                                                                                                                                                            |                                                                                                                          |
-| #. Enter the meteorological file, Year etc. This should be the same as for the first run you made.                                                                                                                                                   |                                                                                                                          |
-| #. Now you are ready to run the model. Click Run.                                                                                                                                                                                                    |                                                                                                                          |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+ #. First, clear the map canvas from your two other plugin windows, e.g. as above.
+ #. If you use the default test data in SUEWS Simple – you can overwrite is as you go.
+ #. Locate the eddy covariance tower position on the Strand building, King’s College London. To find the position, consult Figure 1 (KSS) in `Kotthaus and Grimmond (2014) <http://www.sciencedirect.com/science/article/pii/S2212095513000503>`__.
+ #. Use Select point on canvas and put a point at that location (left).
+ #. Generate a study area. Use 500 m search distance, 5 degree interval and click Generate study area.
+ #. A circular area will be considered. Enter the DSM and DEM files (i.e. the files you currently have in the viewer)
+ #. Click Run.
+ #. In the folder you specified two additional files will be present (i) isotropic - averages of the morphometric parameters (ii) anisotropic - values for each wind sector you specified (5 degrees).
+ #. Close this plugin
+ #. Click on Fetch file from… in the building morphology panel
+ #. Choose the isotropic file (just generated).
+ #. Do the same for vegetation (upper left panel, right).
+ #. Instead of locating the point again you can use the existing point.
+ #. You still need to generate a separate study area for the vegetation calculation.
+ #. Examine the CDSM (vegetation file) in your map canvas. As you can see, this data has no ground heights (ground = 0). Therefore, this time Tick in the box Raster DSM (only buildings) exist.
+ #. Enter the CDSM as your Raster DSM (only buildings).
+ #. A warning appears that your vegetation fractions between the morphology dataset and land cover dataset are large. You can ignore this for now since the land cover dataset also will change.
+ #. Repeat the same procedure for land cover using the Land Cover Fraction (Point) plugin.
+ #. Enter the meteorological file, Year etc. This should be the same as for the first run you made.
+ #. Now you are ready to run the model. Click Run.
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-| If you get an error window. This error is generate by SUEWS as the sum of the land cover fractions is not 1. If you calculate carefully, one part of a thousand is missing (this is probably a rounding error during data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now run again.   | |Possible error window from running SUEWS with new settings.| | The settings for running with geodata derived parameters (old version of GUI).|   |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+ .. figure:: /images/SUEWS_MorphometricParametersBuild.jpg
+ .. figure:: /images/SUEWS_MorphometricParametersVeg.jpg
+
+
+If you get an error window. This error is generate by SUEWS as the sum of the land cover fractions is not 1. If you calculate carefully, one part of a thousand is missing (this is probably a rounding error during data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now run again.
+
+     .. figure:: /images/Modelrununsuccessful.png
+     Possible error window from running SUEWS with new settings.
+
+
+      .. figure:: /images/SuewsSimpleGeodata.png
+      The settings for running with geodata derived parameters (old version of GUI).
+
+
 
 You are now familiar with the Suews Simple plugin. Your next task is to
 choose another location within the geodataset domain, generate data and
@@ -198,37 +210,70 @@ To help you find further information about the acronyms they are
 classified by **T**: Type of term: **C**: computer term, **S**: science
 term, **G**: GIS term.
 
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-|                   | Definition                                      | T   | Reference/Comment                                                 |
-+===================+=================================================+=====+===================================================================+
-| DEM               | Digital elevation model                         | G   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| DSM               | Digital surface model                           | G   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| FAI (λ:sub:`F`)   | Frontal area index                              | S   | Grimmond and Oke (1999), their figure 2                           |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| GUI               | Graphical User Interface                        | C   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| LAI               | Leaf Area Index                                 | S   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| PAI (λ:sub:`P`)   | Plan area index                                 | S   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| png               | Portable Network Graphics                       | C   | format for saving plots/figures                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| QGIS              |                                                 | G   | `http://www.qgis.org/en/site/ <http://www.qgis.org/en/site/>`__   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| SUEWS             | Surface Urban Energy and Water Balance Scheme   | S   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| Tif               | Tagged Image File Format                        | C   | format for saving plots/figures                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| UI                | user interface                                  | C   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| UMEP              | Urban Multi-scale Environmental predictor       | C   |                                                                   |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| z\ :sub:`0`       | Roughness length for momentum                   | S   | Grimmond and Oke (1999)                                           |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
-| z\ :sub:`d`       | Zero plane displacement length for momentum     | S   | Grimmond and Oke (1999)                                           |
-+-------------------+-------------------------------------------------+-----+-------------------------------------------------------------------+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * -
+     - Definition
+     - T
+     - Reference/Comment
+   * - DEM
+     - Digital elevation model
+     - G
+     -
+   * - DSM
+     - Digital surface model
+     - G
+     -
+   * - FAI (λ:sub:`F`)
+     - Frontal area index
+     - S
+     - Grimmond and Oke (1999), their figure 2
+   * - GUI
+     - Graphical User Interface
+     - C
+     -
+   * - LAI
+     - Leaf Area Index
+     - S
+     -
+   * - PAI (λ:sub:`P`)
+     - Plan area index
+     - S
+     -
+   * - png
+     - Portable Network Graphics
+     - C
+     - format for saving plots/figures
+   * - QGIS
+     -
+     - G
+     - `http://www.qgis.org/en/site/ <http://www.qgis.org/en/site/>`__
+   * - SUEWS
+     - Surface Urban Energy and Water Balance Scheme
+     - S
+     -
+   * - Tif
+     - Tagged Image File Format
+     - C
+     - format for saving plots/figures
+   * - UI
+     - user interface
+     - C
+     -
+   * - UMEP
+     - Urban Multi-scale Environmental predictor
+     - C
+     -
+   * - z\ :sub:`0`
+     - Roughness length for momentum
+     - S
+     - Grimmond and Oke (1999)
+   * - z\ :sub:`d`
+     - Zero plane displacement length for momentum
+     - S
+     - Grimmond and Oke (1999)
 
 Further explanation
 -------------------
@@ -250,9 +295,3 @@ Meixner (2001) model is used to determine the probable area that a
 turbulent flux measurement was impacted by. This is a function of wind
 direction, stability, turbulence characteristics (friction velocity,
 variance of the lateral wind velocity) and roughness parameters.
-
-.. |Settings for Image Morphometric Parameters for buildings| image:: SUEWS_MorphometricParametersBuild.jpg
-.. |Settings for Image Morphometric Parameters for vegetation| image:: SUEWS_MorphometricParametersVeg.jpg
-.. |Possible error window from running SUEWS with new settings.| image:: Modelrununsuccessful.png
-.. | The settings for running with geodata derived parameters (old version of GUI).| image:: SuewsSimpleGeodata.png
-

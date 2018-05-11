@@ -180,14 +180,8 @@ be manipulated in SUEWS.</li>
 </div>
 <div class="section" id="how-to-run-from-the-umep-plugin">
 <h1>How to Run from the UMEP-plugin<a class="headerlink" href="#how-to-run-from-the-umep-plugin" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="83%" />
-<col width="17%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><p class="first"><strong>How to run SUEWS Advanced:</strong></p>
-<ol class="last arabic simple">
+<p><strong>How to run SUEWS Advanced:</strong></p>
+<ol class="arabic simple">
 <li>Open the plugin which is located at UMEP -&gt; Processor -&gt; Urban Energy Balance -&gt; Urban Energy Balance, SUEWS/BLUEWS (Advanced). This has most of the general settings (e.g. activate the snow module etc.) which are related to <a class="reference external" href="http://urban-climate.net/umep/SUEWS#RunControl.nml">RunControl.nml</a>.</li>
 <li>Use the Input folder:<ul>
 <li><em>C:/Users/your_user_name/.qgis2/python/plugins/UMEP/suewsmodel/Input</em></li>
@@ -200,15 +194,10 @@ be manipulated in SUEWS.</li>
 <li>Make sure that output files are created.</li>
 <li>You can now close the SUEWS/BLUEWS (Advanced) again.</li>
 </ol>
-</td>
-<td><div class="first last figure" id="id1">
-<img alt="Figure 1: Interface for SUEWS Advanced version." src="Tutorials\SuewsAdvanced.png" />
-<p class="caption"><span class="caption-text">Figure 1: Interface for SUEWS Advanced version.</span></p>
+<div class="figure">
+<img alt="../_images/SuewsAdvanced.png" src="../_images/SuewsAdvanced.png" />
 </div>
-</td>
-</tr>
-</tbody>
-</table>
+<p>Figure 1: Interface for SUEWS Advanced version.</p>
 <div class="section" id="sensitivity-test">
 <h2>Sensitivity Test<a class="headerlink" href="#sensitivity-test" title="Permalink to this headline">¶</a></h2>
 <p>The default dataset included in <strong>Suews Simple</strong> has parameters
@@ -225,15 +214,17 @@ and extract the files to a suitable location where you both have reading
 and writing capabilities.</p>
 <p>Data for the tutorial can be downloaded
 <a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip">here</a></p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="59%" />
-<col width="41%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Ground and building DSM (digital surface model)</td>
-<td>DSM_LondonCity_1m.tif (m asl)</td>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Ground and building DSM (digital surface model)</th>
+<th class="head">DSM_LondonCity_1m.tif (m asl)</th>
 </tr>
+</thead>
+<tbody valign="top">
 <tr class="row-even"><td>Vegetation DSM</td>
 <td>CDSM_LondonCity_1m.tif (m agl)</td>
 </tr>
@@ -271,36 +262,28 @@ CDSM?</li>
 </div>
 <div class="section" id="generating-data-from-the-geodatasets">
 <h1>Generating data from the geodatasets<a class="headerlink" href="#generating-data-from-the-geodatasets" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="69%" />
-<col width="31%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><ol class="first last arabic simple">
-<li>Make certain that you have the geodatafiles open. The file at the top (left hand side (LHS)) of the list is the one that is shown in the centre. You can swap their order using the LHS box.</li>
-<li>Open SUEWS Simple.</li>
-<li>Begin by adding the test dataset again.</li>
-<li>Update the building morphology parameters (top left panel in Suews Simple).</li>
-<li>To generate new values, click on Open tool….</li>
-<li>This is another plugin within UMEP that can be used to generate morphometric parameters</li>
-</ol>
-</td>
-<td><div class="first last figure" id="id2">
-<img alt="QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened." src="Tutorials\QGIS_SuewsSimple.png" />
-<p class="caption"><span class="caption-text">QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.</span></p>
+<ol class="arabic">
+<li><p class="first">Make certain that you have the geodatafiles open. The file at the top (left hand side (LHS)) of the list is the one that is shown in the centre. You can swap their order using the LHS box.</p>
+</li>
+<li><p class="first">Open SUEWS Simple.</p>
+</li>
+<li><p class="first">Begin by adding the test dataset again.</p>
+</li>
+<li><p class="first">Update the building morphology parameters (top left panel in Suews Simple).</p>
+</li>
+<li><p class="first">To generate new values, click on Open tool….</p>
+</li>
+<li><p class="first">This is another plugin within UMEP that can be used to generate morphometric parameters</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/QGIS_SuewsSimple.png" src="../_images/QGIS_SuewsSimple.png" />
 </div>
-</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="67%" />
-<col width="33%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><ol class="first last arabic simple">
+<p>QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.</p>
+</div></blockquote>
+</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
 <li>First, clear the map canvas from your two other plugin windows, e.g. as above.</li>
 <li>If you use the default test data in SUEWS Simple – you can overwrite is as you go.</li>
 <li>Locate the eddy covariance tower position on the Strand building, King’s College London. To find the position, consult Figure 1 (KSS) in <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095513000503">Kotthaus and Grimmond (2014)</a>.</li>
@@ -322,22 +305,26 @@ CDSM?</li>
 <li>Enter the meteorological file, Year etc. This should be the same as for the first run you made.</li>
 <li>Now you are ready to run the model. Click Run.</li>
 </ol>
-</td>
-<td><img alt="Settings for Image Morphometric Parameters for buildings" src="Tutorials\SUEWS_MorphometricParametersBuild.jpg" /> <img alt="Settings for Image Morphometric Parameters for vegetation" src="Tutorials\SUEWS_MorphometricParametersVeg.jpg" /></td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="67%" />
-<col width="33%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>If you get an error window. This error is generate by SUEWS as the sum of the land cover fractions is not 1. If you calculate carefully, one part of a thousand is missing (this is probably a rounding error during data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now run again.</td>
-<td><img alt="Possible error window from running SUEWS with new settings." src="Tutorials\Modelrununsuccessful.png" /> | The settings for running with geodata derived parameters (old version of GUI).|</td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<img alt="../_images/SUEWS_MorphometricParametersBuild.jpg" src="../_images/SUEWS_MorphometricParametersBuild.jpg" />
+</div>
+<div class="figure">
+<img alt="../_images/SUEWS_MorphometricParametersVeg.jpg" src="../_images/SUEWS_MorphometricParametersVeg.jpg" />
+</div>
+</div></blockquote>
+<p>If you get an error window. This error is generate by SUEWS as the sum of the land cover fractions is not 1. If you calculate carefully, one part of a thousand is missing (this is probably a rounding error during data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now run again.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/Modelrununsuccessful.png" src="../_images/Modelrununsuccessful.png" />
+</div>
+<p>Possible error window from running SUEWS with new settings.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/SuewsSimpleGeodata.png" src="../_images/SuewsSimpleGeodata.png" />
+</div>
+<p>The settings for running with geodata derived parameters (old version of GUI).</p>
+</div></blockquote>
+</div></blockquote>
 <p>You are now familiar with the Suews Simple plugin. Your next task is to
 choose another location within the geodataset domain, generate data and
 run the model. If you choose an area where the fraction of buildings and
@@ -403,12 +390,12 @@ suburban and woodland areas of southern England. <a class="reference external" h
 <p>To help you find further information about the acronyms they are
 classified by <strong>T</strong>: Type of term: <strong>C</strong>: computer term, <strong>S</strong>: science
 term, <strong>G</strong>: GIS term.</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="14%" />
-<col width="35%" />
-<col width="4%" />
-<col width="48%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">&nbsp;</th>

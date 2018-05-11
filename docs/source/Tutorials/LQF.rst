@@ -135,37 +135,42 @@ build up the entries.
 
 The first two sections of the DataSources.nml file should now look like
 this:
+::
 
-| ``&outputAreas``
-| ``   shapefile = 'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'``
-| ``   epsgCode = 32631``
-| ``   featureIds = 'ID' ``
-| ``/``
-| ``&residentialPop``
-| ``   shapefiles = 'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'``
-| ``   startDates = '2011-01-01'``
-| ``   epsgCodes = 32631``
-| ``   featureIds = 'ID'``
-| ``/``
+    &outputAreas
+       shapefile = 'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'
+       epsgCode = 32631
+       featureIds = 'ID' 
+    /
+    &residentialPop
+       shapefiles = 'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'
+       startDates = '2011-01-01'
+       epsgCodes = 32631
+       featureIds = 'ID'
+
 
 Add the LQF database and mean daily temperature files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LQF needs to know the location of its database of national parameters.
+::
 
-| ``&database``
-| ``   path = 'C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite'``
-| ``/``
+   &database
+      path = 'C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite'
+   /
 
 -  The daily temperature file (dailyTemperature\_2015.csv in the zip
    file) must be formatted appropriately for LQF. `See the
    manual <LQF_Manual#Daily_temperature>`__ for a detailed description
    of the file format
 
-| ``&temporal``
-| ``   ! Air temperature each day for a year``
-| ``   dailyTemperature = 'C:\Some\Path\To\Files \dailyTemperature_2015.csv'``
-| ``/``
+
+::
+
+  &temporal
+      ! Air temperature each day for a year
+      dailyTemperature = 'C:\Some\Path\To\Files \dailyTemperature_2015.csv'
+  /
 
 The data sources file should now look similar to the example shown in
 `the LQF manual <LQF_Manual#Data_sources_file>`__. In this tutorial, the
@@ -179,13 +184,15 @@ Run LQF
 
 Under UMEP > Processor > Urban Energy Balance, choose LQf (LUCY)
 
-.. figure:: LQF_Tutorial_RunUMEP.png
+.. figure:: /images/LQF_Tutorial_RunUMEP.png
    :alt: LQF_Tutorial_RunUMEP.png
    :width: 300px
 
-   LQF\_Tutorial\_RunUMEP.png
 
-This loads the model interface dialog box: |LQF\_Tutorial\_RunLQF.png|
+
+This loads the model interface dialog box:
+
+.. figure:: /images/LQF_Tutorial_RunLQF.png
 
 Choose configuration files and output folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -218,7 +225,9 @@ Run the model for 1 week
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Choose a start date of 11 May 2015, using the start and end date boxes,
-then select “Run”. |LQF\_Tutorial\_DateRange.png|
+then select “Run”.
+
+.. figure:: /images/LQF_Tutorial_DateRange.png
 
 Visualise results
 -----------------
@@ -226,7 +235,7 @@ Visualise results
 Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.
 
-.. figure:: LQF_Tutorial_Visualise.png
+.. figure:: /images/LQF_Tutorial_Visualise.png
    :alt: LQF_Tutorial_Visualise.png
    :width: 300px
 
@@ -241,11 +250,9 @@ noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
 visualisation tool and return to the main canvas to inspect the four new
 layers that have appeared.
 
-.. figure:: LQF_Tutorial_QfMap_1.png
-   :alt: LQF_Tutorial_QfMap_1.png
-   :width: 350px
+.. figure:: /images/525px-LQF_Tutorial_QfMap_1.png
 
-   LQF\_Tutorial\_QfMap\_1.png
+
 
 Each layer corresponds to a different QF component, Qm (metabolism) and
 is plotted on the top layer. De-selecting a layer in the Layers panel
@@ -260,35 +267,35 @@ more structure, although the grid borders are distracting. These can be
 removed by double-clicking the colour levels and choosing a border
 colour the same as the fill colour.
 
-.. figure:: LQF_Tutorial_QfMap_2.png
-   :alt: LQF_Tutorial_QfMap_2.png
-   :width: 350px
+.. figure:: /images/525px-LQF_Tutorial_QfMap_2.png
 
-   LQF\_Tutorial\_QfMap\_2.png
 
 Plot a time series of QF in the centre of the city
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool
-|LQF\_Tutorial\_SelectFeatureIcon.png| and click an output area of
+
+.. figure:: /images/LQF_Tutorial_SelectFeatureIcon.png
+
+and click an output area of
 interest.
 
 This turns yellow. Right-click it and select the option that comes up.
 
-|LQF\_Tutorial\_SelectFeature.png| Information about the output area
+          .. figure:: /images/LQF_Tutorial_SelectFeature.png
+          Information about the output area
+
 then appears on the left, with the ID shown. Make a note of this.
 
-.. figure:: LQF_Tutorial_FeatureInfo.png
-   :alt: LQF_Tutorial_FeatureInfo.png
-
-   LQF\_Tutorial\_FeatureInfo.png
+    .. figure:: /images/LQF_Tutorial_FeatureInfo.png
 
 Return to the visualisation tool, choose output area 5448 and click
 “show plot”. Time series of each QF component then appear for the week.
 Note the lower traffic activity on Saturday and Sunday, and the higher
 building emissions on Thursday 15th when the weather is colder.
-|LQF\_Tutorial\_Temporal\_standardcase.png|
+
+    .. figure:: /images/525px-LQF_Tutorial_Temporal_standardcase.png
 
 Recycling of input data
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -329,13 +336,12 @@ profiles can be used for different times of year (`click here for full
 information about diurnal profile
 files <LQF_Manual#Diurnal_variations>`__).
 
-.. figure:: LQF_Tutorial_WeeklyTraffic.png
-   :alt: Custom traffic profile
-   :width: 350px
+      .. figure:: /images/525px-LQF_Tutorial_WeeklyTraffic.png
+      Custom traffic profile
 
-   Custom traffic profile
+.. figure:: /images/525px-LQF_Tutorial_BuildingProfiles.png
 
-|Custom building energy profiles (one for each season)| **Step 1:**
+**Step 1:**
 Create a duplicate of the DataSources.nml file used earlier
 
 **Step 2:** create a new folder for the model outputs.
@@ -347,21 +353,23 @@ LondonBuildingProfiles.csv files. These contain new profile data
 file using the optional diurnTraffic and diurnEnergy entries. The
 section should now resemble this:
 
-| ``&temporal``
-| ``   dailyTemperature = 'C:/Some/Path/To/Files/dailyTemperature_2015.csv'``
-| ``   diurnTraffic = 'C:/Some/Path/To/Files/weeklyTraffic.csv'``
-| ``   diurnEnergy = 'C:/Some/Path/To/Files/LondonBuildingProfiles.csv'``
-| ``/``
+::
+
+   &temporal
+       dailyTemperature = 'C:/Some/Path/To/Files/dailyTemperature_2015.csv'
+       diurnTraffic = 'C:/Some/Path/To/Files/weeklyTraffic.csv'
+       diurnEnergy = 'C:/Some/Path/To/Files/LondonBuildingProfiles.csv'
+   /
 
 **Step 5:** Re-run LQF for 7 days week, starting 11 May 2015, specifying
 the new DataSources file at run time. Visualising the time series for
 output area 5448 again:
 
-.. figure:: LQF_Tutorial_Temporal_customDiurnals.png
+.. figure:: /images/525px-LQF_Tutorial_Temporal_customDiurnals.png
    :alt: LQF_Tutorial_Temporal_customDiurnals.png
    :width: 350px
 
-   LQF\_Tutorial\_Temporal\_customDiurnals.png
+
 
 Note how the building and transport emission patterns now change on
 different days of the week. This is especially noticeable in transport
@@ -395,18 +403,21 @@ attributes for all countries
 **Step 5:** Create a new row for the UK in 2015 with the following
 entries:
 
-+--------------------------+-----------------------+
-| Database column          | Value                 |
-+==========================+=======================+
-| id                       | United Kingdom        |
-+--------------------------+-----------------------+
-| as\_of\_year             | 2015                  |
-+--------------------------+-----------------------+
-| population               | 120000000             |
-+--------------------------+-----------------------+
-| population\_datasource   | Fake value for test   |
-+--------------------------+-----------------------+
-+--------------------------+-----------------------+
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Database column
+     - Value
+   * - id
+     - United Kingdom
+   * - as\_of\_year
+     - 2015
+   * - population
+     - 120000000
+   * - population\_datasource
+     - Fake value for test
 
 **Step 6:** Run the model as in the first example.
 
@@ -416,11 +427,11 @@ because the national energy consumption per-capita is now half as much.
 The vehicle emissions are the same because they are specified per 10,000
 people in the LQF database.
 
-.. figure:: LQF_Tutorial_Temporal_customdatabase.png
+.. figure:: /images/525px-LQF_Tutorial_Temporal_customdatabase.png
    :alt: LQF_Tutorial_Temporal_customdatabase.png
    :width: 350px
 
-   LQF\_Tutorial\_Temporal\_customdatabase.png
+
 
 **Step 8: Restore the original LQF database so that the test values do
 not corrupt future modelling studies**
@@ -431,7 +442,7 @@ contains a list of the values used for each modelled year and country.
 The following example shows the 2014 value of energy consumption
 (kwh\_year) being looked up for model runs in 2015.
 
-``“DB value for United Kingdom kwh_year in modelled year 2015: 966862000000.0 (2014 value)”``
+“DB value for United Kingdom kwh_year in modelled year 2015: 966862000000.0 (2014 value)”
 
 See `the manual <LQF_Manual#Wide-area_data>`__ for a list of the
 parameters stored in the LQF database.
@@ -462,41 +473,32 @@ example, we will assume that:
 response from the manual and ensure the values are consistent with those
 below
 
-| ``&CustomTemperatureResponse``
-| `` Th = 20``
-| `` Tc = 20``
-| `` Ah = 0.5``
-| `` Ac = 0.5``
-| `` c = 0.5``
-| `` Tmax = 50``
-| `` Tmin = -10``
-| ``/``
+::
 
-*' Step 3*': Save the parameters file and run the model as in the
+     &CustomTemperatureResponse
+        Th = 20
+        Tc = 20
+        Ah = 0.5
+        Ac = 0.5
+        c = 0.5
+        Tmax = 50
+        Tmin = -10
+     /
+
+**Step 3** : Save the parameters file and run the model as in the
 original tutorial. Note how the day-to-day variations in the building
 emissions are much greater than in `Tutorial
 1 <#LQF_Tutorial_1:_Simple_QF_modelling>`__, but the transport and
 metabolism emissions remains the same as before.
 
-.. figure:: LQF_Tutorial_Temporal_customResponse.png
+.. figure:: /images/525px-LQF_Tutorial_Temporal_customResponse.png
    :alt: LQF_Tutorial_Temporal_customResponse.png
    :width: 350px
 
-   LQF\_Tutorial\_Temporal\_customResponse.png
+
 
 Related tutorials
 =================
 
 -  `UMEP\_Manual/\_Tutorials/GQF <UMEP_Manual/_Tutorials/GQF>`__:
    Modelling anthropogenic heat flux in London, UK using the GQF model.
-
-.. |LQF\_Tutorial\_RunLQF.png| image:: LQF_Tutorial_RunLQF.png
-   :width: 350px
-.. |LQF\_Tutorial\_DateRange.png| image:: LQF_Tutorial_DateRange.png
-   :width: 300px
-.. |LQF\_Tutorial\_SelectFeatureIcon.png| image:: LQF_Tutorial_SelectFeatureIcon.png
-.. |LQF\_Tutorial\_SelectFeature.png| image:: LQF_Tutorial_SelectFeature.png
-.. |LQF\_Tutorial\_Temporal\_standardcase.png| image:: LQF_Tutorial_Temporal_standardcase.png
-   :width: 350px
-.. |Custom building energy profiles (one for each season)| image:: LQF_Tutorial_BuildingProfiles.png
-   :width: 350px

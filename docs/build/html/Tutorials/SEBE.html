@@ -193,8 +193,10 @@ plugin</a></li>
 find the software (i.e. Find QGIS under your applications)</li>
 <li>Select <strong>QGIS 2.16.3 Desktop</strong> (or the latest version installed)</li>
 </ul>
-<p>When you open it on the top toolbar you will see <strong>UMEP</strong>.
-<a href="#id3"><span class="problematic" id="id4">|UMEP\_location\_SEBE.png|</span></a></p>
+<p>When you open it on the top toolbar you will see <strong>UMEP</strong>.</p>
+<div class="figure">
+<img alt="../_images/UMEP_location_SEBE.png" src="../_images/UMEP_location_SEBE.png" />
+</div>
 <ul class="simple">
 <li>If it UMEP not on our machine, download and install the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">**UMEP**
 plugin</a></li>
@@ -207,31 +209,76 @@ terminology used.</li>
 <h3>Data for Tutorial<a class="headerlink" href="#data-for-tutorial" title="Permalink to this headline">¶</a></h3>
 <p>To use SEBE the datasets are (for <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">password access if not already
 provided</a>)</p>
+<ul class="simple">
+<li>Image :</li>
+</ul>
+<div class="figure">
+<img alt="../_images/Gothenburg.png" src="../_images/Gothenburg.png" />
+</div>
+<p><a class="reference external" href="https://www.google.co.uk/maps/&#64;51.5117012,-0.1231273,356m/data">London Covent Garden</a></p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Date Details :</dt>
+<dd><ul class="first last">
+<li>Geodata and meteorological data for <strong>Gothenburg, Sweden</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Dataset</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>krbig_dsm.asc</td>
+<td>Ground and building DSM. Raster dataset: derived from a 3D vector roof structure dataset and a digital elevation model (DEM)</td>
+</tr>
+<tr class="row-odd"><td>krbig_cdsm.asc</td>
+<td>Vegetation canopy DSM. Raster dataset: derived from a LiDAR dataset</td>
+</tr>
+<tr class="row-even"><td>kr_buildings.shp</td>
+<td>Building footprint polygon layer</td>
+</tr>
+<tr class="row-odd"><td>GBG_typicalweatheryear_1977.txt</td>
+<td>Meteorological data, hourly time resolution for 1977 Gothenburg, Sweden.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><dl class="first docutils">
+<dt>Download from:</dt>
+<dd><ul class="first simple">
+<li><a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip">centre of Gothenburg, Sweden</a></li>
+<li><a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/London/DataCoventGarden.zip">data</a></li>
+</ul>
+<p class="last"><strong>check detail</strong></p>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 </div>
 <div class="section" id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="49%" />
-<col width="51%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Steps</th>
-<th class="head">Data Format</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><ol class="first last arabic simple">
+<ul class="simple">
+<li><strong>Steps</strong>:</li>
+</ul>
+<blockquote>
+<div><ol class="arabic simple">
 <li>if the data are zipped - unzip the data first</li>
 <li>Examine the geodata by adding the layers to your project.</li>
 <li>Use <a class="reference external" href="Media:Add_Raster_Layer.png">Layer &gt; Add Layer &gt; Add Raster Layer</a> to open the .asc raster files and Use Layer &gt; Add Layer &gt; Add Vector Layer. The Vector layer is a shape file which consists of multiple files. It is the <strong>kr_building.shp</strong> that should be used to load the vector layer into QGIS.</li>
-<li>You will need to indicate the co-ordinate system (<a class="reference external" href="http://docs.qgis.org/2.14/en/docs/gentle_gis_introduction/coordinate_reference_systems.html">CRS</a>) that is associated with these data. <a class="reference external" href="Media:GOT_LUP.png">If you look at the lower right hand side you can see the CRS used in the current QGIS project</a><ul>
-<li>You can use the filter to find this then.</li>
-<li>Select SWEREF99 1200 as CRS and the files will load into the map canvas.</li>
-<li>Do this for all of the geodata files.</li>
-</ul>
-</li>
+<li>You will need to indicate the co-ordinate system (<a class="reference external" href="http://docs.qgis.org/2.14/en/docs/gentle_gis_introduction/coordinate_reference_systems.html">CRS</a>) that is associated with these data. <a class="reference external" href="Media:GOT_LUP.png">If you look at the lower right hand side you can see the CRS used in the current QGIS project</a>
+-  You can use the filter to find this then.
+-  Select SWEREF99 1200 as CRS and the files will load into the map canvas.
+-  Do this for all of the geodata files.</li>
 <li>Open the <strong>meteorological file</strong> in a text editor or in a spreadsheet such as MS excel or LibreOffice (Open office).<ul>
 <li>Data file is formatted for the UMEP plugin (in general) and the SEBE plugin (in particular).</li>
 <li>First four columns are <em>time related</em>.</li>
@@ -241,14 +288,17 @@ provided</a>)</p>
 </ul>
 </li>
 </ol>
-</td>
-<td><p class="first">Variables included in the <strong>meteorological data file</strong>. No. indicates the column the file is in. Use indicates if it is <strong>R – required</strong> or <em>O- optional</em> (in this application) or <strong>N- Not used in this application</strong>. All columns must be present but can be filled with numbers to indicate they are not in use (e.g. -999).</p>
-<table border="1" class="last docutils">
+</div></blockquote>
+<ul class="simple">
+<li><strong>Data Format</strong></li>
+</ul>
+<p>Variables included in the <strong>meteorological data file</strong>. No. indicates the column the file is in. Use indicates if it is <strong>R – required</strong> or <em>O- optional</em> (in this application) or <strong>N- Not used in this application</strong>. All columns must be present but can be filled with numbers to indicate they are not in use (e.g. -999).</p>
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="7%" />
-<col width="7%" />
-<col width="14%" />
-<col width="73%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">No.</th>
@@ -380,56 +430,65 @@ provided</a>)</p>
 </tr>
 </tbody>
 </table>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="preparing-data-for-sebe">
 <h2>Preparing data for SEBE<a class="headerlink" href="#preparing-data-for-sebe" title="Permalink to this headline">¶</a></h2>
 <p>SEBE plugin: located at UMEP -&gt; Processor -&gt; Solar Energy -&gt; Solar
 Energy on Building Envelopes (SEBE) in the <a class="reference external" href="Media:UMEP_location_SEBE.png">menu
 bar</a>.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="5%" />
-<col width="95%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Plugin window</th>
-<th class="head">Steps</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><div class="first last figure" id="id1">
-<img alt="SEBE1.png" src="Tutorials\SEBE1.png" />
-<p class="caption"><span class="caption-text">SEBE1.png</span></p>
-</div>
-</td>
-<td><ol class="first last arabic">
+<ol class="arabic">
 <li><p class="first"><em>Top frame</em>: for input data for the SEBE calculations.</p>
 <ul class="simple">
-<li>Critical is the <strong>building</strong> and <strong>ground</strong> <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">DSM</a> for the calculations in SEBE.</li>
-<li>Optionally <strong>vegetation</strong> (trees and bushes) can be included as they can shadow buildings, walls and roofs reducing the potential solar energy production</li>
-<li>Two vegetation DSMs are required when the Use vegetation DSMs is ticked:</li>
+<li>Critical is the <strong>building</strong> and <strong>ground</strong>
+<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">DSM</a>
+for the calculations in SEBE.</li>
+<li>Optionally <strong>vegetation</strong> (trees and bushes) can be included as
+they can shadow buildings, walls and roofs reducing the potential
+solar energy production</li>
+<li>Two vegetation DSMs are required when the Use vegetation DSMs is
+ticked:</li>
 </ul>
-<p>#*One to describe the top of the vegetation (Vegetation Canopy DSM).</p>
-<p>#*One to describe the bottom, underneath the canopies (Vegetation Trunk Zone DSM).</p>
-<p>#*As Trunk Zone DSMs are very rare, an option to create this from the canopy DSM is available.</p>
-<p>#*You can set the amount of light (shortwave radiation) that is transmitted through the vegetation.</p>
-</li>
-<li><p class="first">Two raster datasets, height and wall aspect, are needed to calculate irradiance on building walls.</p>
 <ul class="simple">
-<li>The average albedo (one value is used for all surfaces) can be changed.</li>
+<li>One to describe the top of the vegetation (Vegetation Canopy DSM).</li>
+<li>One to describe the bottom, underneath the canopies (Vegetation</li>
+</ul>
+<p>Trunk Zone DSM).</p>
+<ul class="simple">
+<li>As Trunk Zone DSMs are very rare, an option to create this from</li>
+</ul>
+<p>the canopy DSM is available.</p>
+<ul class="simple">
+<li>You can set the amount of light (shortwave radiation) that is</li>
+</ul>
+<p>transmitted through the vegetation.</p>
+</li>
+<li><p class="first">Two raster datasets, height and wall aspect, are needed to calculate
+irradiance on building walls.</p>
+<ul class="simple">
+<li>The average albedo (one value is used for all surfaces) can be
+changed.</li>
 </ul>
 </li>
-<li><p class="first">The <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> offset is needed to accurately estimate the sun position, positive numbers for easterly position and negative for westerly. For example, Gothenburg is located in CET which is UTC +1.</p>
+<li><p class="first">The
+<a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>
+offset is needed to accurately estimate the sun position, positive
+numbers for easterly position and negative for westerly. For example,
+Gothenburg is located in CET which is UTC +1.</p>
 </li>
 <li><p class="first">Meteorological file needs to be specified.</p>
 </li>
-<li><p class="first">Wall data are created with the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">UMEP plugin - **Wall Height and Aspect**</a>:</p>
+<li><p class="first">Wall data are created with the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">UMEP plugin - **Wall Height and
+Aspect**</a>:</p>
 <ul class="simple">
-<li>This uses a 3 by 3 pixels kernel minimum filter where the four cardinal points (N, W, S,E) are investigated. The pixels just ‘inside’ the buildings are identified and give values to indicate they are a building edge. The aspect algorithm originates from a linear filtering technique (Goodwin et al. 2009). It identifies the linear features plus (a new addition) the aspect of the identified line. Other more accurate techniques include using a vector building layer and spatially relating this to the wall pixels.</li>
+<li>This uses a 3 by 3 pixels kernel minimum filter where the four
+cardinal points (N, W, S,E) are investigated. The pixels just
+‘inside’ the buildings are identified and give values to indicate
+they are a building edge. The aspect algorithm originates from a
+linear filtering technique (Goodwin et al. 2009). It identifies
+the linear features plus (a new addition) the aspect of the
+identified line. Other more accurate techniques include using a
+vector building layer and spatially relating this to the wall
+pixels.</li>
 </ul>
 </li>
 <li><p class="first">UMEP -&gt; Pre-Processor -&gt; Urban Geometry -&gt; Wall Height and Aspect.</p>
@@ -449,36 +508,23 @@ bar</a>.</p>
 <li><p class="first">Tick: Add result to project and click OK.</p>
 </li>
 </ol>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<img alt="../_images/SEBE1.png" src="../_images/SEBE1.png" />
+</div>
 </div>
 <div class="section" id="running-the-model">
 <h2>Running the model<a class="headerlink" href="#running-the-model" title="Permalink to this headline">¶</a></h2>
-<p>Now you have all data ready to run the model.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="34%" />
-<col width="66%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Image</th>
-<th class="head">Steps</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><div class="first last figure">
-<img alt="Settings for running SEBE without vegetation." src="Tutorials\SEBE_noVeg.png" />
-</div>
-</td>
-<td><ol class="first last arabic simple">
+<p>Now you have all data ready to run the model. | Settings for running
+SEBE without vegetation.|</p>
+<ol class="arabic simple">
 <li>First run the model <em>without</em> including vegetation.<ul>
 <li>Open the SEBE-plugin again</li>
 <li>Make the setting according to the figure to the LHS</li>
 <li>Save your results in a subfolder (<strong>NoVeg</strong>) of <strong>SEBETutorial</strong>.</li>
-<li>The model takes some time to calculate irradiance on all the surfaces.</li>
-<li>The result added to your map canvas is the horizontal radiation, i.e. irradiance on the ground and roofs.</li>
+<li>The model takes some time to calculate irradiance on all the
+surfaces.</li>
+<li>The result added to your map canvas is the horizontal radiation,
+i.e. irradiance on the ground and roofs.</li>
 </ul>
 </li>
 <li>Run the model again but this time also use the vegetation DSM.<ul>
@@ -486,10 +532,9 @@ bar</a>.</p>
 </ul>
 </li>
 </ol>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<img alt="../_images/File_SEBE_noVeg.htm" src="../_images/File_SEBE_noVeg.htm" />
+</div>
 </div>
 <div class="section" id="irradiance-on-building-envelopes-alternatively-see-the-tips-below-currrently-better">
 <h2>Irradiance on building envelopes (alternatively see the tips below – currrently better)<a class="headerlink" href="#irradiance-on-building-envelopes-alternatively-see-the-tips-below-currrently-better" title="Permalink to this headline">¶</a></h2>
@@ -525,14 +570,80 @@ QGIS-plugin reporistory (Plugins &gt; Manage and Install Plugins).</li>
 <div class="section" id="solar-energy-potential">
 <h2>Solar Energy Potential<a class="headerlink" href="#solar-energy-potential" title="Permalink to this headline">¶</a></h2>
 <p>In order to obtain the solar energy potential for a specific building:</p>
-<ol class="arabic simple">
-<li>The actual area of the roof needs to be considered.</li>
-<li>Determine the area of each pixel (&#8216;&#8217;A:sub:<code class="xref any docutils literal"><span class="pre">P</span></code> ): e.g. 1 m<sup>2</sup></li>
-<li>As some roofs are tilting the area may be larger for some pixels. The
-actual area (<em>A:sub:`A`</em>) can be computed from:</li>
+<ol class="arabic">
+<li><p class="first">The actual area of the roof needs to be considered.</p>
+</li>
+<li><p class="first">Determine the area of each pixel (&#8216;&#8217;A:sub:<code class="xref any docutils literal"><span class="pre">P</span></code> ): e.g. 1 m<sup>2</sup></p>
+</li>
+<li><p class="first">As some roofs are tilting the area may be larger for some pixels. The
+actual area (<em>A:sub:`A`</em>) can be computed from:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>A\ :sub:`A` = A\ :sub:`P`/cos⁡(Si)
+where the slope (Si) of the raster pixel should be in radians (1 deg = pi/180 rad).
+</pre></div>
+</div>
+</div></blockquote>
+</li>
 </ol>
-<p><em>``A``:sub:```A````` ````=```` ````A``:sub:```P`````/cos⁡(S``:sub:```i`````)``</em></p>
-<p><code class="docutils literal"><span class="pre">where&nbsp;the&nbsp;slope&nbsp;(</span></code><em>``S``:sub:```i```</em><code class="docutils literal"><span class="pre">)&nbsp;of&nbsp;the&nbsp;raster&nbsp;pixel&nbsp;should&nbsp;be&nbsp;in&nbsp;radians&nbsp;(1&nbsp;deg&nbsp;=&nbsp;pi/180&nbsp;rad).</span></code></p>
+</div>
+<div class="section" id="irradiance-map-with-values-less-than-900-kwh-filtered-out">
+<h2>Irradiance map with values less than 900 kWh filtered out<a class="headerlink" href="#irradiance-map-with-values-less-than-900-kwh-filtered-out" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Steps</li>
+</ul>
+<p>To make a slope raster</p>
+<ol class="arabic simple">
+<li><em>Raster &gt; Terrain analysis &gt; Slope</em>. If the tool is missing, Go to
+<em>Manage and Install Plugins</em> and activate (<em>Raster Terrain Analysis
+Plugin</em>)</li>
+<li>Use the DSM for elevation layer</li>
+<li>Create the slope z factor =1 - area</li>
+</ol>
+<div class="figure">
+<img alt="../_images/Slope.jpg" src="../_images/Slope.jpg" />
+</div>
+<p>Use the raster menu: Raster&gt; Raster Calculator.</p>
+<ol class="arabic simple">
+<li>To determine the area after you have removed the wall area from the buildings.</li>
+<li>Enter the equation indicated.</li>
+<li>To visualize where to place solar panels the amount of energy
+received needs to be cost effective. As irradiance below 900 kWh is
+considered to be too low for solar energy production (<em>Per Jonsson
+personal communication Tyréns Consultancy</em>), pixel cells lower than
+900 can be filtered out (Figure LHS). Transparency – allows you to
+make visible above a threshold of interest.<ul>
+<li>Right-click on the Energyyearroof-layer and go to <strong>Properties</strong>
+and then <strong>Transparency</strong>.</li>
+<li>Add a custom transparency (green cross) where values between 0 and
+900 are set to 100% transparency.</li>
+</ul>
+</li>
+</ol>
+<div class="figure">
+<img alt="../_images/RasterCalculator.jpg" src="../_images/RasterCalculator.jpg" />
+</div>
+<p>To estimate solar potential on building roofs we can use the Zonal
+statistics tool:</p>
+<ol class="arabic simple">
+<li>Raster &gt; Zonal statistics.</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Use the roof area raster layer (<strong>energyPerm2_slope65_RoofArea</strong>)
+created before and use <strong>kr_building.shp</strong> as the polygon layer to
+calculate as your zone layer. Make sure that you calculate sum
+statistics.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li>On your building layer – Right click Open Attribute Table</li>
+<li>Or use the identifier to click a building (polygon) of interest to
+see the statistics you have just calculated</li>
+</ol>
+<p>Note that we will not consider the performance of the solar panels.</p>
+<div class="figure">
+<img alt="../_images/GOT_Irradiance.png" src="../_images/GOT_Irradiance.png" />
+</div>
 </div>
 <div class="section" id="covent-garden-data-set">
 <h2>Covent Garden data set<a class="headerlink" href="#covent-garden-data-set" title="Permalink to this headline">¶</a></h2>
@@ -613,61 +724,51 @@ processing techniques Proc CAADFutures99, Atlanta, GA</li>
 </div>
 <div class="section" id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="39%" />
-<col width="61%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Meteorological</strong> file in UMEP has a special format.</td>
-<td><p class="first">If you have data in another format there is a <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Meteorological_Data:_MetPreprocessor">UMEP plugin that can convert your meteorological data into the UMEP format</a>.</p>
-<ul class="last simple">
-<li>Plugin is found at UMEP -&gt; Pre-Processor -&gt; Meteorological data -&gt;Prepare Existing data.</li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p class="first">Plugin to <strong>visualize data</strong> in 3D: called <a class="reference external" href="https://media.readthedocs.org/pdf/qgis2threejs/docs-release/qgis2threejs.pdf">Qgis2Threejs</a>.</p>
-<ul class="last simple">
-<li>Available for download from the official repository Plugins -&gt; Manage and Install Plugins.</li>
-</ul>
-</td>
-<td><div class="first last figure" id="id2">
-<img alt="CoventGarden.jpg" src="Tutorials\CoventGarden.jpg" />
-<p class="caption"><span class="caption-text">CoventGarden.jpg</span></p>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td>TIFF (TIF) and ASC are <strong>raster data file formats</strong></td>
-<td><p class="first">In the left Hand Side there is a list of layers.</p>
+<p><strong>Meteorological</strong> file in UMEP has a special format. If you have data
+in another format there is a <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Meteorological_Data:_MetPreprocessor">UMEP plugin that can convert your
+meteorological data into the UMEP
+format</a>.</p>
 <ul class="simple">
-<li>The layer that is checked at the top of the list is the layer that is seen, If you want to see another layer you can either:</li>
+<li>Plugin is found at UMEP -&gt; Pre-Processor -&gt; Meteorological data
+-&gt;Prepare Existing data.</li>
 </ul>
-<p>#*Un-tick the layers above the one you are interested in and/or</p>
-<p class="last">#*Move the layer you are interested in to the top of the list by dragging it.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p class="first">You can save all of you work for different areas as a project – so you can return to it as whole.</p>
-<ul class="last simple">
+<p>Plugin to <strong>visualize data</strong> in 3D: called
+<a class="reference external" href="https://media.readthedocs.org/pdf/qgis2threejs/docs-release/qgis2threejs.pdf">Qgis2Threejs</a>.</p>
+<ul class="simple">
+<li>Available for download from the official repository Plugins -&gt; Manage
+and Install Plugins.</li>
+</ul>
+<div class="figure">
+<img alt="../_images/CoventGarden.jpg" src="../_images/CoventGarden.jpg" />
+</div>
+<p>TIFF (TIF) and ASC are <strong>raster data file formats</strong></p>
+<p><strong>In the left Hand Side there is a list of layers.</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>The layer that is checked at the top of the list is the layer that is</li>
+</ul>
+<blockquote>
+<div>seen, If you want to see another layer you can either:</div></blockquote>
+<ul>
+<li><p class="first">#*Un-tick the layers above the one you are interested in and/or</p>
+<p>#*Move the layer you are interested in to the top of the list by dragging it.</p>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>You can save all of you work for different areas as a project – so you can return to it as whole.</strong></p>
+<ul class="simple">
 <li>Project &gt; Save as</li>
 </ul>
-</td>
-<td><p class="first">You can change the <em>shading etc</em>. on different layers.</p>
-<ul class="last simple">
-<li>Right Click on the Layer name Properties &gt; Style &gt; Singlebandpseudo color</li>
+<p><strong>You can change the *shading etc*. on different layers.</strong></p>
+<ul class="simple">
+<li>Right Click on the Layer name Properties &gt; Style &gt; Singlebandpseudo
+color</li>
 <li>Choose the color band you would like.</li>
 <li>Classify</li>
 <li>Numerous things can be modified from this point.</li>
 </ul>
-</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">UMEP repository</a>.</td>
-<td><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">Other Getting Started Help</a></td>
-</tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+<p><a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">UMEP repository</a>.
+<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">Other Getting Started Help</a></p>
 </div>
 </div>
 

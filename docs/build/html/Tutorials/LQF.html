@@ -281,27 +281,26 @@ are used to describe both of them</li>
 </ol>
 <p>The first two sections of the DataSources.nml file should now look like
 this:</p>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;outputAreas</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;shapefile&nbsp;=&nbsp;'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;epsgCode&nbsp;=&nbsp;32631</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;featureIds&nbsp;=&nbsp;'ID'&nbsp;</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&amp;residentialPop</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;shapefiles&nbsp;=&nbsp;'C:/Some/Path/To/Files/griddedResidentialPopulation.shp'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;startDates&nbsp;=&nbsp;'2011-01-01'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;epsgCodes&nbsp;=&nbsp;32631</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;featureIds&nbsp;=&nbsp;'ID'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
+   <span class="n">shapefile</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/griddedResidentialPopulation.shp&#39;</span>
+   <span class="n">epsgCode</span> <span class="o">=</span> <span class="mi">32631</span>
+   <span class="n">featureIds</span> <span class="o">=</span> <span class="s1">&#39;ID&#39;</span>
+<span class="o">/</span>
+<span class="o">&amp;</span><span class="n">residentialPop</span>
+   <span class="n">shapefiles</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/griddedResidentialPopulation.shp&#39;</span>
+   <span class="n">startDates</span> <span class="o">=</span> <span class="s1">&#39;2011-01-01&#39;</span>
+   <span class="n">epsgCodes</span> <span class="o">=</span> <span class="mi">32631</span>
+   <span class="n">featureIds</span> <span class="o">=</span> <span class="s1">&#39;ID&#39;</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="add-the-lqf-database-and-mean-daily-temperature-files">
 <h3>Add the LQF database and mean daily temperature files<a class="headerlink" href="#add-the-lqf-database-and-mean-daily-temperature-files" title="Permalink to this headline">¶</a></h3>
 <p>LQF needs to know the location of its database of national parameters.</p>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;database</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;path&nbsp;=&nbsp;'C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
+   <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite&#39;</span>
+<span class="o">/</span>
+</pre></div>
 </div>
 <ul class="simple">
 <li>The daily temperature file (dailyTemperature_2015.csv in the zip
@@ -309,11 +308,11 @@ file) must be formatted appropriately for LQF. <a class="reference external" hre
 manual</a> for a detailed description
 of the file format</li>
 </ul>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;temporal</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;!&nbsp;Air&nbsp;temperature&nbsp;each&nbsp;day&nbsp;for&nbsp;a&nbsp;year</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;dailyTemperature&nbsp;=&nbsp;'C:\Some\Path\To\Files&nbsp;\dailyTemperature_2015.csv'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;temporal
+    ! Air temperature each day for a year
+    dailyTemperature = &#39;C:\Some\Path\To\Files \dailyTemperature_2015.csv&#39;
+/
+</pre></div>
 </div>
 <p>The data sources file should now look similar to the example shown in
 <a class="reference external" href="LQF_Manual#Data_sources_file">the LQF manual</a>. In this tutorial, the
@@ -326,11 +325,13 @@ to the data sources file.</p>
 <div class="section" id="run-lqf">
 <h2>Run LQF<a class="headerlink" href="#run-lqf" title="Permalink to this headline">¶</a></h2>
 <p>Under UMEP &gt; Processor &gt; Urban Energy Balance, choose LQf (LUCY)</p>
-<div class="figure" id="id1">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_RunUMEP.png"><img alt="LQF_Tutorial_RunUMEP.png" src="Tutorials\LQF_Tutorial_RunUMEP.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_RunUMEP.png</span></p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/LQF_Tutorial_RunUMEP.png"><img alt="LQF_Tutorial_RunUMEP.png" src="../_images/LQF_Tutorial_RunUMEP.png" style="width: 300px;" /></a>
 </div>
-<p>This loads the model interface dialog box: <a href="#id10"><span class="problematic" id="id11">|LQF\_Tutorial\_RunLQF.png|</span></a></p>
+<p>This loads the model interface dialog box:</p>
+<div class="figure">
+<img alt="../_images/LQF_Tutorial_RunLQF.png" src="../_images/LQF_Tutorial_RunLQF.png" />
+</div>
 <div class="section" id="choose-configuration-files-and-output-folder">
 <h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
 <p>Working from the top of the dialog box to the bottom...</p>
@@ -360,15 +361,18 @@ used as normal.</p>
 <div class="section" id="run-the-model-for-1-week">
 <h3>Run the model for 1 week<a class="headerlink" href="#run-the-model-for-1-week" title="Permalink to this headline">¶</a></h3>
 <p>Choose a start date of 11 May 2015, using the start and end date boxes,
-then select “Run”. <a href="#id12"><span class="problematic" id="id13">|LQF\_Tutorial\_DateRange.png|</span></a></p>
+then select “Run”.</p>
+<div class="figure">
+<img alt="../_images/LQF_Tutorial_DateRange.png" src="../_images/LQF_Tutorial_DateRange.png" />
+</div>
 </div>
 </div>
 <div class="section" id="visualise-results">
 <h2>Visualise results<a class="headerlink" href="#visualise-results" title="Permalink to this headline">¶</a></h2>
 <p>Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.</p>
-<div class="figure" id="id2">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_Visualise.png"><img alt="LQF_Tutorial_Visualise.png" src="Tutorials\LQF_Tutorial_Visualise.png" style="width: 300px;" /></a>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/LQF_Tutorial_Visualise.png"><img alt="LQF_Tutorial_Visualise.png" src="../_images/LQF_Tutorial_Visualise.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">LQF_Tutorial_Visualise.png</span></p>
 </div>
 <div class="section" id="create-a-map-of-total-qf-at-noon">
@@ -378,9 +382,8 @@ noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
 “Add to canvas”. This may take a moment to process. Close the
 visualisation tool and return to the main canvas to inspect the four new
 layers that have appeared.</p>
-<div class="figure" id="id3">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_QfMap_1.png"><img alt="LQF_Tutorial_QfMap_1.png" src="Tutorials\LQF_Tutorial_QfMap_1.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_QfMap_1.png</span></p>
+<div class="figure">
+<img alt="../_images/525px-LQF_Tutorial_QfMap_1.png" src="../_images/525px-LQF_Tutorial_QfMap_1.png" />
 </div>
 <p>Each layer corresponds to a different QF component, Qm (metabolism) and
 is plotted on the top layer. De-selecting a layer in the Layers panel
@@ -392,29 +395,41 @@ ramp to “Reds” and choose Mode: Natural Breaks (Jenks). This shows much
 more structure, although the grid borders are distracting. These can be
 removed by double-clicking the colour levels and choosing a border
 colour the same as the fill colour.</p>
-<div class="figure" id="id4">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_QfMap_2.png"><img alt="LQF_Tutorial_QfMap_2.png" src="Tutorials\LQF_Tutorial_QfMap_2.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_QfMap_2.png</span></p>
+<div class="figure">
+<img alt="../_images/525px-LQF_Tutorial_QfMap_2.png" src="../_images/525px-LQF_Tutorial_QfMap_2.png" />
 </div>
 </div>
 <div class="section" id="plot-a-time-series-of-qf-in-the-centre-of-the-city">
 <h3>Plot a time series of QF in the centre of the city<a class="headerlink" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city" title="Permalink to this headline">¶</a></h3>
 <p>A time series can be shown for any of the output areas. To identify one
-of interest, zoom into the city centre, choose the selection tool
-<a href="#id14"><span class="problematic" id="id15">|LQF\_Tutorial\_SelectFeatureIcon.png|</span></a> and click an output area of
+of interest, zoom into the city centre, choose the selection tool</p>
+<div class="figure">
+<img alt="../_images/LQF_Tutorial_SelectFeatureIcon.png" src="../_images/LQF_Tutorial_SelectFeatureIcon.png" />
+</div>
+<p>and click an output area of
 interest.</p>
 <p>This turns yellow. Right-click it and select the option that comes up.</p>
-<p><a href="#id16"><span class="problematic" id="id17">|LQF\_Tutorial\_SelectFeature.png|</span></a> Information about the output area
-then appears on the left, with the ID shown. Make a note of this.</p>
-<div class="figure" id="id5">
-<img alt="LQF_Tutorial_FeatureInfo.png" src="Tutorials\LQF_Tutorial_FeatureInfo.png" />
-<p class="caption"><span class="caption-text">LQF_Tutorial_FeatureInfo.png</span></p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/LQF_Tutorial_SelectFeature.png" src="../_images/LQF_Tutorial_SelectFeature.png" />
 </div>
+<p>Information about the output area</p>
+</div></blockquote>
+<p>then appears on the left, with the ID shown. Make a note of this.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/LQF_Tutorial_FeatureInfo.png" src="../_images/LQF_Tutorial_FeatureInfo.png" />
+</div>
+</div></blockquote>
 <p>Return to the visualisation tool, choose output area 5448 and click
 “show plot”. Time series of each QF component then appear for the week.
 Note the lower traffic activity on Saturday and Sunday, and the higher
-building emissions on Thursday 15th when the weather is colder.
-<a href="#id18"><span class="problematic" id="id19">|LQF\_Tutorial\_Temporal\_standardcase.png|</span></a></p>
+building emissions on Thursday 15th when the weather is colder.</p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/525px-LQF_Tutorial_Temporal_standardcase.png" src="../_images/525px-LQF_Tutorial_Temporal_standardcase.png" />
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="recycling-of-input-data">
 <h3>Recycling of input data<a class="headerlink" href="#recycling-of-input-data" title="Permalink to this headline">¶</a></h3>
@@ -450,11 +465,16 @@ Monday, for transport and buildings (shown below), and different
 profiles can be used for different times of year (<a class="reference external" href="LQF_Manual#Diurnal_variations">click here for full
 information about diurnal profile
 files</a>).</p>
-<div class="figure" id="id6">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_WeeklyTraffic.png"><img alt="Custom traffic profile" src="Tutorials\LQF_Tutorial_WeeklyTraffic.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">Custom traffic profile</span></p>
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/525px-LQF_Tutorial_WeeklyTraffic.png" src="../_images/525px-LQF_Tutorial_WeeklyTraffic.png" />
 </div>
-<p><a class="reference internal" href="Tutorials\LQF_Tutorial_BuildingProfiles.png"><img alt="Custom building energy profiles (one for each season)" src="Tutorials\LQF_Tutorial_BuildingProfiles.png" style="width: 350px;" /></a> <strong>Step 1:</strong>
+<p>Custom traffic profile</p>
+</div></blockquote>
+<div class="figure">
+<img alt="../_images/525px-LQF_Tutorial_BuildingProfiles.png" src="../_images/525px-LQF_Tutorial_BuildingProfiles.png" />
+</div>
+<p><strong>Step 1:</strong>
 Create a duplicate of the DataSources.nml file used earlier</p>
 <p><strong>Step 2:</strong> create a new folder for the model outputs.</p>
 <p><strong>Step 3:</strong> Note the paths to the weeklyTraffic.csv and
@@ -462,19 +482,18 @@ LondonBuildingProfiles.csv files. These contain new profile data</p>
 <p><strong>Step 4:</strong> Add these to the &amp;temporal section of the new DataSources
 file using the optional diurnTraffic and diurnEnergy entries. The
 section should now resemble this:</p>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;temporal</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;dailyTemperature&nbsp;=&nbsp;'C:/Some/Path/To/Files/dailyTemperature_2015.csv'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;diurnTraffic&nbsp;=&nbsp;'C:/Some/Path/To/Files/weeklyTraffic.csv'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;&nbsp;&nbsp;diurnEnergy&nbsp;=&nbsp;'C:/Some/Path/To/Files/LondonBuildingProfiles.csv'</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">temporal</span>
+    <span class="n">dailyTemperature</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/dailyTemperature_2015.csv&#39;</span>
+    <span class="n">diurnTraffic</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/weeklyTraffic.csv&#39;</span>
+    <span class="n">diurnEnergy</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LondonBuildingProfiles.csv&#39;</span>
+<span class="o">/</span>
+</pre></div>
 </div>
 <p><strong>Step 5:</strong> Re-run LQF for 7 days week, starting 11 May 2015, specifying
 the new DataSources file at run time. Visualising the time series for
 output area 5448 again:</p>
-<div class="figure" id="id7">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_Temporal_customDiurnals.png"><img alt="LQF_Tutorial_Temporal_customDiurnals.png" src="Tutorials\LQF_Tutorial_Temporal_customDiurnals.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_Temporal_customDiurnals.png</span></p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/525px-LQF_Tutorial_Temporal_customDiurnals.png"><img alt="LQF_Tutorial_Temporal_customDiurnals.png" src="../_images/525px-LQF_Tutorial_Temporal_customDiurnals.png" style="width: 350px;" /></a>
 </div>
 <p>Note how the building and transport emission patterns now change on
 different days of the week. This is especially noticeable in transport
@@ -500,10 +519,10 @@ attributes for all countries</p>
 62036000.0)</p>
 <p><strong>Step 5:</strong> Create a new row for the UK in 2015 with the following
 entries:</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="53%" />
-<col width="47%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Database column</th>
@@ -523,9 +542,6 @@ entries:</p>
 <tr class="row-odd"><td>population_datasource</td>
 <td>Fake value for test</td>
 </tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
 </tbody>
 </table>
 <p><strong>Step 6:</strong> Run the model as in the first example.</p>
@@ -534,9 +550,8 @@ building emissions are approximately half of those in the first example,
 because the national energy consumption per-capita is now half as much.
 The vehicle emissions are the same because they are specified per 10,000
 people in the LQF database.</p>
-<div class="figure" id="id8">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_Temporal_customdatabase.png"><img alt="LQF_Tutorial_Temporal_customdatabase.png" src="Tutorials\LQF_Tutorial_Temporal_customdatabase.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_Temporal_customdatabase.png</span></p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/525px-LQF_Tutorial_Temporal_customdatabase.png"><img alt="LQF_Tutorial_Temporal_customdatabase.png" src="../_images/525px-LQF_Tutorial_Temporal_customdatabase.png" style="width: 350px;" /></a>
 </div>
 <p><strong>Step 8: Restore the original LQF database so that the test values do
 not corrupt future modelling studies</strong></p>
@@ -545,7 +560,7 @@ the log folder of the model output directory: NationalParameters.txt
 contains a list of the values used for each modelled year and country.
 The following example shows the 2014 value of energy consumption
 (kwh_year) being looked up for model runs in 2015.</p>
-<p><code class="docutils literal"><span class="pre">“DB&nbsp;value&nbsp;for&nbsp;United&nbsp;Kingdom&nbsp;kwh_year&nbsp;in&nbsp;modelled&nbsp;year&nbsp;2015:&nbsp;966862000000.0&nbsp;(2014&nbsp;value)”</span></code></p>
+<p>“DB&nbsp;value&nbsp;for&nbsp;United&nbsp;Kingdom&nbsp;kwh_year&nbsp;in&nbsp;modelled&nbsp;year&nbsp;2015:&nbsp;966862000000.0&nbsp;(2014&nbsp;value)”</p>
 <p>See <a class="reference external" href="LQF_Manual#Wide-area_data">the manual</a> for a list of the
 parameters stored in the LQF database.</p>
 </div>
@@ -570,25 +585,24 @@ example, we will assume that:</p>
 <p><strong>Step 2:</strong> Copy the optional entries needed for the custom temperature
 response from the manual and ensure the values are consistent with those
 below</p>
-<div class="line-block">
-<div class="line"><code class="docutils literal"><span class="pre">&amp;CustomTemperatureResponse</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Th&nbsp;=&nbsp;20</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Tc&nbsp;=&nbsp;20</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Ah&nbsp;=&nbsp;0.5</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Ac&nbsp;=&nbsp;0.5</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;c&nbsp;=&nbsp;0.5</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Tmax&nbsp;=&nbsp;50</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">&nbsp;Tmin&nbsp;=&nbsp;-10</span></code></div>
-<div class="line"><code class="docutils literal"><span class="pre">/</span></code></div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">CustomTemperatureResponse</span>
+   <span class="n">Th</span> <span class="o">=</span> <span class="mi">20</span>
+   <span class="n">Tc</span> <span class="o">=</span> <span class="mi">20</span>
+   <span class="n">Ah</span> <span class="o">=</span> <span class="mf">0.5</span>
+   <span class="n">Ac</span> <span class="o">=</span> <span class="mf">0.5</span>
+   <span class="n">c</span> <span class="o">=</span> <span class="mf">0.5</span>
+   <span class="n">Tmax</span> <span class="o">=</span> <span class="mi">50</span>
+   <span class="n">Tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="o">/</span>
+</pre></div>
 </div>
-<p><em>&#8216; Step 3</em>&#8216;: Save the parameters file and run the model as in the
+<p><strong>Step 3</strong> : Save the parameters file and run the model as in the
 original tutorial. Note how the day-to-day variations in the building
 emissions are much greater than in <a class="reference external" href="#LQF_Tutorial_1:_Simple_QF_modelling">Tutorial
 1</a>, but the transport and
 metabolism emissions remains the same as before.</p>
-<div class="figure" id="id9">
-<a class="reference internal image-reference" href="Tutorials\LQF_Tutorial_Temporal_customResponse.png"><img alt="LQF_Tutorial_Temporal_customResponse.png" src="Tutorials\LQF_Tutorial_Temporal_customResponse.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">LQF_Tutorial_Temporal_customResponse.png</span></p>
+<div class="figure">
+<a class="reference internal image-reference" href="../_images/525px-LQF_Tutorial_Temporal_customResponse.png"><img alt="LQF_Tutorial_Temporal_customResponse.png" src="../_images/525px-LQF_Tutorial_Temporal_customResponse.png" style="width: 350px;" /></a>
 </div>
 <ul class="simple">
 <li><a class="reference external" href="UMEP_Manual/_Tutorials/GQF">UMEP_Manual/_Tutorials/GQF</a>:
