@@ -24,26 +24,26 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor
-     - `Introduction to SUEWS <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/IntroductionToSuews>`__
+     - `Introduction to SUEWS <../Tutorials/IntroductionToSolweig.html>`__
      - Energy, water and radiation fluxes
    * - Urban energy balance
      - Pre-Processor and Processor
-     - `SUEWS Advanced <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/_SUEWS_Advanced>`__
+     - `SUEWS Advanced <../Tutorials/SUEWSAdvanced.html>`__
      - Energy, water and radiation fluxes
    * - Potential solar energy production on building envelopes
      - Processor and Post-Processor
-     - `SEBE <http://www.urban-climate.net/umep/UMEP_Manual/_Tutorials/SEBE>`__
+     - `SEBE <../Tutorials/SEBE.html>`__
      - Amount of solar energy received on building facets
    * - Outdoor thermal comfort
      - Pre-Processor and Processor
-     - `Introduction to SOLWEIG <http://urban-climate.net/umep/UMEP_Manual/_Tutorials/IntroductionToSolweig>`__
+     - `Introduction to SOLWEIG <../Tutorials/IntroductionToSuews.html>`__
      - Mean radiation temperature modelling in complex urban settings
    * - Anthropogenic heat
      - Processor
-     - |GQF| **<UMEP_Manual/_Tutorials/GQF>**
+     - `|GQF| <../Tutorials/GQF.html>`__
      - Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)
 
    * - Anthropogenic heat
      - Processor
-     - |LQF| **<UMEP_Manual/_Tutorials/LQF>**
+     - `|LQF| <../Tutorials/LQF.html>`__
      - Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)

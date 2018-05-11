@@ -3,7 +3,10 @@ Urban Land Cover: Land Cover Reclassifier
 * Contributor:
 .. list-table::
    :widths: 50 50
-   :header-rows: 0
+   :header-rows: 1
+
+   * - Name
+     - Institution
 
    * - Fredrik Lindberg
      - Gothenburg

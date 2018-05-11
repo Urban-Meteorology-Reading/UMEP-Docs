@@ -5,11 +5,13 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
     :widths: 50 50
     :header-rows: 0
 
+    * - Name
+      - Institution
     * - Fredrik Lindberg
       - Gothenburg
     * - Sue Grimmond
       - Reading
- 
+
  * Introduction：
         - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <http://urban-climate.net/umep/SUEWS>`__).
         - This plugin makes it possible to run a simplified version of the Surface Urban Energy and Water Balance Scheme (SUEWS). For a full version of the model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also available as a separate program.
