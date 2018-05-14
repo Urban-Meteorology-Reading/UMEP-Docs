@@ -228,7 +228,7 @@ term, **G**: GIS term.
      - Digital surface model
      - G
      -
-   * - FAI (|λF|)
+   * - FAI (|lambdaF|)
      - Frontal area index
      - S
      - Grimmond and Oke (1999), their figure 2
@@ -240,7 +240,7 @@ term, **G**: GIS term.
      - Leaf Area Index
      - S
      -
-   * - PAI (|λP|)
+   * - PAI (|lambdaP|)
      - Plan area index
      - S
      -
