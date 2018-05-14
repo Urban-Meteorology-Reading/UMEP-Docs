@@ -42,9 +42,9 @@ Urban Morphology: Morphometric Calculator (Point)
      - Standard deviation of building heights [m].
    * - Maximum building height (|ZHMAX|).
      - Height of the tallest building within the study area [m]
-   * - Plan area index (|λP|)
+   * - Plan area index (|lambdaP|)
      - Area of building surfaces relative to the total ground area.
-   * - Frontal area index (|λF|)
+   * - Frontal area index (|lambdaF|)
      - Area of building walls normal to wind direction relative to the total ground area.
    * - Roughness length (|Z0|)
      - A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].

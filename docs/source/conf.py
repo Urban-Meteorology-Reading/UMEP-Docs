@@ -96,7 +96,7 @@ rst_prolog = u"""
 .. |AP| replace:: A\ :sub:`P`
 .. |lambdaF| replace:: λ\ :sub:`F`
 .. |lambdaP| replace:: λ\ :sub:`P`
-
+.. |ZHσ| replace:: Z\ :sub:`Hσ`
 
 
 """
