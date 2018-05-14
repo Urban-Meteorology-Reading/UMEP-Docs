@@ -10,10 +10,6 @@ tool. The following gives what are available and planned. `To get the
 Password to access the data for the different
 tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__.
 
-<<<<<<< HEAD
-=======
-see :ref:`SUEWS_BLUEWS_Advanced`
->>>>>>> 9d47ca1ed8c6d3be1a5165411f2a836ebd8923ac
 
 .. list-table::
    :widths: 25 25 25 25
@@ -29,7 +25,7 @@ see :ref:`SUEWS_BLUEWS_Advanced`
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor
-     - `IntroductiontoSUEWS`
+     - `Introduction_SUEWS`
      - Energy, water and radiation fluxes
    * - Urban energy balance
      - Pre-Processor and Processor `SUEWS_BLUEWS_Advanced`
