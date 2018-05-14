@@ -347,9 +347,7 @@ In order to obtain the solar energy potential for a specific building:
 #. As some roofs are tilting the area may be larger for some pixels. The
    actual area (|AA|) can be computed from:
 
-      ::
-
-        A\ :sub:`A` = A\ :sub:`P`/cos⁡(Si)
+        |AA| = A\ |AP| /cos⁡(Si)
         where the slope (Si) of the raster pixel should be in radians (1 deg = pi/180 rad).
 
 

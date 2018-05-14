@@ -164,10 +164,10 @@ starts.
            :widths: 25 25
            :header-rows: 0
 
-           * - Anthropogenic Heat (Q:sub:`F`) (LQF)
+           * - Anthropogenic Heat (|QF|) (LQF)
              - Spatial variations anthropogenic heat release for urban areas
            * - `GQF <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_GQF>`__
-             - Anthropogenic Heat (Q:sub:`F`). *Daily City Operations: Energy use; Gas consumption; Traffic heat loads*
+             - Anthropogenic Heat (|QF|). *Daily City Operations: Energy use; Gas consumption; Traffic heat loads*
            * - `SUEWS (Simple) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2C_simple.29>`__
              - Urban Energy and Water Balance. *Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure*
            * - `SUEWS (Advanced) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29>`__
