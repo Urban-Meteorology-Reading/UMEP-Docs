@@ -1,4 +1,5 @@
-.. _SUEWS/BLUEWS (Advanced):
+.. _SUEWS_BLUEWS_Advanced:
+
 SUEWS/BLUEWS (Advanced)
 -----------------------
 

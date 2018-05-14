@@ -25,18 +25,26 @@
   
 
   
+  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -101,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -109,10 +117,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -160,7 +167,7 @@
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a model [SOlar and LongWave Environmental
 Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
-temperature (T:sub:<code class="xref any docutils literal"><span class="pre">mrt</span></code>).</p>
+temperature (T:sub:<code class="xref any docutils literal notranslate"><span class="pre">mrt</span></code>).</p>
 <p>SOLWEIG is a model that simulates spatial variations of 3D radiation
 fluxes and the T<sub>mrt</sub> in complex urban settings. It is also able
 to model spatial variations of shadow patterns. T<sub>mrt</sub> is one of
@@ -171,7 +178,7 @@ human body is exposed. In SOLWEIG, T<sub>mrt</sub> is derived by modelling
 shortwave and longwave radiation fluxes in six directions (upward,
 downward and from the four cardinal points) and angular factors.</p>
 <p>The model requires <strong>meteorological</strong> forcing data (global shortwave
-radiation (K↓), air temperature (T:sub:<code class="xref any docutils literal"><span class="pre">a</span></code>), relative humidity (RH)),
+radiation (K↓), air temperature (T:sub:<code class="xref any docutils literal notranslate"><span class="pre">a</span></code>), relative humidity (RH)),
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T<sub>mrt</sub>, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
@@ -447,7 +454,7 @@ point in time in the plugin.</p>
 <tr class="row-even"><td>19</td>
 <td>N</td>
 <td>Wuh</td>
-<td>External water use [m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code>]</td>
+<td>External water use [m:sup:<code class="xref any docutils literal notranslate"><span class="pre">3</span></code>]</td>
 </tr>
 <tr class="row-odd"><td>20</td>
 <td>N</td>
@@ -518,7 +525,7 @@ output folder for your computer.</p>
 </div></blockquote>
 </li>
 <li><p class="first">When the calculation is done, map will appear in the map canvas.
-This is the &#8216;total&#8217; SVF i.e., including both buildings and
+This is the ‘total’ SVF i.e., including both buildings and
 vegetation. Examine the dataset.</p>
 </li>
 <li><p class="first">Where are the highest and lowest values found?</p>
@@ -759,7 +766,9 @@ compare the differences.</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -772,7 +781,7 @@ compare the differences.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -791,7 +800,6 @@ compare the differences.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -809,13 +817,14 @@ compare the differences.</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>
