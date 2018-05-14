@@ -25,18 +25,26 @@
   
 
   
+  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+  
+
+  
+    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -101,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -109,10 +117,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -237,23 +244,23 @@ comprehensive requirements of GQF:</p>
 </tr>
 <tr class="row-even"><td>fuelConsumption.csv</td>
 <td>Fuel efficiency (g/km) of different vehicle classes</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>Transport.csv</td>
 <td>Weekend and weekday diurnal profiles for each vehicle class</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>Metabolism.csv</td>
 <td>Weekend and weekday diurnal profiles of metabolic activity</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>Parameters.nml</td>
 <td>Configuration file containing model run parameters</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>DataSources.nml</td>
 <td>Configuration file specifying different input data sources for model</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -332,7 +339,7 @@ the data shown.</li>
 shown here: Using the workday population spatial units as model output
 areas. This section does not need to use an attribute or know about a
 start date:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
      <span class="n">shapefile</span> <span class="o">=</span> <span class="s1">&#39;C:\path</span><span class="se">\t</span><span class="s1">o\data</span><span class="se">\500</span><span class="s1">m_Workday_from_100m.shp&#39;</span>
      <span class="n">epsgCode</span> <span class="o">=</span> <span class="mi">32631</span>
      <span class="n">featureIds</span> <span class="o">=</span> <span class="s1">&#39;ID&#39;</span>
@@ -340,7 +347,7 @@ start date:</p>
 </pre></div>
 </div>
 <p>Specifying the residential population data.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>! ### Population data
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! ### Population data
 &amp;residentialPop
    shapefiles = &#39;C:\path\to\data\500m_Residential_from_100m.shp&#39;
    startDates = &#39;2011-01-01&#39;
@@ -359,10 +366,10 @@ start date:</p>
 gas, but different attribute)</li>
 </ul>
 <p>For the <strong>annualEco7</strong> section, we shall assume zero consumption. This
-doesn&#8217;t need a shapefile - a single number indicating the whole-city
+doesn’t need a shapefile - a single number indicating the whole-city
 consumption should be used instead, along with dummy EPSG code,
 attribToUse and featureIds:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;annualEco7
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;annualEco7
    ! Spatial variations of economy 7 electricity use
    shapefiles = 0.0
    startDates = &#39;2014-01-01&#39;
@@ -383,10 +390,10 @@ attribToUse and featureIds:</p>
 <p>GQF uses annual total energy consumption shapefiles, and needs to know
 how to vary energy consumption on different dates (e.g. winter is likely
 to have more fuel use than summer). This is captured using real data
-from the energy grid. The 2015GasElecDD.csv file contains each day&#8217;s
+from the energy grid. The 2015GasElecDD.csv file contains each day’s
 total gas and electricity consumption. GQF then scales the annual
 consumption based on this each day.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">dailyEnergyUse</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">dailyEnergyUse</span>
    <span class="n">Daily</span> <span class="n">variations</span> <span class="ow">in</span> <span class="n">total</span> <span class="n">power</span> <span class="n">use</span>
    <span class="n">profileFiles</span> <span class="o">=</span> <span class="s1">&#39;C:\Path\To</span><span class="se">\201</span><span class="s1">5GasElecDD.csv&#39;</span>
 <span class="o">/</span>
@@ -401,13 +408,13 @@ the closest sensible match to time of week and time of year.</p>
 <p>The metabolism file controls:</p>
 <ul class="simple">
 <li>How much energy each the average person emits at each time of day</li>
-<li>The fraction of an area&#8217;s workday population actually at work (and by
+<li>The fraction of an area’s workday population actually at work (and by
 extension the fraction of the residential population at home)</li>
 </ul>
-<p>The &#8216;metabolism.csv&#8217; file contains a weekday, saturday and sunday
+<p>The ‘metabolism.csv’ file contains a weekday, saturday and sunday
 variant of this information, and copies for each daylight savings regime
 in the UK to account for changes in the summer.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>! Temporal metabolism data
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! Temporal metabolism data
 &amp;diurnalMetabolism
     profileFiles = &#39;N:\QF_London\GreaterQF_input\London\Profiles\\Metabolism.csv&#39;
 /
@@ -421,7 +428,7 @@ separated in GQF. Their diurnal profiles are also different so that the
 different behaviours of households and businesses are represented
 accurately. This means that each of the building energy inputs also
 requires a diurnal profile data file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;diurnalDomElec
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;diurnalDomElec
    ! Diurnal variations in total domestic electricity use (metadata provided in file; files can contain multiple seasons)
    profileFiles =
 &#39;C:\Path\To\BuildingLoadings_DomUnre.csv&#39;
@@ -469,7 +476,7 @@ provided for each road link</li>
 <li>vehicle_AADT available: AADT is broken down by vehicle type for each
 road link</li>
 </ul>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;transportData
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;transportData
  ! Vector data containing all road segments for study area
  shapefiles = &#39;C:\path\to\data\LAEI2013_AADTVKm_2013_link.shp&#39;
  startDates = &#39;2008-01-01&#39;
@@ -484,7 +491,7 @@ road link</li>
 <p>The rest of the section tells GQF which attributes to use for various
 aspects of the traffic data, and what different kinds of roads are
 called:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>    ! Road classification information. This is used with assumed values for AADT
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    ! Road classification information. This is used with assumed values for AADT
     class_field = &#39;DESC_TERM&#39;           ! The shapefile attribute that contains road classification
     ! Strings that identify each class of road
     motorway_class = &#39;Motorway&#39;
@@ -523,8 +530,8 @@ called:</p>
 <h1>Vehicle fuel efficiency data<a class="headerlink" href="#vehicle-fuel-efficiency-data" title="Permalink to this headline">¶</a></h1>
 <p>The fuelConsumption.csv file contains a list of vehicle fuel efficiency
 by fuel, vehicle type and era. This is used to calculate each road
-link&#8217;s fuel consumption:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;fuelConsumption
+link’s fuel consumption:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;fuelConsumption
    ! File containing fuel consumption performance data for each vehicle type as standards change over the years
    profileFiles = &#39;C:\Path\To\fuelConsumption.csv&#39;
 /
@@ -536,7 +543,7 @@ link&#8217;s fuel consumption:</p>
 <p>Each vehicle type has a different activity profile. For example, freight
 and taxi vehicle may operate later at night than passenger cars. The
 Transport.csv file contains a profile for each of these:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;diurnalTraffic
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;diurnalTraffic
    ! Diurnal cycles of transport flow for different vehicle types
    profileFiles = &#39;C:\Path\To\Transport.csv&#39;
 /
@@ -556,7 +563,7 @@ total volume of traffic each day.</p>
 </dl>
 <div class="section" id="choose-configuration-files-and-output-folder">
 <h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
-<p>Working from the top of the dialog box to the bottom...</p>
+<p>Working from the top of the dialog box to the bottom…</p>
 <ol class="arabic simple">
 <li>Click the … buttons in the “Configuration and raw input data” panel
 to browse to the parameters.nml and DataSources.nml files. A pop-up
@@ -753,7 +760,9 @@ model</li>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -766,7 +775,7 @@ model</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -785,7 +794,6 @@ model</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
-            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -803,13 +811,14 @@ model</li>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>
