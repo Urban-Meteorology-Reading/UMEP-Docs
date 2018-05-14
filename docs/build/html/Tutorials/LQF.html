@@ -25,26 +25,18 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -109,7 +101,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -117,9 +109,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -288,7 +281,7 @@ are used to describe both of them</li>
 </ol>
 <p>The first two sections of the DataSources.nml file should now look like
 this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
    <span class="n">shapefile</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/griddedResidentialPopulation.shp&#39;</span>
    <span class="n">epsgCode</span> <span class="o">=</span> <span class="mi">32631</span>
    <span class="n">featureIds</span> <span class="o">=</span> <span class="s1">&#39;ID&#39;</span>
@@ -304,7 +297,7 @@ this:</p>
 <div class="section" id="add-the-lqf-database-and-mean-daily-temperature-files">
 <h3>Add the LQF database and mean daily temperature files<a class="headerlink" href="#add-the-lqf-database-and-mean-daily-temperature-files" title="Permalink to this headline">¶</a></h3>
 <p>LQF needs to know the location of its database of national parameters.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite&#39;</span>
 <span class="o">/</span>
 </pre></div>
@@ -315,7 +308,7 @@ file) must be formatted appropriately for LQF. <a class="reference external" hre
 manual</a> for a detailed description
 of the file format</li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;temporal
+<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;temporal
     ! Air temperature each day for a year
     dailyTemperature = &#39;C:\Some\Path\To\Files \dailyTemperature_2015.csv&#39;
 /
@@ -340,13 +333,8 @@ to the data sources file.</p>
 <img alt="../_images/LQF_Tutorial_RunLQF.png" src="../_images/LQF_Tutorial_RunLQF.png" />
 </div>
 <div class="section" id="choose-configuration-files-and-output-folder">
-<<<<<<< HEAD
 <h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
 <p>Working from the top of the dialog box to the bottom...</p>
-=======
-<h2>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h2>
-<p>Working from the top of the dialog box to the bottom…</p>
->>>>>>> 9d47ca1ed8c6d3be1a5165411f2a836ebd8923ac
 <ol class="arabic simple">
 <li>Click the … buttons in the “Configuration and raw input data” panel
 to browse to the parameters.nml and DataSources.nml files. A pop-up
@@ -494,7 +482,7 @@ LondonBuildingProfiles.csv files. These contain new profile data</p>
 <p><strong>Step 4:</strong> Add these to the &amp;temporal section of the new DataSources
 file using the optional diurnTraffic and diurnEnergy entries. The
 section should now resemble this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">temporal</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">temporal</span>
     <span class="n">dailyTemperature</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/dailyTemperature_2015.csv&#39;</span>
     <span class="n">diurnTraffic</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/weeklyTraffic.csv&#39;</span>
     <span class="n">diurnEnergy</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LondonBuildingProfiles.csv&#39;</span>
@@ -597,7 +585,7 @@ example, we will assume that:</p>
 <p><strong>Step 2:</strong> Copy the optional entries needed for the custom temperature
 response from the manual and ensure the values are consistent with those
 below</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">CustomTemperatureResponse</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">CustomTemperatureResponse</span>
    <span class="n">Th</span> <span class="o">=</span> <span class="mi">20</span>
    <span class="n">Tc</span> <span class="o">=</span> <span class="mi">20</span>
    <span class="n">Ah</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -625,9 +613,7 @@ Modelling anthropogenic heat flux in London, UK using the GQF model.</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -640,7 +626,7 @@ Modelling anthropogenic heat flux in London, UK using the GQF model.</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -659,6 +645,7 @@ Modelling anthropogenic heat flux in London, UK using the GQF model.</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -676,14 +663,13 @@ Modelling anthropogenic heat flux in London, UK using the GQF model.</li>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

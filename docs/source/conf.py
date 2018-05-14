@@ -72,7 +72,7 @@ pygments_style = 'sphinx'
 default_role = 'any'
 
 # some text replacement defintions
-rst_prolog = """
+rst_prolog = u"""
 .. |mm^-1| replace:: mm\ :sup:`-1`
 .. |m^-1| replace:: m\ :sup:`-1`
 .. |m^-2| replace:: m\ :sup:`-2`
@@ -94,7 +94,8 @@ rst_prolog = """
 .. |Ta| replace:: T\ :sub:`a`
 .. |AA| replace:: A\ :sub:`A`
 .. |AP| replace:: A\ :sub:`P`
-
+.. |lambdaF| replace:: λ\ :sub:`F`
+.. |lambdaP| replace:: λ\ :sub:`P`
 
 
 

@@ -1,4 +1,4 @@
-.. _IntroductiontoSUEWS:
+.. _Introduction_SUEWS:
 
 Introduction to SUEWS
 ^^^^^^^^^^^^^^^^^^^^^^^^

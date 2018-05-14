@@ -30,14 +30,18 @@ UMEP: How to Cite
 
 Please use the reference below when UMEP is used:
 
-Lindberg F, Grimmond CSB, Gabey A, Huang B, Kent CW, Sun T, Theeuwes N, Järvi L, Ward H, Capel-Timms I, Chang YY, Jonsson P, Krave N, Liu D, Meyer D, Olofson F, Tan JG, Wästberg D, Xue L,
-Zhang Z ( **2017**) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based climate services.  
-Environmental Modelling and Software https://doi.org/10.1016/j.envsoft.2017.09.020
+.. epigraph::
+
+  Lindberg F, Grimmond CSB, Gabey A, Huang B, Kent CW, Sun T, Theeuwes N, Järvi L, Ward H, Capel-Timms I, Chang YY, Jonsson P, Krave N, Liu D, Meyer D, Olofson F, Tan JG, Wästberg D, Xue L,
+  Zhang Z (2017) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based climate services.  
+  Environmental Modelling and Software https://doi.org/10.1016/j.envsoft.2017.09.020
 
 The manual should be cited as:
 
-Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (**2017**) 
-Urban Multi-scale Environmental Predictor (UMEP) Manual. http://urban-climate.net/umep/UMEP_Manual University of Reading UK, University of Gothenburg Sweden, SIMS China
+.. epigraph::
+
+  Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (2017) 
+  Urban Multi-scale Environmental Predictor (UMEP) Manual. http://urban-climate.net/umep/UMEP_Manual University of Reading UK, University of Gothenburg Sweden, SIMS China
 
 
 Current Version
