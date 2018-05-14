@@ -28,7 +28,7 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Energy, water and radiation fluxes
    * - Urban energy balance
      - Pre-Processor and Processor
-     - `SUEWS/BLUEWS (Advanced)`
+     - :ref:`SUEWS/BLUEWS (Advanced)`
      - Energy, water and radiation fluxes
    * - Potential solar energy production on building envelopes
      - Processor and Post-Processor
