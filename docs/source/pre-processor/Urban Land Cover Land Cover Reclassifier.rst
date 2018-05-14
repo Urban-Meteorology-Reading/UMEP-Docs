@@ -48,7 +48,8 @@ Urban Land Cover: Land Cover Reclassifier
             - Land Cover Reclassifier
 
 * Dialog box:
-        .. figure:: /images/landcoverreclassifier.png
+
+        .. figure:: /images/Landcoverreclassifier.png
 
 * Dialog sections:
 .. list-table::

@@ -343,9 +343,9 @@ Solar Energy Potential
 In order to obtain the solar energy potential for a specific building:
 
 #. The actual area of the roof needs to be considered.
-#. Determine the area of each pixel (''A:sub:`P` ): e.g. 1 m\ :sup:`2`
+#. Determine the area of each pixel (|AP| ): e.g. 1 m\ :sup:`2`
 #. As some roofs are tilting the area may be larger for some pixels. The
-   actual area (*A\ :sub:`A`*) can be computed from:
+   actual area (|AA|) can be computed from:
 
       ::
 

@@ -10,7 +10,7 @@ Introduction
 
 In this tutorial you will use a model [SOlar and LongWave Environmental
 Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
-temperature (T:sub:`mrt`).
+temperature (|TMRT|).
 
 SOLWEIG is a model that simulates spatial variations of 3D radiation
 fluxes and the T\ :sub:`mrt` in complex urban settings. It is also able
@@ -23,7 +23,7 @@ shortwave and longwave radiation fluxes in six directions (upward,
 downward and from the four cardinal points) and angular factors.
 
 The model requires **meteorological** forcing data (global shortwave
-radiation (K↓), air temperature (T:sub:`a`), relative humidity (RH)),
+radiation (K↓), air temperature (|Ta|), relative humidity (RH)),
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T\ :sub:`mrt`, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can

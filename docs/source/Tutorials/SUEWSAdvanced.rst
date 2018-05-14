@@ -48,8 +48,8 @@ The default dataset included in **Suews Simple** has parameters
 calculated from a `source area
 model <http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
 to obtain the appropriate values for the input parameters. Roughness
-parameters such as roughness length (z:sub:`0`) and zero plane
-displacement length (z:sub:`d`) are calculated using `morphometric
+parameters such as roughness length (|Z0|) and zero plane
+displacement length (|Zd|) are calculated using `morphometric
 models <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Point.29>`__.
 Now you will explore the differences in fluxes using the default
 settings or using input parameters from the geodata included in the test
@@ -227,7 +227,7 @@ term, **G**: GIS term.
      - Digital surface model
      - G
      -
-   * - FAI (λ:sub:`F`)
+   * - FAI (|λF|)
      - Frontal area index
      - S
      - Grimmond and Oke (1999), their figure 2
@@ -239,7 +239,7 @@ term, **G**: GIS term.
      - Leaf Area Index
      - S
      -
-   * - PAI (λ:sub:`P`)
+   * - PAI (|λP|)
      - Plan area index
      - S
      -

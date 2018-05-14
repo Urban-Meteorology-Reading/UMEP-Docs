@@ -36,19 +36,19 @@ Urban Morphology: Morphometric Calculator (Point)
 
    * - Morphometric parameters
      - Description
-   * - Mean building height (z:sub:`H`)
+   * - Mean building height (|ZH|)
      - Average building height measured from ground level [m].
-   * - Standard deviation of building heights (z:sub:`Hσ`).
+   * - Standard deviation of building heights (|ZHσ|).
      - Standard deviation of building heights [m].
-   * - Maximum building height (z:sub:`Hmax`).
+   * - Maximum building height (|ZHMAX|).
      - Height of the tallest building within the study area [m]
-   * - Plan area index (λ:sub:`P`)
+   * - Plan area index (|λP|)
      - Area of building surfaces relative to the total ground area.
-   * - Frontal area index (λ:sub:`F`)
+   * - Frontal area index (|λF|)
      - Area of building walls normal to wind direction relative to the total ground area.
-   * - Roughness length (z:sub:`0`)
+   * - Roughness length (|Z0|)
      - A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].
-   * - Zero-plane displacement height (z:sub:`d`)
+   * - Zero-plane displacement height (|Zd|)
      - Height above ground where the wind speed is 0 m s\ :sup:`-1` as a result of obstacles to the flow such as trees or buildings [m].
 
 * Location:

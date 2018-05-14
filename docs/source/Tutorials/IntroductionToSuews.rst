@@ -314,7 +314,7 @@ term, **G**: GIS term.
      - Digital surface model
      - G
      -
-   * - FAI (λ:sub:`F`)
+   * - FAI (|λF|)
      - Frontal area index
      - S
      - `Grimmond and Oke (1999) <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__, their figure 2
@@ -326,7 +326,7 @@ term, **G**: GIS term.
      - Leaf Area Index
      - S
      -
-   * - PAI (λ:sub:`P`)
+   * - PAI (|λP|)
      - Plan area index
      - S
      -

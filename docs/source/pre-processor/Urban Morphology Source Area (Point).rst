@@ -34,7 +34,7 @@ Urban Morphology: Source Area (Point)
      -  The mathematical basis of Kormann and Meixner (2001) includes a stationary gradient diffusion formulation, height independent cross-wind dispersion, power law profiles of mean wind velocity and eddy diffusivity and a power law solution of the two-dimensional advection-diffusion equation. The final solution of the footprint function is calculated by fitting the power laws (mean wind and eddy diffusivity) to Monin-Obukhov similarity profiles. As with all models the limitations should be appreciated which include (but are not limited to) assumptions of Monin-Obukhov similarity theory, the use of power law profiles, assumptions of horizontally homogeneous flow and assumptions of stationarity during the meteorological or scalar variable input period (i.e. their averaging period; typically 30 – 60 minutes).   |
      -  Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al.
      -  Kljun et al. (2015) is a two-dimensional parameterisation for flux-footprint prediction which builds upon the footprint parameterisation of Kljun et al. (2004b) by providing the width and shape of footprint estimates, as well as explicitly considering surface roughness length. It is developed and evaluated from simulations of the backward Lagrangian stochastic particle dispersion model LPDM-B (Kljun et al., 2002) and demonstrated to be appropriate for a wide range of boundary layer conditions and measurement heights. It can therefore provide footprint estimates for a wide range of real-case applications.
-     -  When using pre-determined values of z\ :sub:`d` and z\ :sub:`0`, the horizontal wind speed is calculated internally to the respective source area models. This ensures the boundary layer equations used within the models are internally consistent.
+     -  When using pre-determined values of |Zd| and |Z0|, the horizontal wind speed is calculated internally to the respective source area models. This ensures the boundary layer equations used within the models are internally consistent.
      -  A ground and 3D object DSM and a DEM should be used as input data. In addition if vegetation heights above ground level (i.e. trees and bushes) are available (CDSM) this can also be used. However, a CDSM need not be used and it is also possible to only use a 3D object DSM with no ground heights.
      -   Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).
 
@@ -111,9 +111,9 @@ Urban Morphology: Source Area (Point)
    * - Parameter/Variable
      - Defintion
    * - Roughness Length for Momentum
-     - First order estimation of roughness length for momentum (z:sub:`0`) for this wind direction [m].
+     - First order estimation of roughness length for momentum (|Z0|) for this wind direction [m].
    * - Zero Displacement Height for Momentum
-     - First order estimation of the zero-plane displacement height for momentum (z:sub:`d`) for this wind direction. [m].
+     - First order estimation of the zero-plane displacement height for momentum (|Zd|) for this wind direction. [m].
    * - Measurement Height
      - Height of sensor above ground level [m].
    * - Standard Deviation (sigma) of Cross Wind

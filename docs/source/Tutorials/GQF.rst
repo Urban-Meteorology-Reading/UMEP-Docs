@@ -571,5 +571,5 @@ larger fraction of the total.
 Related tutorials
 =================
 
--  `Modelling anthropogenic heat flux in London, UK using the LQF
-   model <UMEP_Manual/_Tutorials/LQF>`__
+-  Modelling anthropogenic heat flux in London, UK using the `LQF`
+   model
