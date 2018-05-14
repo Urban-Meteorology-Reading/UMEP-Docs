@@ -67,13 +67,7 @@ Meteorological Data: MetPreprocessor
    * - 2
      - id
      - Day of year [DOY]
-     -
-     - 1 to 365
-     -   * -
-     -
-     -
-     -
-     - (366 if leap year)
+     - 1 to 365 (366 if leap year)
      -
    * - 3
      - it
@@ -162,15 +156,9 @@ Meteorological Data: MetPreprocessor
      - (per 5 min) scale based on time step being used
    * - 20
      - xsmd
-     -
      - \(Observed) soil moisture
      - 0.01 to 0.5
-     -   * -
-     -
-     -
      - [m:sup:`3` m\ :sup:`-3` or kg kg\ :sup:`-1`]
-     -
-     -
    * - 21
      - lai
      - (Observed) leaf area index [m:sup:`2` m\ :sup:`-2`]

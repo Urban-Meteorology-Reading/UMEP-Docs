@@ -227,7 +227,7 @@
 <li>The mathematical basis of Kormann and Meixner (2001) includes a stationary gradient diffusion formulation, height independent cross-wind dispersion, power law profiles of mean wind velocity and eddy diffusivity and a power law solution of the two-dimensional advection-diffusion equation. The final solution of the footprint function is calculated by fitting the power laws (mean wind and eddy diffusivity) to Monin-Obukhov similarity profiles. As with all models the limitations should be appreciated which include (but are not limited to) assumptions of Monin-Obukhov similarity theory, the use of power law profiles, assumptions of horizontally homogeneous flow and assumptions of stationarity during the meteorological or scalar variable input period (i.e. their averaging period; typically 30 – 60 minutes).   |</li>
 <li>Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al.</li>
 <li>Kljun et al. (2015) is a two-dimensional parameterisation for flux-footprint prediction which builds upon the footprint parameterisation of Kljun et al. (2004b) by providing the width and shape of footprint estimates, as well as explicitly considering surface roughness length. It is developed and evaluated from simulations of the backward Lagrangian stochastic particle dispersion model LPDM-B (Kljun et al., 2002) and demonstrated to be appropriate for a wide range of boundary layer conditions and measurement heights. It can therefore provide footprint estimates for a wide range of real-case applications.</li>
-<li>When using pre-determined values of z<sub>d</sub> and z<sub>0</sub>, the horizontal wind speed is calculated internally to the respective source area models. This ensures the boundary layer equations used within the models are internally consistent.</li>
+<li>When using pre-determined values of Z<sub>d</sub> and Z<sub>0</sub>, the horizontal wind speed is calculated internally to the respective source area models. This ensures the boundary layer equations used within the models are internally consistent.</li>
 <li>A ground and 3D object DSM and a DEM should be used as input data. In addition if vegetation heights above ground level (i.e. trees and bushes) are available (CDSM) this can also be used. However, a CDSM need not be used and it is also possible to only use a 3D object DSM with no ground heights.</li>
 <li>Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).</li>
 </ul>
@@ -392,10 +392,10 @@
 <td>Defintion</td>
 </tr>
 <tr class="row-even"><td>Roughness Length for Momentum</td>
-<td>First order estimation of roughness length for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">0</span></code>) for this wind direction [m].</td>
+<td>First order estimation of roughness length for momentum (Z<sub>0</sub>) for this wind direction [m].</td>
 </tr>
 <tr class="row-odd"><td>Zero Displacement Height for Momentum</td>
-<td>First order estimation of the zero-plane displacement height for momentum (z:sub:<code class="xref any docutils literal"><span class="pre">d</span></code>) for this wind direction. [m].</td>
+<td>First order estimation of the zero-plane displacement height for momentum (Z<sub>d</sub>) for this wind direction. [m].</td>
 </tr>
 <tr class="row-even"><td>Measurement Height</td>
 <td>Height of sensor above ground level [m].</td>

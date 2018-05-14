@@ -2,7 +2,6 @@
 
 
 |LQF|
-
 ^^^^^^^^^^^^^^^^
 
 
@@ -504,5 +503,5 @@ metabolism emissions remains the same as before.
 Related tutorials
 =================
 
--  `UMEP\_Manual/\_Tutorials/GQF <UMEP_Manual/_Tutorials/GQF>`__:
+-  `GQF`:
    Modelling anthropogenic heat flux in London, UK using the GQF model.

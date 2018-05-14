@@ -4,7 +4,10 @@ Solar Radiation: SEBE (Visualisation)
 * Contributor:
 .. list-table::
    :widths: 50 50
-   :header-rows: 0
+   :header-rows: 1
+
+   * - Name
+     - Institution
 
    * - Niklas Krave
      - Gothenburg
@@ -43,4 +46,3 @@ Solar Radiation: SEBE (Visualisation)
 
 * Close:
      -  This closes the plugin.
-images

@@ -1,13 +1,5 @@
 .. _People_Involved_&_Acknowledgements:
 
-Group
-Institution
-Team
-Acknowledged
-  -
-  -
-  -
-  -
 People Involved & Acknowledgements
 ----------------------------------
 .. list-table::

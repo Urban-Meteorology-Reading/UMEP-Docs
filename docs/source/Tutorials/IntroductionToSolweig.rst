@@ -32,8 +32,7 @@ a schematic flowchart of SOLWEIG in shown. The `full
 manual <http://www.urban-climate.net/umep/SOLWEIG>`__ provides more
 detail.
 
-.. figure:: /images/SOLWEIG_flowchart.png
-   :alt:  Figure 1: Overview of SOLWEIG
+    .. figure:: /images/SOLWEIG_flowchart.png
 
     Figure 1: Overview of SOLWEIG
 
@@ -152,7 +151,8 @@ SOLWEIG.
             - R
             - Any time resolution can be given.
 *  **Other**
-        .. list-table::
+
+       .. list-table::
          :widths: 25 25 25 25
          :header-rows: 1
 
@@ -160,11 +160,11 @@ SOLWEIG.
             - Definition
             - Use
             - Reference/Comments
-          * - Latitude (°)
+          * - Latitude (u'°')
             - Solar related calculations
             - R
             - Obtained from the ground and building CRS
-          * - Longitude (°)
+          * - Longitude (u'°')
             - Solar related calculations
             - R
             - Obtained from the ground and building CRS

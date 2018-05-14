@@ -160,7 +160,7 @@
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a model [SOlar and LongWave Environmental
 Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
-temperature (T:sub:<code class="xref any docutils literal"><span class="pre">mrt</span></code>).</p>
+temperature (T<sub>MRT</sub>).</p>
 <p>SOLWEIG is a model that simulates spatial variations of 3D radiation
 fluxes and the T<sub>mrt</sub> in complex urban settings. It is also able
 to model spatial variations of shadow patterns. T<sub>mrt</sub> is one of
@@ -171,7 +171,7 @@ human body is exposed. In SOLWEIG, T<sub>mrt</sub> is derived by modelling
 shortwave and longwave radiation fluxes in six directions (upward,
 downward and from the four cardinal points) and angular factors.</p>
 <p>The model requires <strong>meteorological</strong> forcing data (global shortwave
-radiation (K↓), air temperature (T:sub:<code class="xref any docutils literal"><span class="pre">a</span></code>), relative humidity (RH)),
+radiation (K↓), air temperature (T<sub>a</sub>), relative humidity (RH)),
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T<sub>mrt</sub>, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
@@ -179,9 +179,12 @@ be added to increase the accuracy of the model output. Below (Figure 1)
 a schematic flowchart of SOLWEIG in shown. The <a class="reference external" href="http://www.urban-climate.net/umep/SOLWEIG">full
 manual</a> provides more
 detail.</p>
-<div class="figure">
-<img alt="Figure 1: Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
+<blockquote>
+<div><div class="figure">
+<img alt="../_images/SOLWEIG_flowchart.png" src="../_images/SOLWEIG_flowchart.png" />
 </div>
+<p>Figure 1: Overview of SOLWEIG</p>
+</div></blockquote>
 </div>
 <div class="section" id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
@@ -325,10 +328,9 @@ SOLWEIG.</p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><strong>Other</strong></dt>
-<dd></dd>
-</dl>
+<li><p class="first"><strong>Other</strong></p>
+<blockquote>
+<div></div></blockquote>
 </li>
 </ul>
 <p>Meterological input data should be in UMEP format. You can use the

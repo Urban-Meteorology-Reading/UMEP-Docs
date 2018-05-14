@@ -1,6 +1,6 @@
-.. _Introduction to SUEWS:
+.. _IntroductiontoSUEWS:
 
-Introduction To Suews
+Introduction to SUEWS
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Introduction

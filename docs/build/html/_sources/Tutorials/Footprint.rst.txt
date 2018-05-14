@@ -96,7 +96,8 @@ Source Area Modelling
 #. To access the Source area model or Footprint model:
 
    -  UMEP -> Pre-processor > Urban Morphology > Source Area Model
-      (Point) `this appears like this <Media:/images/UMEP_location.png>`__
+      (Point)
+
                 .. figure:: /images/750px-Footprint1.png
 
 
@@ -239,5 +240,3 @@ Bottema (1995)
 Authors of this document: Kent, Grimmond (2016). Lindberg
 
 `UMEP Repository <https://bitbucket.org/fredrik_ucg/umep/>`__
-
-.. |UMEP\_location.png| image:: UMEP_location.png

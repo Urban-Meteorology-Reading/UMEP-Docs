@@ -298,6 +298,169 @@
 </dl>
 </li>
 </ul>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">No.</th>
+<th class="head">Header named</th>
+<th class="head">Description</th>
+<th class="head">Accepted  range</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>iy</td>
+<td>Year [YYYY]</td>
+<td>Not applicable</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>id</td>
+<td>Day of year [DOY]</td>
+<td>1 to 365 (366 if leap year)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>it</td>
+<td>Hour [H]</td>
+<td>0 to 23</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>imin</td>
+<td>Minute [M]</td>
+<td>0 to 59</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>qn</td>
+<td>Net all-wave radiation [W m<sup>-2</sup>]</td>
+<td>-200 to 800</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>qh</td>
+<td>Sensible heat flux [W m<sup>-2</sup>]</td>
+<td>-200 to 750</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>qe</td>
+<td>Latent heat flux [W m<sup>-2</sup>]</td>
+<td>-100 to 650</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>8</td>
+<td>qs</td>
+<td>Storage heat flux [W m<sup>-2</sup>]</td>
+<td>-200 to 650</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>9</td>
+<td>qf</td>
+<td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
+<td>0 to 1500</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>10</td>
+<td>U</td>
+<td>Wind speed [m s<sup>-1</sup>]</td>
+<td>0.001 to 60</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>11</td>
+<td>RH</td>
+<td>Relative Humidity [%]</td>
+<td>5 to 100</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>Tair</td>
+<td>Air temperature [°C]</td>
+<td>-30 to 55</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>pres</td>
+<td>Surface barometric pressure [kPa]</td>
+<td>90 to 107</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>rain</td>
+<td>Rainfall [mm]</td>
+<td>0 to 30</td>
+<td>(per 5 min) this should be scaled based on time step used</td>
+</tr>
+<tr class="row-even"><td>15</td>
+<td>kdown</td>
+<td>Incoming shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 1200</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>16</td>
+<td>snow</td>
+<td>Snow [mm]</td>
+<td>0 to 300</td>
+<td>(per 5 min) this should be scaled based on time step used</td>
+</tr>
+<tr class="row-even"><td>17</td>
+<td>ldown</td>
+<td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
+<td>100 to 600</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>18</td>
+<td>fcld</td>
+<td>Cloud fraction [tenths]</td>
+<td>0 to 1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>19</td>
+<td>wuh</td>
+<td>External water use [m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code>]</td>
+<td>0 to 10</td>
+<td>(per 5 min) scale based on time step being used</td>
+</tr>
+<tr class="row-odd"><td>20</td>
+<td>xsmd</td>
+<td>(Observed) soil moisture</td>
+<td>0.01 to 0.5</td>
+<td>[m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
+</tr>
+<tr class="row-even"><td>21</td>
+<td>lai</td>
+<td>(Observed) leaf area index [m:sup:<code class="xref any docutils literal"><span class="pre">2</span></code> m<sup>-2</sup>]</td>
+<td>0 to 15</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>kdiff</td>
+<td>Diffuse shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 600</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>23</td>
+<td>kdir</td>
+<td>Direct shortwave radiation [W m<sup>-2</sup>]</td>
+<td>0 to 1200</td>
+<td>Should be perpendicular to the Sun beam. One way to check this is to compare direct and global radiation and see if kdir is higher than global radiation during clear weather. Then kdir is measured perpendicular to the solar beam.</td>
+</tr>
+<tr class="row-odd"><td>24</td>
+<td>wdir</td>
+<td>Wind direction [°]</td>
+<td>0 to 360</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><p class="first">Remarks：</p>
 <blockquote>

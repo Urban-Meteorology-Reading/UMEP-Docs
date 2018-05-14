@@ -85,7 +85,6 @@ Urban Geometry: Sky View Factor Calculator
    * - SVF different directions
      - Four cardinal points
    * - SVF based on various fractions
-     -
      - Only buildings, only vegetation etc. For a detailed description, see Lindberg and Grimmond (2011).
 
 * Example:

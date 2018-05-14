@@ -87,16 +87,15 @@ rst_prolog = """
 .. |GQF| replace:: GQ\ :sub:`F`
 .. |LQF| replace:: LQ\ :sub:`F`
 .. |ZH| replace:: Z\ :sub:`H`
-.. |ZHσ| replace:: Z\ :sub:`Hσ`
 .. |ZHMAX| replace:: Z\ :sub:`Hmax`
 .. |Z0| replace:: Z\ :sub:`0`
 .. |Zd| replace:: Z\ :sub:`d`
-.. |λP| replace:: λ\ :sub:`P`
-.. |λF| replace:: λ\ :sub:`F`
 .. |TMRT| replace:: T\ :sub:`MRT`
 .. |Ta| replace:: T\ :sub:`a`
 .. |AA| replace:: A\ :sub:`A`
 .. |AP| replace:: A\ :sub:`P`
+
+
 
 
 """
