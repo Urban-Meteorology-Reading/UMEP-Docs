@@ -47,8 +47,7 @@ releases:
 
 **To downloading instructions and initial settings:**
 
-`Getting
-Started <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+`Getting_Started`
 
 --------------
 
