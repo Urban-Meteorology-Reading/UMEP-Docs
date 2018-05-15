@@ -41,6 +41,8 @@ Urban Morphology: Morphometric Calculator (Grid)
 * Dialog box：
         .. figure:: /images/Morph_Calc.png
 
+            ```to do```
+
 * Dialog sections：
 .. list-table::
    :widths: 50 50
@@ -58,7 +60,10 @@ Urban Morphology: Morphometric Calculator (Grid)
 * Search Throughout the Grid Extent:
     -  Select if the search should be performed from one side of the grid to the opposite side.
     -  Select the other option (Search from Grid Centroid if the search should start from the centroid of the grid. Setting the **Search distance** can then allow for the search to extent beyond the grid. See the figure below for illustration. The left one performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.
+
     .. figure:: /images/Grid_Extent.png
+
+        ```to do```
 
 * Wind Direction Search Interval (degrees):
      -  This decides the interval in search directions for which the morphometric parameters will be calculated.

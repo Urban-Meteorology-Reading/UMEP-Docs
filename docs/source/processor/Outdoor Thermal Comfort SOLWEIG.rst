@@ -28,6 +28,8 @@ Outdoor Thermal Comfort: SOLWEIG
 * Dialog box：
       .. figure:: /images/SOLWEIG.png
 
+          ```to do```
+
 * Dialog sections ：
 .. list-table::
    :widths: 50 50
@@ -159,7 +161,9 @@ Outdoor Thermal Comfort: SOLWEIG
              #. Now you are ready to generate your first T\ :sub:`mrt` map. Open SOLWEIG and use the settings as shown in the figure below but replace the paths to the fit your computer environment. When you are finished, press *Run*.
 
                 .. figure:: /images/SOLWEIGfirsttry.png
-                There is also a meteorological file present in the test dataset that can be used to run the model for a whole day.
+
+
+                    There is also a meteorological file present in the test dataset that can be used to run the model for a whole day.
 
 * Remarks ：
       -  All DSMs need to have the same extent and pixel size.

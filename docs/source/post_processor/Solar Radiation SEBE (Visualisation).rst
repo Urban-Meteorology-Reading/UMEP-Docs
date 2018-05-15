@@ -25,6 +25,8 @@ Solar Radiation: SEBE (Visualisation)
 * Dialog box  :
       .. figure:: /images/SEBEvisualisation.png
 
+          ```to do```
+
 * Dialog sections  :
 .. list-table::
    :widths: 50 50

@@ -128,7 +128,7 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 numfig = True
-
+html_logo = 'images/UMEP_logo.png'
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
@@ -163,7 +163,7 @@ latex_documents = [
      u'Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang', 'manual'),
 ]
 
-
+latex_logo = 'images/UMEP_logo.png'
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples

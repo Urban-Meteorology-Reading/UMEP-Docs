@@ -61,7 +61,8 @@ Meteorological Data: Download data (WATCH)
 -  All precipitation corrections are currently conducted based on **CRU** option.
 -  Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:
 .. figure::  /images/350px-Watch_masked.png
-Available data in WATCH downloader (overlaid on countries)
+
+    Available data in WATCH downloader (overlaid on countries)
 
 * Location:
   - The WATCH data pre-processor is located at:
@@ -76,7 +77,8 @@ Available data in WATCH downloader (overlaid on countries)
 
 * Obtaining WATCH data via UMEP：
       .. figure::  /images/Watch_downloader_2.png
-      Integrated WATCH data downloader: control panel
+
+          Integrated WATCH data downloader: control panel
 
 * Running the tool：
       + The downloader is separated into two sections:

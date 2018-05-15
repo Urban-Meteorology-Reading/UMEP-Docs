@@ -22,7 +22,8 @@ Spatial Data: LCZ Converter
 
     - The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from `Stewart et al. (2014) <http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract>`__. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.
   .. figure:: /images/700px-LCZ_description.png
-  The definition of the different local climate zones (LCZ)
+
+      The definition of the different local climate zones (LCZ)
 
   Note: In UMEP we refer to the rural LCZ's as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.
 
@@ -41,8 +42,18 @@ Spatial Data: LCZ Converter
 
     - When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.
     .. figure:: /images/700px-LCZdialog1.png
+
+        ```to do```
+
     .. figure:: /images/700px-LCZdialog2.png
+
+        ```to do```
+
     .. figure:: /images/700px-LCZdialog3.png
+
+        ```to do```
+
+        
 
 * Dialog sections:
 .. list-table::

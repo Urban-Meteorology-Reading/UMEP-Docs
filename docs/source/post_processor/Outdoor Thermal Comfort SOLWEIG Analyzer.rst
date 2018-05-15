@@ -6,7 +6,7 @@ Outdoor Thermal Comfort: SOLWEIG Analyzer
 .. list-table::
    :widths: 50 50
    :header-rows: 1
-   
+
    * - Name
      - Institution
 
@@ -25,6 +25,8 @@ Outdoor Thermal Comfort: SOLWEIG Analyzer
 
 * Dialog box  :
       .. figure:: /images/SOLWEIGAnalyzer.png
+
+          ```to do```
 
 * Dialog sections  :
 .. list-table::

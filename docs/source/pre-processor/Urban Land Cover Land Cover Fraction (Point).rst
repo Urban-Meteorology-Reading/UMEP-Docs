@@ -29,6 +29,8 @@ Urban Land Cover: Land Cover Fraction (Point)
 * Dialog box：
       .. figure:: /images/Land_Cover_Reclass.png
 
+          ```to do```
+
 * Dialog section：
 .. list-table::
    :widths: 50 50

@@ -191,12 +191,15 @@ Under UMEP > Processor > Urban Energy Balance, choose LQf (LUCY)
    :alt: LQF_Tutorial_RunUMEP.png
    :width: 300px
 
+    ```to do```
 
 
 This loads the model interface dialog box:
 
 .. figure:: /images/LQF_Tutorial_RunLQF.png
 
+    ```to do```
+    
 Choose configuration files and output folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -232,6 +235,9 @@ then select “Run”.
 
 .. figure:: /images/LQF_Tutorial_DateRange.png
 
+
+    ```to do```
+
 Visualise results
 -----------------
 
@@ -242,7 +248,7 @@ some of the model results to open the visualisation tool.
    :alt: LQF_Tutorial_Visualise.png
    :width: 300px
 
-   LQF\_Tutorial\_Visualise.png
+   ```to do```
 
 Create a map of total QF at noon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -255,7 +261,7 @@ layers that have appeared.
 
 .. figure:: /images/525px-LQF_Tutorial_QfMap_1.png
 
-
+    ```to do```
 
 Each layer corresponds to a different QF component, Qm (metabolism) and
 is plotted on the top layer. De-selecting a layer in the Layers panel
@@ -272,6 +278,7 @@ colour the same as the fill colour.
 
 .. figure:: /images/525px-LQF_Tutorial_QfMap_2.png
 
+    ```to do```
 
 Plot a time series of QF in the centre of the city
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -281,17 +288,23 @@ of interest, zoom into the city centre, choose the selection tool
 
 .. figure:: /images/LQF_Tutorial_SelectFeatureIcon.png
 
+
+    ```to do```
+
 and click an output area of
 interest.
 
 This turns yellow. Right-click it and select the option that comes up.
 
           .. figure:: /images/LQF_Tutorial_SelectFeature.png
-          Information about the output area
+
+              Information about the output area
 
 then appears on the left, with the ID shown. Make a note of this.
 
     .. figure:: /images/LQF_Tutorial_FeatureInfo.png
+
+        ```to do```
 
 Return to the visualisation tool, choose output area 5448 and click
 “show plot”. Time series of each QF component then appear for the week.
@@ -299,6 +312,8 @@ Note the lower traffic activity on Saturday and Sunday, and the higher
 building emissions on Thursday 15th when the weather is colder.
 
     .. figure:: /images/525px-LQF_Tutorial_Temporal_standardcase.png
+
+        ```to do```
 
 Recycling of input data
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -340,9 +355,13 @@ information about diurnal profile
 files <LQF_Manual#Diurnal_variations>`__).
 
       .. figure:: /images/525px-LQF_Tutorial_WeeklyTraffic.png
-      Custom traffic profile
+
+          Custom traffic profile
 
 .. figure:: /images/525px-LQF_Tutorial_BuildingProfiles.png
+
+
+    ```to do```
 
 **Step 1:**
 Create a duplicate of the DataSources.nml file used earlier
@@ -372,6 +391,7 @@ output area 5448 again:
    :alt: LQF_Tutorial_Temporal_customDiurnals.png
    :width: 350px
 
+    ```to do```
 
 
 Note how the building and transport emission patterns now change on
@@ -434,6 +454,7 @@ people in the LQF database.
    :alt: LQF_Tutorial_Temporal_customdatabase.png
    :width: 350px
 
+    ```to do```
 
 
 **Step 8: Restore the original LQF database so that the test values do
@@ -498,7 +519,7 @@ metabolism emissions remains the same as before.
    :alt: LQF_Tutorial_Temporal_customResponse.png
    :width: 350px
 
-
+   ```to do```
 
 Related tutorials
 =================

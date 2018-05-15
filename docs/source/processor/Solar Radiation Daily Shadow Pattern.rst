@@ -26,6 +26,8 @@ Solar Radiation: Daily Shadow Pattern
 * Dialog box ：
       .. figure:: /images/Shadow_generator.jpg
 
+          ```to do```
+
 * Dialog sections：
       .. list-table::
          :widths: 50 50
@@ -89,6 +91,8 @@ Solar Radiation: Daily Shadow Pattern
 * Example of input data and result:
      -  shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).
             .. figure:: /images/Shadow2.jpg
+
+                ```to do```
 
 * Remarks：
             -  All DSMs need to have the same extent and pixel

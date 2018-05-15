@@ -392,6 +392,8 @@ Under UMEP > Processor > Urban Energy Balance, choose GQf (GreateRQF)
 This loads the model interface dialog box:
           .. figure:: /images/Gqf_dialog.png
 
+              ```to do```
+
 Choose configuration files and output folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -425,6 +427,8 @@ then select “Run”.
 
     .. figure:: /images/Gqf_timerange.png
 
+        ```to do```
+
 
 
 
@@ -456,7 +460,8 @@ Leaving just AllTot(total QF) visible, there isn’t much structure in the
 colours.
 
     .. figure:: /images/525px-Gqf_totalqf_map.png
-  Total QF at Noon on May 11
+
+          Total QF at Noon on May 11
 
 
 
@@ -470,20 +475,25 @@ removed by double-clicking the colour levels and choosing a border
 colour the same as the fill colour.
 
     .. figure:: /images/525px-Gqf_totalqf_map_recoloured.png
-   Total QF at Noon on May 11
+
+          Total QF at Noon on May 11
 
 The roads have a very different spatial pattern to buildings, so these
 can also be visualised by selecting the TransTot layer and re-colouring
 accordingly:
 
     .. figure:: /images/525px-Gqf_transportqf_map_recoloured.png
-   GQF Transport QF at 1200 UTC
+
+            GQF Transport QF at 1200 UTC
+
 Plot a time series of QF in the centre of the city
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool
       .. figure:: /images/LQF_Tutorial_SelectFeatureIcon.png
+
+          ```to do```
 
 
 and click an output area of
@@ -492,10 +502,14 @@ interest.
 This turns yellow. Right-click it and select the option that comes up.
       .. figure:: /images/LQF_Tutorial_SelectFeature.png
 
+          ```to do```
+
 
 Information about the output area
 then appears on the left, with the ID shown. Make a note of this.
     .. figure:: /images/LQF_Tutorial_FeatureInfo.png
+
+        ```to do```
 
 
 Return to the visualisation tool, choose output area 5448 and click
@@ -503,6 +517,8 @@ Return to the visualisation tool, choose output area 5448 and click
 Note the lower traffic activity and different behaviours on Saturday and
 Sunday, when people are expected to not be at work.
     .. figure:: /images/600px-Gqf_timeseries_default.png
+
+        ```to do```
 
       Time series of QF emissions
 Tutorials 2: Refining GQF results
@@ -530,10 +546,11 @@ into the parameters.nml file. The model is then run as in Tutorial 1,
 and the resulting time series in output area 5448 is shown below:
 
     .. figure:: /images/600px-Gqf_timeseries_default.png
-    Time series with extra public holiday on May 13
+
+          Time series with extra public holiday on May 13
 
 
-   Time series with extra public holiday on May 13
+
 
 Compared against the results from Tutorial 1, the curve on May 13 in
 each sub-plot now resembles May 17 (a Sunday) rather than the weekdays
@@ -557,11 +574,10 @@ modelled QF will contain only latent heat. The resulting time series in
 area 5448 is shown below:
 
       .. figure:: /images/525px-Gqf_timeseries_holiday_nosensible.png
-  Time series with only latent and wastewater contributions included, and extra public holiday on May 13
+
+            Time series with only latent and wastewater contributions included, and extra public holiday on May 13
 
 
-   Time series with only latent and wastewater contributions included,
-   and extra public holiday on May 13
 
 The emissions are far lower than those in Tutorial 2a, showing how
 latent heat is a relatively small contribution. Consuming electricity

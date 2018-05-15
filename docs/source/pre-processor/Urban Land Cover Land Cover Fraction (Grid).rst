@@ -29,6 +29,8 @@ Urban Land Cover: Land Cover Fraction (Grid)
 * Dialog Box:
       .. figure:: /images/LandCoverFractionGrid2.png
 
+          ```to do```
+
 * Dialog sections：
 .. list-table::
    :widths: 50 50
@@ -45,6 +47,8 @@ Urban Land Cover: Land Cover Fraction (Grid)
      - Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the **Search distance** can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.
 
      .. figure:: /images/Grid_Extent.png
+
+        ```to do```
 
 * Wind Direction Search Interval (Degrees):
      -  This decides the interval in search directions for which the morphometric parameters will be calculated.

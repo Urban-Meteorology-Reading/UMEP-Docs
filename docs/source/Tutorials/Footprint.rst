@@ -21,6 +21,8 @@ et al. (2015) requires the boundary layer height.
 
     .. figure:: /images/ReadingSourceArea.png
 
+        ```to do```
+
 Initial Practical steps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -82,11 +84,14 @@ Prior to Starting
 
         .. figure:: /images/Add_Raster_Layer.png
 
+            ```to do```
 
 -  Have a look at the **layers** (see lower left) - if you untick the
    box filenames from the top you can see the different layers.
 
       .. figure:: /images/750px-Footprint1.png
+
+          ```to do```
 
 
 
@@ -99,6 +104,8 @@ Source Area Modelling
       (Point)
 
                 .. figure:: /images/750px-Footprint1.png
+
+                    ```to do```
 
 
            #. Click on *Select Point on Canvas* – then select a point (*e.g. where an Eddy Covariance (EC) tower site is located*)

@@ -29,6 +29,8 @@ Urban Geometry: Sky View Factor Calculator
 * Dialog box:
     .. figure:: /images/SVFCalculator.png
 
+        ```to do```
+
 * Dialog sections:
 .. list-table::
    :widths: 50 50
@@ -89,7 +91,8 @@ Urban Geometry: Sky View Factor Calculator
 
 * Example:
       .. figure:: /images/Output_Skyview.jpg
-      Example of (left) input data - ground and building DSM (grayscale), DSM overlaid with a canopy DSM (yellow to green). Right: the resulting SVF -light highest SVF
+
+          Example of (left) input data - ground and building DSM (grayscale), DSM overlaid with a canopy DSM (yellow to green). Right: the resulting SVF -light highest SVF
 
 * Remarks:
 

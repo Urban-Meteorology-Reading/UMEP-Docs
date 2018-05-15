@@ -51,6 +51,8 @@ Urban Morphology: Source Area (Point)
 * Dialog box：
        .. figure:: /images/Footprint.png
 
+          ```to do```
+
 * Dialog sections：
 .. list-table::
    :widths: 50 50

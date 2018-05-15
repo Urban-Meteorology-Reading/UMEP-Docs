@@ -52,6 +52,9 @@
           
 
           
+            
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
+          
           </a>
 
           
@@ -549,8 +552,9 @@ total volume of traffic each day.</p>
 <p>Under UMEP &gt; Processor &gt; Urban Energy Balance, choose GQf (GreateRQF)</p>
 <dl class="docutils">
 <dt>This loads the model interface dialog box:</dt>
-<dd><div class="first last figure">
+<dd><div class="first last figure" id="id1">
 <img alt="../_images/Gqf_dialog.png" src="../_images/Gqf_dialog.png" />
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
@@ -583,8 +587,9 @@ used as normal.</p>
 <p>Choose a start date of 11 May 2015, using the start and end date boxes,
 then select “Run”.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id2">
 <img alt="../_images/Gqf_timerange.png" src="../_images/Gqf_timerange.png" />
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 </div>
@@ -611,12 +616,10 @@ layers that have appeared.</p>
 <p>Leaving just AllTot(total QF) visible, there isn’t much structure in the
 colours.</p>
 <blockquote>
-<div><blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id3">
 <img alt="../_images/525px-Gqf_totalqf_map.png" src="../_images/525px-Gqf_totalqf_map.png" />
+<p class="caption"><span class="caption-text">Total QF at Noon on May 11</span></p>
 </div>
-</div></blockquote>
-<p>Total QF at Noon on May 11</p>
 </div></blockquote>
 <p>Add some contrast to it by choosing a different colour scale:</p>
 <p>Right-click the Qf layer, go to Properties &gt; Style, change the colour
@@ -625,23 +628,19 @@ more structure, although the grid borders are distracting. These can be
 removed by double-clicking the colour levels and choosing a border
 colour the same as the fill colour.</p>
 <blockquote>
-<div><blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id4">
 <img alt="../_images/525px-Gqf_totalqf_map_recoloured.png" src="../_images/525px-Gqf_totalqf_map_recoloured.png" />
+<p class="caption"><span class="caption-text">Total QF at Noon on May 11</span></p>
 </div>
-</div></blockquote>
-<p>Total QF at Noon on May 11</p>
 </div></blockquote>
 <p>The roads have a very different spatial pattern to buildings, so these
 can also be visualised by selecting the TransTot layer and re-colouring
 accordingly:</p>
 <blockquote>
-<div><blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id5">
 <img alt="../_images/525px-Gqf_transportqf_map_recoloured.png" src="../_images/525px-Gqf_transportqf_map_recoloured.png" />
+<p class="caption"><span class="caption-text">GQF Transport QF at 1200 UTC</span></p>
 </div>
-</div></blockquote>
-<p>GQF Transport QF at 1200 UTC</p>
 </div></blockquote>
 </div>
 <div class="section" id="plot-a-time-series-of-qf-in-the-centre-of-the-city">
@@ -649,24 +648,27 @@ accordingly:</p>
 <p>A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id6">
 <img alt="../_images/LQF_Tutorial_SelectFeatureIcon.png" src="../_images/LQF_Tutorial_SelectFeatureIcon.png" />
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 <p>and click an output area of
 interest.</p>
 <dl class="docutils">
 <dt>This turns yellow. Right-click it and select the option that comes up.</dt>
-<dd><div class="first last figure">
+<dd><div class="first last figure" id="id7">
 <img alt="../_images/LQF_Tutorial_SelectFeature.png" src="../_images/LQF_Tutorial_SelectFeature.png" />
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
 <p>Information about the output area
 then appears on the left, with the ID shown. Make a note of this.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id8">
 <img alt="../_images/LQF_Tutorial_FeatureInfo.png" src="../_images/LQF_Tutorial_FeatureInfo.png" />
+<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 <p>Return to the visualisation tool, choose output area 5448 and click
@@ -674,9 +676,8 @@ then appears on the left, with the ID shown. Make a note of this.</p>
 Note the lower traffic activity and different behaviours on Saturday and
 Sunday, when people are expected to not be at work.</p>
 <blockquote>
-<div><div class="figure" id="id1">
+<div><div class="figure">
 <img alt="../_images/600px-Gqf_timeseries_default.png" src="../_images/600px-Gqf_timeseries_default.png" />
-<p class="caption"><span class="caption-text">Time series of QF emissions</span></p>
 </div>
 </div></blockquote>
 <div class="section" id="tutorials-2-refining-gqf-results">
@@ -703,13 +704,10 @@ treated as holidays in format YYYY-mm-dd (e.g. “2015-05-07”,
 into the parameters.nml file. The model is then run as in Tutorial 1,
 and the resulting time series in output area 5448 is shown below:</p>
 <blockquote>
-<div><blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id9">
 <img alt="../_images/600px-Gqf_timeseries_default.png" src="../_images/600px-Gqf_timeseries_default.png" />
+<p class="caption"><span class="caption-text">Time series with extra public holiday on May 13</span></p>
 </div>
-<p>Time series with extra public holiday on May 13</p>
-</div></blockquote>
-<p>Time series with extra public holiday on May 13</p>
 </div></blockquote>
 <p>Compared against the results from Tutorial 1, the curve on May 13 in
 each sub-plot now resembles May 17 (a Sunday) rather than the weekdays
@@ -730,15 +728,10 @@ or more of them can be removed at model run-time using the checkboxes:</p>
 modelled QF will contain only latent heat. The resulting time series in
 area 5448 is shown below:</p>
 <blockquote>
-<div><blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id10">
 <img alt="../_images/525px-Gqf_timeseries_holiday_nosensible.png" src="../_images/525px-Gqf_timeseries_holiday_nosensible.png" />
+<p class="caption"><span class="caption-text">Time series with only latent and wastewater contributions included, and extra public holiday on May 13</span></p>
 </div>
-</div></blockquote>
-<p>Time series with only latent and wastewater contributions included, and extra public holiday on May 13</p>
-<blockquote>
-<div>Time series with only latent and wastewater contributions included,
-and extra public holiday on May 13</div></blockquote>
 </div></blockquote>
 <p>The emissions are far lower than those in Tutorial 2a, showing how
 latent heat is a relatively small contribution. Consuming electricity

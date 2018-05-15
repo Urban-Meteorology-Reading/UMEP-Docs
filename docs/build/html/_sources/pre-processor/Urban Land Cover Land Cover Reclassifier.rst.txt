@@ -51,6 +51,8 @@ Urban Land Cover: Land Cover Reclassifier
 
         .. figure:: /images/Landcoverreclassifier.png
 
+            ```to do```
+
 * Dialog sections:
 .. list-table::
    :widths: 50 50

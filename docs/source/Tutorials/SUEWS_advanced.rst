@@ -40,7 +40,8 @@ How to Run from the UMEP-plugin
 #. You can now close the SUEWS/BLUEWS (Advanced) again.
 
 .. figure:: /images/SuewsAdvanced.png
-Figure 1: Interface for SUEWS Advanced version.
+
+    Figure 1: Interface for SUEWS Advanced version.
 
 Sensitivity Test
 ~~~~~~~~~~~~~~~~
@@ -106,7 +107,8 @@ Generating data from the geodatasets
 #. This is another plugin within UMEP that can be used to generate morphometric parameters
 
         .. figure:: /images/QGIS_SuewsSimple.png
-        QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.
+
+            QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.
 
  #. First, clear the map canvas from your two other plugin windows, e.g. as above.
  #. If you use the default test data in SUEWS Simple – you can overwrite is as you go.
@@ -130,17 +132,24 @@ Generating data from the geodatasets
  #. Now you are ready to run the model. Click Run.
 
  .. figure:: /images/SUEWS_MorphometricParametersBuild.jpg
+
+    ```to do```
+
  .. figure:: /images/SUEWS_MorphometricParametersVeg.jpg
+
+     ```to do```
 
 
 If you get an error window. This error is generate by SUEWS as the sum of the land cover fractions is not 1. If you calculate carefully, one part of a thousand is missing (this is probably a rounding error during data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now run again.
 
      .. figure:: /images/Modelrununsuccessful.png
-     Possible error window from running SUEWS with new settings.
+
+        Possible error window from running SUEWS with new settings.
 
 
       .. figure:: /images/SuewsSimpleGeodata.png
-      The settings for running with geodata derived parameters (old version of GUI).
+
+          The settings for running with geodata derived parameters (old version of GUI).
 
 
 

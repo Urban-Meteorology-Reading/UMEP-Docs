@@ -54,6 +54,9 @@
           
 
           
+            
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
+          
           </a>
 
           
@@ -222,10 +225,10 @@
 <dd><ul class="first last">
 <li><dl class="first docutils">
 <dt>Components of the plugin window:</dt>
-<dd><div class="first figure">
+<dd><div class="first last figure" id="id1">
 <img alt="../_images/SuewsPrepareTerminology.jpg" src="../_images/SuewsPrepareTerminology.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Some naming conventions used in this document relating to the components of the plugin.</span></p>
 </div>
-<p class="last">Some naming conventions used in this document relating to the components of the plugin.</p>
 </dd>
 </dl>
 </li>
@@ -368,10 +371,10 @@
 <dd><ul class="first simple">
 <li>The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id2">
 <img alt="../_images/SUEWSPrepare_main.png" src="../_images/SUEWSPrepare_main.png" />
+<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Plugin window with the main settings tab selected.</span></p>
 </div>
-<p class="last">Plugin window with the main settings tab selected.</p>
 </dd>
 </dl>
 </li>
@@ -383,8 +386,9 @@
 <li>When a relevant polygon grid has been selected for the plugin several separate drop down menus allow for data to be collected from the fields in the polygon grid attribute table. The initial selections in these drops down menus might not be correct and needs to be manually corrected by the user.</li>
 <li>The input in the drop down menu marked <strong>ID field</strong> in the box for polygon grid selection needs to correlate with the polygon layers attribute field for feature ids or any attribute field containing unique integer numbers. The polygon layer should be in a coordinate system that can be related to both lat/lon coordinates as well as meters. The polygon features included in the polygon vector grid can be of any shape and size.</li>
 </ul>
-<div class="last figure">
+<div class="last figure" id="id3">
 <img alt="../_images/SP_Polygon.jpg" src="../_images/SP_Polygon.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
@@ -405,14 +409,14 @@
 <dd><ul class="first simple">
 <li>Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.</li>
 </ul>
-<div class="figure">
+<div class="figure" id="id4">
 <img alt="../_images/SP_landcover.jpg" src="../_images/SP_landcover.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.</span></p>
 </div>
-<p>Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.</p>
-<div class="figure">
+<div class="last figure" id="id5">
 <img alt="../_images/SP_landcover2.jpg" src="../_images/SP_landcover2.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.</span></p>
 </div>
-<p class="last">Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.</p>
 </dd>
 </dl>
 </li>
@@ -425,10 +429,10 @@
 <dd><ul class="first simple">
 <li>The meteorological data have to be imported from a <strong>text file</strong>. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the <a class="reference external" href="#Meteorological_Data:_MetPreprocessor">MetPreprocessor</a> plugin. There you can also find more information on what parameters are required in the meteorological dataset.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id6">
 <img alt="../_images/SP_met.jpg" src="../_images/SP_met.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Box for meteorological data. The button has been used to import a file containing meteorological data.</span></p>
 </div>
-<p class="last">Box for meteorological data. The button has been used to import a file containing meteorological data.</p>
 </dd>
 </dl>
 </li>
@@ -437,10 +441,10 @@
 <dd><ul class="first simple">
 <li>The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the <a class="reference external" href="http://disc.sci.gsfc.nasa.gov/julian_calendar.html">days of year</a>. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for <a class="reference external" href="https://en.wikipedia.org/wiki/Daylight_saving_time_by_country">your region</a>.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id7">
 <img alt="../_images/SP_DLS.jpg" src="../_images/SP_DLS.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Box used for setting the start and end of day lights savings time.</span></p>
 </div>
-<p class="last">Box used for setting the start and end of day lights savings time.</p>
 </dd>
 </dl>
 </li>
@@ -457,10 +461,10 @@
 <dd><ul class="first simple">
 <li>This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">Wall height and aspect calculator</a>.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id8">
 <img alt="../_images/SUEWSPrepare_wallarea.png" src="../_images/SUEWSPrepare_wallarea.png" />
+<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Box for wall area data.</span></p>
 </div>
-<p class="last">Box for wall area data.</p>
 </dd>
 </dl>
 </li>
@@ -474,10 +478,10 @@
 </pre></div>
 </div>
 <p>where <em>f</em> is fraction, <em>LU</em> is land use and <em>p</em> is paved. Fractions must add up to 1 for paved and buildings respectively. A plugin to generate this text file is not yet created.</p>
-<div class="figure">
+<div class="figure" id="id9">
 <img alt="../_images/SUEWSPrepare_landuse.png" src="../_images/SUEWSPrepare_landuse.png" />
+<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Box for land use data.</span></p>
 </div>
-<p>Box for land use data.</p>
 </li>
 </ul>
 </dd>
@@ -488,10 +492,10 @@
 <dd><ul class="first simple">
 <li>The SUEWS model requires information of initial conditions. SUEWSPRepare generates some basic information used to create a file called <strong>InitialConditionsXXXX_YYYY.nml</strong> where XXXX is the ID grid number.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id10">
 <img alt="../_images/SUEWSPrepare_init.png" src="../_images/SUEWSPrepare_init.png" />
+<p class="caption"><span class="caption-number">Fig. 3.13 </span><span class="caption-text">Box for initial conditions.</span></p>
 </div>
-<p class="last">Box for initial conditions.</p>
 </dd>
 </dl>
 </li>
@@ -500,10 +504,10 @@
 <dd><ul class="first simple">
 <li>The remaining tabs besides the main settings tab all fall under the same category, namely site library tabs. A site library tab represents certain characteristics of an area. A tab can consist of one or more widgets. Each widget has a predetermined layout but will represent different kinds of information. The left part of a widget can be used to select a site entry for the plugin output or to create a new entry to the site library. The right part of a widget will show information about a site through variables.</li>
 </ul>
-<div class="figure">
+<div class="last figure" id="id11">
 <img alt="../_images/SP_siteLib.jpg" src="../_images/SP_siteLib.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.14 </span><span class="caption-text">Some of the components of a site library tab.</span></p>
 </div>
-<p class="last">Some of the components of a site library tab.</p>
 </dd>
 </dl>
 </li>
@@ -513,14 +517,14 @@
 <li>The selection of a site is done through a drop down menu marked “Code”. The codes in the drop down menu represent the site codes for a site. Each code represents one site entry. Selecting a code will show the values of the variables for the site entry in the variable box the right side of the tab. The code selected will be used in the output of the plugin.</li>
 <li>It is possible to use separate codes for each feature in the polygon grid. This requires a field in the polygon grid attribute table that represent the code that is to be used for each feature. If there is such a field click the checkbox marked “Use unique codes for each entry” and select the correct field from the drop down menu.</li>
 </ul>
-<div class="figure">
+<div class="figure align-right" id="id12">
 <img alt="../_images/SP_siteCode.jpg" src="../_images/SP_siteCode.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3.15 </span><span class="caption-text">Site code selection in a site library tab</span></p>
 </div>
-<p>Site code selection in a site library tab</p>
-<div class="figure">
+<div class="last figure align-right" id="id13">
 <img alt="../_images/Figure12.png" src="../_images/Figure12.png" />
+<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">Using more than one site code.</span></p>
 </div>
-<p class="last">Using more than one site code.</p>
 </dd>
 </dl>
 </li>

@@ -48,6 +48,8 @@ When you open it on the top toolbar you will see **UMEP**.
 
 .. figure:: /images/UMEP_location_SEBE.png
 
+    ```to do```
+
 -  If it UMEP not on our machine, download and install the `**UMEP**
    plugin <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
 
@@ -64,7 +66,8 @@ provided <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__)
 
 * Image :
 .. figure:: /images/Gothenburg.png
-`London Covent Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data>`__
+
+    `London Covent Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data>`__
 
 * Date Details :
     - Geodata and meteorological data for **Gothenburg, Sweden**.
@@ -282,6 +285,7 @@ bar <Media:UMEP_location_SEBE.png>`__.
 
 .. figure:: /images/SEBE1.png
 
+    ```to do```
 
 Running the model
 -----------------
@@ -366,7 +370,7 @@ To make a slope raster
 
 .. figure:: /images/Slope.jpg
 
-Use the raster menu: Raster> Raster Calculator.
+    Use the raster menu: Raster> Raster Calculator.
 
 #. To determine the area after you have removed the wall area from the buildings.
 #. Enter the equation indicated.
@@ -399,6 +403,8 @@ statistics tool:
 Note that we will not consider the performance of the solar panels.
 
 .. figure:: /images/GOT_Irradiance.png
+
+    ```to do```
 
 Covent Garden data set
 ----------------------
@@ -492,6 +498,8 @@ Plugin to **visualize data** in 3D: called
    and Install Plugins.
 
 .. figure:: /images/CoventGarden.jpg
+
+    ```to do```
 
 
 

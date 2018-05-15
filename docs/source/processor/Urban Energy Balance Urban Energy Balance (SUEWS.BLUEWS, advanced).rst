@@ -30,6 +30,8 @@ Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 * Dialog box ：
       .. figure:: /images/SuewsAdvanced.png
 
+          ```to do```
+
 * Dialog sections:
      -  When you run the plugin, you will see the dialog shown below. To use this plugin, all input data needs to be prepared beforehand. This can be done using the various plugins in the pre-processor in UMEP. The settings available in this plugin is used for specifying the settings for a specific model run. You should consult the manual (`1 <http://www.urban-climate.net/umep/SUEWS>`__) for instructions and information on what settings to use. For extensive models run it is recommended to execute the model outside of QGIS (see manual). The interface below creates a so-called namelist (**RunControl.nml**) that is used be the model for general settings. After running the model, this file can be found in the suewsmodel directory in the UMEP plugin directory.
 

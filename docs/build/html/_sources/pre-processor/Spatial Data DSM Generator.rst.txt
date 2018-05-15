@@ -25,6 +25,8 @@ Spatial Data: DSM Generator
 * Dialog box:
     .. figure:: /images/DSMGenerator.png
 
+        ```to do```
+
 * Dialog sections:
 .. list-table::
    :widths: 50 50

@@ -27,6 +27,8 @@ Urban Geometry: Wall Height and Aspect
 * Dialog box
     .. figure:: /images/WallHeight.png
 
+        ```to do```
+
 * Building and Ground DSM:
      - A DSM (geoTIFF) consisting of ground and building heights.
 
@@ -56,6 +58,8 @@ Urban Geometry: Wall Height and Aspect
 
 * Example:
     .. figure:: /images/Output_Wall_Height.jpg
+
+        ```to do```
 
 * Remarks：
           - This plugin make use of **Scipy** which in turn make use of **Pillow**. If this plugin is malfunctioning, try to install/reinstall these packages (see `here <http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities>`__).

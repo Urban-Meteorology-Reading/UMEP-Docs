@@ -33,6 +33,8 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
         -  bottom section for specifying the output and for running the calculations
             .. figure:: /images/SEBE1.png
 
+                ```to do```
+
 * Building and Ground DSM:
      - A DSM consisting of ground and building heights. This dataset also decides the latitude and longitude used for the calculation of the Sun position.
 
@@ -96,13 +98,16 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
 
 * Example of input data and result:
      -  Input DSM (left) and irradiance image (right) in Gothenburg using data from 1977.
+
             .. figure:: /images/SEBE2.jpg
+
+                ```to do```
 
 * Remarks：
             -  All DSMs need to have the same extent and pixel
             -  This plugin is computationally intensive i.e. large grids will take a lot of time and very large grids will not be possible to use. Large grids e.g. larger than 4000000 pixels should be tiled before.
 
-* References ：                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+* References ：
       -  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013. Transmissivity of solar radiation through crowns of single urban trees—application for outdoor thermal comfort modelling. Theoret. Appl. Climatol., 1–14 `Link to Paper <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
       -  Lindberg, F., Jonsson, P. & Honjo, T. and Wästberg, D. (2015) Solar energy on building envelopes - 3D modelling in a 2D environment. Solar Energy. 115 (2015) 369–378 `Link to Paper <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
       -  Reindl DT, Beckman WA, Duffie JA (1990) Diffuse fraction correlation. Sol Energy 45:1–7. `Link to paper <http://www.sciencedirect.com/science/article/pii/0038092X9090060P>`__

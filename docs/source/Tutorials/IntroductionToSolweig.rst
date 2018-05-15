@@ -34,7 +34,7 @@ detail.
 
     .. figure:: /images/SOLWEIG_flowchart.png
 
-    Figure 1: Overview of SOLWEIG
+          Figure 1: Overview of SOLWEIG
 
 Objectives
 ----------
@@ -306,7 +306,9 @@ How to Run SOLWEIG from the UMEP-plugin
       for Gothenburg, Sweden.
 
           .. figure:: /images/SOLWEIG.png
-          Figure 2: Dialog for the SOLWEIG model
+
+
+              Figure 2: Dialog for the SOLWEIG model
 
 #. To be able to run the model some additional spatial datasets needs to
    be created.
@@ -322,7 +324,9 @@ How to Run SOLWEIG from the UMEP-plugin
       same time. Use the settings as shown below. Use an appropriate
       output folder for your computer.
           .. figure:: /images/Svf_solweig.png
-          Figure 3: Settings for the SkyViewFactorCalculator.
+
+              Figure 3: Settings for the SkyViewFactorCalculator.
+
    -  When the calculation is done, map will appear in the map canvas.
       This is the 'total' SVF i.e., including both buildings and
       vegetation. Examine the dataset.
@@ -336,7 +340,8 @@ How to Run SOLWEIG from the UMEP-plugin
    4).
 
       .. figure:: /images/Wall_solweig.png
-      Figure 4: Settings for the Wall height and aspect plugin.
+
+          Figure 4: Settings for the Wall height and aspect plugin.
 
 #. Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
    use the GUI to set one point in time (i.e. a summer hour in
@@ -345,7 +350,8 @@ How to Run SOLWEIG from the UMEP-plugin
    first try. Click **Run**.
 
    .. figure:: /images/Tmrt1_solweig.png
-   Figure 5: The settings for your first SOLWEIG run.
+
+      Figure 5: The settings for your first SOLWEIG run.
 
 #. Examine the output (Average T\ :sub:`mrt` [°C]. What is the main
    driver to the spatial variations in T\ :sub:`mrt`?
@@ -382,7 +388,8 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
    (Figure 6).
 
           .. figure:: /images/Addpoint.png
-          Figure 6: Setting to add points
+
+              Figure 6: Setting to add points
 
    Two points should be
    added and the attributes should be id=\ **1** and
@@ -391,7 +398,8 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
    the two points.
 
         .. figure:: /images/Pointskr.png
-        Figure 7: Location of the two POIs
+
+            Figure 7: Location of the two POIs
 
    When you are
    finished, save layer edits (box in-between the two marked boxes in
@@ -416,7 +424,8 @@ the SOLWEIG Analyzer plug-in.
    (*Load Model Result*).
 
         .. figure:: /images/SOLWEIG.png
-        Figure 2: Dialog for the SOLWEIG model
+
+            Figure 2: Dialog for the SOLWEIG model
 
 #. Firstly you will compare differences in T\ :sub:`mrt` for the two
    locations (courtyard and park). This can done using the left frame
@@ -467,7 +476,8 @@ balance modelling with SUEWS.
    be **ttype=2, trunk=4, totheight=15, diameter=10**.
 
          .. figure:: /images/TreesKR.png
-         Figure 8: Location of the three new vegetation units
+
+            Figure 8: Location of the three new vegetation units
 
 #. Add your created trunk zone dsm (TDSM.tif) that was created
    previously (located in your output directory).
@@ -475,7 +485,8 @@ balance modelling with SUEWS.
    use the settings as shown in Figure 9.
 
          .. figure:: /images/ Treegeneratorsolweig.png
-         Figure 9: The settings for the Tree Generator
+
+            Figure 9: The settings for the Tree Generator
 
 #. As the vegetation DSMs have been changed, the SVFs has to be
    recalculated. This time use the two generated vegetation DSMs.

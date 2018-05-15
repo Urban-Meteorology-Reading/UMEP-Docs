@@ -26,7 +26,8 @@ Spatial Data: Spatial Data Downloader
 
 * Dialog box:
     .. figure:: /images/650px-Downloader.png
-    Dialog for the Spatial Data Downloader plugin
+    
+        Dialog for the Spatial Data Downloader plugin
 
 * Category and available datasets:
     - Each category contains multiple datasets, which are revealed by clicking the category name. To download a dataset, select it from the list, specify the geographic extent and press “Download”

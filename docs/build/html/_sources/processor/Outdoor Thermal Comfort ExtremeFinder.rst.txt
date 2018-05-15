@@ -40,7 +40,8 @@ Outdoor Thermal Comfort: ExtremeFinder
 
 * Dialog box:
        .. figure:: /images/Extremefinder3.png
-       The interface for the ExtremeFinder plugin
+
+          The interface for the ExtremeFinder plugin
 
 * Steps to use:
       #. Select climate data: The ExtremeFinder will use all the data available in its analysis. You will be prompted for a text (.txt) or NetCDF (.nc) file:
@@ -70,17 +71,23 @@ Outdoor Thermal Comfort: ExtremeFinder
 
          -  Colour gives Temperature (see key)
          -  Yellow Box Highlights Heatwave (Coldwave) periods This loads the model interface dialog box:
+
               .. figure:: /images/350px-TMax1.jpg
-              Heat/Cold wave periods
+
+                  Heat/Cold wave periods
 
       #. Box plot of distribution of heat (cold) wave by year.
 
          -  whiskers =1.5\* IQR
          -  outliers
             - any data beyond the whiskers
+
               .. figure:: /images/350px-HW_Box.jpg
-              Box-and-whisker plot of Heat/Cold wave days each year
+
+                  Box-and-whisker plot of Heat/Cold wave days each year
 
       #. Number of heat (cold) waves days per year
+      
             .. figure:: /images/350px-HWDays.jpg
-            Histogram showing number of Heat/Cold wave days each year
+
+                Histogram showing number of Heat/Cold wave days each year

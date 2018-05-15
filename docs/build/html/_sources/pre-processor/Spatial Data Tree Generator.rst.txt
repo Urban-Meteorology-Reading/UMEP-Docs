@@ -5,7 +5,7 @@ Spatial Data: Tree Generator
 .. list-table::
    :widths: 50 50
    :header-rows: 0
-   
+
    * - Name
      - Institution
 
@@ -25,6 +25,8 @@ Spatial Data: Tree Generator
 
 * Dialog box:
     .. figure:: /images/Treegeneratorsolweig.png
+
+        ```to do```
 
 * Dialog sections:
 .. list-table::

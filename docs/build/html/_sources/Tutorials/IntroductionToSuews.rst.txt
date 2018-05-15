@@ -17,7 +17,8 @@ Tools such as this, once appropriately assessed for an area, can be used for a b
  Model output may be needed in many formats depending on a users’ needs. Thus, the format must be useful, while ensuring the science included within the model is appropriate. Figure 1 provides an overview of `UMEP <http://urban-climate.net/umep/UMEP>`__, a city based climate service tool (CBCST). Within UMEP there are a number of models which can predict and diagnose a range of meteorological processes. In this activity we are concerned with SUEWS, initially the central components of the model. See `manual <http://urban-climate.net/umep/SUEWS>`__ or published **papers** for more detailed information of the model.
 
         .. figure:: /images/UMEP_overview.png
-        Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)
+
+            Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)
 
 SUEWS can be run in a number of different ways:
 
@@ -156,6 +157,8 @@ How to Run SuewsSimple from the UMEP-plugin
 
         .. figure:: /images/Simple2.png
 
+            ```to do```
+
 #. To make use of this dataset click on **Add settings from test
    dataset** (see near bottom of the box). The land cover fractions and
    all other settings originate from Kotthaus and Grimmond (2014). They
@@ -172,7 +175,11 @@ How to Run SuewsSimple from the UMEP-plugin
 
           .. figure:: /images/1350px-SuewsSimplefig1.png
 
+              ```to do```
+
           .. figure:: /images/1350px-SuewsSimplefig2.png
+
+              ```to do```
 
 Model results
 -------------
@@ -190,6 +197,8 @@ weather.
 
         .. figure:: /images/SuewsSimplefig2zoom.png
           :alt:  900px|center|Figure 4: Zoom in on end of March from the daily plot in Figure 3b.
+
+              ```to do```
 
 
 
@@ -230,6 +239,8 @@ Sensitivity to land surface fractions
 -------------------------------------
 
     .. figure:: /images/450px-LCFs.png
+
+        ```to do```
 
 The previous results are for a densely build-up area in
 London, UK. In order to test the sensitivity of SUEWS to some surface

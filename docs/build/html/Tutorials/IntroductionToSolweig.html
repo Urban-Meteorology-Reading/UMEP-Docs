@@ -52,6 +52,9 @@
           
 
           
+            
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
+          
           </a>
 
           
@@ -180,10 +183,10 @@ a schematic flowchart of SOLWEIG in shown. The <a class="reference external" hre
 manual</a> provides more
 detail.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id2">
 <img alt="../_images/SOLWEIG_flowchart.png" src="../_images/SOLWEIG_flowchart.png" />
+<p class="caption"><span class="caption-text">Figure 1: Overview of SOLWEIG</span></p>
 </div>
-<p>Figure 1: Overview of SOLWEIG</p>
 </div></blockquote>
 </div>
 <div class="section" id="objectives">
@@ -489,10 +492,10 @@ Mean radiant temperature (SOLWEIG)</em>.</p>
 left window. You will make use of a test dataset from observations
 for Gothenburg, Sweden.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id3">
 <img alt="../_images/SOLWEIG.png" src="../_images/SOLWEIG.png" />
+<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model</span></p>
 </div>
-<p>Figure 2: Dialog for the SOLWEIG model</p>
 </div></blockquote>
 </li>
 </ul>
@@ -513,10 +516,10 @@ for details).</p>
 same time. Use the settings as shown below. Use an appropriate
 output folder for your computer.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id4">
 <img alt="../_images/Svf_solweig.png" src="../_images/Svf_solweig.png" />
+<p class="caption"><span class="caption-text">Figure 3: Settings for the SkyViewFactorCalculator.</span></p>
 </div>
-<p>Figure 3: Settings for the SkyViewFactorCalculator.</p>
 </div></blockquote>
 </li>
 <li><p class="first">When the calculation is done, map will appear in the map canvas.
@@ -535,10 +538,10 @@ heights and aspect. Open <em>UMEP -&gt; Pre-Processor -&gt; Urban geometry -&gt;
 Wall height and aspect</em> and use the settings as shown below (Figure
 4).</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id5">
 <img alt="../_images/Wall_solweig.png" src="../_images/Wall_solweig.png" />
+<p class="caption"><span class="caption-text">Figure 4: Settings for the Wall height and aspect plugin.</span></p>
 </div>
-<p>Figure 4: Settings for the Wall height and aspect plugin.</p>
 </div></blockquote>
 </li>
 <li><p class="first">Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
@@ -546,10 +549,10 @@ use the GUI to set one point in time (i.e. a summer hour in
 Gothenburg, Sweden) hence, no input meteorological file is needed for
 now. No information on vegetation and ground cover is added for this
 first try. Click <strong>Run</strong>.</p>
-<div class="figure">
+<div class="figure" id="id6">
 <img alt="../_images/Tmrt1_solweig.png" src="../_images/Tmrt1_solweig.png" />
+<p class="caption"><span class="caption-text">Figure 5: The settings for your first SOLWEIG run.</span></p>
 </div>
-<p>Figure 5: The settings for your first SOLWEIG run.</p>
 </li>
 <li><p class="first">Examine the output (Average T<sub>mrt</sub> [°C]. What is the main
 driver to the spatial variations in T<sub>mrt</sub>?</p>
@@ -589,10 +592,10 @@ to <em>Layer -&gt; Create Layer -&gt; New Shape file</em>. Choose <em>Point</em>
 the layer it has to be editable and Add Feature should be activated
 (Figure 6).</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id7">
 <img alt="../_images/Addpoint.png" src="../_images/Addpoint.png" />
+<p class="caption"><span class="caption-text">Figure 6: Setting to add points</span></p>
 </div>
-<p>Figure 6: Setting to add points</p>
 </div></blockquote>
 <p>Two points should be
 added and the attributes should be id=<strong>1</strong> and
@@ -600,10 +603,10 @@ name=<strong>courtyard</strong> for the right point and id=<strong>2</strong> an
 name=<strong>park</strong> for the left point. See Figure 7 for the locations of
 the two points.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id8">
 <img alt="../_images/Pointskr.png" src="../_images/Pointskr.png" />
+<p class="caption"><span class="caption-text">Figure 7: Location of the two POIs</span></p>
 </div>
-<p>Figure 7: Location of the two POIs</p>
 </div></blockquote>
 <p>When you are
 finished, save layer edits (box in-between the two marked boxes in
@@ -630,10 +633,10 @@ from your POIs as well as perform statistical analysis based on saved
 output maps. Start by locating your output folder in the top section
 (<em>Load Model Result</em>).</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id9">
 <img alt="../_images/SOLWEIG.png" src="../_images/SOLWEIG.png" />
+<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model</span></p>
 </div>
-<p>Figure 2: Dialog for the SOLWEIG model</p>
 </div></blockquote>
 </li>
 <li><p class="first">Firstly you will compare differences in T<sub>mrt</sub> for the two
@@ -685,10 +688,10 @@ numbers (see table below). The location of the three new trees are
 shown in Figure 8. The values for all three vegetation units should
 be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id10">
 <img alt="../_images/TreesKR.png" src="../_images/TreesKR.png" />
+<p class="caption"><span class="caption-text">Figure 8: Location of the three new vegetation units</span></p>
 </div>
-<p>Figure 8: Location of the three new vegetation units</p>
 </div></blockquote>
 </li>
 <li><p class="first">Add your created trunk zone dsm (TDSM.tif) that was created
@@ -697,10 +700,10 @@ previously (located in your output directory).</p>
 <li><p class="first">Open the TreeGenerator (UMEP -&gt; PreProcessor -&gt; TreeGenerator) and
 use the settings as shown in Figure 9.</p>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure" id="id11">
 <img alt="../_images/Treegeneratorsolweig.png" src="../_images/Treegeneratorsolweig.png" />
+<p class="caption"><span class="caption-text">Figure 9: The settings for the Tree Generator</span></p>
 </div>
-<p>Figure 9: The settings for the Tree Generator</p>
 </div></blockquote>
 </li>
 <li><p class="first">As the vegetation DSMs have been changed, the SVFs has to be

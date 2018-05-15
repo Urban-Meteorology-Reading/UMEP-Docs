@@ -13,6 +13,10 @@ coupled modelling system which combines “state of the art” 1D and 2D
 models related to the processes essen tial for urban climate
 interactions.
 
+.. figure:: images/Header_umep.png
+    :align: right
+
+    Source area modelling with UMEP
 
 **UMEP** is a `community <http://urban-climate.net/umep/People>`__ open
 source model that users can contribute to improve and extend the
@@ -164,10 +168,10 @@ starts.
            :widths: 25 25
            :header-rows: 0
 
-           * - Anthropogenic Heat (|QF|) (LQF)
+           * - Anthropogenic Heat (Q:sub:`F`) (LQF)
              - Spatial variations anthropogenic heat release for urban areas
            * - `GQF <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_GQF>`__
-             - Anthropogenic Heat (|QF|). *Daily City Operations: Energy use; Gas consumption; Traffic heat loads*
+             - Anthropogenic Heat (Q:sub:`F`). *Daily City Operations: Energy use; Gas consumption; Traffic heat loads*
            * - `SUEWS (Simple) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2C_simple.29>`__
              - Urban Energy and Water Balance. *Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure*
            * - `SUEWS (Advanced) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29>`__
@@ -240,17 +244,17 @@ modelling procedure in UMEP and what tools that are connected to each
 other.
 
 .. figure:: /images/SUEWSworkflow.png
-   :alt: centre| Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
+   :alt:   Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
 
-   centre\| Workflow and geodata used for analysing urban energy balance
+   Workflow and geodata used for analysing urban energy balance
    using the SUEWS model. Bold outlined boxes are mandatory items.
    Yellow, orange and red indicates pre-processor, processor and
    post-processor tools, respectively. Grey boxes indicate geodatasets.
 
 .. figure:: /images/SOLWEIGworkflow.png
-   :alt: centre| Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
+   :alt:  Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
 
-   centre\| Workflow and geodata used for analysing mean radiant
+   Workflow and geodata used for analysing mean radiant
    temperature using the SOLWEIG model. Bold outlines are mandatory
    items. Yellow, orange and red indicates pre-processor, processor and
    post-processor tools, respectively. Grey boxes indicate geodatasets.
@@ -444,7 +448,3 @@ Evaluation and application studies
                  - `Lindberg et al. (2015) <http://www.sciencedirect.com/science/article/pii/S221209551400090X>`__
                * - Gothenburg, Sweden
                  - `Lindberg et al. (2011) <http://www.sciencedirect.com/science/article/pii/S0266352X11000693>`__
-
-
-                        .. figure:: images/Header_umep.png
-                        Source area modelling with UMEP

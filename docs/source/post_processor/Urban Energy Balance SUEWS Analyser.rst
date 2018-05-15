@@ -26,6 +26,8 @@ Urban Energy Balance: SUEWS Analyser
 * Dialog box  :
       .. figure:: /images/SUEWSAnalyzer.png
 
+          ```to do```
+
 * Dialog sections  :
 .. list-table::
    :widths: 50 50

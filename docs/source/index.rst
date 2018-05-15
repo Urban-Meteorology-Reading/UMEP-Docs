@@ -1,9 +1,6 @@
 .. _index_page:
 
-.. figure:: /images/UMEP_logo.png
-   :alt:  none
-   :align: right
-   :scale: 35%
+
 
 
 UMEP Manual

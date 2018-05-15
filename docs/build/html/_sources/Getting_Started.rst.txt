@@ -84,7 +84,8 @@ make sure *pillow* is installed.
                    pip uninstall netCDF4
                    pip install netCDF4==1.2.9
                 .. figure::  /images/Pandas.png
-                **Installation of pandas**
+
+                    **Installation of pandas**
 
 
         #. Mac OS X
