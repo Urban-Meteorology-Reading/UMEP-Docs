@@ -104,6 +104,7 @@ other users to give examples of the many application possibilities of UMEP.
    People_Involved_&_Acknowledgements
    Tutorials/Tutorials
    How_to_Contribute
+   Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS
    Known_Issues
    FAQ
    Abbreviations

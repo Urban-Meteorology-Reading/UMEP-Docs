@@ -1,0 +1,584 @@
+Contributing with python code to the UMEP plugin in QGIS
+--------------------------------------------------------
+
+Here, instructions and recommendations on how to make your own plugin to
+go with the UMEP plugin will be described as well as tips and tricks on
+how to make use of the GIS capabilities included in QGIS to go with your
+plugin.
+
+Gary Sherman (creator of QGIS) has produced a number of useful tools for
+developers that can be used to make your own contribution to the
+software. Below, a number of tool are listed that come very handy when
+you want to create your own plugin. There is also a number of resources
+online that is very useful. One is the `PyQGIS Developer
+Cookbook <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/>`__
+available from the QGIS webpage and another is a book written by Gary
+Sherman called The `PyQGIS Programmer's
+Guide <http://locatepress.com/ppg>`__.
+
+#. Start off by creating a plugin using the **PluginBuilder** in QGIS.
+   This is a plugin that sets up all necessary files and folders for
+   your plugin.
+#. Another useful plugin is the **PluginReloader** which makes it
+   possible to reload a plugin in QGIS without restarting the software.
+#. pb\_tool is another useful program to use for installing your plugin
+   in the QGIS plugin folder as well as cleaning etc.
+
+Please use the python libraries that comes with the QGIS installation as
+much as possible without including external libraries when developing
+your plugin. All libraries are not included when a common installation
+of QGIS is installed. Go to our `Getting
+started <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+section for further instructions.
+
+External Python libraries currently included in the UMEP plugin
+(Utilities folder):
+
+-  f90nml - for reading and writing of fortran namelists
+-  Pysolar - for calculation of Sun positions
+
+To use the f90nml library located in the Utilities folder:
+
+::
+
+  from ..Utilities import f90nml
+
+The **pandas** library is not install by default so a simple install
+pandas cannot be used use instead a try statement:
+
+::
+
+  try:
+      import pandas
+  except Exception, e:
+      QMessageBox.critical(None, 'Error', 'The WATCH data download/extract feature requires the pandas package '
+                             'to be installed. Please consult the FAQ in the manual for further information')
+      return
+
+The same goes for **matplotlib** and other libraries that you are
+uncertain of.
+
+SUEWS wrapper
+~~~~~~~~~~~~~~~
+
+The main file of the python wrapper for the SUEWS model is called
+SUEWSwrapper.py. To change version of SUEWS when running the wrapper,
+simple go in to SUEWSwrapper.py and activate the line which is calling
+the appropriate wrapper (e.g. SUEWSwrapper\_v2016a) and comment out
+other versions.
+
+In SUEWS v2017b - this is no longer used/needed
+
+f2py
+~~~~~~~~~~~~~~~
+
+A possibility to make use of fortran subroutines in python. See
+`here <http://docs.scipy.org/doc/numpy-dev/f2py/>`__ for documetation.
+
+#. When developing the fortran code for compiling with f2py kind=1d0
+   will not work for function parameters to be passed in from python.
+   Should use KIND=8.
+
+Setting up Windows machine for running f2py
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Please note that the steps below contain some links that over time could
+change, however, the basics should remain the same. This has been tested
+and established for an Intel 64-bit machine running NT operating system.
+This is still to be tested on other versions of Windows operating
+system. If you carry out on both OS, please add to the list below or
+report to team.
+
+The process can also be applied to a 32-bit machine, but the choice of
+python2.7 and set up for MinGW-w64 will be different. This has not been
+tested, and perhaps shouldn’t be encouraged if SUEWS is being developed
+and tested on/for 64-bit architecture.
+
+Before starting any of the required steps it is recommended that any
+version of Python, mingw, and Cygwin be removed from the machine if
+possible. If you already have Python 2.7 and MinGW installed, or have
+followed the procedure below then go to the instructions on developing
+fortran-python interface.
+
+System Setup
+^^^^^^^^^^^^
+
+#. Download Python 2.7.XX : download from:
+   `here <http://www.python.org/downloads>`__ and install to directory
+   C:\\Python27<!--
+
+
+
+#. Add to PATH environment variable:
+
+    C:\\Python27
+
+    C:\\Python27\\libs
+
+    C:\\Python\\Scripts
+
+
+#. Add to C\_INCLUDE\_PATH environment variable:
+
+
+    C:\\Python27\\include
+
+    C:\\Python27\\libs
+
+
+**Note:** The *C:\\Python27\\Scripts* directory is required for use of
+pip in subsequent steps.
+
+#. Install latest NumPY package to get latest f2py
+
+    (i) Download numpy-1.11.0rc1+mkl-cp27-cp27m-win\_amd64.whl from
+    `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy>`__
+
+    (ii) Open command prompt and change directory to where numpy wheel is
+    installed (e.g. Downloads folder). Run the following command:
+
+    ::
+
+      Pip install numpy-1.11.0rc1+mkl-cp27-cp27m-win_amd64.whl
+
+    (iii) Check the directories for **numpy** and
+    **numpy-1.11.0rc1.dist-info** are under
+    **C:\\Python27\\Lib\\site-packages**. Dates and times of directory
+    should indicate these are new from wheel.
+
+
+#. Download Mingw-w64 from
+   `here <https://sourceforge.net/projects/mingw_w64>`__
+
+
+   **Note:** This is suitable for 64 and 32 bit architecture.
+
+
+
+#. Run mingw-w64-install.exe (found in directory to which you have
+   downloaded it to).
+
+    (i) In the install procedure set:
+
+
+    **Version:** 5.3.0 (or what ever is latest)
+
+    **Architecture:** x86\_64 (for 64 bit machine)
+
+    **Threads:** posix
+
+    **Exception:** dwarf
+
+    **Build revision:** 0
+
+
+
+    (ii) Set the destination folder to: **C:\\mingw-w64\_x86** when
+    prompted.
+
+
+#. Add to environment variable:
+
+
+
+    (i) **C\_INCLUDE\_PATH: C:\\mingw-w64\_x86\\mingw64\\include**
+
+    (ii) **PATH: C:\\mingw-w64\_x86\\mingw64\\bin**
+
+
+#. This step is required to create/replace the import library found
+   under directory **C:\\Python27\\libs**. The import library is
+   **libpython27.a**.
+
+    (i) Download the pexports binary **pexports-0.47-mingw32-bin.tar.xz**
+    from
+    `here <http://www.sourceforge.net/projects/mingw/files/MinGW/Extension/pexports/pexports-0.47/>`__.
+
+    **Note:** pexports-0.47 could change for subsequent versions.
+
+
+    (ii) Unpack the tar file and put pexports.exe in **C:\\Python27\\libs**.
+
+
+    #. Open a command prompt and run the following command:
+
+    ::
+
+       pexports C:\Windows\System32\python27.dll > USERDIR\python27.def
+
+
+    **Note:** *USERDIR* is the user directory you put the file in. As it is
+    an intermediary step and a temporary file, the user directory you use
+    shouldn’t matter, however, don’t try to put it in Windows\\System32
+    directory, or any other directory in the system Path.
+
+#. Create the import library **libpython27.a** for helping the linker of
+   MinGW link to the correct python DLL.
+
+
+   (i) Open Command Prompt and change directory to where *python27.def* was
+   created in step 8 (i.e. *USERDIR*).
+
+   (ii) Run command:
+
+   ::
+
+     dlltool –D python27.dll –d python.def –l libpython27.a
+
+   (iii) Move resulting *libpython27.a* into **C:\\Python27\\libs** ,
+   replacing any existing version of this file in the directory
+
+Making Fortran-Python Interface ‘dll’ (.pyd file) with F2PY
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-  This is shown using a makefile (named *Makefile*) that is called from
+   the command line as follows:
+
+::
+
+    mingw32-make  –f  Makefile
+
+**Note:** This should be called from within the directory that the
+Makefile and source code is in.
+
+-  Basic Makefile:
+
+::
+
+     CC = gnu95
+     CCO= x86_64-w64-mingw32-gfortran
+     FFLAGS = -fPIC
+     TARGET = INTENDED_NAME_OF_PYD
+     MODULES = nameOfModules.o
+
+     main:  NAMEOFMAINPROGRAMFILE.f95  $(MODULES)
+      f2py.py –c –-fcompiler=$(CC) –-compiler=mingw32 –m $(TARGET) NAMEOFMAINPROGRAMFILE.f95 $(MODULES)
+
+     $(MODULES): nameOfModules.f95
+     $(CCO) –c  $(FFLAGS)  nameOfModules.f95
+
+     cleanall:
+        -del $(MODULES)
+
+
+**Note:** A .pyd file should have been created on the completion of
+compilation from command called in step 1.
+
+
+-  Create a directory to store all created .pyd files in (e.g.
+   C:\\PythonPYD) and add to PATH environment variable.
+
+
+This ensures the .pyd files are picked up and used by python scripts.
+
+Distributing f2py Modules for Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Note:** all the .dll files (including those used to make python
+library from MinGW) need to be packaged up so that a machine without MinGW can use the
+developed python libraries.
+
+The .dll files to include are: NEED TO LIST THEM
+
+Importing and using in Python
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Import the module into python script in the same way you would import
+   any other module:
+
+
+    - If your module is called *SolweigShadow*, for example, then *import
+SolweigShadow as SS* will enable you to access the functions of the
+module by *SS.functionName()*.
+
+    **Note:** The parentheses are needed regardless of whether the function
+has parameter inputs/outputs.
+
+
+#. To see what functions are available for the imported module, use the
+   command
+::
+
+     print hw.__doc__
+
+Upcoming Developments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - U/S
+     - Topic
+     - Status
+     - Lead
+   * - SUEWS
+     - Snow
+     - Completed
+     - Univ Helsinki
+   * - SUEWS
+     - Convective boundary layer development
+     - Completed
+     - Göteborg Univ
+   * - SUEWS/SOLWEIG
+     - Mean radiant temperature model
+     - Active
+     - Göteborg Univ
+   * - SUEWS
+     - Storage Heat flux - ESTM
+     - Completed
+     - Göteborg Univ /Reading
+   * - SUEWS
+     - Storage Heat flux - AnOHM
+     - Active
+     - Reading/Tsinghua
+   * - SUEWS
+     - Anthropogenic Heat fluxes
+     - Actve
+     - Reading
+   * - Multi
+     - Benchmark
+     - Active
+     - Reading
+   * - Wind
+     - Pedestrian wind speed
+     - Active
+     - Göteborg Univ/Reading
+   * - Multi
+     - Downscaling data \*download WATCH
+     - Active
+     - Lingbo Xue (Reading)/TS
+   * - Multi
+     - Downscaling data \*precip mass check
+     - Active
+     - TK/ LX (LJ/TS)
+   * - Multi
+     - Downscaling data \*precip intensity
+     - Active
+     - AG/ LX
+   * - SUEWS/SOLWEIG
+     - Radiation coupling
+     - Active
+     - Göteborg Univ/Reading
+
+Benchmarking system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`Benchmark <http://urban-climate.net/umep/Benchmark>`__
+
+Coding Guidelines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SUEWS
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are interested in contributing to the code please contact Sue
+Grimmond.
+
+#. Code written in Fortran – currently Fortran 95
+#. Variables
+
+   -  Names should be defined at least in one place in the code –
+      ideally when defined
+   -  Implicit None should be used in all subroutines
+   -  Variable name should include units. e.g. Temp\_C, Temp\_K
+   -  Output variable attributes should be provided in the TYPE
+      structure defined in the ctrl_output module as follows:
+
+       ::
+
+           : TYPE varAttr
+           : CHARACTER(len = 15) :: header ! short name in headers
+           : CHARACTER(len = 12) :: unit   ! unit
+           : CHARACTER(len = 14) :: fmt    ! output format
+           : CHARACTER(len = 50) :: longNm ! long name for detailed description
+           : CHARACTER(len = 1)  :: aggreg ! aggregation method
+           : CHARACTER(len = 10) :: group  ! group: datetime, default, ESTM, Snow, etc.
+           : INTEGER             :: level  ! output priority level: 0 for highest (defualt output)
+           : END TYPE varAttr
+
+#. Code should be written generally
+#. Data set for testing should be provided
+#. Demonstration that the model performance has improved when new code
+   has been added or that any deterioration is warranted.
+#. Additional requirements for modelling need to be indicated in the
+   manual
+#. All code should be commented in the program (with initials of who
+   made the changes – name specified somewhere and institution)
+#. The references used in the code and in the equations will be
+   collected to a webpage
+#. Current developments that are being actively worked on
+
+How to setup your development environment on Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+gfortran with NetBeans
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Go to Cygwin and install 64-bit. You need to make sure that you
+   install gfortran, g++, gdb, make and gcc. I am not really sure what
+   is needed so I tend to install too many packages rather that too few.
+   Install in c:\\cygwin64
+#. Go to your Environment Variables in advanced system settings in
+   windows and include
+
+   C:\\cygwin64\\bin;C:\\cygwin64\\usr\\bin;C:\\cygwin64\\usr\\local\\bin;C:\\cygwin64\\lib;C:\\cygwin64\\usr\\lib
+   in your Path.
+
+#. Install NetBeans from www.netbeans.org. You only need to download the
+   C/C++ version.
+#. If you don’t have the correct Java, follow the link presented to you
+   and install correct version.
+#. Copy your code to a folder of your choice.
+#. Create a new project (C/C++ from Existing Source) and use you folder
+   as the project folder. Keep all other settings.
+#. You are ready to work.
+
+NOTE: Another nice thing to do is to use gfortran from your cluster on
+your windows PC. Do the following:
+
+-  In Netbeans, go to Tools>Options>C/C++ and click Edit next to
+   localhost. Click Add… and write metcl2. Just keep on clicking until
+   you need to give your username and password for the cluster.
+-  Now you should be able to run GNU on the cluster from your windows
+   PC.
+
+Python and PyCharm (Not so good alternative)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Install python 2.7.X, 64 bit from python.org (Windows x86-64 MSI
+   installer). Install with default settings.
+#. Visit JetBrain, Pycharm website and obtain a student account (go to
+   **Discounted and Complimentary Licenses**,
+   https://www.jetbrains.com/pycharm/buy/). Click on **For Students and
+   Teachers**, go to bottom of the page and click **Apply Now**. Choose
+   either a student or a teacher status. You will get an email where you
+   activate your license.
+#. Create a folder which you can use as a project folder. Copy the
+   python code (\*.py) from the suews repository and put it the folder.
+   If you don’t have access to the repository talk to Fredrik Lindberg.
+#. Download PyCharm professional
+   (https://www.jetbrains.com/pycharm/download/) and install.
+#. Start PyCharm and activate license using your JetBrains account.
+#. Create a new project (Pure python) and choose the created folder (3)
+   as your project folder and use your python installation as
+   interpreter. Click ok in the next message box.
+#. Go to File>Settings >Project Interpreter. Add a new package by
+   clicking the green plus sign. Search for numpy and install package.
+   If you get errors, you probably need correct version of Visual
+   studio. There is an address of a website where you can download it in
+   the error message when you tried to install numpy.
+#. Also install matplotlib (used for plotting)
+#. Run mainfileLondon.py to do stuff.
+
+ 
+
+Python and PyCharm (good alternative)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Go to qgis.org and click on download. Choose the installation for
+   advanced users (64-bit). Choose the **advanced desktop installation**
+   and make sure that **qgis-ltr** is included. Keep other default
+   settings. This give you a python installation with everything you
+   need (pretty much). IF you are missing python libraries after the
+   installation, you can restart the installation file and add more
+   components.
+#. If you haven’t installed PyCharm, follow set 2 through 5 above.
+#. Create a .bat-file (e.g. PyCharmWithQgis.bat) with the following
+   content (put it in your folder created earlier and edit it so that
+   the paths on line 1 and 5 is correct):
+    ::
+
+      SET OSGEO4W_ROOT=C:\OSGeo4W64
+      SET QGISNAME=qgis
+      SET QGIS=%OSGEO4W_ROOT%\apps\%QGISNAME%
+      SET QGIS_PREFIX_PATH=%QGIS%
+      SET PYCHARM= “C:\Program   Files   (x86)\JetBrains\PyCharm   2017.3.5\bin\pycharm.exe
+      CALL %OSGEO4W_ROOT%\bin\o4w_env.bat
+      SET PATH=%PATH%;%QGIS%\bin
+      SET PYTHONPATH=%QGIS%\python;%PYTHONPATH%
+      start  “PyCharm   aware   of   QGIS”\  /B %PYCHARM% %*
+
+#. Run the bat-file.
+
+How to make standalone application using py2exe (this is not used, see below)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. In PyCharm, add the pip package (if not already there). See bullet
+   point 6. Above.7.
+#. Go to http://www.lfd.uci.edu/~gohlke/pythonlibs/ and download the
+   appropriate py2exe package (.whl).
+#. Open a command prompt and go to the folder where you download the
+   py2exe package and write:
+   ::
+     pip name_of_whl_file
+
+#. Create a file called setup.py in your working directory with the
+   following code:
+  ::
+
+      from distutils.core import setup
+      import py2exe
+
+  ::
+
+        setup(console=['Suews_wrapper_v2015a.py'])
+
+#. From a command prompt (can use terminal in PyCharm) write:
+
+python setup.py install
+
+#. Then write:
+
+  ::
+
+      python setup.py py2exe
+
+#. All files and folders needed are now created in a subfolder call
+   dist. You also have to add the SUEWS executable and all files needed
+   to run the model.
+
+How to make standalone application using Pyinstaller (use this)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Add the pip package (see above)
+#. You need to add the path to where pip.exe is located (usually
+   C:\\Python27\\Scripts\\). If you don’t know how to add a path in your
+   environment settings you can temporarily add one in a command prompt
+   by writing:
+
+  ::
+
+       path %PATH%;C:\Folder_where_pipexecutable_is_located
+
+#. In the same command prompt, write:
+
+  ::
+
+       pip install pyinstaller
+
+#. Locate yourself where you have your script and write:
+
+  ::
+
+      pyinstaller suews_wrapper_v3.py
+
+SUEWS Prepare Developer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is for advanced users regarding SUEWS Prepare plugin in UMEP. The
+information in should help with translating the plugin, adding new tabs
+or adding new variables.
+
+* most important files for making changes to the plugin
+    - excel documents SUEWS\_init.xlsx, SUEWS\_SiteLibrary.xls and SUEWS\_SiteSelect.xlsx.
+* files are located
+    - as a part of the plugin in the folder named “Input” (by default in C:\\Users\\your\_username\\.qgis2\\python\\plugins\\SUEWSPrepare\\Input).
+* SUEWS Prepare uses these files
+    - for example to generate the amount of site library tabs and the contents of those tabs.
+* Take care
+    - any changes made to these documents will be lost if they are replaced (e.g. reinstalling or updating the plugin). This can be prevented by making backups of the excel documents before reinstalling or updating.
+* SUEWS\_init.xlsx
+    - This file handles the amount of site library tabs in the plugin, the name of these tabs and their connection to other excel sheets and text documents. Each sheet represents one tab.
+* SUEWS\_SiteLibrary.xls
+    - This file contains all the different information connected to different site. Each excel sheet is connected to a different kind of information like vegetation and water data and each line in a sheet represents a different area or site. This information is used to determine what kind of information and variable will be present in a widget of a site library tab.   *
