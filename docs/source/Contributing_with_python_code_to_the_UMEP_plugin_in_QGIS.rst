@@ -288,16 +288,16 @@ Importing and using in Python
 
 
     - If your module is called *SolweigShadow*, for example, then *import
-SolweigShadow as SS* will enable you to access the functions of the
-module by *SS.functionName()*.
+    SolweigShadow as SS* will enable you to access the functions of the
+    module by *SS.functionName()*.
 
     **Note:** The parentheses are needed regardless of whether the function
-has parameter inputs/outputs.
+    has parameter inputs/outputs.
 
 
 #. To see what functions are available for the imported module, use the
    command
-::
+   ::
 
      print hw.__doc__
 
@@ -515,14 +515,14 @@ How to make standalone application using py2exe (this is not used, see below)
 
 #. Create a file called setup.py in your working directory with the
    following code:
-  ::
+      ::
 
-      from distutils.core import setup
-      import py2exe
+          from distutils.core import setup
+          import py2exe
 
-  ::
+      ::
 
-        setup(console=['Suews_wrapper_v2015a.py'])
+            setup(console=['Suews_wrapper_v2015a.py'])
 
 #. From a command prompt (can use terminal in PyCharm) write:
 
@@ -530,9 +530,9 @@ python setup.py install
 
 #. Then write:
 
-  ::
+     ::
 
-      python setup.py py2exe
+         python setup.py py2exe
 
 #. All files and folders needed are now created in a subfolder call
    dist. You also have to add the SUEWS executable and all files needed
@@ -547,21 +547,21 @@ How to make standalone application using Pyinstaller (use this)
    environment settings you can temporarily add one in a command prompt
    by writing:
 
-  ::
+      ::
 
-       path %PATH%;C:\Folder_where_pipexecutable_is_located
+           path %PATH%;C:\Folder_where_pipexecutable_is_located
 
 #. In the same command prompt, write:
 
-  ::
+      ::
 
-       pip install pyinstaller
+           pip install pyinstaller
 
 #. Locate yourself where you have your script and write:
 
-  ::
+      ::
 
-      pyinstaller suews_wrapper_v3.py
+          pyinstaller suews_wrapper_v3.py
 
 SUEWS Prepare Developer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -643,15 +643,15 @@ SUEWS\_SiteSelect.xlsx
    :header-rows: 0
 
    * - 3
-     - title of the variable box in the widget. “Variable box” is referring to the box on the right hand side of the widget that contains the variables from the site library. If the title needs to be changed simply edit the text in the third column of the correct sheet and the new title of the box will match that. Example: Following the above examples, the title “Building surface characteristics” no longer matches the content of the variable box in the paved tab. Replace the text in the third column to “Vegetation surface characteristics” and our title will now make more sense. ```PICTURE? this needs attention```
+     - title of the variable box in the widget. “Variable box” is referring to the box on the right hand side of the widget that contains the variables from the site library. If the title needs to be changed simply edit the text in the third column of the correct sheet and the new title of the box will match that. Example: Following the above examples, the title “Building surface characteristics” no longer matches the content of the variable box in the paved tab. Replace the text in the third column to “Vegetation surface characteristics” and our title will now make more sense.   ```PICTURE? this needs attention```
 
 * Change the default parameters for a widget
-    - fourth and fifth columns are optional information and decide if there are any default parameters for a widget. The number in the fourth column decides if there is an identification code for the tab. This identification code is used to exclude entries from the site library. Many tabs might link to the same site library sheet and if there is an identification code only the entries that match the code will be shown in the widget. If there is a number in the fifth column the tab will try to match this number against the site codes (not to be confused with the identification code). The side codes are the codes that fill out the drop down box in the widget marked “code” and each code represent one site library entry. If there exist a default site code for a tab this code will be selected in the drop down menu on the plugin start up. Example: Let’s keep making changes to the paved sheet. Right now the identification code for the sheet is “1” and the default site code is “661”. If we change the identification code (fourth column) to “4” a different set of site entries will be available for selection in the widget. One of the site codes that are now available is “662”. By changing the content of the fifth tab to “662” this will now be the default site code for the widget. ```PICTURE? this needs attention```
+    - fourth and fifth columns are optional information and decide if there are any default parameters for a widget. The number in the fourth column decides if there is an identification code for the tab. This identification code is used to exclude entries from the site library. Many tabs might link to the same site library sheet and if there is an identification code only the entries that match the code will be shown in the widget. If there is a number in the fifth column the tab will try to match this number against the site codes (not to be confused with the identification code). The side codes are the codes that fill out the drop down box in the widget marked “code” and each code represent one site library entry. If there exist a default site code for a tab this code will be selected in the drop down menu on the plugin start up. Example: Let’s keep making changes to the paved sheet. Right now the identification code for the sheet is “1” and the default site code is “661”. If we change the identification code (fourth column) to “4” a different set of site entries will be available for selection in the widget. One of the site codes that are now available is “662”. By changing the content of the fifth tab to “662” this will now be the default site code for the widget.   ```PICTURE? this needs attention```
     * Change the order of the widget site code in the final output of the plugin
     - A widget’s contribution to the final output of the plugin will be the selected site code in the widget. This code will be placed somewhere on a predetermined place in a long list of variables. The sixth column in a SUEWS\_init sheet represents this position in the final output. To change a widget’s output order edit the number in the sixth column. Take care to make sure changing the position doesn’t overwrite any other information. The order of the final output is also closely tied to the document SUEWS\_SiteSelect, see more [[#XLSX].
 * Editing a tab name
     - The name of the tabs in the SUEWS Prepare main window correspond to the names of the sheets in the excel document SUEWS\_init. To edit a tab name simply change the name of the sheet.
-    - Example: After all the changes made to the paved sheet in SUEWS\_init the name “paved” as a description of the tab no longer fit. By renaming the sheet to “vegetation” the tab will have a more fitting name.```this needs attention PICTURE?```
+    - Example: After all the changes made to the paved sheet in SUEWS\_init the name “paved” as a description of the tab no longer fit. By renaming the sheet to “vegetation” the tab will have a more fitting name.  ```this needs attention PICTURE?```
 * Changes available through SUEWS_SiteLibrary.xls
     - What can be made through the SUEWS\_SiteLibrary.xls.
     - The SUEWS\_SiteLibrary document is what defines the variables inside a tab. This document defines the titles and tooltips for the variables as well as the values for the variables on different sites.
