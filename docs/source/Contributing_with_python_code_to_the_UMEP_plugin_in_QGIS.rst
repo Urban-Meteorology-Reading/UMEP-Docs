@@ -583,7 +583,7 @@ or adding new variables.
 * SUEWS\_SiteLibrary.xls
     - This file contains all the different information connected to different site. Each excel sheet is connected to a different kind of information like vegetation and water data and each line in a sheet represents a different area or site. This information is used to determine what kind of information and variable will be present in a widget of a site library tab.   *
 
-      .. figure:: Figure14.png
+      .. figure:: images/Figure14.png
 
           Empty widget not connected to any sheet from the SUEWS_SiteLibrary document.
 
