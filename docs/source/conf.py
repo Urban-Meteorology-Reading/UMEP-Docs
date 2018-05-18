@@ -90,7 +90,7 @@ rst_prolog = u"""
 .. |ZHMAX| replace:: Z\ :sub:`Hmax`
 .. |Z0| replace:: Z\ :sub:`0`
 .. |Zd| replace:: Z\ :sub:`d`
-.. |TMRT| replace:: T\ :sub:`MRT`
+.. |TMRT| replace:: T\ :sub:`mrt`
 .. |Ta| replace:: T\ :sub:`a`
 .. |AA| replace:: A\ :sub:`A`
 .. |AP| replace:: A\ :sub:`P`

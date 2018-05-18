@@ -540,7 +540,7 @@ consumption.
 
 Daily fuel consumption in an OA is converted to mean heat flux [W
 m\ :sup:`-2`] using the heat of combustion [J kg\ :sup:`-1`], number of
-seconds in a day and the area of the OA [m:sup:`2`]. This is
+seconds in a day and the area of the OA [|m^-2|]. This is
 disaggregated to half-hour time steps using empirical diurnal cycle data
 for each day of the week.
 

@@ -18,7 +18,7 @@ Introduction
 ~~~~~~~~~~~~~~
 
 SOLWEIG is a model which can be used to estimate spatial variations of
-3D radiation fluxes and mean radiant temperature (T:sub:`mrt`) in
+3D radiation fluxes and mean radiant temperature (|TMRT|) in
 complex urban settings. The SOLWEIG model follows the same approach
 commonly adopted to observe T\ :sub:`mrt` (as used, for example, by
 Höppe (1992)  [1]_, with shortwave and longwave radiation fluxes from
@@ -91,7 +91,7 @@ Ground and building DSM
 ##################################
 
 As the name suggest this DSM consist of both ground and building heights
-(masl). |Example of a ground and building DSM|
+(masl).
 
 Vegetation DSMs
 ##########################
@@ -108,6 +108,11 @@ Lindberg and Grimmond (2011)  [2]_.
    Schematic cross section of the vegetation representation in SOLWEIG.
    **a** Conifer tree (left) and bush (right), **b** the canopy DEM and
    **c** trunk zone DEM based on (a). From Lindberg and Grimmond (2011)
+
+.. figure:: /images/Dsm_gbg.png
+
+    Example of a ground and building DSM
+
 
 Digital elevation model
 ################################
