@@ -97,7 +97,7 @@ other users to give examples of the many application possibilities of UMEP.
    :hidden:
 
    Introduction
-   Getting_Started
+   getting_started
    pre-processor/Pre-Processor
    processor/Processor
    post_processor/Post-Processor
@@ -105,6 +105,7 @@ other users to give examples of the many application possibilities of UMEP.
    Tutorials/Tutorials
    How_to_Contribute
    Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS
+   SOLWEIG
    Known_Issues
    FAQ
    Abbreviations
