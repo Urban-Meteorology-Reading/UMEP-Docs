@@ -623,9 +623,8 @@ SUEWS\_SiteSelect.xlsx
      - When the plugin generates an output each widget will provide the selected site code in the widget as part of the output. The sixth column is the index of the site code in the plugin output. It should not be changed without careful consideration as there is a risk of the site code overwriting other information in the output if it is.
 
 .. figure:: /images/Figure16.png
-    :align: right
 
-     Red outline illustrates the title for the widget variable box.      
+     Red outline illustrates the title for the widget variable box.
 
 
 

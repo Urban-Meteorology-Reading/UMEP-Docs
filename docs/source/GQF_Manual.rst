@@ -320,14 +320,12 @@ The use of the default parameters depends upon the available information
 in the shapefile. This relations are summarised below: when parameters
 are used if certain information are (green) or are not (red) available.
 
+* Available in shapefile
   .. list-table::
      :widths: 25 25 25 25
      :header-rows: 1
 
-     * - Available in shapefile
-       -
-       -
-       -
+
      * - Total AADT
        - AADT by vehicle
        - AADT by vehicle & fuel
@@ -368,10 +366,13 @@ are used if certain information are (green) or are not (red) available.
        - /
        - /
        - /
-     * - Looked up from parameters
-       -
-       -
-       -
+
+
+* Looked up from parameters
+ .. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 1
+
      * - AADT
        - Fuel fraction
        - Fleet fraction
