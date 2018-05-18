@@ -97,7 +97,7 @@ other users to give examples of the many application possibilities of UMEP.
    :hidden:
 
    Introduction
-   Getting_started
+   Getting_Started
    pre-processor/Pre-Processor
    processor/Processor
    post_processor/Post-Processor
