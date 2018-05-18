@@ -33,7 +33,7 @@ flowchart of the model.
 .. figure:: /images/SOLWEIG_flowchart.png
    :alt:  Overview of SOLWEIG
 
-    Overview of SOLWEIG
+   Overview of SOLWEIG
 
 Suggested reading
 ^^^^^^^^^^^^^^^^^^^
@@ -376,7 +376,7 @@ Sweden or London, UK. Here, you will use the Göteborg data.
 .. figure:: /images/SOLWEIGfirsttry.png
    :alt:  none|Dialog for the SOLWEIG model
 
-    none\|Dialog for the SOLWEIG model
+   Dialog for the SOLWEIG model
 
 Tips and Tricks
 ~~~~~~~~~~~~~~~~~~~~~~

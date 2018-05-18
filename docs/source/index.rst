@@ -106,6 +106,8 @@ other users to give examples of the many application possibilities of UMEP.
    How_to_Contribute
    Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS
    SOLWEIG
+   GQF_Manual
+   LQF_Manual
    Known_Issues
    FAQ
    Abbreviations
