@@ -615,16 +615,20 @@ SUEWS\_SiteSelect.xlsx
      - As well as being connected to a sheet in SUEWS\_SiteLibrary each tab needs to be connected to a text document. This text document will basically be a copy of the site library sheet and will be part of the plugin output. All available text documents are located in the folder named “Output” in the plugin directory and will have the same name as the sheets in SUEWS\_SiteLibrary. The contents of the second column will be the full name of a text document including the file extension, for example “SUEWS\_Veg.txt”.
    * - 3
      - determines the title of the widget’s variable box.
-           .. figure:: /images/Figure16.png
-              :align: right
-
-              Red outline illustrates the title for the widget variable box.
    * - 4
      - optional and determines if there is an identification code for the widget. The identification code is an integer number is used when multiple widgets share a site library sheet but shouldn’t share the same site entries. If an identification code is added the widget will only fetch site entries that match the code. If no identification code is need the column is left blank.
    * - 5
      - determines if there is a default site entry that should be selected in the widget’s drop down menu when the plugin is initiated. If the site code of a site entry (see `#XLS <#XLS>`__) is added to the fifth column this site entry will be automatically selected in the widget on plugin start up.
    * - 6
      - When the plugin generates an output each widget will provide the selected site code in the widget as part of the output. The sixth column is the index of the site code in the plugin output. It should not be changed without careful consideration as there is a risk of the site code overwriting other information in the output if it is.
+
+.. figure:: /images/Figure16.png
+    :align: right
+
+     Red outline illustrates the title for the widget variable box.      
+
+
+
 
 * Change the variables in the variable box of a widget
     - The content of a widget is decided by what sheet in the document SUEWS\_SiteLibrary.xls it is connected to. This connection is created by the information in the first column of a sheet in SUEWS\_init. To make changes edit the text in the first column to match the name of the sheet you want to fetch information from. Example: Let’s say for the purposes of this example that we want the content of the tab named “Paved” to have the same content of the tab named “Evergreen”. To do this we must change the connection in the paved sheet of SUEWS\_init to match that of the evergreen sheet. In the evergreen sheet we can see it’s connected to a sheet in SUEWS\_SiteLibrary called SUEWS\_Veg. If we change the text of the first column in the paved sheet to match this, the content of the tab will change to the same as the evergreen tab. ```PICTURE? this needs attention```
