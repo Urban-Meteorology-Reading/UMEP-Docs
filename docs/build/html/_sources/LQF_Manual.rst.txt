@@ -50,11 +50,11 @@ describe model assumptions and the library of available data files.
 
  -  LQF needs spatial and temporal information about the population, energy consumption and transport in order to model Q\ :sub:`F` at high temporal and spatial resolution:
 
- -  **`Model parameters file <#Parameters_file>`__**: Fortran-90 namelist file containing numerical parameters required in model calculations
+ -  Model parameters file `Parameters_file`_: Fortran-90 namelist file containing numerical parameters required in model calculations
 
- -  **`Data sources file <#Data_sources_file>`__**: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
+ -  `Data sources file`_: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
 
- -  **Output Path**: Directory into which `model outputs <#Model_outputs>`__ and associated data will be stored. *Any existing files will be overwritten.*
+ -  **Output Path**: Directory into which `Model outputs`_ and associated data will be stored. *Any existing files will be overwritten.*
 
  2: Input data is pre-processed:
 
@@ -109,6 +109,7 @@ describe model assumptions and the library of available data files.
  -  One map per Q\ :sub:`F` component and time step is produced, coloured on a logarithmic scale according to the Q\ :sub:`F` value in each output area. One or more LQF time steps is selected in the list, and every Q\ :sub:`F` component is displayed for each date in the QGIS window by pressing “Add to canvas”.
 
  Note: Rendering maps may take several minutes for high-resolution model results.
+
 
 Model outputs
 -------------
@@ -648,9 +649,8 @@ occupied by:
 The GQF user interface requires two input files for this process.
 
 -  **Land cover fractions**: Land cover fractions calculated using the
-   `UMEP land
-   cover <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier>`__
-   classifier in the pre-processing toolbox.
+   `Urban_Land_Cover_Land_Cover_Reclassifierr`
+    in the pre-processing toolbox.
 -  **Corresponding polygon grid**: The ESRI shapefile grid of polygons
    represented by the land cover fractions. This is a required input for
    the UMEP land cover classifier.
@@ -775,10 +775,11 @@ Configuration data
 
 The LQFsoftware has two configuration files:
 
--  `Data sources file <#Data_sources_file>`__: Manages the various input
+-  `Data sources file`_: Manages the various input
    data files and their associated metadata
--  `Parameters file <#Parameters_file>`__: Contains numerical values and
+-  `Parameters_file`_: Contains numerical values and
    assumptions used in model calculations.
+
 
 Parameters file
 ~~~~~~~~~~~~~~~~~~~~~
@@ -907,6 +908,7 @@ here as examples)
        Tmax = 50
        Tmin = -10
     /
+
 
 Data sources file
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1183,7 +1185,7 @@ at 250m resolution.
    -  Press “Run”. The resulting shapefile will be added to the layers.
       It contains a “Pop” column for the population
    -  Use this shapefile as the residential population in LQF (in the
-      `LQF Data sources file <#Data_sources_file>`__)
+      `Data sources file`_)
 
 Appendix B: Gathering information about shapefiles for QF modelling
 ---------------------------------------------------------------------

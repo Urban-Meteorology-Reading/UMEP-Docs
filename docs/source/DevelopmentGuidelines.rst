@@ -1,3 +1,8 @@
+.. _DevelopmentGuidelines:
+
+DevelopmentGuidelines
+#########################
+
 Contributing with python code to the UMEP plugin in QGIS
 --------------------------------------------------------
 
@@ -502,7 +507,7 @@ Python and PyCharm (good alternative)
 #. Run the bat-file.
 
 How to make standalone application using py2exe (this is not used, see below)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. In PyCharm, add the pip package (if not already there). See bullet
    point 6. Above.7.
@@ -539,7 +544,7 @@ python setup.py install
    to run the model.
 
 How to make standalone application using Pyinstaller (use this)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Add the pip package (see above)
 #. You need to add the path to where pip.exe is located (usually

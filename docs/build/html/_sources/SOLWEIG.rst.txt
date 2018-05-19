@@ -5,14 +5,14 @@ SOLWEIG v2016a
 
 The current version of SOLWEIG is v2016a (released 9 September 2016).
 
-NEW in this version: see `Version history <#Version_History>`__.
+NEW in this version: see `Version History`_.
 
 This wiki page (http://urban-climate.net/umep/SOLWEIG) is regularly
 updated with new developments. The manual for SOLWEIG\_V2016a can be
 accessed `here <:File:SOLWEIG_V2016a_Manual.pdf>`__ and should be
 referenced as follows:
 
-  **F Lindberg, CSB Grimmond 2016  `SOLWEIG_v2016a` Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.**
+  **F Lindberg, CSB Grimmond 2016 SOLWEIG_v2016a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.**
 
 Introduction
 ~~~~~~~~~~~~~~
@@ -68,7 +68,7 @@ Install the model
 ^^^^^^^^^^^^^^^^^^^
 
 As SOLWEIG is included in UMEP (as from version 0.2.1) follow the
-`instructions <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+`Getting_Started`
 on how to install QGIS and UMEP. When installed successfully, SOLWEIG is
 found under *UMEP -> Processor -> Outdoor Thermal Comfort -> Mean
 Radiant Temperature (SOLWEIG)*.
@@ -138,8 +138,7 @@ grid should be in the UMEP standard format **except** for the two tree
 classes (deciduous and conifer). In other words a ground cover grid in
 SOLWEIG represents what is on the ground surface. A UMEP ground cover
 grid can be prepared from other data using the Land Cover Reclassifier
-(`*UMEP -> Pre-Processor -> Urban Land Cover -> Land Cover
-Reclassifier* <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__).
+(*UMEP -> Pre-Processor ->* `Urban_Land_Cover_Land_Cover_Reclassifierr`)
 
 Meteorological data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -445,7 +444,7 @@ Abbreviations
    * - SVF
      - Sky view factor
    * - UMEP
-     - `Urban Multi-scale Environmental Predictor <http://urban-climate.net/umep/UMEP>`__
+     - `index_page`
    * - GUI
      - Graphical User Interface
    * - POI
@@ -459,8 +458,9 @@ and contributions. There are two main ways to contribute:
 
 #. Submit comments or issues to the
    `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
-#. Participate in `Coding or adding new
-   features <http://urban-climate.net/umep/DevelopmentGuidelines>`__.
+#. Participate in Coding or adding new
+   features `DevelopmentGuidelines`.
+
 
 Version History
 ~~~~~~~~~~~~~~~~~~

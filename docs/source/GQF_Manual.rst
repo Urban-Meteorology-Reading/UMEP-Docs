@@ -58,9 +58,9 @@ must be managed by the user and are chosen at run time.
      #. Specify model configuration files and output path:
 
           -  GQF needs configuration files that specify the spatial and temporal information to model Q\ :sub:`F`:
-          -  **`Model parameters file <#Parameters_file>`__**: Fortran-90 namelist file containing numerical parameters required in model calculations
-          -  **`Data sources file <#Data_sources_file>`__**: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
-          -  **Output Path**: Directory into which `model outputs <#Model_outputs>`__ and associated data will be stored. *Any existing files will be overwritten.*
+          -  Model Parameters_file_: Fortran-90 namelist file containing numerical parameters required in model calculations
+          -  `Data sources file`_: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
+          -  **Output Path**: Directory into which `Model outputs`_ and associated data will be stored. *Any existing files will be overwritten.*
 
      #. Process input data
 
@@ -103,6 +103,7 @@ must be managed by the user and are chosen at run time.
 
 Model outputs
 ==================
+
 
 Model outputs are stored in the /ModelOutput/ subdirectory of the
 selected model output directory. A separate data file is produced for
@@ -256,7 +257,7 @@ Four road classes are assumed in the model:
      - Any other road segments: Assumed to have minor traffic flow
 
 The naming convention used in the shapefile must be defined in the
-transport section of the `\| Data Sources file <#Data_sources_file>`__
+transport section of the `Data sources file`_
 for the first three.
 
 Diesel and petrol consumption are calculated for seven vehicle types
@@ -301,7 +302,7 @@ speed for the segment and an AADT for each vehicle type that is further
 broken down into diesel and petrol components for cars and LGVs. It is
 not always possible to obtain some or even any of these, so default
 representative values must also be specified in the `model parameters
-file <#Parameters_file>`__:
+file Parameters_file_:
 
 .. list-table::
    :widths: 50 50
@@ -321,10 +322,10 @@ in the shapefile. This relations are summarised below: when parameters
 are used if certain information are (green) or are not (red) available.
 
 * Available in shapefile
-  .. list-table::
+
+.. list-table::
      :widths: 25 25 25 25
      :header-rows: 1
-
 
      * - Total AADT
        - AADT by vehicle
@@ -369,50 +370,53 @@ are used if certain information are (green) or are not (red) available.
 
 
 * Looked up from parameters
- .. list-table::
-    :widths: 25 25 25 25
-    :header-rows: 1
 
-     * - AADT
-       - Fuel fraction
-       - Fleet fraction
-       - Speed
-     * - /
-       - /
-       - /
-       - /
-     * - X
-       - /
-       - /
-       - /
-     * - X
-       - /
-       - X
-       - /
-     * - X
-       - X
-       - X
-       - /
-     * - /
-       - /
-       - /
-       - X
-     * - /
-       - /
-       - /
-       - X
-     * - X
-       - /
-       - /
-       - X
-     * - X
-       - /
-       - X
-       - X
-     * - X
-       - X
-       - X
-       - X
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - AADT
+     - Fuel fraction
+     - Fleet fraction
+     - Speed
+   * - /
+     - /
+     - /
+     - /
+   * - X
+     - /
+     - /
+     - /
+   * - X
+     - /
+     - X
+     - /
+   * - X
+     - X
+     - X
+     - /
+   * - /
+     - /
+     - /
+     - X
+   * - /
+     - /
+     - /
+     - X
+   * - X
+     - /
+     - /
+     - X
+   * - X
+     - /
+     - X
+     - X
+   * - X
+     - X
+     - X
+     - X
+
+
 
 
 The fuel consumption that a segment contributes to a model output area
@@ -3319,7 +3323,7 @@ a Saturday and (iii) a Sunday.
 Note that five separate input files must be provided for domestic
 electricity, domestic gas, industrial electricity, industrial gas and
 Economy 7 diurnal cycles. The link between file and energy type is made
-in the `Data sources file <#Data_sources_file>`__.
+in the `Data sources file`_.
 
 Aside from the standard headers, this file contains headers for:
 
@@ -4905,9 +4909,7 @@ occupied by:
 The GQF user interface requires two input files for this process.
 
 -  **Land cover fractions**: Land cover fractions calculated using the
-   `UMEP land
-   cover <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier>`__
-   classifier in the pre-processing toolbox.
+   `Urban_Land_Cover_Land_Cover_Reclassifierr` in the pre-processing toolbox.
 -  **Corresponding polygon grid**: The ESRI shapefile grid of polygons
    represented by the land cover fractions. This is a required input for
    the UMEP land cover classifier.
@@ -4984,13 +4986,15 @@ Configuration data
 
 The GQF software has two input files:
 
--  `Data sources file <#Data_sources_file>`__: Manages the various input
+-  `Data sources file`_: Manages the various input
    data files and their associated metadata
--  `Parameters file <#Parameters_file>`__: Contains numerical values and
+-  Parameters_file_: Contains numerical values and
    assumptions used in model calculations.
 
 Parameters file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _Parameters_file:
+
 
 The GQF parameters file contains public holidays and numeric values used
 in calculations. The table below describes the entries in each
@@ -5191,6 +5195,7 @@ other vehicles are found exclusively on primary roads.
            secondary_road = 2000   
            other = 10        
         /
+
 
 Data sources file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
