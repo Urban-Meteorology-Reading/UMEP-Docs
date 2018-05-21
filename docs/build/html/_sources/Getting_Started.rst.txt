@@ -1,7 +1,8 @@
 .. _Getting_Started:
 
+
 Getting Started
-==================
+===============
 
 .. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18)
 

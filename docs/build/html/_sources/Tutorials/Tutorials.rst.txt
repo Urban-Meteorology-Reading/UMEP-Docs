@@ -25,7 +25,7 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Interpretation of eddy covariance flux source areas
    * - Urban energy balance
      - Processor
-     - `Introduction_SUEWS`
+     - `IntroductionToSuews`
      - Energy, water and radiation fluxes for one location
    * - Urban energy balance
      - Pre-Processor and Processor (SUEWS_BLUEWS_Advanced)

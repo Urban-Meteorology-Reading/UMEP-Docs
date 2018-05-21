@@ -298,7 +298,7 @@ Evaluation and application studies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Mean Radiant Temperature (`SOLWEIG <http://urban-climate.net/umep/SOLWEIG>`__)
       - References: Evaluation
-	  
+  
       .. list-table::
          :widths: 50 50
          :header-rows: 1
@@ -366,7 +366,7 @@ Evaluation and application studies
 
 * Anthropogenic Heat (Qf) (LUCY)
             - References: Evaluation
-			
+
             .. list-table::
                :widths: 50 50
                :header-rows: 1
@@ -437,7 +437,7 @@ Evaluation and application studies
 
 * Solar Energy on Building Envelopes (SEBE)
             - References: Evaluation
-			
+
             .. list-table::
                :widths: 50 50
                :header-rows: 1
@@ -448,7 +448,7 @@ Evaluation and application studies
                  - `Lindberg et al. (2015) <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
 
             - References: Application
-			
+
             .. list-table::
                :widths: 50 50
                :header-rows: 1
@@ -468,7 +468,7 @@ Evaluation and application studies
 
 * Daily Shadow Patterns
             - References: Evaluation
-			
+
             .. list-table::
                :widths: 50 50
                :header-rows: 1

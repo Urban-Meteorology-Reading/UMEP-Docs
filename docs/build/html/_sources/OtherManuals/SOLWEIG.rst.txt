@@ -7,15 +7,14 @@ The current version of SOLWEIG is v2016a (released 9 September 2016).
 
 NEW in this version: see `Version History`_.
 
-This wiki page (http://urban-climate.net/umep/SOLWEIG) is regularly
-updated with new developments. The manual for SOLWEIG\_V2016a can be
+The manual for SOLWEIG can be
 accessed `here <:File:SOLWEIG_V2016a_Manual.pdf>`__ and should be
 referenced as follows:
 
   **F Lindberg, CSB Grimmond 2016 SOLWEIG_v2016a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.**
 
 Introduction
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 SOLWEIG is a model which can be used to estimate spatial variations of
 3D radiation fluxes and mean radiant temperature (|TMRT|) in
