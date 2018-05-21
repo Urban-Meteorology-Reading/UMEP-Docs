@@ -48,6 +48,7 @@ We are keen to get inputs and contributions from others. There are two main ways
 
 
 .. toctree::
+   :caption: UMEP Manual
    :maxdepth: 2
    :numbered:
    :hidden:
@@ -58,10 +59,22 @@ We are keen to get inputs and contributions from others. There are two main ways
    processor/Processor
    post_processor/Post-Processor
    People_Involved_&_Acknowledgements
-   Tutorials/Tutorials
    How_to_Contribute
    DevelopmentGuidelines
    Known_Issues
    FAQ
    Abbreviations
+
+.. toctree::
+   :caption: UMEP Tutorials
+   :maxdepth: 2
+   :numbered:
+   :hidden:
+   Tutorials/Tutorials
+
+.. toctree::
+   :caption: Other Manuals
+   :maxdepth: 2
+   :numbered:
+   :hidden:
    OtherManuals/OtherManuals
