@@ -1,6 +1,6 @@
-.. _SOLWEIG_v2016a:
+.. _SOLWEIGManual:
 
-SOLWEIG v2016a
+The SOLWEIG Manual
 -------------------
 
 The current version of SOLWEIG is v2016a (released 9 September 2016).
@@ -138,7 +138,7 @@ grid should be in the UMEP standard format **except** for the two tree
 classes (deciduous and conifer). In other words a ground cover grid in
 SOLWEIG represents what is on the ground surface. A UMEP ground cover
 grid can be prepared from other data using the Land Cover Reclassifier
-(*UMEP -> Pre-Processor ->* `Urban_Land_Cover_Land_Cover_Reclassifierr`)
+(*UMEP -> Pre-Processor ->* `LandCoverReclassifier`)
 
 Meteorological data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -146,11 +146,11 @@ Meteorological data
 The format and variables used for meteorological data is the same as for
 other parts of the UMEP-plugin. The time resolution is optional. To
 prepare such dataset from existing data the `Metdata
-Preprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__
+Preprocessor <MetPreprocessor>`
 could be used. If no data is available a single point in time can
 modelled using the SOLWEIG interface. There is also a possibility to
 download a dataset for any location on Earth using the `Download data
-(WATCH) <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__-plugin.
+(WATCH) <WATCH>`-plugin.
 The variables required for SOLWIEG are:
 
 -  *Air temperature* [degC]
@@ -237,7 +237,7 @@ points in the vector file. In the table below is the output variables
 specifiedː
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 5 20 75
    :header-rows: 1
 
    * - Column
@@ -426,7 +426,7 @@ Abbreviations
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
-   :widths: 50 50
+   :widths: 10 50
    :header-rows: 1
 
    * - DEM
@@ -466,7 +466,7 @@ Version History
 ~~~~~~~~~~~~~~~~~~
 
 .. list-table::
-   :widths: 50 50
+   :widths: 15 85
    :header-rows: 1
 
    * - Version

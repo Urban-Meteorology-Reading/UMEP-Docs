@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 .. _LandCoverReclassifier:
-=======
-.. _Urban_Land_Cover_Land_Cover_Reclassifierr:
->>>>>>> origin/master
 
 Urban Land Cover: Land Cover Reclassifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

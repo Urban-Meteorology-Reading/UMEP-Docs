@@ -1,4 +1,4 @@
-.. _OtherManuals:
+..  _OtherManuals:
 
 Other Manuals
 ---------
