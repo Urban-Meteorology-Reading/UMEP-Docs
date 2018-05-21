@@ -1,4 +1,4 @@
-
+.. _SpatialDataDownloader:
 
 Spatial Data: Spatial Data Downloader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

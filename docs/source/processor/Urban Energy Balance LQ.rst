@@ -1,3 +1,4 @@
+.. _LQF:
 
 Urban Energy Balance: LQ\ :sub:`F`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

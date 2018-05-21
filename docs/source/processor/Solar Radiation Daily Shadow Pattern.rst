@@ -1,3 +1,4 @@
+.. _DailyShadowPattern:
 
 Solar Radiation: Daily Shadow Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

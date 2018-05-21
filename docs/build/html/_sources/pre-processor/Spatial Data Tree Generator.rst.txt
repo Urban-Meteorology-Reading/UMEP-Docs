@@ -1,3 +1,4 @@
+.. _TreeGenerator:
 
 Spatial Data: Tree Generator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

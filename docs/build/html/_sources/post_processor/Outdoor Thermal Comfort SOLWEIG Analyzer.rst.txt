@@ -1,3 +1,4 @@
+.. _SOLWEIGAnalyzer:
 
 Outdoor Thermal Comfort: SOLWEIG Analyzer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

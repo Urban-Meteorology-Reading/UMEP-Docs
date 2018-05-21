@@ -1,3 +1,5 @@
+.. _DSMGenerator:
+
 Spatial Data: DSM Generator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Developer:

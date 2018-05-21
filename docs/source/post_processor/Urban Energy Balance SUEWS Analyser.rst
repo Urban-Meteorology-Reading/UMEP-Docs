@@ -1,3 +1,4 @@
+.. _SUEWSAnalyser:
 
 Urban Energy Balance: SUEWS Analyser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,3 +1,5 @@
+.. _SOLWEIG:
+
 Outdoor Thermal Comfort: SOLWEIG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:

@@ -1,3 +1,5 @@
+.. _SUEWSSimple:
+
 Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:

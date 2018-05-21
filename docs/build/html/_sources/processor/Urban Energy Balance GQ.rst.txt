@@ -1,3 +1,5 @@
+.. _GQF:
+
 Urban Energy Balance: GQ\ :sub:`F`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:

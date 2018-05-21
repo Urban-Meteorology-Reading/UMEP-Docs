@@ -106,9 +106,9 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Prepare Existing Data <http://urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__
+   * - `Prepare Existing Data <MetPreprocessor>`
      - Transforms meteorological data into UMEP format
-   * - `Download data (WATCH) <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__
+   * - `Download data (WATCH) <WATCH>`
      - Prepare meteorological dataset from `WATCH <http://www.eu-watch.org/data_availability>`__
 
 	 
@@ -118,13 +118,13 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Spatial Data Downloader <http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_Spatial_Data_Downloader>`__
+   * - `Spatial Data Downloader <SpatialDataDownloader>`
      - Plugin for retrieving geodata from online services suitable for various UMEP related tools
-   * - `DSM generator <http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_DSM_Generator>`__
+   * - `DSM generator <DSMGenerator>`
      - Creation/manipulation of a DSM based on user-specified building footprint vector data and/or `Open Street Map <http://www.openstreetmap.org>`__ data (if available)
-   * - `Tree generator <http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_Tree_Generator>`__
+   * - `Tree generator <TreeGenerator>`
      - Creation/manipulation of vegetation input data
-   * - `LCZ Converter <http://www.urban-climate.net/umep/UMEP_Manual#Spatial_Data:_LCZ_Converter>`__
+   * - `LCZ Converter <LCZConverter>`
      - Conversion from Local Climate Zones (LCZs) in the WUDAPT database into SUEWS input data
 
 **Urban geometry**
@@ -133,9 +133,9 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Sky View Factor <http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Sky_View_Factor_Calculator>`__
+   * - `Sky View Factor <SkyViewFactorCalculator>`
      - Calculation of continuous maps of Sky View Factors (SVF) based on high resolution digital surface models (DSM). *Solar access, urban heat island*
-   * - `Wall Height and Aspect <http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__
+   * - `Wall Height and Aspect <WallHeightandAspect>`
      - Calculation of height and aspect of building walls based on a DSM
 
 **Urban land cover**
@@ -144,11 +144,11 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Land Cover Reclassifier <http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__
+   * - `Land Cover Reclassifier <LandCoverReclassifier>`
      - Reclassifies a grid into UMEP format land cover grid. *Land surface models*
-   * - `Land Cover Fraction (Point) <http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__
+   * - `Land Cover Fraction (Point) <LandCoverFraction(Point)>`
      - Land cover fractions estimates from a land cover grid based on a specific point in space
-   * - `Land Cover Fraction (Grid) <http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Grid.29>`__
+   * - `Land Cover Fraction (Grid) <LandCoverFraction(Grid)>`
      - Land cover fractions estimates from a land cover grid based on a polygon grid
 
 **Urban Morphology**
@@ -157,11 +157,11 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Morphometric Calculator (Point) <http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Point.29>`__
+   * - `Morphometric Calculator (Point) <MorphometricCalculator(Point)>`
      - Morphometric parameters from a DSM based on a specific point in space
-   * - `Morphometric Calculator (Grid) <http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Grid.29>`__
+   * - `Morphometric Calculator (Grid) <MorphometricCalculator(Grid)>`__
      - Morphometric parameters estimated from a DSM based on a polygon grid
-   * - `Source Area Model (Point) <http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
+   * - `Source Area Model (Point) <SourceArea(Point)>`
      - Source area calculated from a DSM based on a specific point in space. *Interpretation of observations*
 
 **Other**
@@ -170,7 +170,7 @@ Pre-Processor
    :widths: 25 25
    :header-rows: 0
    
-   * - `SUEWS Prepare <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_SUEWS_Prepare>`__
+   * - `SUEWS Prepare <SUEWSPrepare>`
      - Preprocessing and preparing input data for the SUEWS model
 
 
@@ -183,13 +183,13 @@ Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - Comfort Index (PET/UTCI)
+   * - Comfort Index (PET/UTCI) (planned)
      - Spatial variations of thermal comfort indices in complex urban environments
-   * - `Mean Radiant Temperature (SOLWEIG) <http://urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_SOLWEIG>`__
+   * - `Mean Radiant Temperature (SOLWEIG) <SOLWEIG>`
      - Spatial variations of T\ :sub:`mrt` in complex urban environments. *Human Health: Outdoor thermal comfort; Park planning; Heat/Health warning; Daily Operations: visitors to parks*
-   * - Pedestrian Wind Speed
+   * - Pedestrian Wind Speed (planned)
      - Spatial variations of pedestrian wind speed in complex urban environments
-   * - `ExtremeFinder <http://www.urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_ExtremeFinder>`__
+   * - `ExtremeFinder <ExtremeFinder>`
      - Identify heat waves and cold waves for a certain location. *Human Health: Outdoor thermal comfort; Daily City Operations: Energy use; Gas consumption*
 
 
@@ -199,13 +199,13 @@ Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - Anthropogenic Heat (Q\ :sub:`F`) (LQF)
+   * - `LQF <LQF>`
      - Spatial variations anthropogenic heat release for urban areas
-   * - `GQF <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_GQF>`__
+   * - `GQF <GQF>`
      - Anthropogenic Heat (Q\ :sub:`F`). *Daily City Operations: Energy use; Gas consumption; Traffic heat loads*
-   * - `SUEWS (Simple) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2C_simple.29>`__
+   * - `SUEWS (Simple) <SUEWSSimple>`
      - Urban Energy and Water Balance. *Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure*
-   * - `SUEWS (Advanced) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29>`__
+   * - `SUEWS (Advanced) <SUEWSadvanced>`
      - Urban Energy and Water Balance. *Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure*
 
  
@@ -215,9 +215,9 @@ Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Solar Energy on Building Envelopes (SEBE) <http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Solar_Energy_on_Building_Envelopes_.28SEBE.29>`__
+   * - `Solar Energy on Building Envelopes (SEBE) <SEBE>`
      - Solar irradiance on building roofs and walls in urban environments. *Economy and planning: Energy production, resource planning*
-   * - `Daily Shadow Patterns <http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Daily_Shadow_Pattern>`__
+   * - `Daily Shadow Patterns <DailyShadowPattern>`
      - Shadow patterns on a DSM and CDSM. *Economy and planning: Resource planning Human Health: Outdoor thermal comfort; Park planning*
 
 
@@ -229,8 +229,8 @@ Post-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - Solar Radiation
-     - `SEBE Visualisation <http://www.urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_SEBE_.28Visualisation.29>`__
+   * - `SEBE Visualisation <SEBEVisualisation>`
+     - Plugin to visualse output irradiation from SEBE on building roofs, walls and ground 
 
 
 **Outdoor Thermal Comfort**
@@ -239,7 +239,7 @@ Post-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `SOLWEIG analyzer <http://www.urban-climate.net/umep/UMEP_Manual#Outdoor_Thermal_Comfort:_SOLWEIG_Analyzer>`__
+   * - `SOLWEIG analyzer <SOLWEIGAnalyzer>`
      - Plugin for plotting, statistical analysis and post-processing of model results from SOLWEIG
 
  
@@ -249,7 +249,7 @@ Post-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `SUEWS analyser <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_SUEWS_Analyser>`__
+   * - `SUEWS analyser <SUEWSAnalyser>`
      - Plugin for plotting and statistical analysis of model results from SUEWS simple and SUEWS advanced
 
 
@@ -259,7 +259,7 @@ Post-Processor
    :widths: 25 25
    :header-rows: 0
 
-   * - `Benchmark System <http://urban-climate.net/umep/UMEP_Manual#Benchmark_System>`__
+   * - `Benchmark System <Benchmark>`
      - For statistical analysis of model results, such as SUEWS
 
 

@@ -1,3 +1,4 @@
+.. _SEBEVisualisation:
 
 Solar Radiation: SEBE (Visualisation)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

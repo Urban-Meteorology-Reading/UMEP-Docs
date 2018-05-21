@@ -1,3 +1,5 @@
+.. _ExtremeFinder:
+
 Outdoor Thermal Comfort: ExtremeFinder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
