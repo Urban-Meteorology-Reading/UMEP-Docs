@@ -70,6 +70,7 @@ We are keen to get inputs and contributions from others. There are two main ways
    :maxdepth: 2
    :numbered:
    :hidden:
+   
    Tutorials/Tutorials
 
 .. toctree::
@@ -77,4 +78,5 @@ We are keen to get inputs and contributions from others. There are two main ways
    :maxdepth: 2
    :numbered:
    :hidden:
+   
    OtherManuals/OtherManuals
