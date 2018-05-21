@@ -109,13 +109,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +181,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="urban-geometry-wall-height-and-aspect">
-<h1>3.9. Urban Geometry: Wall Height and Aspect<a class="headerlink" href="#urban-geometry-wall-height-and-aspect" title="Permalink to this headline">¶</a></h1>
+<span id="wallheightandaspect"></span><h1>3.9. Urban Geometry: Wall Height and Aspect<a class="headerlink" href="#urban-geometry-wall-height-and-aspect" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Contributor:</li>
 </ul>
@@ -210,107 +208,66 @@
 </dd>
 </dl>
 </li>
-<li><p class="first">Location:
-- The Wall Height and Aspect is located at</p>
-<blockquote>
-<div><ul class="simple">
-<li>UMEP</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Pre-Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Geometry</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Wall Height and Aspect</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</li>
 <li><dl class="first docutils">
 <dt>Dialog box</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/WallHeight.png" src="../_images/WallHeight.png" />
-<p class="caption"><span class="caption-number">Fig. 3.27 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 3.26 </span><span class="caption-text">The dialog for the Wall Height and Aspect calculator</span></p>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Building and Ground DSM:</dt>
-<dd><ul class="first last simple">
-<li>A DSM (geoTIFF) consisting of ground and building heights.</li>
-</ul>
+<dd><p class="first last">A DSM (geoTIFF) consisting of ground and building heights.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Calculate Wall Aspect:</dt>
-<dd><ul class="first last simple">
-<li>Tick this box if you want to include estimation and output of a wall aspect grid. This calculation is computational intensive and will make your computer work for a while (depending on the size of the input DSM).</li>
-</ul>
+<dd><p class="first last">Tick this box if you want to include estimation and output of a wall aspect grid. This calculation is computational intensive and will make your computer work for a while (depending on the size of the input DSM).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Lower Limit for Wall Height (m):</dt>
-<dd><ul class="first last simple">
-<li>This limit gives the lowest height of a building wall.</li>
-</ul>
+<dd><p class="first last">This limit gives the lowest height of a building wall.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Output File for Wall Aspect Raster:</dt>
-<dd><ul class="first last simple">
-<li>Name of the output file of the aspect raster.</li>
-</ul>
+<dd><p class="first last">Name of the output file of the aspect raster.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Output File for Wall Height Raster:</dt>
-<dd><ul class="first last simple">
-<li>Name of the output file of the aspect raster.</li>
-</ul>
+<dd><p class="first last">Name of the output file of the aspect raster.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Run:</dt>
-<dd><ul class="first last simple">
-<li>Starts the calculations.</li>
-</ul>
+<dd><p class="first last">Starts the calculations.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Add Result to Project:</dt>
-<dd><ul class="first last simple">
-<li>If ticked, raster(s) will be added to the map canvas.</li>
-</ul>
+<dd><p class="first last">If ticked, raster(s) will be added to the map canvas.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Close:</dt>
-<dd><ul class="first last simple">
-<li>Closes the plugin.</li>
-</ul>
+<dd><p class="first last">Closes the plugin.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Output:</dt>
-<dd><ul class="first last simple">
-<li>Two different files (geoTIFF) will be saved if wall aspect is calculated.</li>
-</ul>
+<dd><p class="first last">Two different files (geoTIFF) will be saved if wall aspect is calculated.</p>
 </dd>
 </dl>
 </li>
@@ -318,7 +275,7 @@
 <dt>Example:</dt>
 <dd><div class="first last figure" id="id2">
 <img alt="../_images/Output_Wall_Height.jpg" src="../_images/Output_Wall_Height.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.28 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 3.27 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>

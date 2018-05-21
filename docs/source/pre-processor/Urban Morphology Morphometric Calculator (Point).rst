@@ -1,3 +1,5 @@
+.. _MorphometricCalculator(Point):
+
 Urban Morphology: Morphometric Calculator (Point)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * How to Cite：
@@ -6,7 +8,7 @@ Urban Morphology: Morphometric Calculator (Point)
       -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
 
-* Contributor:
+* Contributors:
 .. list-table::
    :widths: 50 50
    :header-rows: 1
@@ -26,12 +28,10 @@ Urban Morphology: Morphometric Calculator (Point)
      - Gothenburg
 
 
-
-
 * Introduction:
      -  The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.
 .. list-table::
-   :widths: 50 50
+   :widths: 40 60
    :header-rows: 1
 
    * - Morphometric parameters
@@ -51,21 +51,15 @@ Urban Morphology: Morphometric Calculator (Point)
    * - Zero-plane displacement height (|Zd|)
      - Height above ground where the wind speed is 0 m s\ :sup:`-1` as a result of obstacles to the flow such as trees or buildings [m].
 
-* Location:
-  - The Morphometric Calculator (Point) is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Urban Morphology
-            -  Morphometric Parameters (Point)
 
 * Dialog box:
     .. figure:: /images/Morph_Calc_point.png
 
-        ```to do```
+        The dialog for the Morphometric Calculator (Point)
 
 * Dialog sections：
 .. list-table::
-   :widths: 50 50
+   :widths: 10 90
    :header-rows: 0
 
    * - upper

@@ -1,3 +1,4 @@
+.. _SkyViewFactorCalculator:
 
 Urban Geometry: Sky View Factor Calculator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,17 +20,11 @@ Urban Geometry: Sky View Factor Calculator
 * Introduction:
      -  The Sky View Factor plugin can be used to generate pixel wise sky view factor (SVF) using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. By definition, SVF is the ratio of the radiation received (or emitted) by a planar surface to the radiation emitted (or received) by the entire hemispheric environment (Watson and Johnson 1987). It is a dimensionless measure between zero and one, representing totally obstructed and free spaces, respectively. The methodology that is used to generate SVF here is described in Lindberg and Grimmond (2010).
 
-* Location:
-  - The Sky View Factor Calculator is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Urban Geometry
-            -  Sky View Factor
 
 * Dialog box:
     .. figure:: /images/SVFCalculator.png
 
-        ```to do```
+        The dialog for the Sky View Factor calculator
 
 * Dialog sections:
 .. list-table::

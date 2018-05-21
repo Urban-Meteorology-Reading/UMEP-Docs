@@ -92,12 +92,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="How_to_Contribute.html">8. How to Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,58 +181,23 @@ information to determine model parameters. The spatial data across a
 range of scales and sources are accessed through
 <a class="reference external" href="http://qgis.org">QGIS</a> - a cross-platform, free, open source
 desktop geographic information systems
-(<a class="reference external" href="http://urban-climate.net/umep/Abbreviations">GIS</a>) application –
+(<a class="reference internal" href="Abbreviations.html"><span class="doc">GIS</span></a>) application –
 that provides data viewing, editing, and analysis capabilities.</p>
-<p>This software is in continuous development. There are two types of
-releases:</p>
-<ol class="arabic simple">
-<li><em>Long term release</em> - this may be obtained from the QGIS plugin
-manager <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started">(see
-details)</a>.</li>
-<li><em>Current development version</em> - this can be obtained from the plugin
-<a class="reference external" href="http://www.bitbucket.org/fredrik_ucg/umep">repository</a>. This
-version you need to manually install yourself <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started">(see
-details)</a>.</li>
-</ol>
 <hr class="docutils" />
-<p><strong>To downloading instructions and initial settings:</strong></p>
-<p><a class="reference internal" href="Getting_Started.html"><span class="doc">Getting Started</span></a></p>
+<p><strong>To downloading instructions and initial settings:</strong>  <a class="reference internal" href="Getting_Started.html#getting-started"><span class="std std-ref">Getting Started</span></a></p>
 <hr class="docutils" />
-<p>The UMEP plugin consist of three
-parts; a pre-processor, a processor and a post-processor. The
-pre-processor prepares spatial and meteorological data as inputs to the
-modelling system. The processor includes all the main models for the
-main calculations. To provide initial “quick looks” the post-processor
-will enable results to be plotted, statistics calculated etc. based on
-the model output. For more information on the content and archetecture,
-see <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tool_Architecture">Plugin
-Architecture</a>.</p>
-<hr class="docutils" />
-<p><strong>PLEASE NOTICE!</strong></p>
-<p>Due to a recent update of <strong>netCDF4</strong> library (1.3.0), the <strong>netCDF4</strong>
-library has a version conflict related to the <strong>numpy</strong> version
-currently used in QGIS 2.18.x. This results in that some plugins in UMEP
-will fail, e.g. LQf.</p>
-<p>We have submitted an issue regarding this to the QGIS community.
-Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to
-<strong>1.2.9</strong>. This is easiest done by opening the <strong>OSGeo4W shell</strong> and run
-the two following commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">netCDF4</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">netCDF4</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">9</span>
-</pre></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18)</p>
 </div>
-<hr class="docutils" />
-<p>UMEP is an an <em>open source tool</em>. We are keen to get inputs and
-contributions from others. There are two main ways to contribute:</p>
+<p>We are keen to get inputs and contributions from others. There are two main ways to contribute:</p>
 <ol class="arabic simple">
 <li>Submit comments or issues to the
 <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/issues">repository</a></li>
-<li>Participate in <a class="reference external" href="http://urban-climate.net/umep/DevelopmentGuidelines">Coding or adding new
-features</a>.</li>
+<li>Participate in <code class="xref any docutils literal notranslate"><span class="pre">Coding</span> <span class="pre">or</span> <span class="pre">adding</span> <span class="pre">new</span>
+<span class="pre">features</span></code>.</li>
+<li>Contribute by writing <a class="reference internal" href="Tutorials/Tutorials.html"><span class="doc">tutorials and guidelines</span></a> for other users to give examples of the many application possibilities of UMEP.</li>
 </ol>
-<p>It is also possible to contribute by writing <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">tutorials and
-guidelines</a> for
-other users to give examples of the many application possibilities of UMEP.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

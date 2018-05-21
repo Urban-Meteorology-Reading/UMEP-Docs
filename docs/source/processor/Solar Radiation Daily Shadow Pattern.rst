@@ -16,21 +16,14 @@ Solar Radiation: Daily Shadow Pattern
 * Introduction:
      -  The **Shadow generator** plugin can be used to generate pixel wise shadow analysis using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011). Position of the Sun is calculated using **PySolar**, a python library for various Sun related applications ([2](http://pysolar.org/)).
 
-* Location:
-    - The Shadow Generator is located at
-        -  UMEP
-          -  Processor
-            -  Solar Radiation
-              -  Daily Shadow Pattern
-
 * Dialog box ：
       .. figure:: /images/Shadow_generator.jpg
 
-          ```to do```
+          The dialog for the ShadowGenerator
 
 * Dialog sections：
       .. list-table::
-         :widths: 50 50
+         :widths: 10 90
          :header-rows: 0
 
          * - top
@@ -88,11 +81,10 @@ Solar Radiation: Daily Shadow Pattern
 * Output:
      -  If only one shadow image is generated, one geoTIFF will be produced where pixel values of zero indicates shadow and one indicates sunlit. If daily shadow casting is used (Cast shadows only once ticked off), one shadow image for each time step as well as one shadow fraction image is generated. The shadow fraction image is given in percent where 100% meaning the a pixel is sunlit throughout the day used in the calculation.
 
-* Example of input data and result:
-     -  shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).
-            .. figure:: /images/Shadow2.jpg
+* Example of input data and result: 
+.. figure:: /images/Shadow2.jpg
 
-                ```to do```
+ shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).
 
 * Remarks：
             -  All DSMs need to have the same extent and pixel

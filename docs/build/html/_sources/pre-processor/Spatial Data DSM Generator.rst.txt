@@ -13,19 +13,12 @@ Spatial Data: DSM Generator
 
 
 * Introduction:
-    - Digital Surface Models (DSMs) is not always available for the area you want to investigate. The **DSM Generator** can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from [Open Street Map](http://www.openstreetmap.org) data, is also available.
-
-* Location:
-  - The DSM Generator is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Spatial Data
-            -  DSM Generator
+    - Digital Surface Models (DSMs) is not always available for the area you want to investigate. The **DSM Generator** can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from `Open Street Map <http://www.openstreetmap.org>` data, is also available.
 
 * Dialog box:
     .. figure:: /images/DSMGenerator.png
 
-        ```to do```
+        Dialog for the DSM generator plugin
 
 * Dialog sections:
 .. list-table::

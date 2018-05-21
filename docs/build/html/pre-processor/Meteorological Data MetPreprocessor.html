@@ -109,13 +109,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +181,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="meteorological-data-metpreprocessor">
-<h1>3.2. Meteorological Data: MetPreprocessor<a class="headerlink" href="#meteorological-data-metpreprocessor" title="Permalink to this headline">¶</a></h1>
+<span id="metpreprocessor"></span><h1>3.2. Meteorological Data: MetPreprocessor<a class="headerlink" href="#meteorological-data-metpreprocessor" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Contributor:</li>
 </ul>
@@ -204,57 +202,22 @@
 </tbody>
 </table>
 <ul>
-<li><p class="first">Introduction：</p>
-<blockquote>
-<div><ul>
-<li><div class="first line-block">
-<div class="line">MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.</div>
-</div>
-<div class="line-block">
-<div class="line"><em>Input data</em> can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The <em>output format</em> is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.</div>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Location：</p>
-<blockquote>
-<div><ul class="simple">
 <li><dl class="first docutils">
-<dt>The Meteorological data pre-processor is located at</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>UMEP</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>Pre-processor</dt>
-<dd><ul class="first last">
-<li>Meteorological data</li>
-</ul>
+<dt>Introduction</dt>
+<dd><p class="first">MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.</p>
+<p class="last"><em>Input data</em> can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The <em>output format</em> is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.</p>
 </dd>
 </dl>
 </li>
-</ul>
-</dd>
-</dl>
+<li><p class="first"><strong>Dialog box</strong></p>
 </li>
 </ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p class="first">Dialog box：</p>
-<blockquote>
-<div><div class="figure" id="id1">
+<div class="figure" id="id1">
 <img alt="../_images/MetPreProcessor.jpg" src="../_images/MetPreProcessor.jpg" />
 <p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Interface for inputting an ascii data file into the correct format for SUEWS</span></p>
 </div>
-</div></blockquote>
-</li>
-<li><p class="first">Dialog sections</p>
-</li>
+<ul class="simple">
+<li><strong>Dialog sections</strong></li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
@@ -297,25 +260,22 @@
 </table>
 <ul class="simple">
 <li><dl class="first docutils">
-<dt>Variables included in UMEP meteorological input file：</dt>
-<dd><ul class="first last">
-<li>if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact</li>
-</ul>
-</dd>
+<dt>Variables included in UMEP meteorological input file</dt>
+<dd>if acceptable range is not reasonable (i.e. beyond the limits we have set) please contact</dd>
 </dl>
 </li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="4%" />
+<col width="10%" />
+<col width="25%" />
+<col width="18%" />
+<col width="43%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">No.</th>
-<th class="head">Header named</th>
+<th class="head">Header name</th>
 <th class="head">Description</th>
 <th class="head">Accepted  range</th>
 <th class="head">Comments</th>
@@ -326,79 +286,79 @@
 <td>iy</td>
 <td>Year [YYYY]</td>
 <td>Not applicable</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>id</td>
 <td>Day of year [DOY]</td>
 <td>1 to 365 (366 if leap year)</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>it</td>
 <td>Hour [H]</td>
 <td>0 to 23</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>imin</td>
 <td>Minute [M]</td>
 <td>0 to 59</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>5</td>
 <td>qn</td>
 <td>Net all-wave radiation [W m<sup>-2</sup>]</td>
 <td>-200 to 800</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>qh</td>
 <td>Sensible heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 750</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>7</td>
 <td>qe</td>
 <td>Latent heat flux [W m<sup>-2</sup>]</td>
 <td>-100 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>8</td>
 <td>qs</td>
 <td>Storage heat flux [W m<sup>-2</sup>]</td>
 <td>-200 to 650</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>9</td>
 <td>qf</td>
 <td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
 <td>0 to 1500</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>10</td>
 <td>U</td>
 <td>Wind speed [m s<sup>-1</sup>]</td>
 <td>0.001 to 60</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>11</td>
 <td>RH</td>
 <td>Relative Humidity [%]</td>
 <td>5 to 100</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>12</td>
 <td>Tair</td>
 <td>Air temperature [°C]</td>
 <td>-30 to 55</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>13</td>
 <td>pres</td>
 <td>Surface barometric pressure [kPa]</td>
 <td>90 to 107</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>14</td>
 <td>rain</td>
@@ -410,7 +370,7 @@
 <td>kdown</td>
 <td>Incoming shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 1200</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>16</td>
 <td>snow</td>
@@ -422,17 +382,17 @@
 <td>ldown</td>
 <td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
 <td>100 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>18</td>
 <td>fcld</td>
 <td>Cloud fraction [tenths]</td>
 <td>0 to 1</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>19</td>
 <td>wuh</td>
-<td>External water use [m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code>]</td>
+<td>External water use [m<sup>3</sup>]</td>
 <td>0 to 10</td>
 <td>(per 5 min) scale based on time step being used</td>
 </tr>
@@ -440,19 +400,19 @@
 <td>xsmd</td>
 <td>(Observed) soil moisture</td>
 <td>0.01 to 0.5</td>
-<td>[m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
+<td>[m<sup>3</sup> m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
 </tr>
 <tr class="row-even"><td>21</td>
 <td>lai</td>
-<td>(Observed) leaf area index [m:sup:<code class="xref any docutils literal"><span class="pre">2</span></code> m<sup>-2</sup>]</td>
+<td>(Observed) leaf area index [m<sup>2</sup> m<sup>-2</sup>]</td>
 <td>0 to 15</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>22</td>
 <td>kdiff</td>
 <td>Diffuse shortwave radiation [W m<sup>-2</sup>]</td>
 <td>0 to 600</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>23</td>
 <td>kdir</td>
@@ -464,14 +424,14 @@
 <td>wdir</td>
 <td>Wind direction [°]</td>
 <td>0 to 360</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p class="first">Remarks：</p>
-<blockquote>
-<div><ol class="arabic">
+<li><dl class="first docutils">
+<dt>Remarks</dt>
+<dd><ol class="first last arabic">
 <li><p class="first">If decimal time is ticked in, <strong>day of year column</strong> must be stated and the <strong>decimal time column</strong> should be numbers between 0 and 1.</p>
 </li>
 <li><p class="first">If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).</p>
@@ -486,7 +446,8 @@
 </div></blockquote>
 </li>
 </ol>
-</div></blockquote>
+</dd>
+</dl>
 </li>
 </ul>
 </div>

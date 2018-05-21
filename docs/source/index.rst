@@ -1,8 +1,6 @@
 .. _index_page:
 
 
-
-
 UMEP Manual
 -----------
 
@@ -29,67 +27,25 @@ information to determine model parameters. The spatial data across a
 range of scales and sources are accessed through
 `QGIS <http://qgis.org>`__ - a cross-platform, free, open source
 desktop geographic information systems
-(`GIS <http://urban-climate.net/umep/Abbreviations>`__) application –
+(`GIS <Abbreviations>`) application –
 that provides data viewing, editing, and analysis capabilities.
 
-This software is in continuous development. There are two types of
-releases:
+--------------
 
-#. *Long term release* - this may be obtained from the QGIS plugin
-   manager `(see
-   details) <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__.
-#. *Current development version* - this can be obtained from the plugin
-   `repository <http://www.bitbucket.org/fredrik_ucg/umep>`__. This
-   version you need to manually install yourself `(see
-   details) <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__.
+**To downloading instructions and initial settings:**  :ref:`Getting_Started`
 
 --------------
 
-**To downloading instructions and initial settings:**
+.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18)
 
-`Getting_Started`
-
---------------
-
-The UMEP plugin consist of three
-parts; a pre-processor, a processor and a post-processor. The
-pre-processor prepares spatial and meteorological data as inputs to the
-modelling system. The processor includes all the main models for the
-main calculations. To provide initial “quick looks” the post-processor
-will enable results to be plotted, statistics calculated etc. based on
-the model output. For more information on the content and archetecture,
-see `Plugin
-Architecture <http://urban-climate.net/umep/UMEP_Manual#Tool_Architecture>`__.
-
---------------
-
-\ **PLEASE NOTICE!**\
-
-Due to a recent update of **netCDF4** library (1.3.0), the **netCDF4**
-library has a version conflict related to the **numpy** version
-currently used in QGIS 2.18.x. This results in that some plugins in UMEP
-will fail, e.g. LQf.
-
-We have submitted an issue regarding this to the QGIS community.
-Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to
-**1.2.9**. This is easiest done by opening the **OSGeo4W shell** and run
-the two following commands::
-    pip uninstall netCDF4
-    pip install netCDF4==1.2.9
-
---------------
-
-UMEP is an an *open source tool*. We are keen to get inputs and
-contributions from others. There are two main ways to contribute:
+We are keen to get inputs and contributions from others. There are two main ways to contribute:
 
 #. Submit comments or issues to the
    `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
 #. Participate in `Coding or adding new
-   features <http://urban-climate.net/umep/DevelopmentGuidelines>`__.
+   features <ContributeCoding>`.
+#. Contribute by writing `tutorials and guidelines <Tutorials/Tutorials>` for other users to give examples of the many application possibilities of UMEP.
 
-It is also possible to contribute by writing `tutorials and
-guidelines <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__ for
-other users to give examples of the many application possibilities of UMEP.
 
 .. toctree::
    :maxdepth: 2
@@ -105,9 +61,7 @@ other users to give examples of the many application possibilities of UMEP.
    Tutorials/Tutorials
    How_to_Contribute
    DevelopmentGuidelines
-   SOLWEIG
-   GQF_Manual
-   LQF_Manual
    Known_Issues
    FAQ
    Abbreviations
+   OtherManuals/OtherManuals

@@ -1,7 +1,7 @@
-.. _Introduction_SUEWS:
+.. _IntroductionToSuews:
 
-Introduction to SUEWS
-^^^^^^^^^^^^^^^^^^^^^^^^
+Urban Energy Balance - Introduction to SUEWS
+============================================
 
 Introduction
 ------------
@@ -10,15 +10,40 @@ In this tutorial you will use a land-surface model,
 `SUEWS <http://urban-climate.net/umep/SUEWS>`__ to simulate energy
 exchanges in a city (London is the test case).
 
-SUEWS (Surface Urban Energy and Water Balance Scheme) allows the energy and water balance exchanges for urban areas to be modelled (Järvi et al. 2011, 2014, Ward et al. 2016a). The model is applicable at the neighbourhood scale (e.g. 10\ :sup:`2` to 10\ :sup:`4` m). The fluxes calculated are applicable to height of about 2-3 times the mean height of the roughness elements; i.e. above the `roughness sublayer (RSL) <http://glossary.ametsoc.org/wiki/Roughness_sublayer>`__. The use of SUEWS within Urban Multi-scale Environmental Predictor (UMEP) provides an introduction to the model and the processes simulated, the parameters used and the impact on the resulting fluxes.
+SUEWS (Surface Urban Energy and Water Balance Scheme) allows the energy
+and water balance exchanges for urban areas to be modelled (Järvi et al.
+2011, 2014, Ward et al. 2016a). The model is applicable at the
+neighbourhood scale (e.g. 10\ :sup:`2` to 10\ :sup:`4` m). The fluxes
+calculated are applicable to height of about 2-3 times the mean height
+of the roughness elements; i.e. above the `roughness sublayer
+(RSL) <http://glossary.ametsoc.org/wiki/Roughness_sublayer>`__. The use
+of SUEWS within Urban Multi-scale Environmental Predictor (UMEP)
+provides an introduction to the model and the processes simulated, the
+parameters used and the impact on the resulting fluxes.
 
-Tools such as this, once appropriately assessed for an area, can be used for a broad range of applications. For example, for climate services (e.g. http://www.wmo.int/gfcs/). Running a model can allow analyses, assessments, and long-term projections and scenarios. Most applications require not only meteorological data but also information about the activities that occur in the area of interest (e.g. agriculture, population, road and infrastructure, and socio-economic variables).                                                                                    |
+Tools such as this, once appropriately assessed for an area, can be used
+for a broad range of applications. For example, for climate services
+(e.g. http://www.wmo.int/gfcs/). Running a model can allow analyses,
+assessments, and long-term projections and scenarios. Most applications
+require not only meteorological data but also information about the
+activities that occur in the area of interest (e.g. agriculture,
+population, road and infrastructure, and socio-economic variables).
 
- Model output may be needed in many formats depending on a users’ needs. Thus, the format must be useful, while ensuring the science included within the model is appropriate. Figure 1 provides an overview of `UMEP <http://urban-climate.net/umep/UMEP>`__, a city based climate service tool (CBCST). Within UMEP there are a number of models which can predict and diagnose a range of meteorological processes. In this activity we are concerned with SUEWS, initially the central components of the model. See `manual <http://urban-climate.net/umep/SUEWS>`__ or published **papers** for more detailed information of the model.
+Model output may be needed in many formats depending on a users’ needs.
+Thus, the format must be useful, while ensuring the science included
+within the model is appropriate. Figure 1 provides an overview of
+`UMEP <http://urban-climate.net/umep/UMEP>`__, a city based climate
+service tool (CBCST). Within UMEP there are a number of models which can
+predict and diagnose a range of meteorological processes. In this
+activity we are concerned with SUEWS, initially the central components
+of the model. See `manual <http://urban-climate.net/umep/SUEWS>`__ or
+published papers for more detailed information of the model.
 
-        .. figure:: /images/UMEP_overview.png
+.. figure:: /images/SUEWSIntro_UMEP_overview.png
+   :alt:  none
+   :width: 378px
 
-            Figure 1: Overview of the climate service tool UMEP (Grimmond et al. 2015)
+   Figure 1: Overview of the climate service tool UMEP (from Lindberg et al. 2018)
 
 SUEWS can be run in a number of different ways:
 
@@ -33,7 +58,7 @@ SUEWS can be run in a number of different ways:
 SUEWS Simple Objectives
 -----------------------
 
-To introduce SUEWS and how to run the model within `UMEP (Urban
+This tutorial introduces SUEWS and demonstartes how to run the model within `UMEP (Urban
 Multi-scale Environmental
 Predictor) <http://urban-climate.net/umep/UMEP_Manual>`__. `Help with
 Abbreviations <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
@@ -70,76 +95,102 @@ modified to more appropriate values if applicable. The table below
 provides an overview of the parameters that can be modified in the
 Simple application of SUEWS.
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 1
-
-   * - Type
-     - Definition
-     - Reference/Comments
-   * -
-     - **Building/ Tree Morphology**
-     -
-   * - Mean height of Building/Trees (m)
-     -
-     - `Grimmond and Oke (1999), Fig 2 <http://journals.ametsoc.org/doi/10.1175/1520-0450%281999%29038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
-   * - Frontal area index (m:sup:`2`/ m\ :sup:`2`)
-     - Area of the front face of a roughness element exposed to the wind relative to the plan area.
-     - `Grimmond and Oke (1999), Fig 2 <http://journals.ametsoc.org/doi/10.1175/1520-0450%281999%29038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
-   * - Plan area index (m:sup:`2`/ m\ :sup:`2`)
-     - Area of the roughness elements relative to the total plan area.
-     - `Grimmond and Oke (1999), Fig 2 <http://journals.ametsoc.org/doi/10.1175/1520-0450%281999%29038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__. Should be the same value as the land cover fractions for buildings and sum for trees, respectively.
-   * -
-     - **Land cover fraction**
-     - Should sum to 1
-   * - Paved
-     - Roads, sidewalks, parking lots, impervious surfaces that are not buildings
-     -
-   * - Buildings
-     - Buildings
-     - Same as the plan area index of buildings in the morphology section.
-   * - Evergreen trees
-     - Trees/shrubs that retain their leaves/needles all year round
-     - Tree plan area index will be the sum of evergreen and deciduous area. Note: this is the same as the plan area index of vegetation in the morphology section.
-   * - Deciduous trees
-     - Trees/shrubs that lose their leaves
-     - Same as above
-   * - Grass
-     - Grass
-     -
-   * - Bare soil
-     - Bare soil – non vegetated but water can infilitrate
-     -
-   * - Water
-     - River, ponds, swimming pools, fountains
-     -
-   * -
-     - **Initial conditions**
-     - What is the state of the conditions when the model run begins?
-   * - Days since rain (days)
-     - This will influence irrigation behaviour in the model. If there has been rain recently then it will be longer before irrigiation occurs.
-     - If this is a period or location when no irrigation is permitted/occurring then this is not critical as the model will calculate from this point going forward.
-   * - Daily mean temperature (°C)
-     - Influences irrigation and anthropogenic heat flux
-     -
-   * - Soil mositure status (%)
-     - This will influence both evaporation and runoff processes
-     - If close to 100 % then there is plenty of water for evaporation but also a higher probability of flooding if intense precipitation occurs.
-   * -
-     - **Other**
-     -
-   * - Year
-     - What days are weekdays/weekends
-     -
-   * - Latitude (°)
-     - Solar related calculations
-     -
-   * - Longitude (°)
-     - Solar related calculations
-     -
-   * - `UTC (h) <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`__
-     - Time zone
-     - Influences solar related calculations
++-----------------------+-----------------------+-----------------------+
+| Type                  | Definition            | Reference/Comments    |
++=======================+=======================+=======================+
+|                       | **Building/ Tree      |                       |
+|                       | Morphology**          |                       |
++-----------------------+-----------------------+-----------------------+
+| Mean height of        |                       | Grimmond and Oke      |
+| Building/Trees (m)    |                       | (1999)                |
++-----------------------+-----------------------+-----------------------+
+| Frontal area index    | Area of the front     | Grimmond and Oke      |
+|                       | face of a roughness   | (1999), Fig 2         |
+|                       | element exposed to    |                       |
+|                       | the wind relative to  |                       |
+|                       | the plan area.        |                       |
++-----------------------+-----------------------+-----------------------+
+| Plan area index       | Area of the roughness | Grimmond and Oke      |
+|                       | elements relative to  | (1999), Fig 2         |
+|                       | the total plan area.  |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | **Land cover          | Should sum to 1       |
+|                       | fraction**            |                       |
++-----------------------+-----------------------+-----------------------+
+| Paved                 | Roads, sidewalks,     |                       |
+|                       | parking lots,         |                       |
+|                       | impervious surfaces   |                       |
+|                       | that are not          |                       |
+|                       | buildings             |                       |
++-----------------------+-----------------------+-----------------------+
+| Buildings             | Buildings             | Same as the plan area |
+|                       |                       | index of buildings in |
+|                       |                       | the morphology        |
+|                       |                       | section.              |
++-----------------------+-----------------------+-----------------------+
+| Evergreen trees       | Trees/shrubs that     | Tree plan area index  |
+|                       | retain their          | will be the sum of    |
+|                       | leaves/needles all    | evergreen and         |
+|                       | year round            | deciduous area. Note: |
+|                       |                       | this is the same as   |
+|                       |                       | the plan area index   |
+|                       |                       | of vegetation in the  |
+|                       |                       | morphology section.   |
++-----------------------+-----------------------+-----------------------+
+| Deciduous trees       | Trees/shrubs that     | Same as above         |
+|                       | lose their leaves     |                       |
++-----------------------+-----------------------+-----------------------+
+| Grass                 | Grass                 |                       |
++-----------------------+-----------------------+-----------------------+
+| Bare soil             | Bare soil – non       |                       |
+|                       | vegetated but water   |                       |
+|                       | can infilitrate       |                       |
++-----------------------+-----------------------+-----------------------+
+| Water                 | River, ponds,         |                       |
+|                       | swimming pools,       |                       |
+|                       | fountains             |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | **Initial             | What is the state of  |
+|                       | conditions**          | the conditions when   |
+|                       |                       | the model run begins? |
++-----------------------+-----------------------+-----------------------+
+| Days since rain       | This will influence   | If this is a period   |
+| (days)                | irrigation behaviour  | or location when no   |
+|                       | in the model. If      | irrigation is         |
+|                       | there has been rain   | permitted/occurring   |
+|                       | recently then it will | then this is not      |
+|                       | be longer before      | critical as the model |
+|                       | irrigiation occurs.   | will calculate from   |
+|                       |                       | this point going      |
+|                       |                       | forward.              |
++-----------------------+-----------------------+-----------------------+
+| Daily mean            | Influences irrigation |                       |
+| temperature (°C)      | and anthropogenic     |                       |
+|                       | heat flux             |                       |
++-----------------------+-----------------------+-----------------------+
+| Soil mositure status  | This will influence   | If close to 100%      |
+| (%)                   | both evaporation and  | then there is plenty  |
+|                       | runoff processes      | of water for          |
+|                       |                       | evaporation but also  |
+|                       |                       | a higher probability  |
+|                       |                       | of flooding if        |
+|                       |                       | intense precipitation |
+|                       |                       | occurs.               |
++-----------------------+-----------------------+-----------------------+
+|                       | **Other**             |                       |
++-----------------------+-----------------------+-----------------------+
+| Year                  | What days are         |                       |
+|                       | weekdays/weekends     |                       |
++-----------------------+-----------------------+-----------------------+
+| Latitude (°)          | Solar related         |                       |
+|                       | calculations          |                       |
++-----------------------+-----------------------+-----------------------+
+| Longitude (°)         | Solar related         |                       |
+|                       | calculations          |                       |
++-----------------------+-----------------------+-----------------------+
+| UTC (h)               | Time zone             | Influences solar      |
+|                       |                       | related calculations  |
++-----------------------+-----------------------+-----------------------+
 
 How to Run SuewsSimple from the UMEP-plugin
 -------------------------------------------
@@ -153,12 +204,14 @@ How to Run SuewsSimple from the UMEP-plugin
    2014 <http://www.sciencedirect.com/science/article/pii/S2212095513000503>`__,
    `Ward et al.
    2016a <http://www.sciencedirect.com/science/article/pii/S2212095516300256>`__)
-   is included in within the plugin.
+   is included in within the plugin. 
+   
+.. figure:: /images/SUEWSIntro_Interface.png
+	:alt:  none
+	:width: 1107px
 
-        .. figure:: /images/Simple2.png
-
-            ```to do```
-
+	Figure 2: The interface for SUEWS, simple version (click on image to make it larger).
+   
 #. To make use of this dataset click on **Add settings from test
    dataset** (see near bottom of the box). The land cover fractions and
    all other settings originate from Kotthaus and Grimmond (2014). They
@@ -173,14 +226,20 @@ How to Run SuewsSimple from the UMEP-plugin
    settings from the interface. Once the calculations are done, some of
    the results are shown in two summary plots.
 
-          .. figure:: /images/1350px-SuewsSimplefig1.png
+.. figure:: /images/SUEWSIntro_SuewsSimplefig1.png
+	:alt:  none
+	:width: 900px
 
-              ```to do```
+	Figure 3a: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).   
 
-          .. figure:: /images/1350px-SuewsSimplefig2.png
+	
+.. figure:: /images/SUEWSIntro_SuewsSimplefig2.png
+	:alt:  none
+	:width: 900px
+	
+	Figure 3b: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger). 
 
-              ```to do```
-
+	
 Model results
 -------------
 
@@ -195,13 +254,13 @@ a period of interest. For example, the Zoom in to about the last ten
 days in March (Figure 4). This was a period with clear relatively
 weather.
 
-        .. figure:: /images/SuewsSimplefig2zoom.png
-          :alt:  900px|center|Figure 4: Zoom in on end of March from the daily plot in Figure 3b.
+.. figure:: /images/SUEWSIntro_SuewsSimplefig2zoom.png
+	:alt:  none
+	:width: 900px
+	
+	Figure 4: Zoom in on end of March from the daily plot in Figure 3b (click on image to make it larger). 
 
-              ```to do```
-
-
-
+	
 Saving a Figure
 ---------------
 
@@ -212,22 +271,23 @@ Use the disk tool in the upper left corner.
 #. .tif (Recommended)
 #. .png
 
+
 Output data Files
 -----------------
 
 In the output folder (you selected earlier) you will find (at least)
 three files:
 
-#. **Kc98\_2012\_60.txt** – provides the 60 min model results for site
+#. **Kc98_2012_60.txt** – provides the 60 min model results for site
    “KC1” for the year 2012
-#. **Kc\_FilesChoices.txt** – this indicates all options used in the
+#. **Kc_FilesChoices.txt** – this indicates all options used in the
    model run see the SUEWS Manual for interpretation of content (this is
    for when you are doing large number of runs so you know exactly what
    options were used in each run)
-#. **Kc98\_DailyState.txt** – this provides the daily mean state (see
+#. **Kc98_DailyState.txt** – this provides the daily mean state (see
    SUEWS manual for detailed explanation). This allows you to see, for
    example, the daily state of the LAI (leaf area index).
-#. **Kc\_OutputFormat.txt** – provides detailed information about the
+#. **Kc_OutputFormat.txt** – provides detailed information about the
    output files such as extended descriptions for each column including
    units.
 
@@ -238,9 +298,11 @@ manual <http://urban-climate.net/umep/SUEWS#Output_files>`__.
 Sensitivity to land surface fractions
 -------------------------------------
 
-    .. figure:: /images/450px-LCFs.png
-
-        ```to do```
+.. figure:: /images/SUEWSIntro_LCFs.png
+   :alt:  none 
+   :align: right
+    
+   Figure 5: Land cover fractions (click on image to make it larger). 
 
 The previous results are for a densely build-up area in
 London, UK. In order to test the sensitivity of SUEWS to some surface
@@ -252,11 +314,6 @@ in the SUEWS Simple. For example, change the land cover fraction by:
 #. Save the output to a different folder by selecting *output folder*.
 #. Click *Run*.
 
-`Advanced SUEWS Tutorial <../Tutorials/SUEWSAdvanced.html>`__
-------------------------------------------------------------------------------------------------------------------
-
-`Reporting a bug <http://urban-climate.net/umep/UMEP_Manual#How_to_Contribute>`__
----------------------------------------------------------------------------------
 
 References
 ----------
@@ -309,70 +366,57 @@ To help you find further information about the acronyms they are
 classified by **T**: Type of term: **C**: computer term, **S**: science
 term, **G**: GIS term.
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
-
-   * -
-     - Definition
-     - T
-     - Reference/Comment
-   * - DEM
-     - Digital elevation model
-     - G
-     -
-   * - DSM
-     - Digital surface model
-     - G
-     -
-   * - FAI (|λF|)
-     - Frontal area index
-     - S
-     - `Grimmond and Oke (1999) <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__, their figure 2
-   * - GUI
-     - Graphical User Interface
-     - C
-     -
-   * - LAI
-     - Leaf Area Index
-     - S
-     -
-   * - PAI (|λP|)
-     - Plan area index
-     - S
-     -
-   * - png
-     - Portable Network Graphics
-     - C
-     - format for saving plots/figures
-   * - QGIS
-     -
-     - G
-     - `http://www.qgis.org/en/site/ <http://www.qgis.org/en/site/>`__
-   * - SUEWS
-     - Surface Urban Energy and Water Balance Scheme
-     - S
-     -
-   * - Tif
-     - Tagged Image File Format
-     - C
-     - format for saving plots/figures
-   * - UI
-     - user interface
-     - C
-     -
-   * - UMEP
-     - Urban Multi-scale Environmental predictor
-     - C
-     -
-   * - z\ :sub:`0`
-     - Roughness length for momentum
-     - S
-     - `Grimmond and Oke (1999) <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
-   * - z\ :sub:`d`
-     - Zero plane displacement length for momentum
-     - S
-     - `Grimmond and Oke (1999) <http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2>`__
++-----------------+-----------------+-----------------+-----------------+
+|                 | Definition      | T               | Reference/Comme |
+|                 |                 |                 | nt              |
++=================+=================+=================+=================+
+| DEM             | Digital         | G               |                 |
+|                 | elevation model |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| DSM             | Digital surface | G               |                 |
+|                 | model           |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| FAI (?:sub:`F`) | Frontal area    | S               | Grimmond and    |
+|                 | index           |                 | Oke (1999)      |
++-----------------+-----------------+-----------------+-----------------+
+| GUI             | Graphical User  | C               |                 |
+|                 | Interface       |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| LAI             | Leaf Area Index | S               |                 |
++-----------------+-----------------+-----------------+-----------------+
+| PAI (?:sub:`P`) | Plan area index | S               |                 |
++-----------------+-----------------+-----------------+-----------------+
+| png             | Portable        | C               | format for      |
+|                 | Network         |                 | saving          |
+|                 | Graphics        |                 | plots/figures   |
++-----------------+-----------------+-----------------+-----------------+
+| QGIS            |                 | G               | www.qgis.org    |
++-----------------+-----------------+-----------------+-----------------+
+| SUEWS           | Surface Urban   | S               |                 |
+|                 | Energy and      |                 |                 |
+|                 | Water Balance   |                 |                 |
+|                 | Scheme          |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| Tif             | Tagged Image    | C               | format for      |
+|                 | File Format     |                 | saving          |
+|                 |                 |                 | plots/figures   |
++-----------------+-----------------+-----------------+-----------------+
+| UI              | user interface  | C               |                 |
++-----------------+-----------------+-----------------+-----------------+
+| UMEP            | Urban           | C               |                 |
+|                 | Multi-scale     |                 |                 |
+|                 | Environmental   |                 |                 |
+|                 | predictor       |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| z\ :sub:`0`     | Roughness       | S               | Grimmond and    |
+|                 | length for      |                 | Oke (1999)      |
+|                 | momentum        |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| z\ :sub:`d`     | Zero plane      | S               | Grimmond and    |
+|                 | displacement    |                 | Oke (1999)      |
+|                 | length for      |                 |                 | 
+|                 | momentum        |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
 
 Further explanation
 -------------------
@@ -406,3 +450,4 @@ model is used to determine the probable area that a turbulent flux
 measurement was impacted by. This is a function of wind direction,
 stability, turbulence characteristics (friction velocity, variance of
 the lateral wind velocity) and roughness parameters.
+

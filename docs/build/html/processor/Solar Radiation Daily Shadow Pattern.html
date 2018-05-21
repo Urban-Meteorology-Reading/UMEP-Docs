@@ -102,13 +102,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -206,40 +204,10 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Location:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>The Shadow Generator is located at</dt>
-<dd><ul class="first simple">
-<li>UMEP</li>
-</ul>
-<blockquote class="last">
-<div><ul class="simple">
-<li>Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Solar Radiation</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Daily Shadow Pattern</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt>Dialog box ：</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/Shadow_generator.jpg" src="../_images/Shadow_generator.jpg" />
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">The dialog for the ShadowGenerator</span></p>
 </div>
 </dd>
 </dl>
@@ -248,8 +216,8 @@
 <dt>Dialog sections：</dt>
 <dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="10%" />
+<col width="90%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>top</td>
@@ -394,25 +362,17 @@
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Example of input data and result:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).</dt>
-<dd><div class="first last figure" id="id2">
-<img alt="../_images/Shadow2.jpg" src="../_images/Shadow2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
-</div>
-</dd>
-</dl>
+<li><p class="first">Example of input data and result:</p>
 </li>
 </ul>
-</dd>
-</dl>
-</li>
+<div class="figure" id="id2">
+<img alt="../_images/Shadow2.jpg" src="../_images/Shadow2.jpg" />
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">shadow image in Gothenburg (1 m resolution), Sweden at 1 pm on the 2nd of October 2015 (daylight savings time).</span></p>
+</div>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>Remarks：</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>All DSMs need to have the same extent and pixel</li>
 <li>This plugin is computationally intensive i.e. large grids will take a lot of time and very large grids will not be possible to use. Large grids e.g. larger than 4000000 pixels should be tiled before.</li>
 </ul>
@@ -421,7 +381,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>References ：</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013. Transmissivity of solar radiation through crowns of single urban trees—application for outdoor thermal comfort modelling. <a class="reference external" href="http://link.springer.com/article/10.1007/s00704-013-1000-3">Theoret. Appl. Climatol., 1–14</a></li>
 <li>Lindberg, F., Grimmond, C.S.B., 2011a. The influence of vegetation and building morphology on shadow patterns and mean radiant temperatures in urban areas: model development and evaluation. <a class="reference external" href="http://link.springer.com/article/10.1007/s00704-010-0382-8">Theoret. Appl. Climatol. 105, 311–323</a></li>
 <li>Ratti CF, Richens P (1999) Urban texture analysis with image processing techniques. In: Proceedings of the CAADFutures99, Atalanta, GA</li>

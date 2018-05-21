@@ -102,13 +102,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -224,39 +222,9 @@
 </div></blockquote>
 <ul>
 <li><dl class="first docutils">
-<dt>Location:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>The SUEWS Simple plugin is located at</dt>
-<dd><ul class="first simple">
-<li>UMEP</li>
-</ul>
-<blockquote class="last">
-<div><ul class="simple">
-<li>Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Energy Balance</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Energy Balance (SUEWS, Simple)</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Related Preprocessors ：</dt>
+<dt>Related Preprocessors：</dt>
 <dd><ul class="first last simple">
-<li><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor">MetdataPreprocessor</a>, <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29">Download data (WATCH)</a>, <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier">LandCoverReclassifier</a>, <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Point.29">LandCoverFraction (Point)</a>, <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_.28Point.29">Image Morphometric Parameters Calculator (Point)</a>, <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29">Foot Print Model (Point)</a></li>
+<li><code class="xref any docutils literal notranslate"><span class="pre">MetaPreprocessor</span></code>, <a class="reference internal" href="../pre-processor/Meteorological Data Download data (WATCH).html#watch"><span class="std std-ref">Meteorological Data: Download data (WATCH)</span></a>, <code class="xref any docutils literal notranslate"><span class="pre">LandCoverReclassifier</span></code>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Fraction (Point).html#landcoverfraction-point"><span class="std std-ref">Urban Land Cover: Land Cover Fraction (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Source Area (Point).html#sourcearea-point"><span class="std std-ref">Urban Morphology: Source Area (Point)</span></a></li>
 </ul>
 </dd>
 </dl>
@@ -265,7 +233,7 @@
 <dt>Dialog Box：</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/SuewsSimple.png" src="../_images/SuewsSimple.png" />
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Dialog for the SUEWS Simple plugin</span></p>
 </div>
 </dd>
 </dl>
@@ -274,8 +242,8 @@
 <dt>Dialog sections：</dt>
 <dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="10%" />
+<col width="90%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>far right</td>
@@ -293,76 +261,66 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>prepared dataset:</dt>
-<dd><ul class="first last simple">
-<li>SUEWS Simple comes with a prepared dataset that can be used for testing. This can be utilized by pressing <strong>Add settings from test dataset</strong>. This dataset is a fictitious dataset from the central parts of London.</li>
-</ul>
+<dt>Prepared dataset:</dt>
+<dd><p class="first last">SUEWS Simple comes with a prepared dataset that can be used for testing. This can be utilized by pressing <strong>Add settings from test dataset</strong>. This dataset is a fictitious dataset from the central parts of London.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Building Morphology:</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt>The three site specific building morphology parameters needed are usually derived from Digital Surface Models DSMs. However, they also can be entered manually.</dt>
 <dd><ul class="first last">
+<li><p class="first">The three site specific building morphology parameters needed are usually derived from Digital Surface Models DSMs. However, they also can be entered manually.</p>
+<blockquote>
+<div><ul class="simple">
 <li>To use an already generated text file from the Image Morphometric Calculator (Point) plugin.</li>
 <li>To open the plugin from SUEWS Simple and generate the data.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-<li>If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</li>
+<li><p class="first">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Tree Morphology:</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt>Three site specific tree morphology parameters need to be specified. These can be derived from a Canopy DSMs that include vegetation heights. This can be entered manually or from the Image Morphometric Calculator (Point) plugin. When the plugin is used there are two options:</dt>
 <dd><ul class="first last">
+<li><p class="first">Three site specific tree morphology parameters need to be specified. These can be derived from a Canopy DSMs that include vegetation heights. This can be entered manually or from the Image Morphometric Calculator (Point) plugin. When the plugin is used there are two options:</p>
+<blockquote>
+<div><ul class="simple">
 <li>To use an already generated text file from the Image Morphometric Calculator (Point) plugin.</li>
 <li>To open the plugin from SUEWS Simple and generate the data.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
-<li>If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</li>
+<li><p class="first">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Land Cover Fractions ：</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt>Land cover fractions should add up to a total of 1. Values can be derived from a UMEP land cover dataset which can be generated via the Land Cover Reclassifier plugin in UMEP. The values can be entered manually or directly from the Land Cover Fraction (Point) plugin. If the plugin is used, there are two options:</dt>
-<dd><ul class="first last">
+<dd><p class="first">Land cover fractions should add up to a total of 1. Values can be derived from a UMEP land cover dataset which can be generated via the Land Cover Reclassifier plugin in UMEP. The values can be entered manually or directly from the Land Cover Fraction (Point) plugin. If the plugin is used, there are two options:</p>
+<blockquote class="last">
+<div><ul class="simple">
 <li>To use an already generated text file from the Land Cover Fraction (Point) plugin.</li>
 <li>To open the plugin from SUEWS Simple and generate the data.</li>
 </ul>
-</dd>
-</dl>
-</li>
-</ul>
+</div></blockquote>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Initial Conditions:</dt>
-<dd><ul class="first last simple">
-<li>The initial conditions are entered here. These relate to time of year, days since rain, soil moisture state and daily mean air temperature at the beginning of a model run. The state of the leaf cycle sets a rough estimate of leaf area index based on season. To adjust this in more detail, the SUEWS, BLUEWS (Advanced) plugin should be used.</li>
-</ul>
+<dd><p class="first last">The initial conditions are entered here. These relate to time of year, days since rain, soil moisture state and daily mean air temperature at the beginning of a model run. The state of the leaf cycle sets a rough estimate of leaf area index based on season. To adjust this in more detail, the SUEWS, BLUEWS (Advanced) plugin should be used.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Meteorological File:</dt>
-<dd><ul class="first last simple">
-<li>The location and filename (.txt) of the meteorological file should be specified here. The format used in most UMEP-related plugins where meteorological data is required can be generated using the Metdata Processor in UMEP. For details, see the help section in the Metdata Processor or the SUEWS manual (Ward et al. 2016a).</li>
-</ul>
+<dd><p class="first last">The location and filename (.txt) of the meteorological file should be specified here. The format used in most UMEP-related plugins where meteorological data is required can be generated using the Metdata Processor in UMEP. For details, see the help section in the Metdata Processor or the SUEWS manual (Ward et al. 2016a).</p>
 </dd>
 </dl>
 </li>
@@ -377,57 +335,43 @@
 </li>
 <li><dl class="first docutils">
 <dt>Year:</dt>
-<dd><ul class="first last simple">
-<li>Specify what year you are running.</li>
-</ul>
+<dd><p class="first last">Specify what year you are running.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Latitude:</dt>
-<dd><ul class="first last simple">
-<li>Specify the latitude in decimal degrees. Positive numbers indicate Northern Hemisphere.</li>
-</ul>
+<dd><p class="first last">Specify the latitude in decimal degrees. Positive numbers indicate Northern Hemisphere.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Longitude:</dt>
-<dd><ul class="first last simple">
-<li>Specify the longitude in decimal degrees. Positive numbers are to the West.</li>
-</ul>
+<dd><p class="first last">Specify the longitude in decimal degrees. Positive numbers are to the West.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Population Density:</dt>
-<dd><ul class="first last simple">
-<li>Specify the population density in people/ha (hectare) around the area of interest.</li>
-</ul>
+<dd><p class="first last">Specify the population density in people/ha (hectare) around the area of interest.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Show Basic Plots of Model Results:</dt>
-<dd><ul class="first last simple">
-<li>Tick this box in if you would like to generate some simple plots of the result from a model run. This requires that the matplotlib library is added to your QGIS installation.</li>
-</ul>
+<dd><p class="first last">Tick this box in if you would like to generate some simple plots of the result from a model run. This requires that the matplotlib library is added to your QGIS installation.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Add Settings from Test Dataset:</dt>
-<dd><ul class="first last simple">
-<li>This is recommended if you want to try the model for the first time. This uses a year long dataset from London, UK.</li>
-</ul>
+<dd><p class="first last">This is recommended if you want to try the model for the first time. This uses a year long dataset from London, UK.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Run:</dt>
-<dd><ul class="first last simple">
-<li>Button starts the model. All inputs must be set prior to this button being available.</li>
-</ul>
+<dd><p class="first last">Button starts the model. All inputs must be set prior to this button being available.</p>
 </dd>
 </dl>
 </li>

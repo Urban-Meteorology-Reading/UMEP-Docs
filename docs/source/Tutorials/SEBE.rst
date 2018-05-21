@@ -1,7 +1,7 @@
 .. _SEBE:
 
-SEBE
-^^^^^^^^^^^^^^
+Introduction to SEBE
+====================
 
 Introduction
 ------------
@@ -42,20 +42,21 @@ Initial Practical steps
 -  Start the QGIS software
 -  *Windows:* If not visible on the desktop use the **Start** button to
    find the software (i.e. Find QGIS under your applications)
--  Select **QGIS 2.16.3 Desktop** (or the latest version installed)
+-  Select **QGIS 2.18 Desktop** (or the latest version installed). Do not use QGIS3 at this point.
 
 When you open it on the top toolbar you will see **UMEP**.
 
-.. figure:: /images/UMEP_location_SEBE.png
+.. figure:: /images/SEBE_Interfacelocation.png
+   :alt:  None
+   :width: 1066px
 
-    ```to do```
+   Figure 1: Location of SEBE in UMEP
 
 -  If it UMEP not on our machine, download and install the `**UMEP**
    plugin <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
 
--  Read through the section in the `online
-   manual <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Urban_Morphology:_Source_Area_.28Point.29>`__
-   BEFORE using the model, so you are familiar with it’s operation and
+-  Read through the section in the online
+   manual BEFORE using the model, so you are familiar with it’s operation and
    terminology used.
 
 Data for Tutorial
@@ -64,172 +65,202 @@ Data for Tutorial
 To use SEBE the datasets are (for `password access if not already
 provided <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__)
 
-* Image :
-.. figure:: /images/Gothenburg.png
+.. figure:: /images/SEBE_Gothenburg.png
+   :alt:  None
+   :width: 356px
 
-    `London Covent Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data>`__
+   Figure 2. Central Gothenburg study area (red square). 
+   The Open layers plugin in QGIS was used to generate 
+   this snapshot.
 
-* Date Details :
-    - Geodata and meteorological data for **Gothenburg, Sweden**.
+Geodata and meteorological data for **Gothenburg, Sweden**.
 
-.. list-table::
-  :widths: 25 25
-  :header-rows: 1
+-  Data are projected in SWEREF99 1200 (EPSG:3007) the national
+   coordinate system of Sweden.
 
-  * - Dataset
-    - Description
-  * - krbig\_dsm.asc
-    - Ground and building DSM. Raster dataset: derived from a 3D vector roof structure dataset and a digital elevation model (DEM)
-  * - krbig\_cdsm.asc
-    - Vegetation canopy DSM. Raster dataset: derived from a LiDAR dataset
-  * - kr\_buildings.shp
-    - Building footprint polygon layer
-  * - GBG\_typicalweatheryear\_1977.txt
-    - Meteorological data, hourly time resolution for 1977 Gothenburg, Sweden.
+Data requreiments:
+S: Spatial, M: Meteorological, 
+
+.. list-table:: Input data and parameters
+   :widths: 20 20 10 50
+
+   * - **Name**
+     - **Definition**
+     - **Type**
+     - **Description**
+   * - krbig_dsm.asc
+     - Ground and building DSM
+     - S
+     - Raster dataset: derived from a 3D vector roof structure dataset and a digital elevation model (DEM)   
+   * - krbig_cdsm.asc
+     - Vegetation canopy DSM
+     - S
+     - Raster dataset: drived from a LiDAR dataset
+   * - kr_buildings.shp
+     - Building footprint polygon layer
+     - S
+     - Vector dataset
+   * - GBG_typicalweatheryear_1977.txt
+     - Meteorological forcing data
+     - M
+     - Meteorological data, hourly time resolution for 1977 Gothenburg, Sweden. 
 
 
+`Download link for datasets in Gothenburg,
+Sweden <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
 
-* Download from:
-      - `centre of Gothenburg, Sweden <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
-      - `data <http://www.urban-climate.net/UMEPTutorials/London/DataCoventGarden.zip>`__
-      **check detail**
+`Google map link and download link for datasets in London Covent
+Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data=!3m1!1e3>`__
+
+`Datasetata <http://www.urban-climate.net/UMEPTutorials/London/DataCoventGarden.zip>`__
+
 Steps
 -----
-* **Steps**:
- #. if the data are zipped - unzip the data first
- #. Examine the geodata by adding the layers to your project.
- #. Use `Layer > Add Layer > Add Raster Layer <Media:Add_Raster_Layer.png>`__ to open the .asc raster files and Use Layer > Add Layer > Add Vector Layer. The Vector layer is a shape file which consists of multiple files. It is the **kr\_building.shp** that should be used to load the vector layer into QGIS.
- #. You will need to indicate the co-ordinate system (`CRS <http://docs.qgis.org/2.14/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__) that is associated with these data. `If you look at the lower right hand side you can see the CRS used in the current QGIS project <Media:GOT_LUP.png>`__
-    -  You can use the filter to find this then.
-    -  Select SWEREF99 1200 as CRS and the files will load into the map canvas.
-    -  Do this for all of the geodata files.
 
- #. Open the **meteorological file** in a text editor or in a spreadsheet such as MS excel or LibreOffice (Open office).
+#. Start with the Gothenbrug data. If the data are zipped - unzip the data first.
+#. Examine the geodata by adding the layers to your project.
+#. Use *Layer > Add Layer > Add Raster
+   Layer* to open the .asc raster files
+   and *Layer > Add Layer > Add Vector Layer*. The Vector layer is a
+   shape file which consists of multiple files. It is the
+   **kr_building.shp** that should be used to load the vector layer into
+   QGIS.
+#. You will need to indicate the co-ordinate system
+   (`CRS <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__)
+   that is associated with these data. If you look at the lower right
+   hand side you can see the CRS used in the current QGIS project. 
 
-    -  Data file is formatted for the UMEP plugin (in general) and the SEBE plugin (in particular).
-    -  First four columns are *time related*.
-    -  Columns of interest are **kdown, kdiff and kdir**. These are related to shortwave radiation and give global, diffuse and direct radiation, respectively.
-    -  The meteorological file should be at least a year long, but preferably multi-year.
-    -  One option is to use a `**typical meteorological year** <https://en.wikipedia.org/wiki/Typical_meteorological_year>`__ as you will do in this tutorial
+   -  You can use the filter to find this then.
+   -  Select SWEREF99 1200 as CRS and the files will load into the map
+      canvas.
+   -  Do this for all of the geodata files.
 
-* **Data Format**
-Variables included in the **meteorological data file**. No. indicates the column the file is in. Use indicates if it is **R – required** or *O- optional* (in this application) or **N- Not used in this application**. All columns must be present but can be filled with numbers to indicate they are not in use (e.g. -999).
+#. Open the **meteorological file** in a text editor or in a spreadsheet
+   such as MS excel or LibreOffice (Open office).
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
+   -  Data file is formatted for the UMEP plugin (in general) and the
+      SEBE plugin (in particular).
+   -  First four columns are *time related*.
+   -  Columns of interest are **kdown, kdiff and kdir**. These are
+      related to shortwave radiation and give global, diffuse and direct
+      radiation, respectively.
+   -  The meteorological file should be at least a year long, but
+      preferably multi-year.
+   -  One option is to use a `**typical meteorological
+      year** <https://en.wikipedia.org/wiki/Typical_meteorological_year>`__
+      as you will do in this tutorial
 
-   * - No.
-     - USE
-     - Column name
-     - Description
-   * - 1
-     - R
-     - iy
-     - Year [YYYY]
-   * - 2
-     - R
-     - id
-     - Day of year [DOY]
-   * - 3
-     - R
-     - it
-     - Hour [H]
-   * - 4
-     - R
-     - imin
-     - Minute [M]
-   * - 5
-     - N
-     - qn
-     - Net all-wave radiation [W m\ :sup:`-2`]
-   * - 6
-     - N
-     - qh
-     - Sensible heat flux [W m\ :sup:`-2`]
-   * - 7
-     - N
-     - qe
-     - Latent heat flux [W m\ :sup:`-2`]
-   * - 8
-     - N
-     - qs
-     - Storage heat flux [W m\ :sup:`-2`]
-   * - 9
-     - N
-     - qf
-     - Anthropogenic heat flux [W m\ :sup:`-2`]
-   * - 10
-     - N
-     - U
-     - Wind speed [m s\ :sup:`-1`]
-   * - 11
-     - O
-     - RH
-     - Relative Humidity [%]
-   * - 12
-     - O
-     - Tair
-     - Air temperature [°C]
-   * - 13
-     - N
-     - pres
-     - Barometric pressure [kPa]
-   * - 14
-     - N
-     - rain
-     - Rainfall [mm]
-   * - 15
-     - R
-     - kdown
-     - Incoming shortwave radiation [W m\ :sup:`-2`] Must be >= 0 W m\ :sup:`-2`.
-   * - 16
-     - N
-     - snow
-     - Snow [mm]
-   * - 17
-     - N
-     - ldown
-     - Incoming longwave radiation [W m\ :sup:`-2`]
-   * - 18
-     - N
-     - fcld
-     - Cloud fraction [tenths]
-   * - 19
-     - N
-     - Wuh
-     - External water use [m:sup:`3`]
-   * - 20
-     - N
-     - xsmd
-     - Observed soil moisture [m3 m\ :sup:`-3` or kg kg\ :sup:`-1`]
-   * - 21
-     - N
-     - lai
-     - Observed leaf area index [m2 m\ :sup:`-2`]
-   * - 22
-     - O
-     - kdiff
-     - Diffuse radiation [W m\ :sup:`-2`]
-   * - 23
-     - O
-     - kdir
-     - Direct radiation [W m\ :sup:`-2`]
-   * - 24
-     - N
-     - wdir
-     - Wind direction [°]
+Variables included in the **meteorological data file**. No. indicates
+the column the file is in. Use indicates if it is **R – required** or
+*O- optional* (in this application) or **N- Not used in this
+application**. All columns must be present but can be filled with
+numbers to indicate they are not in use (e.g. -999).
+
++------+------+-------------+-----------------+
+| No.  | USE  | Column name | Description     |
++======+======+=============+=================+
+| 1    | R    | iy          | Year [YYYY]     |
++------+------+-------------+-----------------+
+| 2    | R    | id          | Day of year     |
+|      |      |             | [DOY]           |
++------+------+-------------+-----------------+
+| 3    | R    | it          | Hour [H]        |
++------+------+-------------+-----------------+
+| 4    | R    | imin        | Minute [M]      |
++------+------+-------------+-----------------+
+| 5    | N    | qn          | Net all-wave    |
+|      |      |             | radiation [W    |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 6    | N    | qh          | Sensible heat   |
+|      |      |             | flux [W         |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 7    | N    | qe          | Latent heat     |
+|      |      |             | flux [W         |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 8    | N    | qs          | Storage heat    |
+|      |      |             | flux [W         |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 9    | N    | qf          | Anthropogenic   |
+|      |      |             | heat flux [W    |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 10   | N    | U           | Wind speed [m   |
+|      |      |             | s\ :sup:`-1`]   |
++------+------+-------------+-----------------+
+| 11   | O    | RH          | Relative        |
+|      |      |             | Humidity [%]    |
++------+------+-------------+-----------------+
+| 12   | O    | Tair        | Air temperature |
+|      |      |             | [°C]            |
++------+------+-------------+-----------------+
+| 13   | N    | pres        | Barometric      |
+|      |      |             | pressure [kPa]  |
++------+------+-------------+-----------------+
+| 14   | N    | rain        | Rainfall [mm]   |
++------+------+-------------+-----------------+
+| 15   | R    | kdown       | Incoming        |
+|      |      |             | shortwave       |
+|      |      |             | radiation [W    |
+|      |      |             | m\ :sup:`-2`]   |
+|      |      |             | Must be >= 0 W  |
+|      |      |             | m\ :sup:`-2`.   |
++------+------+-------------+-----------------+
+| 16   | N    | snow        | Snow [mm]       |
++------+------+-------------+-----------------+
+| 17   | N    | ldown       | Incoming        |
+|      |      |             | longwave        |
+|      |      |             | radiation [W    |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 18   | N    | fcld        | Cloud fraction  |
+|      |      |             | [tenths]        |
++------+------+-------------+-----------------+
+| 19   | N    | Wuh         | External water  |
+|      |      |             | use [m\ sup:`3`]|
++------+------+-------------+-----------------+
+| 20   | N    | xsmd        | Observed soil   |
+|      |      |             | moisture [m3    |
+|      |      |             | m\ :sup:`-3` or |
+|      |      |             | kg              |
+|      |      |             | kg\ :sup:`-1`]  |
++------+------+-------------+-----------------+
+| 21   | N    | lai         | Observed leaf   |
+|      |      |             | area index [m2  |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 22   | O    | kdiff       | Diffuse         |
+|      |      |             | radiation [W    |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 23   | O    | kdir        | Direct          |
+|      |      |             | radiation [W    |
+|      |      |             | m\ :sup:`-2`]   |
++------+------+-------------+-----------------+
+| 24   | N    | wdir        | Wind direction  |
+|      |      |             | [°]             |
++------+------+-------------+-----------------+
+
+
 
 Preparing data for SEBE
 -----------------------
 
-SEBE plugin: located at UMEP -> Processor -> Solar Energy -> Solar
-Energy on Building Envelopes (SEBE) in the `menu
-bar <Media:UMEP_location_SEBE.png>`__.
+SEBE plugin: located at *UMEP -> Processor -> Solar Energy -> Solar
+Energy on Building Envelopes (SEBE)* in the menu bar (Figure 1).
+
+.. figure:: /images/SEBE_SEBE1.png
+   :alt: SEBE1.png
+   :width: 514px
+
+   Figure 3: The interface for SEBE in UMEP
 
 #. *Top frame*: for input data for the SEBE calculations.
 
-   -  Critical is the **building** and **ground**
+   -  Critical is the **building and ground**
       `DSM <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
       for the calculations in SEBE.
    -  Optionally **vegetation** (trees and bushes) can be included as
@@ -238,16 +269,13 @@ bar <Media:UMEP_location_SEBE.png>`__.
    -  Two vegetation DSMs are required when the Use vegetation DSMs is
       ticked:
 
-   * One to describe the top of the vegetation (Vegetation Canopy DSM).
+      + One to describe the top of the vegetation (Vegetation Canopy DSM).
 
-   * One to describe the bottom, underneath the canopies (Vegetation
-   Trunk Zone DSM).
+      + One to describe the bottom, underneath the canopies (Vegetation Trunk Zone DSM).
 
-   * As Trunk Zone DSMs are very rare, an option to create this from
-   the canopy DSM is available.
-
-   * You can set the amount of light (shortwave radiation) that is
-   transmitted through the vegetation.
+      As Trunk Zone DSMs are very rare, an option to create this from the
+      canopy DSM is available. You can set the amount of light (shortwave radiation) that is
+      transmitted through the vegetation.
 
 #. Two raster datasets, height and wall aspect, are needed to calculate
    irradiance on building walls.
@@ -283,15 +311,15 @@ bar <Media:UMEP_location_SEBE.png>`__.
 #. Name your new raster datasets aspect and height, respectively.
 #. Tick: Add result to project and click OK.
 
-.. figure:: /images/SEBE1.png
-
-    ```to do```
-
 Running the model
 -----------------
 
-Now you have all data ready to run the model. | Settings for running
-SEBE without vegetation.|
+Now you have all data ready to run the model.
+
+.. figure:: /images/SEBE_SEBEnoVeg.png
+   :alt:  Settings for running SEBE without vegetation.
+
+   Figure 4: Example of settings for running SEBE without vegetation.
 
 #. First run the model *without* including vegetation.
 
@@ -307,15 +335,13 @@ SEBE without vegetation.|
 
    -  Save your result in a subfolder called **Veg**.
 
-.. figure:: /images/SEBE_noVeg.png
-
 Irradiance on building envelopes (alternatively see the tips below – currrently better)
 ---------------------------------------------------------------------------------------
 
 To determine the irradiance on building walls:
 
-#. Open the SunAnalyser located at UMEP -> Post-Processor -> Solar
-   Radiation -> SEBE (Visualisation).
+#. Open the SunAnalyser located at *UMEP > Post-Processor > Solar
+   Radiation > SEBE (Visualisation)*.
 
    -  This can be used to visualize the irradiance on both roofs and
       walls.
@@ -328,9 +354,9 @@ To determine the irradiance on building walls:
 #. Click again to finish.
 #. Click Visualise. Now you should be able to see the results in 3D.
 
-3D Visualisation for Mac currently not working properly
+**3D Visualisation for Mac currently not working properly**
 
-Use the Profile tool to see the range of values along a transect.
+Use the **Profile tool**, which is a plugin for QGIS, to see the range of values along a transect.
 
 #. Plugins > Profile tool > Terrain profile.
 
@@ -347,20 +373,15 @@ Solar Energy Potential
 In order to obtain the solar energy potential for a specific building:
 
 #. The actual area of the roof needs to be considered.
-#. Determine the area of each pixel (|AP| ): e.g. 1 m\ :sup:`2`
+#. Determine the area of each pixel (A\ :sub:`P`): e.g. 1 m\ :sup:`2`
 #. As some roofs are tilting the area may be larger for some pixels. The
-   actual area (|AA|) can be computed from:
+   actual area (*A*\ :sub:`A`) can be computed from:
 
-        |AA| = A\ |AP| /cos⁡(Si)
-        where the slope (Si) of the raster pixel should be in radians (1 deg = pi/180 rad).
+      *A*\ :sub:`A` = *A*\ :sub:`P` / *cos(S*\ :sub:`i`)
+ 
+      where the slope (*S*\ :sub:`i`) of the raster pixel should be in radians (1 deg = pi/180 rad).
 
-
-Irradiance map with values less than 900 kWh filtered out
----------------------------------------------------------
-
-* Steps
-
-To make a slope raster
+**To make a slope raster:**
 
 #. *Raster > Terrain analysis > Slope*. If the tool is missing, Go to
    *Manage and Install Plugins* and activate (*Raster Terrain Analysis
@@ -368,11 +389,15 @@ To make a slope raster
 #. Use the DSM for elevation layer
 #. Create the slope z factor =1 - area
 
-.. figure:: /images/Slope.jpg
+.. figure:: /images/SEBE_Slope.png
+   :alt: None
 
-    Use the raster menu: Raster> Raster Calculator.
+   Figure 5: The Slope tool in QGIS
 
-#. To determine the area after you have removed the wall area from the buildings.
+Use the raster menu: *Raster> Raster Calculator*.
+
+#. To determine the area after you have removed the wall area from the
+   buildings.
 #. Enter the equation indicated.
 #. To visualize where to place solar panels the amount of energy
    received needs to be cost effective. As irradiance below 900 kWh is
@@ -386,25 +411,34 @@ To make a slope raster
    -  Add a custom transparency (green cross) where values between 0 and
       900 are set to 100% transparency.
 
-.. figure:: /images/RasterCalculator.jpg
+.. figure:: /images/SEBE_RasterCalculator.png
+   :alt: None
+
+   Figure 6: The RasterCalculator in QGIS
+
+Irradiance map with values less than 900 kWh filtered out
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To estimate solar potential on building roofs we can use the Zonal
 statistics tool:
 
 #. Raster > Zonal statistics.
-  * Use the roof area raster layer (**energyPerm2\_slope65\_RoofArea**)
-    created before and use **kr\_building.shp** as the polygon layer to
-    calculate as your zone layer. Make sure that you calculate sum
-    statistics.
+
+   -  Use the roof area raster layer (**energyPerm2_slope65_RoofArea**)
+      created before and use **kr_building.shp** as the polygon layer to
+      calculate as your zone layer. Make sure that you calculate sum
+      statistics.
+
 #. On your building layer – Right click Open Attribute Table
 #. Or use the identifier to click a building (polygon) of interest to
    see the statistics you have just calculated
 
-Note that we will not consider the performance of the solar panels.
+   Note that we will not consider the performance of the solar panels.
 
-.. figure:: /images/GOT_Irradiance.png
-
-    ```to do```
+   .. figure:: /images/SEBE_GOT_Irradiance.png
+      :alt: None
+   
+      Figure 7: Irradiance map on building roofs in Gothenburg
 
 Covent Garden data set
 ----------------------
@@ -417,8 +451,7 @@ A second GIS data set is available for the Covent Garden area in London
    `1 <https://drive.google.com/open?id=0B7D8dqiua0uzWWhwWmU4c1lnTG8>`__
 #. Add the Covent Garden data
 #. Extract the data to a directory
-#. Load the Raster data (DEM, DSM) files (`as you did
-   before <Media:Add_Raster_Layer.png>`__)
+#. Load the Raster data (DEM, DSM) files (as you did before)
 #. Shadows
 
    -  `UMEP -> Processor -> Solar Radiation -> Daily Shadow
@@ -444,14 +477,7 @@ Questions for you to explore with UMEP:SEBE
    different areas. What would be the impact of having a smaller/larger
    area domain modelled for this building? Identify the possibilities of
    solar energy production for that building.
-#. A report might include a map showing where on the roof solar panels
-   could be located and statistics on solar energy potential for the
-   roofs on the chosen building.
 
-   -  Statistics might include area (m:sup:`2`) that could be utilized
-      and total potential solar energy.
-   -  What are other factors you need to consider to improve the
-      analysis?
 
 References
 ----------
@@ -476,9 +502,7 @@ References
 -  Background work also comes from: UK (Ratti & Richens 1999), Sweden
    (Lindberg et al. 2015), Canada (Goodwin et al. 2009)
 
-Repository for UMEP
-
--  `Report Bugs here <https://bitbucket.org/fredrik_ucg/umep/>`__
+In the `repository <https://bitbucket.org/fredrik_ucg/umep/>`__ of UMEP you can find the code and report bugs and other suggestions on future improvments.
 
 Tips
 ----
@@ -488,8 +512,7 @@ in another format there is a `UMEP plugin that can convert your
 meteorological data into the UMEP
 format <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Meteorological_Data:_MetPreprocessor>`__.
 
--  Plugin is found at UMEP -> Pre-Processor -> Meteorological data
-   ->Prepare Existing data.
+-  Plugin is found at *UMEP > Pre-Processor > Meteorological data >Prepare Existing data*.
 
 Plugin to **visualize data** in 3D: called
 `Qgis2Threejs <https://media.readthedocs.org/pdf/qgis2threejs/docs-release/qgis2threejs.pdf>`__.
@@ -497,30 +520,28 @@ Plugin to **visualize data** in 3D: called
 -  Available for download from the official repository Plugins -> Manage
    and Install Plugins.
 
-.. figure:: /images/CoventGarden.jpg
+.. figure:: /images/SEBE_CoventGarden.png
+   :alt: None
 
-    ```to do```
+   Figure 8: 3D visualisation with Qgis2Threejs over Convent Garden
 
+TIFF (TIF) and ASC are **raster data file formats** In the left Hand
+Side there is a list of layers.
 
-
-
-TIFF (TIF) and ASC are **raster data file formats**
-
-**In the left Hand Side there is a list of layers.**
-
-  -  The layer that is checked at the top of the list is the layer that is
+-  The layer that is checked at the top of the list is the layer that is
    seen, If you want to see another layer you can either:
-  -
-    #\*Un-tick the layers above the one you are interested in and/or
 
-    #\*Move the layer you are interested in to the top of the list by dragging it.
+#*Un-tick the layers above the one you are interested in and/or
 
+#*Move the layer you are interested in to the top of the list by
+dragging it.
 
-**You can save all of you work for different areas as a project – so you can return to it as whole.**
+You can save all of you work for different areas as a project – so you
+can return to it as whole.
 
 -  Project > Save as
 
-**You can change the *shading etc*. on different layers.**
+You can change the *shading etc*. on different layers.
 
 -  Right Click on the Layer name Properties > Style > Singlebandpseudo
    color
@@ -528,5 +549,8 @@ TIFF (TIF) and ASC are **raster data file formats**
 -  Classify
 -  Numerous things can be modified from this point.
 
-`UMEP repository <https://bitbucket.org/fredrik_ucg/umep/>`__.
-`Other Getting Started Help <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+`UMEP repository <https://bitbucket.org/fredrik_ucg/umep/>`__. 
+
+
+
+

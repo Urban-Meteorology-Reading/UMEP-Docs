@@ -1,4 +1,5 @@
-
+.. _LandCoverFraction(Grid):
+ 
 Urban Land Cover: Land Cover Fraction (Grid)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
@@ -17,7 +18,7 @@ Urban Land Cover: Land Cover Fraction (Grid)
 
 
 * Introduction:
-      - The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <#Urban_Land_Cover:_Land_Cover_Reclassifier>`__) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see *Vector -> Research Tools -> Vector Grid...*).   |
+      - The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <LandCoverReclassifier>`) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see *Vector -> Research Tools -> Vector Grid...*).   |
 
 * Location:
   - The Land Cover Fraction (Grid) is located at
@@ -29,11 +30,11 @@ Urban Land Cover: Land Cover Fraction (Grid)
 * Dialog Box:
       .. figure:: /images/LandCoverFractionGrid2.png
 
-          ```to do```
+          The dialog for the Land Cover Fraction (Grid) calculator
 
 * Dialog sections：
 .. list-table::
-   :widths: 50 50
+   :widths: 10 90
    :header-rows: 0
 
    * - upper
@@ -48,7 +49,7 @@ Urban Land Cover: Land Cover Fraction (Grid)
 
      .. figure:: /images/Grid_Extent.png
 
-        ```to do```
+        The two search methods for the Search Throughout the Grid Extent option 
 
 * Wind Direction Search Interval (Degrees):
      -  This decides the interval in search directions for which the morphometric parameters will be calculated.

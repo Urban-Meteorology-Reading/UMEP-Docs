@@ -1,3 +1,4 @@
+.. _SourceArea(Point):
 
 Urban Morphology: Source Area (Point)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -6,9 +7,9 @@ Urban Morphology: Source Area (Point)
       -  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]
       -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
-* Contributor:
+* Contributors:
 .. list-table::
-   :widths: 50 50
+   :widths: 40 60
    :header-rows: 1
 
    * - Name
@@ -19,12 +20,7 @@ Urban Morphology: Source Area (Point)
    * - Fredrik Lindberg
      - Gothenburg
    * - Brian Offerle
-     - previously Indiana University; Tyrens
-   * - Kormann and Mexiner
-     - 2001
-   * - Kljun et al.
-     - 2015
-
+     - previously Indiana University; Fluxsense
 
 
 * Introduction:
@@ -38,24 +34,14 @@ Urban Morphology: Source Area (Point)
      -  A ground and 3D object DSM and a DEM should be used as input data. In addition if vegetation heights above ground level (i.e. trees and bushes) are available (CDSM) this can also be used. However, a CDSM need not be used and it is also possible to only use a 3D object DSM with no ground heights.
      -   Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).
 
-*  Tutorial Available ：
-        - yes
-
-* Location:
-  - The pre-processor Footprint Model (Point) is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Urban Morphology
-            -  Image Morphometric Parameters (Point)
-
 * Dialog box：
        .. figure:: /images/Footprint.png
 
-          ```to do```
+          The dialog for the Source Area (Point) calculator
 
 * Dialog sections：
 .. list-table::
-   :widths: 50 50
+   :widths: 15 85
    :header-rows: 0
 
    * - upper
@@ -107,7 +93,7 @@ Urban Morphology: Source Area (Point)
 
 * Conditions for analysis:
 .. list-table::
-   :widths: 50 50
+   :widths: 40 60
    :header-rows: 0
 
    * - Parameter/Variable
@@ -139,7 +125,7 @@ Urban Morphology: Source Area (Point)
 * Roughness Calculation Method:
         - Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:`d`) and roughness length (z:sub:`0`) are available.
         .. list-table::
-           :widths: 50 50
+           :widths: 20 80
            :header-rows: 0
 
            * - RT

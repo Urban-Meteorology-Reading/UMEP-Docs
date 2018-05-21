@@ -17,13 +17,6 @@ Spatial Data: Spatial Data Downloader
 * Introduction：
    - The Spatial Data Downloader downloads geo-datasets useful for UMEP applications. Only the necessary section of the data is downloaded, so that disk use and download time are minimised.
 
-* Location:
-   - The spatial data downloader resides at:
-        - UMEP
-            - Pre-processor
-                  - Spatial Data
-                      - Spatial Data Downloader
-
 * Dialog box:
     .. figure:: /images/650px-Downloader.png
     

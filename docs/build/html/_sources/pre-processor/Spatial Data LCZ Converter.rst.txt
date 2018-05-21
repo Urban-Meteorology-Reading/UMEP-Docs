@@ -43,15 +43,15 @@ Spatial Data: LCZ Converter
     - When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.
     .. figure:: /images/700px-LCZdialog1.png
 
-        ```to do```
+        The *Table*-tab in the *LCZ Converter*
 
     .. figure:: /images/700px-LCZdialog2.png
 
-        ```to do```
+        The *Pervious distribution*-tab in the *LCZ Converter*: Option 1
 
     .. figure:: /images/700px-LCZdialog3.png
 
-        ```to do```
+        The *Pervious distribution*-tab in the *LCZ Converter*: Option 2
 
         
 
@@ -70,7 +70,7 @@ Spatial Data: LCZ Converter
      - Specify output and run the calculations.
 
 * LCZ raster:
-     - Select the LCZ raster from the [WUDAPT database.](http://www.wudapt.org)
+     - Select the LCZ raster from the `WUDAPT database <http://www.wudapt.org>`__.
 
 * Vector grid:
      -  Select your predefined polygon grid (see Vector -&gt; Research Tools -&gt; Vector Grid; select polygons not lines)

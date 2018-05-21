@@ -1,3 +1,4 @@
+.. _SUEWSPrepare:
 
 SUEWS Prepare
 ~~~~~~~~~~~~~
@@ -16,9 +17,6 @@ SUEWS Prepare
      - Gothenburg
    * - Sue Grimmond
      - Reading
-   * - Kljun et al.
-     -
-
 
 * Introduction:
      - The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <http://urban-climate.net/umep/SUEWS>`__, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.   |
@@ -67,9 +65,6 @@ SUEWS Prepare
             -  The main window contains all the user interface components of the plugin. Navigation uses tabs, with each providing some of the information needed. The are two categories:
                   -  main settings tab
                   -  site library
-                  .. figure:: /images/SP_static.jpg
-
-                      ```to do```
 
             -  The main window has buttons to specify to:
                   -  indicate the folder where the output will be generated
@@ -80,7 +75,7 @@ SUEWS Prepare
                        files generated from SUEWS Prepare these files will be **overwritten**
             -  Main settings tab：
                   -  The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.
-                  .. figure:: /images/SUEWSPrepare_main.png
+                  .. figure:: /images/SUEWSSpatial_Prepare1.png
 
                       Plugin window with the main settings tab selected.
 
@@ -113,7 +108,7 @@ SUEWS Prepare
                       Box for meteorological data. The button has been used to import a file containing meteorological data.
 
             -  Daylight savings time：
-                  -   The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the `days of year <http://disc.sci.gsfc.nasa.gov/julian_calendar.html>`__. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for `your region <https://en.wikipedia.org/wiki/Daylight_saving_time_by_country>`__.
+                  -   The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the `days of year <https://landweb.modaps.eosdis.nasa.gov/browse/calendar.html>`__. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for `your region <https://en.wikipedia.org/wiki/Daylight_saving_time_by_country>`__.
                   .. figure:: /images/SP_DLS.jpg
 
                       Box used for setting the start and end of day lights savings time.
@@ -121,12 +116,12 @@ SUEWS Prepare
             -  Population density：
                   -  This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu.
             -  Wall area (optional) ：
-                  - This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the `Wall height and aspect calculator <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__.
+                  - This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the `Wall height and aspect calculator <WallHeightandAspect>`.
                   .. figure:: /images/SUEWSPrepare_wallarea.png
 
                       Box for wall area data.
 
-            -  Land use fraction (optional) ：
+            -  Land use fraction (optional)：
                   -  his data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:
                      ::
                        ID fLUp1 fLUp2 fLUp3 Code_LUpaved1 Code_LUpaved2 Code_LUpaved3 fLUb1 fLUb2 fLUb3 fLUb4 fLUb5 Code_LUbuilding1 Code_LUbuilding2 Code_LUbuilding3 Code_LUbuilding4 Code_LUbuilding5
@@ -167,4 +162,4 @@ SUEWS Prepare
                  -  To create a new site entry click the button marked “Edit values”. This will make the text boxes for the variables in the right box available for editing. When you are satisfied with the changes press the button marked “Make changes”. This will show a dialog window that will ask you to provide a site code for your new entry and some description of the site you are adding. After this information is provided you are also able to add an optional url to a picture that represent the site.
 
             -  Plugin Output:
-                 -  In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with `SUEWS/BLUEWS (Advanced) <http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29>`__. Also, see the `SUEWS manual <http://urban-climate.net/umep/SUEWS>`__ for more information.
+                 -  In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with `SUEWS/BLUEWS (Advanced) <SUEWSadvanced>`. Also, see the `SUEWS manual <http://urban-climate.net/umep/SUEWS>`__ for more information.

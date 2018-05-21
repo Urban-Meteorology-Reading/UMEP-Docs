@@ -15,24 +15,18 @@ Outdoor Thermal Comfort: SOLWEIG
     -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T~mrt~) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.
     -  The full manual of the SOLWEIG model can be found `here <http://urban-climate.net/umep/SOLWEIG>`__.
 
-* Location:
-  - The SOLWEIG model is located at
-      -  UMEP
-        -  Processor
-          -  Outdoor Thermal Comfort
-            -  SOLWEIG
-
 * Related Preprocessors：
-  - `MetdataPreprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__, `Download data (WATCH) <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__, `SkyViewFactor Calculator <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Sky_View_Factor_Calculator>`__, `Wall Height and Aspect <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__, `LandCoverReclassifier <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__   |
+  - `MetPreprocessor`, `WATCH`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
 
+  
 * Dialog box：
       .. figure:: /images/SOLWEIG.png
 
-          ```to do```
+          The dialog for the SOLWEIG model
 
 * Dialog sections ：
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Spatial data
@@ -48,9 +42,9 @@ Outdoor Thermal Comfort: SOLWEIG
    * - Output maps
      - Options to choose the geotiffs to be saved for each iteration.
 
-
+*  Spatial data：
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Building and Ground DSM
@@ -84,7 +78,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 *  Meteorological data：
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Use continuous meteorological dataset
@@ -100,7 +94,7 @@ Outdoor Thermal Comfort: SOLWEIG
 *  Optional settings：
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Include POIs
@@ -111,9 +105,9 @@ Outdoor Thermal Comfort: SOLWEIG
      - Tick this box to consider man as a cylinder instead of a box according to Holmer at al. (2015).
 
 * Environmental parameters：
-      - Emissivity (ground)||Emissivity of ground. Not used if land cover scheme is activated.
+    Emissivity (ground)||Emissivity of ground. Not used if land cover scheme is activated.
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Albedo (buildings)
@@ -126,10 +120,10 @@ Outdoor Thermal Comfort: SOLWEIG
      - Emissivity of ground. Not used if land cover scheme is activated.
 
 * Human exposure parameters ：
-      -  Posture of the human body||Choose between standing (default) and sitting.
+    Posture of the human body||Choose between standing (default) and sitting.
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
    * - Absorption of shortwave radiation
@@ -141,16 +135,16 @@ Outdoor Thermal Comfort: SOLWEIG
 
 
 * Output maps:
-     - A number of different outputs can be chosen here. All grids will be written out as GeoTIFFs at the location specified as the output folder.
+    A number of different outputs can be chosen here. All grids will be written out as GeoTIFFs at the location specified as the output folder.
 
 * Run:
-     - Starts the calculations. As SOLWEIG is a 2.5D model, large grids (i.e. high number of pixels) will take a relatively long time to compute. The model is embedded in a so called worker which means that you can continue working with QGIS while the model runs.
+    Starts the calculations. As SOLWEIG is a 2.5D model, large grids (i.e. high number of pixels) will take a relatively long time to compute. The model is embedded in a so called worker which means that you can continue working with QGIS while the model runs.
 
 * Add Average mean radiant temperature to the map canvas:
-     -  If ticked, an average T\ :sub:`mrt` map will be added to the current
+    If ticked, an average T\ :sub:`mrt` map will be added to the current
 
 * Close:
-     - Closes the plugin.
+    Closes the plugin.
 
 * Quick example on how to run SOLWEIG：
        presented:
@@ -160,10 +154,11 @@ Outdoor Thermal Comfort: SOLWEIG
              #. Open the Wall height and aspect plugin from the UMEP Pre-processor and calculate both wall height and aspect using the DSM and your input raster. Tick in the box to add them to your project. Leave all other settings as default.
              #. Now you are ready to generate your first T\ :sub:`mrt` map. Open SOLWEIG and use the settings as shown in the figure below but replace the paths to the fit your computer environment. When you are finished, press *Run*.
 
-                .. figure:: /images/SOLWEIGfirsttry.png
+.. figure:: /images/SOLWEIGfirsttry.png
 
-
-                    There is also a meteorological file present in the test dataset that can be used to run the model for a whole day.
+ Setting for a first try with the SOLWEIG model
+ 
+There is also a meteorological file present in the test dataset that can be used to run the model for a whole day.
 
 * Remarks ：
       -  All DSMs need to have the same extent and pixel size.

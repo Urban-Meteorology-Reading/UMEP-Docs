@@ -26,18 +26,22 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
    * - Urban energy balance
      - Processor
      - `Introduction_SUEWS`
-     - Energy, water and radiation fluxes
+     - Energy, water and radiation fluxes for one location
    * - Urban energy balance
-     - Pre-Processor and Processor `SUEWS_BLUEWS_Advanced`
-     - :ref:`SUEWS_BLUEWS_Advanced`
-     - Energy, water and radiation fluxes
+     - Pre-Processor and Processor (SUEWS_BLUEWS_Advanced)
+     - `SUEWSAdvanced`
+     - Energy, water and radiation fluxes for one location
+   * - Urban energy balance
+     - Pre-Processor, Processor and Post-processor
+     - `SUEWSSpatial`
+     - Energy, water and radiation fluxes for a spatial grid
    * - Potential solar energy production on building envelopes
      - Processor and Post-Processor
-     - :ref:`SEBE`
+     - `SEBE`
      - Amount of solar energy received on building facets
    * - Outdoor thermal comfort
      - Pre-Processor and Processor
-     - `Introduction to SOLWEIG`
+     - `IntroductionToSOLWEIG`
      - Mean radiation temperature modelling in complex urban settings
    * - Anthropogenic heat
      - Processor

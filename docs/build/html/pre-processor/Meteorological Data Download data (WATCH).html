@@ -109,13 +109,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +181,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="meteorological-data-download-data-watch">
-<h1>3.1. Meteorological Data: Download data (WATCH)<a class="headerlink" href="#meteorological-data-download-data-watch" title="Permalink to this headline">¶</a></h1>
+<span id="watch"></span><h1>3.1. Meteorological Data: Download data (WATCH)<a class="headerlink" href="#meteorological-data-download-data-watch" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Contributors：</li>
 </ul>
@@ -233,8 +231,8 @@
 </ol>
 <blockquote class="last">
 <div><ul class="simple">
-<li>The <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">WFD</a> dataset is based on 40-year <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">ECMWF</a> Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.</li>
-<li>The <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">WFDEI</a> dataset is based on <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">ERA</a>-interim re-analysis data and is available at half-degree resolution for 1979-2012.</li>
+<li>The <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">WFD</span></a> dataset is based on 40-year <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">ECMWF</span></a> Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.</li>
+<li>The <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">WFDEI</span></a> dataset is based on <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">ERA</span></a>-interim re-analysis data and is available at half-degree resolution for 1979-2012.</li>
 </ul>
 </div></blockquote>
 </dd>
@@ -287,33 +285,11 @@
 <img alt="../_images/350px-Watch_masked.png" src="../_images/350px-Watch_masked.png" />
 <p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Available data in WATCH downloader (overlaid on countries)</span></p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Message about missing Python libraries. Follow the instruction at <a class="reference internal" href="../Getting_Started.html#python-libraries"><span class="std std-ref">link</span></a>.</p>
+</div>
 <ul>
-<li><p class="first">Location:
-- The WATCH data pre-processor is located at:</p>
-<blockquote>
-<div><ul class="simple">
-<li>UMEP</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Pre-Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Meteorological data</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>WATCH data</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-<ul class="simple">
-<li>Follow the instruction at <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries">link</a>.</li>
-</ul>
-</div></blockquote>
-</li>
 <li><dl class="first docutils">
 <dt>Obtaining WATCH data via UMEP：</dt>
 <dd><div class="first last figure" id="id4">

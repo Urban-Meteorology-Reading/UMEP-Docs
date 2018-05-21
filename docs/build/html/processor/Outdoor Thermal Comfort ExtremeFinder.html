@@ -102,13 +102,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -202,9 +200,7 @@
 <ul>
 <li><dl class="first docutils">
 <dt>Current Options:</dt>
-<dd><ul class="first last simple">
-<li>Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.</li>
-</ul>
+<dd><p class="first last">Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.</p>
 </dd>
 </dl>
 </li>
@@ -212,7 +208,7 @@
 <dt>Data must be provided by the user, and can be:</dt>
 <dd><ul class="first last simple">
 <li>Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)</li>
-<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>&#8216;time</strong>&#8216; dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
+<li>Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a <strong>‘time</strong>’ dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.</li>
 <li>Text (.txt) file, daily T<sub>max</sub>, T<sub>avg</sub> or T<sub>min</sub> (<a class="reference external" href="http://www.urban-climate.net/watch_data/data%20set%20sample.txt">file sample</a>: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.</li>
 </ul>
 </dd>
@@ -235,24 +231,6 @@
 </dl>
 </dd>
 </dl>
-</li>
-<li><p class="first">Location:
--  UMEP</p>
-<blockquote>
-<div><ul class="simple">
-<li>Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Outdoor Themal Comfort</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>ExtremeFinder</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 </li>
 <li><dl class="first docutils">
 <dt>Dialog box:</dt>
@@ -293,9 +271,8 @@
 </dd>
 </dl>
 </li>
-</ul>
-<dl class="docutils">
-<dt># Output: Extreme events (heat waves used as example below) ：</dt>
+<li><dl class="first docutils">
+<dt>Output: Extreme events (heat waves used as example below) ：</dt>
 <dd><ol class="first last arabic">
 <li><p class="first">Daily T<sub>max</sub> (or T<sub>avg</sub> / T<sub>min</sub>) with time (Y= Year, X=Month)</p>
 <ul>
@@ -337,6 +314,8 @@
 </ol>
 </dd>
 </dl>
+</li>
+</ul>
 </div>
 
 

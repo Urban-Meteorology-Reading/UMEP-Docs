@@ -21,16 +21,11 @@ Urban Energy Balance: GQ\ :sub:`F`
 
 * Introduction:
       `See separate manual <http://urban-climate.net/umep/GQF_Manual>`__
-* Location:
-    - The GreaterQF plugin is located at
-        -  UMEP
-          -  Processor
-            -  Urban Energy Balance
-              -  GreaterQF
+
 * Dialog box：
         .. figure:: /images/GQF.png
 
-            ```to do```
+            Diolag for the GQF model
 
 * Dialog sections：
         - The model run is configured using the dialog box:
@@ -46,7 +41,7 @@ Urban Energy Balance: GQ\ :sub:`F`
       - **CSV files**
           -  A CSV file is generated for each of the 19 contributions to QF (e.g. car travel, wastewater heating) and the total QF. Each file contains a column per output area (shown in the example map) and a row per time step. These are labelled accordingly. The filenames are abbreviated where necessary for compatibility, with the following convention used:
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 0
 
    * - El

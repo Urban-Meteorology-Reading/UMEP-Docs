@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14. FAQ (Frequently Asked Questions) &mdash; UMEP Manual  documentation</title>
+  <title>11. FAQ (Frequently Asked Questions) &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="15. Abbreviations" href="Abbreviations.html" />
-    <link rel="prev" title="13. Known Issues" href="Known_Issues.html" /> 
+    <link rel="next" title="12. Abbreviations" href="Abbreviations.html" />
+    <link rel="prev" title="10. Known Issues" href="Known_Issues.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -92,13 +92,11 @@
 <li class="toctree-l1"><a class="reference internal" href="People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -144,7 +142,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>14. FAQ (Frequently Asked Questions)</li>
+      <li>11. FAQ (Frequently Asked Questions)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -164,115 +162,88 @@
            <div itemprop="articleBody">
             
   <div class="section" id="faq-frequently-asked-questions">
-<span id="faq"></span><h1>14. FAQ (Frequently Asked Questions)<a class="headerlink" href="#faq-frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<span id="faq"></span><h1>11. FAQ (Frequently Asked Questions)<a class="headerlink" href="#faq-frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <ul>
 <li><dl class="first docutils">
 <dt>How do I upgrade the plugin?</dt>
-<dd><ul class="first last simple">
-<li>When a new LTR version is released it will be available from the repository. In QGIS to check for updates, go to <em>Plugins&gt;Manage and Install Plugins...</em>. If the UMEP plugin is in bold, a new version is available. On how to upgrade to the development version, see <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a>.</li>
-</ul>
+<dd><p class="first last">When a new LTR version is released it will be available from the repository. In QGIS to check for updates, go to <em>Plugins&gt;Manage and Install Plugins…</em>. If the UMEP plugin is in bold, a new version is available. On how to upgrade to the development version, see <a class="reference internal" href="Getting_Started.html"><span class="doc">Getting started</span></a>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>How do I uninstall the plugin?</dt>
-<dd><ul class="first last simple">
-<li>Go to <em>Plugins&gt;Manage and Install Plugins...</em>. Locate the UMEP plugin and click <em>Uninstall</em>.</li>
-</ul>
+<dd><p class="first last">Go to <em>Plugins&gt;Manage and Install Plugins…</em>. Locate the UMEP plugin and click <em>Uninstall</em>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>How do I install other python packages (e.g. pandas) as well as other libraries not included in the Desktop Express Install of QGIS?</dt>
-<dd><ul class="first last simple">
-<li>Follow the instruction from this <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities">link</a>.</li>
-</ul>
+<dd><p class="first last">Follow the instruction from this <a class="reference internal" href="Getting_Started.html#python-libraries"><span class="std std-ref">link</span></a>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>MY new raster is just black after using e.g. the <em>Wall Height and Aspect</em> plugin. What is wrong?</dt>
-<dd><ul class="first last simple">
-<li>Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.</li>
-</ul>
+<dd><p class="first last">Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Can the UMEP-plugin be used when <strong>Nodata</strong>-values are present in the input rasters?</dt>
-<dd><ul class="first last simple">
-<li>Yes, it can but we strongly recommend you to reclassify Nodata values to e.g. 0 before using them in UMEP. Here is a forum discussion that can help: <a class="reference external" href="https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis">https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis</a></li>
-</ul>
+<dd><p class="first last">Yes, it can but we strongly recommend you to reclassify Nodata values to e.g. 0 before using them in UMEP. Here is a forum discussion that can help: <a class="reference external" href="https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis">https://gis.stackexchange.com/questions/12418/redefining-nodata-value-into-zero-in-qgis</a></p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Why is UMEP having problems saving output files?</dt>
-<dd><ul class="first last simple">
-<li>Check that your path contains only English characters. For Mac users: the UMEP graphical interface will occasionally want to create a folder instead of selecting a folder. In this case in <em>Save As:</em> write the folder name you would like to save your output, press <em>Save</em>, when it asks <em>“...folder name...” already exists. Do you want to replace it?</em> press <em>Replace</em>.</li>
-</ul>
+<dd><p class="first last">Check that your path contains only English characters. For Mac users: the UMEP graphical interface will occasionally want to create a folder instead of selecting a folder. In this case in <em>Save As:</em> write the folder name you would like to save your output, press <em>Save</em>, when it asks <em>“…folder name…” already exists. Do you want to replace it?</em> press <em>Replace</em>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>How is frontal area index calculated in <em>Image Morphometric Parameters</em> plugins?</dt>
-<dd><ul class="first last simple">
-<li>Our method is only using one line through the center of the grid for each wind direction. This is because we rotate the DSM and hence it is only the center line that includes height information. We do this since we are using a pure raster-based approach and if we were to instead rotate the search direction vector we would end up with different lengths for each wind direction. If you want to investigate a certain wind direction I suggest that you use a section of wind directions; e.g. 45 degrees.</li>
-</ul>
+<dd><p class="first last">Our method is only using one line through the center of the grid for each wind direction. This is because we rotate the DSM and hence it is only the center line that includes height information. We do this since we are using a pure raster-based approach and if we were to instead rotate the search direction vector we would end up with different lengths for each wind direction. If you want to investigate a certain wind direction I suggest that you use a section of wind directions; e.g. 45 degrees.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>How do I report a bug?</dt>
-<dd><ul class="first last simple">
-<li>Report it at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></li>
-</ul>
+<dd><p class="first last">Report it at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>What can UMEP do?</dt>
-<dd><ul class="first last simple">
-<li><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Tool_Architecture">Tool Architecture</a> provides an overview</li>
-</ul>
+<dd><p class="first last"><a class="reference internal" href="Introduction.html#pluginarchitecture"><span class="std std-ref">Tool Architecture</span></a> provides an overview</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Who has developed this?</dt>
-<dd><ul class="first last simple">
-<li><a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#People_Involved_.26_Acknowledgements">People</a> involved in development</li>
-</ul>
+<dd><p class="first last"><a class="reference internal" href="People_Involved_&amp;_Acknowledgements.html"><span class="doc">People</span></a> involved in development</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>What are the development guidelines?</dt>
-<dd><ul class="first last simple">
-<li><a class="reference external" href="http://urban-climate.net/umep/DevelopmentGuidelines">http://urban-climate.net/umep/DevelopmentGuidelines</a></li>
-</ul>
+<dd><p class="first last"><code class="xref any docutils literal notranslate"><span class="pre">ContributeCoding</span></code></p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>How can I uninstall QGIS?</dt>
-<dd><ul class="first simple">
-<li>Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose <em>Advanced install</em>. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to <em>Desktop</em> until <em>Uninstall</em> is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under <em>C:\OSGeo4W64</em>).</li>
-</ul>
-<blockquote class="last">
+<li><p class="first">How can I uninstall QGIS?</p>
+<blockquote>
+<div><p>Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose <em>Advanced install</em>. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to <em>Desktop</em> until <em>Uninstall</em> is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under <em>C:\OSGeo4W64</em>).</p>
+<blockquote>
 <div><div class="figure" id="id1">
 <img alt="_images/Uninstall.png" src="_images/Uninstall.png" />
-<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">QGIS installation dialog (Advanced)</span></p>
 </div>
 </div></blockquote>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 <li><dl class="first docutils">
 <dt>How do I ask other questions?</dt>
-<dd><ul class="first last simple">
-<li>There is an email list. Or you can ask them at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></li>
-</ul>
+<dd><p class="first last">There is an email list. Or you can ask them at the <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep/issues/">repository</a></p>
 </dd>
 </dl>
 </li>
@@ -287,10 +258,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Abbreviations.html" class="btn btn-neutral float-right" title="15. Abbreviations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Abbreviations.html" class="btn btn-neutral float-right" title="12. Abbreviations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Known_Issues.html" class="btn btn-neutral" title="13. Known Issues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Known_Issues.html" class="btn btn-neutral" title="10. Known Issues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

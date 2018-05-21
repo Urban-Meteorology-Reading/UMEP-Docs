@@ -1,3 +1,5 @@
+.. _WATCH:
+
 Meteorological Data: Download data (WATCH)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributors：
@@ -30,8 +32,8 @@ Meteorological Data: Download data (WATCH)
 * Introduction：
       #. Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
       #. The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.
-        -  The `WFD <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ dataset is based on 40-year `ECMWF <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.
-        -  The `WFDEI <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__ dataset is based on `ERA <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__-interim re-analysis data and is available at half-degree resolution for 1979-2012.
+        -  The `WFD <Abbreviations>` dataset is based on 40-year `ECMWF <Abbreviations>` Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.
+        -  The `WFDEI <Abbreviations>` dataset is based on `ERA <Abbreviations>`-interim re-analysis data and is available at half-degree resolution for 1979-2012.
 
 .. list-table::
    :widths: 50 50
@@ -64,16 +66,7 @@ Meteorological Data: Download data (WATCH)
 
     Available data in WATCH downloader (overlaid on countries)
 
-* Location:
-  - The WATCH data pre-processor is located at:
-      -  UMEP
-        -  Pre-Processor
-          -  Meteorological data
-            -  WATCH data
-
-      Message about missing Python libraries
-      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      - Follow the instruction at `link <http://urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries>`__.
+.. note:: Message about missing Python libraries. Follow the instruction at `link <Python_Libraries>`.
 
 * Obtaining WATCH data via UMEP：
       .. figure::  /images/Watch_downloader_2.png

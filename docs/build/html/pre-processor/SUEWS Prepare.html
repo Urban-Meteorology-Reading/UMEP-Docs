@@ -109,13 +109,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +181,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="suews-prepare">
-<h1>3.3. SUEWS Prepare<a class="headerlink" href="#suews-prepare" title="Permalink to this headline">¶</a></h1>
+<span id="suewsprepare"></span><h1>3.3. SUEWS Prepare<a class="headerlink" href="#suews-prepare" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Contributor:</li>
 </ul>
@@ -209,9 +207,6 @@
 </tr>
 <tr class="row-odd"><td>Sue Grimmond</td>
 <td>Reading</td>
-</tr>
-<tr class="row-even"><td>Kljun et al.</td>
-<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -343,14 +338,10 @@
 <dd><ul class="first last">
 <li><dl class="first docutils">
 <dt>The main window contains all the user interface components of the plugin. Navigation uses tabs, with each providing some of the information needed. The are two categories:</dt>
-<dd><ul class="first simple">
+<dd><ul class="first last simple">
 <li>main settings tab</li>
 <li>site library</li>
 </ul>
-<div class="last figure" id="id2">
-<img alt="../_images/SP_static.jpg" src="../_images/SP_static.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
-</div>
 </dd>
 </dl>
 </li>
@@ -362,7 +353,7 @@
 <li><p class="first">to start the process of generating the output</p>
 </li>
 <li><p class="first">to close the main window.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Note</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">folder</span> <span class="n">selected</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">files</span> <span class="n">already</span> <span class="n">contains</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Note</span><span class="p">:</span> <span class="n">If</span> <span class="n">the</span> <span class="n">folder</span> <span class="n">selected</span> <span class="k">for</span> <span class="n">the</span> <span class="n">output</span> <span class="n">files</span> <span class="n">already</span> <span class="n">contains</span>
 <span class="n">files</span> <span class="n">generated</span> <span class="kn">from</span> <span class="nn">SUEWS</span> <span class="n">Prepare</span> <span class="n">these</span> <span class="n">files</span> <span class="n">will</span> <span class="n">be</span> <span class="o">**</span><span class="n">overwritten</span><span class="o">**</span>
 </pre></div>
 </div>
@@ -376,9 +367,9 @@
 <dd><ul class="first simple">
 <li>The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.</li>
 </ul>
-<div class="last figure" id="id3">
-<img alt="../_images/SUEWSPrepare_main.png" src="../_images/SUEWSPrepare_main.png" />
-<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Plugin window with the main settings tab selected.</span></p>
+<div class="last figure" id="id2">
+<img alt="../_images/SUEWSSpatial_Prepare1.png" src="../_images/SUEWSSpatial_Prepare1.png" />
+<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Plugin window with the main settings tab selected.</span></p>
 </div>
 </dd>
 </dl>
@@ -391,9 +382,9 @@
 <li>When a relevant polygon grid has been selected for the plugin several separate drop down menus allow for data to be collected from the fields in the polygon grid attribute table. The initial selections in these drops down menus might not be correct and needs to be manually corrected by the user.</li>
 <li>The input in the drop down menu marked <strong>ID field</strong> in the box for polygon grid selection needs to correlate with the polygon layers attribute field for feature ids or any attribute field containing unique integer numbers. The polygon layer should be in a coordinate system that can be related to both lat/lon coordinates as well as meters. The polygon features included in the polygon vector grid can be of any shape and size.</li>
 </ul>
-<div class="last figure" id="id4">
+<div class="last figure" id="id3">
 <img alt="../_images/SP_Polygon.jpg" src="../_images/SP_Polygon.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
@@ -414,13 +405,13 @@
 <dd><ul class="first simple">
 <li>Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.</li>
 </ul>
-<div class="figure" id="id5">
+<div class="figure" id="id4">
 <img alt="../_images/SP_landcover.jpg" src="../_images/SP_landcover.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.</span></p>
 </div>
-<div class="last figure" id="id6">
+<div class="last figure" id="id5">
 <img alt="../_images/SP_landcover2.jpg" src="../_images/SP_landcover2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.</span></p>
 </div>
 </dd>
 </dl>
@@ -434,9 +425,9 @@
 <dd><ul class="first simple">
 <li>The meteorological data have to be imported from a <strong>text file</strong>. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the <a class="reference external" href="#Meteorological_Data:_MetPreprocessor">MetPreprocessor</a> plugin. There you can also find more information on what parameters are required in the meteorological dataset.</li>
 </ul>
-<div class="last figure" id="id7">
+<div class="last figure" id="id6">
 <img alt="../_images/SP_met.jpg" src="../_images/SP_met.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Box for meteorological data. The button has been used to import a file containing meteorological data.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Box for meteorological data. The button has been used to import a file containing meteorological data.</span></p>
 </div>
 </dd>
 </dl>
@@ -444,11 +435,11 @@
 <li><dl class="first docutils">
 <dt>Daylight savings time：</dt>
 <dd><ul class="first simple">
-<li>The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the <a class="reference external" href="http://disc.sci.gsfc.nasa.gov/julian_calendar.html">days of year</a>. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for <a class="reference external" href="https://en.wikipedia.org/wiki/Daylight_saving_time_by_country">your region</a>.</li>
+<li>The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the <a class="reference external" href="https://landweb.modaps.eosdis.nasa.gov/browse/calendar.html">days of year</a>. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for <a class="reference external" href="https://en.wikipedia.org/wiki/Daylight_saving_time_by_country">your region</a>.</li>
 </ul>
-<div class="last figure" id="id8">
+<div class="last figure" id="id7">
 <img alt="../_images/SP_DLS.jpg" src="../_images/SP_DLS.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Box used for setting the start and end of day lights savings time.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Box used for setting the start and end of day lights savings time.</span></p>
 </div>
 </dd>
 </dl>
@@ -464,28 +455,28 @@
 <li><dl class="first docutils">
 <dt>Wall area (optional) ：</dt>
 <dd><ul class="first simple">
-<li>This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">Wall height and aspect calculator</a>.</li>
+<li>This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the <a class="reference internal" href="Urban Geometry Wall Height and Aspect.html#wallheightandaspect"><span class="std std-ref">Wall height and aspect calculator</span></a>.</li>
 </ul>
-<div class="last figure" id="id9">
+<div class="last figure" id="id8">
 <img alt="../_images/SUEWSPrepare_wallarea.png" src="../_images/SUEWSPrepare_wallarea.png" />
-<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Box for wall area data.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Box for wall area data.</span></p>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Land use fraction (optional) ：</dt>
+<dt>Land use fraction (optional)：</dt>
 <dd><ul class="first last">
 <li><p class="first">his data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="n">fLUp1</span> <span class="n">fLUp2</span> <span class="n">fLUp3</span> <span class="n">Code_LUpaved1</span> <span class="n">Code_LUpaved2</span> <span class="n">Code_LUpaved3</span> <span class="n">fLUb1</span> <span class="n">fLUb2</span> <span class="n">fLUb3</span> <span class="n">fLUb4</span> <span class="n">fLUb5</span> <span class="n">Code_LUbuilding1</span> <span class="n">Code_LUbuilding2</span> <span class="n">Code_LUbuilding3</span> <span class="n">Code_LUbuilding4</span> <span class="n">Code_LUbuilding5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ID</span> <span class="n">fLUp1</span> <span class="n">fLUp2</span> <span class="n">fLUp3</span> <span class="n">Code_LUpaved1</span> <span class="n">Code_LUpaved2</span> <span class="n">Code_LUpaved3</span> <span class="n">fLUb1</span> <span class="n">fLUb2</span> <span class="n">fLUb3</span> <span class="n">fLUb4</span> <span class="n">fLUb5</span> <span class="n">Code_LUbuilding1</span> <span class="n">Code_LUbuilding2</span> <span class="n">Code_LUbuilding3</span> <span class="n">Code_LUbuilding4</span> <span class="n">Code_LUbuilding5</span>
 <span class="mi">1</span> <span class="mi">0</span> <span class="mf">0.62</span> <span class="mf">0.38</span> <span class="mi">806</span> <span class="mi">807</span> <span class="mi">808</span> <span class="mf">0.90</span> <span class="mf">0.10</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">801</span> <span class="mi">802</span> <span class="mi">803</span> <span class="mi">804</span> <span class="mi">805</span>
 <span class="o">...</span>
 </pre></div>
 </div>
 <p>where <em>f</em> is fraction, <em>LU</em> is land use and <em>p</em> is paved. Fractions must add up to 1 for paved and buildings respectively. A plugin to generate this text file is not yet created.</p>
-<div class="figure" id="id10">
+<div class="figure" id="id9">
 <img alt="../_images/SUEWSPrepare_landuse.png" src="../_images/SUEWSPrepare_landuse.png" />
-<p class="caption"><span class="caption-number">Fig. 3.13 </span><span class="caption-text">Box for land use data.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Box for land use data.</span></p>
 </div>
 </li>
 </ul>
@@ -497,9 +488,9 @@
 <dd><ul class="first simple">
 <li>The SUEWS model requires information of initial conditions. SUEWSPRepare generates some basic information used to create a file called <strong>InitialConditionsXXXX_YYYY.nml</strong> where XXXX is the ID grid number.</li>
 </ul>
-<div class="last figure" id="id11">
+<div class="last figure" id="id10">
 <img alt="../_images/SUEWSPrepare_init.png" src="../_images/SUEWSPrepare_init.png" />
-<p class="caption"><span class="caption-number">Fig. 3.14 </span><span class="caption-text">Box for initial conditions.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.13 </span><span class="caption-text">Box for initial conditions.</span></p>
 </div>
 </dd>
 </dl>
@@ -509,9 +500,9 @@
 <dd><ul class="first simple">
 <li>The remaining tabs besides the main settings tab all fall under the same category, namely site library tabs. A site library tab represents certain characteristics of an area. A tab can consist of one or more widgets. Each widget has a predetermined layout but will represent different kinds of information. The left part of a widget can be used to select a site entry for the plugin output or to create a new entry to the site library. The right part of a widget will show information about a site through variables.</li>
 </ul>
-<div class="last figure" id="id12">
+<div class="last figure" id="id11">
 <img alt="../_images/SP_siteLib.jpg" src="../_images/SP_siteLib.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.15 </span><span class="caption-text">Some of the components of a site library tab.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.14 </span><span class="caption-text">Some of the components of a site library tab.</span></p>
 </div>
 </dd>
 </dl>
@@ -522,13 +513,13 @@
 <li>The selection of a site is done through a drop down menu marked “Code”. The codes in the drop down menu represent the site codes for a site. Each code represents one site entry. Selecting a code will show the values of the variables for the site entry in the variable box the right side of the tab. The code selected will be used in the output of the plugin.</li>
 <li>It is possible to use separate codes for each feature in the polygon grid. This requires a field in the polygon grid attribute table that represent the code that is to be used for each feature. If there is such a field click the checkbox marked “Use unique codes for each entry” and select the correct field from the drop down menu.</li>
 </ul>
-<div class="figure align-right" id="id13">
+<div class="figure align-right" id="id12">
 <img alt="../_images/SP_siteCode.jpg" src="../_images/SP_siteCode.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">Site code selection in a site library tab</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.15 </span><span class="caption-text">Site code selection in a site library tab</span></p>
 </div>
-<div class="last figure align-right" id="id14">
+<div class="last figure align-right" id="id13">
 <img alt="../_images/Figure12.png" src="../_images/Figure12.png" />
-<p class="caption"><span class="caption-number">Fig. 3.17 </span><span class="caption-text">Using more than one site code.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">Using more than one site code.</span></p>
 </div>
 </dd>
 </dl>
@@ -544,7 +535,7 @@
 <li><dl class="first docutils">
 <dt>Plugin Output:</dt>
 <dd><ul class="first last simple">
-<li>In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Energy_Balance:_Urban_Energy_Balance_.28SUEWS.2FBLUEWS.2C_advanced.29">SUEWS/BLUEWS (Advanced)</a>. Also, see the <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS manual</a> for more information.</li>
+<li>In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with <a class="reference internal" href="../processor/Urban Energy Balance Urban Energy Balance (SUEWS.BLUEWS, advanced).html#suewsadvanced"><span class="std std-ref">SUEWS/BLUEWS (Advanced)</span></a>. Also, see the <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS manual</a> for more information.</li>
 </ul>
 </dd>
 </dl>

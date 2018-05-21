@@ -1,3 +1,4 @@
+.. _LandCoverFraction(Point):
 
 Urban Land Cover: Land Cover Fraction (Point)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,24 +17,17 @@ Urban Land Cover: Land Cover Fraction (Point)
 
 
 * Introduction:
-      - The Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier>`__) from a point location based on a land cover raster grid.
+      - The Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see `Land Cover Reclassifier <LandCoverReclassifier>`) from a point location based on a land cover raster grid.
       - A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions.
-
-* Location:
-  - The Land Cover Fraction (Point) is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Urban Land Cover
-            -  Land Cover Fraction (Point)
 
 * Dialog box：
       .. figure:: /images/Land_Cover_Reclass.png
 
-          ```to do```
+          The dialog for the Land Cover Fraction (Point) calculator
 
 * Dialog section：
 .. list-table::
-   :widths: 50 50
+   :widths: 10 90
    :header-rows: 0
 
    * - upper

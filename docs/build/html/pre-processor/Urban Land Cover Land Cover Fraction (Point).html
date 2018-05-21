@@ -109,13 +109,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials/Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +181,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="urban-land-cover-land-cover-fraction-point">
-<h1>3.11. Urban Land Cover: Land Cover Fraction (Point)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-point" title="Permalink to this headline">¶</a></h1>
+<span id="landcoverfraction-point"></span><h1>3.11. Urban Land Cover: Land Cover Fraction (Point)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-point" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>Contributor:</li>
 </ul>
@@ -210,40 +208,17 @@
 <li><dl class="first docutils">
 <dt>Introduction:</dt>
 <dd><ul class="first last simple">
-<li>The Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see <a class="reference external" href="#Pre-Processor:_Urban_Land_Cover:_Land_Cover_Reclassifier">Land Cover Reclassifier</a>) from a point location based on a land cover raster grid.</li>
+<li>The Land Cover Fraction (Point) plugin calculates land cover fractions required for UMEP (see <code class="xref any docutils literal notranslate"><span class="pre">Land</span> <span class="pre">Cover</span> <span class="pre">Reclassifier</span></code>) from a point location based on a land cover raster grid.</li>
 <li>A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions.</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Location:
-- The Land Cover Fraction (Point) is located at</p>
-<blockquote>
-<div><ul class="simple">
-<li>UMEP</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Pre-Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Land Cover</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Land Cover Fraction (Point)</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</li>
 <li><dl class="first docutils">
 <dt>Dialog box：</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/Land_Cover_Reclass.png" src="../_images/Land_Cover_Reclass.png" />
-<p class="caption"><span class="caption-number">Fig. 3.31 </span><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 3.30 </span><span class="caption-text">The dialog for the Land Cover Fraction (Point) calculator</span></p>
 </div>
 </dd>
 </dl>
@@ -253,8 +228,8 @@
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="10%" />
+<col width="90%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>upper</td>

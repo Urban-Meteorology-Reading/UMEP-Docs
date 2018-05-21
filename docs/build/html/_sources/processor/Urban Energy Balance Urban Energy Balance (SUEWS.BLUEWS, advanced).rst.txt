@@ -1,3 +1,5 @@
+.. _SUEWSadvanced:
+
 Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
@@ -10,7 +12,6 @@ Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 
    * - Fredrik Lindberg
      - Gothenburg
-
 
 * Introduction:
      - This plugin makes it possible to run the Surface Urban Energy and Water Balance Scheme (SUEWS). SUEWS is also available as a separate program and a simplified version within UMEP (SUEWS Simple).
@@ -25,12 +26,12 @@ Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
               -  Urban Energy Balance (SUEWS/BLUEWS, Advanced)
 
 * Related Preprocessors:
-      - `MetdataPreprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__, `Download data (WATCH) <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_Download_data_.28WATCH.29>`__, `LandCoverReclassifier <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__, `LandCoverFraction (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Point.29>`__, `LandCoverFraction (Grid) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Fraction_.28Grid.29>`__, `Image Morphometric Parameters Calculator (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_.28Point.29>`__, `Image Morphometric Parameters Calculator (Grid) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Image_Morphometric_Parameter_Calculator_.28Grid.29>`__, `Foot Print Model (Point) <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
+      - `MetPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `LandCoverFraction(Grid)`, `MorphometricCalculator(Point)`, `MorphometricCalculator(Grid)`, `SourceArea(Point)`
 
 * Dialog box ：
       .. figure:: /images/SuewsAdvanced.png
 
-          ```to do```
+          The dialog for SUEWS Advanced
 
 * Dialog sections:
      -  When you run the plugin, you will see the dialog shown below. To use this plugin, all input data needs to be prepared beforehand. This can be done using the various plugins in the pre-processor in UMEP. The settings available in this plugin is used for specifying the settings for a specific model run. You should consult the manual (`1 <http://www.urban-climate.net/umep/SUEWS>`__) for instructions and information on what settings to use. For extensive models run it is recommended to execute the model outside of QGIS (see manual). The interface below creates a so-called namelist (**RunControl.nml**) that is used be the model for general settings. After running the model, this file can be found in the suewsmodel directory in the UMEP plugin directory.

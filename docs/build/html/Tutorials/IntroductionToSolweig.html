@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction To Solweig &mdash; UMEP Manual  documentation</title>
+  <title>Introduction to SOLWEIG &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -90,13 +90,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -142,7 +140,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Introduction To Solweig</li>
+      <li>Introduction to SOLWEIG</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,7 +160,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="introduction-to-solweig">
-<span id="id1"></span><h1>Introduction To Solweig<a class="headerlink" href="#introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
+<span id="introductiontosolweig"></span><h1>Introduction to SOLWEIG<a class="headerlink" href="#introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a model [SOlar and LongWave Environmental
@@ -178,7 +176,7 @@ human body is exposed. In SOLWEIG, T<sub>mrt</sub> is derived by modelling
 shortwave and longwave radiation fluxes in six directions (upward,
 downward and from the four cardinal points) and angular factors.</p>
 <p>The model requires <strong>meteorological</strong> forcing data (global shortwave
-radiation (K↓), air temperature (T<sub>a</sub>), relative humidity (RH)),
+radiation (K<sub>down</sub>), air temperature (T<sub>a</sub>), relative humidity (RH)),
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T<sub>mrt</sub>, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
@@ -186,19 +184,16 @@ be added to increase the accuracy of the model output. Below (Figure 1)
 a schematic flowchart of SOLWEIG in shown. The <a class="reference external" href="http://www.urban-climate.net/umep/SOLWEIG">full
 manual</a> provides more
 detail.</p>
-<blockquote>
-<div><div class="figure" id="id2">
-<img alt="../_images/SOLWEIG_flowchart.png" src="../_images/SOLWEIG_flowchart.png" />
+<div class="figure" id="id1">
+<img alt="Figure 1: Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
 <p class="caption"><span class="caption-text">Figure 1: Overview of SOLWEIG</span></p>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <p>To introduce SOLWEIG and how to run the model within <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual">UMEP (Urban
-Multi-scale Environmental
-Predictor)</a>. <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">Help with
-Abbreviations</a></p>
+Multi-scale Environmental Predictor)</a>.</p>
+<p>Help with Abbreviations can be found <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">here</a></p>
 <div class="section" id="steps">
 <h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -224,8 +219,8 @@ and/or there may be instability. Please report any issues or suggestions
 to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 <div class="section" id="data-for-this-exercise">
 <h3>Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
-<p>To make use of the datasets a (for <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">password access is
-required</a>) The
+<p>To make use of the datasets a password access is
+required &lt;<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">http://urban-climate.net/umep/UMEP_Manual#Tutorials</a>&gt;`__). The
 UMEP tutorial datasets can be downloaded from our here
 <a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip">Goteborg_SWEREF99_1200.zip</a></p>
 <ul class="simple">
@@ -234,14 +229,13 @@ cover) from the <strong>Goteborg folder</strong> into a new QGIS session (see
 below).<ul>
 <li>Create a new project</li>
 <li>Examine the geodata by adding the layers (<em>DSM_KRbig</em>,
-<em>CDSM_KRbig</em>, <em>DEM_KRbig</em> and <em>landcover</em>) to your project
-(<a class="reference external" href="Media:Add_Raster_Layer.png">Layer &gt; Add Layer &gt; Add Raster
-Layer</a>).</li>
+<em>CDSM_KRbig</em>, <em>DEM_KRbig</em> and <em>landcover</em>) to your project (<strong>*Layer
+&gt; Add Layer &gt; Add Raster Layer</strong>).</li>
 </ul>
 </li>
 <li>Coordinate system of the grids is Sweref99 1200 (EPSG:3007). If you
 look at the lower right hand side you can see the CRS used in the
-<a class="reference external" href="Media:GOT_LUP.png">current QGIS project</a></li>
+current QGIS project</li>
 <li>Examine the different datasets before you move on.</li>
 <li>To add a legend to the <strong>land cover</strong> raster you can load
 <strong>landcoverstyle.qml</strong> found in the test dataset. Right click on the
@@ -258,283 +252,150 @@ parameters are used. Many other parameters can be modified to more
 appropriate values if applicable. The table below provides an overview
 of the parameters that can be modified in the Simple application of
 SOLWEIG.</p>
-<ul>
-<li><p class="first">R: required O: Optional N : not needed</p>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Spatial data</strong></dt>
-<dd><table border="1" class="colwidths-given first last docutils">
+<p>Data requreiments:
+R: required, O: Optional, N : not needed,
+S: Spatial, M: Meteorological,</p>
+<table border="1" class="colwidths-given docutils" id="id2">
+<caption><span class="caption-text">Input data and parameters</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="30%" />
+<col width="30%" />
+<col width="5%" />
+<col width="5%" />
+<col width="30%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Definition</th>
-<th class="head">Use</th>
-<th class="head">Reference/Comments</th>
-</tr>
-</thead>
 <tbody valign="top">
-<tr class="row-even"><td>Ground and building DSM (DSDM)</td>
+<tr class="row-odd"><td><strong>Data</strong></td>
+<td><strong>Definition</strong></td>
+<td><strong>Use</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>Ground and building digital surface model (DSM)</td>
 <td>High resolution surface model of ground and building heights</td>
 <td>R</td>
+<td>S</td>
 <td>Given in metres above sea level (m asl)</td>
 </tr>
 <tr class="row-odd"><td>Digital elevation model (DEM)</td>
 <td>High resolution surface model of the ground</td>
 <td>R*</td>
+<td>S</td>
 <td>R* if land cover is absent to identify buildings. Given in m asl. Must be same resolution as the DSM.</td>
 </tr>
 <tr class="row-even"><td>Digital canopy surface model (CDSM)</td>
 <td>High resolution surface model of 3D vegetation</td>
 <td>O</td>
+<td>S</td>
 <td>Given in metres above ground level (m agl). Must be same resolution as the DSM.</td>
 </tr>
 <tr class="row-odd"><td>Digital trunk zone surface model (TDSM)</td>
 <td>High resolution surface model of trunk zone heights (underneath tree canopy)</td>
 <td>O</td>
+<td>S</td>
 <td>Given in m agl. Must be same resolution as the DSM.</td>
 </tr>
 <tr class="row-even"><td>Land (ground) cover information (LC)</td>
 <td>High resolution surface model of ground cover</td>
 <td>O</td>
+<td>S</td>
 <td>Must be same resolution as the DSM. Five different ground covers are currently available (building, paved, grass, bare soil and water)</td>
 </tr>
-</tbody>
-</table>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Meteorological data</strong></dt>
-<dd><table border="1" class="colwidths-given first last docutils">
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Definition</th>
-<th class="head">Use</th>
-<th class="head">Reference/Comments</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>UMEP formatted meteorological data</td>
+<tr class="row-odd"><td>UMEP formatted meteorological data</td>
 <td>Meteorological data from one nearby observation station, preferably at 1-2 m above ground.</td>
 <td>R</td>
+<td>M</td>
 <td>Any time resolution can be given.</td>
+</tr>
+<tr class="row-even"><td>Latitude (°)</td>
+<td>Solar related calculations</td>
+<td>R</td>
+<td>O</td>
+<td>Obtained from the ground and building DSM coordinate system</td>
+</tr>
+<tr class="row-odd"><td>Longitude (°)</td>
+<td>Solar related calculations</td>
+<td>R</td>
+<td>O</td>
+<td>Obtained from the ground and building DSM coordinate system</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC (h)</a></td>
+<td>Time zone</td>
+<td>R</td>
+<td>O</td>
+<td>Influences solar related calculations. Set in the interface of the model.</td>
+</tr>
+<tr class="row-odd"><td>Human exposure parameters</td>
+<td>Absorption of radiation and posture</td>
+<td>R</td>
+<td>O</td>
+<td>Set in the interface of the model.</td>
+</tr>
+<tr class="row-even"><td>Environmental parameters</td>
+<td>e.g. albedos and emissivites of surrounding urban fabrics</td>
+<td>R</td>
+<td>O</td>
+<td>Set in the interface of the model.</td>
 </tr>
 </tbody>
 </table>
-</dd>
-</dl>
-</li>
-<li><p class="first"><strong>Other</strong></p>
-<blockquote>
-<div></div></blockquote>
-</li>
-</ul>
 <p>Meterological input data should be in UMEP format. You can use the
 <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor">Meterological
 Preprocessor</a>
-to prepare your input data. There is also a possibility to use a single
-point in time in the plugin.</p>
-<ul class="simple">
-<li>R: required O: Optional N : not needed</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">No.</th>
-<th class="head">USE</th>
-<th class="head">Column name</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>1</td>
-<td>R</td>
-<td>iy</td>
-<td>Year [YYYY]</td>
-</tr>
-<tr class="row-odd"><td>2</td>
-<td>R</td>
-<td>id</td>
-<td>Day of year [DOY]</td>
-</tr>
-<tr class="row-even"><td>3</td>
-<td>R</td>
-<td>it</td>
-<td>Hour [H]</td>
-</tr>
-<tr class="row-odd"><td>4</td>
-<td>R</td>
-<td>imin</td>
-<td>Minute [M]</td>
-</tr>
-<tr class="row-even"><td>5</td>
-<td>N</td>
-<td>qn</td>
-<td>Net all-wave radiation [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>6</td>
-<td>N</td>
-<td>qh</td>
-<td>Sensible heat flux [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-even"><td>7</td>
-<td>N</td>
-<td>qe</td>
-<td>Latent heat flux [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>8</td>
-<td>N</td>
-<td>qs</td>
-<td>Storage heat flux [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-even"><td>9</td>
-<td>N</td>
-<td>qf</td>
-<td>Anthropogenic heat flux [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>10</td>
-<td>N</td>
-<td>U</td>
-<td>Wind speed [m s<sup>-1</sup>]</td>
-</tr>
-<tr class="row-even"><td>11</td>
-<td>R</td>
-<td>RH</td>
-<td>Relative Humidity [%]</td>
-</tr>
-<tr class="row-odd"><td>12</td>
-<td>R</td>
-<td>Tair</td>
-<td>Air temperature [°C]</td>
-</tr>
-<tr class="row-even"><td>13</td>
-<td>O</td>
-<td>pres</td>
-<td>Barometric pressure [kPa]</td>
-</tr>
-<tr class="row-odd"><td>14</td>
-<td>N</td>
-<td>rain</td>
-<td>Rainfall [mm]</td>
-</tr>
-<tr class="row-even"><td>15</td>
-<td>R</td>
-<td>kdown</td>
-<td>Incoming shortwave radiation [W m<sup>-2</sup>] Must be &gt;= 0 W m<sup>-2</sup>.</td>
-</tr>
-<tr class="row-odd"><td>16</td>
-<td>N</td>
-<td>snow</td>
-<td>Snow [mm]</td>
-</tr>
-<tr class="row-even"><td>17</td>
-<td>N</td>
-<td>ldown</td>
-<td>Incoming longwave radiation [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>18</td>
-<td>N</td>
-<td>fcld</td>
-<td>Cloud fraction [tenths]</td>
-</tr>
-<tr class="row-even"><td>19</td>
-<td>N</td>
-<td>Wuh</td>
-<td>External water use [m:sup:<code class="xref any docutils literal"><span class="pre">3</span></code>]</td>
-</tr>
-<tr class="row-odd"><td>20</td>
-<td>N</td>
-<td>xsmd</td>
-<td>Observed soil moisture [m3 m<sup>-3</sup> or kg kg<sup>-1</sup>]</td>
-</tr>
-<tr class="row-even"><td>21</td>
-<td>N</td>
-<td>lai</td>
-<td>Observed leaf area index [m2 m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>22</td>
-<td>O</td>
-<td>kdiff</td>
-<td>Diffuse radiation [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-even"><td>23</td>
-<td>O</td>
-<td>kdir</td>
-<td>Direct radiation [W m<sup>-2</sup>]</td>
-</tr>
-<tr class="row-odd"><td>24</td>
-<td>N</td>
-<td>wdir</td>
-<td>Wind direction [°]</td>
-</tr>
-</tbody>
-</table>
+to prepare your input data. There is also a possibility to use a single point in time in the plugin.</p>
+<p>Requred meteorological data is:</p>
+<ol class="arabic simple">
+<li>Air temperature (°C)</li>
+<li>Relative humidity (%)</li>
+<li>Incoming shortwave radiation (W m<sup>2</sup>)</li>
+</ol>
+<p>The model performance will increase if also diffure and direct beam solar radiation is
+available but the mdoel can also calculate these variables.</p>
 </div>
 <div class="section" id="how-to-run-solweig-from-the-umep-plugin">
 <h2>How to Run SOLWEIG from the UMEP-plugin<a class="headerlink" href="#how-to-run-solweig-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Open SOLWEIG from <em>UMEP -&gt; Processor -&gt; Outdoor Thermal Comfort -&gt;
 Mean radiant temperature (SOLWEIG)</em>.</p>
-<ul>
-<li><p class="first">Some additional information about the plugin is found in the lower
+<ul class="simple">
+<li>Some additional information about the plugin is found in the lower
 left window. You will make use of a test dataset from observations
-for Gothenburg, Sweden.</p>
+for Gothenburg, Sweden.</li>
+</ul>
 <blockquote>
 <div><div class="figure" id="id3">
-<img alt="../_images/SOLWEIG.png" src="../_images/SOLWEIG.png" />
-<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model</span></p>
+<a class="reference internal image-reference" href="../_images/SOLWEIG_Interface.png"><img alt="None" src="../_images/SOLWEIG_Interface.png" style="width: 1070px;" /></a>
+<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model (click on image for larger image)</span></p>
 </div>
 </div></blockquote>
-</li>
-</ul>
 </li>
 <li><p class="first">To be able to run the model some additional spatial datasets needs to
 be created.</p>
-<ul>
-<li><p class="first">Close the SOLWEIG plugin and open <em>UMEP -&gt; Pre-Processor -&gt; Urban
-geometry -&gt; Sky View Factor</em>.</p>
-</li>
-<li><p class="first">To run SOLWEIG various sky view factor (SVF) maps for both
+<ul class="simple">
+<li>Close the SOLWEIG plugin and open <em>UMEP -&gt; Pre-Processor -&gt; Urban
+geometry -&gt; Sky View Factor</em>.</li>
+<li>To run SOLWEIG various sky view factor (SVF) maps for both
 vegetation and buildings must be created (see <a class="reference external" href="http://link.springer.com/article/10.1007/s00704-010-0382-8">Lindberg and
 Grimmond
 (2011)</a>
-for details).</p>
-</li>
-<li><p class="first">You can create all SVFs needed (vegetation and buildings) at the
+for details).</li>
+<li>You can create all SVFs needed (vegetation and buildings) at the
 same time. Use the settings as shown below. Use an appropriate
-output folder for your computer.</p>
+output folder for your computer.</li>
+</ul>
 <blockquote>
 <div><div class="figure" id="id4">
-<img alt="../_images/Svf_solweig.png" src="../_images/Svf_solweig.png" />
+<a class="reference internal image-reference" href="../_images/SOLWEIG_SVF_solweig.png"><img alt="None" src="../_images/SOLWEIG_SVF_solweig.png" style="width: 487px;" /></a>
 <p class="caption"><span class="caption-text">Figure 3: Settings for the SkyViewFactorCalculator.</span></p>
 </div>
 </div></blockquote>
-</li>
-<li><p class="first">When the calculation is done, map will appear in the map canvas.
-This is the &#8216;total&#8217; SVF i.e., including both buildings and
-vegetation. Examine the dataset.</p>
-</li>
-<li><p class="first">Where are the highest and lowest values found?</p>
-</li>
-<li><p class="first">Look in your output folder and find a zip-file containing all the
-necessary SVF maps needed to run the SOLWEIG-model.</p>
-</li>
+<ul class="simple">
+<li>When the calculation is done, map will appear in the map canvas.
+This is the ‘total’ SVF i.e., including both buildings and
+vegetation. Examine the dataset.</li>
+<li>Where are the highest and lowest values found?</li>
+<li>Look in your output folder and find a zip-file containing all the
+necessary SVF maps needed to run the SOLWEIG-model.</li>
 </ul>
 </li>
 <li><p class="first">Another preprocessing plugin needed is to create the building wall
@@ -543,7 +404,7 @@ Wall height and aspect</em> and use the settings as shown below (Figure
 4).</p>
 <blockquote>
 <div><div class="figure" id="id5">
-<img alt="../_images/Wall_solweig.png" src="../_images/Wall_solweig.png" />
+<a class="reference internal image-reference" href="../_images/SOLWEIG_wallgeight_solweig.png"><img alt="None" src="../_images/SOLWEIG_wallgeight_solweig.png" style="width: 505px;" /></a>
 <p class="caption"><span class="caption-text">Figure 4: Settings for the Wall height and aspect plugin.</span></p>
 </div>
 </div></blockquote>
@@ -553,12 +414,14 @@ use the GUI to set one point in time (i.e. a summer hour in
 Gothenburg, Sweden) hence, no input meteorological file is needed for
 now. No information on vegetation and ground cover is added for this
 first try. Click <strong>Run</strong>.</p>
-<div class="figure" id="id6">
-<img alt="../_images/Tmrt1_solweig.png" src="../_images/Tmrt1_solweig.png" />
-<p class="caption"><span class="caption-text">Figure 5: The settings for your first SOLWEIG run.</span></p>
+<blockquote>
+<div><div class="figure" id="id6">
+<a class="reference internal image-reference" href="../_images/SOLWEIG_Tmrt1_solweig.png"><img alt="None" src="../_images/SOLWEIG_Tmrt1_solweig.png" style="width: 1078px;" /></a>
+<p class="caption"><span class="caption-text">Figure 5: The settings for your first SOLWEIG run (click on image for larger image).</span></p>
 </div>
+</div></blockquote>
 </li>
-<li><p class="first">Examine the output (Average T<sub>mrt</sub> [°C]. What is the main
+<li><p class="first">Examine the output (Average T<sub>mrt</sub> (°C). What is the main
 driver to the spatial variations in T<sub>mrt</sub>?</p>
 </li>
 <li><p class="first">Add 3D vegetation information by ticking in <em>Use vegetation scheme
@@ -597,18 +460,17 @@ the layer it has to be editable and Add Feature should be activated
 (Figure 6).</p>
 <blockquote>
 <div><div class="figure" id="id7">
-<img alt="../_images/Addpoint.png" src="../_images/Addpoint.png" />
+<a class="reference internal image-reference" href="../_images/SOLWEIG_AddPoint.png"><img alt="None" src="../_images/SOLWEIG_AddPoint.png" style="width: 411px;" /></a>
 <p class="caption"><span class="caption-text">Figure 6: Setting to add points</span></p>
 </div>
 </div></blockquote>
-<p>Two points should be
-added and the attributes should be id=<strong>1</strong> and
+<p>Two points should be added and the attributes should be id=<strong>1</strong> and
 name=<strong>courtyard</strong> for the right point and id=<strong>2</strong> and
 name=<strong>park</strong> for the left point. See Figure 7 for the locations of
 the two points.</p>
 <blockquote>
 <div><div class="figure" id="id8">
-<img alt="../_images/Pointskr.png" src="../_images/Pointskr.png" />
+<a class="reference internal image-reference" href="../_images/SOLWEIG_Pointskr.png"><img alt="None" src="../_images/SOLWEIG_Pointskr.png" style="width: 846px;" /></a>
 <p class="caption"><span class="caption-text">Figure 7: Location of the two POIs</span></p>
 </div>
 </div></blockquote>
@@ -638,8 +500,8 @@ output maps. Start by locating your output folder in the top section
 (<em>Load Model Result</em>).</p>
 <blockquote>
 <div><div class="figure" id="id9">
-<img alt="../_images/SOLWEIG.png" src="../_images/SOLWEIG.png" />
-<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model</span></p>
+<a class="reference internal image-reference" href="../_images/SOLWEIG_SOLWEIGAnalyzer.png"><img alt="None" src="../_images/SOLWEIG_SOLWEIGAnalyzer.png" style="width: 875px;" /></a>
+<p class="caption"><span class="caption-text">Figure 8: Dialog for the SOLWEIG Analyzer plug-in</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -689,12 +551,12 @@ balance modelling with SUEWS.</p>
 in the previous section adding five attributes (<em>id, ttype, trunk,
 totheight, diameter</em>). The attributes should all be decimal (float)
 numbers (see table below). The location of the three new trees are
-shown in Figure 8. The values for all three vegetation units should
+shown in Figure 9. The values for all three vegetation units should
 be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 <blockquote>
 <div><div class="figure" id="id10">
-<img alt="../_images/TreesKR.png" src="../_images/TreesKR.png" />
-<p class="caption"><span class="caption-text">Figure 8: Location of the three new vegetation units</span></p>
+<a class="reference internal image-reference" href="../_images/SOLWEIG_File_TreesKR.png"><img alt="None" src="../_images/SOLWEIG_File_TreesKR.png" style="width: 846px;" /></a>
+<p class="caption"><span class="caption-text">Figure 9: Location of the three new vegetation units.</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -702,11 +564,11 @@ be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 previously (located in your output directory).</p>
 </li>
 <li><p class="first">Open the TreeGenerator (UMEP -&gt; PreProcessor -&gt; TreeGenerator) and
-use the settings as shown in Figure 9.</p>
+use the settings as shown in Figure 10.</p>
 <blockquote>
 <div><div class="figure" id="id11">
-<img alt="../_images/Treegeneratorsolweig.png" src="../_images/Treegeneratorsolweig.png" />
-<p class="caption"><span class="caption-text">Figure 9: The settings for the Tree Generator</span></p>
+<a class="reference internal image-reference" href="../_images/SOLWEIG_Treegeneratorsolweig.png"><img alt="None" src="../_images/SOLWEIG_Treegeneratorsolweig.png" style="width: 574px;" /></a>
+<p class="caption"><span class="caption-text">Figure 10: The settings for the Tree Generator</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -722,7 +584,7 @@ compare the differences.</p>
 </li>
 </ol>
 <p>The table below show the input variables needed for each tree point.</p>
-<table border="1" class="colwidths-given docutils">
+<table border="1" class="docutils">
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -737,28 +599,33 @@ compare the differences.</p>
 <tbody valign="top">
 <tr class="row-even"><td>ttype</td>
 <td>Tree type</td>
-<td><dl class="first last docutils">
-<dt>Two shapes are available:</dt>
-<dd><ul class="first last simple">
+<td><p class="first">Two shapes are
+available:</p>
+<ul class="last simple">
 <li>conifer = 1 and</li>
 <li>deciduous = 2.</li>
-<li>To remove vegetation set ttype = 0.</li>
+<li>To remove
+vegetation set
+ttype = 0.</li>
 </ul>
-</dd>
-</dl>
 </td>
 </tr>
 <tr class="row-odd"><td>trunk</td>
-<td>Trunk zone height (m agl)</td>
-<td>Height of the trunk zone.</td>
+<td>Trunk zone height (m
+agl)</td>
+<td>Height of the trunk
+zone.</td>
 </tr>
 <tr class="row-even"><td>totheight</td>
-<td>Total tree height (m agl)</td>
-<td>Maximum height of the vegetation unit</td>
+<td>Total tree height (m
+agl)</td>
+<td>Maximum height of the
+vegetation unit</td>
 </tr>
 <tr class="row-odd"><td>diameter</td>
 <td>Canopy diameter (m)</td>
-<td>Circular diameter of the vegetation unit</td>
+<td>Circular diameter of
+the vegetation unit</td>
 </tr>
 </tbody>
 </table>

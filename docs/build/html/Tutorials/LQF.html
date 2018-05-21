@@ -90,13 +90,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorials.html">7. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Contributing_with_python_code_to_the_UMEP_plugin_in_QGIS.html">9. Contributing with python code to the UMEP plugin in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../SOLWEIG.html">10. SOLWEIG v2016a</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GQF_Manual.html">11. GQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../LQF_Manual.html">12. LQF Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">13. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">14. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">15. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">Other Manuals</a></li>
 </ul>
 
             
@@ -288,7 +286,7 @@ are used to describe both of them</li>
 </ol>
 <p>The first two sections of the DataSources.nml file should now look like
 this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">outputAreas</span>
    <span class="n">shapefile</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/griddedResidentialPopulation.shp&#39;</span>
    <span class="n">epsgCode</span> <span class="o">=</span> <span class="mi">32631</span>
    <span class="n">featureIds</span> <span class="o">=</span> <span class="s1">&#39;ID&#39;</span>
@@ -304,7 +302,7 @@ this:</p>
 <div class="section" id="add-the-lqf-database-and-mean-daily-temperature-files">
 <h3>Add the LQF database and mean daily temperature files<a class="headerlink" href="#add-the-lqf-database-and-mean-daily-temperature-files" title="Permalink to this headline">¶</a></h3>
 <p>LQF needs to know the location of its database of national parameters.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">database</span>
    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LQFDatabase_V1-2.sqlite&#39;</span>
 <span class="o">/</span>
 </pre></div>
@@ -315,7 +313,7 @@ file) must be formatted appropriately for LQF. <a class="reference external" hre
 manual</a> for a detailed description
 of the file format</li>
 </ul>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&amp;temporal
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&amp;temporal
     ! Air temperature each day for a year
     dailyTemperature = &#39;C:\Some\Path\To\Files \dailyTemperature_2015.csv&#39;
 /
@@ -338,11 +336,11 @@ to the data sources file.</p>
 <p>This loads the model interface dialog box:</p>
 <div class="figure" id="id2">
 <img alt="../_images/LQF_Tutorial_RunLQF.png" src="../_images/LQF_Tutorial_RunLQF.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <div class="section" id="choose-configuration-files-and-output-folder">
 <h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
-<p>Working from the top of the dialog box to the bottom...</p>
+<p>Working from the top of the dialog box to the bottom…</p>
 <ol class="arabic simple">
 <li>Click the … buttons in the “Configuration and raw input data” panel
 to browse to the parameters.nml and DataSources.nml files. A pop-up
@@ -372,7 +370,7 @@ used as normal.</p>
 then select “Run”.</p>
 <div class="figure" id="id3">
 <img alt="../_images/LQF_Tutorial_DateRange.png" src="../_images/LQF_Tutorial_DateRange.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div>
 </div>
@@ -382,7 +380,7 @@ then select “Run”.</p>
 some of the model results to open the visualisation tool.</p>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../_images/LQF_Tutorial_Visualise.png"><img alt="LQF_Tutorial_Visualise.png" src="../_images/LQF_Tutorial_Visualise.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <div class="section" id="create-a-map-of-total-qf-at-noon">
 <h3>Create a map of total QF at noon<a class="headerlink" href="#create-a-map-of-total-qf-at-noon" title="Permalink to this headline">¶</a></h3>
@@ -393,7 +391,7 @@ visualisation tool and return to the main canvas to inspect the four new
 layers that have appeared.</p>
 <div class="figure" id="id5">
 <img alt="../_images/525px-LQF_Tutorial_QfMap_1.png" src="../_images/525px-LQF_Tutorial_QfMap_1.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <p>Each layer corresponds to a different QF component, Qm (metabolism) and
 is plotted on the top layer. De-selecting a layer in the Layers panel
@@ -407,7 +405,7 @@ removed by double-clicking the colour levels and choosing a border
 colour the same as the fill colour.</p>
 <div class="figure" id="id6">
 <img alt="../_images/525px-LQF_Tutorial_QfMap_2.png" src="../_images/525px-LQF_Tutorial_QfMap_2.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div>
 <div class="section" id="plot-a-time-series-of-qf-in-the-centre-of-the-city">
@@ -416,7 +414,7 @@ colour the same as the fill colour.</p>
 of interest, zoom into the city centre, choose the selection tool</p>
 <div class="figure" id="id7">
 <img alt="../_images/LQF_Tutorial_SelectFeatureIcon.png" src="../_images/LQF_Tutorial_SelectFeatureIcon.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <p>and click an output area of
 interest.</p>
@@ -431,7 +429,7 @@ interest.</p>
 <blockquote>
 <div><div class="figure" id="id9">
 <img alt="../_images/LQF_Tutorial_FeatureInfo.png" src="../_images/LQF_Tutorial_FeatureInfo.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 <p>Return to the visualisation tool, choose output area 5448 and click
@@ -441,7 +439,7 @@ building emissions on Thursday 15th when the weather is colder.</p>
 <blockquote>
 <div><div class="figure" id="id10">
 <img alt="../_images/525px-LQF_Tutorial_Temporal_standardcase.png" src="../_images/525px-LQF_Tutorial_Temporal_standardcase.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 </div>
@@ -487,7 +485,7 @@ files</a>).</p>
 </div></blockquote>
 <div class="figure" id="id12">
 <img alt="../_images/525px-LQF_Tutorial_BuildingProfiles.png" src="../_images/525px-LQF_Tutorial_BuildingProfiles.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <p><strong>Step 1:</strong>
 Create a duplicate of the DataSources.nml file used earlier</p>
@@ -497,7 +495,7 @@ LondonBuildingProfiles.csv files. These contain new profile data</p>
 <p><strong>Step 4:</strong> Add these to the &amp;temporal section of the new DataSources
 file using the optional diurnTraffic and diurnEnergy entries. The
 section should now resemble this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">temporal</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">temporal</span>
     <span class="n">dailyTemperature</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/dailyTemperature_2015.csv&#39;</span>
     <span class="n">diurnTraffic</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/weeklyTraffic.csv&#39;</span>
     <span class="n">diurnEnergy</span> <span class="o">=</span> <span class="s1">&#39;C:/Some/Path/To/Files/LondonBuildingProfiles.csv&#39;</span>
@@ -600,7 +598,7 @@ example, we will assume that:</p>
 <p><strong>Step 2:</strong> Copy the optional entries needed for the custom temperature
 response from the manual and ensure the values are consistent with those
 below</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">CustomTemperatureResponse</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">CustomTemperatureResponse</span>
    <span class="n">Th</span> <span class="o">=</span> <span class="mi">20</span>
    <span class="n">Tc</span> <span class="o">=</span> <span class="mi">20</span>
    <span class="n">Ah</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -618,7 +616,7 @@ emissions are much greater than in <a class="reference external" href="#LQF_Tuto
 metabolism emissions remains the same as before.</p>
 <div class="figure" id="id13">
 <a class="reference internal image-reference" href="../_images/525px-LQF_Tutorial_Temporal_customResponse.png"><img alt="LQF_Tutorial_Temporal_customResponse.png" src="../_images/525px-LQF_Tutorial_Temporal_customResponse.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text"><code class="docutils literal"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 <ul class="simple">
 <li><a class="reference internal" href="GQF.html"><span class="doc">GQF</span></a>:

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+.. _LandCoverReclassifier:
+=======
 .. _Urban_Land_Cover_Land_Cover_Reclassifierr:
+>>>>>>> origin/master
 
 Urban Land Cover: Land Cover Reclassifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,8 +20,9 @@ Urban Land Cover: Land Cover Reclassifier
 
 * Introduction:
      -  The Land Cover Reclassifier is a simple plugin that can be used to create a UMEP land cover raster grid. The land cover fractions included in UMEP are:
+
 .. list-table::
-   :widths: 33 33 33
+   :widths: 10 25 75
    :header-rows: 0
 
    * - 1
@@ -42,22 +47,16 @@ Urban Land Cover: Land Cover Reclassifier
      - Water
      - Open water (e.g. lakes, ponds, rivers, fountain)
 
-* Location:
-  - The Land Cover Reclassifier is located at
-      -  UMEP
-        -  Pre-Processor
-          -  Urban Land Cover
-            - Land Cover Reclassifier
 
 * Dialog box:
 
         .. figure:: /images/Landcoverreclassifier.png
 
-            ```to do```
+            The dialog for the Land Cover Reclassifier
 
 * Dialog sections:
 .. list-table::
-   :widths: 50 50
+   :widths: 10 90
    :header-rows: 0
 
    * - upper

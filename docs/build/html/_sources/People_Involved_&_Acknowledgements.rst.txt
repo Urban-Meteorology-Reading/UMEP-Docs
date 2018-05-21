@@ -3,14 +3,14 @@
 People Involved & Acknowledgements
 ----------------------------------
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 17 20 23 40
    :header-rows: 1
 
    * - Group
      - Institution
      - Team
      - Acknowledgement
-   * - Sue Grimmond
+   * - `Sue Grimmond <http://www.met.reading.ac.uk/userpages/xv904931.php>`__ 
      - *University of Reading, UK*
      - - Christoph W. Kent
        - Helen Ward
@@ -27,20 +27,20 @@ People Involved & Acknowledgements
         - EUf7 emBRACE
         - H2020 UrbanFluxes
         - NERC Case Studentship
-   * - Fredrik Lindberg
+   * - `Fredrik Lindberg <https://gvc.gu.se/english/personnel?languageId=100001&userId=xlinfr>`__
      - *University of Gothenburg, Sweden*
      - - Frans Olofsson
        - Niklas Krave
        - Shiho Onomura
      - - H2020 UrbanFluxes
        - FORMAS Climplan
-   * - Leena Järvi
+   * - `Leena Järvi <https://tuhat.helsinki.fi/portal/en/persons/leena-jarvi(198f2cdc-762e-4456-9170-284c1507429a).html>`__
      - *University of Helsinki, Finland*
      - Tom Kokkonen
      - - Maj and Tor Nessling foundation
        - Academy of Finland
        - EUf7 Bridge
-   * - Jian Guo Tan
+   * - `Jian Guo Tan <https://scholar.google.com/citations?user=NwIDutIAAAAJ&hl=en>`__
      - *Shanghai Institute of Meteorological Sciences, SMS, CMA, China*
      - - Yuan Yong Chang
        - Dongwei Liu

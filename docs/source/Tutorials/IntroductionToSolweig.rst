@@ -1,16 +1,14 @@
-.. _Introduction to SOLWEIG:
+.. _IntroductionToSOLWEIG:
 
-Introduction To Solweig
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
+Introduction to SOLWEIG
+=======================
 
 Introduction
 ------------
 
 In this tutorial you will use a model [SOlar and LongWave Environmental
 Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
-temperature (|TMRT|).
+temperature (T\ :sub:`mrt`).
 
 SOLWEIG is a model that simulates spatial variations of 3D radiation
 fluxes and the T\ :sub:`mrt` in complex urban settings. It is also able
@@ -23,7 +21,7 @@ shortwave and longwave radiation fluxes in six directions (upward,
 downward and from the four cardinal points) and angular factors.
 
 The model requires **meteorological** forcing data (global shortwave
-radiation (K↓), air temperature (|Ta|), relative humidity (RH)),
+radiation (K\ :sub:`down`), air temperature (T\ :sub:`a`), relative humidity (RH)),
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T\ :sub:`mrt`, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
@@ -32,17 +30,18 @@ a schematic flowchart of SOLWEIG in shown. The `full
 manual <http://www.urban-climate.net/umep/SOLWEIG>`__ provides more
 detail.
 
-    .. figure:: /images/SOLWEIG_flowchart.png
+.. figure:: /images/SOLWEIG_flowchart.png
+   :alt:  Figure 1: Overview of SOLWEIG
 
-          Figure 1: Overview of SOLWEIG
+   Figure 1: Overview of SOLWEIG
 
 Objectives
 ----------
 
 To introduce SOLWEIG and how to run the model within `UMEP (Urban
-Multi-scale Environmental
-Predictor) <http://urban-climate.net/umep/UMEP_Manual>`__. `Help with
-Abbreviations <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+Multi-scale Environmental Predictor) <http://urban-climate.net/umep/UMEP_Manual>`__. 
+
+Help with Abbreviations can be found `here <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
 
 Steps
 ~~~~~
@@ -71,24 +70,23 @@ to our `repository <https://bitbucket.org/fredrik_ucg/umep/>`__.
 Data for this exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To make use of the datasets a (for `password access is
-required <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__) The
+To make use of the datasets a password access is
+required <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__). The
 UMEP tutorial datasets can be downloaded from our here
-`Goteborg\_SWEREF99\_1200.zip <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
+`Goteborg_SWEREF99_1200.zip <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
 
 -  Download, extract and add the raster layers (DSM, CDSM, DEM and land
    cover) from the **Goteborg folder** into a new QGIS session (see
    below).
 
    -  Create a new project
-   -  Examine the geodata by adding the layers (*DSM\_KRbig*,
-      *CDSM\_KRbig*, *DEM\_KRbig* and *landcover*) to your project
-      (`Layer > Add Layer > Add Raster
-      Layer <Media:Add_Raster_Layer.png>`__).
+   -  Examine the geodata by adding the layers (*DSM_KRbig*,
+      *CDSM_KRbig*, *DEM_KRbig* and *landcover*) to your project (***Layer
+      > Add Layer > Add Raster Layer**).
 
 -  Coordinate system of the grids is Sweref99 1200 (EPSG:3007). If you
    look at the lower right hand side you can see the CRS used in the
-   `current QGIS project <Media:GOT_LUP.png>`__
+   current QGIS project
 -  Examine the different datasets before you move on.
 
 -  To add a legend to the **land cover** raster you can load
@@ -106,194 +104,89 @@ appropriate values if applicable. The table below provides an overview
 of the parameters that can be modified in the Simple application of
 SOLWEIG.
 
-*  R: required O: Optional N : not needed
+Data requreiments:
+R: required, O: Optional, N : not needed, 
+S: Spatial, M: Meteorological, 
 
-* **Spatial data**
-        .. list-table::
-         :widths: 25 25 25 25
-         :header-rows: 1
+.. list-table:: Input data and parameters
+   :widths: 30 30 5 5 30
 
-         * - Type
-           - Definition
-           - Use
-           - Reference/Comments
-         * - Ground and building DSM (DSDM)
-           - High resolution surface model of ground and building heights
-           - R
-           - Given in metres above sea level (m asl)
-         * - Digital elevation model (DEM)
-           - High resolution surface model of the ground
-           - R\*
-           - R\* if land cover is absent to identify buildings. Given in m asl. Must be same resolution as the DSM.
-         * - Digital canopy surface model (CDSM)
-           - High resolution surface model of 3D vegetation
-           - O
-           - Given in metres above ground level (m agl). Must be same resolution as the DSM.
-         * - Digital trunk zone surface model (TDSM)
-           - High resolution surface model of trunk zone heights (underneath tree canopy)
-           - O
-           - Given in m agl. Must be same resolution as the DSM.
-         * - Land (ground) cover information (LC)
-           - High resolution surface model of ground cover
-           - O
-           - Must be same resolution as the DSM. Five different ground covers are currently available (building, paved, grass, bare soil and water)
-* **Meteorological data**
-         .. list-table::
-          :widths: 25 25 25 25
-          :header-rows: 1
-
-          * - Type
-            - Definition
-            - Use
-            - Reference/Comments
-          * - UMEP formatted meteorological data
-            - Meteorological data from one nearby observation station, preferably at 1-2 m above ground.
-            - R
-            - Any time resolution can be given.
-*  **Other**
-
-       .. list-table::
-         :widths: 25 25 25 25
-         :header-rows: 1
-
-          * - Type
-            - Definition
-            - Use
-            - Reference/Comments
-          * - Latitude (u'°')
-            - Solar related calculations
-            - R
-            - Obtained from the ground and building CRS
-          * - Longitude (u'°')
-            - Solar related calculations
-            - R
-            - Obtained from the ground and building CRS
-          * - `UTC (h) <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`__
-            - Time zone
-            - R
-            - Influences solar related calculations. Set in the interface of the model.
-          * - Human exposure parameters
-            - Absorption of radiation and posture
-            - R
-            - Set in the interface of the model.
-          * - Environmental parameters
-            - e.g. albedos and emissivites of surrounding urban fabrics
-            - R
-            - Set in the interface of the model.
-
+   * - **Data**
+     - **Definition**
+     - **Use**
+     - **Type**
+     - **Description**
+   * - Ground and building digital surface model (DSM)
+     - High resolution surface model of ground and building heights
+     - R
+     - S
+     - Given in metres above sea level (m asl)
+   * - Digital elevation model (DEM) 
+     - High resolution surface model of the ground 
+     - R\* 
+     - S 
+     - R\* if land cover is absent to identify buildings. Given in m asl. Must be same resolution as the DSM.
+   * - Digital canopy surface model (CDSM) 
+     - High resolution surface model of 3D vegetation 
+     - O 
+     - S
+     - Given in metres above ground level (m agl). Must be same resolution as the DSM.
+   * - Digital trunk zone surface model (TDSM) 
+     - High resolution surface model of trunk zone heights (underneath tree canopy) 
+     - O 
+     - S 
+     - Given in m agl. Must be same resolution as the DSM.
+   * - Land (ground) cover information (LC) 
+     - High resolution surface model of ground cover 
+     - O 
+     - S 
+     - Must be same resolution as the DSM. Five different ground covers are currently available (building, paved, grass, bare soil and water)
+   * - UMEP formatted meteorological data 
+     - Meteorological data from one nearby observation station, preferably at 1-2 m above ground. 
+     - R 
+     - M 
+     - Any time resolution can be given.
+   * - Latitude (°) 
+     - Solar related calculations 
+     - R 
+     - O
+     - Obtained from the ground and building DSM coordinate system
+   * - Longitude (°) 
+     - Solar related calculations 
+     - R
+     - O
+     - Obtained from the ground and building DSM coordinate system
+   * - `UTC (h) <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`__
+     - Time zone 
+     - R
+     - O 
+     - Influences solar related calculations. Set in the interface of the model.
+   * - Human exposure parameters 
+     - Absorption of radiation and posture 
+     - R 
+     - O 
+     - Set in the interface of the model.
+   * - Environmental parameters
+     - e.g. albedos and emissivites of surrounding urban fabrics 
+     - R 
+     - O 
+     - Set in the interface of the model.
+	 
 
 Meterological input data should be in UMEP format. You can use the
 `Meterological
 Preprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__
-to prepare your input data. There is also a possibility to use a single
-point in time in the plugin.
+to prepare your input data. There is also a possibility to use a single point in time in the plugin. 
 
--  R: required O: Optional N : not needed
+Requred meteorological data is: 
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 1
+#. Air temperature (°C)
+#. Relative humidity (%)
+#. Incoming shortwave radiation (W m\ :sup:`2`)
 
-   * - No.
-     - USE
-     - Column name
-     - Description
-   * - 1
-     - R
-     - iy
-     - Year [YYYY]
-   * - 2
-     - R
-     - id
-     - Day of year [DOY]
-   * - 3
-     - R
-     - it
-     - Hour [H]
-   * - 4
-     - R
-     - imin
-     - Minute [M]
-   * - 5
-     - N
-     - qn
-     - Net all-wave radiation [W m\ :sup:`-2`]
-   * - 6
-     - N
-     - qh
-     - Sensible heat flux [W m\ :sup:`-2`]
-   * - 7
-     - N
-     - qe
-     - Latent heat flux [W m\ :sup:`-2`]
-   * - 8
-     - N
-     - qs
-     - Storage heat flux [W m\ :sup:`-2`]
-   * - 9
-     - N
-     - qf
-     - Anthropogenic heat flux [W m\ :sup:`-2`]
-   * - 10
-     - N
-     - U
-     - Wind speed [m s\ :sup:`-1`]
-   * - 11
-     - R
-     - RH
-     - Relative Humidity [%]
-   * - 12
-     - R
-     - Tair
-     - Air temperature [°C]
-   * - 13
-     - O
-     - pres
-     - Barometric pressure [kPa]
-   * - 14
-     - N
-     - rain
-     - Rainfall [mm]
-   * - 15
-     - R
-     - kdown
-     - Incoming shortwave radiation [W m\ :sup:`-2`] Must be >= 0 W m\ :sup:`-2`.
-   * - 16
-     - N
-     - snow
-     - Snow [mm]
-   * - 17
-     - N
-     - ldown
-     - Incoming longwave radiation [W m\ :sup:`-2`]
-   * - 18
-     - N
-     - fcld
-     - Cloud fraction [tenths]
-   * - 19
-     - N
-     - Wuh
-     - External water use [m:sup:`3`]
-   * - 20
-     - N
-     - xsmd
-     - Observed soil moisture [m3 m\ :sup:`-3` or kg kg\ :sup:`-1`]
-   * - 21
-     - N
-     - lai
-     - Observed leaf area index [m2 m\ :sup:`-2`]
-   * - 22
-     - O
-     - kdiff
-     - Diffuse radiation [W m\ :sup:`-2`]
-   * - 23
-     - O
-     - kdir
-     - Direct radiation [W m\ :sup:`-2`]
-   * - 24
-     - N
-     - wdir
-     - Wind direction [°]
+The model performance will increase if also diffure and direct beam solar radiation is 
+available but the mdoel can also calculate these variables. 
+
 
 How to Run SOLWEIG from the UMEP-plugin
 ---------------------------------------
@@ -305,10 +198,11 @@ How to Run SOLWEIG from the UMEP-plugin
       left window. You will make use of a test dataset from observations
       for Gothenburg, Sweden.
 
-          .. figure:: /images/SOLWEIG.png
+    .. figure:: /images/SOLWEIG_Interface.png
+       :alt:  None
+       :width: 1070px
 
-
-              Figure 2: Dialog for the SOLWEIG model
+       Figure 2: Dialog for the SOLWEIG model (click on image for larger image)
 
 #. To be able to run the model some additional spatial datasets needs to
    be created.
@@ -322,11 +216,14 @@ How to Run SOLWEIG from the UMEP-plugin
       for details).
    -  You can create all SVFs needed (vegetation and buildings) at the
       same time. Use the settings as shown below. Use an appropriate
-      output folder for your computer.
-          .. figure:: /images/Svf_solweig.png
-
-              Figure 3: Settings for the SkyViewFactorCalculator.
-
+      output folder for your computer. 
+	  
+    .. figure:: /images/SOLWEIG_SVF_solweig.png
+       :alt:  None
+       :width: 487px
+       
+       Figure 3: Settings for the SkyViewFactorCalculator.
+	   
    -  When the calculation is done, map will appear in the map canvas.
       This is the 'total' SVF i.e., including both buildings and
       vegetation. Examine the dataset.
@@ -338,25 +235,29 @@ How to Run SOLWEIG from the UMEP-plugin
    heights and aspect. Open *UMEP -> Pre-Processor -> Urban geometry ->
    Wall height and aspect* and use the settings as shown below (Figure
    4).
-
-      .. figure:: /images/Wall_solweig.png
-
-          Figure 4: Settings for the Wall height and aspect plugin.
+   
+    .. figure:: /images/SOLWEIG_wallgeight_solweig.png
+       :alt:  None
+       :width: 505px
+       
+       Figure 4: Settings for the Wall height and aspect plugin.
 
 #. Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
    use the GUI to set one point in time (i.e. a summer hour in
    Gothenburg, Sweden) hence, no input meteorological file is needed for
    now. No information on vegetation and ground cover is added for this
-   first try. Click **Run**.
-
-   .. figure:: /images/Tmrt1_solweig.png
-
-      Figure 5: The settings for your first SOLWEIG run.
-
-#. Examine the output (Average T\ :sub:`mrt` [°C]. What is the main
+   first try. Click **Run**. 
+   
+    .. figure:: /images/SOLWEIG_Tmrt1_solweig.png
+       :alt:  None
+       :width: 1078px
+       
+       Figure 5: The settings for your first SOLWEIG run (click on image for larger image).
+	   
+#. Examine the output (Average T\ :sub:`mrt` (°C). What is the main
    driver to the spatial variations in T\ :sub:`mrt`?
 #. Add 3D vegetation information by ticking in *Use vegetation scheme
-   (Lindberg, Grimmond 2011)* and add **CDSM\_Krbig** as the *Vegetation
+   (Lindberg, Grimmond 2011)* and add **CDSM_Krbig** as the *Vegetation
    Canopy DSM*. As no TDSM exists we estimate the it by using 25% of the
    canopy height. Leave the tranmissivity as 3%. Tick in *Save generated
    Trunk Zone DSM* (a tif file, **TDSM.tif**, will be generated in the
@@ -381,26 +282,29 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
 #. First you need to create a point vector layer to store the POIs. Go
    to *Layer -> Create Layer -> New Shape file*. Choose *Point* as
    *Type* and add a new text field called **name**. Name the new layer
-   **POI\_Kr.shp**. Specify the coordinate system as SWEREF99 12 00
+   **POI_Kr.shp**. Specify the coordinate system as SWEREF99 12 00
    (EPSG: 3007).
 #. Now you should add two points within the study area. To add points to
    the layer it has to be editable and Add Feature should be activated
    (Figure 6).
 
-          .. figure:: /images/Addpoint.png
-
-              Figure 6: Setting to add points
-
-   Two points should be
-   added and the attributes should be id=\ **1** and
+    .. figure:: /images/SOLWEIG_AddPoint.png
+       :alt:  None
+       :width: 411px
+       
+       Figure 6: Setting to add points 
+   
+   Two points should be added and the attributes should be id=\ **1** and
    name=\ **courtyard** for the right point and id=\ **2** and
    name=\ **park** for the left point. See Figure 7 for the locations of
-   the two points.
-
-        .. figure:: /images/Pointskr.png
-
-            Figure 7: Location of the two POIs
-
+   the two points. 
+   
+    .. figure:: /images/SOLWEIG_Pointskr.png
+       :alt:  None
+       :width: 846px
+       
+       Figure 7: Location of the two POIs 
+	   
    When you are
    finished, save layer edits (box in-between the two marked boxes in
    Figure 6). Close the editing by pressing Toggle editing (the pencil).
@@ -408,7 +312,7 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
    schemes as before. This time, tick in *Include POI(s)*, select your
    point layer and use the ID attribute as *ID field*.
 #. Tick in *Use continuous meteorological dataset* and choose
-   **gbg19970606\_2015a.txt** as *Input meteorological file*. Also, tick
+   **gbg19970606_2015a.txt** as *Input meteorological file*. Also, tick
    in to save T\ :sub:`mrt` as *Output maps*. Run the model again.
 
 Examine your output with SOLWEIG Analyzer
@@ -421,11 +325,13 @@ the SOLWEIG Analyzer plug-in.
    Thermal Comfort -> SOLWEIG Analyzer*. Here you can analyze both data
    from your POIs as well as perform statistical analysis based on saved
    output maps. Start by locating your output folder in the top section
-   (*Load Model Result*).
-
-        .. figure:: /images/SOLWEIG.png
-
-            Figure 2: Dialog for the SOLWEIG model
+   (*Load Model Result*). 
+   
+    .. figure:: /images/SOLWEIG_SOLWEIGAnalyzer.png
+       :alt:  None
+       :width: 875px
+       
+       Figure 8: Dialog for the SOLWEIG Analyzer plug-in
 
 #. Firstly you will compare differences in T\ :sub:`mrt` for the two
    locations (courtyard and park). This can done using the left frame
@@ -456,7 +362,7 @@ Climate sensitive planning
 Vegetation is one effective measure to reduce areas prone to heat
 related health issues. In this section you make use of the Tree
 Generator plugin to see the effect of adding more vegetation into our
-study area. The municipality in Gothenburg have identified a “hot spot”
+study area. The municipality in Gothenburg have identified a "hot spot"
 south of the german church and they want to see the effect of planting
 three new trees in that area.
 
@@ -472,21 +378,25 @@ balance modelling with SUEWS.
    in the previous section adding five attributes (*id, ttype, trunk,
    totheight, diameter*). The attributes should all be decimal (float)
    numbers (see table below). The location of the three new trees are
-   shown in Figure 8. The values for all three vegetation units should
-   be **ttype=2, trunk=4, totheight=15, diameter=10**.
-
-         .. figure:: /images/TreesKR.png
-
-            Figure 8: Location of the three new vegetation units
+   shown in Figure 9. The values for all three vegetation units should
+   be **ttype=2, trunk=4, totheight=15, diameter=10**. 
+   
+    .. figure:: /images/SOLWEIG_File_TreesKR.png
+       :alt:  None
+       :width: 846px
+       
+       Figure 9: Location of the three new vegetation units.
 
 #. Add your created trunk zone dsm (TDSM.tif) that was created
    previously (located in your output directory).
 #. Open the TreeGenerator (UMEP -> PreProcessor -> TreeGenerator) and
-   use the settings as shown in Figure 9.
+   use the settings as shown in Figure 10. 
 
-         .. figure:: /images/ Treegeneratorsolweig.png
-
-            Figure 9: The settings for the Tree Generator
+    .. figure:: /images/SOLWEIG_Treegeneratorsolweig.png
+       :alt:  None
+       :width: 574px
+       
+       Figure 10: The settings for the Tree Generator
 
 #. As the vegetation DSMs have been changed, the SVFs has to be
    recalculated. This time use the two generated vegetation DSMs.
@@ -498,25 +408,27 @@ balance modelling with SUEWS.
 
 The table below show the input variables needed for each tree point.
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 1
++-----------------------+-----------------------+-----------------------+
+| Attribute name        | Name                  | Description           |
++=======================+=======================+=======================+
+| ttype                 | Tree type             | Two shapes are        |
+|                       |                       | available:            |
+|                       |                       |                       |
+|                       |                       | -  conifer = 1 and    |
+|                       |                       | -  deciduous = 2.     |
+|                       |                       | -  To remove          |
+|                       |                       |    vegetation set     |
+|                       |                       |    ttype = 0.         |
++-----------------------+-----------------------+-----------------------+
+| trunk                 | Trunk zone height (m  | Height of the trunk   |
+|                       | agl)                  | zone.                 |
++-----------------------+-----------------------+-----------------------+
+| totheight             | Total tree height (m  | Maximum height of the |
+|                       | agl)                  | vegetation unit       |
++-----------------------+-----------------------+-----------------------+
+| diameter              | Canopy diameter (m)   | Circular diameter of  |
+|                       |                       | the vegetation unit   |
++-----------------------+-----------------------+-----------------------+
 
-   * - Attribute name
-     - Name
-     - Description
-   * - ttype
-     - Tree type
-     - Two shapes are available:
-          -  conifer = 1 and
-          -  deciduous = 2.
-          -  To remove vegetation set ttype = 0.
-   * - trunk
-     - Trunk zone height (m agl)
-     - Height of the trunk zone.
-   * - totheight
-     - Total tree height (m agl)
-     - Maximum height of the vegetation unit
-   * - diameter
-     - Canopy diameter (m)
-     - Circular diameter of the vegetation unit
+
+

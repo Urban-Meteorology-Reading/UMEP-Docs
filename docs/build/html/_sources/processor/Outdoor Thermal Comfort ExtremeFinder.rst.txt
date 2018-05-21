@@ -15,7 +15,7 @@ Outdoor Thermal Comfort: ExtremeFinder
 
 
 * Current Options:
-     -  Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.
+    Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.
 
 * Data must be provided by the user, and can be:
      -  Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)
@@ -31,12 +31,6 @@ Outdoor Thermal Comfort: ExtremeFinder
             -  `Sirje Keevallik (2015) <http://www.kirj.ee/26593/?tpl=1061&c_tpl=1064>`__: 10th
             -  `A. K. Srivastava (2009) <http://onlinelibrary.wiley.com/doi/10.1002/asl.232/abstract>`__: 3 °C
             -  Busuioc et al. (2010): 5 °C
-
-* Location:
-  -  UMEP
-    -  Processor
-      -  Outdoor Themal Comfort
-        -  ExtremeFinder
 
 * Dialog box:
        .. figure:: /images/Extremefinder3.png
@@ -66,7 +60,7 @@ Outdoor Thermal Comfort: ExtremeFinder
 
       #. Run: Performs the analysis
 
-# Output: Extreme events (heat waves used as example below) ：
+* Output: Extreme events (heat waves used as example below) ：
       #. Daily T\ :sub:`max` (or T\ :sub:`avg` / T\ :sub:`min`) with time (Y= Year, X=Month)
 
          -  Colour gives Temperature (see key)
