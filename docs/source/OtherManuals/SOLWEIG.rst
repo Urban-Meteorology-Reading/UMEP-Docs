@@ -1,17 +1,15 @@
 .. _SOLWEIGManual:
 
-The SOLWEIG Manual
+SOLWEIG Manual
 -------------------
 
 The current version of SOLWEIG is v2016a (released 9 September 2016).
 
 NEW in this version: see `Version History`_.
 
-The manual for SOLWEIG can be
-accessed `here <:File:SOLWEIG_V2016a_Manual.pdf>`__ and should be
-referenced as follows:
+The manual for SOLWEIG should be referenced as follows:
 
-  **F Lindberg, CSB Grimmond 2016 SOLWEIG_v2016a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.**
+*F Lindberg, CSB Grimmond 2016. SOLWEIG_v2016a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
 
 Introduction
 ~~~~~~~~~~~~

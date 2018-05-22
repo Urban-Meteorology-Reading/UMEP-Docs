@@ -36,14 +36,13 @@ that provides data viewing, editing, and analysis capabilities.
 
 --------------
 
-.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18)
+.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18.x).
 
 We are keen to get inputs and contributions from others. There are two main ways to contribute:
 
 #. Submit comments or issues to the
    `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
-#. Participate in `Coding or adding new
-   features <ContributeCoding>`.
+#. Participate in `coding or adding new features <How_to_Contribute>`.
 #. Contribute by writing `tutorials and guidelines <Tutorials/Tutorials>` for other users to give examples of the many application possibilities of UMEP.
 
 
