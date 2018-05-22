@@ -42,7 +42,6 @@ describe model assumptions and the library of available data files.
  **Running the model**
 
   .. figure:: /images/300px-LUCY_main.png
-      :align: right
 
       LQF main dialogue box
 
@@ -88,13 +87,11 @@ describe model assumptions and the library of available data files.
  **Visualising output**
 
      .. figure:: /images/300px-Visualise.png
-        :align: right
 
         LQF results visualisation dialogue box
 
 
      .. figure:: /images/300px-Timeseries.png
-        :align: right
 
         Time series output example
 
@@ -649,7 +646,7 @@ occupied by:
 The GQF user interface requires two input files for this process.
 
 -  **Land cover fractions**: Land cover fractions calculated using the
-   `Urban_Land_Cover_Land_Cover_Reclassifierr`
+   `LandCoverReclassifier`
     in the pre-processing toolbox.
 -  **Corresponding polygon grid**: The ESRI shapefile grid of polygons
    represented by the land cover fractions. This is a required input for
@@ -1169,7 +1166,6 @@ at 250m resolution.
         ```to do```
 
    .. figure:: /images/Saga2.png
-        :align: right
 
         ```to do```
 

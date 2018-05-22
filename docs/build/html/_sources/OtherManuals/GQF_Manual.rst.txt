@@ -47,7 +47,6 @@ configuration options and parameters, these are stored in two files that
 must be managed by the user and are chosen at run time.
 
 .. figure:: /images/300px-GQF_main.png
-    :align: right
 
     GQF main dialogue box
 
@@ -87,7 +86,6 @@ must be managed by the user and are chosen at run time.
       - The results of previous runs can also be visualised without re-running the model: Select the relevant output directory and Data Sources file are chosen in the GQF UI before pressing the “Visualise” button.    GQF results visualisation dialogue box
 
       .. figure:: /images/300px-Visualise.png
-          :align: right
 
           GQF results visualisation dialogue box
 
@@ -4909,7 +4907,7 @@ occupied by:
 The GQF user interface requires two input files for this process.
 
 -  **Land cover fractions**: Land cover fractions calculated using the
-   `Urban_Land_Cover_Land_Cover_Reclassifierr` in the pre-processing toolbox.
+   `LandCoverReclassifier` in the pre-processing toolbox.
 -  **Corresponding polygon grid**: The ESRI shapefile grid of polygons
    represented by the land cover fractions. This is a required input for
    the UMEP land cover classifier.
