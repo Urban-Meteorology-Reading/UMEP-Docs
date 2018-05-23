@@ -67,15 +67,12 @@ We are keen to get inputs and contributions from others. There are two main ways
 .. toctree::
    :caption: UMEP Tutorials
    :maxdepth: 2
-   :numbered:
    :hidden:
-   
+
    Tutorials/Tutorials
 
 .. toctree::
    :caption: Other Manuals
-   :maxdepth: 2
-   :numbered:
    :hidden:
-   
+
    OtherManuals/OtherManuals
