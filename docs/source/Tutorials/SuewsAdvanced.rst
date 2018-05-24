@@ -1,6 +1,6 @@
 .. _SUEWSAdvanced:
 
-SUEWS Advanved
+Urban Energy Balance - SUEWS Advanved
 ==============
 
 Introduction

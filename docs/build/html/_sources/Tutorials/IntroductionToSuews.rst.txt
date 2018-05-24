@@ -1,7 +1,7 @@
 .. _IntroductionToSuews:
 
-Urban Energy Balance - Introduction to SUEWS
-============================================
+Urban Energy Balance - SUEWS Introduction
+=========================================
 
 Introduction
 ------------

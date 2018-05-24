@@ -1,12 +1,7 @@
 .. _LQF:
 
-
-|LQF|
-^^^^^^^^^^^^^^^^
-
-
-Aim
----
+Anthropogenic heat - LQF
+========================
 
 This tutorial demonstrates how the LQF software is used to simulate
 anthropogenic heat fluxes for London, UK, in the year 2015, using a
@@ -59,7 +54,7 @@ the tutorials on this page:
 -  dailyTemperature\_2015.csv: Daily mean air temperature in London
 
 LQF Tutorial 1: Simple QF modelling
-===================================
+-----------------------------------
 
 Preparing data
 --------------
@@ -327,7 +322,7 @@ the very start or end of the year, the date from 2015 used will be
 within a few days of the same date in 2016.
 
 Tutorials II: Refining LQF results
-==================================
+----------------------------------
 
 Once a basic QF estimate has been made (as in the previous section),
 there are several options to refining this using additional data that
@@ -521,8 +516,3 @@ metabolism emissions remains the same as before.
 
    ```to do```
 
-Related tutorials
-=================
-
--  `GQF`:
-   Modelling anthropogenic heat flux in London, UK using the GQF model.

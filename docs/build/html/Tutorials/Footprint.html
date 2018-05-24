@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Footprint modelling &mdash; UMEP Manual  documentation</title>
+  <title>1. Footprint modelling &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -25,26 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Urban Energy Balance - Introduction to SUEWS" href="IntroductionToSuews.html" />
+    <link rel="prev" title="Introduction" href="Tutorials.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -61,7 +55,7 @@
 
           
             
-            <img src="../_static/UMEP_logo.png" class="logo" />
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -104,8 +98,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">UMEP Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Tutorials.html">Introduction</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Footprint modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-practical-steps">1.2. Initial Practical steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-for-tutorial">1.2.1. Data for Tutorial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prior-to-starting">1.2.2. Prior to Starting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source-area-modelling">1.3. Source Area Modelling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iterative-process">1.4. Iterative process</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#roughness-parameters">1.4.1. Roughness parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">1.5. References</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#contributors-to-the-material-covered">1.5.1. Contributors to the material covered</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - Introduction to SUEWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsAdvanced.html">3. Urban Energy Balance - SUEWS Advanved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Introduction to SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GQF.html">8. Anthropogenic heat - GQF</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Other Manuals</span></p>
 <ul>
@@ -121,7 +142,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -129,9 +150,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -154,7 +176,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Footprint modelling</li>
+          <li><a href="Tutorials.html">Introduction</a> &raquo;</li>
+        
+      <li>1. Footprint modelling</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,9 +198,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="footprint-modelling">
-<span id="footprint"></span><h1>Footprint modelling<a class="headerlink" href="#footprint-modelling" title="Permalink to this headline">¶</a></h1>
+<span id="footprint"></span><h1>1. Footprint modelling<a class="headerlink" href="#footprint-modelling" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Each meteorological instrument has a ‘<em>source area</em>’ (sometimes
 referred to as <em>footprint</em>), the area that influences the measurement.
 The shape and location of that area is a function of the meteorological
@@ -191,11 +215,11 @@ the lateral or crosswind wind velocity) and roughness parameters. Kljun
 et al. (2015) requires the boundary layer height.</p>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../_images/Footprint_ReadingSourceArea.png"><img alt="Example result" src="../_images/Footprint_ReadingSourceArea.png" style="width: 1100px;" /></a>
-<p class="caption"><span class="caption-text">Example result (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Example result (click on image for larger image)</span></p>
 </div>
 </div>
 <div class="section" id="initial-practical-steps">
-<h2>Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>If <strong>QGIS</strong> is not on your computer you will <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started">need to install
 it</a></li>
@@ -208,7 +232,7 @@ software (i.e. Find QGIS under your applications)</li>
 <p>When you open it on the top toolbar you will see <strong>UMEP</strong>.</p>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="../_images/Footprint_UMEP_location.png"><img alt="none" src="../_images/Footprint_UMEP_location.png" style="width: 960px;" /></a>
-<p class="caption"><span class="caption-text">Location of footprint plugin (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Location of footprint plugin (click on image for larger image)</span></p>
 </div>
 <ul class="simple">
 <li>If UMEP is not on your machine, add the UMEP plugin by go to <em>Plugins&gt;Manage and Install Plugins</em> in QGIS
@@ -219,7 +243,7 @@ BEFORE using the model, so you are familiar with it’s operation and
 terminology used.</li>
 </ul>
 <div class="section" id="data-for-tutorial">
-<h3>Data for Tutorial<a class="headerlink" href="#data-for-tutorial" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.1. Data for Tutorial<a class="headerlink" href="#data-for-tutorial" title="Permalink to this headline">¶</a></h3>
 <p>Use the appropriate data:</p>
 <ul class="simple">
 <li>Reading: <a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Reading/DataReading.zip">download</a></li>
@@ -228,7 +252,7 @@ terminology used.</li>
 <p><a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&amp;ifq">To get the Password if not given it already</a></p>
 </div>
 <div class="section" id="prior-to-starting">
-<h3>Prior to Starting<a class="headerlink" href="#prior-to-starting" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.2. Prior to Starting<a class="headerlink" href="#prior-to-starting" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>Download the <strong>Data needed for the Tutorial</strong>. You can use either Reading of the London dataset.</li>
 <li>Load the Raster data (<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">DEM, DSM,
@@ -240,7 +264,7 @@ files – DOES A CDSM EXIST? Yes for London, No for Reading<ul>
 </ol>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../_images/Footprint_Add_Raster_Layer.png"><img alt="none" src="../_images/Footprint_Add_Raster_Layer.png" style="width: 960px;" /></a>
-<p class="caption"><span class="caption-text">Loading a raster layer to QGIS (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Loading a raster layer to QGIS (click on image for larger image)</span></p>
 </div>
 <ul class="simple">
 <li>Have a look at the <strong>layers</strong> (see lower left) - if you untick the
@@ -248,12 +272,12 @@ box layer names from the top you can see the different layers.</li>
 </ul>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../_images/Footprint_ReadingMap.png"><img alt="none" src="../_images/Footprint_ReadingMap.png" style="width: 1070px;" /></a>
-<p class="caption"><span class="caption-text">The Reading data loaded into QGIS (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">The Reading data loaded into QGIS (click on image for larger image)</span></p>
 </div>
 </div>
 </div>
 <div class="section" id="source-area-modelling">
-<h2>Source Area Modelling<a class="headerlink" href="#source-area-modelling" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Source Area Modelling<a class="headerlink" href="#source-area-modelling" title="Permalink to this headline">¶</a></h2>
 <p>To access the Source area model or Footprint model, go to <em>UMEP -&gt; Pre-processor &gt; Urban Morphology &gt; Source Area Model (Point)</em>.</p>
 <ol class="arabic">
 <li><p class="first">Click on Select Point on Canvas – then select a point (e.g. where an Eddy Covariance (EC) tower site is located)</p>
@@ -287,7 +311,7 @@ box layer names from the top you can see the different layers.</li>
 </ol>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../_images/Footprint_SourceAreaModel.png"><img alt="none" src="../_images/Footprint_SourceAreaModel.png" style="width: 960px;" /></a>
-<p class="caption"><span class="caption-text">Snapshot of the Footprint plugin using Reading data (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Snapshot of the Footprint plugin using Reading data (click on image for larger image)</span></p>
 </div>
 <p>The <strong>output is a source area</strong> grid showing the cumulative percentage of source area influencing the flux at the point of interest.</p>
 <ul class="simple">
@@ -297,7 +321,7 @@ box layer names from the top you can see the different layers.</li>
 <p>It is possible to input a text file to generate a source area based on morphometric parameters (e.g. an hourly dataset). However, for now you can moodify the input variables set in the interface. Format of file is given in the manual.</p>
 </div>
 <div class="section" id="iterative-process">
-<h2>Iterative process<a class="headerlink" href="#iterative-process" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Iterative process<a class="headerlink" href="#iterative-process" title="Permalink to this headline">¶</a></h2>
 <p>To work with a site with no value known <em>a priori</em>.</p>
 <ol class="arabic simple">
 <li>Use the <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Point)</span></a> tool in the UMEP plugin to select a
@@ -314,7 +338,7 @@ inhomogeneous.</li>
 <li>Use these values to populate the source area model window.</li>
 </ol>
 <div class="section" id="roughness-parameters">
-<h3>Roughness parameters<a class="headerlink" href="#roughness-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1. Roughness parameters<a class="headerlink" href="#roughness-parameters" title="Permalink to this headline">¶</a></h3>
 <p>In the UMEP plugin the roughness length and zero plane displacement
 length can be calculated with a morphometric method based on the Rule of
 Thumb (Grimmond and Oke 1999) as the default. There are other methods
@@ -329,7 +353,7 @@ methods assessed (e.g. Kent et al. 2017).</p>
 </div>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Bottema M 1995: Parameterisation of aerodynamic roughness parameters
 in relation to air pollutant removal ef?ciency of streets. Air
@@ -377,7 +401,7 @@ doi:10.1007/BF0070922</a></li>
 303–304.</a></li>
 </ul>
 <div class="section" id="contributors-to-the-material-covered">
-<h3>Contributors to the material covered<a class="headerlink" href="#contributors-to-the-material-covered" title="Permalink to this headline">¶</a></h3>
+<h3>1.5.1. Contributors to the material covered<a class="headerlink" href="#contributors-to-the-material-covered" title="Permalink to this headline">¶</a></h3>
 <p><strong>University of Reading:</strong> Christoph Kent, Simone Kotthaus, Sue Grimmond
 <strong>University of Gothenburg:</strong> Fredrik Lindberg Background work also
 comes from: UBC (Andreas Christen); Germany: Kormann and Meixner (2001);
@@ -392,11 +416,18 @@ Bottema (1995)</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="IntroductionToSuews.html" class="btn btn-neutral float-right" title="2. Urban Energy Balance - Introduction to SUEWS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Tutorials.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -407,7 +438,7 @@ Bottema (1995)</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -426,6 +457,7 @@ Bottema (1995)</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -443,14 +475,13 @@ Bottema (1995)</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

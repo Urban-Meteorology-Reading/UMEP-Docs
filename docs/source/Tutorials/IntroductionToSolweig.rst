@@ -1,6 +1,6 @@
 .. _IntroductionToSOLWEIG:
 
-Introduction to SOLWEIG
+Thermal Comfort - Introduction to SOLWEIG
 =======================
 
 Introduction

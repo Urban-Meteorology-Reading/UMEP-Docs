@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Urban Energy Balance - Introduction to SUEWS &mdash; UMEP Manual  documentation</title>
+  <title>2. Urban Energy Balance - SUEWS Introduction &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -25,26 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Urban Energy Balance - SUEWS Advanved" href="SuewsAdvanced.html" />
+    <link rel="prev" title="1. Footprint modelling" href="Footprint.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -61,7 +55,7 @@
 
           
             
-            <img src="../_static/UMEP_logo.png" class="logo" />
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -104,8 +98,39 @@
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">UMEP Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Tutorials.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Footprint.html">1. Footprint modelling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Urban Energy Balance - SUEWS Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">2.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suews-simple-objectives">2.2. SUEWS Simple Objectives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steps">2.2.1. Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-steps">2.3. Initial Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suews-model-inputs">2.4. SUEWS Model Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-run-suewssimple-from-the-umep-plugin">2.5. How to Run SuewsSimple from the UMEP-plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-results">2.6. Model results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-a-figure">2.7. Saving a Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-data-files">2.8. Output data Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensitivity-to-land-surface-fractions">2.9. Sensitivity to land surface fractions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">2.10. References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definitions-and-notation">2.11. Definitions and Notation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-explanation">2.12. Further explanation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#morphometric-methods-to-determine-roughness-parameters">2.12.1. Morphometric Methods to determine Roughness parameters:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-area-model">2.12.2. Source Area Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsAdvanced.html">3. Urban Energy Balance - SUEWS Advanved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Thermal Comfort - Introduction to SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Solar Energy - Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GQF.html">8. Anthropogenic heat - GQF</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Other Manuals</span></p>
 <ul>
@@ -121,7 +146,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -129,9 +154,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -154,7 +180,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Urban Energy Balance - Introduction to SUEWS</li>
+          <li><a href="Tutorials.html">Introduction</a> &raquo;</li>
+        
+      <li>2. Urban Energy Balance - SUEWS Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,10 +201,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="urban-energy-balance-introduction-to-suews">
-<span id="introductiontosuews"></span><h1>Urban Energy Balance - Introduction to SUEWS<a class="headerlink" href="#urban-energy-balance-introduction-to-suews" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="urban-energy-balance-suews-introduction">
+<span id="introductiontosuews"></span><h1>2. Urban Energy Balance - SUEWS Introduction<a class="headerlink" href="#urban-energy-balance-suews-introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a land-surface model,
 <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS</a> to simulate energy
 exchanges in a city (London is the test case).</p>
@@ -208,7 +236,7 @@ of the model. See <a class="reference external" href="http://urban-climate.net/u
 published papers for more detailed information of the model.</p>
 <div class="figure" id="id1">
 <a class="reference internal image-reference" href="../_images/SUEWSIntro_UMEP_overview.png"><img alt="none" src="../_images/SUEWSIntro_UMEP_overview.png" style="width: 378px;" /></a>
-<p class="caption"><span class="caption-text">Figure 1: Overview of the climate service tool UMEP (from Lindberg et al. 2018)</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Figure 1: Overview of the climate service tool UMEP (from Lindberg et al. 2018)</span></p>
 </div>
 <p>SUEWS can be run in a number of different ways:</p>
 <ol class="arabic simple">
@@ -222,13 +250,13 @@ the full capabilities of the model (Part 2)</li>
 </ol>
 </div>
 <div class="section" id="suews-simple-objectives">
-<h2>SUEWS Simple Objectives<a class="headerlink" href="#suews-simple-objectives" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. SUEWS Simple Objectives<a class="headerlink" href="#suews-simple-objectives" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial introduces SUEWS and demonstartes how to run the model within <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual">UMEP (Urban
 Multi-scale Environmental
 Predictor)</a>. <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">Help with
 Abbreviations</a></p>
 <div class="section" id="steps">
-<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1. Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>An introduction to the model and how it is designed.</li>
 <li>Different kinds of input data that are needed to run the model</li>
@@ -238,7 +266,7 @@ Abbreviations</a></p>
 </div>
 </div>
 <div class="section" id="initial-steps">
-<h2>Initial Steps<a class="headerlink" href="#initial-steps" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Initial Steps<a class="headerlink" href="#initial-steps" title="Permalink to this headline">¶</a></h2>
 <p>UMEP is a python plugin used in conjunction with
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. To install the software and the UMEP
 plugin see the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">getting
@@ -249,7 +277,7 @@ there may be instability. Please report any issues or suggestions to our
 <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 </div>
 <div class="section" id="suews-model-inputs">
-<h2>SUEWS Model Inputs<a class="headerlink" href="#suews-model-inputs" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. SUEWS Model Inputs<a class="headerlink" href="#suews-model-inputs" title="Permalink to this headline">¶</a></h2>
 <p>Details of the model inputs and outputs are provided in the <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS
 manual</a>. As this tutorial is
 concerned with a <strong>simple application</strong> only the most critical
@@ -427,7 +455,7 @@ related calculations</td>
 </table>
 </div>
 <div class="section" id="how-to-run-suewssimple-from-the-umep-plugin">
-<h2>How to Run SuewsSimple from the UMEP-plugin<a class="headerlink" href="#how-to-run-suewssimple-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. How to Run SuewsSimple from the UMEP-plugin<a class="headerlink" href="#how-to-run-suewssimple-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Open SuewsSimple from <em>UMEP -&gt; Processor -&gt; Urban Energy Balance -&gt;
 Urban Energy Balance, SUEWS (Simple)</em>. The GUI that opens looks quite
@@ -442,7 +470,7 @@ is included in within the plugin.</li>
 </ol>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="../_images/SUEWSIntro_Interface.png"><img alt="none" src="../_images/SUEWSIntro_Interface.png" style="width: 1107px;" /></a>
-<p class="caption"><span class="caption-text">Figure 2: The interface for SUEWS, simple version (click on image to make it larger).</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Figure 2: The interface for SUEWS, simple version (click on image to make it larger).</span></p>
 </div>
 <ol class="arabic simple">
 <li>To make use of this dataset click on <strong>Add settings from test
@@ -461,15 +489,15 @@ the results are shown in two summary plots.</li>
 </ol>
 <div class="figure" id="id3">
 <a class="reference internal image-reference" href="../_images/SUEWSIntro_SuewsSimplefig1.png"><img alt="none" src="../_images/SUEWSIntro_SuewsSimplefig1.png" style="width: 900px;" /></a>
-<p class="caption"><span class="caption-text">Figure 3a: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Figure 3a: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).</span></p>
 </div>
 <div class="figure" id="id4">
 <a class="reference internal image-reference" href="../_images/SUEWSIntro_SuewsSimplefig2.png"><img alt="none" src="../_images/SUEWSIntro_SuewsSimplefig2.png" style="width: 900px;" /></a>
-<p class="caption"><span class="caption-text">Figure 3b: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Figure 3b: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).</span></p>
 </div>
 </div>
 <div class="section" id="model-results">
-<h2>Model results<a class="headerlink" href="#model-results" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Model results<a class="headerlink" href="#model-results" title="Permalink to this headline">¶</a></h2>
 <p>The graphs in Figure 3a are the monthly mean energy (left) and water
 balance (right). The lower graphs (Figure 3b) show the radiation fluxes,
 energy fluxes, and water related outputs throughout the year. This plot
@@ -481,11 +509,11 @@ days in March (Figure 4). This was a period with clear relatively
 weather.</p>
 <div class="figure" id="id5">
 <a class="reference internal image-reference" href="../_images/SUEWSIntro_SuewsSimplefig2zoom.png"><img alt="none" src="../_images/SUEWSIntro_SuewsSimplefig2zoom.png" style="width: 900px;" /></a>
-<p class="caption"><span class="caption-text">Figure 4: Zoom in on end of March from the daily plot in Figure 3b (click on image to make it larger).</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Figure 4: Zoom in on end of March from the daily plot in Figure 3b (click on image to make it larger).</span></p>
 </div>
 </div>
 <div class="section" id="saving-a-figure">
-<h2>Saving a Figure<a class="headerlink" href="#saving-a-figure" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Saving a Figure<a class="headerlink" href="#saving-a-figure" title="Permalink to this headline">¶</a></h2>
 <p>Use the disk tool in the upper left corner.</p>
 <ol class="arabic simple">
 <li>.jpg</li>
@@ -495,7 +523,7 @@ weather.</p>
 </ol>
 </div>
 <div class="section" id="output-data-files">
-<h2>Output data Files<a class="headerlink" href="#output-data-files" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. Output data Files<a class="headerlink" href="#output-data-files" title="Permalink to this headline">¶</a></h2>
 <p>In the output folder (you selected earlier) you will find (at least)
 three files:</p>
 <ol class="arabic simple">
@@ -517,10 +545,10 @@ variables read the <a class="reference external" href="http://urban-climate.net/
 manual</a>.</p>
 </div>
 <div class="section" id="sensitivity-to-land-surface-fractions">
-<h2>Sensitivity to land surface fractions<a class="headerlink" href="#sensitivity-to-land-surface-fractions" title="Permalink to this headline">¶</a></h2>
+<h2>2.9. Sensitivity to land surface fractions<a class="headerlink" href="#sensitivity-to-land-surface-fractions" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-right" id="id6">
 <img alt="none" src="../_images/SUEWSIntro_LCFs.png" />
-<p class="caption"><span class="caption-text">Figure 5: Land cover fractions (click on image to make it larger).</span></p>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Figure 5: Land cover fractions (click on image to make it larger).</span></p>
 </div>
 <p>The previous results are for a densely build-up area in
 London, UK. In order to test the sensitivity of SUEWS to some surface
@@ -534,7 +562,7 @@ select other values as long as all the fractions <em>add up to 1.0</em>.</li>
 </ol>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>2.10. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Grimmond CSB and Oke 1999: Aerodynamic properties of urban areas
 derived, from analysis of surface form. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2">Journal of Applied
@@ -578,7 +606,7 @@ suburban and woodland areas of southern England. <a class="reference external" h
 <p>Authors this document: Lindberg and Grimmond (2016)</p>
 </div>
 <div class="section" id="definitions-and-notation">
-<h2>Definitions and Notation<a class="headerlink" href="#definitions-and-notation" title="Permalink to this headline">¶</a></h2>
+<h2>2.11. Definitions and Notation<a class="headerlink" href="#definitions-and-notation" title="Permalink to this headline">¶</a></h2>
 <p>To help you find further information about the acronyms they are
 classified by <strong>T</strong>: Type of term: <strong>C</strong>: computer term, <strong>S</strong>: science
 term, <strong>G</strong>: GIS term.</p>
@@ -697,9 +725,9 @@ Oke (1999)</td>
 </table>
 </div>
 <div class="section" id="further-explanation">
-<h2>Further explanation<a class="headerlink" href="#further-explanation" title="Permalink to this headline">¶</a></h2>
+<h2>2.12. Further explanation<a class="headerlink" href="#further-explanation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="morphometric-methods-to-determine-roughness-parameters">
-<h3>Morphometric Methods to determine Roughness parameters:<a class="headerlink" href="#morphometric-methods-to-determine-roughness-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>2.12.1. Morphometric Methods to determine Roughness parameters:<a class="headerlink" href="#morphometric-methods-to-determine-roughness-parameters" title="Permalink to this headline">¶</a></h3>
 <p>For more and overview and details see <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450%281999%29038%3C1262%3AAPOUAD%3E2.0.CO%3B2">Grimmond and Oke
 (1999)</a>
 and <a class="reference external" href="https://link.springer.com/article/10.1007%2Fs10546-017-0248-z">Kent et al.
@@ -714,7 +742,7 @@ and [Kent et al. (2017c)]. UMEP has tools for doing this: <em>Pre-processor
 -&gt; Urban Morphology</em></p>
 </div>
 <div class="section" id="source-area-model">
-<h3>Source Area Model<a class="headerlink" href="#source-area-model" title="Permalink to this headline">¶</a></h3>
+<h3>2.12.2. Source Area Model<a class="headerlink" href="#source-area-model" title="Permalink to this headline">¶</a></h3>
 <p>For more details see <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S2212095513000497">Kotthaus and Grimmond
 (2014b)</a>
 and <a class="reference external" href="https://link.springer.com/article/10.1007%2Fs10546-017-0248-z">Kent et al.
@@ -731,11 +759,18 @@ the lateral wind velocity) and roughness parameters.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="SuewsAdvanced.html" class="btn btn-neutral float-right" title="3. Urban Energy Balance - SUEWS Advanved" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Footprint.html" class="btn btn-neutral" title="1. Footprint modelling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -746,7 +781,7 @@ the lateral wind velocity) and roughness parameters.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -765,6 +800,7 @@ the lateral wind velocity) and roughness parameters.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -782,14 +818,13 @@ the lateral wind velocity) and roughness parameters.</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

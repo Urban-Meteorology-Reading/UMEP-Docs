@@ -1,11 +1,8 @@
-.. _ GQF:
+.. _GQF:
 
+Anthropogenic heat - GQF
+========================
 
-|GQF|
-^^^^^^^^^^^^^^^^
-
-Aim
----
 
 This tutorial demonstrates how the GQF software is used to simulate
 anthropogenic heat fluxes for London, UK, in the year 2015, using a
@@ -90,7 +87,7 @@ comprehensive requirements of GQF:
            - Configuration file specifying different input data sources for model
            -
 GQF Tutorial 1: Comprehensive QF modelling for Greater London
-=============================================================
+-------------------------------------------------------------
 
 Preparing data
 --------------
@@ -522,7 +519,7 @@ Sunday, when people are expected to not be at work.
 
       Time series of QF emissions
 Tutorials 2: Refining GQF results
-=================================
+---------------------------------
 
 There are several extra options in GQF. The following mini-tutorials
 show how they are used:
@@ -584,8 +581,3 @@ latent heat is a relatively small contribution. Consuming electricity
 emits no latent heat, unlike gas, while metabolism now represents a
 larger fraction of the total.
 
-Related tutorials
-=================
-
--  Modelling anthropogenic heat flux in London, UK using the `LQF`
-   model

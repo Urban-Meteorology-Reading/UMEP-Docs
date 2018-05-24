@@ -1,7 +1,7 @@
 .. _Tutorials:
 
 
-Tutorials
+Introduction
 ---------
 
 To help users getting started with UMEP, the community is working on
@@ -52,3 +52,21 @@ tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLN
      - Processor
      - `LQF`
      - Anthropogenic heat modelling in London using LQF (uses the LUCY methodology)
+
+     
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :hidden:
+   :glob:
+
+   Footprint
+   IntroductionToSuews
+   SuewsAdvanced
+   SuewsSpatial
+   IntroductionToSolweig
+   SEBE
+   LQF
+   GQF
+
+

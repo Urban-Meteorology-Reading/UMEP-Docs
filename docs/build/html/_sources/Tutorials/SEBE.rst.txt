@@ -1,7 +1,7 @@
 .. _SEBE:
 
-Introduction to SEBE
-====================
+Solar Energy - Introduction to SEBE
+===================================
 
 Introduction
 ------------

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>GQF &mdash; UMEP Manual  documentation</title>
+  <title>8. Anthropogenic heat - GQF &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -25,26 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Other Manuals" href="../OtherManuals/OtherManuals.html" />
+    <link rel="prev" title="7. Anthropogenic heat - LQF" href="LQF.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -61,7 +55,7 @@
 
           
             
-            <img src="../_static/UMEP_logo.png" class="logo" />
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -104,8 +98,49 @@
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">UMEP Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Tutorials.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Footprint.html">1. Footprint modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - Introduction to SUEWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsAdvanced.html">3. Urban Energy Balance - SUEWS Advanved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Introduction to SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8. Anthropogenic heat - GQF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-practical-steps">8.1. Initial Practical steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-for-this-exercise">8.1.1. Data for this exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gqf-tutorial-1-comprehensive-qf-modelling-for-greater-london">8.2. GQF Tutorial 1: Comprehensive QF modelling for Greater London</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-data">8.3. Preparing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#manage-input-data-files">8.3.1. Manage input data files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gather-information-about-shapefile-inputs">8.3.2. Gather information about shapefile inputs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-the-datasources-nml-file">8.4. Set up the DataSources.nml file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-shapefile-information">8.4.1. Add shapefile information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-temporal-data-files">8.4.2. Add temporal data files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-information-about-transport">8.4.3. Add information about transport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#run-gqf">8.5. Run GQF</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#choose-configuration-files-and-output-folder">8.5.1. Choose configuration files and output folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-model-for-1-week">8.5.2. Run the model for 1 week</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#visualise-results">8.6. Visualise results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-emissions-maps-at-noon">8.6.1. Create emissions maps at noon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city">8.6.2. Plot a time series of QF in the centre of the city</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorials-2-refining-gqf-results">8.7. Tutorials 2: Refining GQF results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-2a-add-a-public-holiday">8.8. Tutorial 2a: Add a public holiday</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-2b-remove-the-sensible-heat-component">8.9. Tutorial 2b: Remove the sensible heat component</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Other Manuals</span></p>
 <ul>
@@ -121,7 +156,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -129,9 +164,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -154,7 +190,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>GQ<sub>F</sub></li>
+          <li><a href="Tutorials.html">Introduction</a> &raquo;</li>
+        
+      <li>8. Anthropogenic heat - GQF</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,16 +211,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gqf">
-<h1>GQ<sub>F</sub><a class="headerlink" href="#gqf" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="aim">
-<h2>Aim<a class="headerlink" href="#aim" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="anthropogenic-heat-gqf">
+<span id="gqf"></span><h1>8. Anthropogenic heat - GQF<a class="headerlink" href="#anthropogenic-heat-gqf" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial demonstrates how the GQF software is used to simulate
 anthropogenic heat fluxes for London, UK, in the year 2015, using a
 mixture of administrative and meteorological data.</p>
-</div>
 <div class="section" id="initial-practical-steps">
-<h2>Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <p>UMEP is a python plugin used in conjunction with
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. To install the software and the UMEP
 plugin see the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">getting
@@ -192,7 +227,7 @@ section in the UMEP manual.</p>
 and/or there may be instability. Please report any issues or suggestions
 to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 <div class="section" id="data-for-this-exercise">
-<h3>Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
+<h3>8.1.1. Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
 <p>In order to proceed, you will need the zip file named
 <a class="reference external" href="http://urban-climate.net/UMEPTutorials/GQF/GQF_Inputs_1.zip">GQF_Inputs_1.zip</a>
 from the UMEP tutorials data store (password needed: <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&amp;ifq">request
@@ -277,15 +312,15 @@ comprehensive requirements of GQF:</p>
 </tbody>
 </table>
 </div></blockquote>
+</div>
+</div>
 <div class="section" id="gqf-tutorial-1-comprehensive-qf-modelling-for-greater-london">
-<h4>GQF Tutorial 1: Comprehensive QF modelling for Greater London<a class="headerlink" href="#gqf-tutorial-1-comprehensive-qf-modelling-for-greater-london" title="Permalink to this headline">¶</a></h4>
-</div>
-</div>
+<h2>8.2. GQF Tutorial 1: Comprehensive QF modelling for Greater London<a class="headerlink" href="#gqf-tutorial-1-comprehensive-qf-modelling-for-greater-london" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="preparing-data">
-<h2>Preparing data<a class="headerlink" href="#preparing-data" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. Preparing data<a class="headerlink" href="#preparing-data" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="manage-input-data-files">
-<h3>Manage input data files<a class="headerlink" href="#manage-input-data-files" title="Permalink to this headline">¶</a></h3>
+<h3>8.3.1. Manage input data files<a class="headerlink" href="#manage-input-data-files" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Extract the contents of GQF_Inputs_1.zip into a folder on your
 local machine and note the path to each file (e.g.
@@ -293,7 +328,7 @@ C:\GQFData\BuildingLoadings_Industrial.csv)</li>
 </ul>
 </div>
 <div class="section" id="gather-information-about-shapefile-inputs">
-<h3>Gather information about shapefile inputs<a class="headerlink" href="#gather-information-about-shapefile-inputs" title="Permalink to this headline">¶</a></h3>
+<h3>8.3.2. Gather information about shapefile inputs<a class="headerlink" href="#gather-information-about-shapefile-inputs" title="Permalink to this headline">¶</a></h3>
 <p>GQF uses multiple shapefiles (ending .shp) to build up a picture of
 energy use, population and road transport across the city. Five pieces
 of information are needed for each of these:</p>
@@ -322,7 +357,7 @@ of the population datasets is used to keep things simple.</p>
 </div>
 </div>
 <div class="section" id="set-up-the-datasources-nml-file">
-<h2>Set up the DataSources.nml file<a class="headerlink" href="#set-up-the-datasources-nml-file" title="Permalink to this headline">¶</a></h2>
+<h2>8.4. Set up the DataSources.nml file<a class="headerlink" href="#set-up-the-datasources-nml-file" title="Permalink to this headline">¶</a></h2>
 <p>The data sources file needs to be updated so that it can find the
 various data files, and understands what to do with them. A full
 description of the Data sources file contents is available
@@ -337,7 +372,7 @@ of the input data.</p>
 information gathered above.</li>
 </ol>
 <div class="section" id="add-shapefile-information">
-<h3>Add shapefile information<a class="headerlink" href="#add-shapefile-information" title="Permalink to this headline">¶</a></h3>
+<h3>8.4.1. Add shapefile information<a class="headerlink" href="#add-shapefile-information" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>The “<strong>shapefile</strong>” entry is the path to the file</li>
 <li>The <strong>epsgCode</strong> and <strong>featureIds</strong> entries are found by inspecting
@@ -393,12 +428,9 @@ attribToUse and featureIds:</p>
 </div>
 </div>
 <div class="section" id="add-temporal-data-files">
-<h3>Add temporal data files<a class="headerlink" href="#add-temporal-data-files" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-</div>
+<h3>8.4.2. Add temporal data files<a class="headerlink" href="#add-temporal-data-files" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="day-to-day-energy-demand-changes">
-<h1>Day-to-day energy demand changes<a class="headerlink" href="#day-to-day-energy-demand-changes" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.2.1. Day-to-day energy demand changes<a class="headerlink" href="#day-to-day-energy-demand-changes" title="Permalink to this headline">¶</a></h4>
 <p>GQF uses annual total energy consumption shapefiles, and needs to know
 how to vary energy consumption on different dates (e.g. winter is likely
 to have more fuel use than summer). This is captured using real data
@@ -416,7 +448,7 @@ past years are available GQF will recycle it for later years, offering
 the closest sensible match to time of week and time of year.</p>
 </div>
 <div class="section" id="metabolism-file">
-<h1>Metabolism file<a class="headerlink" href="#metabolism-file" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.2.2. Metabolism file<a class="headerlink" href="#metabolism-file" title="Permalink to this headline">¶</a></h4>
 <p>The metabolism file controls:</p>
 <ul class="simple">
 <li>How much energy each the average person emits at each time of day</li>
@@ -434,7 +466,7 @@ in the UK to account for changes in the summer.</p>
 </div>
 </div>
 <div class="section" id="building-diurnal-profiles">
-<h1>Building diurnal profiles<a class="headerlink" href="#building-diurnal-profiles" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.2.3. Building diurnal profiles<a class="headerlink" href="#building-diurnal-profiles" title="Permalink to this headline">¶</a></h4>
 <p>As shown above, the different kinds of building energy consumption are
 separated in GQF. Their diurnal profiles are also different so that the
 different behaviours of households and businesses are represented
@@ -463,12 +495,15 @@ requires a diurnal profile data file:</p>
 /
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="add-information-about-transport">
+<h3>8.4.3. Add information about transport<a class="headerlink" href="#add-information-about-transport" title="Permalink to this headline">¶</a></h3>
 <p>The transport input data files are very detailed and therefore needs a
 lot of descriptive information in the &amp;transportData section of
 DataSouces.nml</p>
-</div>
 <div class="section" id="shapefile">
-<h1>Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.3.1. Shapefile<a class="headerlink" href="#shapefile" title="Permalink to this headline">¶</a></h4>
 <p>To save time, the DataSources file is mostly completed in advance with
 entries that reflect the transport shapefile, but some of the key
 entries still need completing as part of the tutorial:</p>
@@ -539,7 +574,7 @@ called:</p>
 </div>
 </div>
 <div class="section" id="vehicle-fuel-efficiency-data">
-<h1>Vehicle fuel efficiency data<a class="headerlink" href="#vehicle-fuel-efficiency-data" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.3.2. Vehicle fuel efficiency data<a class="headerlink" href="#vehicle-fuel-efficiency-data" title="Permalink to this headline">¶</a></h4>
 <p>The fuelConsumption.csv file contains a list of vehicle fuel efficiency
 by fuel, vehicle type and era. This is used to calculate each road
 link’s fuel consumption:</p>
@@ -551,7 +586,7 @@ link’s fuel consumption:</p>
 </div>
 </div>
 <div class="section" id="diurnal-profiles-by-vehicle-type">
-<h1>Diurnal profiles by vehicle type<a class="headerlink" href="#diurnal-profiles-by-vehicle-type" title="Permalink to this headline">¶</a></h1>
+<h4>8.4.3.3. Diurnal profiles by vehicle type<a class="headerlink" href="#diurnal-profiles-by-vehicle-type" title="Permalink to this headline">¶</a></h4>
 <p>Each vehicle type has a different activity profile. For example, freight
 and taxi vehicle may operate later at night than passenger cars. The
 Transport.csv file contains a profile for each of these:</p>
@@ -563,19 +598,22 @@ Transport.csv file contains a profile for each of these:</p>
 </div>
 <p>Each profile is a week long, and these profiles control changes to the
 total volume of traffic each day.</p>
+</div>
+</div>
+</div>
 <div class="section" id="run-gqf">
-<h2>Run GQF<a class="headerlink" href="#run-gqf" title="Permalink to this headline">¶</a></h2>
+<h2>8.5. Run GQF<a class="headerlink" href="#run-gqf" title="Permalink to this headline">¶</a></h2>
 <p>Under UMEP &gt; Processor &gt; Urban Energy Balance, choose GQf (GreateRQF)</p>
 <dl class="docutils">
 <dt>This loads the model interface dialog box:</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/Gqf_dialog.png" src="../_images/Gqf_dialog.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
 <div class="section" id="choose-configuration-files-and-output-folder">
-<h3>Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
+<h3>8.5.1. Choose configuration files and output folder<a class="headerlink" href="#choose-configuration-files-and-output-folder" title="Permalink to this headline">¶</a></h3>
 <p>Working from the top of the dialog box to the bottom…</p>
 <ol class="arabic simple">
 <li>Click the … buttons in the “Configuration and raw input data” panel
@@ -599,23 +637,23 @@ disaggregated data. It will then be copied to the new output folder and
 used as normal.</p>
 </div>
 <div class="section" id="run-the-model-for-1-week">
-<h3>Run the model for 1 week<a class="headerlink" href="#run-the-model-for-1-week" title="Permalink to this headline">¶</a></h3>
+<h3>8.5.2. Run the model for 1 week<a class="headerlink" href="#run-the-model-for-1-week" title="Permalink to this headline">¶</a></h3>
 <p>Choose a start date of 11 May 2015, using the start and end date boxes,
 then select “Run”.</p>
 <blockquote>
 <div><div class="figure" id="id2">
 <img alt="../_images/Gqf_timerange.png" src="../_images/Gqf_timerange.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="visualise-results">
-<h2>Visualise results<a class="headerlink" href="#visualise-results" title="Permalink to this headline">¶</a></h2>
+<h2>8.6. Visualise results<a class="headerlink" href="#visualise-results" title="Permalink to this headline">¶</a></h2>
 <p>Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.</p>
 <div class="section" id="create-emissions-maps-at-noon">
-<h3>Create emissions maps at noon<a class="headerlink" href="#create-emissions-maps-at-noon" title="Permalink to this headline">¶</a></h3>
+<h3>8.6.1. Create emissions maps at noon<a class="headerlink" href="#create-emissions-maps-at-noon" title="Permalink to this headline">¶</a></h3>
 <p>Use the visualisation tool to create a map of all the QF components at
 noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
 “Add to canvas”. This may take a moment to process. Close the
@@ -634,7 +672,7 @@ colours.</p>
 <blockquote>
 <div><div class="figure" id="id3">
 <img alt="../_images/525px-Gqf_totalqf_map.png" src="../_images/525px-Gqf_totalqf_map.png" />
-<p class="caption"><span class="caption-text">Total QF at Noon on May 11</span></p>
+<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Total QF at Noon on May 11</span></p>
 </div>
 </div></blockquote>
 <p>Add some contrast to it by choosing a different colour scale:</p>
@@ -646,7 +684,7 @@ colour the same as the fill colour.</p>
 <blockquote>
 <div><div class="figure" id="id4">
 <img alt="../_images/525px-Gqf_totalqf_map_recoloured.png" src="../_images/525px-Gqf_totalqf_map_recoloured.png" />
-<p class="caption"><span class="caption-text">Total QF at Noon on May 11</span></p>
+<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Total QF at Noon on May 11</span></p>
 </div>
 </div></blockquote>
 <p>The roads have a very different spatial pattern to buildings, so these
@@ -655,18 +693,18 @@ accordingly:</p>
 <blockquote>
 <div><div class="figure" id="id5">
 <img alt="../_images/525px-Gqf_transportqf_map_recoloured.png" src="../_images/525px-Gqf_transportqf_map_recoloured.png" />
-<p class="caption"><span class="caption-text">GQF Transport QF at 1200 UTC</span></p>
+<p class="caption"><span class="caption-number">Fig. 8.10 </span><span class="caption-text">GQF Transport QF at 1200 UTC</span></p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="plot-a-time-series-of-qf-in-the-centre-of-the-city">
-<h3>Plot a time series of QF in the centre of the city<a class="headerlink" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city" title="Permalink to this headline">¶</a></h3>
+<h3>8.6.2. Plot a time series of QF in the centre of the city<a class="headerlink" href="#plot-a-time-series-of-qf-in-the-centre-of-the-city" title="Permalink to this headline">¶</a></h3>
 <p>A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool</p>
 <blockquote>
 <div><div class="figure" id="id6">
 <img alt="../_images/LQF_Tutorial_SelectFeatureIcon.png" src="../_images/LQF_Tutorial_SelectFeatureIcon.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 8.11 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 <p>and click an output area of
@@ -675,7 +713,7 @@ interest.</p>
 <dt>This turns yellow. Right-click it and select the option that comes up.</dt>
 <dd><div class="first last figure" id="id7">
 <img alt="../_images/LQF_Tutorial_SelectFeature.png" src="../_images/LQF_Tutorial_SelectFeature.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 8.12 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </dd>
 </dl>
@@ -684,7 +722,7 @@ then appears on the left, with the ID shown. Make a note of this.</p>
 <blockquote>
 <div><div class="figure" id="id8">
 <img alt="../_images/LQF_Tutorial_FeatureInfo.png" src="../_images/LQF_Tutorial_FeatureInfo.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
+<p class="caption"><span class="caption-number">Fig. 8.13 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">`to</span> <span class="pre">do`</span></code></span></p>
 </div>
 </div></blockquote>
 <p>Return to the visualisation tool, choose output area 5448 and click
@@ -696,15 +734,15 @@ Sunday, when people are expected to not be at work.</p>
 <img alt="../_images/600px-Gqf_timeseries_default.png" src="../_images/600px-Gqf_timeseries_default.png" />
 </div>
 </div></blockquote>
+</div>
+</div>
 <div class="section" id="tutorials-2-refining-gqf-results">
-<h4>Tutorials 2: Refining GQF results<a class="headerlink" href="#tutorials-2-refining-gqf-results" title="Permalink to this headline">¶</a></h4>
+<h2>8.7. Tutorials 2: Refining GQF results<a class="headerlink" href="#tutorials-2-refining-gqf-results" title="Permalink to this headline">¶</a></h2>
 <p>There are several extra options in GQF. The following mini-tutorials
 show how they are used:</p>
 </div>
-</div>
-</div>
 <div class="section" id="tutorial-2a-add-a-public-holiday">
-<h2>Tutorial 2a: Add a public holiday<a class="headerlink" href="#tutorial-2a-add-a-public-holiday" title="Permalink to this headline">¶</a></h2>
+<h2>8.8. Tutorial 2a: Add a public holiday<a class="headerlink" href="#tutorial-2a-add-a-public-holiday" title="Permalink to this headline">¶</a></h2>
 <p>The parameters.nml file contains three entries related to public
 holidays, which are treated as the second day of the weekend by GQF:</p>
 <ul class="simple">
@@ -722,7 +760,7 @@ and the resulting time series in output area 5448 is shown below:</p>
 <blockquote>
 <div><div class="figure" id="id9">
 <img alt="../_images/600px-Gqf_timeseries_default.png" src="../_images/600px-Gqf_timeseries_default.png" />
-<p class="caption"><span class="caption-text">Time series with extra public holiday on May 13</span></p>
+<p class="caption"><span class="caption-number">Fig. 8.14 </span><span class="caption-text">Time series with extra public holiday on May 13</span></p>
 </div>
 </div></blockquote>
 <p>Compared against the results from Tutorial 1, the curve on May 13 in
@@ -730,7 +768,7 @@ each sub-plot now resembles May 17 (a Sunday) rather than the weekdays
 around it.</p>
 </div>
 <div class="section" id="tutorial-2b-remove-the-sensible-heat-component">
-<h2>Tutorial 2b: Remove the sensible heat component<a class="headerlink" href="#tutorial-2b-remove-the-sensible-heat-component" title="Permalink to this headline">¶</a></h2>
+<h2>8.9. Tutorial 2b: Remove the sensible heat component<a class="headerlink" href="#tutorial-2b-remove-the-sensible-heat-component" title="Permalink to this headline">¶</a></h2>
 <p>Anthropogenic heat is made up of three parts:</p>
 <ul class="simple">
 <li>Sensible: Transported by convection (usually the largest share)</li>
@@ -746,27 +784,30 @@ area 5448 is shown below:</p>
 <blockquote>
 <div><div class="figure" id="id10">
 <img alt="../_images/525px-Gqf_timeseries_holiday_nosensible.png" src="../_images/525px-Gqf_timeseries_holiday_nosensible.png" />
-<p class="caption"><span class="caption-text">Time series with only latent and wastewater contributions included, and extra public holiday on May 13</span></p>
+<p class="caption"><span class="caption-number">Fig. 8.15 </span><span class="caption-text">Time series with only latent and wastewater contributions included, and extra public holiday on May 13</span></p>
 </div>
 </div></blockquote>
 <p>The emissions are far lower than those in Tutorial 2a, showing how
 latent heat is a relatively small contribution. Consuming electricity
 emits no latent heat, unlike gas, while metabolism now represents a
 larger fraction of the total.</p>
-<ul class="simple">
-<li>Modelling anthropogenic heat flux in London, UK using the <a class="reference internal" href="LQF.html"><span class="doc">LQF</span></a>
-model</li>
-</ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../OtherManuals/OtherManuals.html" class="btn btn-neutral float-right" title="Other Manuals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="LQF.html" class="btn btn-neutral" title="7. Anthropogenic heat - LQF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -777,7 +818,7 @@ model</li>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -796,6 +837,7 @@ model</li>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -813,14 +855,13 @@ model</li>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

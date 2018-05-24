@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction to SOLWEIG &mdash; UMEP Manual  documentation</title>
+  <title>5. Thermal Comfort - Introduction to SOLWEIG &mdash; UMEP Manual  documentation</title>
   
 
   
@@ -25,26 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="UMEP Manual  documentation" href="../index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Solar Energy - Introduction to SEBE" href="SEBE.html" />
+    <link rel="prev" title="4. Urban Energy Balance - SUEWS Spatial" href="SuewsSpatial.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -61,7 +55,7 @@
 
           
             
-            <img src="../_static/UMEP_logo.png" class="logo" />
+            <img src="../_static/UMEP_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -104,8 +98,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">UMEP Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Tutorials.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Footprint.html">1. Footprint modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - SUEWS Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsAdvanced.html">3. Urban Energy Balance - SUEWS Advanved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Thermal Comfort - Introduction to SOLWEIG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">5.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objectives">5.2. Objectives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steps">5.2.1. Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-practical-steps">5.3. Initial Practical steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-for-this-exercise">5.3.1. Data for this exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#solweig-model-inputs">5.4. SOLWEIG Model Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-run-solweig-from-the-umep-plugin">5.5. How to Run SOLWEIG from the UMEP-plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-meteorolgical-data-and-pois">5.6. Using meteorolgical data and POIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examine-your-output-with-solweig-analyzer">5.7. Examine your output with SOLWEIG Analyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#climate-sensitive-planning">5.8. Climate sensitive planning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-tree-generator">5.8.1. The Tree Generator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Solar Energy - Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GQF.html">8. Anthropogenic heat - GQF</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Other Manuals</span></p>
 <ul>
@@ -121,7 +144,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">UMEP Manual</a>
@@ -129,9 +152,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -154,7 +178,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Introduction to SOLWEIG</li>
+          <li><a href="Tutorials.html">Introduction</a> &raquo;</li>
+        
+      <li>5. Thermal Comfort - Introduction to SOLWEIG</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,10 +199,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-to-solweig">
-<span id="introductiontosolweig"></span><h1>Introduction to SOLWEIG<a class="headerlink" href="#introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="thermal-comfort-introduction-to-solweig">
+<span id="introductiontosolweig"></span><h1>5. Thermal Comfort - Introduction to SOLWEIG<a class="headerlink" href="#thermal-comfort-introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>5.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a model [SOlar and LongWave Environmental
 Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
 temperature (T<sub>mrt</sub>).</p>
@@ -200,16 +226,16 @@ manual</a> provides more
 detail.</p>
 <div class="figure" id="id1">
 <img alt="Figure 1: Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
-<p class="caption"><span class="caption-text">Figure 1: Overview of SOLWEIG</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Figure 1: Overview of SOLWEIG</span></p>
 </div>
 </div>
 <div class="section" id="objectives">
-<h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<h2>5.2. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <p>To introduce SOLWEIG and how to run the model within <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual">UMEP (Urban
 Multi-scale Environmental Predictor)</a>.</p>
 <p>Help with Abbreviations can be found <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">here</a></p>
 <div class="section" id="steps">
-<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.1. Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>Generation of the different kinds of input data that are needed to
 run the model</li>
@@ -222,7 +248,7 @@ design</li>
 </div>
 </div>
 <div class="section" id="initial-practical-steps">
-<h2>Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
+<h2>5.3. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <p>UMEP is a python plugin used in conjunction with
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. To install the software and the UMEP
 plugin see the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">getting
@@ -232,7 +258,7 @@ section in the UMEP manual.</p>
 and/or there may be instability. Please report any issues or suggestions
 to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 <div class="section" id="data-for-this-exercise">
-<h3>Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.1. Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
 <p>To make use of the datasets a password access is
 required &lt;<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">http://urban-climate.net/umep/UMEP_Manual#Tutorials</a>&gt;`__). The
 UMEP tutorial datasets can be downloaded from our here
@@ -258,7 +284,7 @@ land cover (<em>Properties -&gt; Style (lower left) -&gt; Load Style</em>).</li>
 </div>
 </div>
 <div class="section" id="solweig-model-inputs">
-<h2>SOLWEIG Model Inputs<a class="headerlink" href="#solweig-model-inputs" title="Permalink to this headline">¶</a></h2>
+<h2>5.4. SOLWEIG Model Inputs<a class="headerlink" href="#solweig-model-inputs" title="Permalink to this headline">¶</a></h2>
 <p>Details of the model inputs and outputs are provided in the <a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">SOLWEIG
 manual</a>. As this tutorial is
 concerned with a <strong>simple application</strong> only the most critical
@@ -270,7 +296,7 @@ SOLWEIG.</p>
 R: required, O: Optional, N : not needed,
 S: Spatial, M: Meteorological,</p>
 <table border="1" class="colwidths-given docutils" id="id2">
-<caption><span class="caption-text">Input data and parameters</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 5.1 </span><span class="caption-text">Input data and parameters</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="30%" />
 <col width="30%" />
@@ -367,7 +393,7 @@ to prepare your input data. There is also a possibility to use a single point in
 available but the mdoel can also calculate these variables.</p>
 </div>
 <div class="section" id="how-to-run-solweig-from-the-umep-plugin">
-<h2>How to Run SOLWEIG from the UMEP-plugin<a class="headerlink" href="#how-to-run-solweig-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>5.5. How to Run SOLWEIG from the UMEP-plugin<a class="headerlink" href="#how-to-run-solweig-from-the-umep-plugin" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Open SOLWEIG from <em>UMEP -&gt; Processor -&gt; Outdoor Thermal Comfort -&gt;
 Mean radiant temperature (SOLWEIG)</em>.</p>
@@ -379,7 +405,7 @@ for Gothenburg, Sweden.</li>
 <blockquote>
 <div><div class="figure" id="id3">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Interface.png"><img alt="None" src="../_images/SOLWEIG_Interface.png" style="width: 1070px;" /></a>
-<p class="caption"><span class="caption-text">Figure 2: Dialog for the SOLWEIG model (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Figure 2: Dialog for the SOLWEIG model (click on image for larger image)</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -400,7 +426,7 @@ output folder for your computer.</li>
 <blockquote>
 <div><div class="figure" id="id4">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_SVF_solweig.png"><img alt="None" src="../_images/SOLWEIG_SVF_solweig.png" style="width: 487px;" /></a>
-<p class="caption"><span class="caption-text">Figure 3: Settings for the SkyViewFactorCalculator.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Figure 3: Settings for the SkyViewFactorCalculator.</span></p>
 </div>
 </div></blockquote>
 <ul class="simple">
@@ -419,7 +445,7 @@ Wall height and aspect</em> and use the settings as shown below (Figure
 <blockquote>
 <div><div class="figure" id="id5">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_wallgeight_solweig.png"><img alt="None" src="../_images/SOLWEIG_wallgeight_solweig.png" style="width: 505px;" /></a>
-<p class="caption"><span class="caption-text">Figure 4: Settings for the Wall height and aspect plugin.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Figure 4: Settings for the Wall height and aspect plugin.</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -431,7 +457,7 @@ first try. Click <strong>Run</strong>.</p>
 <blockquote>
 <div><div class="figure" id="id6">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Tmrt1_solweig.png"><img alt="None" src="../_images/SOLWEIG_Tmrt1_solweig.png" style="width: 1078px;" /></a>
-<p class="caption"><span class="caption-text">Figure 5: The settings for your first SOLWEIG run (click on image for larger image).</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Figure 5: The settings for your first SOLWEIG run (click on image for larger image).</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -457,7 +483,7 @@ result again with the previous runs.</p>
 </ol>
 </div>
 <div class="section" id="using-meteorolgical-data-and-pois">
-<h2>Using meteorolgical data and POIs<a class="headerlink" href="#using-meteorolgical-data-and-pois" title="Permalink to this headline">¶</a></h2>
+<h2>5.6. Using meteorolgical data and POIs<a class="headerlink" href="#using-meteorolgical-data-and-pois" title="Permalink to this headline">¶</a></h2>
 <p>SOLWEIG is also able to run a continuous dataset of meteorological data.
 You will make use of a single summer day as well as a winter day for
 Gothenburg, Sweden. The GUI is also able to derive full model output
@@ -475,7 +501,7 @@ the layer it has to be editable and Add Feature should be activated
 <blockquote>
 <div><div class="figure" id="id7">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_AddPoint.png"><img alt="None" src="../_images/SOLWEIG_AddPoint.png" style="width: 411px;" /></a>
-<p class="caption"><span class="caption-text">Figure 6: Setting to add points</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Figure 6: Setting to add points</span></p>
 </div>
 </div></blockquote>
 <p>Two points should be added and the attributes should be id=<strong>1</strong> and
@@ -485,7 +511,7 @@ the two points.</p>
 <blockquote>
 <div><div class="figure" id="id8">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Pointskr.png"><img alt="None" src="../_images/SOLWEIG_Pointskr.png" style="width: 846px;" /></a>
-<p class="caption"><span class="caption-text">Figure 7: Location of the two POIs</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Figure 7: Location of the two POIs</span></p>
 </div>
 </div></blockquote>
 <p>When you are
@@ -503,7 +529,7 @@ in to save T<sub>mrt</sub> as <em>Output maps</em>. Run the model again.</p>
 </ol>
 </div>
 <div class="section" id="examine-your-output-with-solweig-analyzer">
-<h2>Examine your output with SOLWEIG Analyzer<a class="headerlink" href="#examine-your-output-with-solweig-analyzer" title="Permalink to this headline">¶</a></h2>
+<h2>5.7. Examine your output with SOLWEIG Analyzer<a class="headerlink" href="#examine-your-output-with-solweig-analyzer" title="Permalink to this headline">¶</a></h2>
 <p>To perform a first set of analysis of your result you can make use of
 the SOLWEIG Analyzer plug-in.</p>
 <ol class="arabic">
@@ -515,7 +541,7 @@ output maps. Start by locating your output folder in the top section
 <blockquote>
 <div><div class="figure" id="id9">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_SOLWEIGAnalyzer.png"><img alt="None" src="../_images/SOLWEIG_SOLWEIGAnalyzer.png" style="width: 875px;" /></a>
-<p class="caption"><span class="caption-text">Figure 8: Dialog for the SOLWEIG Analyzer plug-in</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Figure 8: Dialog for the SOLWEIG Analyzer plug-in</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -547,7 +573,7 @@ maps can be used to identify areas prone to e.g. heat stress</p>
 </ol>
 </div>
 <div class="section" id="climate-sensitive-planning">
-<h2>Climate sensitive planning<a class="headerlink" href="#climate-sensitive-planning" title="Permalink to this headline">¶</a></h2>
+<h2>5.8. Climate sensitive planning<a class="headerlink" href="#climate-sensitive-planning" title="Permalink to this headline">¶</a></h2>
 <p>Vegetation is one effective measure to reduce areas prone to heat
 related health issues. In this section you make use of the Tree
 Generator plugin to see the effect of adding more vegetation into our
@@ -555,7 +581,7 @@ study area. The municipality in Gothenburg have identified a “hot spot”
 south of the german church and they want to see the effect of planting
 three new trees in that area.</p>
 <div class="section" id="the-tree-generator">
-<h3>The Tree Generator<a class="headerlink" href="#the-tree-generator" title="Permalink to this headline">¶</a></h3>
+<h3>5.8.1. The Tree Generator<a class="headerlink" href="#the-tree-generator" title="Permalink to this headline">¶</a></h3>
 <p>The Tree Generator plugin make use of a point vector file including the
 necessary attributes to generate/add/remove vegetation suitable for
 either mean radiant temperature modelling with SOLWEIG or urban energy
@@ -570,7 +596,7 @@ be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 <blockquote>
 <div><div class="figure" id="id10">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_File_TreesKR.png"><img alt="None" src="../_images/SOLWEIG_File_TreesKR.png" style="width: 846px;" /></a>
-<p class="caption"><span class="caption-text">Figure 9: Location of the three new vegetation units.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Figure 9: Location of the three new vegetation units.</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -582,7 +608,7 @@ use the settings as shown in Figure 10.</p>
 <blockquote>
 <div><div class="figure" id="id11">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Treegeneratorsolweig.png"><img alt="None" src="../_images/SOLWEIG_Treegeneratorsolweig.png" style="width: 574px;" /></a>
-<p class="caption"><span class="caption-text">Figure 10: The settings for the Tree Generator</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Figure 10: The settings for the Tree Generator</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -649,11 +675,18 @@ the vegetation unit</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="SEBE.html" class="btn btn-neutral float-right" title="6. Solar Energy - Introduction to SEBE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SuewsSpatial.html" class="btn btn-neutral" title="4. Urban Energy Balance - SUEWS Spatial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -664,7 +697,7 @@ the vegetation unit</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -683,6 +716,7 @@ the vegetation unit</td>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -700,14 +734,13 @@ the vegetation unit</td>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
