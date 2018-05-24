@@ -30,8 +30,8 @@ Initial Practical steps
 -----------------------
 
 -  If **QGIS** is not on your computer you will `need to install
-   it <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
--  Then install the `UMEP <http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started>`__ plugin 
+   it <Getting_Started>`
+-  Then install the `UMEP <Getting_Started>`.plugin 
 
 -  Start the QGIS software
 -  If not visible on the desktop use the **Start** button to find the
@@ -49,10 +49,8 @@ When you open it on the top toolbar you will see **UMEP**.
 -  If UMEP is not on your machine, add the UMEP plugin by go to *Plugins>Manage and Install Plugins* in QGIS
    and search for UMEP. Click **Install plugin**. Here you can also see if there is newer versions of your added plugins.
 
--  Preferably, read through the section in the `online
-   manual <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
-   BEFORE using the model, so you are familiar with it’s operation and
-   terminology used.
+-  Preferably, read through the section in the `online manual <SourceArea(Point)>`__
+   BEFORE using the model, so you are familiar with it’s operation and terminology used.
 
 Data for Tutorial
 ~~~~~~~~~~~~~~~~~
@@ -63,7 +61,6 @@ Use the appropriate data:
 
 - London: `download <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
 
-`To get the Password if not given it already <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__
 
 Prior to Starting
 ~~~~~~~~~~~~~~~~~
@@ -71,8 +68,8 @@ Prior to Starting
 #. Download the **Data needed for the Tutorial**. You can use either Reading of the London dataset. 
 
 #. Load the Raster data (`DEM, DSM,
-   CDSM <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__)
-   files – DOES A CDSM EXIST? Yes for London, No for Reading
+   CDSM <Abbreviations>`) 
+   *files – DOES A CDSM EXIST? Yes for London, No for Reading*
 
    -  Go to: *Layer > Add layer > Add Raster Layer*. Locate downloaded files add add them to your QGIS project.
 

@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Urban Energy Balance - Introduction to SUEWS" href="IntroductionToSuews.html" />
+    <link rel="next" title="2. Urban Energy Balance - SUEWS Introduction" href="IntroductionToSuews.html" />
     <link rel="prev" title="Introduction" href="Tutorials.html" /> 
 
   
@@ -118,11 +118,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - Introduction to SUEWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - SUEWS Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SuewsAdvanced.html">3. Urban Energy Balance - SUEWS Advanved</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Introduction to SOLWEIG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Thermal Comfort - Introduction to SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Solar Energy - Introduction to SEBE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GQF.html">8. Anthropogenic heat - GQF</a></li>
 </ul>
@@ -221,9 +221,9 @@ et al. (2015) requires the boundary layer height.</p>
 <div class="section" id="initial-practical-steps">
 <h2>1.2. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>If <strong>QGIS</strong> is not on your computer you will <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started">need to install
-it</a></li>
-<li>Then install the <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Getting_Started">UMEP</a> plugin</li>
+<li>If <strong>QGIS</strong> is not on your computer you will <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">need to install
+it</span></a></li>
+<li>Then install the <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">UMEP</span></a>.plugin</li>
 <li>Start the QGIS software</li>
 <li>If not visible on the desktop use the <strong>Start</strong> button to find the
 software (i.e. Find QGIS under your applications)</li>
@@ -237,10 +237,8 @@ software (i.e. Find QGIS under your applications)</li>
 <ul class="simple">
 <li>If UMEP is not on your machine, add the UMEP plugin by go to <em>Plugins&gt;Manage and Install Plugins</em> in QGIS
 and search for UMEP. Click <strong>Install plugin</strong>. Here you can also see if there is newer versions of your added plugins.</li>
-<li>Preferably, read through the section in the <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29">online
-manual</a>
-BEFORE using the model, so you are familiar with it’s operation and
-terminology used.</li>
+<li>Preferably, read through the section in the <a class="reference external" href="SourceArea(Point)">online manual</a>
+BEFORE using the model, so you are familiar with it’s operation and terminology used.</li>
 </ul>
 <div class="section" id="data-for-tutorial">
 <h3>1.2.1. Data for Tutorial<a class="headerlink" href="#data-for-tutorial" title="Permalink to this headline">¶</a></h3>
@@ -249,15 +247,14 @@ terminology used.</li>
 <li>Reading: <a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Reading/DataReading.zip">download</a></li>
 <li>London: <a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip">download</a></li>
 </ul>
-<p><a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&amp;ifq">To get the Password if not given it already</a></p>
 </div>
 <div class="section" id="prior-to-starting">
 <h3>1.2.2. Prior to Starting<a class="headerlink" href="#prior-to-starting" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li>Download the <strong>Data needed for the Tutorial</strong>. You can use either Reading of the London dataset.</li>
-<li>Load the Raster data (<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">DEM, DSM,
-CDSM</a>)
-files – DOES A CDSM EXIST? Yes for London, No for Reading<ul>
+<li>Load the Raster data (<a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">DEM, DSM,
+CDSM</span></a>)
+<em>files – DOES A CDSM EXIST? Yes for London, No for Reading</em><ul>
 <li>Go to: <em>Layer &gt; Add layer &gt; Add Raster Layer</em>. Locate downloaded files add add them to your QGIS project.</li>
 </ul>
 </li>
@@ -422,7 +419,7 @@ Bottema (1995)</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="IntroductionToSuews.html" class="btn btn-neutral float-right" title="2. Urban Energy Balance - Introduction to SUEWS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="IntroductionToSuews.html" class="btn btn-neutral float-right" title="2. Urban Energy Balance - SUEWS Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Tutorials.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

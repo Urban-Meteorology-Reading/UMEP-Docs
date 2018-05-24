@@ -14,7 +14,7 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+started <Getting_Started>`
 section in the UMEP manual.
 
 As UMEP is under constant development, some documentation may be missing
@@ -26,8 +26,7 @@ Data for this exercise
 
 In order to proceed, you will need the zip file named
 `GQF\_Inputs\_1.zip <http://urban-climate.net/UMEPTutorials/GQF/GQF_Inputs_1.zip>`__
-from the UMEP tutorials data store (password needed: `request
-access <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__).
+from the UMEP tutorials data reopository. 
 
 You may also wish to consult the `GQF user guide <GQF_Manual>`__
 
@@ -90,17 +89,17 @@ GQF Tutorial 1: Comprehensive QF modelling for Greater London
 -------------------------------------------------------------
 
 Preparing data
---------------
+~~~~~~~~~~~~~~
 
 Manage input data files
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 -  Extract the contents of GQF\_Inputs\_1.zip into a folder on your
    local machine and note the path to each file (e.g.
    C:\\GQFData\\BuildingLoadings\_Industrial.csv)
 
 Gather information about shapefile inputs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++++++++++++
 
 GQF uses multiple shapefiles (ending .shp) to build up a picture of
 energy use, population and road transport across the city. Five pieces
@@ -130,7 +129,7 @@ input files, or a totally different set of areas. In this tutorial, one
 of the population datasets is used to keep things simple.
 
 Set up the DataSources.nml file
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The data sources file needs to be updated so that it can find the
 various data files, and understands what to do with them. A full
@@ -147,7 +146,7 @@ of the input data.
    information gathered above.
 
 Add shapefile information
-~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++
 
 #. The “**shapefile**” entry is the path to the file
 #. The **epsgCode** and **featureIds** entries are found by inspecting
@@ -205,7 +204,7 @@ attribToUse and featureIds:
     /
 
 Add temporal data files
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 Day-to-day energy demand changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +275,7 @@ requires a diurnal profile data file:
    /
 
 Add information about transport
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++
 
 The transport input data files are very detailed and therefore needs a
 lot of descriptive information in the &transportData section of
@@ -382,7 +381,7 @@ Each profile is a week long, and these profiles control changes to the
 total volume of traffic each day.
 
 Run GQF
--------
+~~~~~~~
 
 Under UMEP > Processor > Urban Energy Balance, choose GQf (GreateRQF)
 
@@ -392,7 +391,7 @@ This loads the model interface dialog box:
               ```to do```
 
 Choose configuration files and output folder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++
 
 Working from the top of the dialog box to the bottom...
 
@@ -417,7 +416,7 @@ disaggregated data. It will then be copied to the new output folder and
 used as normal.
 
 Run the model for 1 week
-~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++
 
 Choose a start date of 11 May 2015, using the start and end date boxes,
 then select “Run”.
@@ -430,13 +429,13 @@ then select “Run”.
 
 
 Visualise results
------------------
+~~~~~~~~~~~~~~~~~
 
 Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.
 
 Create emissions maps at noon
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++
 
 Use the visualisation tool to create a map of all the QF components at
 noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
@@ -484,7 +483,7 @@ accordingly:
             GQF Transport QF at 1200 UTC
 
 Plot a time series of QF in the centre of the city
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool
@@ -525,7 +524,7 @@ There are several extra options in GQF. The following mini-tutorials
 show how they are used:
 
 Tutorial 2a: Add a public holiday
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The parameters.nml file contains three entries related to public
 holidays, which are treated as the second day of the weekend by GQF:
@@ -554,7 +553,7 @@ each sub-plot now resembles May 17 (a Sunday) rather than the weekdays
 around it.
 
 Tutorial 2b: Remove the sensible heat component
------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Anthropogenic heat is made up of three parts:
 

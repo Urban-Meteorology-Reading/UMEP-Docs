@@ -212,8 +212,8 @@ casting algorithm (Ratti and Richens 1999) has been developed to
 incorporate walls (Lindberg et al. 2015). This is of interest for a
 broad range of applications, for example solar energy potential and
 thermal comfort.</p>
-<p>SEBE is incorporated in <a class="reference external" href="http://urban-climate.net/umep/UMEP">UMEP(Urban Multi-scale Environmental
-Predictor)</a>, a plugin for
+<p>SEBE is incorporated in <a class="reference internal" href="../index.html#index-page"><span class="std std-ref">UMEP(Urban Multi-scale Environmental
+Predictor)</span></a>, a plugin for
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. As SEBE was initially developed to
 estimate solar energy potential on building roofs, the Digital Surface
 Models (DSMs) used need to include roof structures, such as tilted
@@ -229,10 +229,8 @@ with seasons, with the effects of vegetation etc.</p>
 <div class="section" id="initial-practical-steps">
 <h2>6.2. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>If <strong>QGIS</strong> is not on your computer you will <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">need to install
-it</a></li>
-<li>Then install the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">**UMEP**
-plugin</a></li>
+<li>If <strong>QGIS</strong> is not on your computer you will <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">need to install it</span></a></li>
+<li>Then install the <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">**UMEP** plugin</span></a></li>
 <li>Start the QGIS software</li>
 <li><em>Windows:</em> If not visible on the desktop use the <strong>Start</strong> button to
 find the software (i.e. Find QGIS under your applications)</li>
@@ -244,16 +242,14 @@ find the software (i.e. Find QGIS under your applications)</li>
 <p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Figure 1: Location of SEBE in UMEP</span></p>
 </div>
 <ul class="simple">
-<li>If it UMEP not on our machine, download and install the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started">**UMEP**
-plugin</a></li>
+<li>If it UMEP not on our machine, download and install the <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">**UMEP**
+plugin</span></a></li>
 <li>Read through the section in the online
 manual BEFORE using the model, so you are familiar with it’s operation and
 terminology used.</li>
 </ul>
 <div class="section" id="data-for-tutorial">
 <h3>6.2.1. Data for Tutorial<a class="headerlink" href="#data-for-tutorial" title="Permalink to this headline">¶</a></h3>
-<p>To use SEBE the datasets are (for <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">password access if not already
-provided</a>)</p>
 <div class="figure" id="id2">
 <a class="reference internal image-reference" href="../_images/SEBE_Gothenburg.png"><img alt="None" src="../_images/SEBE_Gothenburg.png" style="width: 356px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Figure 2. Central Gothenburg study area (red square).
@@ -538,7 +534,7 @@ Energy on Building Envelopes (SEBE)</em> in the menu bar (Figure 1).</p>
 <li><p class="first"><em>Top frame</em>: for input data for the SEBE calculations.</p>
 <ul>
 <li><p class="first">Critical is the <strong>building and ground</strong>
-<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">DSM</a>
+<a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">DSM</span></a>
 for the calculations in SEBE.</p>
 </li>
 <li><p class="first">Optionally <strong>vegetation</strong> (trees and bushes) can be included as
@@ -572,8 +568,8 @@ Gothenburg is located in CET which is UTC +1.</p>
 </li>
 <li><p class="first">Meteorological file needs to be specified.</p>
 </li>
-<li><p class="first">Wall data are created with the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect">UMEP plugin - **Wall Height and
-Aspect**</a>:</p>
+<li><p class="first">Wall data are created with the <a class="reference internal" href="../pre-processor/Urban Geometry Wall Height and Aspect.html#wallheightandaspect"><span class="std std-ref">UMEP plugin - **Wall Height and
+Aspect**</span></a>:</p>
 <ul class="simple">
 <li>This uses a 3 by 3 pixels kernel minimum filter where the four
 cardinal points (N, W, S,E) are investigated. The pixels just
@@ -747,8 +743,8 @@ and re-open).</li>
 <li>Extract the data to a directory</li>
 <li>Load the Raster data (DEM, DSM) files (as you did before)</li>
 <li>Shadows<ul>
-<li><a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Daily_Shadow_Pattern">UMEP -&gt; Processor -&gt; Solar Radiation -&gt; Daily Shadow
-pattern</a></li>
+<li><a class="reference internal" href="../processor/Solar Radiation Daily Shadow Pattern.html#dailyshadowpattern"><span class="std std-ref">UMEP -&gt; Processor -&gt; Solar Radiation -&gt; Daily Shadow
+pattern</span></a></li>
 <li>Allows you to calculate the shadows for a particular time of day
 and <a class="reference external" href="http://disc.sci.gsfc.nasa.gov/julian_calendar.html">Day of
 Year</a>.</li>
@@ -802,9 +798,9 @@ processing techniques Proc CAADFutures99, Atlanta, GA</li>
 <div class="section" id="tips">
 <h2>6.11. Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
 <p><strong>Meteorological</strong> file in UMEP has a special format. If you have data
-in another format there is a <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Meteorological_Data:_MetPreprocessor">UMEP plugin that can convert your
+in another format there is a <a class="reference internal" href="../pre-processor/Meteorological Data MetPreprocessor.html#metpreprocessor"><span class="std std-ref">UMEP plugin that can convert your
 meteorological data into the UMEP
-format</a>.</p>
+format</span></a>.</p>
 <ul class="simple">
 <li>Plugin is found at <em>UMEP &gt; Pre-Processor &gt; Meteorological data &gt;Prepare Existing data</em>.</li>
 </ul>

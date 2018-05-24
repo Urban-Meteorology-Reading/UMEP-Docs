@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Urban Energy Balance - SUEWS Spatial" href="SuewsSpatial.html" />
-    <link rel="prev" title="2. Urban Energy Balance - Introduction to SUEWS" href="IntroductionToSuews.html" /> 
+    <link rel="prev" title="2. Urban Energy Balance - SUEWS Introduction" href="IntroductionToSuews.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="Tutorials.html">Introduction</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Footprint.html">1. Footprint modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - Introduction to SUEWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSuews.html">2. Urban Energy Balance - SUEWS Introduction</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3. Urban Energy Balance - SUEWS Advanved</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">3.1. Introduction</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#objectives">3.1.1. Objectives</a></li>
@@ -123,8 +123,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="SuewsSpatial.html">4. Urban Energy Balance - SUEWS Spatial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Introduction to SOLWEIG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Introduction to SEBE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IntroductionToSolweig.html">5. Thermal Comfort - Introduction to SOLWEIG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SEBE.html">6. Solar Energy - Introduction to SEBE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="LQF.html">7. Anthropogenic heat - LQF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GQF.html">8. Anthropogenic heat - GQF</a></li>
 </ul>
@@ -203,7 +203,7 @@
 <span id="suewsadvanced"></span><h1>3. Urban Energy Balance - SUEWS Advanved<a class="headerlink" href="#urban-energy-balance-suews-advanved" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>3.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>The tutorial <a class="reference internal" href="IntroductionToSuews.html#introductiontosuews"><span class="std std-ref">Urban Energy Balance - Introduction to SUEWS</span></a> should be completed first. This tutorial is designed to work with QGIS 2.18.</p>
+<p>The tutorial <a class="reference internal" href="IntroductionToSuews.html#introductiontosuews"><span class="std std-ref">Urban Energy Balance - SUEWS Introduction</span></a> should be completed first. This tutorial is designed to work with QGIS 2.18.</p>
 <div class="section" id="objectives">
 <h3>3.1.1. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -231,7 +231,7 @@ be manipulated in SUEWS as well as execute the model on mutiple grids (<a class=
 Balance -&gt; Urban Energy Balance, SUEWS/BLUEWS (Advanced)</em>. This has
 most of the general settings (e.g. activate the snow module etc.)
 which are related to
-<a class="reference external" href="http://urban-climate.net/umep/SUEWS#RunControl.nml">RunControl.nml</a>.</li>
+<a class="reference external" href="http://suews-docs.readthedocs.io/en/latest/input_files/RunControl/RunControl.html">RunControl.nml</a>.</li>
 <li>Use the Input folder:<ul>
 <li><em>C:/Users/your_user_name/.qgis2/python/plugins/UMEP/suewsmodel/Input</em></li>
 </ul>
@@ -251,11 +251,11 @@ which are related to
 <div class="section" id="sensitivity-test">
 <h3>3.2.1. Sensitivity Test<a class="headerlink" href="#sensitivity-test" title="Permalink to this headline">¶</a></h3>
 <p>The default dataset included in <strong>Suews Simple</strong> has parameters
-calculated from a <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29">source area
-model</a>
+calculated from a <a class="reference internal" href="../pre-processor/Urban Morphology Source Area (Point).html#sourcearea-point"><span class="std std-ref">source area
+model</span></a>
 to obtain the appropriate values for the input parameters. Roughness
 parameters such as roughness length (z<sub>0</sub>) and zero plane
-displacement length (z<sub>d</sub>) are calculated using <a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Point.29">morphometric
+displacement length (z<sub>d</sub>) are calculated using <a class="reference external" href="MorphometricCalculator(Point)">morphometric
 models</a>.
 Now you will explore the differences in fluxes using the default
 settings or using input parameters from the geodata included in the test
@@ -301,7 +301,7 @@ LandCoverReclassifier\</em>. Load it in the <em>Layer &gt; Properties &gt; Style
 load. You can also get the properties of a layer by right-click on a
 layer in the Layers-window.</li>
 <li>If you have another land cover dataset you can use the
-<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier">LandCoverReclassifier</a>
+<a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">LandCoverReclassifier</span></a>
 in the UMEP pre-processor to populate with the correct values
 suitable for the UMEP plugin environment.</li>
 <li>Now take a moment and investigate the different geodatasets. What is
@@ -614,7 +614,7 @@ variance of the lateral wind velocity) and roughness parameters.</p>
         <a href="SuewsSpatial.html" class="btn btn-neutral float-right" title="4. Urban Energy Balance - SUEWS Spatial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="IntroductionToSuews.html" class="btn btn-neutral" title="2. Urban Energy Balance - Introduction to SUEWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="IntroductionToSuews.html" class="btn btn-neutral" title="2. Urban Energy Balance - SUEWS Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

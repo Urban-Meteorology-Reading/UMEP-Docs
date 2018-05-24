@@ -13,12 +13,12 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+started <Getting_Started>`
 section in the UMEP manual.
 
 For this tutorial you will need certain python libraries: **Pandas** and
 **NetCDF**. Instructions how to install python libraries are located
-`here <http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities>`__.
+`here <Python_Libraries>`.
 
 As UMEP is under constant development, some documentation may be missing
 and/or there may be instability. Please report any issues or suggestions
@@ -35,8 +35,7 @@ locations:
    produce this tutorial
 #. `LQF input
    files <http://urban-climate.net/UMEPTutorials/LQF/LQF_Inputs_1.zip>`__
-   from the UMEP tutorials data store (password needed: `request
-   access <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__).
+   from the UMEP tutorials data repository.
 
 You may also wish to consult the `LQF user guide <LQF_Manual>`__
 
@@ -57,10 +56,10 @@ LQF Tutorial 1: Simple QF modelling
 -----------------------------------
 
 Preparing data
---------------
+~~~~~~~~~~~~~~
 
 Manage input data files
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 -  Extract the contents of LQF\_Inputs\_1.zip into a folder on your
    local machine and note the path to each file (e.g.
@@ -68,7 +67,7 @@ Manage input data files
 -  Save the LQF database to the same folder as the other data.
 
 Gather information about output areas shapefile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++++++++++++++++++
 
 The input data comes with one shapefile
 (griddedResidentialPopulation.shp) (a collection of files with the same
@@ -107,10 +106,10 @@ ID field name). The population data was gridded using an algorithm, so
 the number of people in each area may not be a whole number.
 
 Set up the DataSources.nml file
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Add shapefile information
-~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++
 
 The data sources file needs to be updated so that it can find the
 various data files, and understands what to do with them. A full
@@ -148,7 +147,7 @@ this:
 
 
 Add the LQF database and mean daily temperature files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 LQF needs to know the location of its database of national parameters.
 ::
@@ -196,7 +195,7 @@ This loads the model interface dialog box:
     ```to do```
     
 Choose configuration files and output folder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++
 
 Working from the top of the dialog box to the bottom...
 
@@ -223,7 +222,7 @@ disaggregated data. It will then be copied to the new output folder and
 used as normal.
 
 Run the model for 1 week
-~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++
 
 Choose a start date of 11 May 2015, using the start and end date boxes,
 then select “Run”.
@@ -234,7 +233,7 @@ then select “Run”.
     ```to do```
 
 Visualise results
------------------
+~~~~~~~~~~~~~~~~~
 
 Once the model run this is finished, press “visualise outputs” to view
 some of the model results to open the visualisation tool.
@@ -246,7 +245,7 @@ some of the model results to open the visualisation tool.
    ```to do```
 
 Create a map of total QF at noon
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++
 
 Use the visualisation tool to create a map of all the QF components at
 noon (11:00-12:00 UTC) on May 11 by selecting that time and pressing
@@ -276,7 +275,7 @@ colour the same as the fill colour.
     ```to do```
 
 Plot a time series of QF in the centre of the city
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 A time series can be shown for any of the output areas. To identify one
 of interest, zoom into the city centre, choose the selection tool
@@ -311,7 +310,7 @@ building emissions on Thursday 15th when the weather is colder.
         ```to do```
 
 Recycling of input data
-~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++
 
 Ideally the model is run only for dates covered by the daily temperature
 data, but the data is recycled if the model runs beyond the end of the
@@ -333,7 +332,7 @@ applied, and the output of the model is compared to that of the standard
 case.
 
 Tutorial 2a: Custom diurnal profiles
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this scenario, new diurnal profiles for building energy consumption
 and road vehicle traffic are available for London. These profiles are
@@ -394,7 +393,7 @@ different days of the week. This is especially noticeable in transport
 emissions on the final 3 days of the week.
 
 Tutorial 2b: Updating national parameters in the LQF database
--------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LQF takes the latest national attributes (population, vehicle count and
 energy consumption) up to and including the year(s) modelled. The copy
@@ -467,7 +466,7 @@ See `the manual <LQF_Manual#Wide-area_data>`__ for a list of the
 parameters stored in the LQF database.
 
 Tutorial 2c: Custom temperature response function
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Building emissions are governed by a function that relates the daily
 mean air temperature to energy consumption. This is a simple treatment

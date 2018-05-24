@@ -7,7 +7,7 @@ Introduction
 ------------
 
 In this tutorial you will generate input data to the 
-`SUEWS <http://urban-climate.net/umep/SUEWS>`__ model and simulate spatial 
+`SUEWS <http://suews-docs.readthedocs.io>`__ model and simulate spatial 
 (and temporal) variations of energy exchanges within a small area on Manhattan 
 (New York City) with regards to a heat wave event. 
 
@@ -22,7 +22,7 @@ population, road and infrastructure, and socio-economic variables).
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. Figure 1 provides an overview of
-`UMEP <http://urban-climate.net/umep/UMEP>`__, a city based climate
+`UMEP <index_page>`, a city based climate
 service tool (CBCST) used in this tutorial. Within UMEP there are a number 
 of models which can predict and diagnose a range of meteorological processes. 
 
@@ -56,7 +56,7 @@ Initial Steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+started <Getting_Started>`
 section in the UMEP manual.
 
 As UMEP is under development, some documentation may be missing and/or

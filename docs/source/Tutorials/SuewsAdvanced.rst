@@ -34,7 +34,7 @@ How to Run from the UMEP-plugin
    Balance -> Urban Energy Balance, SUEWS/BLUEWS (Advanced)*. This has
    most of the general settings (e.g. activate the snow module etc.)
    which are related to
-   `RunControl.nml <http://urban-climate.net/umep/SUEWS#RunControl.nml>`__.
+   `RunControl.nml <http://suews-docs.readthedocs.io/en/latest/input_files/RunControl/RunControl.html>`__.
 #. Use the Input folder:
 
    -  *C:/Users/your_user_name/.qgis2/python/plugins/UMEP/suewsmodel/Input*
@@ -57,11 +57,11 @@ Sensitivity Test
 
 The default dataset included in **Suews Simple** has parameters
 calculated from a `source area
-model <http://urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Source_Area_.28Point.29>`__
+model <SourceArea(Point)>`
 to obtain the appropriate values for the input parameters. Roughness
 parameters such as roughness length (z\ :sub:`0`) and zero plane
 displacement length (z\ :sub:`d`) are calculated using `morphometric 
-models <http://www.urban-climate.net/umep/UMEP_Manual#Urban_Morphology:_Morphometric_Calculator_.28Point.29>`__.
+models <MorphometricCalculator(Point)>`__.
 Now you will explore the differences in fluxes using the default
 settings or using input parameters from the geodata included in the test
 datasets available for this tutorial. Download the zip-file (see below)
@@ -99,7 +99,7 @@ Ordnance Survey and the LiDAR data.
    load. You can also get the properties of a layer by right-click on a
    layer in the Layers-window.
 #. If you have another land cover dataset you can use the
-   `LandCoverReclassifier <http://urban-climate.net/umep/UMEP_Manual#Urban_Land_Cover:_Land_Cover_Reclassifier>`__
+   `LandCoverReclassifier <LandCoverReclassifier>`
    in the UMEP pre-processor to populate with the correct values
    suitable for the UMEP plugin environment.
 #. Now take a moment and investigate the different geodatasets. What is
