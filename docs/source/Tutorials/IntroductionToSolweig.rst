@@ -1,13 +1,13 @@
 .. _IntroductionToSOLWEIG:
 
 Thermal Comfort - Introduction to SOLWEIG
-=======================
+=========================================
 
 Introduction
 ------------
 
-In this tutorial you will use a model [SOlar and LongWave Environmental
-Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
+In this tutorial you will use a model **SOlar and LongWave Environmental
+Irradiance Geometry model (SOLWEIG)** to estimate the mean radiant
 temperature (T\ :sub:`mrt`).
 
 SOLWEIG is a model that simulates spatial variations of 3D radiation
@@ -27,7 +27,7 @@ and elevation). To determine T\ :sub:`mrt`, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
 be added to increase the accuracy of the model output. Below (Figure 1)
 a schematic flowchart of SOLWEIG in shown. The `full
-manual <http://www.urban-climate.net/umep/SOLWEIG>`__ provides more
+manual <SOLWEIGManual>` provides more
 detail.
 
 .. figure:: /images/SOLWEIG_flowchart.png
@@ -39,9 +39,9 @@ Objectives
 ----------
 
 To introduce SOLWEIG and how to run the model within `UMEP (Urban
-Multi-scale Environmental Predictor) <http://urban-climate.net/umep/UMEP_Manual>`__. 
+Multi-scale Environmental Predictor) <index_page>`. 
 
-Help with Abbreviations can be found `here <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+Help with Abbreviations can be found `here <Abbreviations>`
 
 Steps
 ~~~~~
@@ -60,7 +60,7 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__
+started <Getting_Started>`
 section in the UMEP manual.
 
 As UMEP is under constant development, some documentation may be missing
@@ -70,10 +70,8 @@ to our `repository <https://bitbucket.org/fredrik_ucg/umep/>`__.
 Data for this exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To make use of the datasets a password access is
-required <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__). The
-UMEP tutorial datasets can be downloaded from our here
-`Goteborg_SWEREF99_1200.zip <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
+The UMEP tutorial datasets can be downloaded from our here repository
+`here <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
 
 -  Download, extract and add the raster layers (DSM, CDSM, DEM and land
    cover) from the **Goteborg folder** into a new QGIS session (see
@@ -97,7 +95,7 @@ SOLWEIG Model Inputs
 --------------------
 
 Details of the model inputs and outputs are provided in the `SOLWEIG
-manual <http://urban-climate.net/umep/SOLWEIG>`__. As this tutorial is
+manual <SOLWEIGManual>`. As this tutorial is
 concerned with a **simple application** only the most critical
 parameters are used. Many other parameters can be modified to more
 appropriate values if applicable. The table below provides an overview
@@ -174,8 +172,7 @@ S: Spatial, M: Meteorological,
 	 
 
 Meterological input data should be in UMEP format. You can use the
-`Meterological
-Preprocessor <http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor>`__
+`Meterological Preprocessor <MetPreprocessor>`
 to prepare your input data. There is also a possibility to use a single point in time in the plugin. 
 
 Requred meteorological data is: 

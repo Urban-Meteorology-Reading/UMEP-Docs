@@ -6,9 +6,7 @@ Introduction
 
 To help users getting started with UMEP, the community is working on
 setting up tutorials and instructions for different parts of the UMEP
-tool. The following gives what are available and planned. `To get the
-Password to access the data for the different
-tutorials <https://docs.google.com/forms/d/e/1FAIpQLSfH8eEly28SjtfvooWtJe95iRvLNV2tewNa3ZajrVFTXMKIfQ/viewform?formkey=dExvc3V1RDBqWmlIcURfLW5VOGtvQ0E6MQ&ifq>`__.
+tool. The tutorials are available are found in the table below.
 
 
 .. list-table::

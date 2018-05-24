@@ -17,7 +17,7 @@ broad range of applications, for example solar energy potential and
 thermal comfort.
 
 SEBE is incorporated in `UMEP(Urban Multi-scale Environmental
-Predictor) <http://urban-climate.net/umep/UMEP>`__, a plugin for
+Predictor) <index_page>`, a plugin for
 `QGIS <http://www.qgis.org>`__. As SEBE was initially developed to
 estimate solar energy potential on building roofs, the Digital Surface
 Models (DSMs) used need to include roof structures, such as tilted
@@ -34,10 +34,8 @@ with seasons, with the effects of vegetation etc.
 Initial Practical steps
 -----------------------
 
--  If **QGIS** is not on your computer you will `need to install
-   it <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
--  Then install the `**UMEP**
-   plugin <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+-  If **QGIS** is not on your computer you will `need to install it <Getting_Started>`
+-  Then install the `**UMEP** plugin <Getting_Started>`
 
 -  Start the QGIS software
 -  *Windows:* If not visible on the desktop use the **Start** button to
@@ -53,7 +51,7 @@ When you open it on the top toolbar you will see **UMEP**.
    Figure 1: Location of SEBE in UMEP
 
 -  If it UMEP not on our machine, download and install the `**UMEP**
-   plugin <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+   plugin <Getting_Started>`
 
 -  Read through the section in the online
    manual BEFORE using the model, so you are familiar with it’s operation and
@@ -61,9 +59,6 @@ When you open it on the top toolbar you will see **UMEP**.
 
 Data for Tutorial
 ~~~~~~~~~~~~~~~~~
-
-To use SEBE the datasets are (for `password access if not already
-provided <http://urban-climate.net/umep/UMEP_Manual#Tutorials>`__)
 
 .. figure:: /images/SEBE_Gothenburg.png
    :alt:  None
@@ -261,7 +256,7 @@ Energy on Building Envelopes (SEBE)* in the menu bar (Figure 1).
 #. *Top frame*: for input data for the SEBE calculations.
 
    -  Critical is the **building and ground**
-      `DSM <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+      `DSM <Abbreviations>`
       for the calculations in SEBE.
    -  Optionally **vegetation** (trees and bushes) can be included as
       they can shadow buildings, walls and roofs reducing the potential
@@ -290,7 +285,7 @@ Energy on Building Envelopes (SEBE)* in the menu bar (Figure 1).
    Gothenburg is located in CET which is UTC +1.
 #. Meteorological file needs to be specified.
 #. Wall data are created with the `UMEP plugin - **Wall Height and
-   Aspect** <http://urban-climate.net/umep/UMEP_Manual#Urban_Geometry:_Wall_Height_and_Aspect>`__:
+   Aspect** <WallHeightandAspect>`:
 
    -  This uses a 3 by 3 pixels kernel minimum filter where the four
       cardinal points (N, W, S,E) are investigated. The pixels just
@@ -455,7 +450,7 @@ A second GIS data set is available for the Covent Garden area in London
 #. Shadows
 
    -  `UMEP -> Processor -> Solar Radiation -> Daily Shadow
-      pattern <http://urban-climate.net/umep/UMEP_Manual#Solar_Radiation:_Daily_Shadow_Pattern>`__
+      pattern <DailyShadowPattern>`
    -  Allows you to calculate the shadows for a particular time of day
       and `Day of
       Year <http://disc.sci.gsfc.nasa.gov/julian_calendar.html>`__.
@@ -510,7 +505,7 @@ Tips
 **Meteorological** file in UMEP has a special format. If you have data
 in another format there is a `UMEP plugin that can convert your
 meteorological data into the UMEP
-format <http://urban-climate.net/umep/UMEP_Manual#Pre-Processor:_Meteorological_Data:_MetPreprocessor>`__.
+format <MetPreprocessor>`.
 
 -  Plugin is found at *UMEP > Pre-Processor > Meteorological data >Prepare Existing data*.
 

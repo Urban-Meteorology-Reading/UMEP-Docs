@@ -203,8 +203,8 @@
 <span id="introductiontosolweig"></span><h1>5. Thermal Comfort - Introduction to SOLWEIG<a class="headerlink" href="#thermal-comfort-introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>5.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>In this tutorial you will use a model [SOlar and LongWave Environmental
-Irradiance Geometry model (SOLWEIG)] to estimate the mean radiant
+<p>In this tutorial you will use a model <strong>SOlar and LongWave Environmental
+Irradiance Geometry model (SOLWEIG)</strong> to estimate the mean radiant
 temperature (T<sub>mrt</sub>).</p>
 <p>SOLWEIG is a model that simulates spatial variations of 3D radiation
 fluxes and the T<sub>mrt</sub> in complex urban settings. It is also able
@@ -221,8 +221,8 @@ urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T<sub>mrt</sub>, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
 be added to increase the accuracy of the model output. Below (Figure 1)
-a schematic flowchart of SOLWEIG in shown. The <a class="reference external" href="http://www.urban-climate.net/umep/SOLWEIG">full
-manual</a> provides more
+a schematic flowchart of SOLWEIG in shown. The <a class="reference internal" href="../OtherManuals/SOLWEIG.html#solweigmanual"><span class="std std-ref">full
+manual</span></a> provides more
 detail.</p>
 <div class="figure" id="id1">
 <img alt="Figure 1: Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
@@ -231,9 +231,9 @@ detail.</p>
 </div>
 <div class="section" id="objectives">
 <h2>5.2. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
-<p>To introduce SOLWEIG and how to run the model within <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual">UMEP (Urban
-Multi-scale Environmental Predictor)</a>.</p>
-<p>Help with Abbreviations can be found <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Abbreviations">here</a></p>
+<p>To introduce SOLWEIG and how to run the model within <a class="reference internal" href="../index.html#index-page"><span class="std std-ref">UMEP (Urban
+Multi-scale Environmental Predictor)</span></a>.</p>
+<p>Help with Abbreviations can be found <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">here</span></a></p>
 <div class="section" id="steps">
 <h3>5.2.1. Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -251,18 +251,16 @@ design</li>
 <h2>5.3. Initial Practical steps<a class="headerlink" href="#initial-practical-steps" title="Permalink to this headline">¶</a></h2>
 <p>UMEP is a python plugin used in conjunction with
 <a class="reference external" href="http://www.qgis.org">QGIS</a>. To install the software and the UMEP
-plugin see the <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">getting
-started</a>
+plugin see the <a class="reference internal" href="../Getting_Started.html#getting-started"><span class="std std-ref">getting
+started</span></a>
 section in the UMEP manual.</p>
 <p>As UMEP is under constant development, some documentation may be missing
 and/or there may be instability. Please report any issues or suggestions
 to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/">repository</a>.</p>
 <div class="section" id="data-for-this-exercise">
 <h3>5.3.1. Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
-<p>To make use of the datasets a password access is
-required &lt;<a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Tutorials">http://urban-climate.net/umep/UMEP_Manual#Tutorials</a>&gt;`__). The
-UMEP tutorial datasets can be downloaded from our here
-<a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip">Goteborg_SWEREF99_1200.zip</a></p>
+<p>The UMEP tutorial datasets can be downloaded from our here repository
+<a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip">here</a></p>
 <ul class="simple">
 <li>Download, extract and add the raster layers (DSM, CDSM, DEM and land
 cover) from the <strong>Goteborg folder</strong> into a new QGIS session (see
@@ -285,8 +283,8 @@ land cover (<em>Properties -&gt; Style (lower left) -&gt; Load Style</em>).</li>
 </div>
 <div class="section" id="solweig-model-inputs">
 <h2>5.4. SOLWEIG Model Inputs<a class="headerlink" href="#solweig-model-inputs" title="Permalink to this headline">¶</a></h2>
-<p>Details of the model inputs and outputs are provided in the <a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">SOLWEIG
-manual</a>. As this tutorial is
+<p>Details of the model inputs and outputs are provided in the <a class="reference internal" href="../OtherManuals/SOLWEIG.html#solweigmanual"><span class="std std-ref">SOLWEIG
+manual</span></a>. As this tutorial is
 concerned with a <strong>simple application</strong> only the most critical
 parameters are used. Many other parameters can be modified to more
 appropriate values if applicable. The table below provides an overview
@@ -380,8 +378,7 @@ S: Spatial, M: Meteorological,</p>
 </tbody>
 </table>
 <p>Meterological input data should be in UMEP format. You can use the
-<a class="reference external" href="http://www.urban-climate.net/umep/UMEP_Manual#Meteorological_Data:_MetPreprocessor">Meterological
-Preprocessor</a>
+<a class="reference internal" href="../pre-processor/Meteorological Data MetPreprocessor.html#metpreprocessor"><span class="std std-ref">Meterological Preprocessor</span></a>
 to prepare your input data. There is also a possibility to use a single point in time in the plugin.</p>
 <p>Requred meteorological data is:</p>
 <ol class="arabic simple">

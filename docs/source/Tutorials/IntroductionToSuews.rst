@@ -7,7 +7,7 @@ Introduction
 ------------
 
 In this tutorial you will use a land-surface model,
-`SUEWS <http://urban-climate.net/umep/SUEWS>`__ to simulate energy
+`SUEWS <http://suews-docs.readthedocs.io>`__ to simulate energy
 exchanges in a city (London is the test case).
 
 SUEWS (Surface Urban Energy and Water Balance Scheme) allows the energy
@@ -32,11 +32,11 @@ population, road and infrastructure, and socio-economic variables).
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. Figure 1 provides an overview of
-`UMEP <http://urban-climate.net/umep/UMEP>`__, a city based climate
+`UMEP <index_page>`, a city based climate
 service tool (CBCST). Within UMEP there are a number of models which can
 predict and diagnose a range of meteorological processes. In this
 activity we are concerned with SUEWS, initially the central components
-of the model. See `manual <http://urban-climate.net/umep/SUEWS>`__ or
+of the model. See `manual <http://suews-docs.readthedocs.io>`__ or
 published papers for more detailed information of the model.
 
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
@@ -52,16 +52,15 @@ SUEWS can be run in a number of different ways:
 #. Within UMEP via the Advanced selection. This can be used to exploit
    the full capabilities of the model (Part 2)
 #. SUEWS standalone (see
-   `manual <http://urban-climate.net/umep/SUEWS>`__)
+   `manual <http://suews-docs.readthedocs.io>`__)
 #. Within other larger scale models (e.g. WRF).
 
 SUEWS Simple Objectives
 -----------------------
 
 This tutorial introduces SUEWS and demonstartes how to run the model within `UMEP (Urban
-Multi-scale Environmental
-Predictor) <http://urban-climate.net/umep/UMEP_Manual>`__. `Help with
-Abbreviations <http://urban-climate.net/umep/UMEP_Manual#Abbreviations>`__
+Multi-scale Environmental Predictor) <index_page>`. `Help with
+Abbreviations <Abbreviations>`
 
 Steps
 ~~~~~
@@ -77,7 +76,7 @@ Initial Steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+started <GettingStarted>`
 section in the UMEP manual.
 
 As UMEP is under development, some documentation may be missing and/or
@@ -88,7 +87,7 @@ SUEWS Model Inputs
 ------------------
 
 Details of the model inputs and outputs are provided in the `SUEWS
-manual <http://urban-climate.net/umep/SUEWS>`__. As this tutorial is
+manual <http://suews-docs.readthedocs.io>`__. As this tutorial is
 concerned with a **simple application** only the most critical
 parameters are shown. Other versions allow many other parameters to be
 modified to more appropriate values if applicable. The table below
@@ -293,7 +292,7 @@ three files:
 
 If you open these files in a text editor. To understand the header
 variables read the `SUEWS
-manual <http://urban-climate.net/umep/SUEWS#Output_files>`__.
+manual <http://suews-docs.readthedocs.io>`__.
 
 Sensitivity to land surface fractions
 -------------------------------------
