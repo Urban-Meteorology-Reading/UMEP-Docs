@@ -25,7 +25,7 @@ Data for this exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
 In order to proceed, you will need the zip file named
-`GQF\_Inputs\_1.zip <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/GQF_Inputs_1.zip>`__
+`GQF\_Inputs\_1.zip <https://urban-meteorology-reading.github.io/other%20files/GQF_Inputs_1.zip>`__
 from the UMEP tutorials data reopository. 
 
 You may also wish to consult the `GQF user guide <GQF_Manual>`__
