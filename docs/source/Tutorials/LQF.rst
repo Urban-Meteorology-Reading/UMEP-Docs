@@ -31,10 +31,10 @@ In order to proceed, you will need the zip file named LQF\_Inputs\_1.zip
 and a copy of the LQF database. These are available at the following
 locations:
 
-#. `LQF database <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/blob/master/other%20files/LQF_Database.zip>`__ - v1.2 was used to
+#. `LQF database <https://urban-meteorology-reading.github.io/other%20files/LQF_Database.zip>`__ - v1.2 was used to
    produce this tutorial
 #. `LQF input
-   files <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/LQF_Inputs_1.zip>`__
+   files <https://urban-meteorology-reading.github.io/other%20files/LQF_Inputs_1.zip>`__
    from the UMEP tutorials data repository.
 
 You may also wish to consult the `LQF user guide <LQF_Manual>`__
