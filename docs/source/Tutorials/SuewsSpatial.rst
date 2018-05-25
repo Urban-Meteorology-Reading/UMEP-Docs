@@ -21,7 +21,7 @@ population, road and infrastructure, and socio-economic variables).
 
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
-within the model is appropriate. Figure 1 provides an overview of
+within the model is appropriate. The figure below provides an overview of
 `UMEP <index_page>`, a city based climate
 service tool (CBCST) used in this tutorial. Within UMEP there are a number 
 of models which can predict and diagnose a range of meteorological processes. 
@@ -30,7 +30,7 @@ of models which can predict and diagnose a range of meteorological processes.
    :alt:  none
    :width: 378px
 
-   Figure 1: Overview of the climate service tool UMEP (from Lindberg et al. 2018)
+   Overview of the climate service tool UMEP (from Lindberg et al. 2018)
    
    
 .. note:: This tutorial is currently designed to work with QGIS 2.18. It is recommended that you have a look at the tutorials :ref:`IntroductionToSuews` and :ref:`SuewsAdvanced` before you go through this tutrial. 
@@ -110,13 +110,13 @@ The order in the *Layers Panel* decides what layer that will be visible. Here yo
 
 - Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 30. Choose also a nice color scheme of your liking.
 - Go to *Transparency* and  add and additional no data value of 0. Click ok.
-- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas (Figure 2). 
+- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas. 
 
 .. figure:: /images/SUEWSSpatial_dataview.png
    :alt:  none
    :width: 1073px
 
-   Figure 2: DSM and CDSM visible at the same time (click for larger image)
+   DSM and CDSM visible at the same time (click for larger image)
 
 The land cover grid comes with a specific QGIS style file.
 
@@ -150,7 +150,7 @@ One key feature of UMEP is to facilitate the preparation of input data for the v
    :alt:  none
    :width: 1173px
 
-   Figure 3: The *SUEWS Prepare* plugin (click for a larger image).
+   The *SUEWS Prepare* plugin (click for a larger image).
 
 Here you can see all the various settings that can be made. You will focus on the *Main Settings* tab where the mandatory settings are made. The other tabs include the settings for e.g. different land cover classes, human activities etc.
 
@@ -174,13 +174,13 @@ Building morphology
 First you will calculate roughness paprmeters based on the building geometry within your grids.
 
 - Open *UMEP > Pre-Processor > Urban Morphology > Morphometric Calculator (Grid)*.
-- Use the settings in Figure 4 and press *Run*.
+- Use the settings as in the figure below and press *Run*.
 - When calculation ids done, close the plugin.
 
 .. figure:: /images/SUEWSSpatial_IMCGBuilding.png
    :alt:  none
 
-   Figure 4: The settings for calculating building morphology.
+   The settings for calculating building morphology.
 
 This operation should have produced 17 different text files; 16 (*anisotrophic*) that include morphometric parameters from each 5 degree section for each grid and one file (*isotropic*) that includes averaged values for each of the 16 grids. You can open **build_IMPGrid_isotropic.txt** and compare the different values for a park grid (3054) and an urban grid (3242). Header abbreviations is explained **here** (**LINK NOT READY**).
 
@@ -189,26 +189,26 @@ Tree morphology
 Now you will calculate roughness paprmeters based on the vegetation (trees and bushes) within your grids. As you noticed there is only one surface data for vegetation present (**CDSM_nyc**) and if you examine your land cover grid (**landcover_2010_nyc**) you can see that there is only one class of high vegetation (*Deciduous trees*) present with our model domain. Therefore, you will not separate between evergreen and deciduous vegetation in this tutorial. As shown in table 1, the tree surface model represents height above ground.
 
 - Again, Open *UMEP > Pre-Processor > Urban Morphology > Morphometric Calculator (Grid)*.
-- Use the settings in Figure 5 and press *Run*.
+- Use the settings as in the figure below and press *Run*.
 - When calculation ids done, close the plugin.
 
 .. figure:: /images/SUEWSSpatial_IMCGVeg.png
    :alt:  none
 
-   Figure 5: The settings for calculating vegetation morphology.
+   The settings for calculating vegetation morphology.
 
 Land cover fractions
 ~~~~~~~~~~~~~~~~~~~~
 Moving on to land cover fraction calculations for each grid.
 
 - Open *UMEP > Pre-Processor > Urban Land Cover > Land Cover Fraction (Grid)*.
-- Use the settings in Figure 6 and press *Run*.
+- Use the settings as in the figure below and press *Run*.
 - When calculation ids done, close the plugin.
 
 .. figure:: /images/SUEWSSpatial_LCF.png
    :alt:  none
 
-   Figure 6: The settings for calculating land cover fractions
+   The settings for calculating land cover fractions
 
 Population density
 ~~~~~~~~~~~~~~~~~~

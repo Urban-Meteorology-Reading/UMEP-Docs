@@ -31,7 +31,7 @@ population, road and infrastructure, and socio-economic variables).
 
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
-within the model is appropriate. Figure 1 provides an overview of
+within the model is appropriate. The figure below provides an overview of
 `UMEP <index_page>`, a city based climate
 service tool (CBCST). Within UMEP there are a number of models which can
 predict and diagnose a range of meteorological processes. In this
@@ -43,7 +43,7 @@ published papers for more detailed information of the model.
    :alt:  none
    :width: 378px
 
-   Figure 1: Overview of the climate service tool UMEP (from Lindberg et al. 2018)
+   Overview of the climate service tool UMEP (from Lindberg et al. 2018)
 
 SUEWS can be run in a number of different ways:
 
@@ -195,7 +195,7 @@ How to Run SuewsSimple from the UMEP-plugin
 #. Open SuewsSimple from *UMEP -> Processor -> Urban Energy Balance ->
    Urban Energy Balance, SUEWS (Simple)*. The GUI that opens looks quite
    extensive but it is actually not that complicated to start a basic
-   model run (Figure 2). Some additional information about the plugin is
+   model run (figure below). Some additional information about the plugin is
    found in the left window. As you can read, a **test dataset** from
    observations for London, UK (`Kotthaus and Grimmond
    2014 <http://www.sciencedirect.com/science/article/pii/S2212095513000503>`__,
@@ -204,10 +204,10 @@ How to Run SuewsSimple from the UMEP-plugin
    is included in within the plugin. 
    
 .. figure:: /images/SUEWSIntro_Interface.png
-	:alt:  none
-	:width: 1107px
+    :alt:  none
+    :width: 1107px
 
-	Figure 2: The interface for SUEWS, simple version (click on image to make it larger).
+    The interface for SUEWS, simple version (click on image to make it larger).
    
 #. To make use of this dataset click on **Add settings from test
    dataset** (see near bottom of the box). The land cover fractions and
@@ -224,40 +224,40 @@ How to Run SuewsSimple from the UMEP-plugin
    the results are shown in two summary plots.
 
 .. figure:: /images/SUEWSIntro_SuewsSimplefig1.png
-	:alt:  none
-	:width: 900px
+    :alt:  none
+    :width: 900px
 
-	Figure 3a: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).   
+    Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).   
 
-	
+    
 .. figure:: /images/SUEWSIntro_SuewsSimplefig2.png
-	:alt:  none
-	:width: 900px
-	
-	Figure 3b: Model output from SUEWS (simple) using the default settings and data (click on image to make it larger). 
+    :alt:  none
+    :width: 900px
+    
+    Model output from SUEWS (simple) using the default settings and data (click on image to make it larger). 
 
-	
+    
 Model results
 -------------
 
-The graphs in Figure 3a are the monthly mean energy (left) and water
-balance (right). The lower graphs (Figure 3b) show the radiation fluxes,
+The graphs in the upper figure are the monthly mean energy (left) and water
+balance (right). The lower graphs show the radiation fluxes,
 energy fluxes, and water related outputs throughout the year. This plot
 includes a lot of data and it might be difficult to examine it in
 detail.
 
 To zoom into the plot: use the tools in the top left corner, to zoom to
 a period of interest. For example, the Zoom in to about the last ten
-days in March (Figure 4). This was a period with clear relatively
+days in March (figure below). This was a period with clear relatively
 weather.
 
 .. figure:: /images/SUEWSIntro_SuewsSimplefig2zoom.png
-	:alt:  none
-	:width: 900px
-	
-	Figure 4: Zoom in on end of March from the daily plot in Figure 3b (click on image to make it larger). 
+    :alt:  none
+    :width: 900px
+    
+    Zoom in on end of March from the daily plot (click on image to make it larger). 
 
-	
+    
 Saving a Figure
 ---------------
 
@@ -299,7 +299,7 @@ Sensitivity to land surface fractions
    :alt:  none 
    :align: right
     
-   Figure 5: Land cover fractions (click on image to make it larger). 
+   Land cover fractions (click on image to make it larger). 
 
 The previous results are for a densely build-up area in
 London, UK. In order to test the sensitivity of SUEWS to some surface

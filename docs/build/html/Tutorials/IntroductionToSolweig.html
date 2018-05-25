@@ -201,6 +201,10 @@
             
   <div class="section" id="thermal-comfort-introduction-to-solweig">
 <span id="introductiontosolweig"></span><h1>5. Thermal Comfort - Introduction to SOLWEIG<a class="headerlink" href="#thermal-comfort-introduction-to-solweig" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Click <a class="reference internal" href="IntroductionToSolweigNYC.html#introductiontosolweignyc"><span class="std std-ref">here</span></a> to find an adjusted tutorial for ICUC10 workshop participants.</p>
+</div>
 <div class="section" id="introduction">
 <h2>5.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial you will use a model <strong>SOlar and LongWave Environmental
@@ -220,13 +224,13 @@ radiation (K<sub>down</sub>), air temperature (T<sub>a</sub>), relative humidity
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T<sub>mrt</sub>, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
-be added to increase the accuracy of the model output. Below (Figure 1)
+be added to increase the accuracy of the model output. Below
 a schematic flowchart of SOLWEIG in shown. The <a class="reference internal" href="../OtherManuals/SOLWEIG.html#solweigmanual"><span class="std std-ref">full
 manual</span></a> provides more
 detail.</p>
 <div class="figure" id="id1">
-<img alt="Figure 1: Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
-<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Figure 1: Overview of SOLWEIG</span></p>
+<img alt="Overview of SOLWEIG" src="../_images/SOLWEIG_flowchart.png" />
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Overview of SOLWEIG</span></p>
 </div>
 </div>
 <div class="section" id="objectives">
@@ -260,7 +264,7 @@ to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/ume
 <div class="section" id="data-for-this-exercise">
 <h3>5.3.1. Data for this exercise<a class="headerlink" href="#data-for-this-exercise" title="Permalink to this headline">¶</a></h3>
 <p>The UMEP tutorial datasets can be downloaded from our here repository
-<a class="reference external" href="http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip">here</a></p>
+<a class="reference external" href="https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/Goteborg_SWEREF99_1200.zip">here</a></p>
 <ul class="simple">
 <li>Download, extract and add the raster layers (DSM, CDSM, DEM and land
 cover) from the <strong>Goteborg folder</strong> into a new QGIS session (see
@@ -402,7 +406,7 @@ for Gothenburg, Sweden.</li>
 <blockquote>
 <div><div class="figure" id="id3">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Interface.png"><img alt="None" src="../_images/SOLWEIG_Interface.png" style="width: 1070px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Figure 2: Dialog for the SOLWEIG model (click on image for larger image)</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Dialog for the SOLWEIG model (click on image for larger image)</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -423,7 +427,7 @@ output folder for your computer.</li>
 <blockquote>
 <div><div class="figure" id="id4">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_SVF_solweig.png"><img alt="None" src="../_images/SOLWEIG_SVF_solweig.png" style="width: 487px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Figure 3: Settings for the SkyViewFactorCalculator.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Settings for the SkyViewFactorCalculator.</span></p>
 </div>
 </div></blockquote>
 <ul class="simple">
@@ -437,16 +441,15 @@ necessary SVF maps needed to run the SOLWEIG-model.</li>
 </li>
 <li><p class="first">Another preprocessing plugin needed is to create the building wall
 heights and aspect. Open <em>UMEP -&gt; Pre-Processor -&gt; Urban geometry -&gt;
-Wall height and aspect</em> and use the settings as shown below (Figure
-4).</p>
+Wall height and aspect</em> and use the settings as shown below.</p>
 <blockquote>
 <div><div class="figure" id="id5">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_wallgeight_solweig.png"><img alt="None" src="../_images/SOLWEIG_wallgeight_solweig.png" style="width: 505px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Figure 4: Settings for the Wall height and aspect plugin.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Settings for the Wall height and aspect plugin.</span></p>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
+<li><p class="first">Re-open the SOLWEIG plugin and use the settings shown below. You will
 use the GUI to set one point in time (i.e. a summer hour in
 Gothenburg, Sweden) hence, no input meteorological file is needed for
 now. No information on vegetation and ground cover is added for this
@@ -454,7 +457,7 @@ first try. Click <strong>Run</strong>.</p>
 <blockquote>
 <div><div class="figure" id="id6">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Tmrt1_solweig.png"><img alt="None" src="../_images/SOLWEIG_Tmrt1_solweig.png" style="width: 1078px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Figure 5: The settings for your first SOLWEIG run (click on image for larger image).</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">The settings for your first SOLWEIG run (click on image for larger image).</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -493,22 +496,21 @@ to <em>Layer -&gt; Create Layer -&gt; New Shape file</em>. Choose <em>Point</em>
 (EPSG: 3007).</p>
 </li>
 <li><p class="first">Now you should add two points within the study area. To add points to
-the layer it has to be editable and Add Feature should be activated
-(Figure 6).</p>
+the layer it has to be editable and Add Feature should be activated.</p>
 <blockquote>
 <div><div class="figure" id="id7">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_AddPoint.png"><img alt="None" src="../_images/SOLWEIG_AddPoint.png" style="width: 411px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Figure 6: Setting to add points</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Setting to add points</span></p>
 </div>
 </div></blockquote>
 <p>Two points should be added and the attributes should be id=<strong>1</strong> and
 name=<strong>courtyard</strong> for the right point and id=<strong>2</strong> and
-name=<strong>park</strong> for the left point. See Figure 7 for the locations of
+name=<strong>park</strong> for the left point. See figure below for the locations of
 the two points.</p>
 <blockquote>
 <div><div class="figure" id="id8">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Pointskr.png"><img alt="None" src="../_images/SOLWEIG_Pointskr.png" style="width: 846px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Figure 7: Location of the two POIs</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Location of the two POIs</span></p>
 </div>
 </div></blockquote>
 <p>When you are
@@ -538,7 +540,7 @@ output maps. Start by locating your output folder in the top section
 <blockquote>
 <div><div class="figure" id="id9">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_SOLWEIGAnalyzer.png"><img alt="None" src="../_images/SOLWEIG_SOLWEIGAnalyzer.png" style="width: 875px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Figure 8: Dialog for the SOLWEIG Analyzer plug-in</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Dialog for the SOLWEIG Analyzer plug-in</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -588,12 +590,12 @@ balance modelling with SUEWS.</p>
 in the previous section adding five attributes (<em>id, ttype, trunk,
 totheight, diameter</em>). The attributes should all be decimal (float)
 numbers (see table below). The location of the three new trees are
-shown in Figure 9. The values for all three vegetation units should
+shown in figure below. The values for all three vegetation units should
 be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 <blockquote>
 <div><div class="figure" id="id10">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_File_TreesKR.png"><img alt="None" src="../_images/SOLWEIG_File_TreesKR.png" style="width: 846px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Figure 9: Location of the three new vegetation units.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Location of the three new vegetation units.</span></p>
 </div>
 </div></blockquote>
 </li>
@@ -601,11 +603,11 @@ be <strong>ttype=2, trunk=4, totheight=15, diameter=10</strong>.</p>
 previously (located in your output directory).</p>
 </li>
 <li><p class="first">Open the TreeGenerator (UMEP -&gt; PreProcessor -&gt; TreeGenerator) and
-use the settings as shown in Figure 10.</p>
+use the settings as shown in figure below.</p>
 <blockquote>
 <div><div class="figure" id="id11">
 <a class="reference internal image-reference" href="../_images/SOLWEIG_Treegeneratorsolweig.png"><img alt="None" src="../_images/SOLWEIG_Treegeneratorsolweig.png" style="width: 574px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Figure 10: The settings for the Tree Generator</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">The settings for the Tree Generator</span></p>
 </div>
 </div></blockquote>
 </li>

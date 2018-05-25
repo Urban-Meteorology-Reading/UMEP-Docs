@@ -48,9 +48,9 @@ How to Run from the UMEP-plugin
 #. You can now close the **SUEWS/BLUEWS (Advanced)**-plugin again.
 
 .. figure:: /images/SUEWSAdvanced_SuewsAdvanced.png
-   :alt: Figure 1: Interface for SUEWS Advanced version.
+   :alt: Interface for SUEWS Advanced version.
 
-   Figure 1: Interface for SUEWS Advanced version.
+   Interface for SUEWS Advanced version.
 
 Sensitivity Test
 ~~~~~~~~~~~~~~~~
@@ -69,7 +69,7 @@ and extract the files to a suitable location where you both have reading
 and writing capabilities.
 
 Data for the tutorial can be downloaded
-`here <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
+`here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/DataSmallAreaLondon.zip>`__
 
 .. list-table::
 
@@ -111,7 +111,7 @@ Generating data from the geodatasets
 
 #. Make certain that you have the geodatafiles open. The file at the top
    (left hand side (LHS)) of the list is the one that is shown in the
-   centre (Figure 2). You can swap their order using the LHS box.
+   centre (figure below). You can swap their order using the LHS box.
 #. Open SUEWS Simple.
 #. Begin by adding the test dataset again.
 #. Update the building morphology parameters (top left panel in Suews
@@ -124,10 +124,10 @@ Generating data from the geodatasets
       :alt:  None
       :width: 605px
 
-      Figure 2. QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.
+      QGIS where Suews Simple and Image Morphometric Parameters (Point) is opened.
 
 #. First, clear the map canvas from your two other plugin windows, e.g.
-   as above in Figure 2.
+   as figure above.
 #. If you use the default test data in SUEWS Simple - you can overwrite
    is as you go.
 #. Locate the eddy covariance tower position on the Strand building,
@@ -164,9 +164,9 @@ Generating data from the geodatasets
 
    .. figure:: /images/SUEWSAdvanced_SUEWS_MorphometricParametersVeg.png
       :alt:  None
-	  :scale: 75%
+      :scale: 75%
 
-      Figure 4. Settings for Image Morphometric Parameters for vegetation
+      Settings for Image Morphometric Parameters for vegetation
 
 #. A warning appears that your vegetation fractions between the
    morphology dataset and land cover dataset are large. You can ignore
@@ -177,7 +177,7 @@ Generating data from the geodatasets
    for the first run you made.
 #. Now you are ready to run the model. Click Run.
 
-If you get an error window (Figure 5). This error is generate by SUEWS as the sum
+If you get an error window (figure below). This error is generate by SUEWS as the sum
 of the land cover fractions is not 1. If you calculate carefully, one
 part of a thousand is missing (this is probably a rounding error during
 data extraction). To fix this issue: add 0.001 to e.g. bare soil. Now
@@ -187,14 +187,14 @@ run again.
    :alt:  None
    :scale: 100%
 
-   Figure 5. Possible error window from running SUEWS with new settings.
+   Possible error window from running SUEWS with new settings.
 
 
 .. figure:: /images/SUEWSAdvanced_SuewsSimpleGeodata.png
    :alt:  None
    :width: 800px
 
-   Figure 6. The settings for running with geodata derived parameters (old version of GUI).
+   The settings for running with geodata derived parameters (old version of GUI).
    
 
 You are now familiar with the Suews Simple plugin. Your next task is to

@@ -3,6 +3,8 @@
 Thermal Comfort - Introduction to SOLWEIG
 =========================================
 
+.. note:: Click `here <IntroductionToSOLWEIGNYC>` to find an adjusted tutorial for ICUC10 workshop participants.
+
 Introduction
 ------------
 
@@ -25,15 +27,15 @@ radiation (K\ :sub:`down`), air temperature (T\ :sub:`a`), relative humidity (RH
 urban geometry (DSMs), and geographic information (latitude, longitude
 and elevation). To determine T\ :sub:`mrt`, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
-be added to increase the accuracy of the model output. Below (Figure 1)
+be added to increase the accuracy of the model output. Below 
 a schematic flowchart of SOLWEIG in shown. The `full
 manual <SOLWEIGManual>` provides more
 detail.
 
 .. figure:: /images/SOLWEIG_flowchart.png
-   :alt:  Figure 1: Overview of SOLWEIG
+   :alt:  Overview of SOLWEIG
 
-   Figure 1: Overview of SOLWEIG
+   Overview of SOLWEIG
 
 Objectives
 ----------
@@ -71,7 +73,7 @@ Data for this exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The UMEP tutorial datasets can be downloaded from our here repository
-`here <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
+`here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/Goteborg_SWEREF99_1200.zip>`__
 
 -  Download, extract and add the raster layers (DSM, CDSM, DEM and land
    cover) from the **Goteborg folder** into a new QGIS session (see
@@ -199,7 +201,7 @@ How to Run SOLWEIG from the UMEP-plugin
        :alt:  None
        :width: 1070px
 
-       Figure 2: Dialog for the SOLWEIG model (click on image for larger image)
+       Dialog for the SOLWEIG model (click on image for larger image)
 
 #. To be able to run the model some additional spatial datasets needs to
    be created.
@@ -219,8 +221,8 @@ How to Run SOLWEIG from the UMEP-plugin
        :alt:  None
        :width: 487px
        
-       Figure 3: Settings for the SkyViewFactorCalculator.
-	   
+       Settings for the SkyViewFactorCalculator.
+      
    -  When the calculation is done, map will appear in the map canvas.
       This is the 'total' SVF i.e., including both buildings and
       vegetation. Examine the dataset.
@@ -230,16 +232,15 @@ How to Run SOLWEIG from the UMEP-plugin
 
 #. Another preprocessing plugin needed is to create the building wall
    heights and aspect. Open *UMEP -> Pre-Processor -> Urban geometry ->
-   Wall height and aspect* and use the settings as shown below (Figure
-   4).
+   Wall height and aspect* and use the settings as shown below.
    
     .. figure:: /images/SOLWEIG_wallgeight_solweig.png
        :alt:  None
        :width: 505px
        
-       Figure 4: Settings for the Wall height and aspect plugin.
+       Settings for the Wall height and aspect plugin.
 
-#. Re-open the SOLWEIG plugin and use the settings (Figure 5). You will
+#. Re-open the SOLWEIG plugin and use the settings shown below. You will
    use the GUI to set one point in time (i.e. a summer hour in
    Gothenburg, Sweden) hence, no input meteorological file is needed for
    now. No information on vegetation and ground cover is added for this
@@ -249,8 +250,8 @@ How to Run SOLWEIG from the UMEP-plugin
        :alt:  None
        :width: 1078px
        
-       Figure 5: The settings for your first SOLWEIG run (click on image for larger image).
-	   
+       The settings for your first SOLWEIG run (click on image for larger image).
+      
 #. Examine the output (Average T\ :sub:`mrt` (°C). What is the main
    driver to the spatial variations in T\ :sub:`mrt`?
 #. Add 3D vegetation information by ticking in *Use vegetation scheme
@@ -282,25 +283,24 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
    **POI_Kr.shp**. Specify the coordinate system as SWEREF99 12 00
    (EPSG: 3007).
 #. Now you should add two points within the study area. To add points to
-   the layer it has to be editable and Add Feature should be activated
-   (Figure 6).
+   the layer it has to be editable and Add Feature should be activated.
 
     .. figure:: /images/SOLWEIG_AddPoint.png
        :alt:  None
        :width: 411px
        
-       Figure 6: Setting to add points 
+       Setting to add points 
    
    Two points should be added and the attributes should be id=\ **1** and
    name=\ **courtyard** for the right point and id=\ **2** and
-   name=\ **park** for the left point. See Figure 7 for the locations of
+   name=\ **park** for the left point. See figure below for the locations of
    the two points. 
    
     .. figure:: /images/SOLWEIG_Pointskr.png
        :alt:  None
        :width: 846px
        
-       Figure 7: Location of the two POIs 
+       Location of the two POIs 
 	   
    When you are
    finished, save layer edits (box in-between the two marked boxes in
@@ -328,7 +328,7 @@ the SOLWEIG Analyzer plug-in.
        :alt:  None
        :width: 875px
        
-       Figure 8: Dialog for the SOLWEIG Analyzer plug-in
+       Dialog for the SOLWEIG Analyzer plug-in
 
 #. Firstly you will compare differences in T\ :sub:`mrt` for the two
    locations (courtyard and park). This can done using the left frame
@@ -375,25 +375,25 @@ balance modelling with SUEWS.
    in the previous section adding five attributes (*id, ttype, trunk,
    totheight, diameter*). The attributes should all be decimal (float)
    numbers (see table below). The location of the three new trees are
-   shown in Figure 9. The values for all three vegetation units should
+   shown in figure below. The values for all three vegetation units should
    be **ttype=2, trunk=4, totheight=15, diameter=10**. 
    
     .. figure:: /images/SOLWEIG_File_TreesKR.png
        :alt:  None
        :width: 846px
        
-       Figure 9: Location of the three new vegetation units.
+       Location of the three new vegetation units.
 
 #. Add your created trunk zone dsm (TDSM.tif) that was created
    previously (located in your output directory).
 #. Open the TreeGenerator (UMEP -> PreProcessor -> TreeGenerator) and
-   use the settings as shown in Figure 10. 
+   use the settings as shown in figure below. 
 
     .. figure:: /images/SOLWEIG_Treegeneratorsolweig.png
        :alt:  None
        :width: 574px
        
-       Figure 10: The settings for the Tree Generator
+       The settings for the Tree Generator
 
 #. As the vegetation DSMs have been changed, the SVFs has to be
    recalculated. This time use the two generated vegetation DSMs.

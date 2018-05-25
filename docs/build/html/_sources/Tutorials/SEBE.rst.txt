@@ -48,7 +48,7 @@ When you open it on the top toolbar you will see **UMEP**.
    :alt:  None
    :width: 1066px
 
-   Figure 1: Location of SEBE in UMEP
+   Location of SEBE in UMEP
 
 -  If it UMEP not on our machine, download and install the `**UMEP**
    plugin <Getting_Started>`
@@ -64,7 +64,7 @@ Data for Tutorial
    :alt:  None
    :width: 356px
 
-   Figure 2. Central Gothenburg study area (red square). 
+   Central Gothenburg study area (red square). 
    The Open layers plugin in QGIS was used to generate 
    this snapshot.
 
@@ -102,12 +102,13 @@ S: Spatial, M: Meteorological,
 
 
 `Download link for datasets in Gothenburg,
-Sweden <http://www.urban-climate.net/UMEPTutorials/Gothenburg/Goteborg_SWEREF99_1200.zip>`__
+Sweden <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/Goteborg_SWEREF99_1200.zip>`__
 
-`Google map link and download link for datasets in London Covent
-Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data=!3m1!1e3>`__
+`Download link for datasets in London Covent
+Garden <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/DataCoventGarden.zip>`__
 
-`Datasetata <http://www.urban-climate.net/UMEPTutorials/London/DataCoventGarden.zip>`__
+`Google map link to Convent Garden <https://www.google.co.uk/maps/@51.5117012,-0.1231273,356m/data=!3m1!1e3>`__
+
 
 Steps
 -----
@@ -245,13 +246,13 @@ Preparing data for SEBE
 -----------------------
 
 SEBE plugin: located at *UMEP -> Processor -> Solar Energy -> Solar
-Energy on Building Envelopes (SEBE)* in the menu bar (Figure 1).
+Energy on Building Envelopes (SEBE)* in the menu bar.
 
 .. figure:: /images/SEBE_SEBE1.png
    :alt: SEBE1.png
    :width: 514px
 
-   Figure 3: The interface for SEBE in UMEP
+   The interface for SEBE in UMEP
 
 #. *Top frame*: for input data for the SEBE calculations.
 
@@ -314,7 +315,7 @@ Now you have all data ready to run the model.
 .. figure:: /images/SEBE_SEBEnoVeg.png
    :alt:  Settings for running SEBE without vegetation.
 
-   Figure 4: Example of settings for running SEBE without vegetation.
+   Example of settings for running SEBE without vegetation.
 
 #. First run the model *without* including vegetation.
 
@@ -387,7 +388,7 @@ In order to obtain the solar energy potential for a specific building:
 .. figure:: /images/SEBE_Slope.png
    :alt: None
 
-   Figure 5: The Slope tool in QGIS
+   The Slope tool in QGIS
 
 Use the raster menu: *Raster> Raster Calculator*.
 
@@ -409,7 +410,7 @@ Use the raster menu: *Raster> Raster Calculator*.
 .. figure:: /images/SEBE_RasterCalculator.png
    :alt: None
 
-   Figure 6: The RasterCalculator in QGIS
+   The RasterCalculator in QGIS
 
 Irradiance map with values less than 900 kWh filtered out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,7 +434,7 @@ statistics tool:
    .. figure:: /images/SEBE_GOT_Irradiance.png
       :alt: None
    
-      Figure 7: Irradiance map on building roofs in Gothenburg
+      Irradiance map on building roofs in Gothenburg
 
 Covent Garden data set
 ----------------------
@@ -518,7 +519,7 @@ Plugin to **visualize data** in 3D: called
 .. figure:: /images/SEBE_CoventGarden.png
    :alt: None
 
-   Figure 8: 3D visualisation with Qgis2Threejs over Convent Garden
+   3D visualisation with Qgis2Threejs over Convent Garden
 
 TIFF (TIF) and ASC are **raster data file formats** In the left Hand
 Side there is a list of layers.

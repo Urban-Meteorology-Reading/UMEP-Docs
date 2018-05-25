@@ -57,9 +57,9 @@ Data for Tutorial
 
 Use the appropriate data:
 
-- Reading: `download <http://www.urban-climate.net/UMEPTutorials/Reading/DataReading.zip>`__
+- Reading: `download <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/DataReading.zip>`__
 
-- London: `download <http://www.urban-climate.net/UMEPTutorials/London/DataSmallAreaLondon.zip>`__
+- London: `download <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/DataSmallAreaLondon.zip>`__
 
 
 Prior to Starting

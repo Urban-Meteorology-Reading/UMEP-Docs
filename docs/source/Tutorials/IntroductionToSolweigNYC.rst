@@ -1,9 +1,7 @@
-.. _IntroductionToSOLWEIG:
+.. _IntroductionToSOLWEIGNYC:
 
-Thermal Comfort - Introduction to SOLWEIG
+Thermal Comfort - Introduction to SOLWEIG (NYC)
 =========================================
-
-.. note:: Click `here <IntroductionToSOLWEIGNYC>` to find an adjusted tutorial for ICUC10 workshop participants.
 
 Introduction
 ------------
@@ -72,19 +70,18 @@ to our `repository <https://bitbucket.org/fredrik_ucg/umep/>`__.
 Data for this exercise
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The UMEP tutorial datasets can be downloaded from our here repository
-`here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/tree/master/other%20files/Goteborg_SWEREF99_1200.zip>`__
+The UMEP tutorial datasets around CCNY campus can be downloaded from our here repository
+`here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/blob/master/other%20files/CCNY_ESPG26918.zip>`__
 
 -  Download, extract and add the raster layers (DSM, CDSM, DEM and land
-   cover) from the **Goteborg folder** into a new QGIS session (see
-   below).
+   cover) into a new QGIS session (see below).
 
    -  Create a new project
-   -  Examine the geodata by adding the layers (*DSM_KRbig*,
-      *CDSM_KRbig*, *DEM_KRbig* and *landcover*) to your project (***Layer
+   -  Examine the geodata by adding the layers (*ccny_dsm_1m*,
+      *ccny_cdsm_1m*, *ccny_dem_1m* and *ccny_lc_1m*) to your project (***Layer
       > Add Layer > Add Raster Layer**).
 
--  Coordinate system of the grids is Sweref99 1200 (EPSG:3007). If you
+-  Coordinate system of the grids is NAD83 / UTM zone 18N (EPSG:26918). If you
    look at the lower right hand side you can see the CRS used in the
    current QGIS project
 -  Examine the different datasets before you move on.
@@ -93,6 +90,34 @@ The UMEP tutorial datasets can be downloaded from our here repository
    **landcoverstyle.qml** found in the test dataset. Right click on the
    land cover (*Properties -> Style (lower left) -> Load Style*).
 
+The origin of the datasets are shown below
+   
+.. list-table:: Table 1. Spatial data used for this tuorial
+   :widths: 10 10 40 40
+
+   * - **Geodata**
+     - **Year**
+     - **Source**
+     - **Description**
+   * - Digital surface model (DSM)
+     - 2013 (Lidar), 2016 (building polygons)
+     - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar and NYC Open Data Portal. `link <https://data.cityofnewyork.us>`__
+     - A raster grid including both buildings and ground given in meter above sea level.
+   * - Digital elevation model (DEM)
+     - 2013
+     - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://data.cityofnewyork.us>`__	
+     - A raster grid including only ground heights given in meter above sea level.
+   * - Digital canopy model (CDSM)
+     - 2013 (August)
+     - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://coast.noaa.gov/htdata/lidar1_z/geoid12b/data/4920/>`__
+     - A vegetation raster grid where vegetation heights is given in meter above ground level. Vegetation lower than 2.5 meter Pixels with no vegetation should be zero.
+   * - Land cover (UMEP formatted)
+     - 2010
+     - New York City Landcover 2010 (3ft version). University of Vermont Spatial Analysis Laboratory and New York City Urban Field Station. `link <https://opendata.cityofnewyork.us/>`__
+     - A raster grid including: 1. Paved surfaces, 2. Building surfaces, 3. Evergreen trees and shrubs, 4. Deciduous trees and shrubs, 5. Grass surfaces, 6. Bare soil, 7. Open water			
+
+     
+   
 SOLWEIG Model Inputs
 --------------------
 
@@ -171,7 +196,7 @@ S: Spatial, M: Meteorological,
      - R 
      - O 
      - Set in the interface of the model.
-	 
+ 
 
 Meterological input data should be in UMEP format. You can use the
 `Meterological Preprocessor <MetPreprocessor>`
@@ -222,7 +247,7 @@ How to Run SOLWEIG from the UMEP-plugin
        :width: 487px
        
        Settings for the SkyViewFactorCalculator.
-      
+	   
    -  When the calculation is done, map will appear in the map canvas.
       This is the 'total' SVF i.e., including both buildings and
       vegetation. Examine the dataset.
@@ -240,8 +265,8 @@ How to Run SOLWEIG from the UMEP-plugin
        
        Settings for the Wall height and aspect plugin.
 
-#. Re-open the SOLWEIG plugin and use the settings shown below. You will
-   use the GUI to set one point in time (i.e. a summer hour in
+#. Re-open the SOLWEIG plugin and use the settings as shown below. **NOTE** Remember to change UTC time to *-5* (figure not updated). 
+   You will use the GUI to set one point in time (i.e. a summer hour in
    Gothenburg, Sweden) hence, no input meteorological file is needed for
    now. No information on vegetation and ground cover is added for this
    first try. Click **Run**. 
@@ -251,11 +276,11 @@ How to Run SOLWEIG from the UMEP-plugin
        :width: 1078px
        
        The settings for your first SOLWEIG run (click on image for larger image).
-      
+	   
 #. Examine the output (Average T\ :sub:`mrt` (°C). What is the main
    driver to the spatial variations in T\ :sub:`mrt`?
 #. Add 3D vegetation information by ticking in *Use vegetation scheme
-   (Lindberg, Grimmond 2011)* and add **CDSM_Krbig** as the *Vegetation
+   (Lindberg, Grimmond 2011)* and add the vegetation canopy dataset as the *Vegetation
    Canopy DSM*. As no TDSM exists we estimate the it by using 25% of the
    canopy height. Leave the tranmissivity as 3%. Tick in *Save generated
    Trunk Zone DSM* (a tif file, **TDSM.tif**, will be generated in the
@@ -280,8 +305,7 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
 #. First you need to create a point vector layer to store the POIs. Go
    to *Layer -> Create Layer -> New Shape file*. Choose *Point* as
    *Type* and add a new text field called **name**. Name the new layer
-   **POI_Kr.shp**. Specify the coordinate system as SWEREF99 12 00
-   (EPSG: 3007).
+   **POI_Kr.shp**. Specify the coordinate system to be same as the other dataset.
 #. Now you should add two points within the study area. To add points to
    the layer it has to be editable and Add Feature should be activated.
 
@@ -292,25 +316,16 @@ Gothenburg, Sweden. The GUI is also able to derive full model output
        Setting to add points 
    
    Two points should be added and the attributes should be id=\ **1** and
-   name=\ **courtyard** for the right point and id=\ **2** and
-   name=\ **park** for the left point. See figure below for the locations of
-   the two points. 
+   name=\ **point1** for the right point and id=\ **2** and
+   name=\ **point2** for the left point. Put them out at any location within the domain
    
-    .. figure:: /images/SOLWEIG_Pointskr.png
-       :alt:  None
-       :width: 846px
-       
-       Location of the two POIs 
-	   
-   When you are
-   finished, save layer edits (box in-between the two marked boxes in
-   Figure 6). Close the editing by pressing Toggle editing (the pencil).
+   When you are finished, save layer edits. Close the editing by pressing Toggle editing (the pencil).
 #. Now open the SOLWEIG plugin. Use both the vegetation and land cover
    schemes as before. This time, tick in *Include POI(s)*, select your
    point layer and use the ID attribute as *ID field*.
 #. Tick in *Use continuous meteorological dataset* and choose
-   **gbg19970606_2015a.txt** as *Input meteorological file*. Also, tick
-   in to save T\ :sub:`mrt` as *Output maps*. Run the model again.
+   **NYC_2010_Data_60_doy190.txt** as *Input meteorological file*. This is a warm and clear day in 2010 (9 July).
+   Also, tick in to save T\ :sub:`mrt` as *Output maps*. Run the model again.
 
 Examine your output with SOLWEIG Analyzer
 -----------------------------------------
@@ -331,10 +346,10 @@ the SOLWEIG Analyzer plug-in.
        Dialog for the SOLWEIG Analyzer plug-in
 
 #. Firstly you will compare differences in T\ :sub:`mrt` for the two
-   locations (courtyard and park). This can done using the left frame
-   (*Point of Interest data*). Specify *courtyard* as *POI* and *Mean
+   locations (point1 and point2). This can done using the left frame
+   (*Point of Interest data*). Specify *point1* as *POI* and *Mean
    Radiant Temperature* in the two top scroll down lists. Then tick in
-   *Include another POI/variable* and chose *park* and *Mean Radiant
+   *Include another POI/variable* and chose *point2* and *Mean Radiant
    Temperature* below. Click *Plot*. What explains the differences?
 #. Now lets us move on to analyse the output maps generated from our
    last model run. In the right frame, specify *Mean Radiant
@@ -371,19 +386,13 @@ necessary attributes to generate/add/remove vegetation suitable for
 either mean radiant temperature modelling with SOLWEIG or urban energy
 balance modelling with SUEWS.
 
-#. Create a point vector shape file named (**TreesKR.shp**) as described
+#. Create a point vector shape file named (**Trees.shp**) as described
    in the previous section adding five attributes (*id, ttype, trunk,
    totheight, diameter*). The attributes should all be decimal (float)
-   numbers (see table below). The location of the three new trees are
-   shown in figure below. The values for all three vegetation units should
+   numbers (see table below). Locate the new tree on the laws south west of Shepards Hall 
+   The values for all three vegetation units should
    be **ttype=2, trunk=4, totheight=15, diameter=10**. 
    
-    .. figure:: /images/SOLWEIG_File_TreesKR.png
-       :alt:  None
-       :width: 846px
-       
-       Location of the three new vegetation units.
-
 #. Add your created trunk zone dsm (TDSM.tif) that was created
    previously (located in your output directory).
 #. Open the TreeGenerator (UMEP -> PreProcessor -> TreeGenerator) and
