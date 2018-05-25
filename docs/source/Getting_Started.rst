@@ -51,7 +51,6 @@ Download and installation of the UMEP-plugin from within QGIS
 Test `datasets <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__ and `tutorials <Tutorials>` are available to try some of the tools out.
 
 
-
 .. _Python_Libraries:
 
 Adding missing Python libraries and other OSGeo functionalities
@@ -80,7 +79,7 @@ make sure *pillow* is installed.
             -  There are two options available:
               1. As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC.
 
-                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__ you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu.
+                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <Getting_Started>` you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu.
 
                 You need to run as an administrator of your PC. To do this, right-click on **OSGeo4W shell** and choose *run as administrator*. In the command window that appear, write:
                 ::
@@ -110,7 +109,7 @@ make sure *pillow* is installed.
           ::
              import sys
              sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
-			 
+
 --------------
 
 \ **PLEASE NOTICE!**\
