@@ -1,7 +1,7 @@
 .. _SuewsSpatial:
 
 Urban Energy Balance - SUEWS Spatial
-=============
+====================================
 
 Introduction
 ------------

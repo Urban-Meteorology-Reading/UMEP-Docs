@@ -1,6 +1,6 @@
 
-SUEWS Mnual
------------
+SUEWS Manual
+------------
 
 The manual of SUEWS can be accessed at `its own documentation site`_.
 

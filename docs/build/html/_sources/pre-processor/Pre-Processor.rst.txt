@@ -15,7 +15,7 @@ SUEWS Prepare, a separate tool to prepare input data for the SUEWS model is also
 The tools can be accessed from the left panel.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :hidden:
    :glob:
