@@ -4,9 +4,6 @@
 Getting Started
 ===============
 
-.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).
-
-
 UMEP is developed as a plugin for `QGIS <http://www.qgis.org>`__. Two different versions are available:
  -  *Long term release* - This version is recommended for most users.
  -  *Development release* - This version is for testing. Could be unstable.
@@ -19,6 +16,8 @@ Installation
 
 Recommended Installation Steps of QGIS on Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).
 
 #. Visit `QGIS <http://www.qgis.org>`__ and go to the download page. Preferably, choose the `OSGEO4W Network Installer (64-bit) <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__, start the installation and choose *installation (64-bit) For Advanced Users*.
 #. **To install the latest version (3.x)**, start the installation and choose *Express Desktop Install*.
@@ -37,7 +36,7 @@ Download and installation of the UMEP-plugin from within QGIS
 
 #. Search for **UMEP**
 
-#. Click **Install Plugin** (or *Upgrade* if already have an older version installed from before).
+#. Click **Install Plugin** (or **Upgrade** if already have an older version installed from before).
 
 **Development release (unstable)**
 
@@ -49,7 +48,6 @@ Download and installation of the UMEP-plugin from within QGIS
 #. Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -> Manage and Install Plugins -> All” and search for UMEP. Make sure that you also tick in the box *Show also experimental plugins* in the “Settings”-tab.
 
 Test `datasets <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__ and `tutorials <Tutorials>` are available to try some of the tools out.
-
 
 
 .. _Python_Libraries:
@@ -80,7 +78,7 @@ make sure *pillow* is installed.
             -  There are two options available:
               1. As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC.
 
-                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <http://urban-climate.net/umep/UMEP_Manual#Getting_Started>`__ you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu.
+                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <Getting_Started>` you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu.
 
                 You need to run as an administrator of your PC. To do this, right-click on **OSGeo4W shell** and choose *run as administrator*. In the command window that appear, write:
                 ::
@@ -103,14 +101,15 @@ make sure *pillow* is installed.
 
 
         #. Mac OS X
-          - Follow the instructions for Linux. ***Note***: this approach is tested to be working under Mac OS X 10.11.5.
-        4. Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. Or refer to `startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
-          to modify start up file of QGIS by including the paths to **pandas** and
-          **scipy**. An example of startup.py may look like:
-          ::
-             import sys
-             sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
-			 
+            - Follow the instructions for Linux. ***Note***: this approach is tested to be working under Mac OS X 10.11.5.
+        #. Other Platforms
+            - Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. 
+              Or refer to `startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
+              to modify start up file of QGIS by including the paths to **pandas** and **scipy**. An example of startup.py may look like
+              ::
+                 import sys
+                 sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
+
 --------------
 
 \ **PLEASE NOTICE!**\

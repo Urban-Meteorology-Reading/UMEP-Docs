@@ -178,10 +178,6 @@
             
   <div class="section" id="getting-started">
 <span id="id1"></span><h1>2. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).</p>
-</div>
 <dl class="docutils">
 <dt>UMEP is developed as a plugin for <a class="reference external" href="http://www.qgis.org">QGIS</a>. Two different versions are available:</dt>
 <dd><ul class="first last simple">
@@ -196,6 +192,10 @@ UMEP has been developed using Python 2.7.x and QGIS 2.x in a Windows environment
 <h2>2.1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="recommended-installation-steps-of-qgis-on-windows">
 <h3>2.1.1. Recommended Installation Steps of QGIS on Windows<a class="headerlink" href="#recommended-installation-steps-of-qgis-on-windows" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).</p>
+</div>
 <ol class="arabic simple">
 <li>Visit <a class="reference external" href="http://www.qgis.org">QGIS</a> and go to the download page. Preferably, choose the <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGEO4W Network Installer (64-bit)</a>, start the installation and choose <em>installation (64-bit) For Advanced Users</em>.</li>
 <li><strong>To install the latest version (3.x)</strong>, start the installation and choose <em>Express Desktop Install</em>.</li>
@@ -210,7 +210,7 @@ UMEP has been developed using Python 2.7.x and QGIS 2.x in a Windows environment
 <li>Start <strong>QGIS</strong></li>
 <li>Go to: <em>Plugins -&gt; Manage and Install Plugins…</em></li>
 <li>Search for <strong>UMEP</strong></li>
-<li>Click <strong>Install Plugin</strong> (or <em>Upgrade</em> if already have an older version installed from before).</li>
+<li>Click <strong>Install Plugin</strong> (or <strong>Upgrade</strong> if already have an older version installed from before).</li>
 </ol>
 <p><strong>Development release (unstable)</strong></p>
 <ol class="arabic simple">
@@ -263,7 +263,7 @@ make sure <em>pillow</em> is installed.</p>
 <li>As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC.</li>
 </ol>
 <blockquote>
-<div><p>This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference external" href="http://urban-climate.net/umep/UMEP_Manual#Getting_Started">Getting started</a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu.</p>
+<div><p>This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in <a class="reference internal" href="#"><span class="doc">Getting started</span></a> you should have a <strong>OSGeo4W shell</strong> installed where you can use pip to add desired Python libraries. <strong>OSGeo4W shell</strong> is found in the Windows start menu.</p>
 <p>You need to run as an administrator of your PC. To do this, right-click on <strong>OSGeo4W shell</strong> and choose <em>run as administrator</em>. In the command window that appear, write:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
 </pre></div>
@@ -290,25 +290,30 @@ We have submitted an issue regarding this to the QGIS community. Meanwhile, we r
 </dd>
 </dl>
 </li>
-<li><p class="first">Mac OS X</p>
-</li>
-</ol>
-<blockquote>
-<div><ul class="simple">
+<li><dl class="first docutils">
+<dt>Mac OS X</dt>
+<dd><ul class="first last simple">
 <li>Follow the instructions for Linux. <strong>*Note*</strong>: this approach is tested to be working under Mac OS X 10.11.5.</li>
 </ul>
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li>Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a></li>
-</ol>
-<blockquote>
-<div><p>to modify start up file of QGIS by including the paths to <strong>pandas</strong> and
-<strong>scipy</strong>. An example of startup.py may look like:</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Other Platforms</dt>
+<dd><ul class="first last">
+<li><p class="first">Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system.
+Or refer to <a class="reference external" href="http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file">startup.py</a>
+to modify start up file of QGIS by including the paths to <strong>pandas</strong> and <strong>scipy</strong>. An example of startup.py may look like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;/usr/local/lib/python2.7/site-packages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
 </div></blockquote>
 </li>
 </ul>

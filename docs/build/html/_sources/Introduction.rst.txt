@@ -1,4 +1,3 @@
-@@ -1,491 +0,0 @@
 .. _Introduction:
 
 
@@ -27,9 +26,9 @@ that provides data viewing, editing, and analysis capabilities.
 This software is in continuous development. There are two types of
 releases:
 
-#. *Long term release* - this may be obtained from the QGIS plugin
+#. **Long term release** - this may be obtained from the QGIS plugin
    manager `(see details) <Getting_Started>`.
-#. *Current development version* - this can be obtained from the plugin
+#. **Current development version** - this can be obtained from the plugin
    `repository <http://www.bitbucket.org/fredrik_ucg/umep>`__. This
    version you need to manually install yourself `(see details) <Getting_Started>`.
 
@@ -41,6 +40,11 @@ main calculations. To provide initial “quick looks” the post-processor
 will enable results to be plotted, statistics calculated etc. based on
 the model output. For more information on the content and archetecture,
 see `PluginArchitecture`.
+
+
+Detailed information on how to install can be found `here <Getting_Started>`.
+
+Information on version history can be found `here <https://bitbucket.org/fredrik_ucg/umep/commits/branch/master>`__.
 
 
 UMEP: How to Cite
@@ -65,24 +69,6 @@ The manual should be cited as:
   University of Reading UK, University of Gothenburg Sweden, SIMS China*
 
 
-Current Version
----------------
-
-This software is in continuous development. There are two types of
-releases:
-
-#. **Long term release** - This can be obtained from the Plugin
-   Manager in QGIS.
-#. **Current development version** - (If any) can be obtained from
-   the code `repository <http://bitbucket.org/fredrik_ucg/umep>`__. This
-   version you need to install yourself.
-
-Detailed information on how to install can be found
-`here <Getting_Started>`.
-
-Information on version history can be found 
-`here <Getting_Started>`.
-
 .. _PluginArchitecture:
 
 Plugin Architecture
@@ -104,7 +90,7 @@ Pre-Processor
 **Meteorological Data**
 
 .. list-table:: 
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Prepare Existing Data <MetPreprocessor>`
@@ -116,7 +102,7 @@ Pre-Processor
 **Spatial Data**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Spatial Data Downloader <SpatialDataDownloader>`
@@ -131,7 +117,7 @@ Pre-Processor
 **Urban geometry**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Sky View Factor <SkyViewFactorCalculator>`
@@ -142,7 +128,7 @@ Pre-Processor
 **Urban land cover**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Land Cover Reclassifier <LandCoverReclassifier>`
@@ -155,7 +141,7 @@ Pre-Processor
 **Urban Morphology**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Morphometric Calculator (Point) <MorphometricCalculator(Point)>`
@@ -168,7 +154,7 @@ Pre-Processor
 **Other**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
    
    * - `SUEWS Prepare <SUEWSPrepare>`
@@ -181,7 +167,7 @@ Processor
 **Outdoor Thermal Comfort**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - Comfort Index (PET/UTCI) (planned)
@@ -197,7 +183,7 @@ Processor
 **Urban Energy Balance**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `LQF <LQF>`
@@ -213,7 +199,7 @@ Processor
 **Solar Radiation**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Solar Energy on Building Envelopes (SEBE) <SEBE>`
@@ -227,7 +213,7 @@ Post-Processor
 **Solar Radiation**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `SEBE Visualisation <SEBEVisualisation>`
@@ -237,7 +223,7 @@ Post-Processor
 **Outdoor Thermal Comfort**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `SOLWEIG analyzer <SOLWEIGAnalyzer>`
@@ -247,7 +233,7 @@ Post-Processor
 **Urban Energy Balance**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `SUEWS analyser <SUEWSAnalyser>`
@@ -257,7 +243,7 @@ Post-Processor
 **Benchmark**
 
 .. list-table::
-   :widths: 25 25
+   :widths: 35 65
    :header-rows: 0
 
    * - `Benchmark System <Benchmark>`

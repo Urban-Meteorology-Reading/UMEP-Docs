@@ -87,15 +87,14 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#umep-how-to-cite">1.1. UMEP: How to Cite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#current-version">1.2. Current Version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plugin-architecture">1.3. Plugin Architecture</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pre-processor">1.3.1. Pre-Processor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#processor">1.3.2. Processor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#post-processor">1.3.3. Post-Processor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plugin-architecture">1.2. Plugin Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pre-processor">1.2.1. Pre-Processor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processor">1.2.2. Processor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#post-processor">1.2.3. Post-Processor</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tool-applications">1.4. Tool Applications</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#evaluation-and-application-studies">1.4.1. Evaluation and application studies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tool-applications">1.3. Tool Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-and-application-studies">1.3.1. Evaluation and application studies</a></li>
 </ul>
 </li>
 </ul>
@@ -182,10 +181,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>&#64;&#64; -1,491 +0,0 &#64;&#64;
-.. _Introduction:</p>
-<div class="section" id="introduction">
-<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="introduction">
+<span id="id1"></span><h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>The Urban Multi-scale Environmental Predictor (<strong>UMEP</strong>) is a climate
 services tool, designed for researchers, architects, urban planners,
 climatologists, and meteorologists. This tool can be used for a variety
@@ -206,9 +203,9 @@ that provides data viewing, editing, and analysis capabilities.</p>
 <p>This software is in continuous development. There are two types of
 releases:</p>
 <ol class="arabic simple">
-<li><em>Long term release</em> - this may be obtained from the QGIS plugin
+<li><strong>Long term release</strong> - this may be obtained from the QGIS plugin
 manager <a class="reference internal" href="Getting_Started.html"><span class="doc">(see details)</span></a>.</li>
-<li><em>Current development version</em> - this can be obtained from the plugin
+<li><strong>Current development version</strong> - this can be obtained from the plugin
 <a class="reference external" href="http://www.bitbucket.org/fredrik_ucg/umep">repository</a>. This
 version you need to manually install yourself <a class="reference internal" href="Getting_Started.html"><span class="doc">(see details)</span></a>.</li>
 </ol>
@@ -220,6 +217,8 @@ main calculations. To provide initial “quick looks” the post-processor
 will enable results to be plotted, statistics calculated etc. based on
 the model output. For more information on the content and archetecture,
 see <a class="reference internal" href="#pluginarchitecture"><span class="std std-ref">Plugin Architecture</span></a>.</p>
+<p>Detailed information on how to install can be found <a class="reference internal" href="Getting_Started.html"><span class="doc">here</span></a>.</p>
+<p>Information on version history can be found <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/commits/branch/master">here</a>.</p>
 <div class="section" id="umep-how-to-cite">
 <h2>1.1. UMEP: How to Cite<a class="headerlink" href="#umep-how-to-cite" title="Permalink to this headline">¶</a></h2>
 <p>Please use the reference below when UMEP is used:</p>
@@ -234,24 +233,8 @@ climate&nbsp;services.&nbsp;Environmental&nbsp;Modelling&nbsp;and&nbsp;Software.
 Urban&nbsp;Multi-scale&nbsp;Environmental&nbsp;Predictor&nbsp;(UMEP)&nbsp;Manual.&nbsp;http://urban-climate.net/umep/ UMEP_Manual.
 University&nbsp;of&nbsp;Reading&nbsp;UK,&nbsp;University&nbsp;of&nbsp;Gothenburg&nbsp;Sweden,&nbsp;SIMS&nbsp;China</em></div></blockquote>
 </div>
-<div class="section" id="current-version">
-<h2>1.2. Current Version<a class="headerlink" href="#current-version" title="Permalink to this headline">¶</a></h2>
-<p>This software is in continuous development. There are two types of
-releases:</p>
-<ol class="arabic simple">
-<li><strong>Long term release</strong> - This can be obtained from the Plugin
-Manager in QGIS.</li>
-<li><strong>Current development version</strong> - (If any) can be obtained from
-the code <a class="reference external" href="http://bitbucket.org/fredrik_ucg/umep">repository</a>. This
-version you need to install yourself.</li>
-</ol>
-<p>Detailed information on how to install can be found
-<a class="reference internal" href="Getting_Started.html"><span class="doc">here</span></a>.</p>
-<p>Information on version history can be found
-<a class="reference internal" href="Getting_Started.html"><span class="doc">here</span></a>.</p>
-</div>
 <div class="section" id="plugin-architecture">
-<span id="pluginarchitecture"></span><h2>1.3. Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permalink to this headline">¶</a></h2>
+<span id="pluginarchitecture"></span><h2>1.2. Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permalink to this headline">¶</a></h2>
 <p>The UMEP plugin consist of three different parts; a pre-processor, a
 processor and a post-processor. The pre-processor is used to prepare
 spatial and meteorological data as inputs to the modelling system. The
@@ -263,12 +246,12 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p class="last">It is strongly recommended to transform all geodatasets into the same projected coordinate system (CRS) before any processing starts.</p>
 </div>
 <div class="section" id="pre-processor">
-<h3>1.3.1. Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.1. Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Meteorological Data</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/Meteorological Data MetPreprocessor.html#metpreprocessor"><span class="std std-ref">Prepare Existing Data</span></a></td>
@@ -282,8 +265,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Spatial Data</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/Spatial Data Spatial Data Downloader.html#spatialdatadownloader"><span class="std std-ref">Spatial Data Downloader</span></a></td>
@@ -303,8 +286,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Urban geometry</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/Urban Geometry Sky View Factor Calculator.html#skyviewfactorcalculator"><span class="std std-ref">Sky View Factor</span></a></td>
@@ -318,8 +301,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Urban land cover</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Land Cover Reclassifier</span></a></td>
@@ -336,8 +319,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Urban Morphology</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Morphometric Calculator (Point)</span></a></td>
@@ -354,8 +337,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Other</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pre-processor/SUEWS Prepare.html#suewsprepare"><span class="std std-ref">SUEWS Prepare</span></a></td>
@@ -365,12 +348,12 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </table>
 </div>
 <div class="section" id="processor">
-<h3>1.3.2. Processor<a class="headerlink" href="#processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.2. Processor<a class="headerlink" href="#processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Outdoor Thermal Comfort</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Comfort Index (PET/UTCI) (planned)</td>
@@ -390,20 +373,20 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Urban Energy Balance</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="processor/Urban Energy Balance LQ.html#lqf"><span class="std std-ref">LQF</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="Tutorials/LQF.html#lqf"><span class="std std-ref">LQF</span></a></td>
 <td>Spatial variations anthropogenic heat release for urban areas</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="processor/Urban Energy Balance GQ.html#gqf"><span class="std std-ref">GQF</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="Tutorials/GQF.html#gqf"><span class="std std-ref">GQF</span></a></td>
 <td>Anthropogenic Heat (Q<sub>F</sub>). <em>Daily City Operations: Energy use; Gas consumption; Traffic heat loads</em></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="processor/Urban Energy Balance Urban Energy Balance (SUEWS, simple).html#suewssimple"><span class="std std-ref">SUEWS (Simple)</span></a></td>
 <td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="processor/Urban Energy Balance Urban Energy Balance (SUEWS.BLUEWS, advanced).html#suewsadvanced"><span class="std std-ref">SUEWS (Advanced)</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="Tutorials/SuewsAdvanced.html#suewsadvanced"><span class="std std-ref">SUEWS (Advanced)</span></a></td>
 <td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
 </tr>
 </tbody>
@@ -411,8 +394,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Solar Radiation</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="Tutorials/SEBE.html#sebe"><span class="std std-ref">Solar Energy on Building Envelopes (SEBE)</span></a></td>
@@ -425,12 +408,12 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </table>
 </div>
 <div class="section" id="post-processor">
-<h3>1.3.3. Post-Processor<a class="headerlink" href="#post-processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.2.3. Post-Processor<a class="headerlink" href="#post-processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solar Radiation</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="post_processor/Solar Radiation SEBE (Visualisation).html#sebevisualisation"><span class="std std-ref">SEBE Visualisation</span></a></td>
@@ -441,8 +424,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Outdoor Thermal Comfort</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="post_processor/Outdoor Thermal Comfort SOLWEIG Analyzer.html#solweiganalyzer"><span class="std std-ref">SOLWEIG analyzer</span></a></td>
@@ -453,8 +436,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Urban Energy Balance</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="post_processor/Urban Energy Balance SUEWS Analyser.html#suewsanalyser"><span class="std std-ref">SUEWS analyser</span></a></td>
@@ -465,8 +448,8 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p><strong>Benchmark</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="35%" />
+<col width="65%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="post_processor/Benchmark System.html#benchmark"><span class="std std-ref">Benchmark System</span></a></td>
@@ -477,7 +460,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </div>
 </div>
 <div class="section" id="tool-applications">
-<h2>1.4. Tool Applications<a class="headerlink" href="#tool-applications" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Tool Applications<a class="headerlink" href="#tool-applications" title="Permalink to this headline">¶</a></h2>
 <p>A key element of UMEP is to facilitate the preparation of input data
 needed for City-Based Climate Services (CBCS). UMEP provides both
 guidance and tools that enable data preparation and manipulation. This
@@ -486,14 +469,14 @@ but not the full spectrum, of the data needed for applications. Below
 you can find some examples on applications and workflows for the
 modelling procedure in UMEP and what tools that are connected to each
 other.</p>
-<div class="figure" id="id1">
+<div class="figure" id="id2">
 <img alt="Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="_images/SUEWSworkflow.png" />
 <p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Workflow and geodata used for analysing urban energy balance
 using the SUEWS model. Bold outlined boxes are mandatory items.
 Yellow, orange and red indicates pre-processor, processor and
 post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 </div>
-<div class="figure" id="id2">
+<div class="figure" id="id3">
 <img alt="Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets." src="_images/SOLWEIGworkflow.png" />
 <p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Workflow and geodata used for analysing mean radiant
 temperature using the SOLWEIG model. Bold outlines are mandatory
@@ -503,7 +486,7 @@ post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 <p>Other application examples can be found
 <a class="reference external" href="http://www.urban-climate.net/umep/Example_Applications">here</a>.</p>
 <div class="section" id="evaluation-and-application-studies">
-<h3>1.4.1. Evaluation and application studies<a class="headerlink" href="#evaluation-and-application-studies" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1. Evaluation and application studies<a class="headerlink" href="#evaluation-and-application-studies" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl class="first docutils">
 <dt>Mean Radiant Temperature (<a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">SOLWEIG</a>)</dt>

@@ -33,6 +33,7 @@ People Involved & Acknowledgements
      - - Frans Olofsson
        - Niklas Krave
        - Shiho Onomura
+       - Nils Wallenberg
      - - H2020 UrbanFluxes
        - FORMAS Climplan
    * - `Leena Järvi <https://tuhat.helsinki.fi/portal/en/persons/leena-jarvi(198f2cdc-762e-4456-9170-284c1507429a).html>`__

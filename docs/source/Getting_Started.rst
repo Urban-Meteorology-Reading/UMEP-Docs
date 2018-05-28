@@ -4,9 +4,6 @@
 Getting Started
 ===============
 
-.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).
-
-
 UMEP is developed as a plugin for `QGIS <http://www.qgis.org>`__. Two different versions are available:
  -  *Long term release* - This version is recommended for most users.
  -  *Development release* - This version is for testing. Could be unstable.
@@ -19,6 +16,8 @@ Installation
 
 Recommended Installation Steps of QGIS on Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18).
 
 #. Visit `QGIS <http://www.qgis.org>`__ and go to the download page. Preferably, choose the `OSGEO4W Network Installer (64-bit) <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__, start the installation and choose *installation (64-bit) For Advanced Users*.
 #. **To install the latest version (3.x)**, start the installation and choose *Express Desktop Install*.
@@ -37,7 +36,7 @@ Download and installation of the UMEP-plugin from within QGIS
 
 #. Search for **UMEP**
 
-#. Click **Install Plugin** (or *Upgrade* if already have an older version installed from before).
+#. Click **Install Plugin** (or **Upgrade** if already have an older version installed from before).
 
 **Development release (unstable)**
 
@@ -102,13 +101,14 @@ make sure *pillow* is installed.
 
 
         #. Mac OS X
-          - Follow the instructions for Linux. ***Note***: this approach is tested to be working under Mac OS X 10.11.5.
-        4. Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. Or refer to `startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
-          to modify start up file of QGIS by including the paths to **pandas** and
-          **scipy**. An example of startup.py may look like:
-          ::
-             import sys
-             sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
+            - Follow the instructions for Linux. ***Note***: this approach is tested to be working under Mac OS X 10.11.5.
+        #. Other Platforms
+            - Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. 
+              Or refer to `startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
+              to modify start up file of QGIS by including the paths to **pandas** and **scipy**. An example of startup.py may look like
+              ::
+                 import sys
+                 sys.path.insert(1,'/usr/local/lib/python2.7/site-packages')
 
 --------------
 
