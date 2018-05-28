@@ -6,7 +6,7 @@ Urban Energy Balance - SUEWS Spatial
 Introduction
 ------------
 
-In this tutorial you will generate input data to the 
+In this tutorial you will generate input data for the 
 `SUEWS <http://suews-docs.readthedocs.io>`__ model and simulate spatial 
 (and temporal) variations of energy exchanges within a small area on Manhattan 
 (New York City) with regards to a heat wave event. 
@@ -55,9 +55,7 @@ Initial Steps
 
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
-plugin see the `getting
-started <Getting_Started>`
-section in the UMEP manual.
+plugin see the `getting started <Getting_Started>` section in the UMEP manual.
 
 As UMEP is under development, some documentation may be missing and/or
 there may be instability. Please report any issues or suggestions to our
@@ -67,11 +65,11 @@ there may be instability. Please report any issues or suggestions to our
 Loading and analyzing the spatial data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All geodata used in this tutorial originates from open datasets available from various sources, foremost from the City of New York. Information about the data is found in table 1.
+All geodata used in this tutorial originates from open datasets available from various sources, foremost from the City of New York. Information about the data is found in the table below.
 
-.. note:: You can download the all the data from **here (NEED TO BE FIXED)**. Unzip and place in a folder where you have read and write access.
+.. note:: You can download the all the data from `here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/blob/master/other%20files/SUEWSSpatial_Tutorialdata.zip>`__. Unzip and place in a folder where you have read and write access to.
 
-.. list-table:: Table 1. Spatial data used for this tuorial
+.. list-table:: Spatial data used for this tuorial
    :widths: 10 10 40 40
 
    * - **Geodata**
@@ -136,7 +134,155 @@ As you can see the grid does not cover the whole extent of the raster grids. Thi
 Meteorlogical forcing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NOT READY. Depends on if WATCH will be used or not.
+Meteorological forcing data is one mandatory input dataset for most of the models included in UMEP. UMEP make use of a specific formatted dataset as decribed in the table below. Some of the variables are optional and if not available shuold be put to -999.
+
+.. list-table:: Variables included in UMEP meteorological input file. 
+   :widths: 4 10 25 18 43
+   :header-rows: 1
+
+   * - No.
+     - Header name
+     - Description
+     - Accepted  range
+     - Comments
+   * - 1
+     - iy
+     - Year [YYYY]
+     - Not applicable
+     -
+   * - 2
+     - id
+     - Day of year [DOY]
+     - 1 to 365 (366 if leap year)
+     -
+   * - 3
+     - it
+     - Hour [H]
+     - 0 to 23
+     -
+   * - 4
+     - imin
+     - Minute [M]
+     - 0 to 59
+     -
+   * - 5
+     - qn
+     - Net all-wave radiation [W m\ :sup:`-2`]
+     - -200 to 800
+     -
+   * - 6
+     - qh
+     - Sensible heat flux [W m\ :sup:`-2`]
+     - -200 to 750
+     -
+   * - 7
+     - qe
+     - Latent heat flux [W m\ :sup:`-2`]
+     - -100 to 650
+     -
+   * - 8
+     - qs
+     - Storage heat flux [W m\ :sup:`-2`]
+     - -200 to 650
+     -
+   * - 9
+     - qf
+     - Anthropogenic heat flux [W m\ :sup:`-2`]
+     - 0 to 1500
+     -
+   * - 10
+     - U
+     - Wind speed [m s\ :sup:`-1`]
+     - 0.001 to 60
+     -
+   * - 11
+     - RH
+     - Relative Humidity [%]
+     - 5 to 100
+     -
+   * - 12
+     - Tair
+     - Air temperature [°C]
+     - -30 to 55
+     -
+   * - 13
+     - pres
+     - Surface barometric pressure [kPa]
+     - 90 to 107
+     -
+   * - 14
+     - rain
+     - Rainfall [mm]
+     - 0 to 30
+     - (per 5 min) this should be scaled based on time step used
+   * - 15
+     - kdown
+     - Incoming shortwave radiation [W m\ :sup:`-2`]
+     - 0 to 1200
+     -
+   * - 16
+     - snow
+     - Snow [mm]
+     - 0 to 300
+     - (per 5 min) this should be scaled based on time step used
+   * - 17
+     - ldown
+     - Incoming longwave radiation [W m\ :sup:`-2`]
+     - 100 to 600
+     -
+   * - 18
+     - fcld
+     - Cloud fraction [tenths]
+     - 0 to 1
+     -
+   * - 19
+     - wuh
+     - External water use [m\ :sup:`3`]
+     - 0 to 10
+     - (per 5 min) scale based on time step being used
+   * - 20
+     - xsmd
+     - \(Observed) soil moisture
+     - 0.01 to 0.5
+     - [m\ :sup:`3` m\ :sup:`-3` or kg kg\ :sup:`-1`]
+   * - 21
+     - lai
+     - (Observed) leaf area index [m\ :sup:`2` m\ :sup:`-2`]
+     - 0 to 15
+     -
+   * - 22
+     - kdiff
+     - Diffuse shortwave radiation [W m\ :sup:`-2`]
+     - 0 to 600
+     -
+   * - 23
+     - kdir
+     - Direct shortwave radiation [W m\ :sup:`-2`]
+     - 0 to 1200
+     - Should be perpendicular to the Sun beam.\  One way to check this is to compare direct and global radiation and see if kdir is higher than global radiation during clear weather. Then kdir is measured perpendicular to the solar beam.
+   * - 24
+     - wdir
+     - Wind direction [°]
+     - 0 to 360
+     -
+
+
+The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.txt**) is obtained from NOAA (meteorology) and NREL (radiation) and consist of *tab-separated* hourly data of air temperature, relative humidity, incoming shortwave radiation, pressure, precipitation and wind speed of the full year of 2010. There are also other possibilities within UMEP to acquire meteorological forcing data. The pre-processor plugin `WATCH` can be used to download the variables needed from the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014).
+
+- Open the meterological dataset (**MeteorologicalData_NYC_2010.txt**) in a text editor of your choice. As you can see it does not include all the variables shown in the table above. However, these variables are the mandatory ones that are required to run SUEWS. In order to format (and make a quality check) the data provided into UMEP standard, you will make use of the `MetPreProcessor`.
+
+- Open MetDataPreprocessor (*UMEP> Pre-Prpcessor -> Meteorological Data > MetPreprocessor*).
+- Load **MeteorologicalData_NYC_2010.txt** and make make the settings as shown below. Name your new dataset **NYC_metdata_UMEPformatted.txt**.
+
+
+.. figure:: /images/SUEWSSpatial_MetPreprocessor.png
+   :alt:  none
+   :width: 769px
+
+   The settings for formatting met data into UMEP format (click for a larger image)
+   
+- Close the Metdata preprocessor and open your newly fomatted datset in a text editor of your choice. Now you see that the forcing data is structured into the UMEP pre-defing format.
+- Close your text file and move one to the next section of this tutorial.
 
 
 Preparing input data for the SUEWS model
@@ -144,13 +290,13 @@ Preparing input data for the SUEWS model
 
 One key feature of UMEP is to facilitate the preparation of input data for the various models included. SUEWS requires a number of input information to model the urban energy balance. I plugin called *SUEWS Prepare* has been developed for this purpose. This tutorial make use of high resolution data but there are also possibilities to make use of `WUDAPT <http://www.wudapt.org/>`__ datasets in-conjuction to the *LCZ Converter* (*UMEP > Pre-Processor > Spatial data > LCZ Converter*). 
 
-- Open SUEWS Prepare (*UMEP > Pre-Processor > SUEWS prepare*)
+- Open SUEWS Prepare (*UMEP > Pre-Processor > SUEWS prepare*).
 
 .. figure:: /images/SUEWSSpatial_Prepare1.png
    :alt:  none
    :width: 1173px
 
-   The *SUEWS Prepare* plugin (click for a larger image).
+   The dialog for the SUEWS Prepare plugin (click for a larger image).
 
 Here you can see all the various settings that can be made. You will focus on the *Main Settings* tab where the mandatory settings are made. The other tabs include the settings for e.g. different land cover classes, human activities etc.
 

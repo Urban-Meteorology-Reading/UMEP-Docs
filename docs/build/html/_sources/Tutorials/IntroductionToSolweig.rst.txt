@@ -3,7 +3,7 @@
 Thermal Comfort - Introduction to SOLWEIG
 =========================================
 
-.. note:: Click `here <IntroductionToSOLWEIGNYC>` to find an adjusted tutorial for ICUC10 workshop participants.
+.. note:: Click `here <IntroductionToSOLWEIGNYC>` to find a tutorial designed for ICUC10 workshop participants.
 
 Introduction
 ------------
