@@ -328,7 +328,7 @@ First you will calculate roughness paprmeters based on the building geometry wit
 
    The settings for calculating building morphology.
 
-This operation should have produced 17 different text files; 16 (*anisotrophic*) that include morphometric parameters from each 5 degree section for each grid and one file (*isotropic*) that includes averaged values for each of the 16 grids. You can open **build_IMPGrid_isotropic.txt** and compare the different values for a park grid (3054) and an urban grid (3242). Header abbreviations is explained **here** (**LINK NOT READY**).
+This operation should have produced 17 different text files; 16 (*anisotrophic*) that include morphometric parameters from each 5 degree section for each grid and one file (*isotropic*) that includes averaged values for each of the 16 grids. You can open **build_IMPGrid_isotropic.txt** and compare the different values for a park grid (3054) and an urban grid (3242). Header abbreviations is explained `here <MorphometricCalculator(Grid)>`.
 
 Tree morphology
 ~~~~~~~~~~~~~~~
@@ -385,4 +385,15 @@ Now you are ready to organise all input data into the SUEWS input format.
 Running the SUEWS model in UMEP
 -------------------------------
 
-Here er jag...
+To examine energy fluxes for multiple grids, `SUEWSAdvanced` will be used. 
+
+- Open *UMEP > Processor > Urban Energy Balance > SUEWS/BLUEWS, Advanced*. Here you can change some of the run control settings in SUEWS. SUEWS can also be executed outside of UMEP and QGIS (see `SUEWS Manual <http://suews-docs.readthedocs.io>`__. This is recommended when modelling long time series (multiple years) of large model domains (many grid points).
+- Leave all the combobox settings at the top as default and tick in both the *Use snow module* and the *Obtain temporal resolution...* box.
+- Set the *Temporal resolution of output (minutes) to 60.
+- Locate the directory where you save your output from *SUEWSPrepare* earlier and choose an output folder of your choice.
+- Click *Run*. This computation will take a while so just have patience. 
+
+Analysing model reults
+----------------------
+
+Here I am.

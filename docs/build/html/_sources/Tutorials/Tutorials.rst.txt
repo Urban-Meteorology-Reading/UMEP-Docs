@@ -10,7 +10,7 @@ tool. The tutorials are available are found in the table below.
 
 
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 20 20 30 30
    :header-rows: 1
 
    * - Topic
@@ -26,14 +26,18 @@ tool. The tutorials are available are found in the table below.
      - `IntroductionToSuews`
      - Energy, water and radiation fluxes for one location
    * - Urban energy balance
-     - Pre-Processor and Processor (SUEWS_BLUEWS_Advanced)
+     - Pre-Processor and Processor
      - `SUEWSAdvanced`
      - Energy, water and radiation fluxes for one location
    * - Urban energy balance
      - Pre-Processor, Processor and Post-processor
      - `SUEWSSpatial`
      - Energy, water and radiation fluxes for a spatial grid
-   * - Potential solar energy production on building envelopes
+   * - Urban energy balance
+     - Pre-Processor, Processor and Post-processor
+     - `SUEWSWUDAPT`
+     - Energy, water and radiation fluxes for a spatial grid using `WUDAPT <http://www.wudapt.org/>`__ local climate zones.
+   * - Solar Energy
      - Processor and Post-Processor
      - `SEBE`
      - Amount of solar energy received on building facets
@@ -44,7 +48,7 @@ tool. The tutorials are available are found in the table below.
    * - Anthropogenic heat
      - Processor
      - `GQF`
-     - Anthropogenic heat modelling for the greater London area using GQF (uses the GreaterQF methodology)
+     - Anthropogenic heat modelling in London using GQF (uses the GreaterQF methodology)
 
    * - Anthropogenic heat
      - Processor

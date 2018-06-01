@@ -29,7 +29,7 @@ Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
       - `MetPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `LandCoverFraction(Grid)`, `MorphometricCalculator(Point)`, `MorphometricCalculator(Grid)`, `SourceArea(Point)`
 
 * Dialog box ：
-      .. figure:: /images/SuewsAdvanced.png
+      .. figure:: /images/SUEWSAdvanced_SuewsAdvanced.png
 
           The dialog for SUEWS Advanced
 
