@@ -2,7 +2,7 @@
 
 
 Introduction
----------
+------------
 
 To help users getting started with UMEP, the community is working on
 setting up tutorials and instructions for different parts of the UMEP
@@ -35,8 +35,8 @@ tool. The tutorials are available are found in the table below.
      - Energy, water and radiation fluxes for a spatial grid
    * - Urban energy balance
      - Pre-Processor, Processor and Post-processor
-     - `SUEWSWUDAPT`
-     - Energy, water and radiation fluxes for a spatial grid using `WUDAPT <http://www.wudapt.org/>`__ local climate zones.
+     - `SUEWSWUDAPT` 
+     - Making use of `WUDAPT <http://www.wudapt.org/>`__ local climate zones in `SUEWS  <http://suews-docs.readthedocs.io>`__
    * - Solar Energy
      - Processor and Post-Processor
      - `SEBE`
@@ -57,7 +57,7 @@ tool. The tutorials are available are found in the table below.
 
      
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :numbered:
    :hidden:
    :glob:
@@ -66,6 +66,7 @@ tool. The tutorials are available are found in the table below.
    IntroductionToSuews
    SuewsAdvanced
    SuewsSpatial
+   SuewsWUDAPT
    IntroductionToSolweig
    SEBE
    LQF
