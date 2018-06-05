@@ -214,36 +214,6 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Location:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>The SUEWS Simple plugin is located at</dt>
-<dd><ul class="first simple">
-<li>UMEP</li>
-</ul>
-<blockquote class="last">
-<div><ul class="simple">
-<li>Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Energy Balance</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Energy Balance (SUEWS/BLUEWS, Advanced)</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt>Related Preprocessors:</dt>
 <dd><ul class="first last simple">
 <li><a class="reference internal" href="../pre-processor/Meteorological Data MetPreprocessor.html#metpreprocessor"><span class="std std-ref">Meteorological Data: MetPreprocessor</span></a>, <a class="reference internal" href="../pre-processor/Meteorological Data Download data (WATCH).html#watch"><span class="std std-ref">Meteorological Data: Download data (WATCH)</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Urban Land Cover: Land Cover Reclassifier</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Fraction (Point).html#landcoverfraction-point"><span class="std std-ref">Urban Land Cover: Land Cover Fraction (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Fraction (Grid).html#landcoverfraction-grid"><span class="std std-ref">Urban Land Cover: Land Cover Fraction (Grid)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Grid).html#morphometriccalculator-grid"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Grid)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Source Area (Point).html#sourcearea-point"><span class="std std-ref">Urban Morphology: Source Area (Point)</span></a></li>
@@ -263,7 +233,10 @@
 <li><dl class="first docutils">
 <dt>Dialog sections:</dt>
 <dd><ul class="first last simple">
-<li>When you run the plugin, you will see the dialog shown below. To use this plugin, all input data needs to be prepared beforehand. This can be done using the various plugins in the pre-processor in UMEP. The settings available in this plugin is used for specifying the settings for a specific model run. You should consult the manual (<a class="reference external" href="http://www.urban-climate.net/umep/SUEWS">1</a>) for instructions and information on what settings to use. For extensive models run it is recommended to execute the model outside of QGIS (see manual). The interface below creates a so-called namelist (<strong>RunControl.nml</strong>) that is used be the model for general settings. After running the model, this file can be found in the suewsmodel directory in the UMEP plugin directory.</li>
+<li>When you run the plugin, you will see the dialog shown above. To use this plugin, all input data needs to be prepared beforehand. This can be done using the various plugins in the pre-processor in UMEP (see <a class="reference internal" href="../Introduction.html#toolapplications"><span class="std std-ref">Tool Applications</span></a>). The settings available in this plugin is used for specifying the settings for a specific model run. You should consult the manual (<a class="reference external" href="http://suews-docs.readthedocs.io">http://suews-docs.readthedocs.io</a>) for instructions and information on what settings to use.</li>
+<li>For extensive models run it is recommended to execute the model outside of QGIS (see manual).</li>
+<li>The interface above creates a so-called namelist (<strong>RunControl.nml</strong>) that is used be the model for general settings. After running the model, this file can be found in the suewsmodel directory in the UMEP plugin directory as well as in the input folder specified.</li>
+<li>It is always recommended to make use of a spin-up period to adjust e.g. water availbility in the model. This can be dome by e.g. start your model before (months-years) the time period of interest. one option to use a spin-up procedure using exisitng data is availabe. This requires a full year meteorological dataset. This option will run the model for one year and then run the same year using the state from the first model run.</li>
 </ul>
 </dd>
 </dl>
@@ -272,9 +245,8 @@
 <dt>References:</dt>
 <dd><ul class="first last simple">
 <li>Järvi L, Grimmond CSB &amp; Christen A (2011) The Surface Urban Energy and Water Balance Scheme (SUEWS): Evaluation in Los Angeles and Vancouver <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0022169411006937">J. Hydrol. 411, 219-237.</a></li>
-<li>Järvi L, Grimmond CSB, Taka M, Nordbo A, Setälä H &amp;Strachan IB (2014) Development of the Surface Urban Energy and Water balance Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7, 1691-1711, <a class="reference external" href="http://www.geosci-model-dev.net/7/1691/2014/">doi:10.5194/gmd-7-1691-2014</a>.                                                                                                                                                                                                                                                                        |</li>
-<li>Ward HC, L Järvi, S Onomura, F Lindberg, CSB Grimmond (2016a) <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS Manual</a>: Version 2016a</li>
-<li>Ward HC. S Kotthaus, L Järvi, CSB Grimmond (2016b) Surface Urban Energy and Water Balance Scheme (SUEWS): development and evaluation at two UK sites <a class="reference external" href=":File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf">Urban Climate (in press)</a>.</li>
+<li>Järvi L, Grimmond CSB, Taka M, Nordbo A, Setälä H &amp;Strachan IB (2014) Development of the Surface Urban Energy and Water balance Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7, 1691-1711, <a class="reference external" href="http://www.geosci-model-dev.net/7/1691/2014/">doi:10.5194/gmd-7-1691-2014</a>.</li>
+<li>Ward HC. S Kotthaus, L Järvi, CSB Grimmond (2016b) Surface Urban Energy and Water Balance Scheme (SUEWS): development and evaluation at two UK sites <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2212095516300256">link)</a>.</li>
 </ul>
 </dd>
 </dl>
