@@ -57,7 +57,7 @@ Please use the reference below when UMEP is used:
   *Lindberg F, Grimmond CSB, Gabey A, Huang B, Kent CW, Sun T, Theeuwes N, Järvi L, Ward H, Capel-
   Timms I, Chang YY, Jonsson P, Krave N, Liu D, Meyer D, Olofson F, Tan JG, Wästberg D, Xue L,
   Zhang Z (2017) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based 
-  climate services. Environmen tal Modelling and Software.99, 70-87 [doi: 10.1016/j.envsoft.2017.09.020](https://doi.org/10.1016/j.envsoft.2017.09.020) *
+  climate services. Environmen tal Modelling and Software.99, 70-87 [doi: 10.1016/j.envsoft.2017.09.020]<https://doi.org/10.1016/j.envsoft.2017.09.020> *
 
   
 The manual should be cited as:
@@ -65,7 +65,7 @@ The manual should be cited as:
 .. epigraph::
 
   *Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (2018) 
-  Urban Multi-scale Environmental Predictor (UMEP) Manual. https://umep-docs.readthedocs.io/ UMEP_Manual.
+  Urban Multi-scale Environmental Predictor (UMEP) Manual. <https://umep-docs.readthedocs.io/> UMEP_Manual.
   University of Reading UK, University of Gothenburg Sweden, SIMS China*
 
 
