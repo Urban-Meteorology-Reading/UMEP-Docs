@@ -65,7 +65,7 @@ The manual should be cited as:
 .. epigraph::
 
   *Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (2018) 
-  Urban Multi-scale Environmental Predictor (UMEP) Manual. http://urban-climate.net/umep/ UMEP_Manual.
+  Urban Multi-scale Environmental Predictor (UMEP) Manual. https://umep-docs.readthedocs.io/ UMEP_Manual.
   University of Reading UK, University of Gothenburg Sweden, SIMS China*
 
 
