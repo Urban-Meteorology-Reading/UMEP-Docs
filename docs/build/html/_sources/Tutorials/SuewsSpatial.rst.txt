@@ -19,11 +19,12 @@ require not only meteorological data but also information about the
 activities that occur in the area of interest (e.g. agriculture,
 population, road and infrastructure, and socio-economic variables).
 
+This tutorial make use of local high resolution detailed spatial data. If this kind of data is unavailable, other datasets such as local climate zones (LCZ) from the `WUDAPT <http://www.wudapt.org/>`__ database could be used. The tutorial `SUEWSWUDAPT` is available if you want to know more about using LCZz in SUEWS. However, it is strongly recommended to go through this tutorial before moving on to the WUDAPT/SUEWS tutorial.
+
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. The figure below provides an overview of
-`UMEP <index_page>`, a city based climate
-service tool (CBCST) used in this tutorial. Within UMEP there are a number 
+`UMEP <index_page>`, a city based climate service tool (CBCST) used in this tutorial. Within UMEP there are a number 
 of models which can predict and diagnose a range of meteorological processes. 
 
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
@@ -137,11 +138,11 @@ Meteorlogical forcing data
 Meteorological forcing data is one mandatory input dataset for most of the models included in UMEP. UMEP make use of a specific formatted dataset as decribed in the table below. Some of the variables are optional and if not available shuold be put to -999.
 
 .. list-table:: Variables included in UMEP meteorological input file. 
-   :widths: 4 10 25 18 43
+   :widths: 3 6 25 18 48
    :header-rows: 1
 
    * - No.
-     - Header name
+     - Header
      - Description
      - Accepted  range
      - Comments
@@ -427,6 +428,36 @@ Notice e.g. the high Q\ :sub:`F` values during winter as well as the low Q\ :sub
 
 - Close the plot and make the same kind of plot for grid 3054 which is a grid mainly within Central Park. Consider the differences between the plot generated for grid 3242. Close the plot when you are done.
 
-There is also possibilities to examine two different variables in time, either from the same grid or between two different grid points. 
+In the left panel, there is also possibilities to examine two different variables in time, either from the same grid or between two different grid points. There is also possible to examine different parameters through scatterplots.
 
-HERE I AM.
+The right panel in SUEWS Analyzer can be used to perform basic spatial analysis on your model results by producing aggragated maps etc. using different variables and time spans. Sensible heat (Q\ :sub:`H`) is a suitable variable to visualise warm areas as it is a variable the show the amount of the available energy that will be partitioned into heat.
+
+- Make the settings as shown in the figure below but change the location where you will save your data on your own system.
+
+.. figure:: /images/SUEWSSpatial_Analyzer.png
+   :alt:  none
+   :width: 1035px
+
+   The dialog for the SUEWS Analyzer tool to produce a mean Q\ :sub:`H` for each grid. Click on image for enlargement.
+
+Note that the warmest areas are located in the most dense urban environments and the coolest are found where either vegetation and/or water bodies are present. During 2010 there was a 3-day heat-wave event in the region around NYC that lasted from 5 to 8 July 2010 (Day of Year: 186-189).
+
+- Make a similar average map of Q\ :sub:`H` as above but choose only the heat wave period. Save it as a separate geoTiff.
+
+
+The influence of mitigation measures on the urban energy balance (optional)
+---------------------------------------------------------------------------
+
+There different ways of manipulating the data using UMEP as well directly changing the input data in SUEWS to examine the influence of migitagion measrues on the UEB. The most detailed way would be to directly changing the surface data by e.g. increasing the number of street trees. This can be done by e.g. using the `TreeGenerator`-plugin in UMEP. This method would require that you go through the workflow of this tutorial again before you do your new model run. Another way is to directly manipulate input data to SUEWS at grid point level. This can done by e.g. changing the land cover fractions in **SUEWS_SiteSelect.txt**, the file that includes all grid-specific information used in SUEWS.
+
+- Make a copy of your whole input folder created from SUEWSPRepare earlier and rename it to e.g. *Input_mitigation*. 
+- In that folder remove all the files beginning with *InitialConditions* **except** the one called **InitialConditionsnyc_2010.nml**.
+- Open **SUEWS_SiteSelect.txt** in Excel (or similar software).
+- Now increace the fraction of decidious trees (*Fr_DecTr*) for grid 3242 and 3243 by 0.2. As the total land cover fraction has to be 1 you also need to reduce the paved fraction (*Fr_Paved*) by the same amount.
+- Save and close. Remember to keep the format (tab-separated text).
+- Create an empty folder called *Output_mitigation*
+- Open `SuewsAdvanced` and make the same settings as before but change to inout and output folders.
+- Run the model.
+- When finished, create a similar average Q\ :sub:`H` map for the heat event and compare the two maps. You can do a difference map by using the Raster Calculator in QGIS (*Raster>Raster Calculator...*).
+
+Tutorial finished.
