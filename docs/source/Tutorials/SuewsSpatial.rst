@@ -13,7 +13,7 @@ In this tutorial you will generate input data for the
 
 Tools such as this, once appropriately assessed for an area, can be used
 for a broad range of applications. For example, for climate services
-(e.g. http://www.wmo.int/gfcs/). Running a model can allow analyses,
+(e.g. http://www.wmo.int/gfcs/ , [Baklanov et al. 2018](https://doi.org/10.1016/j.uclim.2017.05.004)). Running a model can allow analyses,
 assessments, and long-term projections and scenarios. Most applications
 require not only meteorological data but also information about the
 activities that occur in the area of interest (e.g. agriculture,
