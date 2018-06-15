@@ -34,7 +34,7 @@ of models which can predict and diagnose a range of meteorological processes.
    Overview of the climate service tool UMEP (from Lindberg et al. 2018)
    
    
-.. note:: This tutorial is currently designed to work with QGIS 2.18. It is recommended that you have a look at the tutorials :ref:`IntroductionToSuews` and :ref:`SuewsAdvanced` before you go through this tutrial. 
+.. note:: This tutorial is currently designed to work with QGIS 2.18. It is recommended that you have a look at the tutorials :ref:`IntroductionToSuews` and :ref:`SuewsAdvanced` before you go through this tutorial. 
 
 
 Objectives
