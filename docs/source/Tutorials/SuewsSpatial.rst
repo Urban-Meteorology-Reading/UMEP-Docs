@@ -135,7 +135,7 @@ As you can see the grid does not cover the whole extent of the raster grids. Thi
 Meteorological forcing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in <b>Table 4.2</b>. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty.  <b>Need to indicate which are needed</b>
+Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in **Table 4.2**. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty.  The needed data for this tutorial are discussed below.
 
 .. list-table:: Variables included in UMEP meteorological input file.
    :widths: 3 6 25 18 48
@@ -268,12 +268,12 @@ Meteorological forcing data are one mandatory input dataset for most of the mode
      -
 
 
-The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.txt**) is obtained from NOAA (meteorology) and NREL (radiation) and consist of *tab-separated* hourly data of air temperature, relative humidity, incoming shortwave radiation, pressure, precipitation and wind speed of the full year of 2010. There are also other possibilities within UMEP to acquire meteorological forcing data. The pre-processor plugin `WATCH` can be used to download the variables needed from the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014).
+The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.txt**) is from NOAA (most of the meteorological variables) and NREL (solar radiation data). It consists of *tab-separated* hourly air temperature, relative humidity, incoming shortwave radiation, pressure, precipitation and wind speed for 2010. There are other possibilities within UMEP to acquire meteorological forcing data. The pre-processor plugin `WATCH` can be used to download the variables needed from the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014).
 
-- Open the meterological dataset (**MeteorologicalData_NYC_2010.txt**) in a text editor of your choice. As you can see it does not include all the variables shown in the table above. However, these variables are the mandatory ones that are required to run SUEWS. In order to format (and make a quality check) the data provided into UMEP standard, you will make use of the `MetPreProcessor`.
+- Open the meterological dataset (**MeteorologicalData_NYC_2010.txt**) in a text editor of your choice. As you can see it does not include all the variables shown in the table **can we cross reference table**. However, these variables are the mandatory ones that are required to run SUEWS. In order to format (and make a quality check) the data provided into UMEP standard, you will use the `MetPreProcessor`.
 
 - Open MetDataPreprocessor (*UMEP> Pre-Prpcessor -> Meteorological Data > MetPreprocessor*).
-- Load **MeteorologicalData_NYC_2010.txt** and make make the settings as shown below. Name your new dataset **NYC_metdata_UMEPformatted.txt**.
+- Load **MeteorologicalData_NYC_2010.txt** and make the settings as shown below. Name your new dataset **NYC_metdata_UMEPformatted.txt**.
 
 
 .. figure:: /images/SUEWSSpatial_MetPreprocessor.png
@@ -282,14 +282,14 @@ The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.
 
    The settings for formatting met data into UMEP format (click for a larger image)
 
-- Close the Metdata preprocessor and open your newly fomatted datset in a text editor of your choice. Now you see that the forcing data is structured into the UMEP pre-defing format.
-- Close your text file and move one to the next section of this tutorial.
+- Close the Metdata preprocessor and open your newly fomatted datset in a text editor of your choice. Now you see that the forcing data is structured into the UMEP pre-defined format.
+- Close your text file and move on to the next section of this tutorial.
 
 
 Preparing input data for the SUEWS model
 ----------------------------------------
 
-One key feature of UMEP is to facilitate the preparation of input data for the various models included. SUEWS requires a number of input information to model the urban energy balance. I plugin called *SUEWS Prepare* has been developed for this purpose. This tutorial make use of high resolution data but there are also possibilities to make use of `WUDAPT <http://www.wudapt.org/>`__ datasets in-conjuction to the *LCZ Converter* (*UMEP > Pre-Processor > Spatial data > LCZ Converter*).
+A key capability of UMEP is to facilitate preparation of input data for the various models. SUEWS requires input information to model the urban energy balance. The plugin *SUEWS Prepare* is for this purpose. This tutorial makes use of high resolution data but `WUDAPT <http://www.wudapt.org/>`__ datasets in-conjuction with the *LCZ Converter* can be used (*UMEP > Pre-Processor > Spatial data > LCZ Converter*).
 
 - Open SUEWS Prepare (*UMEP > Pre-Processor > SUEWS prepare*).
 
@@ -299,7 +299,7 @@ One key feature of UMEP is to facilitate the preparation of input data for the v
 
    The dialog for the SUEWS Prepare plugin (click for a larger image).
 
-Here you can see all the various settings that can be made. You will focus on the *Main Settings* tab where the mandatory settings are made. The other tabs include the settings for e.g. different land cover classes, human activities etc.
+Here you can see the various settings that can be modified. You will focus on the *Main Settings* tab where the mandatory settings are chosen. The other tabs include the settings for e.g. different land cover classes, human activities etc.
 
 There are 10 frames included in the *Main Settings* tab where 8 need to be filled in for this tutorial:
 
@@ -312,13 +312,13 @@ There are 10 frames included in the *Main Settings* tab where 8 need to be fille
 #. **Daylight savings and UTC**
 #. **Initial conditions**
 
-The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model should be used which is a model scheme used to estimate the storage energy term (Q\ :sub:`S`). You will use another modelling scheme (*OHM*) and therefore, these two tabs could be ignored for now.
+The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model is used to estimate the storage energy term (Q\ :sub:`S`). In this tutorial we use the *OHM* modelling scheme so these two tabs can be ignored for now.
 
 - Close *SUEWS Prepare*
 
 Building morphology
 ~~~~~~~~~~~~~~~~~~~
-First you will calculate roughness paprmeters based on the building geometry within your grids.
+First you will calculate roughness parameters based on the building geometry within your grids.
 
 - Open *UMEP > Pre-Processor > Urban Morphology > Morphometric Calculator (Grid)*.
 - Use the settings as in the figure below and press *Run*.
