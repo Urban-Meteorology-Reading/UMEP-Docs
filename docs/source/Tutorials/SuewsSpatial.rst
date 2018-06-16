@@ -132,10 +132,10 @@ Furthermore, a polygon grid (500 m times 500 m) for defining the study area and 
 
 As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time so that this tutorial will not extent for too long. One grid cell will take approximately 20 seconds to model using SUEWS using meteorological forcing data for a full year.
 
-Meteorlogical forcing data
+Meteorological forcing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Meteorological forcing data is one mandatory input dataset for most of the models included in UMEP. UMEP make use of a specific formatted dataset as decribed in the table below. Some of the variables are optional and if not available shuold be put to -999.
+Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in Table  *4.2. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty
 
 .. list-table:: Variables included in UMEP meteorological input file.
    :widths: 3 6 25 18 48
