@@ -130,12 +130,12 @@ Furthermore, a polygon grid (500 m x 500 m) to define the study area and individ
 - In the *Style* tab in layer *Properties*, choose a *No Brush* fill style to be able to see the spatial data within each grid.
 - Also, add the label IDs for the grid to the map canvas in *Properties > Labels* to make it easier to identify the different grid squares later on in this tutorial.
 
-As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time so that this tutorial will not extent for too long. One grid cell will take approximately 20 seconds to model using SUEWS using meteorological forcing data for a full year.
+As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time during the tutorial. One grid cell takes ~20 s to model with SUEWS with meteorological forcing data for a full year.
 
 Meteorological forcing data
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in **Table 4.2**. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty.  The needed data for this tutorial are discussed below.
+Meteorological forcing data are mandatory for most of the models within UMEP. The UMEP specific format is given in **Table 4.2**. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty.  The needed data for this tutorial are discussed below.
 
 .. list-table:: Variables included in UMEP meteorological input file.
    :widths: 3 6 25 18 48
