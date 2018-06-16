@@ -135,7 +135,7 @@ As you can see the grid does not cover the whole extent of the raster grids. Thi
 Meteorological forcing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in Table  *4.2. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty
+Meteorological forcing data are one mandatory input dataset for most of the models included in UMEP. The specific format is given in <b>Table 4.2</b>. Some of the variables are optional and if not available or needed should be set to -999. The columns can not be empty.  <b>Need to indicate which are needed</b>
 
 .. list-table:: Variables included in UMEP meteorological input file.
    :widths: 3 6 25 18 48
