@@ -19,11 +19,11 @@ require not only meteorological data but also information about the
 activities that occur in the area of interest (e.g. agriculture,
 population, road and infrastructure, and socio-economic variables).
 
-This tutorial make use of local high resolution detailed spatial data. If this kind of data is unavailable, other datasets such as local climate zones (LCZ) from the `WUDAPT <http://www.wudapt.org/>`__ database could be used. The tutorial `SUEWSWUDAPT` is available if you want to know more about using LCZz in SUEWS. However, it is strongly recommended to go through this tutorial before moving on to the WUDAPT/SUEWS tutorial.
+This tutorial makes use of local high resolution detailed spatial data. If this kind of data are unavailable, other datasets such as local climate zones (LCZ) from the `WUDAPT <http://www.wudapt.org/>`__ database could be used. The tutorial `SUEWSWUDAPT` is available if you want to know more about using LCZs in SUEWS. However, it is strongly recommended to go through this tutorial before moving on to the WUDAPT/SUEWS tutorial.
 
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
-within the model is appropriate. The figure below provides an overview of
+within the model is appropriate. The figure **cross reference below** provides an overview of
 `UMEP <index_page>`, a city based climate service tool (CBCST) used in this tutorial. Within UMEP there are a number
 of models which can predict and diagnose a range of meteorological processes.
 
@@ -66,9 +66,9 @@ there may be instability. Please report any issues or suggestions to our
 Loading and analyzing the spatial data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All geodata used in this tutorial originates from open datasets available from various sources, foremost from the City of New York. Information about the data is found in the table below.
+All the geodata used in this tutorial are from open access sources, primarily from the New York City. Information about the data are found in the table below.
 
-.. note:: You can download the all the data from `here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/blob/master/other%20files/SUEWSSpatial_Tutorialdata.zip>`__. Unzip and place in a folder where you have read and write access to.
+.. note:: You can download the all the data from `here <https://github.com/Urban-Meteorology-Reading/Urban-Meteorology-Reading.github.io/blob/master/other%20files/SUEWSSpatial_Tutorialdata.zip>`__. Unzip and place in a folder that you have read and write access to.
 
 .. list-table:: Spatial data used for this tuorial
    :widths: 10 10 40 40
@@ -105,9 +105,9 @@ All geodata used in this tutorial originates from open datasets available from v
 
 - Start by loading all the raster datasets into an empty QGIS project.
 
-The order in the *Layers Panel* decides what layer that will be visible. Here you can also choose not to show a layer in the tick box. You can adjust layers according to your likeing by right-click on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (meter) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview between all 3D objects (buildings and trees).
+The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (metre) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees).
 
-- Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 30. Choose also a nice color scheme of your liking.
+- Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 30. Choose a colour scheme of your liking.
 - Go to *Transparency* and  add and additional no data value of 0. Click ok.
 - Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas.
 
@@ -122,9 +122,9 @@ The land cover grid comes with a specific QGIS style file.
 - Right-click on the land cover layer (**landcover_2010_nyc**) and choose *Properties*. Down to the left you see a *Style*-button. Choose *Load Style* and open **landcoverstyle.qml** and click OK.
 - Make only your land cover class layer visible to examine the spatial variability of the different land cover classes.
 
-The land cover grid has allready been classified into the seven different classes used in most UMEP applications (see table 1). If you have a land cover dataset that is not UMEP formatted you can make use of the *Land Cover Reclassifier* found at *UMEP > Pre-processor > Urban Land Cover > Land Cover Reclassifier* in the menubar to reclassify your data.
+The land cover grid has allready been classified into the seven different classes used in most UMEP applications (see table **cross**). If you have a land cover dataset that is not UMEP formatted you can use the *Land Cover Reclassifier* found at *UMEP > Pre-processor > Urban Land Cover > Land Cover Reclassifier* in the menubar to reclassify your data.
 
-Furthermore, a polygon grid (500 m times 500 m) for defining the study area and individual grids are included (Grid_500m.shp). Such grid can be produced directly in QGIS (e.g. *Vector > Research Tools > Vector Grid*) or an external grid can also be used.
+Furthermore, a polygon grid (500 m x 500 m) to define the study area and individual grids is included (Grid_500m.shp). Such a grid can be produced directly in QGIS (e.g. *Vector > Research Tools > Vector Grid*) or an external grid can be used.
 
 - Load the vector layer **Grid_500m.shp** into your QGIS project.
 - In the *Style* tab in layer *Properties*, choose a *No Brush* fill style to be able to see the spatial data within each grid.
