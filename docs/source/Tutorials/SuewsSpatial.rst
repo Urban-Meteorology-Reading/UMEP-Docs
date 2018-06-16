@@ -6,10 +6,10 @@ Urban Energy Balance - SUEWS Spatial
 Introduction
 ------------
 
-In this tutorial you will generate input data for the 
-`SUEWS <http://suews-docs.readthedocs.io>`__ model and simulate spatial 
-(and temporal) variations of energy exchanges within a small area on Manhattan 
-(New York City) with regards to a heat wave event. 
+In this tutorial you will generate input data for the
+`SUEWS <http://suews-docs.readthedocs.io>`__ model and simulate spatial
+(and temporal) variations of energy exchanges within a small area on Manhattan
+(New York City) with regards to a heat wave event.
 
 Tools such as this, once appropriately assessed for an area, can be used
 for a broad range of applications. For example, for climate services
@@ -24,17 +24,17 @@ This tutorial make use of local high resolution detailed spatial data. If this k
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. The figure below provides an overview of
-`UMEP <index_page>`, a city based climate service tool (CBCST) used in this tutorial. Within UMEP there are a number 
-of models which can predict and diagnose a range of meteorological processes. 
+`UMEP <index_page>`, a city based climate service tool (CBCST) used in this tutorial. Within UMEP there are a number
+of models which can predict and diagnose a range of meteorological processes.
 
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
    :alt:  none
-   :width: 378px
+   :width: 80%
 
    Overview of the climate service tool UMEP (from Lindberg et al. 2018)
-   
-   
-.. note:: This tutorial is currently designed to work with QGIS 2.18. It is recommended that you have a look at the tutorials :ref:`IntroductionToSuews` and :ref:`SuewsAdvanced` before you go through this tutorial. 
+
+
+.. note:: This tutorial is currently designed to work with QGIS 2.18. It is recommended that you have a look at the tutorials :ref:`IntroductionToSuews` and :ref:`SuewsAdvanced` before you go through this tutorial.
 
 
 Objectives
@@ -83,7 +83,7 @@ All geodata used in this tutorial originates from open datasets available from v
      - A raster grid including both buildings and ground given in meter above sea level.
    * - Digital elevation model (DEM)
      - 2013
-     - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://data.cityofnewyork.us>`__	
+     - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://data.cityofnewyork.us>`__
      - A raster grid including only ground heights given in meter above sea level.
    * - Digital canopy model (CDSM)
      - 2013 (August)
@@ -92,7 +92,7 @@ All geodata used in this tutorial originates from open datasets available from v
    * - Land cover (UMEP formatted)
      - 2010
      - New York City Landcover 2010 (3ft version). University of Vermont Spatial Analysis Laboratory and New York City Urban Field Station. `link <https://opendata.cityofnewyork.us/>`__
-     - A raster grid including: 1. Paved surfaces, 2. Building surfaces, 3. Evergreen trees and shrubs, 4. Deciduous trees and shrubs, 5. Grass surfaces, 6. Bare soil, 7. Open water			
+     - A raster grid including: 1. Paved surfaces, 2. Building surfaces, 3. Evergreen trees and shrubs, 4. Deciduous trees and shrubs, 5. Grass surfaces, 6. Bare soil, 7. Open water
    * - Population density (residential)
      - 2010
      - 2010 NYC Population by Census Tracts, Department of City Planning (DCP). `link <https://data.cityofnewyork.us>`__)
@@ -100,20 +100,20 @@ All geodata used in this tutorial originates from open datasets available from v
    * - Land use
      - 2018
      - NYC Department of City Planning, Technical Review Division. `link <https://zola.planning.nyc.gov>`__
-     - Used to redistribute population during daytime (see text). Converted from vector to raster	 			
-	
-	
-- Start by loading all the raster datasets into an empty QGIS project. 
+     - Used to redistribute population during daytime (see text). Converted from vector to raster
+
+
+- Start by loading all the raster datasets into an empty QGIS project.
 
 The order in the *Layers Panel* decides what layer that will be visible. Here you can also choose not to show a layer in the tick box. You can adjust layers according to your likeing by right-click on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (meter) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview between all 3D objects (buildings and trees).
 
 - Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 30. Choose also a nice color scheme of your liking.
 - Go to *Transparency* and  add and additional no data value of 0. Click ok.
-- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas. 
+- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas.
 
 .. figure:: /images/SUEWSSpatial_dataview.png
    :alt:  none
-   :width: 1073px
+   :width: 80%
 
    DSM and CDSM visible at the same time (click for larger image)
 
@@ -128,7 +128,7 @@ Furthermore, a polygon grid (500 m times 500 m) for defining the study area and 
 
 - Load the vector layer **Grid_500m.shp** into your QGIS project.
 - In the *Style* tab in layer *Properties*, choose a *No Brush* fill style to be able to see the spatial data within each grid.
-- Also, add the label IDs for the grid to the map canvas in *Properties > Labels* to make it easier to identify the different grid squares later on in this tutorial. 
+- Also, add the label IDs for the grid to the map canvas in *Properties > Labels* to make it easier to identify the different grid squares later on in this tutorial.
 
 As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time so that this tutorial will not extent for too long. One grid cell will take approximately 20 seconds to model using SUEWS using meteorological forcing data for a full year.
 
@@ -137,7 +137,7 @@ Meteorlogical forcing data
 
 Meteorological forcing data is one mandatory input dataset for most of the models included in UMEP. UMEP make use of a specific formatted dataset as decribed in the table below. Some of the variables are optional and if not available shuold be put to -999.
 
-.. list-table:: Variables included in UMEP meteorological input file. 
+.. list-table:: Variables included in UMEP meteorological input file.
    :widths: 3 6 25 18 48
    :header-rows: 1
 
@@ -278,10 +278,10 @@ The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.
 
 .. figure:: /images/SUEWSSpatial_MetPreprocessor.png
    :alt:  none
-   :width: 769px
+   :width: 80%
 
    The settings for formatting met data into UMEP format (click for a larger image)
-   
+
 - Close the Metdata preprocessor and open your newly fomatted datset in a text editor of your choice. Now you see that the forcing data is structured into the UMEP pre-defing format.
 - Close your text file and move one to the next section of this tutorial.
 
@@ -289,13 +289,13 @@ The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.
 Preparing input data for the SUEWS model
 ----------------------------------------
 
-One key feature of UMEP is to facilitate the preparation of input data for the various models included. SUEWS requires a number of input information to model the urban energy balance. I plugin called *SUEWS Prepare* has been developed for this purpose. This tutorial make use of high resolution data but there are also possibilities to make use of `WUDAPT <http://www.wudapt.org/>`__ datasets in-conjuction to the *LCZ Converter* (*UMEP > Pre-Processor > Spatial data > LCZ Converter*). 
+One key feature of UMEP is to facilitate the preparation of input data for the various models included. SUEWS requires a number of input information to model the urban energy balance. I plugin called *SUEWS Prepare* has been developed for this purpose. This tutorial make use of high resolution data but there are also possibilities to make use of `WUDAPT <http://www.wudapt.org/>`__ datasets in-conjuction to the *LCZ Converter* (*UMEP > Pre-Processor > Spatial data > LCZ Converter*).
 
 - Open SUEWS Prepare (*UMEP > Pre-Processor > SUEWS prepare*).
 
 .. figure:: /images/SUEWSSpatial_Prepare1.png
    :alt:  none
-   :width: 1173px
+   :width: 80%
 
    The dialog for the SUEWS Prepare plugin (click for a larger image).
 
@@ -307,7 +307,7 @@ There are 10 frames included in the *Main Settings* tab where 8 need to be fille
 #. **Building morphology**
 #. **Tree morphology**
 #. **Land cover fractions**
-#. **Meteorological data** 
+#. **Meteorological data**
 #. **Population density**
 #. **Daylight savings and UTC**
 #. **Initial conditions**
@@ -326,6 +326,8 @@ First you will calculate roughness paprmeters based on the building geometry wit
 
 .. figure:: /images/SUEWSSpatial_IMCGBuilding.png
    :alt:  none
+   :width: 80%
+
 
    The settings for calculating building morphology.
 
@@ -341,6 +343,7 @@ Now you will calculate roughness paprmeters based on the vegetation (trees and b
 
 .. figure:: /images/SUEWSSpatial_IMCGVeg.png
    :alt:  none
+   :width: 80%
 
    The settings for calculating vegetation morphology.
 
@@ -354,6 +357,7 @@ Moving on to land cover fraction calculations for each grid.
 
 .. figure:: /images/SUEWSSpatial_LCF.png
    :alt:  none
+   :width: 80%
 
    The settings for calculating land cover fractions
 
@@ -387,7 +391,7 @@ Now you are ready to organise all input data into the SUEWS input format.
 Running the SUEWS model in UMEP
 -------------------------------
 
-To perform modelling energy fluxes for multiple grids, `SUEWSAdvanced` can be used. 
+To perform modelling energy fluxes for multiple grids, `SUEWSAdvanced` can be used.
 
 - Open *UMEP > Processor > Urban Energy Balance > SUEWS/BLUEWS, Advanced*. Here you can change some of the run control settings in SUEWS. SUEWS can also be executed outside of UMEP and QGIS (see `SUEWS Manual <http://suews-docs.readthedocs.io>`__. This is recommended when modelling long time series (multiple years) of large model domains (many grid points).
 - Change the OHM option to [1]. This allows the anthropogenic energy to be partitioned also into the storage energy term.
@@ -395,7 +399,7 @@ To perform modelling energy fluxes for multiple grids, `SUEWSAdvanced` can be us
 - Set the *Temporal resolution of output (minutes) to 60.
 - Locate the directory where you save your output from *SUEWSPrepare* earlier and choose an output folder of your choice.
 - Also, Tick in the box *Apply spin-up using...*. This will force the model to run twice using the conditions from the first run as initial conditions for the second run.
-- Click *Run*. This computation will take a while so just have patience. 
+- Click *Run*. This computation will take a while so just have patience.
 
 Analysing model reults
 ----------------------
@@ -406,24 +410,24 @@ UMEP also comes with a tool to make basic analysis of any modelling performed wi
 
 .. figure:: /images/SUEWSAnalyzer.png
    :alt:  none
-   :width: 1035px
+   :width: 80%
 
    The dialog for the SUEWS Analyzer tool.
 
-To access the output data from the a model run, the **RunControl.nml** file for that particular run must be located. If your run has been made through UMEP, this file can be found in your output folder. Otherwise, this file can be located in the same folder from where the model was executed. 
+To access the output data from the a model run, the **RunControl.nml** file for that particular run must be located. If your run has been made through UMEP, this file can be found in your output folder. Otherwise, this file can be located in the same folder from where the model was executed.
 
 - In the top panel of *SUEWS Analyzer*, load the **RunControl.nml** located in the output folder.
 
-You will start by plotting basic data for grid 3242 which is one of the most dense urban area in the World. 
+You will start by plotting basic data for grid 3242 which is one of the most dense urban area in the World.
 
 - In the left panel, choose grid *3242* and year *2010*. Tick in *plot basic data* and click *Plot*. This will display some of the most essential variables such as radiation balance and budget etc. You can use the tools such as the zoom to examine a shorter time period more in detail.
 
 .. figure:: /images/SUEWSSpatial_basicplot_grid3242.png
    :alt:  none
-   :width: 1510px
+   :width: 80%
 
    Basic plot for grid 3242. Click on image for enlargement.
-   
+
 Notice e.g. the high Q\ :sub:`F` values during winter as well as the low Q\ :sub:`E` values throughout the year.
 
 - Close the plot and make the same kind of plot for grid 3054 which is a grid mainly within Central Park. Consider the differences between the plot generated for grid 3242. Close the plot when you are done.
@@ -436,7 +440,7 @@ The right panel in SUEWS Analyzer can be used to perform basic spatial analysis 
 
 .. figure:: /images/SUEWSSpatial_Analyzer.png
    :alt:  none
-   :width: 1035px
+   :width: 80%
 
    The dialog for the SUEWS Analyzer tool to produce a mean Q\ :sub:`H` for each grid. Click on image for enlargement.
 
@@ -450,7 +454,7 @@ The influence of mitigation measures on the urban energy balance (optional)
 
 There different ways of manipulating the data using UMEP as well directly changing the input data in SUEWS to examine the influence of migitagion measrues on the UEB. The most detailed way would be to directly changing the surface data by e.g. increasing the number of street trees. This can be done by e.g. using the `TreeGenerator`-plugin in UMEP. This method would require that you go through the workflow of this tutorial again before you do your new model run. Another way is to directly manipulate input data to SUEWS at grid point level. This can done by e.g. changing the land cover fractions in **SUEWS_SiteSelect.txt**, the file that includes all grid-specific information used in SUEWS.
 
-- Make a copy of your whole input folder created from SUEWSPRepare earlier and rename it to e.g. *Input_mitigation*. 
+- Make a copy of your whole input folder created from SUEWSPRepare earlier and rename it to e.g. *Input_mitigation*.
 - In that folder remove all the files beginning with *InitialConditions* **except** the one called **InitialConditionsnyc_2010.nml**.
 - Open **SUEWS_SiteSelect.txt** in Excel (or similar software).
 - Now increace the fraction of decidious trees (*Fr_DecTr*) for grid 3242 and 3243 by 0.2. As the total land cover fraction has to be 1 you also need to reduce the paved fraction (*Fr_Paved*) by the same amount.

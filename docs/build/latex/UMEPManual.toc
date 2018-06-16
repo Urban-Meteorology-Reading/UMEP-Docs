@@ -1,0 +1,319 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}UMEP: How to Cite}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Plugin Architecture}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Pre-Processor}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Processor}{5}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Post-Processor}{5}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Tool Applications}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Evaluation and application studies}{6}{subsection.1.3.1}
+\contentsline {chapter}{\numberline {2}Getting Started}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Installation}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Recommended Installation Steps of QGIS on Windows}{9}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Download and installation of the UMEP-plugin from within QGIS}{9}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Adding missing Python libraries and other OSGeo functionalities}{10}{section.2.2}
+\contentsline {chapter}{\numberline {3}Pre-Processor}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Meteorological Data: Download data (WATCH)}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Meteorological Data: MetPreprocessor}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}SUEWS Prepare}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Spatial Data: DSM Generator}{28}{section.3.4}
+\contentsline {section}{\numberline {3.5}Spatial Data: LCZ Converter}{30}{section.3.5}
+\contentsline {section}{\numberline {3.6}Spatial Data: Spatial Data Downloader}{35}{section.3.6}
+\contentsline {section}{\numberline {3.7}Spatial Data: Tree Generator}{36}{section.3.7}
+\contentsline {section}{\numberline {3.8}Urban Geometry: Sky View Factor Calculator}{39}{section.3.8}
+\contentsline {section}{\numberline {3.9}Urban Geometry: Wall Height and Aspect}{41}{section.3.9}
+\contentsline {section}{\numberline {3.10}Urban Land Cover: Land Cover Fraction (Grid)}{43}{section.3.10}
+\contentsline {section}{\numberline {3.11}Urban Land Cover: Land Cover Fraction (Point)}{46}{section.3.11}
+\contentsline {section}{\numberline {3.12}Urban Land Cover: Land Cover Reclassifier}{48}{section.3.12}
+\contentsline {section}{\numberline {3.13}Urban Morphology: Morphometric Calculator (Grid)}{49}{section.3.13}
+\contentsline {section}{\numberline {3.14}Urban Morphology: Morphometric Calculator (Point)}{54}{section.3.14}
+\contentsline {section}{\numberline {3.15}Urban Morphology: Source Area (Point)}{57}{section.3.15}
+\contentsline {chapter}{\numberline {4}Processor}{65}{chapter.4}
+\contentsline {section}{\numberline {4.1}Outdoor Thermal Comfort: ExtremeFinder}{65}{section.4.1}
+\contentsline {section}{\numberline {4.2}Outdoor Thermal Comfort: SOLWEIG}{67}{section.4.2}
+\contentsline {section}{\numberline {4.3}Solar Radiation: Daily Shadow Pattern}{73}{section.4.3}
+\contentsline {section}{\numberline {4.4}Solar Radiation: Solar Energy on Building Envelopes (SEBE)}{76}{section.4.4}
+\contentsline {section}{\numberline {4.5}Urban Energy Balance: GQ$_{\text {F}}$}{80}{section.4.5}
+\contentsline {section}{\numberline {4.6}Urban Energy Balance: LQ$_{\text {F}}$}{82}{section.4.6}
+\contentsline {section}{\numberline {4.7}Urban Energy Balance: Urban Energy Balance (SUEWS, simple)}{83}{section.4.7}
+\contentsline {section}{\numberline {4.8}Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)}{86}{section.4.8}
+\contentsline {chapter}{\numberline {5}Post-Processor}{89}{chapter.5}
+\contentsline {section}{\numberline {5.1}Benchmark System}{89}{section.5.1}
+\contentsline {section}{\numberline {5.2}Outdoor Thermal Comfort: SOLWEIG Analyzer}{91}{section.5.2}
+\contentsline {section}{\numberline {5.3}Solar Radiation: SEBE (Visualisation)}{92}{section.5.3}
+\contentsline {section}{\numberline {5.4}Urban Energy Balance: SUEWS Analyser}{93}{section.5.4}
+\contentsline {chapter}{\numberline {6}People Involved \& Acknowledgements}{97}{chapter.6}
+\contentsline {chapter}{\numberline {7}How to Contribute}{99}{chapter.7}
+\contentsline {section}{\numberline {7.1}Reporting a Bug}{99}{section.7.1}
+\contentsline {chapter}{\numberline {8}DevelopmentGuidelines}{101}{chapter.8}
+\contentsline {section}{\numberline {8.1}Contributing with python code to the UMEP plugin in QGIS}{101}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}SUEWS wrapper}{102}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}f2py}{102}{subsection.8.1.2}
+\contentsline {subsubsection}{Setting up Windows machine for running f2py}{102}{subsubsection*.3}
+\contentsline {subsubsection}{System Setup}{102}{subsubsection*.4}
+\contentsline {subsubsection}{Making Fortran-Python Interface \IeC {\textquoteleft }dll\IeC {\textquoteright } (.pyd file) with F2PY}{103}{subsubsection*.5}
+\contentsline {subsubsection}{Distributing f2py Modules for Windows}{104}{subsubsection*.6}
+\contentsline {subsubsection}{Importing and using in Python}{104}{subsubsection*.7}
+\contentsline {subsection}{\numberline {8.1.3}Upcoming Developments}{105}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Benchmarking system}{105}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Coding Guidelines}{105}{subsection.8.1.5}
+\contentsline {subsubsection}{SUEWS}{105}{subsubsection*.8}
+\contentsline {subsection}{\numberline {8.1.6}How to setup your development environment on Windows}{106}{subsection.8.1.6}
+\contentsline {subsubsection}{gfortran with NetBeans}{106}{subsubsection*.9}
+\contentsline {subsubsection}{Python and PyCharm (Not so good alternative)}{106}{subsubsection*.10}
+\contentsline {subsubsection}{Python and PyCharm (good alternative)}{107}{subsubsection*.11}
+\contentsline {subsubsection}{How to make standalone application using py2exe (this is not used, see below)}{107}{subsubsection*.12}
+\contentsline {subsubsection}{How to make standalone application using Pyinstaller (use this)}{108}{subsubsection*.13}
+\contentsline {subsection}{\numberline {8.1.7}SUEWS Prepare Developer}{108}{subsection.8.1.7}
+\contentsline {subsubsection}{SUEWS\_SiteSelect.xlsx}{109}{subsubsection*.14}
+\contentsline {subsubsection}{Adding to the plugin}{114}{subsubsection*.15}
+\contentsline {chapter}{\numberline {9}Known Issues}{117}{chapter.9}
+\contentsline {chapter}{\numberline {10}FAQ (Frequently Asked Questions)}{119}{chapter.10}
+\contentsline {chapter}{\numberline {11}Abbreviations}{121}{chapter.11}
+\contentsline {chapter}{\numberline {12}Introduction}{123}{chapter.12}
+\contentsline {section}{\numberline {12.1}Footprint modelling}{123}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Introduction}{123}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Initial Practical steps}{124}{subsection.12.1.2}
+\contentsline {subsubsection}{Data for Tutorial}{124}{subsubsection*.16}
+\contentsline {subsubsection}{Prior to Starting}{124}{subsubsection*.17}
+\contentsline {subsection}{\numberline {12.1.3}Source Area Modelling}{124}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.4}Iterative process}{128}{subsection.12.1.4}
+\contentsline {subsubsection}{Roughness parameters}{128}{subsubsection*.18}
+\contentsline {subsection}{\numberline {12.1.5}References}{130}{subsection.12.1.5}
+\contentsline {subsubsection}{Contributors to the material covered}{130}{subsubsection*.19}
+\contentsline {section}{\numberline {12.2}Urban Energy Balance - SUEWS Introduction}{131}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Introduction}{131}{subsection.12.2.1}
+\contentsline {subsection}{\numberline {12.2.2}SUEWS Simple Objectives}{132}{subsection.12.2.2}
+\contentsline {subsubsection}{Steps}{132}{subsubsection*.20}
+\contentsline {subsection}{\numberline {12.2.3}Initial Steps}{132}{subsection.12.2.3}
+\contentsline {subsection}{\numberline {12.2.4}SUEWS Model Inputs}{132}{subsection.12.2.4}
+\contentsline {subsection}{\numberline {12.2.5}How to Run SuewsSimple from the UMEP-plugin}{133}{subsection.12.2.5}
+\contentsline {subsection}{\numberline {12.2.6}Model results}{134}{subsection.12.2.6}
+\contentsline {subsection}{\numberline {12.2.7}Saving a Figure}{134}{subsection.12.2.7}
+\contentsline {subsection}{\numberline {12.2.8}Output data Files}{134}{subsection.12.2.8}
+\contentsline {subsection}{\numberline {12.2.9}Sensitivity to land surface fractions}{134}{subsection.12.2.9}
+\contentsline {subsection}{\numberline {12.2.10}References}{139}{subsection.12.2.10}
+\contentsline {subsection}{\numberline {12.2.11}Definitions and Notation}{140}{subsection.12.2.11}
+\contentsline {subsection}{\numberline {12.2.12}Further explanation}{140}{subsection.12.2.12}
+\contentsline {subsubsection}{Morphometric Methods to determine Roughness parameters:}{140}{subsubsection*.21}
+\contentsline {subsubsection}{Source Area Model}{140}{subsubsection*.22}
+\contentsline {section}{\numberline {12.3}Urban Energy Balance - SUEWS Advanved}{140}{section.12.3}
+\contentsline {subsection}{\numberline {12.3.1}Introduction}{140}{subsection.12.3.1}
+\contentsline {subsubsection}{Objectives}{140}{subsubsection*.23}
+\contentsline {subsubsection}{Overview of steps}{141}{subsubsection*.24}
+\contentsline {subsection}{\numberline {12.3.2}How to Run from the UMEP-plugin}{141}{subsection.12.3.2}
+\contentsline {subsubsection}{Sensitivity Test}{141}{subsubsection*.25}
+\contentsline {subsection}{\numberline {12.3.3}Generating data from the geodatasets}{143}{subsection.12.3.3}
+\contentsline {subsection}{\numberline {12.3.4}References}{146}{subsection.12.3.4}
+\contentsline {subsection}{\numberline {12.3.5}Definitions and Notation}{148}{subsection.12.3.5}
+\contentsline {subsection}{\numberline {12.3.6}Further explanation}{148}{subsection.12.3.6}
+\contentsline {subsubsection}{Morphometric Methods to determine Roughness parameters:}{148}{subsubsection*.26}
+\contentsline {subsubsection}{Source Area Model}{148}{subsubsection*.27}
+\contentsline {section}{\numberline {12.4}Urban Energy Balance - SUEWS Spatial}{148}{section.12.4}
+\contentsline {subsection}{\numberline {12.4.1}Introduction}{148}{subsection.12.4.1}
+\contentsline {subsection}{\numberline {12.4.2}Objectives}{149}{subsection.12.4.2}
+\contentsline {subsubsection}{Steps to be preformed}{149}{subsubsection*.28}
+\contentsline {subsection}{\numberline {12.4.3}Initial Steps}{150}{subsection.12.4.3}
+\contentsline {subsubsection}{Loading and analyzing the spatial data}{150}{subsubsection*.29}
+\contentsline {subsubsection}{Meteorlogical forcing data}{152}{subsubsection*.30}
+\contentsline {subsection}{\numberline {12.4.4}Preparing input data for the SUEWS model}{154}{subsection.12.4.4}
+\contentsline {subsubsection}{Building morphology}{155}{subsubsection*.31}
+\contentsline {subsubsection}{Tree morphology}{156}{subsubsection*.32}
+\contentsline {subsubsection}{Land cover fractions}{156}{subsubsection*.33}
+\contentsline {subsubsection}{Population density}{157}{subsubsection*.34}
+\contentsline {subsubsection}{SUEWS Prepare}{157}{subsubsection*.35}
+\contentsline {subsection}{\numberline {12.4.5}Running the SUEWS model in UMEP}{159}{subsection.12.4.5}
+\contentsline {subsection}{\numberline {12.4.6}Analysing model reults}{159}{subsection.12.4.6}
+\contentsline {subsection}{\numberline {12.4.7}The influence of mitigation measures on the urban energy balance (optional)}{161}{subsection.12.4.7}
+\contentsline {section}{\numberline {12.5}Urban Energy Balance - SUEWS and WUDAPT}{162}{section.12.5}
+\contentsline {subsection}{\numberline {12.5.1}Introduction}{162}{subsection.12.5.1}
+\contentsline {subsection}{\numberline {12.5.2}Objectives}{162}{subsection.12.5.2}
+\contentsline {subsubsection}{Steps to be preformed}{162}{subsubsection*.36}
+\contentsline {subsection}{\numberline {12.5.3}Initial Steps}{162}{subsection.12.5.3}
+\contentsline {subsubsection}{Loading and analyzing the spatial data}{163}{subsubsection*.37}
+\contentsline {subsection}{\numberline {12.5.4}Preparing input data for the SUEWS model}{163}{subsection.12.5.4}
+\contentsline {subsubsection}{Population density}{165}{subsubsection*.38}
+\contentsline {subsection}{\numberline {12.5.5}Running the SUEWS model in UMEP}{165}{subsection.12.5.5}
+\contentsline {subsection}{\numberline {12.5.6}Analysing model reults}{165}{subsection.12.5.6}
+\contentsline {section}{\numberline {12.6}Thermal Comfort - Introduction to SOLWEIG}{165}{section.12.6}
+\contentsline {subsection}{\numberline {12.6.1}Introduction}{166}{subsection.12.6.1}
+\contentsline {subsection}{\numberline {12.6.2}Objectives}{166}{subsection.12.6.2}
+\contentsline {subsubsection}{Steps}{166}{subsubsection*.39}
+\contentsline {subsection}{\numberline {12.6.3}Initial Practical steps}{167}{subsection.12.6.3}
+\contentsline {subsubsection}{Data for this exercise}{167}{subsubsection*.40}
+\contentsline {subsection}{\numberline {12.6.4}SOLWEIG Model Inputs}{167}{subsection.12.6.4}
+\contentsline {subsection}{\numberline {12.6.5}How to Run SOLWEIG from the UMEP-plugin}{169}{subsection.12.6.5}
+\contentsline {subsection}{\numberline {12.6.6}Using meteorolgical data and POIs}{169}{subsection.12.6.6}
+\contentsline {subsection}{\numberline {12.6.7}Examine your output with SOLWEIG Analyzer}{173}{subsection.12.6.7}
+\contentsline {subsection}{\numberline {12.6.8}Climate sensitive planning}{176}{subsection.12.6.8}
+\contentsline {subsubsection}{The Tree Generator}{176}{subsubsection*.41}
+\contentsline {section}{\numberline {12.7}Solar Energy - Introduction to SEBE}{179}{section.12.7}
+\contentsline {subsection}{\numberline {12.7.1}Introduction}{179}{subsection.12.7.1}
+\contentsline {subsection}{\numberline {12.7.2}Initial Practical steps}{179}{subsection.12.7.2}
+\contentsline {subsubsection}{Data for Tutorial}{179}{subsubsection*.42}
+\contentsline {subsection}{\numberline {12.7.3}Steps}{180}{subsection.12.7.3}
+\contentsline {subsection}{\numberline {12.7.4}Preparing data for SEBE}{182}{subsection.12.7.4}
+\contentsline {subsection}{\numberline {12.7.5}Running the model}{183}{subsection.12.7.5}
+\contentsline {subsection}{\numberline {12.7.6}Irradiance on building envelopes (alternatively see the tips below \textendash {} currrently better)}{183}{subsection.12.7.6}
+\contentsline {subsection}{\numberline {12.7.7}Solar Energy Potential}{185}{subsection.12.7.7}
+\contentsline {subsubsection}{Irradiance map with values less than 900 kWh filtered out}{186}{subsubsection*.43}
+\contentsline {subsection}{\numberline {12.7.8}Covent Garden data set}{186}{subsection.12.7.8}
+\contentsline {subsection}{\numberline {12.7.9}Questions for you to explore with UMEP:SEBE}{188}{subsection.12.7.9}
+\contentsline {subsection}{\numberline {12.7.10}References}{188}{subsection.12.7.10}
+\contentsline {subsection}{\numberline {12.7.11}Tips}{188}{subsection.12.7.11}
+\contentsline {section}{\numberline {12.8}Anthropogenic heat - LQF}{189}{section.12.8}
+\contentsline {subsection}{\numberline {12.8.1}Initial Practical steps}{190}{subsection.12.8.1}
+\contentsline {subsubsection}{Data for this exercise}{190}{subsubsection*.44}
+\contentsline {subsection}{\numberline {12.8.2}LQF Tutorial 1: Simple QF modelling}{190}{subsection.12.8.2}
+\contentsline {subsubsection}{Preparing data}{190}{subsubsection*.45}
+\contentsline {paragraph}{Manage input data files}{190}{paragraph*.46}
+\contentsline {paragraph}{Gather information about output areas shapefile}{190}{paragraph*.47}
+\contentsline {subparagraph}{Verify the population attribute name}{191}{subparagraph*.48}
+\contentsline {subsubsection}{Set up the DataSources.nml file}{191}{subsubsection*.49}
+\contentsline {paragraph}{Add shapefile information}{191}{paragraph*.50}
+\contentsline {paragraph}{Add the LQF database and mean daily temperature files}{191}{paragraph*.51}
+\contentsline {subsubsection}{Run LQF}{192}{subsubsection*.52}
+\contentsline {paragraph}{Choose configuration files and output folder}{192}{paragraph*.53}
+\contentsline {paragraph}{Run the model for 1 week}{192}{paragraph*.54}
+\contentsline {subsubsection}{Visualise results}{194}{subsubsection*.55}
+\contentsline {paragraph}{Create a map of total QF at noon}{194}{paragraph*.56}
+\contentsline {paragraph}{Plot a time series of QF in the centre of the city}{195}{paragraph*.57}
+\contentsline {paragraph}{Recycling of input data}{195}{paragraph*.58}
+\contentsline {subsection}{\numberline {12.8.3}Tutorials II: Refining LQF results}{197}{subsection.12.8.3}
+\contentsline {subsubsection}{Tutorial 2a: Custom diurnal profiles}{197}{subsubsection*.59}
+\contentsline {subsubsection}{Tutorial 2b: Updating national parameters in the LQF database}{199}{subsubsection*.60}
+\contentsline {subsubsection}{Tutorial 2c: Custom temperature response function}{200}{subsubsection*.61}
+\contentsline {section}{\numberline {12.9}Anthropogenic heat - GQF}{200}{section.12.9}
+\contentsline {subsection}{\numberline {12.9.1}Initial Practical steps}{200}{subsection.12.9.1}
+\contentsline {subsubsection}{Data for this exercise}{201}{subsubsection*.62}
+\contentsline {subsection}{\numberline {12.9.2}GQF Tutorial 1: Comprehensive QF modelling for Greater London}{202}{subsection.12.9.2}
+\contentsline {subsubsection}{Preparing data}{202}{subsubsection*.63}
+\contentsline {paragraph}{Manage input data files}{202}{paragraph*.64}
+\contentsline {paragraph}{Gather information about shapefile inputs}{202}{paragraph*.65}
+\contentsline {subsubsection}{Set up the DataSources.nml file}{203}{subsubsection*.66}
+\contentsline {paragraph}{Add shapefile information}{203}{paragraph*.67}
+\contentsline {paragraph}{Add temporal data files}{204}{paragraph*.68}
+\contentsline {subparagraph}{Day-to-day energy demand changes}{204}{subparagraph*.69}
+\contentsline {subparagraph}{Metabolism file}{204}{subparagraph*.70}
+\contentsline {subparagraph}{Building diurnal profiles}{205}{subparagraph*.71}
+\contentsline {paragraph}{Add information about transport}{205}{paragraph*.72}
+\contentsline {subparagraph}{Shapefile}{205}{subparagraph*.73}
+\contentsline {subparagraph}{Vehicle fuel efficiency data}{207}{subparagraph*.74}
+\contentsline {subparagraph}{Diurnal profiles by vehicle type}{207}{subparagraph*.75}
+\contentsline {subsubsection}{Run GQF}{207}{subsubsection*.76}
+\contentsline {paragraph}{Choose configuration files and output folder}{207}{paragraph*.77}
+\contentsline {paragraph}{Run the model for 1 week}{209}{paragraph*.78}
+\contentsline {subsubsection}{Visualise results}{209}{subsubsection*.79}
+\contentsline {paragraph}{Create emissions maps at noon}{209}{paragraph*.80}
+\contentsline {paragraph}{Plot a time series of QF in the centre of the city}{209}{paragraph*.81}
+\contentsline {subsection}{\numberline {12.9.3}Tutorials 2: Refining GQF results}{211}{subsection.12.9.3}
+\contentsline {subsubsection}{Tutorial 2a: Add a public holiday}{213}{subsubsection*.82}
+\contentsline {subsubsection}{Tutorial 2b: Remove the sensible heat component}{213}{subsubsection*.83}
+\contentsline {chapter}{\numberline {13}Other Manuals}{217}{chapter.13}
+\contentsline {section}{\numberline {13.1}GQF Manual}{217}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Overview}{217}{subsection.13.1.1}
+\contentsline {subsubsection}{Workflow to model Q$_{\text {F}}$}{217}{subsubsection*.84}
+\contentsline {subsection}{\numberline {13.1.2}Main user interface}{218}{subsection.13.1.2}
+\contentsline {subsection}{\numberline {13.1.3}Model outputs}{220}{subsection.13.1.3}
+\contentsline {subsection}{\numberline {13.1.4}Synthesised shapefiles}{220}{subsection.13.1.4}
+\contentsline {subsection}{\numberline {13.1.5}Logs}{220}{subsection.13.1.5}
+\contentsline {subsection}{\numberline {13.1.6}Configuration files}{220}{subsection.13.1.6}
+\contentsline {subsection}{\numberline {13.1.7}Input data}{221}{subsection.13.1.7}
+\contentsline {subsubsection}{Spatial data}{221}{subsubsection*.85}
+\contentsline {paragraph}{Population data}{221}{paragraph*.86}
+\contentsline {paragraph}{Energy consumption data}{221}{paragraph*.87}
+\contentsline {paragraph}{Transportation data}{222}{paragraph*.88}
+\contentsline {paragraph}{Time indexing of spatial data}{223}{paragraph*.89}
+\contentsline {subsubsection}{Temporal files required by GQF}{224}{subsubsection*.90}
+\contentsline {paragraph}{Details of temporal files}{224}{paragraph*.91}
+\contentsline {subparagraph}{Traffic flow profiles}{225}{subparagraph*.92}
+\contentsline {subparagraph}{Building energy profiles}{232}{subparagraph*.93}
+\contentsline {subparagraph}{Seasonal variations}{232}{subparagraph*.94}
+\contentsline {subparagraph}{Diurnal variations}{232}{subparagraph*.95}
+\contentsline {subparagraph}{Metabolic activity}{233}{subparagraph*.96}
+\contentsline {paragraph}{Recycling of temporal data}{235}{paragraph*.97}
+\contentsline {subsubsection}{Fuel consumption file}{235}{subsubsection*.98}
+\contentsline {subsubsection}{Further spatial disaggregation}{236}{subsubsection*.99}
+\contentsline {subsection}{\numberline {13.1.8}Configuration data}{237}{subsection.13.1.8}
+\contentsline {subsubsection}{Parameters file}{237}{subsubsection*.100}
+\contentsline {paragraph}{Example parameters file}{239}{paragraph*.102}
+\contentsline {subsubsection}{Data sources file}{240}{subsubsection*.103}
+\contentsline {paragraph}{Output areas}{240}{paragraph*.104}
+\contentsline {paragraph}{Spatial data: Population and energy use shapefiles}{241}{paragraph*.105}
+\contentsline {paragraph}{Specifying multiple shapefiles per section}{241}{paragraph*.106}
+\contentsline {subparagraph}{Temporal data: Metabolism, energy use and transportation temporal profiles}{242}{subparagraph*.107}
+\contentsline {paragraph}{Using multiple temporal profile files}{243}{paragraph*.108}
+\contentsline {paragraph}{Transport data}{243}{paragraph*.109}
+\contentsline {subparagraph}{Transport parameters}{244}{subparagraph*.110}
+\contentsline {paragraph}{Example data sources files}{245}{paragraph*.111}
+\contentsline {section}{\numberline {13.2}LQF Manual}{247}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Overview}{247}{subsection.13.2.1}
+\contentsline {subsubsection}{Workflow to model Q$_{\text {F}}$}{248}{subsubsection*.112}
+\contentsline {subsection}{\numberline {13.2.2}Main user interface}{248}{subsection.13.2.2}
+\contentsline {subsection}{\numberline {13.2.3}Model outputs}{251}{subsection.13.2.3}
+\contentsline {subsection}{\numberline {13.2.4}Synthesised shapefiles}{251}{subsection.13.2.4}
+\contentsline {subsection}{\numberline {13.2.5}Logs}{251}{subsection.13.2.5}
+\contentsline {subsection}{\numberline {13.2.6}Configuration files}{252}{subsection.13.2.6}
+\contentsline {subsection}{\numberline {13.2.7}Input data}{252}{subsection.13.2.7}
+\contentsline {subsubsection}{Spatial information}{252}{subsubsection*.113}
+\contentsline {paragraph}{Wide-area data}{252}{paragraph*.114}
+\contentsline {paragraph}{Time indexing of wide-area data}{253}{paragraph*.115}
+\contentsline {paragraph}{Local data}{253}{paragraph*.116}
+\contentsline {subsubsection}{Temporal information}{254}{subsubsection*.117}
+\contentsline {paragraph}{Information needed by LQF}{254}{paragraph*.118}
+\contentsline {paragraph}{Details of temporal input files}{254}{paragraph*.119}
+\contentsline {subparagraph}{Daily temperature}{254}{subparagraph*.120}
+\contentsline {subparagraph}{Diurnal variations}{255}{subparagraph*.121}
+\contentsline {subparagraph}{Metabolic activity}{256}{subparagraph*.122}
+\contentsline {paragraph}{Recycling of temporal data}{256}{paragraph*.123}
+\contentsline {subsubsection}{Further spatial disaggregation}{257}{subsubsection*.124}
+\contentsline {subsubsection}{Temperature response functions}{258}{subsubsection*.125}
+\contentsline {paragraph}{Built-in response}{258}{paragraph*.126}
+\contentsline {paragraph}{User-defined response}{258}{paragraph*.127}
+\contentsline {subsection}{\numberline {13.2.8}Configuration data}{259}{subsection.13.2.8}
+\contentsline {subsubsection}{Parameters file}{259}{subsubsection*.128}
+\contentsline {paragraph}{Example parameters file (without user-defined temperature response)}{261}{paragraph*.129}
+\contentsline {paragraph}{User-defined temperature response section}{261}{paragraph*.130}
+\contentsline {subsubsection}{Data sources file}{261}{subsubsection*.131}
+\contentsline {paragraph}{Output areas}{262}{paragraph*.132}
+\contentsline {paragraph}{International database}{262}{paragraph*.133}
+\contentsline {paragraph}{Residential population shapefile}{262}{paragraph*.134}
+\contentsline {paragraph}{Temporal data: Metabolism, energy use and transportation temporal profiles}{262}{paragraph*.135}
+\contentsline {subparagraph}{Air temperature (required)}{263}{subparagraph*.136}
+\contentsline {subparagraph}{Energy consumption and traffic flow profiles (optional)}{263}{subparagraph*.137}
+\contentsline {subparagraph}{Using multiple temporal profile files}{263}{subparagraph*.138}
+\contentsline {paragraph}{Example data sources file}{263}{paragraph*.139}
+\contentsline {subsection}{\numberline {13.2.9}Troubleshooting}{264}{subsection.13.2.9}
+\contentsline {subsubsection}{Known issues}{264}{subsubsection*.140}
+\contentsline {paragraph}{Time zone problem}{264}{paragraph*.141}
+\contentsline {paragraph}{QGIS crashes and quits}{264}{paragraph*.142}
+\contentsline {subsection}{\numberline {13.2.10}Appendix A: Converting a population raster to a vector shapefile using QGIS}{264}{subsection.13.2.10}
+\contentsline {subsection}{\numberline {13.2.11}Appendix B: Gathering information about shapefiles for QF modelling}{267}{subsection.13.2.11}
+\contentsline {subsubsection}{Finding the shapefile EPSG code}{267}{subsubsection*.143}
+\contentsline {subsubsection}{Finding the unique feature identifier}{267}{subsubsection*.144}
+\contentsline {section}{\numberline {13.3}SOLWEIG Manual}{267}{section.13.3}
+\contentsline {subsection}{\numberline {13.3.1}Introduction}{270}{subsection.13.3.1}
+\contentsline {subsubsection}{Suggested reading}{270}{subsubsection*.145}
+\contentsline {subsubsection}{Install the model}{271}{subsubsection*.146}
+\contentsline {subsection}{\numberline {13.3.2}Input data}{271}{subsection.13.3.2}
+\contentsline {subsubsection}{Surface models}{271}{subsubsection*.147}
+\contentsline {paragraph}{Ground and building DSM}{271}{paragraph*.148}
+\contentsline {paragraph}{Vegetation DSMs}{271}{paragraph*.149}
+\contentsline {paragraph}{Digital elevation model}{273}{paragraph*.150}
+\contentsline {paragraph}{Ground cover grid}{273}{paragraph*.151}
+\contentsline {subsubsection}{Meteorological data}{273}{subsubsection*.152}
+\contentsline {subsubsection}{Environmental parameters}{273}{subsubsection*.153}
+\contentsline {subsubsection}{Human exposure parameters}{274}{subsubsection*.154}
+\contentsline {subsubsection}{Optional settings}{274}{subsubsection*.155}
+\contentsline {subsection}{\numberline {13.3.3}Output data}{274}{subsection.13.3.3}
+\contentsline {subsubsection}{Surface grids}{274}{subsubsection*.156}
+\contentsline {subsubsection}{POI.txt}{274}{subsubsection*.157}
+\contentsline {subsection}{\numberline {13.3.4}How to run the model}{275}{subsection.13.3.4}
+\contentsline {subsubsection}{Run the model for example data}{275}{subsubsection*.158}
+\contentsline {subsection}{\numberline {13.3.5}Tips and Tricks}{276}{subsection.13.3.5}
+\contentsline {subsection}{\numberline {13.3.6}Acknowledgements}{277}{subsection.13.3.6}
+\contentsline {subsection}{\numberline {13.3.7}Abbreviations}{277}{subsection.13.3.7}
+\contentsline {subsection}{\numberline {13.3.8}Development}{277}{subsection.13.3.8}
+\contentsline {subsection}{\numberline {13.3.9}Version History}{278}{subsection.13.3.9}
+\contentsline {subsection}{\numberline {13.3.10}References}{278}{subsection.13.3.10}
+\contentsline {section}{\numberline {13.4}SUEWS Manual}{278}{section.13.4}
