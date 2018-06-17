@@ -26,7 +26,7 @@ Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. Figure :ref:'re_F1' provides an overview of
 `UMEP <index_page>`, a city based climate service tool (CBCST) used in this tutorial. Within UMEP there are a number
 of models which can predict and diagnose a range of meteorological processes.
-.._ref_F1:
+.. _ref_F1:
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
    :alt:  none
    :width: 80%
