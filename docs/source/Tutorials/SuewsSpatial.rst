@@ -313,7 +313,7 @@ There are 10 frames included in the *Main Settings* tab where 8 need to be fille
 #. **Daylight savings and UTC**
 #. **Initial conditions**
 
-The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model is used to estimate the storage energy term (Q\ :sub:`S`). In this tutorial we use the *OHM* modelling scheme so these two tabs can be ignored for now.
+The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model is used to estimate the storage energy term (\delta Q\ :sub:`S`). In this tutorial we use the *OHM* modelling scheme so these two tabs can be ignored for now.
 
 - Close *SUEWS Prepare*
 
@@ -332,15 +332,15 @@ First you will calculate roughness parameters based on the building geometry wit
 
    The settings for calculating building morphology.
 
-This operation should have produced 17 different text files; 16 (*anisotrophic*) that include morphometric parameters from each 5 degree section for each grid and one file (*isotropic*) that includes averaged values for each of the 16 grids. You can open **build_IMPGrid_isotropic.txt** and compare the different values for a park grid (3054) and an urban grid (3242). Header abbreviations is explained `here <MorphometricCalculator(Grid)>`.
+This operation should have produced 17 different text files; 16 (*anisotrophic*) that include morphometric parameters from each 5 degree section for each grid and one file (*isotropic*) that includes averaged values for each of the 16 grids. You can open **build_IMPGrid_isotropic.txt** and compare the different values for a park grid (3054) and an urban grid (3242). Header abbreviations are explained `here <MorphometricCalculator(Grid)>`.
 
 Tree morphology
 ~~~~~~~~~~~~~~~
-Now you will calculate roughness paprmeters based on the vegetation (trees and bushes) within your grids. As you noticed there is only one surface data for vegetation present (**CDSM_nyc**) and if you examine your land cover grid (**landcover_2010_nyc**) you can see that there is only one class of high vegetation (*Deciduous trees*) present with our model domain. Therefore, you will not separate between evergreen and deciduous vegetation in this tutorial. As shown in table 1, the tree surface model represents height above ground.
+Now you will calculate roughness parameters based on the vegetation (trees and bushes) within your grids. As you noticed there is only one surface dataset for vegetation present (**CDSM_nyc**) and if you examine your land cover grid (**landcover_2010_nyc**) you can see that there is only one class of high vegetation (*Deciduous trees*) present with our model domain. Therefore, you will not separate between evergreen and deciduous vegetation in this tutorial. As shown in **table 1- to fix**, the tree surface model represents height above ground.
 
 - Again, Open *UMEP > Pre-Processor > Urban Morphology > Morphometric Calculator (Grid)*.
 - Use the settings as in the figure below and press *Run*.
-- When calculation ids done, close the plugin.
+- When calculation is done, close the plugin.
 
 .. figure:: /images/SUEWSSpatial_IMCGVeg.png
    :alt:  none
@@ -354,7 +354,7 @@ Moving on to land cover fraction calculations for each grid.
 
 - Open *UMEP > Pre-Processor > Urban Land Cover > Land Cover Fraction (Grid)*.
 - Use the settings as in the figure below and press *Run*.
-- When calculation ids done, close the plugin.
+- When calculation is done, close the plugin.
 
 .. figure:: /images/SUEWSSpatial_LCF.png
    :alt:  none
@@ -364,25 +364,25 @@ Moving on to land cover fraction calculations for each grid.
 
 Population density
 ~~~~~~~~~~~~~~~~~~
-Population density will be used to estimate the anthropogenic heat release (Q\ :sub:`F`) in SUEWS. There is a possibility to make use of both night-time and daytime population densities to make the model more dynamic. You have two different raster grids for night-time (**pop_nighttime_perha**) and daytime (**pop_daytime_perha**), respectively. This time you will make use of a built-in function to QGIS to accuire the population density for each grid.
+Population density will be used to estimate the anthropogenic heat release (Q\ :sub:`F`) in SUEWS. There is a possibility to make use of both night-time and daytime population densities to make the model more dynamic. You have two different raster grids for night-time (**pop_nighttime_perha**) and daytime (**pop_daytime_perha**), respectively. This time you will make use of QGIS built-in function to to acquire the population density for each grid.
 
-- Go to *Plugins > Manage and Install Plugins* and make sure that the *Zonal statistics plugin* is ticked in. This is a build-in plugin which comes with the QGIS installation.
+- Go to *Plugins > Manage and Install Plugins* and make sure that the *Zonal statistics plugin* is ticked. This is a build-in plugin which comes with the QGIS installation.
 - Close the *Plugin maanager* and open *Raster > Zonal Statistics > Zonal Statistics*.
-- Choose your **pop_daytime_perha** layer as *Raster layer** and your **Grid_500m** and polygon layer. Use a *Output column prefix* of **PPday** and chose only to calculate *Mean*. Click OK.
+- Choose your **pop_daytime_perha** layer as **Raster layer** and your **Grid_500m** and polygon layer. Use a *Output column prefix* of **PPday** and chose only to calculate *Mean*. Click OK.
 - Run the tool again but this time use the night-time dataset.
 
 SUEWS Prepare
 ~~~~~~~~~~~~~
-Now you are ready to organise all input data into the SUEWS input format.
+Now you are ready to organise all the input data into the SUEWS input format.
 
 - Open *SUEWS Prepare*
-- In the *Polygon grid* frams, choose your polygon grid (**Grid_500m**) and choose **id** as your *ID field*
+- In the *Polygon grid* frame, choose your polygon grid (**Grid_500m**) and choose **id** as your *ID field*
 - In the *Building morphology* frame, fetch the file called **build_IMPGrid_isotropic.txt**.
 - In the *Land cover fractions* frame, fetch the file called **lc_LCFG_isotropic.txt**.
 - In the *Tree morphology* frame, fetch the file called **veg_IMPGrid_isotropic.txt**.
 - In the *Meteorological data* frame, fetch your UMEP formatted met forcing data text file.
 - In the *Population density* frame, choose the appropriate attributes created in the previous section for daytime and night-time population density.
-- In the *Daylight savings and UTC* frame, leave start and end of the daylight saving as they are and choose *-5*.
+- In the *Daylight savings and UTC* frame, leave start and end of the daylight saving as they are **???** and choose *-5* (i.e. the time zone).
 - In the *Initial conditions* frame, choose **Winter (0%)** in the *Leaf Cycle*, 100% *Soil moisture state* and **nyc** as a *File code**.
 - In the *Anthropogenic* tab, change the code to 771.
 - Choose an empty directory as your *Output folder* in the main tab.
