@@ -313,7 +313,7 @@ There are 10 frames included in the *Main Settings* tab where 8 need to be fille
 #. **Daylight savings and UTC**
 #. **Initial conditions**
 
-The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model is used to estimate the storage energy term (\delta Q\ :sub:`S`). In this tutorial we use the *OHM* modelling scheme so these two tabs can be ignored for now.
+The two optional frames (*Land use fractions* and *Wall area*) should be used if the ESTM model is used to estimate the storage energy term ( :greek: DELTA :sub:`S`). In this tutorial we use the *OHM* modelling scheme so these two tabs can be ignored for now.
 
 - Close *SUEWS Prepare*
 
@@ -383,8 +383,8 @@ Now you are ready to organise all the input data into the SUEWS input format.
 - In the *Meteorological data* frame, fetch your UMEP formatted met forcing data text file.
 - In the *Population density* frame, choose the appropriate attributes created in the previous section for daytime and night-time population density.
 - In the *Daylight savings and UTC* frame, leave start and end of the daylight saving as they are **???** and choose *-5* (i.e. the time zone).
-- In the *Initial conditions* frame, choose **Winter (0%)** in the *Leaf Cycle*, 100% *Soil moisture state* and **nyc** as a *File code**.
-- In the *Anthropogenic* tab, change the code to 771.
+- In the *Initial conditions* frame, choose **Winter (0%)** in the *Leaf Cycle*, 100% *Soil moisture state* and **nyc** as a *File code*.
+- In the *Anthropogenic* tab, change the code to 771 **link to explanation/why**.
 - Choose an empty directory as your *Output folder* in the main tab.
 - Press *Generate*
 - When processing is finished, close *SUEWS Prepare*.
@@ -396,16 +396,16 @@ To perform modelling energy fluxes for multiple grids, `SUEWSAdvanced` can be us
 
 - Open *UMEP > Processor > Urban Energy Balance > SUEWS/BLUEWS, Advanced*. Here you can change some of the run control settings in SUEWS. SUEWS can also be executed outside of UMEP and QGIS (see `SUEWS Manual <http://suews-docs.readthedocs.io>`__. This is recommended when modelling long time series (multiple years) of large model domains (many grid points).
 - Change the OHM option to [1]. This allows the anthropogenic energy to be partitioned also into the storage energy term.
-- Leave the rest of the combobox settings at the top as default and tick in both the *Use snow module* and the *Obtain temporal resolution...* box.
+- Leave the rest of the combobox settings at the top as default and tick both the *Use snow module* and the *Obtain temporal resolution...* box.
 - Set the *Temporal resolution of output (minutes) to 60.
-- Locate the directory where you save your output from *SUEWSPrepare* earlier and choose an output folder of your choice.
-- Also, Tick in the box *Apply spin-up using...*. This will force the model to run twice using the conditions from the first run as initial conditions for the second run.
-- Click *Run*. This computation will take a while so just have patience.
+- Locate the directory where you saved your output from *SUEWSPrepare* earlier and choose an output folder of your choice.
+- Also, Tick the box *Apply spin-up using...*. This will force the model to run twice using the conditions from the first run as initial conditions for the second run.
+- Click *Run*. This computation will take a while so be patient.
 
 Analysing model reults
 ----------------------
 
-UMEP also comes with a tool to make basic analysis of any modelling performed with the SUEWS model. The `SUEWSAnalyser` tool is availble from the post-processing section in UMEP.
+UMEP has a tool for basic analysis of any modelling performed with the SUEWS model. The `SUEWSAnalyser` tool is available from the post-processing section in UMEP.
 
 - Open *UMEP > Post-Processor > Urban Energy Balance > SUEWS Analyzer*. There are two main sections in this tool. The *Plot data*-section can be used to make temporal analysis as well as making simple comparisins between two grids or variables. This *Spatial data*-section can be used to make aggregated maps of the output variables from the SUEWS model. This requires that you have loaded the same polygon grid into your QGIS project that was used when you prepared the input data for SUEWS using *SUEWS Prepare* earlier in this tutorial.
 
@@ -421,7 +421,7 @@ To access the output data from the a model run, the **RunControl.nml** file for 
 
 You will start by plotting basic data for grid 3242 which is one of the most dense urban area in the World.
 
-- In the left panel, choose grid *3242* and year *2010*. Tick in *plot basic data* and click *Plot*. This will display some of the most essential variables such as radiation balance and budget etc. You can use the tools such as the zoom to examine a shorter time period more in detail.
+- In the left panel, choose grid *3242* and year *2010*. Tick *plot basic data* and click *Plot*. This will display some of the most essential variables such as radiation balance and budget etc. You can use the tools such as the zoom to examine a shorter time period more in detail.
 
 .. figure:: /images/SUEWSSpatial_basicplot_grid3242.png
    :alt:  none
