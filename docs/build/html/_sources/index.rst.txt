@@ -66,12 +66,26 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
 .. toctree::
    :caption: UMEP Tutorials
    :maxdepth: 2
+   :numbered:
    :hidden:
 
    Tutorials/Tutorials
+   Tutorials/Footprint
+   Tutorials/IntroductionToSuews
+   Tutorials/SuewsAdvanced
+   Tutorials/SuewsSpatial
+   Tutorials/SuewsWUDAPT
+   Tutorials/IntroductionToSolweig
+   Tutorials/SEBE
+   Tutorials/LQF
+   Tutorials/GQF
 
 .. toctree::
    :caption: Other Manuals
    :hidden:
+   :numbered:
 
-   OtherManuals/OtherManuals
+   OtherManuals/SUEWS
+   OtherManuals/SOLWEIG
+   OtherManuals/LQF_Manual
+   OtherManuals/GQF_Manual
