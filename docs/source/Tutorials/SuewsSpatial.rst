@@ -106,9 +106,9 @@ All the geodata used in this tutorial are from open access sources, primarily fr
 
 - Start by loading all the raster datasets into an empty QGIS project.
 
-The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (metre) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees).
+The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (metre) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees). QGIS default styling for a raster is using the 98 percentile of the values. Therefore, not all the range of the data is shown in the layer window to the left.  
 
-- Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 30. Choose a colour scheme of your liking.
+- Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 35. Choose a colour scheme of your liking.
 - Go to *Transparency* and  add and additional no data value of 0. Click ok.
 - Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas.
 
