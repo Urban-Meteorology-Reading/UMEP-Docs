@@ -30,7 +30,7 @@ of models which can predict and diagnose a range of meteorological processes.
 .. _ref_F1:
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
    :alt:  none
-   :width: %
+   :width: 80%
 
    Overview of the climate service tool UMEP (from Lindberg et al. 2018)
 
@@ -81,7 +81,7 @@ All the geodata used in this tutorial are from open access sources, primarily fr
    * - Digital surface model (DSM)
      - 2013 (Lidar), 2016 (building polygons)
      - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar and NYC Open Data Portal. `link <https://data.cityofnewyork.us>`__
-     - A `raster <Abbreviations>` grid including both buildings and ground given in meter above sea level.
+     - A raster grid including both buildings and ground given in meter above sea level.
    * - Digital elevation model (DEM)
      - 2013
      - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://data.cityofnewyork.us>`__
@@ -106,7 +106,7 @@ All the geodata used in this tutorial are from open access sources, primarily fr
 
 - Start by loading all the raster datasets into an empty QGIS project.
 
-The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (meter) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees). QGIS default styling for a raster is using the 98 percentile of the values. Therefore, not all the range of the data is shown in the layer window to the left.  
+The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (metre) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees). QGIS default styling for a raster is using the 98 percentile of the values. Therefore, not all the range of the data is shown in the layer window to the left.
 
 - Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 35. Choose a colour scheme of your liking.
 - Go to *Transparency* and  add and additional no data value of 0. Click ok.
@@ -114,16 +114,16 @@ The order in the *Layers Panel* determines what layer is visible. You can choose
 
 .. figure:: /images/SUEWSSpatial_dataview.png
    :alt:  none
-   :width: 100%
+   :width: 80%
 
    DSM and CDSM visible at the same time (click for larger image)
 
 The land cover grid comes with a specific QGIS style file.
 
 - Right-click on the land cover layer (**landcover_2010_nyc**) and choose *Properties*. Down to the left you see a *Style*-button. Choose *Load Style* and open **landcoverstyle.qml** and click OK.
-- Make sure only your land cover class layer is visible to examine the spatial variability of the different land cover classes.
+- Make only your land cover class layer visible to examine the spatial variability of the different land cover classes.
 
-The land cover grid has already been classified into the seven different classes used in most UMEP applications (see table **cross**). If you have a land cover dataset that is not UMEP formatted you can use the *Land Cover Reclassifier* found at *UMEP > Pre-processor > Urban Land Cover > Land Cover Reclassifier* in the menubar to reclassify your data.
+The land cover grid has allready been classified into the seven different classes used in most UMEP applications (see table **cross**). If you have a land cover dataset that is not UMEP formatted you can use the *Land Cover Reclassifier* found at *UMEP > Pre-processor > Urban Land Cover > Land Cover Reclassifier* in the menubar to reclassify your data.
 
 Furthermore, a polygon grid (500 m x 500 m) to define the study area and individual grids is included (Grid_500m.shp). Such a grid can be produced directly in QGIS (e.g. *Vector > Research Tools > Vector Grid*) or an external grid can be used.
 
@@ -131,7 +131,7 @@ Furthermore, a polygon grid (500 m x 500 m) to define the study area and individ
 - In the *Style* tab in layer *Properties*, choose a *No Brush* fill style to be able to see the spatial data within each grid.
 - Also, add the label IDs for the grid to the map canvas in *Properties > Labels* to make it easier to identify the different grid squares later on in this tutorial.
 
-As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time during the tutorial. One grid cell takes ~20 seconds to model with SUEWS with meteorological forcing data for a full year.
+As you can see the grid does not cover the whole extent of the raster grids. This is to reduce computation time during the tutorial. One grid cell takes ~20 s to model with SUEWS with meteorological forcing data for a full year.
 
 Meteorological forcing data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -327,7 +327,7 @@ First you will calculate roughness parameters based on the building geometry wit
 
 .. figure:: /images/SUEWSSpatial_IMCGBuilding.png
    :alt:  none
-   :width: 100%
+   :width: 80%
 
 
    The settings for calculating building morphology.
@@ -364,7 +364,7 @@ Moving on to land cover fraction calculations for each grid.
 
 Population density
 ~~~~~~~~~~~~~~~~~~
-Population density will be used to estimate the anthropogenic heat release (Q\ :sub:`F`) in SUEWS. There is a possibility to use both night-time and daytime population densities to make the model more dynamic. You have two different raster grids for night-time (**pop_nighttime_perha**) and daytime (**pop_daytime_perha**), respectively. This time you will make use of QGIS built-in function to to acquire the population density for each grid.
+Population density will be used to estimate the anthropogenic heat release (Q\ :sub:`F`) in SUEWS. There is a possibility to make use of both night-time and daytime population densities to make the model more dynamic. You have two different raster grids for night-time (**pop_nighttime_perha**) and daytime (**pop_daytime_perha**), respectively. This time you will make use of QGIS built-in function to to acquire the population density for each grid.
 
 - Go to *Plugins > Manage and Install Plugins* and make sure that the *Zonal statistics plugin* is ticked. This is a build-in plugin which comes with the QGIS installation.
 - Close the *Plugin maanager* and open *Raster > Zonal Statistics > Zonal Statistics*.
@@ -397,7 +397,7 @@ To perform modelling energy fluxes for multiple grids, `SUEWSAdvanced` can be us
 - Open *UMEP > Processor > Urban Energy Balance > SUEWS/BLUEWS, Advanced*. Here you can change some of the run control settings in SUEWS. SUEWS can also be executed outside of UMEP and QGIS (see `SUEWS Manual <http://suews-docs.readthedocs.io>`__. This is recommended when modelling long time series (multiple years) of large model domains (many grid points).
 - Change the OHM option to [1]. This allows the anthropogenic energy to be partitioned also into the storage energy term.
 - Leave the rest of the combobox settings at the top as default and tick both the *Use snow module* and the *Obtain temporal resolution...* box.
-- Set the *Temporal resolution of output (minutes) to 60.
+- Set the *Temporal resolution of output (minutes) to 60.*
 - Locate the directory where you saved your output from *SUEWSPrepare* earlier and choose an output folder of your choice.
 - Also, Tick the box *Apply spin-up using...*. This will force the model to run twice using the conditions from the first run as initial conditions for the second run.
 - Click *Run*. This computation will take a while so be patient.

@@ -56,7 +56,7 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
    pre-processor/Pre-Processor
    processor/Processor
    post_processor/Post-Processor
-   tutorials/docs/source/Tutorials/index
+   tutorial/docs/source/index
    OtherManuals/OtherManuals
    People_Involved_&_Acknowledgements
    How_to_Contribute
@@ -64,14 +64,3 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
    Known_Issues
    FAQ
    Abbreviations
-
-
-.. toctree::
-   :caption: Other Manuals
-   :hidden:
-   :numbered:
-
-   OtherManuals/SUEWS
-   OtherManuals/SOLWEIG
-   OtherManuals/LQF_Manual
-   OtherManuals/GQF_Manual
