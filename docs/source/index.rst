@@ -56,6 +56,8 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
    pre-processor/Pre-Processor
    processor/Processor
    post_processor/Post-Processor
+   tutorials/docs/source/Tutorials/index
+   OtherManuals/OtherManuals
    People_Involved_&_Acknowledgements
    How_to_Contribute
    DevelopmentGuidelines
@@ -63,22 +65,6 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
    FAQ
    Abbreviations
 
-.. toctree::
-   :caption: UMEP Tutorials
-   :maxdepth: 2
-   :numbered:
-   :hidden:
-
-   Tutorials/Tutorials
-   Tutorials/Footprint
-   Tutorials/IntroductionToSuews
-   Tutorials/SuewsAdvanced
-   Tutorials/SuewsSpatial
-   Tutorials/SuewsWUDAPT
-   Tutorials/IntroductionToSolweig
-   Tutorials/SEBE
-   Tutorials/LQF
-   Tutorials/GQF
 
 .. toctree::
    :caption: Other Manuals
