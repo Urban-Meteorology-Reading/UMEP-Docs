@@ -29,7 +29,7 @@ range of scales and sources are accessed through
 desktop geographic information systems
 (`GIS <Abbreviations>`) application –
 that provides data viewing, editing, and analysis capabilities.
-
+ 
 --------------
 
 **To downloading instructions and initial settings:**  :ref:`Getting_Started`
