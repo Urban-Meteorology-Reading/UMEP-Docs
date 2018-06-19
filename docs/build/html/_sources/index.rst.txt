@@ -56,11 +56,11 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
    pre-processor/Pre-Processor
    processor/Processor
    post_processor/Post-Processor
-   tutorial/docs/source/index
-   OtherManuals/OtherManuals
    People_Involved_&_Acknowledgements
    How_to_Contribute
    DevelopmentGuidelines
    Known_Issues
    FAQ
    Abbreviations
+   tutorial/docs/source/index
+   OtherManuals/OtherManuals
