@@ -25,7 +25,7 @@ Meteorological Data: MetPreprocessor
 
 * **Dialog sections**
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 0
 
    * - top left

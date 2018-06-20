@@ -264,7 +264,8 @@ modelling procedure in UMEP and what tools that are connected to each
 other.
 
 .. figure:: /images/SUEWSworkflow.png
-   :alt:   Workflow and geodata used for analysing urban energy balance using the SUEWS model. Bold outlined boxes are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
+   :alt:   None
+   :width: 100%
 
    Workflow and geodata used for analysing urban energy balance
    using the SUEWS model. Bold outlined boxes are mandatory items.
@@ -272,7 +273,8 @@ other.
    post-processor tools, respectively. Grey boxes indicate geodatasets.
 
 .. figure:: /images/SOLWEIGworkflow.png
-   :alt:  Workflow and geodata used for analysing mean radiant temperature using the SOLWEIG model. Bold outlines are mandatory items. Yellow, orange and red indicates pre-processor, processor and post-processor tools, respectively. Grey boxes indicate geodatasets.
+   :alt:   None
+   :width: 100%
 
    Workflow and geodata used for analysing mean radiant
    temperature using the SOLWEIG model. Bold outlines are mandatory

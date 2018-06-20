@@ -84,42 +84,47 @@ SUEWS Prepare
                   -  To use an existing polygon grid layer in the plugin add the layer to the QGIS interface. This can be done either by dragging and dropping the file into the QGIS program or by using the menu **Layers**. Any polygon layers added to the QGIS interface can then be selected for use in the plugin from the drop down menu in the main settings tab marked **Vector polygon grid** If no polygon grid layer is available, there are several opportunities to create these in QGIS. We  recommend to make use of the built-in **Vector tool** (Vector -> Research tools menu)>
                   -  When a relevant polygon grid has been selected for the plugin several separate drop down menus allow for data to be collected from the fields in the polygon grid attribute table. The initial selections in these drops down menus might not be correct and needs to be manually corrected by the user.
                   -  The input in the drop down menu marked **ID field** in the box for polygon grid selection needs to correlate with the polygon layers attribute field for feature ids or any attribute field containing unique integer numbers. The polygon layer should be in a coordinate system that can be related to both lat/lon coordinates as well as meters. The polygon features included in the polygon vector grid can be of any shape and size.
+                  
                   .. figure:: /images/SP_Polygon.jpg
 
-                      ```to do```
+                  Choosing polygon grid and attribute
 
-            -  Data for land cover fractions, building morphology and tree morphology ：
+            -  Data for land cover fractions, building morphology and tree morphology：
                   -  To use SUEWS land cover and morphology data for buildings and vegetation are needed. This information can be acquired through other plugins in UMEP. This data can then be added into SUEWSPrepare by two different options:
-                            -  Import the data as text
+                  -  Import the data as text
                   -  To do this click the buttons in the boxes associated with these types of data and follow the import dialogs to select the correct text file. When a file has been selected the file path will be shown in the text boxes above the buttons. The text files on land cover and morphology are generated with the `Land Cover Fraction <#Urban_Land_Cover:_Land_Cover_Fraction_(Point)>`__ plugin and the `Image Morphometric Calculator <#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_(Point)>`__, respectively.
-                            -  Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.
-                            .. figure:: /images/SP_landcover.jpg
+                  -  Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.
+                            
+                  .. figure:: /images/SP_landcover.jpg
 
-                                Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.
+                  Box associated with land cover fractions data. The button has been used to import a file containing land cover fraction data.
 
-                            .. figure:: /images/SP_landcover2.jpg
+                  .. figure:: /images/SP_landcover2.jpg
 
-                                Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.
+                  Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.
 
             -  Meteorological data：
                   -  The meteorological data have to be imported from a **text file**. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the `MetPreprocessor <#Meteorological_Data:_MetPreprocessor>`__ plugin. There you can also find more information on what parameters are required in the meteorological dataset.
+                  
                   .. figure:: /images/SP_met.jpg
 
-                      Box for meteorological data. The button has been used to import a file containing meteorological data.
+                  Box for meteorological data. The button has been used to import a file containing meteorological data.
 
             -  Daylight savings time：
                   -   The plugin needs to have access to the correct days in which the switches to and from daylight savings time occurs in the region. The numbers in the text boxes represent the `days of year <https://landweb.modaps.eosdis.nasa.gov/browse/calendar.html>`__. For example, the 21st of January is day of year 21 and the 2nd of February is day of year be 33 and so on. Make sure the days in the text boxes for daylight savings time in the main settings tab are correct for `your region <https://en.wikipedia.org/wiki/Daylight_saving_time_by_country>`__.
+                  
                   .. figure:: /images/SP_DLS.jpg
 
-                      Box used for setting the start and end of day lights savings time.
+                  Box used for setting the start and end of day lights savings time.
 
             -  Population density：
                   -  This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu.
             -  Wall area (optional) ：
                   - This data needs to be added through the polygon grid attribute table. Make sure that the data exist as an attribute field and select it in the drop down menu. This can be calculated from a DSM using the `Wall height and aspect calculator <WallHeightandAspect>`.
+                  
                   .. figure:: /images/SUEWSPrepare_wallarea.png
 
-                      Box for wall area data.
+                  Box for wall area data.
 
             -  Land use fraction (optional)：
                   -  his data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:
@@ -131,7 +136,7 @@ SUEWS Prepare
 
                      .. figure:: /images/SUEWSPrepare_landuse.png
 
-                        Box for land use data.
+                     Box for land use data.
 
             -  Initial conditions ：
                   -  The SUEWS model requires information of initial conditions. SUEWSPRepare generates some basic information used to create a file called **InitialConditionsXXXX\_YYYY.nml** where XXXX is the ID grid number.
