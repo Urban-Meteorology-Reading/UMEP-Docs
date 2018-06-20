@@ -22,7 +22,7 @@ are accessed through **QGIS** - a cross-platform, free, open source
 desktop geographic information systems
 (`GIS <Abbreviations>`) application –
 that provides data viewing, editing, and analysis capabilities.
-
+ 
 This software is in continuous development. There are two types of
 releases:
 
