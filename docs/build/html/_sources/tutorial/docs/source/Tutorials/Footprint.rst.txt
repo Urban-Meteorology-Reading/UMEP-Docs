@@ -22,7 +22,7 @@ et al. (2015) requires the boundary layer height.
 
 .. figure:: /images/Footprint_ReadingSourceArea.png
    :alt:  Example result 
-   :width: 1100px
+   :width: 100%
 
    Example result (click on image for larger image)
 
@@ -30,8 +30,8 @@ Initial Practical steps
 -----------------------
 
 -  If **QGIS** is not on your computer you will `need to install
-   it <Getting_Started>`
--  Then install the `UMEP <Getting_Started>`.plugin 
+   it <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__.
+-  Then install the `UMEP <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__ plugin.
 
 -  Start the QGIS software
 -  If not visible on the desktop use the **Start** button to find the
@@ -42,7 +42,7 @@ When you open it on the top toolbar you will see **UMEP**.
 
 .. figure:: /images/Footprint_UMEP_location.png
    :alt:  none
-   :width: 960px
+   :width: 100%
    
    Location of footprint plugin (click on image for larger image)
 
@@ -68,14 +68,14 @@ Prior to Starting
 #. Download the **Data needed for the Tutorial**. You can use either Reading of the London dataset. 
 
 #. Load the Raster data (`DEM, DSM,
-   CDSM <Abbreviations>`) 
+   CDSM <http://umep-docs.readthedocs.io/en/latest/Abbreviations.html>`__) 
    *files – DOES A CDSM EXIST? Yes for London, No for Reading*
 
    -  Go to: *Layer > Add layer > Add Raster Layer*. Locate downloaded files add add them to your QGIS project.
 
 .. figure:: /images/Footprint_Add_Raster_Layer.png
    :alt:  none
-   :width: 960px
+   :width: 100%
    
    Loading a raster layer to QGIS (click on image for larger image)
 
@@ -85,7 +85,7 @@ Prior to Starting
 
 .. figure:: /images/Footprint_ReadingMap.png
    :alt:  none
-   :width: 1070px
+   :width: 100%
 
    The Reading data loaded into QGIS (click on image for larger image)
    
@@ -119,7 +119,7 @@ To access the Source area model or Footprint model, go to *UMEP -> Pre-processor
 	
 .. figure:: /images/Footprint_SourceAreaModel.png
    :alt:  none
-   :width: 960px
+   :width: 100%
    
    Snapshot of the Footprint plugin using Reading data (click on image for larger image)
 
@@ -137,7 +137,7 @@ Iterative process
 
 To work with a site with no value known *a priori*.
 
-#. Use the `MorphometricCalculator(Point)` tool in the UMEP plugin to select a
+#. Use the `MorphometricCalculator(Point) <http://umep-docs.readthedocs.io/en/latest/pre-processor/Urban%20Morphology%20Morphometric%20Calculator%20(Point).html>`__ tool in the UMEP plugin to select a
    point to get the initial parameter values:
 
    #. UMEP-> Pre-Processor -> Urban Morphology -> Image Morphometric

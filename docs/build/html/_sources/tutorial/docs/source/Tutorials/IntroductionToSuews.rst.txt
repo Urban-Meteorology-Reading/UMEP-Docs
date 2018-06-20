@@ -32,7 +32,7 @@ population, road and infrastructure, and socio-economic variables).
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. The figure below provides an overview of
-`UMEP <index_page>`, a city based climate
+`UMEP <http://umep-docs.readthedocs.io>`__, a city based climate
 service tool (CBCST). Within UMEP there are a number of models which can
 predict and diagnose a range of meteorological processes. In this
 activity we are concerned with SUEWS, initially the central components
@@ -59,8 +59,8 @@ SUEWS Simple Objectives
 -----------------------
 
 This tutorial introduces SUEWS and demonstartes how to run the model within `UMEP (Urban
-Multi-scale Environmental Predictor) <index_page>`. `Help with
-Abbreviations <Abbreviations>`
+Multi-scale Environmental Predictor) <http://umep-docs.readthedocs.io/Getting_Started.html>`__. `Help with
+Abbreviations <http://umep-docs.readthedocs.io/en/latest/Abbreviations.html>`__.
 
 Steps
 ~~~~~
@@ -75,7 +75,7 @@ Initial Steps
 
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
-plugin see the `getting started <Getting_Started>` section in the UMEP manual.
+plugin see the `getting started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__ section in the UMEP manual.
 
 As UMEP is under development, some documentation may be missing and/or
 there may be instability. Please report any issues or suggestions to our
@@ -363,58 +363,57 @@ To help you find further information about the acronyms they are
 classified by **T**: Type of term: **C**: computer term, **S**: science
 term, **G**: GIS term.
 
-+-----------------+-----------------+-----------------+-----------------+
-|                 | Definition      | T               | Reference/Comme |
-|                 |                 |                 | nt              |
-+=================+=================+=================+=================+
-| DEM             | Digital         | G               |                 |
-|                 | elevation model |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| DSM             | Digital surface | G               |                 |
-|                 | model           |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| FAI (?:sub:`F`) | Frontal area    | S               | Grimmond and    |
-|                 | index           |                 | Oke (1999)      |
-+-----------------+-----------------+-----------------+-----------------+
-| GUI             | Graphical User  | C               |                 |
-|                 | Interface       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| LAI             | Leaf Area Index | S               |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| PAI (?:sub:`P`) | Plan area index | S               |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| png             | Portable        | C               | format for      |
-|                 | Network         |                 | saving          |
-|                 | Graphics        |                 | plots/figures   |
-+-----------------+-----------------+-----------------+-----------------+
-| QGIS            |                 | G               | www.qgis.org    |
-+-----------------+-----------------+-----------------+-----------------+
-| SUEWS           | Surface Urban   | S               |                 |
-|                 | Energy and      |                 |                 |
-|                 | Water Balance   |                 |                 |
-|                 | Scheme          |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Tif             | Tagged Image    | C               | format for      |
-|                 | File Format     |                 | saving          |
-|                 |                 |                 | plots/figures   |
-+-----------------+-----------------+-----------------+-----------------+
-| UI              | user interface  | C               |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| UMEP            | Urban           | C               |                 |
-|                 | Multi-scale     |                 |                 |
-|                 | Environmental   |                 |                 |
-|                 | predictor       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| z\ :sub:`0`     | Roughness       | S               | Grimmond and    |
-|                 | length for      |                 | Oke (1999)      |
-|                 | momentum        |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| z\ :sub:`d`     | Zero plane      | S               | Grimmond and    |
-|                 | displacement    |                 | Oke (1999)      |
-|                 | length for      |                 |                 | 
-|                 | momentum        |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-
++------------------+-----------------+-----------------+-----------------+
+|                  | Definition      | T               | Ref./Comment    |
++==================+=================+=================+=================+
+| DEM              | Digital         | G               |                 |
+|                  | elevation model |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| DSM              | Digital surface | G               |                 |
+|                  | model           |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| FAI (λ\ :sub:`F`)| Frontal area    | S               | Grimmond and    |
+|                  | index           |                 | Oke (1999)      |
++------------------+-----------------+-----------------+-----------------+
+| GUI              | Graphical User  | C               |                 |
+|                  | Interface       |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| LAI              | Leaf Area Index | S               |                 |
++------------------+-----------------+-----------------+-----------------+
+| PAI (λ\ :sub:`P`)| Plan area index | S               |                 |
++------------------+-----------------+-----------------+-----------------+
+| png              | Portable        | C               | format for      |
+|                  | Network         |                 | saving          |
+|                  | Graphics        |                 | plots/figures   |
++------------------+-----------------+-----------------+-----------------+
+| QGIS             |                 | G               | www.qgis.org    |
++------------------+-----------------+-----------------+-----------------+
+| SUEWS            | Surface Urban   | S               |                 |
+|                  | Energy and      |                 |                 |
+|                  | Water Balance   |                 |                 |
+|                  | Scheme          |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| Tif              | Tagged Image    | C               | format for      |
+|                  | File Format     |                 | saving          |
+|                  |                 |                 | plots/figures   |
++------------------+-----------------+-----------------+-----------------+
+| UI               | user interface  | C               |                 |
++------------------+-----------------+-----------------+-----------------+
+| UMEP             | Urban           | C               |                 |
+|                  | Multi-scale     |                 |                 |
+|                  | Environmental   |                 |                 |
+|                  | predictor       |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| z\ :sub:`0`      | Roughness       | S               | Grimmond and    |
+|                  | length for      |                 | Oke (1999)      |
+|                  | momentum        |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+| z\ :sub:`d`      | Zero plane      | S               | Grimmond and    |
+|                  | displacement    |                 | Oke (1999)      |
+|                  | length for      |                 |                 | 
+|                  | momentum        |                 |                 |
++------------------+-----------------+-----------------+-----------------+
+ 
 Further explanation
 -------------------
 

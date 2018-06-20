@@ -15,7 +15,7 @@ In this tutorial you will generate input data for the
 Model output may be needed in many formats depending on a users’ needs.
 Thus, the format must be useful, while ensuring the science included
 within the model is appropriate. The figure below provides an overview of
-`UMEP <index_page>`, a city based climate
+`UMEP <http://umep-docs.readthedocs.io/en/latest/index.html>`__, a city based climate
 service tool (CBCST) used in this tutorial. Within UMEP there are a number 
 of models which can predict and diagnose a range of meteorological processes. 
 
@@ -42,7 +42,7 @@ Initial Steps
 
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
-plugin see the `getting started <Getting_Started>` section in the UMEP manual.
+plugin see the `getting started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__ section in the UMEP manual.
 
 As UMEP is under development, some documentation may be missing and/or
 there may be instability. Please report any issues or suggestions to our

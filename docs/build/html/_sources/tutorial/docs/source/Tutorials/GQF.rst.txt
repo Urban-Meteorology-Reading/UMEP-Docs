@@ -14,7 +14,7 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <Getting_Started>`
+started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__
 section in the UMEP manual.
 
 As UMEP is under constant development, some documentation may be missing
@@ -28,7 +28,7 @@ In order to proceed, you will need the zip file named
 `GQF\_Inputs\_1.zip <https://urban-meteorology-reading.github.io/other%20files/GQF_Inputs_1.zip>`__
 from the UMEP tutorials data reopository. 
 
-You may also wish to consult the `GQF user guide <GQF_Manual>`__
+You may also wish to consult the `GQF user guide <http://umep-docs.readthedocs.io/en/latest/OtherManuals/GQF_Manual.html>`__
 
 The GQF\_Inputs\_1.zip file contains several datasets to cover the
 comprehensive requirements of GQF:
@@ -85,6 +85,7 @@ comprehensive requirements of GQF:
          * - DataSources.nml
            - Configuration file specifying different input data sources for model
            -
+           
 GQF Tutorial 1: Comprehensive QF modelling for Greater London
 -------------------------------------------------------------
 
@@ -303,7 +304,6 @@ are provided by the shapefile
    provided for each road link
 -  vehicle\_AADT available: AADT is broken down by vehicle type for each
    road link
-::
 
    &transportData
     ! Vector data containing all road segments for study area
@@ -517,6 +517,7 @@ Sunday, when people are expected to not be at work.
         ```to do```
 
       Time series of QF emissions
+      
 Tutorials 2: Refining GQF results
 ---------------------------------
 

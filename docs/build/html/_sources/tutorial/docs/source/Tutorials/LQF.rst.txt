@@ -13,12 +13,12 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <Getting_Started>`
+started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__
 section in the UMEP manual.
 
 For this tutorial you will need certain python libraries: **Pandas** and
 **NetCDF**. Instructions how to install python libraries are located
-`here <Python_Libraries>`.
+`here <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html#adding-missing-python-libraries-and-other-osgeo-functionalities>`__.
 
 As UMEP is under constant development, some documentation may be missing
 and/or there may be instability. Please report any issues or suggestions
@@ -182,17 +182,15 @@ Run LQF
 Under UMEP > Processor > Urban Energy Balance, choose LQf (LUCY)
 
 .. figure:: /images/LQF_Tutorial_RunUMEP.png
-   :alt: LQF_Tutorial_RunUMEP.png
-   :width: 300px
 
-    ```to do```
+    The location of LQF
 
 
 This loads the model interface dialog box:
 
 .. figure:: /images/LQF_Tutorial_RunLQF.png
 
-    ```to do```
+    The dialog for LQF
     
 Choose configuration files and output folder
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -229,8 +227,7 @@ then select “Run”.
 
 .. figure:: /images/LQF_Tutorial_DateRange.png
 
-
-    ```to do```
+   Setting the start and end date
 
 Visualise results
 ~~~~~~~~~~~~~~~~~
@@ -240,9 +237,9 @@ some of the model results to open the visualisation tool.
 
 .. figure:: /images/LQF_Tutorial_Visualise.png
    :alt: LQF_Tutorial_Visualise.png
-   :width: 300px
+   :width: 80%
 
-   ```to do```
+   The visualisation tool in LQF
 
 Create a map of total QF at noon
 ++++++++++++++++++++++++++++++++
@@ -255,7 +252,7 @@ layers that have appeared.
 
 .. figure:: /images/525px-LQF_Tutorial_QfMap_1.png
 
-    ```to do```
+    Example of a map generated with the visualisation tool in LQF
 
 Each layer corresponds to a different QF component, Qm (metabolism) and
 is plotted on the top layer. De-selecting a layer in the Layers panel
@@ -272,7 +269,7 @@ colour the same as the fill colour.
 
 .. figure:: /images/525px-LQF_Tutorial_QfMap_2.png
 
-    ```to do```
+    Same as above but with altered styling
 
 Plot a time series of QF in the centre of the city
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -282,32 +279,31 @@ of interest, zoom into the city centre, choose the selection tool
 
 .. figure:: /images/LQF_Tutorial_SelectFeatureIcon.png
 
-
-    ```to do```
+    Selection tool in QGIS
 
 and click an output area of
 interest.
 
 This turns yellow. Right-click it and select the option that comes up.
 
-          .. figure:: /images/LQF_Tutorial_SelectFeature.png
+.. figure:: /images/LQF_Tutorial_SelectFeature.png
 
-              Information about the output area
+    Information about the output area
 
 then appears on the left, with the ID shown. Make a note of this.
 
-    .. figure:: /images/LQF_Tutorial_FeatureInfo.png
+.. figure:: /images/LQF_Tutorial_FeatureInfo.png
 
-        ```to do```
+    Information dispalyed from the selected area
 
 Return to the visualisation tool, choose output area 5448 and click
 “show plot”. Time series of each QF component then appear for the week.
 Note the lower traffic activity on Saturday and Sunday, and the higher
 building emissions on Thursday 15th when the weather is colder.
 
-    .. figure:: /images/525px-LQF_Tutorial_Temporal_standardcase.png
+.. figure:: /images/525px-LQF_Tutorial_Temporal_standardcase.png
 
-        ```to do```
+    Temporal plot from the visualisation tool
 
 Recycling of input data
 +++++++++++++++++++++++
@@ -348,14 +344,13 @@ profiles can be used for different times of year (`click here for full
 information about diurnal profile
 files <LQF_Manual#Diurnal_variations>`__).
 
-      .. figure:: /images/525px-LQF_Tutorial_WeeklyTraffic.png
+.. figure:: /images/525px-LQF_Tutorial_WeeklyTraffic.png
 
-          Custom traffic profile
+    Custom traffic profile
 
 .. figure:: /images/525px-LQF_Tutorial_BuildingProfiles.png
 
-
-    ```to do```
+    Custom building profiles
 
 **Step 1:**
 Create a duplicate of the DataSources.nml file used earlier
@@ -384,9 +379,6 @@ output area 5448 again:
 .. figure:: /images/525px-LQF_Tutorial_Temporal_customDiurnals.png
    :alt: LQF_Tutorial_Temporal_customDiurnals.png
    :width: 350px
-
-    ```to do```
-
 
 Note how the building and transport emission patterns now change on
 different days of the week. This is especially noticeable in transport
@@ -447,8 +439,6 @@ people in the LQF database.
 .. figure:: /images/525px-LQF_Tutorial_Temporal_customdatabase.png
    :alt: LQF_Tutorial_Temporal_customdatabase.png
    :width: 350px
-
-    ```to do```
 
 
 **Step 8: Restore the original LQF database so that the test values do
@@ -512,6 +502,3 @@ metabolism emissions remains the same as before.
 .. figure:: /images/525px-LQF_Tutorial_Temporal_customResponse.png
    :alt: LQF_Tutorial_Temporal_customResponse.png
    :width: 350px
-
-   ```to do```
-

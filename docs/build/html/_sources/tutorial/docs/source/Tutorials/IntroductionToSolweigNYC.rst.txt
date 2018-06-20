@@ -1,7 +1,7 @@
 .. _IntroductionToSOLWEIGNYC:
 
 Thermal Comfort - Introduction to SOLWEIG (NYC)
-=========================================
+===============================================
 
 Introduction
 ------------
@@ -27,7 +27,7 @@ and elevation). To determine T\ :sub:`mrt`, continuous maps of sky view
 factors are required. Both vegetation and ground cover information can
 be added to increase the accuracy of the model output. Below 
 a schematic flowchart of SOLWEIG in shown. The `full
-manual <SOLWEIGManual>` provides more
+manual <http://umep-docs.readthedocs.io>`__ provides more
 detail.
 
 .. figure:: /images/SOLWEIG_flowchart.png
@@ -39,9 +39,9 @@ Objectives
 ----------
 
 To introduce SOLWEIG and how to run the model within `UMEP (Urban
-Multi-scale Environmental Predictor) <index_page>`. 
+Multi-scale Environmental Predictor) <http://umep-docs.readthedocs.io>`__. 
 
-Help with Abbreviations can be found `here <Abbreviations>`
+Help with Abbreviations can be found `here <http://umep-docs.readthedocs.io/en/latest/Abbreviations.html>`__.
 
 Steps
 ~~~~~
@@ -60,7 +60,7 @@ Initial Practical steps
 UMEP is a python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting
-started <Getting_Started>`
+started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__
 section in the UMEP manual.
 
 As UMEP is under constant development, some documentation may be missing
@@ -122,7 +122,7 @@ SOLWEIG Model Inputs
 --------------------
 
 Details of the model inputs and outputs are provided in the `SOLWEIG
-manual <SOLWEIGManual>`. As this tutorial is
+manual <http://umep-docs.readthedocs.io/en/latest/OtherManuals/SOLWEIG.html>`__. As this tutorial is
 concerned with a **simple application** only the most critical
 parameters are used. Many other parameters can be modified to more
 appropriate values if applicable. The table below provides an overview
@@ -199,7 +199,7 @@ S: Spatial, M: Meteorological,
  
 
 Meterological input data should be in UMEP format. You can use the
-`Meterological Preprocessor <MetPreprocessor>`
+`Meterological Preprocessor <http://umep-docs.readthedocs.io/en/latest/pre-processor/Meteorological%20Data%20MetPreprocessor.html>`__
 to prepare your input data. There is also a possibility to use a single point in time in the plugin. 
 
 Requred meteorological data is: 
@@ -361,7 +361,7 @@ the SOLWEIG Analyzer plug-in.
    and tick in to *Exclude building pixels*. Choose the building grid
    that you saved earlier in this tutorial. If it is not in the
    drop-down list you need to add this layer (**buildings**) to your
-   project. Tick in *T\ :sub:`mrt`: Percent of time above threshold
+   project. Tick in *T*\ :sub:`mrt`: *Percent of time above threshold
    (degC)* and specify 55.0 as threshold. Specify an output folder and
    tick also in *Add analysis to map canvas* before you generate the
    result. The resulting map show the time that a pixel has been above
