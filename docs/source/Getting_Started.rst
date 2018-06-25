@@ -47,7 +47,7 @@ Download and installation of the UMEP-plugin from within QGIS
 #. Rename the extracted folder to **UMEP**
 #. Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -> Manage and Install Plugins -> All” and search for UMEP. Make sure that you also tick in the box *Show also experimental plugins* in the “Settings”-tab.
 
-Test `datasets <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__ and `tutorials <Tutorials>` are available to try some of the tools out.
+Test `datasets <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out.
 
 
 .. _Python_Libraries:
