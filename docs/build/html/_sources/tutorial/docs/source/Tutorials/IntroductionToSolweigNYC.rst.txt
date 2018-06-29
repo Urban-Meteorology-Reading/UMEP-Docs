@@ -224,7 +224,7 @@ How to Run SOLWEIG from the UMEP-plugin
 
     .. figure:: /images/SOLWEIG_Interface.png
        :alt:  None
-       :width: 1070px
+       :width: 100%
 
        Dialog for the SOLWEIG model (click on image for larger image)
 
@@ -273,7 +273,7 @@ How to Run SOLWEIG from the UMEP-plugin
    
     .. figure:: /images/SOLWEIG_Tmrt1_solweig.png
        :alt:  None
-       :width: 1078px
+       :width: 100%
        
        The settings for your first SOLWEIG run (click on image for larger image).
 	   
@@ -341,7 +341,7 @@ the SOLWEIG Analyzer plug-in.
    
     .. figure:: /images/SOLWEIG_SOLWEIGAnalyzer.png
        :alt:  None
-       :width: 875px
+       :width: 100%
        
        Dialog for the SOLWEIG Analyzer plug-in
 

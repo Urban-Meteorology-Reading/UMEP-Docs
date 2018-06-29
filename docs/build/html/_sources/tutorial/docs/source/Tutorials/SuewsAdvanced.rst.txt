@@ -1,6 +1,6 @@
 .. _SUEWSAdvanced:
 
-Urban Energy Balance - SUEWS Advanved
+Urban Energy Balance - SUEWS Advanced
 =====================================
 
 Introduction
@@ -144,7 +144,6 @@ Generating data from the geodatasets
 
    .. figure:: /images/SUEWSAdvanced_SUEWS_MorphometricParametersBuild.png
       :alt:  None
-	  :scale: 75%
 
       Figure 3. Settings for Image Morphometric Parameters for buildings.
 	  
@@ -165,7 +164,6 @@ Generating data from the geodatasets
 
    .. figure:: /images/SUEWSAdvanced_SUEWS_MorphometricParametersVeg.png
       :alt:  None
-      :scale: 75%
 
       Settings for Image Morphometric Parameters for vegetation
 
@@ -186,14 +184,13 @@ run again.
 
 .. figure:: /images/SUEWSAdvanced_Modelrununsuccessful.png
    :alt:  None
-   :scale: 100%
 
    Possible error window from running SUEWS with new settings.
 
 
 .. figure:: /images/SUEWSAdvanced_SuewsSimpleGeodata.png
    :alt:  None
-   :width: 800px
+   :width: 100%
 
    The settings for running with geodata derived parameters (old version of GUI).
    

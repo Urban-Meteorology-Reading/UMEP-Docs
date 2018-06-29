@@ -46,7 +46,7 @@ When you open it on the top toolbar you will see **UMEP**.
 
 .. figure:: /images/SEBE_Interfacelocation.png
    :alt:  None
-   :width: 1066px
+   :width: 100%
 
    Location of SEBE in UMEP
 

@@ -88,7 +88,7 @@ Prior to Starting
    :width: 100%
 
    The Reading data loaded into QGIS (click on image for larger image)
-   
+    
 
 Source Area Modelling
 ---------------------

@@ -41,7 +41,6 @@ published papers for more detailed information of the model.
 
 .. figure:: /images/SUEWSIntro_UMEP_overview.png
    :alt:  none
-   :width: 378px
 
    Overview of the climate service tool UMEP (from Lindberg et al. 2018)
 
@@ -205,7 +204,7 @@ How to Run SuewsSimple from the UMEP-plugin
    
 .. figure:: /images/SUEWSIntro_Interface.png
     :alt:  none
-    :width: 1107px
+    :width: 100%
 
     The interface for SUEWS, simple version (click on image to make it larger).
    
@@ -225,14 +224,14 @@ How to Run SuewsSimple from the UMEP-plugin
 
 .. figure:: /images/SUEWSIntro_SuewsSimplefig1.png
     :alt:  none
-    :width: 900px
+    :width: 100%
 
     Model output from SUEWS (simple) using the default settings and data (click on image to make it larger).   
 
     
 .. figure:: /images/SUEWSIntro_SuewsSimplefig2.png
     :alt:  none
-    :width: 900px
+    :width: 100%
     
     Model output from SUEWS (simple) using the default settings and data (click on image to make it larger). 
 
@@ -253,7 +252,7 @@ weather.
 
 .. figure:: /images/SUEWSIntro_SuewsSimplefig2zoom.png
     :alt:  none
-    :width: 900px
+    :width: 100%
     
     Zoom in on end of March from the daily plot (click on image to make it larger). 
 

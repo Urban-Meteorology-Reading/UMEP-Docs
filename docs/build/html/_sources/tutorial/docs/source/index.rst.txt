@@ -8,6 +8,8 @@ To help users getting started with UMEP, the community is working on
 setting up tutorials and instructions for different parts of the UMEP
 tool. The tutorials are available are found in the table below.
 
+.. note:: One essential part when working with geodata in a GIS is to make sure that a common coordinate reference system (CRS) is used, both for the data itself and the current QGIS-project you are working in. For more info, see `here <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__. It is strongly recommended to reproject/transform all geodatasets into the same projected coordinate system before any processing starts. 
+
 
 .. list-table::
    :widths: 20 20 30 30
@@ -37,6 +39,10 @@ tool. The tutorials are available are found in the table below.
      - Pre-Processor, Processor and Post-processor
      - `SUEWSWUDAPT`
      - Making use of `WUDAPT <http://www.wudapt.org/>`__ local climate zones in `SUEWS  <http://suews-docs.readthedocs.io>`__
+   * - Urban energy balance
+     - Pre-Processor, Processor and Post-processor
+     - `SUEWSWUDAPT_Beijing`
+     - Making use of `WUDAPT <http://www.wudapt.org/>`__ local climate zones as well as `WATCH <http://www.eu-watch.org/>`__ meteorological forcing data in `SUEWS  <http://suews-docs.readthedocs.io>`__
    * - Solar Energy
      - Processor and Post-Processor
      - `SEBE`
@@ -68,6 +74,7 @@ tool. The tutorials are available are found in the table below.
    Tutorials/SuewsAdvanced
    Tutorials/SuewsSpatial
    Tutorials/SuewsWUDAPT
+   Tutorials/SUEWSWUDAPT_Beijing
    Tutorials/IntroductionToSolweig
    Tutorials/SEBE
    Tutorials/LQF

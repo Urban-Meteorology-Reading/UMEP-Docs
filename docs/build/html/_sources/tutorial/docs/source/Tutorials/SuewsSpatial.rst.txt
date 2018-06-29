@@ -53,7 +53,7 @@ Steps to be preformed
 Initial Steps
 -------------
 
-UMEP is a python plugin used in conjunction with
+UMEP is a Python plugin used in conjunction with
 `QGIS <http://www.qgis.org>`__. To install the software and the UMEP
 plugin see the `getting started <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html>`__ section in the UMEP manual.
 
@@ -88,7 +88,7 @@ All the geodata used in this tutorial are from open access sources, primarily fr
    * - Digital canopy model (`CDSM <http://umep-docs.readthedocs.io/en/latest/Abbreviations.html>`__)
      - 2013 (August)
      - United States Geological Survey (USGS). New York CMGP Sandy 0.7m NPS Lidar. `link <https://coast.noaa.gov/htdata/lidar1_z/geoid12b/data/4920/>`__
-     - A vegetation raster grid where vegetation heights is given in meter above ground level. Vegetation lower than 2.5 meter Pixels with no vegetation should be zero.
+     - A vegetation raster grid where vegetation heights is given in meter above ground level. Vegetation lower than 2.5 meter pixels with no vegetation should be zero.
    * - Land cover (UMEP formatted)
      - 2010
      - New York City Landcover 2010 (3ft version). University of Vermont Spatial Analysis Laboratory and New York City Urban Field Station. `link <https://opendata.cityofnewyork.us/>`__
@@ -105,11 +105,11 @@ All the geodata used in this tutorial are from open access sources, primarily fr
 
 - Start by loading all the raster datasets into an empty QGIS project.
 
-The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (metre) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees). QGIS default styling for a raster is using the 98 percentile of the values. Therefore, not all the range of the data is shown in the layer window to the left.
+The order in the *Layers Panel* determines what layer is visible. You can choose to show a layer (or not) with the tick box. You can modify layers by right-clicking on a layer in the Layers Panel and choose *Properties*. Note for example that that CDSM (vegetation) is given as height above ground (meter) and that all non-vegetated pixels are set to zero. This makes it hard to get an overview of all 3D objects (buildings and trees). QGIS default styling for a raster is using the 98 percentile of the values. Therefore, not all the range of the data is shown in the layer window to the left.
 
 - Right-click on your **CDSM** layer and go to *Properties > Style* and choose **Singleband pseudocolor** with a min value of 0 and max of 35. Choose a colour scheme of your liking.
-- Go to *Transparency* and  add and additional no data value of 0. Click ok.
-- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buislings and vegetation 3D object in your map canvas.
+- Go to *Transparency* and add an additional no data value of 0. Click ok.
+- Now put your **CDSM** layer at the top and your **DSM** layer second in your *Layers Panel*. Now you can see both buildings and vegetation 3D object in your map canvas.
 
 .. figure:: /images/SUEWSSpatial_dataview.png
    :alt:  none
@@ -273,7 +273,7 @@ The meteorological dataset used in this tutorial (**MeteorologicalData_NYC_2010.
 
 - Open the meterological dataset (**MeteorologicalData_NYC_2010.txt**) in a text editor of your choice. As you can see it does not include all the variables shown in :numref:`ref_T_Met`. However, these variables are the mandatory ones that are required to run SUEWS. In order to format (and make a quality check) the data provided into UMEP standard, you will use the `MetPreProcessor <http://umep-docs.readthedocs.io/en/latest/pre-processor/Meteorological%20Data%20MetPreprocessor.html>`__.
 
-- Open MetDataPreprocessor (*UMEP> Pre-Prpcessor -> Meteorological Data > MetPreprocessor*).
+- Open MetDataPreprocessor (*UMEP> Pre-Processor -> Meteorological Data > Prepare existing data*).
 - Load **MeteorologicalData_NYC_2010.txt** and make the settings as shown below. Name your new dataset **NYC_metdata_UMEPformatted.txt**.
 
 
@@ -429,7 +429,7 @@ Notice e.g. the high Q\ :sub:`F` values during winter as well as the low Q\ :sub
 
 In the left panel, there is also possibilities to examine two different variables in time, either from the same grid or between two different grid points. There is also possible to examine different parameters through scatterplots.
 
-The right panel in SUEWS Analyzer can be used to perform basic spatial analysis on your model results by producing aggragated maps etc. using different variables and time spans. Sensible heat (Q\ :sub:`H`) is a suitable variable to visualise warm areas as it is a variable the show the amount of the available energy that will be partitioned into heat.
+The right panel in SUEWS Analyzer can be used to perform basic spatial analysis on your model results by producing aggragated maps etc. using different variables and time spans. Sensible heat (Q\ :sub:`H`) is one variable to visualise warm areas as it is a variable that show the amount of the available energy that will be partitioned into heat.
 
 - Make the settings as shown in the figure below but change the location where you will save your data on your own system.
 
@@ -447,7 +447,7 @@ Note that the warmest areas are located in the most dense urban environments and
 The influence of mitigation measures on the urban energy balance (optional)
 ---------------------------------------------------------------------------
 
-There different ways of manipulating the data using UMEP as well directly changing the input data in SUEWS to examine the influence of migitagion measrues on the UEB. The most detailed way would be to directly changing the surface data by e.g. increasing the number of street trees. This can be done by e.g. using the `TreeGenerator <http://umep-docs.readthedocs.io/en/latest/pre-processor/Spatial%20Data%20Tree%20Generator.html>`__-plugin in UMEP. This method would require that you go through the workflow of this tutorial again before you do your new model run. Another way is to directly manipulate input data to SUEWS at grid point level. This can done by e.g. changing the land cover fractions in **SUEWS_SiteSelect.txt**, the file that includes all grid-specific information used in SUEWS.
+There are different ways of manipulating the data using UMEP as well directly changing the input data in SUEWS to examine the influence of mitigation measures on the UEB. The most detailed way would be to directly changing the surface data by e.g. increasing the number of street trees. This can be done by e.g. using the `TreeGenerator <http://umep-docs.readthedocs.io/en/latest/pre-processor/Spatial%20Data%20Tree%20Generator.html>`__-plugin in UMEP. This method would require that you go through the workflow of this tutorial again before you do your new model run. Another way is to directly manipulate input data to SUEWS at grid point level. This can done by e.g. changing the land cover fractions in **SUEWS_SiteSelect.txt**, the file that includes all grid-specific information used in SUEWS.
 
 - Make a copy of your whole input folder created from SUEWSPRepare earlier and rename it to e.g. *Input_mitigation*.
 - In that folder remove all the files beginning with *InitialConditions* **except** the one called **InitialConditionsnyc_2010.nml**.
@@ -455,7 +455,7 @@ There different ways of manipulating the data using UMEP as well directly changi
 - Now increace the fraction of decidious trees (*Fr_DecTr*) for grid 3242 and 3243 by 0.2. As the total land cover fraction has to be 1 you also need to reduce the paved fraction (*Fr_Paved*) by the same amount.
 - Save and close. Remember to keep the format (tab-separated text).
 - Create an empty folder called *Output_mitigation*
-- Open `SuewsAdvanced <http://umep-docs.readthedocs.io/en/latest/processor/Urban%20Energy%20Balance%20Urban%20Energy%20Balance%20(SUEWS.BLUEWS,%20advanced).html>`__ and make the same settings as before but change to inout and output folders.
+- Open `SuewsAdvanced <http://umep-docs.readthedocs.io/en/latest/processor/Urban%20Energy%20Balance%20Urban%20Energy%20Balance%20(SUEWS.BLUEWS,%20advanced).html>`__ and make the same settings as before but change the input and output folders.
 - Run the model.
 - When finished, create a similar average Q\ :sub:`H` map for the heat event and compare the two maps. You can do a difference map by using the Raster Calculator in QGIS (*Raster>Raster Calculator...*).
 
