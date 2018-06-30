@@ -2,7 +2,7 @@
 
 Other Manuals
 -------------
-This section include individual and more detailed manuals for some of the models used UMEP.
+This section include individual and more detailed manuals for some of the models used in UMEP.
 
 
 .. toctree::
