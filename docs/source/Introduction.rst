@@ -68,6 +68,10 @@ The manual should be cited as:
   Urban Multi-scale Environmental Predictor (UMEP) Manual. https://umep-docs.readthedocs.io/  
   University of Reading UK, University of Gothenburg Sweden, SIMS China*
 
+Email list
+----------
+To get updates and new, join our email list: `www.lists.reading.ac.uk/mailman/listinfo/met-umep <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
+
 
 .. _PluginArchitecture:
 

@@ -39,7 +39,7 @@ FAQ (Frequently Asked Questions)
     `People <People_Involved_&_Acknowledgements>` involved in development
 
 *  What are the development guidelines?
-    `<DevelopmentGuidelines>`
+    Information on development guidelines can be found ` here <DevelopmentGuidelines>`.
 
 * How can I uninstall QGIS?
 
