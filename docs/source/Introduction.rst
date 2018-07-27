@@ -70,7 +70,7 @@ The manual should be cited as:
 
 Email list
 ----------
-To get updates and new, join our email list: `www.lists.reading.ac.uk/mailman/listinfo/met-umep <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
+To get updates and news, join our email list: `www.lists.reading.ac.uk/mailman/listinfo/met-umep <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
 
 
 .. _PluginArchitecture:
