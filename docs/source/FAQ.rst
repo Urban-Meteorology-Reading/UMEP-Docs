@@ -14,7 +14,7 @@ FAQ (Frequently Asked Questions)
 * How do I install other python packages (e.g. pandas) as well as other libraries not included in the Desktop Express Install of QGIS?
     Follow the instruction from this `link <Python_Libraries>`.
 
-*  MY new raster is just black after using e.g. the *Wall Height and Aspect* plugin. What is wrong?
+*  My new raster is just black after using e.g. the *Wall Height and Aspect* plugin. What is wrong?
     Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.
 
 * Can the UMEP-plugin be used when **Nodata**-values are present in the input rasters?
@@ -29,6 +29,9 @@ FAQ (Frequently Asked Questions)
 * How do I report a bug?
     Report it at the `repository <http://bitbucket.org/fredrik_ucg/umep/issues/>`__
 
+* How do I report an issue with the manual?
+    Report it at the `manual repository <https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues>`__
+
 *  What can UMEP do?
     `Tool Architecture <PluginArchitecture>` provides an overview
 
@@ -36,7 +39,7 @@ FAQ (Frequently Asked Questions)
     `People <People_Involved_&_Acknowledgements>` involved in development
 
 *  What are the development guidelines?
-    `ContributeCoding`
+    `<DevelopmentGuidelines>`
 
 * How can I uninstall QGIS?
 

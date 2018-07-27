@@ -43,7 +43,7 @@ We are keen to get inputs and contributions from others. Plesae contribute in th
 #. Submit comments or report issues about the UMEP plugin to the code `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
 #. Participate in `coding or adding new features <How_to_Contribute>`.
 #. Contribute by writing `tutorials and guidelines <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ for other users to give examples of the many application possibilities of UMEP.
-#. Submit comments or report issues about the UMEP manual `here <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
+#. Submit comments or report issues about the UMEP manual `here <https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues>`__.
 
 
 .. toctree::

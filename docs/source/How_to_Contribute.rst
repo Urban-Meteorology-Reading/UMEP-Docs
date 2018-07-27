@@ -10,7 +10,7 @@ contributions. There are two main ways to contribute:
 #. Submit comments or issues to the
    `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
 #. Participate in `Coding or adding new
-   features <http://urban-climate.net/umep/DevelopmentGuidelines>`__.
+   features <http://umep-docs.readthedocs.io/en/latest/DevelopmentGuidelines.html>`__.
 #. Create new tutorials for the UMEP-plugin.
 
 Reporting a Bug

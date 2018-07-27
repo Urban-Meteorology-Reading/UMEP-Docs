@@ -56,10 +56,11 @@ Urban Geometry: Wall Height and Aspect
         ```to do```
 
 * Remarks：
-          - This plugin make use of **Scipy** which in turn make use of **Pillow**. If this plugin is malfunctioning, try to install/reinstall these packages (see `here <http://www.urban-climate.net/umep/UMEP_Manual#Adding_missing_Python_libraries_and_other_OSGeo_functionalities>`__).
+          - This plugin make use of **Scipy** which in turn make use of **Pillow**. If this plugin is malfunctioning, try to install/reinstall these packages (see `here <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html#adding-missing-python-libraries-and-other-osgeo-functionalities>`__).
           -  **NOTE**: The azimuth of the wall is estimated based on a 9 meter linear feature. This implies that coarser pixel resolution gives less pixels and thus a more imprecise measure of wall azimuth as the number of pixels will be lower. It it therefore recommended that use pixel resolution not greater than 2 meter in order to obtain a reasonable result.
           -  Wall pixels will be located ‘inside’ of the building footprint.
           -  The aspect algorithm gives reasonable result but improvements could be made by e.g. using a vector line layer which could be used to populate the wall pixels with aspect values.
+          -  **NOTE**: QGIS scales loaded rasters by a *cumulative count out* approach (98%). As the height and aspect layers are filled with zeros where no wall are present it might appear as there is no walls identified. Rescale your results to see the wall identified (*Layer Properties > Style*).
 
 * References：
           -  Goodwin NR, Coops NC, Tooke TR, Christen A, Voogt JA (2009) Characterizing urban surface cover and structure with airborne lidar technology. `Can J Remote Sens 35:297–309 <http://www.tandfonline.com/doi/abs/10.5589/m09-015>`__
