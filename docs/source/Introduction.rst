@@ -483,3 +483,66 @@ Evaluation and application studies
                  - `Lindberg et al. (2015) <http://www.sciencedirect.com/science/article/pii/S221209551400090X>`__
                * - Gothenburg, Sweden
                  - `Lindberg et al. (2011) <http://www.sciencedirect.com/science/article/pii/S0266352X11000693>`__
+
+
+.. _QGIS3Version:
+
+Road map for QGIS3 Version
+--------------------------
+
+The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__ 
+
+MetdataProcessor - READY
+
+ShadowGenerator - READY
+
+SkyViewFactorCalculator - READY
+
+ImageMorphParam - READY
+
+ImageMorphParmsPoint - READY
+
+LandCoverFractionGrid - READY
+
+LandCoverFractionPoint - READY
+
+LandCoverReclassifier - READY
+
+WallHeight - READY
+
+TreeGenerator - READY
+
+FootprintModel - READY
+
+LCZ_converter - READY
+
+UMEP_Data_Download  # TODO: No data visible in plugin interface
+
+DSMGenerator  # TODO: Working except for OSMImport
+
+WATCHData  # TODO: Gives errors during download and/or processing
+
+GreaterQF  # TODO: Multiple changes required :Plugin blocker
+
+ExtremeFinder
+
+LQF  # TODO: Multiple changes required :Plugin blocker
+
+SEBE - READY
+
+SuewsSimple - READY
+
+SUEWSPrepare - READY
+
+SUEWS - READY
+
+SOLWEIG - READY
+
+BenchMarking  # TODO: KeyError: 'input_cfgfiles'
+
+SEBEVisual # TODO: Not able to run 2to3 converter :Plugin blocker
+
+SolweigAnalyzer - READY
+
+SUEWSAnalyzer - READY
+
