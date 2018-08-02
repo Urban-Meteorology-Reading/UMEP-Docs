@@ -20,11 +20,13 @@ Outdoor Thermal Comfort: SOLWEIG
 * Related Preprocessors：
   - `MetPreprocessor`, `WATCH`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
 
-  
-* Dialog box：
-      .. figure:: /images/SOLWEIG.png
 
-          The dialog for the SOLWEIG model
+* Dialog box：
+
+   .. figure:: /images/SOLWEIG.png
+      :width: 100%
+
+      The dialog for the SOLWEIG model. Click on image for enlargement.
 
 * Dialog sections ：
 .. list-table::
@@ -157,8 +159,9 @@ Outdoor Thermal Comfort: SOLWEIG
              #. Now you are ready to generate your first T\ :sub:`mrt` map. Open SOLWEIG and use the settings as shown in the figure below but replace the paths to the fit your computer environment. When you are finished, press *Run*.
 
 .. figure:: /images/SOLWEIGfirsttry.png
+   :width: 100%
 
- Setting for a first try with the SOLWEIG model
+   Setting for a first try with the SOLWEIG model. Click on image for enlargement.
  
 There is also a meteorological file present in the test dataset that can be used to run the model for a whole day.
 
