@@ -490,7 +490,7 @@ Evaluation and application studies
 Road map for QGIS3 Version
 --------------------------
 
-The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__ 
+The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__. 
 
 MetdataProcessor - READY
 
