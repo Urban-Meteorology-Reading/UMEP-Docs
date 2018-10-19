@@ -516,15 +516,15 @@ FootprintModel - READY
 
 LCZ_converter - READY
 
-UMEP_Data_Download  # TODO: No data visible in plugin interface
+UMEP_Data_Download  - READY
 
 DSMGenerator  # TODO: Working except for OSMImport
 
-WATCHData  # TODO: Gives errors during download and/or processing
+WATCHData  - READY
 
 GreaterQF  # TODO: Multiple changes required :Plugin blocker
 
-ExtremeFinder
+ExtremeFinder - READY
 
 LQF  # TODO: Multiple changes required :Plugin blocker
 

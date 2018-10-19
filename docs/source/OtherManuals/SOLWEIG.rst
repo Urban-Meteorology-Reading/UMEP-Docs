@@ -3,7 +3,7 @@
 SOLWEIG Manual
 -------------------
 
-The current version of SOLWEIG is v2016a (released 9 September 2016).
+The current version of SOLWEIG is v2018a (released 19 October 2018).
 
 NEW in this version: see `Version History`_.
 
@@ -381,12 +381,17 @@ Sweden or London, UK. Here, you will use the Göteborg data.
 
 Tips and Tricks
 ~~~~~~~~~~~~~~~~~~~~~~
-
+-  All grids must have the same extent and pixel resolution.
+-  The coordinate system of all the grids must be the same and translatable to lat, lon coordinates.
+-  Meteorological file must have the default UMEP format.
+-  Wall height and aspect grids as well as SVFs can be calculated from Pre-processor in UMEP. 
 -  The model is very sensitive to the timing global radiation, i.e..
    that the peak of solar radiation occurs at local noon. If using a
    meteorological file included a longer dataset, this could be checked
    by comparing the global solar radiation and the theoretical maximum
    of solar radiation (I0) from a solar exposed point of interest.
+-  Land cover grid should be in UMEP format.
+-  A boolean building grid (building = 0, ground = 1) must be created, either from a land cover or a ground DEM in conjunction with the building and ground DSM.
 -  If using the land cover grid to derive the building grid, it is
    important that it coincides with the ground and building DSM.
    Otherwise strange results will be produced.
@@ -468,6 +473,8 @@ Version History
 
    * - Version
      - Changes from previous version
+   * - v2018a
+     - Minor bug fixing in ground view factor calculation. Introduction to PET and UTCI calculations for POIs. Available only for QGIS3.
    * - v2016a
      - First version released within UMEP. Python version of model is now released as open source.
    * - v2015a
