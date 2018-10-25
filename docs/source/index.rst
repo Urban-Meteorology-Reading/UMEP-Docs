@@ -3,6 +3,9 @@
 
 UMEP Manual
 -----------
+.. image:: https://readthedocs.org/projects/umep-docs/badge/?version=latest
+   :target: https://umep-docs.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
 The Urban Multi-scale Environmental Predictor (**UMEP**) is a climate
 service tool, designed for researchers and service providers (e.g.
