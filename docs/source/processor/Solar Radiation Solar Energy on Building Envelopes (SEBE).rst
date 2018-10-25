@@ -1,3 +1,5 @@
+.. _SEBE:
+
 Solar Radiation: Solar Energy on Building Envelopes (SEBE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:

@@ -26,7 +26,7 @@ Urban Energy Balance: LQ\ :sub:`F`
 
 
 * Introduction  ：
-          - `See separate manual <http://urban-climate.net/umep/LQF_Manual>`__
+          - `See separate manual <LQF_Manual>`
 
 * References  ：
           -  Allen, L., Lindberg, F. and Grimmond, C. (2011) Global to city scale urban anthropogenic heat flux: model and variability. `International Journal of Climatology 31:13, 1990-2005. <http://onlinelibrary.wiley.com/doi/10.1002/joc.2210/abstract>`__

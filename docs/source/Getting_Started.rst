@@ -78,27 +78,22 @@ make sure *pillow* is installed.
             -  There are two options available:
               1. As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC.
 
-                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <Getting_Started>` you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu.
+                This results in that pip cannot be used directly. However, if you installed QGIS according to the recommendations in `Getting started <Getting_Started>` you should have a **OSGeo4W shell** installed where you can use pip to add desired Python libraries. **OSGeo4W shell** is found in the Windows start menu. This shell is currently (October 2018) only for QGIS long term release (2.18).
 
                 You need to run as an administrator of your PC. To do this, right-click on **OSGeo4W shell** and choose *run as administrator*. In the command window that appear, write:
                 ::
                   pip install pandas
-
+                  
               2. Installation of pandas Restart the *installation (64-bit) For Advanced Users* (see Getting started) and choose *Advanced Install*. When you come up to Select Packages search for pandas and click on *Skip* until you see a version number of pandas (see left picture). Finish the installation.
 
                 **This method can also be used to include other missing libraries such as gdal etc.**
-
-                \ **PLEASE NOTICE!**\
-
-                Due to a recent update of **netCDF4** library (1.3.0), the **netCDF4** library has a version conflict related to the **numpy** version currently used in QGIS 2.18.x. This results in that some plugins in UMEP will fail, e.g. LQf.
-                We have submitted an issue regarding this to the QGIS community. Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to **1.2.9**. This is easiest done by opening the **OSGeo4W shell** and run the two following commands:
                 ::
                    pip uninstall netCDF4
                    pip install netCDF4==1.2.9
                    
-                .. figure::  /images/Pandas.png
+             .. figure::  /images/Pandas.png
 
-                   Installation of pandas
+                Installation of pandas
 
 
         #. Mac OS X
@@ -115,16 +110,28 @@ make sure *pillow* is installed.
 
 \ **PLEASE NOTICE!**\
 
-Due to a recent update of **netCDF4** library (1.3.0), the **netCDF4**
-library has a version conflict related to the **numpy** version
-currently used in QGIS 2.18.x. This results in that some plugins in UMEP
-will fail, e.g. LQf.
+There are currently (October 2018) some conflict issues between versions in some python libraries in the OSGeo repository (matplotlib 3.0.0 and pandas 0.23.4). To solve this there are a couple of steps you need to do in a windows environment.
 
-We have submitted an issue regarding this to the QGIS community.
-Meanwhile, we recommend UMEP users to downgrade the netCDF4 library to
-**1.2.9**. This is easiest done by opening the **OSGeo4W shell** and run
-the two following commands::
-    pip uninstall netCDF4
-    pip install netCDF4==1.2.9
+First you need to create your own OSGeo4W shell but for a QGIS3 environment. This is done by creating your own .bat file. Create a text file and save as e.g. **shell_QGIS3.bat** including the text below. MAke sure that your OSGEO4W_ROOT is the location where you installed OSGeo.
+::
+   SET OSGEO4W_ROOT=C:\OSGeo4W64
+   call %OSGEO4W_ROOT%\bin\o4w_env.bat"
+   call qt5_env.bat
+   call py3_env.bat
+   path %OSGEO4W_ROOT%\apps\qgis\bin;%PATH%
+   set QGIS_PREFIX_PATH=%OSGEO4W_ROOT:\=/%/apps/qgis
+   set GDAL_FILENAME_IS_UTF8=YES
+   set VSI_CACHE=TRUE
+   set VSI_CACHE_SIZE=1000000
+   set QT_PLUGIN_PATH=%OSGEO4W_ROOT%\apps\qgis-dev\qtplugins;%OSGEO4W_ROOT%\apps\qt5\plugins
+   set PYTHONPATH=%OSGEO4W_ROOT%\apps\qgis\python;%PYTHONPATH%
+   
+   @echo on
+   @if [%1]==[] (echo run o-help for a list of available commands & cmd.exe /k) else (cmd /c "%*") 
+
+Second, run the bat file, uninstall matplotlib and reinstall with the version 2.3.3 using the command below:
+::
+   pip uninstall matplotlib
+   pip install matplotlib==2.2.3
 
 --------------

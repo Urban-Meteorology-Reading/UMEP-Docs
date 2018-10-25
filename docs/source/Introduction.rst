@@ -285,12 +285,9 @@ other.
    items. Yellow, orange and red indicates pre-processor, processor and
    post-processor tools, respectively. Grey boxes indicate geodatasets.
 
-Other application examples can be found
-`here <http://www.urban-climate.net/umep/Example_Applications>`__.
-
 Evaluation and application studies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Mean Radiant Temperature (`SOLWEIG <http://urban-climate.net/umep/SOLWEIG>`__)
+* Mean Radiant Temperature (`SOLWEIG <SOLWEIG>`)
       - References: Evaluation
   
       .. list-table::
@@ -381,7 +378,7 @@ Evaluation and application studies
                  - `Lindberg et al. (2013) <http://www.sciencedirect.com/science/article/pii/S2212095513000059>`__
 
 
-* Urban Energy and Water Balance (`SUEWS <http://urban-climate.net/umep/SUEWS>`__)
+* Urban Energy and Water Balance (`SUEWS <SUEWS>`)
             - References: Evaluation
 			
             .. list-table::
@@ -492,6 +489,8 @@ Road map for QGIS3 Version
 
 The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__. 
 
+.. note:: There are currently (October 2018) some conflict issues between versions in some python libraries in the OSGeo repository (matplotlib 3.0.0 and pandas 0.23.4). To solve this, follow the instructions found `here <Python_Libraries>`.
+
 MetdataProcessor - READY
 
 ShadowGenerator - READY
@@ -538,7 +537,7 @@ SUEWS - READY
 
 SOLWEIG - READY
 
-BenchMarking  # TODO: KeyError: 'input_cfgfiles'
+BenchMarking  - READY
 
 SEBEVisual # TODO: Not able to run 2to3 converter :Plugin blocker
 

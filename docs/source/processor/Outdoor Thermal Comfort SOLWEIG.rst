@@ -15,7 +15,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 * Introduction:
     -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T~mrt~) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.
-    -  The full manual of the SOLWEIG model can be found `here <http://urban-climate.net/umep/SOLWEIG>`__.
+    -  The full manual of the SOLWEIG model can be found `here <SOLWEIG>`.
 
 * Related Preprocessors：
   - `MetPreprocessor`, `WATCH`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
@@ -102,7 +102,7 @@ Outdoor Thermal Comfort: SOLWEIG
    :header-rows: 0
 
    * - Include POIs
-     - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <http://www.urban-climate.net/umep/SOLWEIG>`__ for more information.
+     - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <SOLWEIG>` for more information.
    * - Adjust sky-emissivity according to Jonsson et al. (2006)
      - Tick this box to include adjustment (0.04) of sky emissivity which was present in the earlier versions of the SOLWEIG model (not recommended).
    * - Consider human as cylinder instead of box

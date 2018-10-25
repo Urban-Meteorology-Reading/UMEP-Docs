@@ -42,7 +42,6 @@ FAQ (Frequently Asked Questions)
     Information on development guidelines can be found ` here <DevelopmentGuidelines>`.
 
 * How can I uninstall QGIS?
-
     Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose *Advanced install*. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to *Desktop* until *Uninstall* is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under *C:\\OSGeo4W64*).
     
           .. figure:: /images/Uninstall.png

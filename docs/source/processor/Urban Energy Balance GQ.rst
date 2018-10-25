@@ -22,7 +22,7 @@ Urban Energy Balance: GQ\ :sub:`F`
      -  Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE Theeuwes, L Järvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D Wästberg, L Xue, Z Zhang 2018: Urban multiscale environmental predictor (UMEP) - An integrated tool for city-based climate services Environmental Modelling and Software 99, 70–87 10.1016/j.envsoft.2017.09.020
 
 * Introduction:
-      `See separate manual <http://urban-climate.net/umep/GQF_Manual>`__
+      `See separate manual <GQF_Manual>`
 
 * Dialog box：
         .. figure:: /images/GQF.png

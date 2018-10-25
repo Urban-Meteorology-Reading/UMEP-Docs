@@ -1,3 +1,5 @@
+.. _LQF_Manual:
+
 LQF Manual
 ################
 

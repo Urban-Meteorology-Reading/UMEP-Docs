@@ -19,7 +19,7 @@ SUEWS Prepare
      - Reading
 
 * Introduction:
-     - The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <http://urban-climate.net/umep/SUEWS>`__, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.   |
+     - The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <SUEWS>`, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.
 * **Terminology** ：
       * Components of the plugin window:
             .. figure:: /images/SuewsPrepareTerminology.jpg
@@ -167,4 +167,4 @@ SUEWS Prepare
                  -  To create a new site entry click the button marked “Edit values”. This will make the text boxes for the variables in the right box available for editing. When you are satisfied with the changes press the button marked “Make changes”. This will show a dialog window that will ask you to provide a site code for your new entry and some description of the site you are adding. After this information is provided you are also able to add an optional url to a picture that represent the site.
 
             -  Plugin Output:
-                 -  In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with `SUEWS/BLUEWS (Advanced) <SUEWSadvanced>`. Also, see the `SUEWS manual <http://urban-climate.net/umep/SUEWS>`__ for more information.
+                 -  In the output folder specified, a number of text files needed as input for the SUEWS model is created. These can be used in conjunction with `SUEWS/BLUEWS (Advanced) <SUEWSadvanced>`. Also, see the `SUEWS manual <SUEWS>` for more information.

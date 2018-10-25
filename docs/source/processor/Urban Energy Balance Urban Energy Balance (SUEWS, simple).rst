@@ -15,7 +15,7 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
       - Reading
 
  * Introduction：
-        - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <http://urban-climate.net/umep/SUEWS>`__).
+        - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <SUEWS>`).
         - This plugin makes it possible to run a simplified version of the Surface Urban Energy and Water Balance Scheme (SUEWS). For a full version of the model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also available as a separate program.
         - SUEWS (Järvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modeled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces.
         - The model uses seven surface types: paved, buildings, evergreen trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is taken into account.
@@ -104,5 +104,5 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
 * References:
       -  Järvi L, Grimmond CSB & Christen A (2011) The Surface Urban Energy and Water Balance Scheme (SUEWS): Evaluation in Los Angeles and Vancouver `J. Hydrol. 411, 219-237. <http://www.sciencedirect.com/science/article/pii/S0022169411006937>`__
       -  Järvi L, Grimmond CSB, Taka M, Nordbo A, Setälä H &Strachan IB (2014) Development of the Surface Urban Energy and Water balance Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7, 1691-1711, `doi:10.5194/gmd-7-1691-2014 <http://www.geosci-model-dev.net/7/1691/2014/>`__.                                                                                                                                                                                                                                                                        |
-      -  Ward HC, L Järvi, S Onomura, F Lindberg, CSB Grimmond (2016a) `SUEWS Manual <http://urban-climate.net/umep/SUEWS>`__: Version 2016a
+      -  Ward HC, L Järvi, S Onomura, F Lindberg, CSB Grimmond (2016a) `SUEWS Manual <SUEWS>`: Version 2016a
       -  Ward HC. S Kotthaus, L Järvi, CSB Grimmond (2016b) Surface Urban Energy and Water Balance Scheme (SUEWS): development and evaluation at two UK sites `Urban Climate (in press) <:File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf>`__.

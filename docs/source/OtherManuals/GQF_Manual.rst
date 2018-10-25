@@ -1,3 +1,5 @@
+.. _GQF_Manual:
+
 GQF Manual
 ################
 
