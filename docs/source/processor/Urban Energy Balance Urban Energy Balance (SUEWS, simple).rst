@@ -15,7 +15,7 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
       - Reading
 
  * Introduction：
-        - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <SUEWS>`).
+        - SUEWS can be run as a standalone or via UMEP (see `SUEWS Manual <https://suews-docs.readthedocs.io/en/latest/>`_.
         - This plugin makes it possible to run a simplified version of the Surface Urban Energy and Water Balance Scheme (SUEWS). For a full version of the model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also available as a separate program.
         - SUEWS (Järvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modeled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces.
         - The model uses seven surface types: paved, buildings, evergreen trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is taken into account.
@@ -25,10 +25,11 @@ Urban Energy Balance: Urban Energy Balance (SUEWS, simple)
         - Model applicability: Local scale – so forcing data should be above the height of the roughness elements (trees, buildings). SUEWS Simple is designed to be executed for a single location but the model is also able to be executed on a grid.
 
 * Related Preprocessors：
-      -  `MetaPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `MorphometricCalculator(Point)`, `SourceArea(Point)`
+      -  `MetPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `MorphometricCalculator(Point)`, `SourceArea(Point)`
 
 * Dialog Box：
     .. figure:: /images/SuewsSimple.png
+       :width: 100%
 
         Dialog for the SUEWS Simple plugin
 

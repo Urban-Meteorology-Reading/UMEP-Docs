@@ -525,7 +525,7 @@ GreaterQF  # TODO: Multiple changes required :Plugin blocker
 
 ExtremeFinder - READY
 
-LQF  # TODO: Multiple changes required :Plugin blocker
+LQF - READY
 
 SEBE - READY
 

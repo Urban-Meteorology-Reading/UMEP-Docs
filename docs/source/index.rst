@@ -39,7 +39,7 @@ that provides data viewing, editing, and analysis capabilities.
 
 --------------
 
-.. note:: The migration of UMEP into QGIS3 is planned for the Autumn of 2018. In the meantime, use UMEP with the LTR version of QGIS (2.18.x).
+.. note:: The porting of UMEP into QGIS3 is almost ready (beta version) but require more testing. In the meantime, UMEP is still availabe for QGIS (2.18.x).
 
 We are keen to get inputs and contributions from others. Plesae contribute in the following ways:
 
