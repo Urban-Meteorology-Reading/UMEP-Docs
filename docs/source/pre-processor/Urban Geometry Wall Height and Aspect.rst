@@ -16,10 +16,11 @@ Urban Geometry: Wall Height and Aspect
 
 
 * Introduction:
-    -The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.
+    The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.
 
 * Dialog box
     .. figure:: /images/WallHeight.png
+        :align: center
 
         The dialog for the Wall Height and Aspect calculator
 
@@ -52,6 +53,7 @@ Urban Geometry: Wall Height and Aspect
 
 * Example:
     .. figure:: /images/Output_Wall_Height.jpg
+        :align: center
     
         A DSM (right) and resulting height raster (left).
 

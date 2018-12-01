@@ -23,6 +23,8 @@ SUEWS Prepare
 * Terminology：
       * Components of the plugin window:
             .. figure:: /images/SuewsPrepareTerminology.jpg
+               :widths: 100%
+               :align: center
 
                 Some naming conventions used in this document relating to the components of the plugin.
 

@@ -19,6 +19,8 @@ Spatial Data: DSM Generator
 
 * Dialog box:
     .. figure:: /images/DSMGenerator.png
+       :widths: 100%
+       :align: center
 
         Dialog for the DSM generator plugin
 
