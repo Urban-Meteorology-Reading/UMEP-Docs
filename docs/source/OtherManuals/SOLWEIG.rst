@@ -1,7 +1,7 @@
 .. _SOLWEIGManual:
 
 SOLWEIG Manual
--------------------
+--------------
 
 The current version of SOLWEIG is v2018a (released 19 October 2018).
 
@@ -9,7 +9,7 @@ NEW in this version: see `Version History`_.
 
 The manual for SOLWEIG should be referenced as follows:
 
-*F Lindberg, CSB Grimmond 2016. SOLWEIG_v2016a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
+*F Lindberg, CSB Grimmond 2016. SOLWEIG_v2018a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
 
 Introduction
 ~~~~~~~~~~~~
@@ -28,12 +28,13 @@ be used to imporove the estimation of T\ :sub:`mrt`. Below is a
 flowchart of the model.
 
 .. figure:: /images/SOLWEIG_flowchart.png
+   :align: center
    :alt:  Overview of SOLWEIG
 
    Overview of SOLWEIG
 
 Suggested reading
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Read the manual and papers listed below to get a full explanation of the
 model and previous evaluation:
@@ -62,7 +63,7 @@ model and previous evaluation:
    paper <http://www.meteo.fr/icuc9/LongAbstracts/bph5-2-3271344_a.pdf>`__)
 
 Install the model
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 As SOLWEIG is included in UMEP (as from version 0.2.1) follow the
 `Getting_Started`
@@ -71,7 +72,7 @@ found under *UMEP -> Processor -> Outdoor Thermal Comfort -> Mean
 Radiant Temperature (SOLWEIG)*.
 
 Input data
-~~~~~~~~~~~~~
+~~~~~~~~~~
 
 There are two categories of data needed to run SOLWEIG. The first
 category is the spatial information in the some various raster grids
@@ -79,19 +80,20 @@ explained below. The other is meteorological data and other settings
 such as environmental and human exposure parameters.
 
 Surface models
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 One essential prerequisite for performing successful model calculation
 is that all surface models are of the same extent and pixel resolution.
 
 Ground and building DSM
-##################################
+#######################
 
 As the name suggest this DSM consist of both ground and building heights
 (masl).
 
 Vegetation DSMs
-##########################
+###############
+
 3D Vegetation is described by two different grids. First a canopy DSM
 (CDSM) which represents the top of the vegetation and second, a trunk
 zone DSM (TDSM) that describes the bottom of the vegetation (see
@@ -100,6 +102,7 @@ and vegetation pixels are given in magl. For a detailed description, see
 Lindberg and Grimmond (2011)  [2]_.
 
 .. figure:: /images/Vegdems.png
+   :align: center
    :alt: Schematic cross section of the vegetation representation in SOLWEIG. a Conifer tree (left) and bush (right), b the canopy DEM and c trunk zone DEM based on (a). From Lindberg and Grimmond (2011)
 
    Schematic cross section of the vegetation representation in SOLWEIG.
@@ -107,12 +110,13 @@ Lindberg and Grimmond (2011)  [2]_.
    **c** trunk zone DEM based on (a). From Lindberg and Grimmond (2011)
 
 .. figure:: /images/Dsm_gbg.png
+    :align: center
 
     Example of a ground and building DSM
 
 
 Digital elevation model
-################################
+#######################
 
 One essential information needed is to know what pixels that are
 occupied with buildings. In order to locate these pixels, there are two
@@ -127,7 +131,7 @@ If a DEM is used, is has to be the same spatial resolution and extent as
 all the other grids used.
 
 Ground cover grid
-###########################
+#################
 
 If the ground cover scheme as presented in Lindberg et al. (2016)  [3]_
 should be used, a ground cover grid should be included. The Ground cover
@@ -138,7 +142,7 @@ grid can be prepared from other data using the Land Cover Reclassifier
 (*UMEP -> Pre-Processor ->* `LandCoverReclassifier`)
 
 Meteorological data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 The format and variables used for meteorological data is the same as for
 other parts of the UMEP-plugin. The time resolution is optional. To
@@ -160,7 +164,7 @@ al. (1990)  [4]_ is included in SOLWEIG. Direct radiation perpendicular
 to the solar beam should be used.
 
 Environmental parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Four main environmental parameters are mandatory; albedo and emissivity
 of ground and walls. For building walls, these are bulk albedo values
@@ -181,7 +185,7 @@ has been parameterisised and evaluated. Other surfaces such as bare soil
 and water are only first order approximations at this point.
 
 Human exposure parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three human exposure parameters available:
 
@@ -190,7 +194,7 @@ There are three human exposure parameters available:
 -  *Posture* (default value=Standing)
 
 Optional settings
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 -  The original model as described in Lindberg et al. (2008)  [6]_ used
    an adjustment of sky emissivity (Jonsson et al. (2006)  [7]_
@@ -202,14 +206,14 @@ Optional settings
    details.
 
 Output data
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 There are two forms of output available, calculated grids of various
 parameters and full model outputs from certain point of interests (POIs)
 within the model domain.
 
 Surface grids
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 There are six different grids that can be saved from each model
 iteration:
@@ -225,7 +229,7 @@ A post-processing plugin (SOLWEIG Analyzer) for the output grids are
 planned to be included in future versions of UMEP.
 
 POI.txt
-^^^^^^^^^^^^^^
+^^^^^^^
 
 By ticking in the option to include POIs (Point of Interest), a vector
 point layer can be added and full model output are written out to text
@@ -342,14 +346,14 @@ specifiedː
 
 
 How to run the model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 The following section provides information on how to run the model and
 what consideration that should be taken into account in order for the
 model to perform at its best.
 
 Run the model for example data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before running the model for your own data it is good to make certain
 that you can run the test data and get the same results as in the
@@ -375,12 +379,14 @@ Sweden or London, UK. Here, you will use the Göteborg data.
    to fit your computer environment. When you are finished, press Run.
 
 .. figure:: /images/SOLWEIGfirsttry.png
+   :width: 100%
    :alt:  none|Dialog for the SOLWEIG model
 
    Dialog for the SOLWEIG model
 
 Tips and Tricks
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+
 -  All grids must have the same extent and pixel resolution.
 -  The coordinate system of all the grids must be the same and translatable to lat, lon coordinates.
 -  Meteorological file must have the default UMEP format.
@@ -391,7 +397,7 @@ Tips and Tricks
    by comparing the global solar radiation and the theoretical maximum
    of solar radiation (I0) from a solar exposed point of interest.
 -  Land cover grid should be in UMEP format.
--  A boolean building grid (building = 0, ground = 1) must be created, either from a land cover or a ground DEM in conjunction with the building and ground DSM.
+-  A boolean building grid (building = 0, ground = 1) must be present, This grid is created either from a land cover or a ground DEM in conjunction with the building and ground DSM.
 -  If using the land cover grid to derive the building grid, it is
    important that it coincides with the ground and building DSM.
    Otherwise strange results will be produced.
@@ -399,7 +405,7 @@ Tips and Tricks
    recommended to consider fluxes on building roofs.
 
 Acknowledgements
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 -  People who have contributed to the development of SOLWEIG (plus
    co-authors of papers):
@@ -425,7 +431,7 @@ Acknowledgements
       Office; NERC ClearfLO, NERC TRUC.
 
 Abbreviations
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 10 50
@@ -453,7 +459,7 @@ Abbreviations
      - Point of Interest
 
 Development
-~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 SOLWEIG is an an open source model that we are keen to get others inputs
 and contributions. There are two main ways to contribute:
@@ -465,7 +471,7 @@ and contributions. There are two main ways to contribute:
 
 
 Version History
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 15 85
@@ -501,7 +507,7 @@ Version History
 
 
 References
-~~~~~~~~~~~~~~
+~~~~~~~~~~
 
 .. [1]
    Höppe P (1992) A new procedure to determine the mean radiant
