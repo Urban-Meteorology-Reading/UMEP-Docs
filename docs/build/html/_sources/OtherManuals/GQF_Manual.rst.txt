@@ -1,8 +1,10 @@
+.. _GQF_Manual:
+
 GQF Manual
-################
+##########
 
 Overview
-===============
+========
 
 GEF provides a method to calculate the anthropogenic heat flux. It uses
 energy consumption, traffic and population data recorded within a city
@@ -39,7 +41,7 @@ Workflow to model Q\ :sub:`F`
    time series from the model outputs.
 
 Main user interface
-=======================
+===================
 
 The main user interface allows the user to select the temporal extent
 and configuration files for the model. Since the model contains many
@@ -47,6 +49,7 @@ configuration options and parameters, these are stored in two files that
 must be managed by the user and are chosen at run time.
 
 .. figure:: /images/300px-GQF_main.png
+    :align: center
 
     GQF main dialogue box
 
@@ -57,7 +60,7 @@ must be managed by the user and are chosen at run time.
      #. Specify model configuration files and output path:
 
           -  GQF needs configuration files that specify the spatial and temporal information to model Q\ :sub:`F`:
-          -  Model Parameters_file_: Fortran-90 namelist file containing numerical parameters required in model calculations
+          -  `Model parameters file <Parameters_file>`: Fortran-90 namelist file containing numerical parameters required in model calculations
           -  `Data sources file`_: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
           -  **Output Path**: Directory into which `Model outputs`_ and associated data will be stored. *Any existing files will be overwritten.*
 
@@ -86,6 +89,7 @@ must be managed by the user and are chosen at run time.
       - The results of previous runs can also be visualised without re-running the model: Select the relevant output directory and Data Sources file are chosen in the GQF UI before pressing the “Visualise” button.    GQF results visualisation dialogue box
 
       .. figure:: /images/300px-Visualise.png
+          :align: center
 
           GQF results visualisation dialogue box
 
@@ -98,10 +102,8 @@ must be managed by the user and are chosen at run time.
       -  One map per Q\ :sub:`F` component and time step is produced, coloured on a logarithmic scale according to the Q\ :sub:`F` value in each output area. The map is updated in the main QGIS window each time a different Q\ :sub:`F` component or time step is selected.
 
 
-
 Model outputs
-==================
-
+=============
 
 Model outputs are stored in the /ModelOutput/ subdirectory of the
 selected model output directory. A separate data file is produced for
@@ -109,7 +111,7 @@ each time step of the model run. Each file contains a column per heat
 flux component and a row for each spatial feature.
 
 -  Output files are timestamped with the
-   pattern\ **GQFYYYYmmdd\_HH-MM**.csv, with times stated in UTC.
+   pattern\ **GQFYYYYmmdd\_HH-MM.csv**, with times stated in UTC.
 
    -  YYYY: 4-digit year
    -  mm: 2-digit month
@@ -121,8 +123,9 @@ flux component and a row for each spatial feature.
    00:00-00:30 UTC.
 -  Each data file is in comma-separated value (CSV) format
 
+
 Synthesised shapefiles
-========================
+======================
 
 If pre-processing of the input data has taken place, the Disaggregated
 energy, transport and population shapefiles are stored in the
@@ -134,8 +137,9 @@ that the data sources file have not changed.
 If previously processed input data are being used, the
 **/DownscaledData/** subdirectory remains empty.
 
+
 Logs
-===========
+====
 
 Several log files are saved in the **/Logs/** subdirectory. The logs are
 intended to help interpretation of model outputs by providing a
@@ -149,13 +153,13 @@ value was looked up.
    particular model time step.
 
 Configuration files
-=====================
+===================
 
 The Parameters and Data Sources file are copied to the **/ConfigFiles/**
 subdirectory of the model output directory for future reference.
 
 Input data
-========================
+==========
 
 Input data consists of spatial and temporal information, a lookup table
 for vehicle fuel efficiency and (optionally) land use cover data to
@@ -177,7 +181,7 @@ further enhance the spatial resolution of the model output.
    -  Variations of the above at different **times of year**.
 
 Spatial data
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 This section lists the spatial data (provided via ESRI shapefiles)
 required by the model. Each shapefile must contain:
@@ -187,7 +191,7 @@ required by the model. Each shapefile must contain:
    is needed for objective cross-referencing of data within the model.
 
 Population data
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Population data [number of people per spatial unit] is used by the model
 in two ways:
@@ -213,7 +217,7 @@ each spatial unit of population is intersected each output area. It is
 areas.
 
 Energy consumption data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The total annual energy consumption [kWh/year] must be provided five
 sub-sectors
@@ -232,7 +236,7 @@ units. Residential and workday population data are therefore used to
 spatially disaggregate it into the model output areas.
 
 Transportation data
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 A comprehensive road network shapefile is required.
 
@@ -242,7 +246,7 @@ A comprehensive road network shapefile is required.
 Four road classes are assumed in the model:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 0
 
    * - **Motorway**
@@ -303,7 +307,7 @@ representative values must also be specified in the `model parameters
 file Parameters_file_:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 0
 
    * - AADT
@@ -484,7 +488,7 @@ Temporal files required by GQF
       This allows seasonality to be captured.
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Q\ :sub:`F` component
@@ -3255,7 +3259,7 @@ must be stored in separate files.
 
 
 Building energy profiles
---------------------------
+------------------------
 
 Seasonal variations
 '''''''''''''''''''
@@ -4735,7 +4739,7 @@ except in this case a single value is looked up instead of a cycle, and
 each day of the year is its own season to improve resolution.
 
 Fuel consumption file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 This file provides the fuel consumption of each Euro-class on urban
 roads and motorways, broken down by vehicle type and euro-class. Each
@@ -4884,7 +4888,7 @@ also contain no commas (,).
      - 206
 
 Further spatial disaggregation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is optional. It assigns transport, building and metabolism heat
 fluxes to only those regions of that map with compatible land covers.
@@ -4990,7 +4994,7 @@ The GQF software has two input files:
    assumptions used in model calculations.
 
 Parameters file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 .. _Parameters_file:
 
 
@@ -5196,7 +5200,7 @@ other vehicles are found exclusively on primary roads.
 
 
 Data sources file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 The data sources file manages the library of shapefiles and temporal
 profile files used by the model. It is divided into a number of sections
@@ -5205,14 +5209,14 @@ profile files used by the model. It is divided into a number of sections
 Everything in the data sources file is **case-sensitive**.
 
 Output areas
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 The shapefile that defines the model output areas to be used: all input
 data are disaggregated into these spatial units, and the model results
 are shown using them. There are three entries:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 1
 
    * - Parameter
@@ -5235,13 +5239,13 @@ An example:
    /
 
 Spatial data: Population and energy use shapefiles
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The population and energy use shapefiles are specified using a
 standardised pattern, each of which consists of four entries:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 1
 
    * - Parameter
@@ -5281,7 +5285,7 @@ Same patterns are used to specify energy consumption data. The full list
 of input shapefile section headings are:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 1
 
    * - Parameter
@@ -5302,7 +5306,7 @@ of input shapefile section headings are:
      - Annual domestic economy 7 electricity consumption
 
 Specifying multiple shapefiles per section
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The examples above show the use of a single shapefile for each energy
 and population data, but multiple shapefiles can also be used in order
@@ -5325,7 +5329,7 @@ Note that a “startDate”, “epsgCode” and “attribToUse” must be specif
 for every shapefile.
 
 Temporal data: Metabolism, energy use and transportation temporal profiles
----------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 Temporal profile files are each added using the same pattern, with a
 list of “profileFiles” added for each category. A complete list is shown
@@ -5375,7 +5379,7 @@ The section headings in the data sources file must exactly match those
 shown. The complete list of required section headings is:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 1
 
    * - Section header
@@ -5402,7 +5406,7 @@ shown. The complete list of required section headings is:
      - Fuel consumption file
 
 Using multiple temporal profile files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As with shapefiles, multiple temporal profile files can be loaded into
 the model to capture different periods of time. All of the data is
@@ -5410,7 +5414,7 @@ combined into a single file inside the model, provided that none of the
 periods described within the files clash.
 
 Transport data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 The transport data shapefile section is longer than the others because
 the model must deal with different levels of data describing traffic
@@ -5424,7 +5428,7 @@ below. These correspond directly to the scenarios shown in (TABLE IN
 PREVIOUS SECTION).
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 1
 
    * - Scenario
@@ -5457,7 +5461,7 @@ best-case scenario. These are based upon values stored in the GQF
 parameters file.
 
 Transport parameters
----------------------------
+--------------------
 
 The table below shows the parameters used in the transport section of
 the data sources file.
@@ -5619,7 +5623,7 @@ correct input data.
      -
 
 Example data sources files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Examples of the transport section of the data sources file that deal
 with different levels of available data. All parameters must be

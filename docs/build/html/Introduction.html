@@ -87,16 +87,18 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#umep-how-to-cite">1.1. UMEP: How to Cite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plugin-architecture">1.2. Plugin Architecture</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pre-processor">1.2.1. Pre-Processor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#processor">1.2.2. Processor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#post-processor">1.2.3. Post-Processor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#email-list">1.2. Email list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plugin-architecture">1.3. Plugin Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pre-processor">1.3.1. Pre-Processor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processor">1.3.2. Processor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#post-processor">1.3.3. Post-Processor</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tool-applications">1.3. Tool Applications</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#evaluation-and-application-studies">1.3.1. Evaluation and application studies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tool-applications">1.4. Tool Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation-and-application-studies">1.4.1. Evaluation and application studies</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#road-map-for-qgis3-version">1.5. Road map for QGIS3 Version</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Getting_Started.html">2. Getting Started</a></li>
@@ -109,7 +111,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -227,8 +229,12 @@ climate&nbsp;services.&nbsp;Environmen tal&nbsp;Modelling&nbsp;and&nbsp;Software
 Urban&nbsp;Multi-scale&nbsp;Environmental&nbsp;Predictor&nbsp;(UMEP)&nbsp;Manual.&nbsp;https://umep-docs.readthedocs.io/
 University&nbsp;of&nbsp;Reading&nbsp;UK,&nbsp;University&nbsp;of&nbsp;Gothenburg&nbsp;Sweden,&nbsp;SIMS&nbsp;China</em></div></blockquote>
 </div>
+<div class="section" id="email-list">
+<h2>1.2. Email list<a class="headerlink" href="#email-list" title="Permalink to this headline">¶</a></h2>
+<p>To get updates and news, join our email list: <a class="reference external" href="https://www.lists.reading.ac.uk/mailman/listinfo/met-umep">www.lists.reading.ac.uk/mailman/listinfo/met-umep</a>.</p>
+</div>
 <div class="section" id="plugin-architecture">
-<span id="pluginarchitecture"></span><h2>1.2. Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permalink to this headline">¶</a></h2>
+<span id="pluginarchitecture"></span><h2>1.3. Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permalink to this headline">¶</a></h2>
 <p>The UMEP plugin consist of three different parts; a pre-processor, a
 processor and a post-processor. The pre-processor is used to prepare
 spatial and meteorological data as inputs to the modelling system. The
@@ -240,7 +246,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <p class="last">It is strongly recommended to transform all geodatasets into the same projected coordinate system (CRS) before any processing starts.</p>
 </div>
 <div class="section" id="pre-processor">
-<h3>1.2.1. Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1. Pre-Processor<a class="headerlink" href="#pre-processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Meteorological Data</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
@@ -342,7 +348,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </table>
 </div>
 <div class="section" id="processor">
-<h3>1.2.2. Processor<a class="headerlink" href="#processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.2. Processor<a class="headerlink" href="#processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Outdoor Thermal Comfort</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
@@ -371,16 +377,16 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <col width="65%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="tutorial/docs/source/Tutorials/LQF.html#lqf"><span class="std std-ref">LQF</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="processor/Urban Energy Balance LQ.html#lqf"><span class="std std-ref">LQF</span></a></td>
 <td>Spatial variations anthropogenic heat release for urban areas</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="tutorial/docs/source/Tutorials/GQF.html#gqf"><span class="std std-ref">GQF</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="processor/Urban Energy Balance GQ.html#gqf"><span class="std std-ref">GQF</span></a></td>
 <td>Anthropogenic Heat (Q<sub>F</sub>). <em>Daily City Operations: Energy use; Gas consumption; Traffic heat loads</em></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="processor/Urban Energy Balance Urban Energy Balance (SUEWS, simple).html#suewssimple"><span class="std std-ref">SUEWS (Simple)</span></a></td>
 <td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="tutorial/docs/source/Tutorials/SuewsAdvanced.html#suewsadvanced"><span class="std std-ref">SUEWS (Advanced)</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="processor/Urban Energy Balance Urban Energy Balance (SUEWS.BLUEWS, advanced).html#suewsadvanced"><span class="std std-ref">SUEWS (Advanced)</span></a></td>
 <td>Urban Energy and Water Balance. <em>Disaster Risk Management: Drought, Heat; Environment evaluation for construction, Water Management, Green infrastructure</em></td>
 </tr>
 </tbody>
@@ -392,7 +398,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 <col width="65%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="tutorial/docs/source/Tutorials/SEBE.html#sebe"><span class="std std-ref">Solar Energy on Building Envelopes (SEBE)</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="processor/Solar Radiation Solar Energy on Building Envelopes (SEBE).html#sebe"><span class="std std-ref">Solar Energy on Building Envelopes (SEBE)</span></a></td>
 <td>Solar irradiance on building roofs and walls in urban environments. <em>Economy and planning: Energy production, resource planning</em></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="processor/Solar Radiation Daily Shadow Pattern.html#dailyshadowpattern"><span class="std std-ref">Daily Shadow Patterns</span></a></td>
@@ -402,7 +408,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </table>
 </div>
 <div class="section" id="post-processor">
-<h3>1.2.3. Post-Processor<a class="headerlink" href="#post-processor" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.3. Post-Processor<a class="headerlink" href="#post-processor" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solar Radiation</strong></p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
@@ -454,7 +460,7 @@ to be plotted, statistics calculated etc. based on the model output.</p>
 </div>
 </div>
 <div class="section" id="tool-applications">
-<span id="toolapplications"></span><h2>1.3. Tool Applications<a class="headerlink" href="#tool-applications" title="Permalink to this headline">¶</a></h2>
+<span id="toolapplications"></span><h2>1.4. Tool Applications<a class="headerlink" href="#tool-applications" title="Permalink to this headline">¶</a></h2>
 <p>A key element of UMEP is to facilitate the preparation of input data
 needed for City-Based Climate Services (CBCS). UMEP provides both
 guidance and tools that enable data preparation and manipulation. This
@@ -477,13 +483,11 @@ temperature using the SOLWEIG model. Bold outlines are mandatory
 items. Yellow, orange and red indicates pre-processor, processor and
 post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 </div>
-<p>Other application examples can be found
-<a class="reference external" href="http://www.urban-climate.net/umep/Example_Applications">here</a>.</p>
 <div class="section" id="evaluation-and-application-studies">
-<h3>1.3.1. Evaluation and application studies<a class="headerlink" href="#evaluation-and-application-studies" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1. Evaluation and application studies<a class="headerlink" href="#evaluation-and-application-studies" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl class="first docutils">
-<dt>Mean Radiant Temperature (<a class="reference external" href="http://urban-climate.net/umep/SOLWEIG">SOLWEIG</a>)</dt>
+<dt>Mean Radiant Temperature (<a class="reference internal" href="processor/Outdoor Thermal Comfort SOLWEIG.html#solweig"><span class="std std-ref">SOLWEIG</span></a>)</dt>
 <dd><ul class="first simple">
 <li>References: Evaluation</li>
 </ul>
@@ -644,7 +648,7 @@ post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Urban Energy and Water Balance (<a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS</a>)</dt>
+<dt>Urban Energy and Water Balance (<code class="xref any docutils literal notranslate"><span class="pre">SUEWS</span></code>)</dt>
 <dd><ul class="first simple">
 <li>References: Evaluation</li>
 </ul>
@@ -825,6 +829,41 @@ post-processor tools, respectively. Grey boxes indicate geodatasets.</span></p>
 </li>
 </ul>
 </div>
+</div>
+<div class="section" id="road-map-for-qgis3-version">
+<span id="qgis3version"></span><h2>1.5. Road map for QGIS3 Version<a class="headerlink" href="#road-map-for-qgis3-version" title="Permalink to this headline">¶</a></h2>
+<p>The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/wiki/Home">repository</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are currently (October 2018) some conflict issues between versions in some python libraries in the OSGeo repository (matplotlib 3.0.0 and pandas 0.23.4). To solve this, follow the instructions found <a class="reference internal" href="Getting_Started.html#python-libraries"><span class="std std-ref">here</span></a>.</p>
+</div>
+<p>MetdataProcessor - READY</p>
+<p>ShadowGenerator - READY</p>
+<p>SkyViewFactorCalculator - READY</p>
+<p>ImageMorphParam - READY</p>
+<p>ImageMorphParmsPoint - READY</p>
+<p>LandCoverFractionGrid - READY</p>
+<p>LandCoverFractionPoint - READY</p>
+<p>LandCoverReclassifier - READY</p>
+<p>WallHeight - READY</p>
+<p>TreeGenerator - READY</p>
+<p>FootprintModel - READY</p>
+<p>LCZ_converter - READY</p>
+<p>UMEP_Data_Download  - READY</p>
+<p>DSMGenerator  # TODO: Working except for OSMImport</p>
+<p>WATCHData  - READY</p>
+<p>GreaterQF  # TODO: Multiple changes required :Plugin blocker</p>
+<p>ExtremeFinder - READY</p>
+<p>LQF - READY</p>
+<p>SEBE - READY</p>
+<p>SuewsSimple - READY</p>
+<p>SUEWSPrepare - READY</p>
+<p>SUEWS - READY</p>
+<p>SOLWEIG - READY</p>
+<p>BenchMarking  - READY</p>
+<p>SEBEVisual # TODO: Not able to run 2to3 converter :Plugin blocker</p>
+<p>SolweigAnalyzer - READY</p>
+<p>SUEWSAnalyzer - READY</p>
 </div>
 </div>
 

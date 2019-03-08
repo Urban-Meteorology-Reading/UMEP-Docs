@@ -3,20 +3,20 @@
 Meteorological Data: MetPreprocessor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Contributor:
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
+   .. list-table::
+      :widths: 50 50
+      :header-rows: 1
 
-   * - Name
-     - Institution
+      * - Name
+        - Institution
 
-   * - Fredrik Lindberg
-     - Gothenburg
+      * - Fredrik Lindberg
+        - Gothenburg
 
 * Introduction
     MetPreprocessor can be used to transform required temporal meteorological data into the format used in UMEP. The following variables are usually required as a minimum: air temperature, relative humidity, barometric pressure, wind speed, incoming shortwave radiation and rainfall; if available, other variables can be supplied as well.
 
-    *Input data* can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The *output format* is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc.
+    *Input data* can include any number of header lines and should be separated by conventional separators (e.g. comma, space, tab, etc). The *output format* is space-separated and includes time-related variables of year, day of year, hour and minute. The plugin is able to process other input time formats including month, day of month, etc. Possibility to use an EnergyPlus Weather (.epw) is also available. Note that .epw-files rarely have precipitation data included. This is is required for SUEWS-modelling and need to be acquired from elsewhere (external dataset).
 
 * **Dialog box**
 .. figure::  /images/MetPreProcessor.jpg
@@ -29,14 +29,9 @@ Meteorological Data: MetPreprocessor
    :header-rows: 0
 
    * - top left
-     - Select an existing text file with meteorological data at a temporal resolution between 5 min and 180 min (3 hours) that is divisible by 5 min.
-          - Note the model runs at a time step of 5-min.
-          - At least hourly resolution is recommended.
-          - The current version of the SEBE-model (April, 2018) requires hourly data.
+     - Select an existing text file with meteorological data at a temporal resolution between 5 min and 180 min (3 hours) that is divisible by 5 min. Tick in EPW box to convert an EnergyPlus Weather file.
    * - middle left
      - Specify time-related columns in the imported data file.
-   * - lower left
-     - map extent is specified
    * - lower left
      - Perform quality control (recommended)
           - Select to perform a simple quality control which will check the input data for unreasonable values of each variable.
@@ -175,12 +170,9 @@ Meteorological Data: MetPreprocessor
      - 0 to 360
      -
 
-
-
 * Remarks
       #. If decimal time is ticked in, **day of year column** must be stated and the **decimal time column** should be numbers between 0 and 1.
-      #. If you have problems with importing a data set. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).
-      #. Gapfilling - there are a number of techniques that can be used for this
-         1. A fast way to get started (you can come back and refine to a more appropriate method)
-            1. Linear fit between one or two missing periods using the data on either
+      #. If you have problems with importing a dataset. Do a time series plot using small points. Check (1) are there any data gaps (there can be no gaps) (2) are the columns lined up throughout the data setes (e.g if variable suddenly changes incorrectly, you may have columns misaligned).
+      #. Gapfilling - there are a number of techniques that can be used for this e.g.:
+            #. Linear fit between one or two missing periods using the data on either
             #. Create diurnal average for each variabel for short periods (e.g. 2 weeks) and use these values to fill missing data

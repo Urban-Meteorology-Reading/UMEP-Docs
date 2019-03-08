@@ -487,9 +487,7 @@ Evaluation and application studies
 Road map for QGIS3 Version
 --------------------------
 
-The migration of UMEP into QGIS3 is planned for the Autumn of 2018 but it has already started. Below you see the status of the different tools regarding implemetation for QGIS3. An early adopter release is available from early August. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__. 
-
-.. note:: There are currently (October 2018) some conflict issues between versions in some python libraries in the OSGeo repository (matplotlib 3.0.0 and pandas 0.23.4). To solve this, follow the instructions found `here <Python_Libraries>`.
+The migration of UMEP into QGIS3 is almost complete. Below you see the status of the different tools regarding implemetation for QGIS3. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__. 
 
 MetdataProcessor - READY
 
@@ -517,7 +515,7 @@ LCZ_converter - READY
 
 UMEP_Data_Download  - READY
 
-DSMGenerator  # TODO: Working except for OSMImport
+DSMGenerator  - Ready
 
 WATCHData  - READY
 
@@ -539,7 +537,7 @@ SOLWEIG - READY
 
 BenchMarking  - READY
 
-SEBEVisual # TODO: Not able to run 2to3 converter :Plugin blocker
+SEBEVisual # TODO: Multiple changes required :Plugin blocker
 
 SolweigAnalyzer - READY
 

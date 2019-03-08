@@ -113,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -202,29 +202,26 @@
 </table>
 <ul>
 <li><dl class="first docutils">
-<dt>Introduction:</dt>
-<dd><ul class="first last simple">
-<li>Information 3d vegetation is not a common spatial information available. The <strong>Tree Generator</strong> can be used to create or alter a vegetation CDSM and TDSM (see <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">abbreviations</span></a>. Be using information from a point layer where the location of the points specifies the tree positions and the attributes sets the shape of the trees, it is possible to produce a the 3d vegetation needed for e.g. Mean radiant temperature modelling (SOLWEIG) or Urban Energy Balance modelling (SUEWS) in UMEP.</li>
-</ul>
+<dt>Introduction</dt>
+<dd><p class="first last">Information 3d vegetation is not a common spatial information available. The <strong>Tree Generator</strong> can be used to create or alter a vegetation CDSM and TDSM (see <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">abbreviations</span></a>. Be using information from a point layer where the location of the points specifies the tree positions and the attributes sets the shape of the trees, it is possible to produce a the 3d vegetation needed for e.g. Mean radiant temperature modelling (SOLWEIG) or Urban Energy Balance modelling (SUEWS) in UMEP.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Dialog box:</dt>
+<dt>Dialog box</dt>
 <dd><div class="first last figure" id="id1">
 <img alt="../_images/Treegeneratorsolweig.png" src="../_images/Treegeneratorsolweig.png" />
-<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">The dialog for the Tree generator</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.20 </span><span class="caption-text">The dialog for the Tree generator</span></p>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first">Dialog sections:</p>
-</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<li><dl class="first docutils">
+<dt>Dialog sections</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>top</td>
@@ -235,34 +232,25 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>Point vector file:</dt>
-<dd><ul class="first last">
-<li>A point vector file including the appropriate attributes for generating the vegetation DSMs</li>
-</ul>
 </dd>
 </dl>
 </li>
-<li>Necessary attributes:</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<li><dl class="first docutils">
+<dt>Point vector file</dt>
+<dd><p class="first last">A point vector file including the appropriate attributes for generating the vegetation DSMs</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Necessary attributes</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Tree type</td>
-<td><dl class="first last docutils">
-<dt>Two different tree types (shapes) are currently included:</dt>
-<dd><ul class="first last simple">
-<li>1 = conifer</li>
-<li>2 = decidouos.</li>
-<li>There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.</li>
-</ul>
-</dd>
-</dl>
-</td>
+<td>Two different tree types (shapes) are currently included: 1 = conifer, 2 = decidouos. There is also a possibility to remove vegetation by setting tree type = 0 and with an appropriate diameter to remove all vegetation pixels from the DSMs.</td>
 </tr>
 <tr class="row-even"><td>Total height</td>
 <td>This is the total height of the tree from the ground (magl).</td>
@@ -275,93 +263,75 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>Bollean building grid exist:</dt>
-<dd><ul class="first last">
-<li>Tick this in if a boolen building grid exist for your model domain. This can be generated from the SOLWEIG-plugin.</li>
-</ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Building and Ground DSM:</dt>
-<dd><ul class="first last">
-<li>A DSM consisting of ground and building heights.</li>
-</ul>
+<dt>Bollean building grid exist</dt>
+<dd><p class="first last">Tick this in if a boolen building grid exist for your model domain. This can be generated from the SOLWEIG-plugin.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Ground DEM:</dt>
-<dd><ul class="first last">
-<li>A DEM cosisting of ground heights.</li>
-</ul>
+<dt>Building and Ground DSM</dt>
+<dd><p class="first last">A DSM consisting of ground and building heights.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Building grid:</dt>
-<dd><ul class="first last">
-<li>A grid where building pixels are 0 and all other pixels are 1.</li>
-</ul>
+<dt>Ground DEM</dt>
+<dd><p class="first last">A DEM cosisting of ground heights.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Vegetation Canopy DSM:</dt>
-<dd><ul class="first last">
-<li>A DSM consisting of pixels with vegetation heights above ground.</li>
-</ul>
+<dt>Building grid</dt>
+<dd><p class="first last">A grid where building pixels are 0 and all other pixels are 1.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Vegetation Trunk Zone DSM:</dt>
-<dd><ul class="first last">
-<li>A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground.</li>
-</ul>
+<dt>Vegetation Canopy DSM</dt>
+<dd><p class="first last">A DSM consisting of pixels with vegetation heights above ground.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output Folder:</dt>
-<dd><ul class="first last">
-<li>A specified folder where the result will be saved.</li>
-</ul>
+<dt>Vegetation Trunk Zone DSM</dt>
+<dd><p class="first last">A DSM (geoTIFF) consisting of pixels with vegetation trunk zone heights above ground.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run:</dt>
-<dd><ul class="first last">
-<li>starts the calculations</li>
-</ul>
+<dt>Output Folder</dt>
+<dd><p class="first last">A specified folder where the result will be saved.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Close:</dt>
-<dd><ul class="first last">
-<li>closes the plugin.</li>
-</ul>
+<dt>Run</dt>
+<dd><p class="first last">Starts the calculations</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Close</dt>
+<dd><p class="first last">closes the plugin.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Output:</dt>
-<dd><ul class="first last">
-<li>Two geoTIFFs are created, one CDSM and one TDSM.</li>
-</ul>
+<dd><p class="first last">Two geoTIFFs are created, one CDSM and one TDSM.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Remarks:</dt>
-<dd><ul class="first last">
+<dd><ul class="first last simple">
 <li>All DSMs need to have the same extent and pixel</li>
 <li>To ceate a bush, set trunk height to</li>
-<li>The SOLWEIG plugin cn be used to create the boolean building grid as well as a TDSM based on a</li>
+<li>The SOLWEIG plugin can be used to create the boolean building grid as well</li>
 </ul>
 </dd>
 </dl>

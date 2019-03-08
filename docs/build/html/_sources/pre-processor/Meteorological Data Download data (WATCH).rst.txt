@@ -30,8 +30,8 @@ Meteorological Data: Download data (WATCH)
 
 
 * Introduction：
-      #. Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
-      #. The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.
+      Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
+      The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.
         -  The `WFD <Abbreviations>` dataset is based on 40-year `ECMWF <Abbreviations>` Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.
         -  The `WFDEI <Abbreviations>` dataset is based on `ERA <Abbreviations>`-interim re-analysis data and is available at half-degree resolution for 1979-2012.
 
@@ -59,26 +59,32 @@ Meteorological Data: Download data (WATCH)
      - Average over previous 3 hours in WFDEI and over next 3 hours in WFD. CRU and GPCC bias correction options.
 
 
--  The current downscaling procedure **only** deals with WFDEI data; a module for WFD is under development.
--  All precipitation corrections are currently conducted based on **CRU** option.
--  Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:
-.. figure::  /images/350px-Watch_masked.png
+The current downscaling procedure **only** deals with WFDEI data; a module for WFD is under development.
+All precipitation corrections are currently conducted based on **CRU** option.
+Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:
+      
+      .. figure::  /images/525px-Watch_masked.png
+         :align: center
 
-    Available data in WATCH downloader (overlaid on countries)
+         Available data in WATCH downloader (overlaid on countries)
 
 .. note:: Message about missing Python libraries. Follow the instruction at `link <Python_Libraries>`.
 
 * Obtaining WATCH data via UMEP：
       .. figure::  /images/Watch_downloader_2.png
+         :align: center
 
-          Integrated WATCH data downloader: control panel
+         Integrated WATCH data downloader: control panel
 
 * Running the tool：
-      + The downloader is separated into two sections:
-          #. **Download climate data**: Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.
+      The downloader is separated into two sections:
+      
+          **Download climate data**: 
+          Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.
               -  *Latitude* and *longitude*: WGS84 co-ordinates of the study location. Data is extracted from the WATCH grid cell that contains these co-ordinates.
               -  *Start time* and *End Time*: The time range of data to be downloaded (inclusive; to the nearest month)
-          #. **Refine downloaded data**: Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.
+          **Refine downloaded data**: 
+          Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.
                -  *Site height*: Height above sea level of the desired measurement site. This applies adjustments to meteorological parameters based on the height above ground level. Data are available from 1 January 1979 to 31 December 2015.
                -  *UTC offset*: Adjusts the UTC time used in the original WATCH dataset to a local time (e.g., for Beijing time, UTC Offset = 8 h should be specified). **NOTE:** As of now the tool does not support half hour-timezones.
                -  *Rain hours per 3h*: Rain events in the location of interest may be very short – information that is lost because the WATCH data is produced at 3 h intervals, within which it is assumed rain is continuous. This control limits the duration of rain in the 1-hour file to 1, 2 or 3 hours within each 3 hour interval.

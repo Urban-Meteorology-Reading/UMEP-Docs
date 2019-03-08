@@ -12,8 +12,8 @@ Known Issues
    #\ `13061 <https://hub.qgis.org/issues/13061>`__). Other issues found
    should be reported to our
    `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
--  UMEP plugin is not compatible with matplotlib versions 2.x. Use
-   instead 1.5.x. (23/August/2017)
+-  UMEP plugin for QGIS3 is not compatible with matplotlib versions 3.0.0. Use
+   instead 2.3.3 (25/October/2018).
 -  Mac users might have issue pointing at non-existing directories. Work
    around is to manually create directories before starting any
    UMEP-process.

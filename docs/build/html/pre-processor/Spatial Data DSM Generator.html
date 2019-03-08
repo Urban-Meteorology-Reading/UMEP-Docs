@@ -113,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -202,26 +202,18 @@
 </tr>
 </tbody>
 </table>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>Introduction:</dt>
-<dd><ul class="first last simple">
-<li>Digital Surface Models (DSMs) is not always available for the area you want to investigate. The <strong>DSM Generator</strong> can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from <code class="xref any docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Street</span> <span class="pre">Map</span></code> data, is also available.</li>
-</ul>
-</dd>
+<dd>Digital Surface Models (DSMs) is not always available for the area you want to investigate. The <strong>DSM Generator</strong> can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from <a class="reference external" href="http://www.openstreetmap.org">Open Street Map</a> data, is also available.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Dialog box:</dt>
-<dd><div class="first last figure" id="id1">
-<img alt="../_images/DSMGenerator.png" src="../_images/DSMGenerator.png" />
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Dialog for the DSM generator plugin</span></p>
-</div>
-</dd>
+<dd></dd>
 </dl>
 </li>
-<li><p class="first">Dialog sections:</p>
-</li>
+<li>Dialog sections:</li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
@@ -249,82 +241,52 @@
 <ul class="simple">
 <li><dl class="first docutils">
 <dt>Digital Elevation Model:</dt>
-<dd><ul class="first last">
-<li>A raster file containing elevation values needed to create the DSM</li>
-</ul>
-</dd>
+<dd>A raster file containing elevation values needed to create the DSM</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Polygon Vector File:</dt>
-<dd><ul class="first last">
-<li>A polygon vector file including height values of buildings needed to create the DSM</li>
-</ul>
-</dd>
+<dd>A polygon vector file including height values of buildings needed to create the DSM</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Necessary attributes:</dt>
-<dd><ul class="first last">
-<li>Building height values in meters</li>
-</ul>
-</dd>
+<dd>Building height values in meters</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Use Open Street Map:</dt>
-<dd><ul class="first last">
-<li>Tick this in if you do not have a polygon layer with building heights. Open Street Map (© OpenStreetMap contributors) data will be used instead. If no building height is found <strong>building level height</strong> will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 * 3 = 9 meters high.</li>
-</ul>
-</dd>
+<dd>Tick this in if you do not have a polygon layer with building heights. Open Street Map (© OpenStreetMap contributors) data will be used instead. If no building height is found <strong>building level height</strong> will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 * 3 = 9 meters high.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Save OSM as shapefile:</dt>
-<dd><ul class="first last">
-<li>Tick this in if you want to save the Open Street Map data as a polygon layer. This can be used if you want to look at what values has been used and if you want to add values manually.</li>
-</ul>
-</dd>
+<dd>Tick this in if you want to save the Open Street Map data as a polygon layer. This can be used if you want to look at what values has been used and if you want to add values manually.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Map extent:</dt>
-<dd><ul class="first last">
-<li>Set either to map canvas extent or extent from layer. Extent have to be smaller or equal to the raster DEM extent specified in the top section.</li>
-</ul>
-</dd>
+<dd>Set either to map canvas extent or extent from layer. Extent have to be smaller or equal to the raster DEM extent specified in the top section.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Digital Surface Model:</dt>
-<dd><ul class="first last">
-<li>Set output for the generated DSM. Also set output resolution.</li>
-</ul>
-</dd>
+<dd>Set output for the generated DSM. Also set output resolution.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Run:</dt>
-<dd><ul class="first last">
-<li>Starts the calculations</li>
-</ul>
-</dd>
+<dd>Starts the calculations</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Close:</dt>
-<dd><ul class="first last">
-<li>Closes the plugin.</li>
-</ul>
-</dd>
+<dd>Closes the plugin.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Output:</dt>
-<dd><ul class="first last">
-<li>One GeoTIFF is created, a DSM.</li>
-</ul>
-</dd>
+<dd>One GeoTIFF is created, a DSM.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">

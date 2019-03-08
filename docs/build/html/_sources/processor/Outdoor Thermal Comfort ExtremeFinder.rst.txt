@@ -2,30 +2,28 @@
 
 Outdoor Thermal Comfort: ExtremeFinder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Contributor:
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
+* Contributor
+   .. list-table::
+      :widths: 50 50
+      :header-rows: 1
 
-   * - Name
-     - Institution
+      * - Name
+        - Institution
+      * - Bei Huang
+        - Reading
+      * - Andy Gabey
+        - Reading
 
-   * - Bei Huang
-     - Reading
-   * - Andy Gabey
-     - Reading
-
-
-* Current Options:
+* Current Options
     Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.
 
-* Data must be provided by the user, and can be:
+* Data must be provided by the user, and can be
      -  Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)
      -  Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a **'time**' dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.
      -  Text (.txt) file, daily T\ :sub:`max`, T\ :sub:`avg` or T\ :sub:`min` (`file sample <http://www.urban-climate.net/watch_data/data%20set%20sample.txt>`__: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.
 
-* Method ：
-      —  Basis for thresholds - set into Input.nml (namelist)
+* Method
+         Basis for thresholds - set into Input.nml (namelist)
             -  `Meehl and Tebaldi (2004) <http://science.sciencemag.org/content/305/5686/994>`__: 81st, 97.5th
             -  `Fischer and Schär (2010) <http://www.nature.com/ngeo/journal/v3/n6/full/ngeo866.html>`__: 90th
             -  `Vautard et al. (2013) <https://link.springer.com/article/10.1007%2Fs00382-013-1714-z>`__: 90th
@@ -34,12 +32,13 @@ Outdoor Thermal Comfort: ExtremeFinder
             -  `A. K. Srivastava (2009) <http://onlinelibrary.wiley.com/doi/10.1002/asl.232/abstract>`__: 3 °C
             -  Busuioc et al. (2010): 5 °C
 
-* Dialog box:
-       .. figure:: /images/Extremefinder3.png
+* Dialog box
+    .. figure:: /images/Extremefinder3.png
+        :align: center
+           
+        The interface for the ExtremeFinder plugin
 
-          The interface for the ExtremeFinder plugin
-
-* Steps to use:
+* Steps to use
       #. Select climate data: The ExtremeFinder will use all the data available in its analysis. You will be prompted for a text (.txt) or NetCDF (.nc) file:
 
          -  *NetCDF file*: The latitude, longitude, start and end date boxes will be populated automatically, if the data is available in the NetCDF file.
@@ -62,13 +61,14 @@ Outdoor Thermal Comfort: ExtremeFinder
 
       #. Run: Performs the analysis
 
-* Output: Extreme events (heat waves used as example below) ：
-      #. Daily T\ :sub:`max` (or T\ :sub:`avg` / T\ :sub:`min`) with time (Y= Year, X=Month)
+* Output: Extreme events (heat waves used as example below)
+      #. Daily T\ :sub:`max` (or T\ :sub:`avg` / T\ :sub:`min`) with time (Y=Year, X=Month)
 
          -  Colour gives Temperature (see key)
          -  Yellow Box Highlights Heatwave (Coldwave) periods This loads the model interface dialog box:
 
-              .. figure:: /images/350px-TMax1.jpg
+              .. figure:: /images/525px-TMax1.jpg
+                  :align: center
 
                   Heat/Cold wave periods
 
@@ -78,12 +78,14 @@ Outdoor Thermal Comfort: ExtremeFinder
          -  outliers
             - any data beyond the whiskers
 
-              .. figure:: /images/350px-HW_Box.jpg
+              .. figure:: /images/525px-HW_Box.jpg
+                  :align: center
 
                   Box-and-whisker plot of Heat/Cold wave days each year
 
       #. Number of heat (cold) waves days per year
       
-            .. figure:: /images/350px-HWDays.jpg
+            .. figure:: /images/525px-HWDays.jpg
+                :align: center
 
                 Histogram showing number of Heat/Cold wave days each year

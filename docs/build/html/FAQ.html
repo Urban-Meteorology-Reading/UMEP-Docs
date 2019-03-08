@@ -96,7 +96,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="OtherManuals/OtherManuals.html">12. Other Manuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
             
@@ -183,7 +184,7 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>MY new raster is just black after using e.g. the <em>Wall Height and Aspect</em> plugin. What is wrong?</dt>
+<dt>My new raster is just black after using e.g. the <em>Wall Height and Aspect</em> plugin. What is wrong?</dt>
 <dd><p class="first last">Probably nothing. Is is just QGIS that scales the a loaded raster by excluding outliers and if you have large areas with e.g. zeros (which you have in the resulting raster from this plugin) it looks like there is only zeros in your new raster. Go to properties of your new raster layers and reclassify your values that should visualized.</p>
 </dd>
 </dl>
@@ -213,6 +214,12 @@
 </dl>
 </li>
 <li><dl class="first docutils">
+<dt>How do I report an issue with the manual?</dt>
+<dd><p class="first last">Report it at the <a class="reference external" href="https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues">manual repository</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
 <dt>What can UMEP do?</dt>
 <dd><p class="first last"><a class="reference internal" href="Introduction.html#pluginarchitecture"><span class="std std-ref">Tool Architecture</span></a> provides an overview</p>
 </dd>
@@ -226,20 +233,21 @@
 </li>
 <li><dl class="first docutils">
 <dt>What are the development guidelines?</dt>
-<dd><p class="first last"><code class="xref any docutils literal notranslate"><span class="pre">ContributeCoding</span></code></p>
+<dd><p class="first last">Information on development guidelines can be found ` here &lt;DevelopmentGuidelines&gt;`.</p>
 </dd>
 </dl>
 </li>
-<li><p class="first">How can I uninstall QGIS?</p>
-<blockquote>
-<div><p>Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose <em>Advanced install</em>. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to <em>Desktop</em> until <em>Uninstall</em> is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under <em>C:\OSGeo4W64</em>).</p>
-<blockquote>
+<li><dl class="first docutils">
+<dt>How can I uninstall QGIS?</dt>
+<dd><p class="first">Uninstalling QGIS on a Windows PC is not done via the Control Panel as most other software. To uninstall completely, start the OSGeo4W setup (found in your start menu) and choose <em>Advanced install</em>. Continue until you come up to the window where you can add, remove and upgrade the different packages in your QGIS installation. Click on the small wheel with two arrows next to <em>Desktop</em> until <em>Uninstall</em> is seen. This removes shortcuts and most of the files related to QGIS. However, not all OSGeo products are removed. IF you want remove everything, open your File Explorer and remove the folder manually where you installed the OSGEO products (usually under <em>C:\OSGeo4W64</em>).</p>
+<blockquote class="last">
 <div><div class="figure" id="id1">
 <img alt="_images/Uninstall.png" src="_images/Uninstall.png" />
 <p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">QGIS installation dialog (Advanced)</span></p>
 </div>
 </div></blockquote>
-</div></blockquote>
+</dd>
+</dl>
 </li>
 <li><dl class="first docutils">
 <dt>How do I ask other questions?</dt>

@@ -107,13 +107,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../processor/Processor.html">4. Processor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../post_processor/Post-Processor.html">5. Post-Processor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">6. Other Manuals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">7. People Involved &amp; Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">8. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
             
@@ -225,10 +226,8 @@
 <ul>
 <li><dl class="first docutils">
 <dt>Introduction：</dt>
-<dd><ol class="first arabic simple">
-<li>Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global <a class="reference external" href="http://www.eu-watch.org/">WATCH</a> forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.</li>
-<li>The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.</li>
-</ol>
+<dd><p class="first">Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global <a class="reference external" href="http://www.eu-watch.org/">WATCH</a> forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
+The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.</p>
 <blockquote class="last">
 <div><ul class="simple">
 <li>The <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">WFD</span></a> dataset is based on 40-year <a class="reference internal" href="../Abbreviations.html#abbreviations"><span class="std std-ref">ECMWF</span></a> Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.</li>
@@ -276,15 +275,15 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
-<li>The current downscaling procedure <strong>only</strong> deals with WFDEI data; a module for WFD is under development.</li>
-<li>All precipitation corrections are currently conducted based on <strong>CRU</strong> option.</li>
-<li>Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:</li>
-</ul>
-<div class="figure" id="id3">
-<img alt="../_images/350px-Watch_masked.png" src="../_images/350px-Watch_masked.png" />
+<p>The current downscaling procedure <strong>only</strong> deals with WFDEI data; a module for WFD is under development.
+All precipitation corrections are currently conducted based on <strong>CRU</strong> option.
+Data is drawn from a subset of the full WATCH dataset that does not cover the entire globe but includes Europe and the majority of Asian countries excluding Russia at this time. More regions may be added in the future. The map below shows current coverage:</p>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<img alt="../_images/525px-Watch_masked.png" src="../_images/525px-Watch_masked.png" />
 <p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Available data in WATCH downloader (overlaid on countries)</span></p>
 </div>
+</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Message about missing Python libraries. Follow the instruction at <a class="reference internal" href="../Getting_Started.html#python-libraries"><span class="std std-ref">link</span></a>.</p>
@@ -292,7 +291,7 @@
 <ul>
 <li><dl class="first docutils">
 <dt>Obtaining WATCH data via UMEP：</dt>
-<dd><div class="first last figure" id="id4">
+<dd><div class="first last figure align-center" id="id4">
 <img alt="../_images/Watch_downloader_2.png" src="../_images/Watch_downloader_2.png" />
 <p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Integrated WATCH data downloader: control panel</span></p>
 </div>
@@ -301,35 +300,27 @@
 </li>
 <li><dl class="first docutils">
 <dt>Running the tool：</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt>The downloader is separated into two sections:</dt>
-<dd><ol class="first last arabic">
-<li><dl class="first docutils">
-<dt><strong>Download climate data</strong>: Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.</dt>
-<dd><ul class="first last">
+<dd><p class="first">The downloader is separated into two sections:</p>
+<blockquote class="last">
+<div><p><strong>Download climate data</strong>:
+Retrieves WATCH data for all variables for the location and period of interest. This saves a NetCDF (.nc) file that contains all variables at 3 h resolution that can be used directly by ExtremeFinder.</p>
+<blockquote>
+<div><ul class="simple">
 <li><em>Latitude</em> and <em>longitude</em>: WGS84 co-ordinates of the study location. Data is extracted from the WATCH grid cell that contains these co-ordinates.</li>
 <li><em>Start time</em> and <em>End Time</em>: The time range of data to be downloaded (inclusive; to the nearest month)</li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Refine downloaded data</strong>: Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.</dt>
-<dd><ul class="first last">
+</div></blockquote>
+<p><strong>Refine downloaded data</strong>:
+Before the WATCH data can be loaded into models such as SUEWS, it must be downscaled, separated into annual files and refined. These controls perform the refinement on the .nc file downloaded in part (1) and save the results as a text file that can be loaded into further models. The resulting file contains data at 1 hour intervals, with estimates or placeholders for meteorological variables not present in WATCH.</p>
+<blockquote>
+<div><ul class="simple">
 <li><em>Site height</em>: Height above sea level of the desired measurement site. This applies adjustments to meteorological parameters based on the height above ground level. Data are available from 1 January 1979 to 31 December 2015.</li>
 <li><em>UTC offset</em>: Adjusts the UTC time used in the original WATCH dataset to a local time (e.g., for Beijing time, UTC Offset = 8 h should be specified). <strong>NOTE:</strong> As of now the tool does not support half hour-timezones.</li>
 <li><em>Rain hours per 3h</em>: Rain events in the location of interest may be very short – information that is lost because the WATCH data is produced at 3 h intervals, within which it is assumed rain is continuous. This control limits the duration of rain in the 1-hour file to 1, 2 or 3 hours within each 3 hour interval.</li>
 <li><em>Path to LQF results</em>: Incorporates results data from the LQF model into the disaggregated data. Note that this feature produces one file per LQF grid cell and year.</li>
 </ul>
-</dd>
-</dl>
-</li>
-</ol>
-</dd>
-</dl>
-</li>
-</ul>
+</div></blockquote>
+</div></blockquote>
 </dd>
 </dl>
 </li>

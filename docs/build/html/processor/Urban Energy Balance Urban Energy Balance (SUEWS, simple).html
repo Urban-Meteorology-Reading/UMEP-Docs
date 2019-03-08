@@ -100,13 +100,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../post_processor/Post-Processor.html">5. Post-Processor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">6. Other Manuals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">7. People Involved &amp; Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">8. How to Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">9. DevelopmentGuidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">10. Known Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">11. FAQ (Frequently Asked Questions)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">12. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../People_Involved_&amp;_Acknowledgements.html">6. People Involved &amp; Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../How_to_Contribute.html">7. How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevelopmentGuidelines.html">8. DevelopmentGuidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
             
@@ -175,19 +176,20 @@
             
   <div class="section" id="urban-energy-balance-urban-energy-balance-suews-simple">
 <span id="suewssimple"></span><h1>4.7. Urban Energy Balance: Urban Energy Balance (SUEWS, simple)<a class="headerlink" href="#urban-energy-balance-urban-energy-balance-suews-simple" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li>Contributor:</li>
-</ul>
-<blockquote>
-<div><table border="1" class="colwidths-given docutils">
+<ul>
+<li><dl class="first docutils">
+<dt>Contributor</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Name</td>
-<td>Institution</td>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Institution</th>
 </tr>
+</thead>
+<tbody valign="top">
 <tr class="row-even"><td>Fredrik Lindberg</td>
 <td>Gothenburg</td>
 </tr>
@@ -196,11 +198,16 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
+</dd>
+</dl>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="first docutils">
-<dt>Introduction：</dt>
+<dt>Introduction</dt>
 <dd><ul class="first last">
-<li>SUEWS can be run as a standalone or via UMEP (see <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS Manual</a>).</li>
+<li>SUEWS can be run as a standalone or via UMEP (see <a class="reference external" href="https://suews-docs.readthedocs.io/en/latest/">SUEWS Manual</a>.</li>
 <li>This plugin makes it possible to run a simplified version of the Surface Urban Energy and Water Balance Scheme (SUEWS). For a full version of the model, the SUEWS/BLUEWS (Advanced) plugin can be used. It is also available as a separate program.</li>
 <li>SUEWS (Järvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modeled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces.</li>
 <li>The model uses seven surface types: paved, buildings, evergreen trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is taken into account.</li>
@@ -222,24 +229,23 @@
 </div></blockquote>
 <ul>
 <li><dl class="first docutils">
-<dt>Related Preprocessors：</dt>
+<dt>Related Preprocessors</dt>
 <dd><ul class="first last simple">
-<li><code class="xref any docutils literal notranslate"><span class="pre">MetaPreprocessor</span></code>, <a class="reference internal" href="../pre-processor/Meteorological Data Download data (WATCH).html#watch"><span class="std std-ref">Meteorological Data: Download data (WATCH)</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Urban Land Cover: Land Cover Reclassifier</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Fraction (Point).html#landcoverfraction-point"><span class="std std-ref">Urban Land Cover: Land Cover Fraction (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Source Area (Point).html#sourcearea-point"><span class="std std-ref">Urban Morphology: Source Area (Point)</span></a></li>
+<li><a class="reference internal" href="../pre-processor/Meteorological Data MetPreprocessor.html#metpreprocessor"><span class="std std-ref">Meteorological Data: MetPreprocessor</span></a>, <a class="reference internal" href="../pre-processor/Meteorological Data Download data (WATCH).html#watch"><span class="std std-ref">Meteorological Data: Download data (WATCH)</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Urban Land Cover: Land Cover Reclassifier</span></a>, <a class="reference internal" href="../pre-processor/Urban Land Cover Land Cover Fraction (Point).html#landcoverfraction-point"><span class="std std-ref">Urban Land Cover: Land Cover Fraction (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Morphometric Calculator (Point).html#morphometriccalculator-point"><span class="std std-ref">Urban Morphology: Morphometric Calculator (Point)</span></a>, <a class="reference internal" href="../pre-processor/Urban Morphology Source Area (Point).html#sourcearea-point"><span class="std std-ref">Urban Morphology: Source Area (Point)</span></a></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Dialog Box：</dt>
-<dd><div class="first last figure" id="id1">
-<img alt="../_images/SuewsSimple.png" src="../_images/SuewsSimple.png" />
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Dialog for the SUEWS Simple plugin</span></p>
+<dt>Dialog Box</dt>
+<dd><div class="first last figure">
+<a class="reference internal image-reference" href="../_images/SuewsSimple.png"><img alt="../_images/SuewsSimple.png" src="../_images/SuewsSimple.png" style="width: 100%;" /></a>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Dialog sections：</dt>
+<dt>Dialog sections</dt>
 <dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="10%" />
@@ -261,47 +267,39 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Prepared dataset:</dt>
+<dt>Prepared dataset</dt>
 <dd><p class="first last">SUEWS Simple comes with a prepared dataset that can be used for testing. This can be utilized by pressing <strong>Add settings from test dataset</strong>. This dataset is a fictitious dataset from the central parts of London.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Building Morphology:</dt>
-<dd><ul class="first last">
-<li><p class="first">The three site specific building morphology parameters needed are usually derived from Digital Surface Models DSMs. However, they also can be entered manually.</p>
+<dt>Building Morphology</dt>
+<dd><p class="first">The three site specific building morphology parameters needed are usually derived from Digital Surface Models DSMs. However, they also can be entered manually.</p>
 <blockquote>
 <div><ul class="simple">
 <li>To use an already generated text file from the Image Morphometric Calculator (Point) plugin.</li>
 <li>To open the plugin from SUEWS Simple and generate the data.</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
-</li>
-</ul>
+<p class="last">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Tree Morphology:</dt>
-<dd><ul class="first last">
-<li><p class="first">Three site specific tree morphology parameters need to be specified. These can be derived from a Canopy DSMs that include vegetation heights. This can be entered manually or from the Image Morphometric Calculator (Point) plugin. When the plugin is used there are two options:</p>
+<dt>Tree Morphology</dt>
+<dd><p class="first">Three site specific tree morphology parameters need to be specified. These can be derived from a Canopy DSMs that include vegetation heights. This can be entered manually or from the Image Morphometric Calculator (Point) plugin. When the plugin is used there are two options:</p>
 <blockquote>
 <div><ul class="simple">
 <li>To use an already generated text file from the Image Morphometric Calculator (Point) plugin.</li>
 <li>To open the plugin from SUEWS Simple and generate the data.</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
-</li>
-</ul>
+<p class="last">If an already generated text file is used, the <strong>isotropic file</strong> should be used (see Image Morphometric Calculator (Point)).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Land Cover Fractions ：</dt>
+<dt>Land Cover Fractions</dt>
 <dd><p class="first">Land cover fractions should add up to a total of 1. Values can be derived from a UMEP land cover dataset which can be generated via the Land Cover Reclassifier plugin in UMEP. The values can be entered manually or directly from the Land Cover Fraction (Point) plugin. If the plugin is used, there are two options:</p>
 <blockquote class="last">
 <div><ul class="simple">
@@ -313,19 +311,19 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Initial Conditions:</dt>
+<dt>Initial Conditions</dt>
 <dd><p class="first last">The initial conditions are entered here. These relate to time of year, days since rain, soil moisture state and daily mean air temperature at the beginning of a model run. The state of the leaf cycle sets a rough estimate of leaf area index based on season. To adjust this in more detail, the SUEWS, BLUEWS (Advanced) plugin should be used.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Meteorological File:</dt>
+<dt>Meteorological File</dt>
 <dd><p class="first last">The location and filename (.txt) of the meteorological file should be specified here. The format used in most UMEP-related plugins where meteorological data is required can be generated using the Metdata Processor in UMEP. For details, see the help section in the Metdata Processor or the SUEWS manual (Ward et al. 2016a).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output Folder:</dt>
+<dt>Output Folder</dt>
 <dd><ul class="first last simple">
 <li>Specify a folder where you would like all the model results to be saved to. Make sure that you have write capabilities to the specified folder.</li>
 <li><em>Note if you put it within the UMEP plugin folder– be careful that you do not lose any results if you update the plugin by deleting it first.</em></li>
@@ -334,61 +332,59 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Year:</dt>
+<dt>Year</dt>
 <dd><p class="first last">Specify what year you are running.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Latitude:</dt>
+<dt>Latitude</dt>
 <dd><p class="first last">Specify the latitude in decimal degrees. Positive numbers indicate Northern Hemisphere.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Longitude:</dt>
+<dt>Longitude</dt>
 <dd><p class="first last">Specify the longitude in decimal degrees. Positive numbers are to the West.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Population Density:</dt>
+<dt>Population Density</dt>
 <dd><p class="first last">Specify the population density in people/ha (hectare) around the area of interest.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Show Basic Plots of Model Results:</dt>
+<dt>Show Basic Plots of Model Results</dt>
 <dd><p class="first last">Tick this box in if you would like to generate some simple plots of the result from a model run. This requires that the matplotlib library is added to your QGIS installation.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Add Settings from Test Dataset:</dt>
+<dt>Add Settings from Test Dataset</dt>
 <dd><p class="first last">This is recommended if you want to try the model for the first time. This uses a year long dataset from London, UK.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run:</dt>
+<dt>Run</dt>
 <dd><p class="first last">Button starts the model. All inputs must be set prior to this button being available.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Close:</dt>
-<dd><ul class="first last simple">
-<li>Button closes the plugin.</li>
-</ul>
+<dt>Close</dt>
+<dd><p class="first last">Button closes the plugin.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>References:</dt>
+<dt>References</dt>
 <dd><ul class="first last simple">
 <li>Järvi L, Grimmond CSB &amp; Christen A (2011) The Surface Urban Energy and Water Balance Scheme (SUEWS): Evaluation in Los Angeles and Vancouver <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0022169411006937">J. Hydrol. 411, 219-237.</a></li>
 <li>Järvi L, Grimmond CSB, Taka M, Nordbo A, Setälä H &amp;Strachan IB (2014) Development of the Surface Urban Energy and Water balance Scheme (SUEWS) for cold climate cities, Geosci. Model Dev. 7, 1691-1711, <a class="reference external" href="http://www.geosci-model-dev.net/7/1691/2014/">doi:10.5194/gmd-7-1691-2014</a>.                                                                                                                                                                                                                                                                        |</li>
-<li>Ward HC, L Järvi, S Onomura, F Lindberg, CSB Grimmond (2016a) <a class="reference external" href="http://urban-climate.net/umep/SUEWS">SUEWS Manual</a>: Version 2016a</li>
+<li>Ward HC, L Järvi, S Onomura, F Lindberg, CSB Grimmond (2016a) <code class="xref any docutils literal notranslate"><span class="pre">SUEWS</span> <span class="pre">Manual</span></code>: Version 2016a</li>
 <li>Ward HC. S Kotthaus, L Järvi, CSB Grimmond (2016b) Surface Urban Energy and Water Balance Scheme (SUEWS): development and evaluation at two UK sites <a class="reference external" href=":File:SUEWS_UKEvaluationPaper_Revised_v1-03.pdf">Urban Climate (in press)</a>.</li>
 </ul>
 </dd>

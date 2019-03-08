@@ -2,30 +2,23 @@
 
 Urban Morphology: Source Area (Point)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* How to Cite：
-      - Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).
-      -  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]
-      -  Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
 
-* Contributors:
-.. list-table::
-   :widths: 40 60
-   :header-rows: 1
+* Contributors
+   .. list-table::
+      :widths: 40 60
+      :header-rows: 1
 
-   * - Name
-     - Institution
+      * - Name
+        - Institution
+      * - Christoph Kent
+        - Reading
+      * - Fredrik Lindberg
+        - Gothenburg
+      * - Brian Offerle
+        - previously Indiana University; Fluxsense
 
-   * - Christoph Kent
-     - Reading
-   * - Fredrik Lindberg
-     - Gothenburg
-   * - Brian Offerle
-     - previously Indiana University; Fluxsense
-
-
-* Introduction:
-     -  The Source Area or *Footprint Model* plugin calculates various morphometric parameters based on digital surface models and source area calculations. Footprint models can be used to determine the likely position and influence of the surface area which is contributing to a turbulent flux measurement at a specific point in time and space with imposed boundary conditions (e.g. meteorological conditions, sources/sinks of passive scalars or surface characteristics). The principle of footprint models is that the measured flux is the integral of all contributing surface elements, with a ‘footprint function’ describing the relative fractional contribution of a discretisized area.                                                                                                                                        |
-
+* Introduction
+     -  The Source Area or *Footprint Model* plugin calculates various morphometric parameters based on digital surface models and source area calculations. Footprint models can be used to determine the likely position and influence of the surface area which is contributing to a turbulent flux measurement at a specific point in time and space with imposed boundary conditions (e.g. meteorological conditions, sources/sinks of passive scalars or surface characteristics). The principle of footprint models is that the measured flux is the integral of all contributing surface elements, with a ‘footprint function’ describing the relative fractional contribution of a discretisized area.                                                                                                                                        
      -  Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al. (2015).
      -  The mathematical basis of Kormann and Meixner (2001) includes a stationary gradient diffusion formulation, height independent cross-wind dispersion, power law profiles of mean wind velocity and eddy diffusivity and a power law solution of the two-dimensional advection-diffusion equation. The final solution of the footprint function is calculated by fitting the power laws (mean wind and eddy diffusivity) to Monin-Obukhov similarity profiles. As with all models the limitations should be appreciated which include (but are not limited to) assumptions of Monin-Obukhov similarity theory, the use of power law profiles, assumptions of horizontally homogeneous flow and assumptions of stationarity during the meteorological or scalar variable input period (i.e. their averaging period; typically 30 – 60 minutes).   |
      -  Two footprint models exit in UMEP: (i) the Kormann and Meixner (2001) analytical footprint model; (ii) Kljun et al.
@@ -34,47 +27,48 @@ Urban Morphology: Source Area (Point)
      -  A ground and 3D object DSM and a DEM should be used as input data. In addition if vegetation heights above ground level (i.e. trees and bushes) are available (CDSM) this can also be used. However, a CDSM need not be used and it is also possible to only use a 3D object DSM with no ground heights.
      -   Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).
 
-* Dialog box：
+* Dialog box
        .. figure:: /images/Footprint.png
+           :aling: center
 
-          The dialog for the Source Area (Point) calculator
+           The dialog for the Source Area (Point) calculator
 
-* Dialog sections：
-.. list-table::
-   :widths: 15 85
-   :header-rows: 0
+* Dialog sections
+   .. list-table::
+      :widths: 15 85
+      :header-rows: 0
 
-   * - upper
-     - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
-   * - middle upper
-     - -  Select if only buildings or both buildings and ground heights are available.
-       -  Specify the input data for buildings and ground.
-   * - middle upper 2
-     - -  Select if vegetation heights are available.
-       -  Specify the input data for buildings and ground.
-       -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
-   * - middle lower
-     - Select input parameters to source area model: specify if a file is used, or values from the dialog box.
-   * - lower
-     - Specify output options and run calculations.
+      * - upper
+        - Select a point on the map canvas by either clicking at a location or by selecting an existing point from a point vector layer.
+      * - middle upper
+        - -  Select if only buildings or both buildings and ground heights are available.
+          -  Specify the input data for buildings and ground.
+      * - middle upper 2
+        - -  Select if vegetation heights are available.
+          -  Specify the input data for buildings and ground.
+          -  Specify porosity (%) of vegetation (0% is impermeable, 100 % is fully porous)
+      * - middle lower
+        - Select input parameters to source area model: specify if a file is used, or values from the dialog box.
+      * - lower
+        - Specify output options and run calculations.
 
-* Select Point on Canvas：
-       - To create a point for where the calculations will take place. When you click the button, the plugin will be disabled until you have clicked the map canvas.
+* Select Point on Canvas
+    To create a point for where the calculations will take place. When you click the button, the plugin will be disabled until you have clicked the map canvas.
 
 * Use Existing Single Point Vector Layer：
-       - Select if you want to use a point from a vector layer that already exist and is loaded in the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.
+    Select if you want to use a point from a vector layer that already exist and is loaded in the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.
 
 * Raster DSM (only Building) Exist：
-       - Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.
+    Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.
 
 * Raster DSM (3D Objects and Ground)：
-       - A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (metres above sea level).
+    A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (metres above sea level).
 
 * Raster DEM (only Ground)：
-        - A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).
+    A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).
 
 * Vegetation Canopy DSM:
-        -  A CDSM (e.g. geoTIFF) consisting of pixels with vegetation heights above ground. Pixels where no objects are present should be set to zero.
+    A CDSM (e.g. geoTIFF) consisting of pixels with vegetation heights above ground. Pixels where no objects are present should be set to zero.
 
 * Use Input File on Specify Input Parameters:
         - An input text file (.txt or .csv) containing the required inputs to the model (see below) with associated time stamps. For example:
@@ -91,39 +85,40 @@ Urban Morphology: Source Area (Point)
             boundary layer height, vegetation porosity].
         Note In this example, the measurement height of the sensor (z\_m\_input) is 50.3
 
-* Conditions for analysis:
-.. list-table::
-   :widths: 40 60
-   :header-rows: 0
+* Conditions for analysis
+   .. list-table::
+      :widths: 40 60
+      :header-rows: 1
 
-   * - Parameter/Variable
-     - Defintion
-   * - Roughness Length for Momentum
-     - First order estimation of roughness length for momentum (|Z0|) for this wind direction [m].
-   * - Zero Displacement Height for Momentum
-     - First order estimation of the zero-plane displacement height for momentum (|Zd|) for this wind direction. [m].
-   * - Measurement Height
-     - Height of sensor above ground level [m].
-   * - Standard Deviation (sigma) of Cross Wind
-     - Standard deviation of the wind in the y direction (lateral wind) [m s\ :sup:`-1`].
-   * - Obukhov Length
-     - Indication of atmospheric stability for use in Monin-Obukhov similarity theory [m].
-   * - Friction Velocity
-     - Shear stress represented in units of velocity for non-dimensional scaling [m s\ :sup:`-1`].
-   * - Wind Direction
-     - Prevailing wind direction during averaging period [degrees].
-   * - Boundary layer height
-     - Height of planetary boundary layer during averaging period [m].
-   * - Vegetation porosity
-     - Aerodynamic porosity of vegetation, 0% is impermeable, 100 % is fully porous [%].
-   * - Maximum Fetch Considered in metres
-     - The furthest distance upwind considered in the calculation of the footprint function [m].
+      * - Parameter/Variable
+        - Defintion
+      * - Roughness Length for Momentum
+        - First order estimation of roughness length for momentum (|Z0|) for this wind direction [m].
+      * - Zero Displacement Height for Momentum
+        - First order estimation of the zero-plane displacement height for momentum (|Zd|) for this wind direction. [m].
+      * - Measurement Height
+        - Height of sensor above ground level [m].
+      * - Standard Deviation (sigma) of Cross Wind
+        - Standard deviation of the wind in the y direction (lateral wind) [m s\ :sup:`-1`].
+      * - Obukhov Length
+        - Indication of atmospheric stability for use in Monin-Obukhov similarity theory [m].
+      * - Friction Velocity
+        - Shear stress represented in units of velocity for non-dimensional scaling [m s\ :sup:`-1`].
+      * - Wind Direction
+        - Prevailing wind direction during averaging period [degrees].
+      * - Boundary layer height
+        - Height of planetary boundary layer during averaging period [m].
+      * - Vegetation porosity
+        - Aerodynamic porosity of vegetation, 0% is impermeable, 100 % is fully porous [%].
+      * - Maximum Fetch Considered in metres
+        - The furthest distance upwind considered in the calculation of the footprint function [m].
 
-* Footprint model:
-      - Specify the footprint model to use: Kormann and Meixner (2001) or Kljun et al. (2015)
+* Footprint model
+      Specify the footprint model to use: Kormann and Meixner (2001) or Kljun et al. (2015)
 
-* Roughness Calculation Method:
-        - Here, options to choose methods for roughness calculations regarding zero displacement height (z:sub:`d`) and roughness length (z:sub:`0`) are available.
+* Roughness Calculation Method
+        Here, options to choose methods for roughness calculations regarding zero displacement height (z\ :sub:`d`) and roughness length (z\ :sub:`0`) are available.
+        
         .. list-table::
            :widths: 20 80
            :header-rows: 0
@@ -141,21 +136,22 @@ Urban Morphology: Source Area (Point)
            * - Kan
              - Kanda et al. (2013)
 
-* File Prefix:
-      - A prefix that will be included in the beginning of the output files.
+* File Prefix
+      A prefix that will be included in the beginning of the output files.
 
-* Output Folder:
-      - A specified folder where result will be saved.
+* Output Folder
+      A specified folder where result will be saved.
 
-* Run:
-     - Starts the calculations.
+* Run
+      Starts the calculations.
 
-* Close:
-      - Closes the plugin.
+* Close
+      Closes the plugin.
 
 * Output：
-      - Two different outputs are generated:
-            #. A raster grid which represents the fractional contribution of each
+      Two different outputs are generated:
+      
+      #. A raster grid which represents the fractional contribution of each
                pixel in the array to turbulent fluxes measured at the sensor (i.e.
                the footprint function). Each pixel of this grid will be of the same
                order to the input grid. Because the user can determine the maximum
@@ -164,7 +160,7 @@ Urban Morphology: Source Area (Point)
                the footprint model is set to run for more than one time period (i.e.
                integrated over time), the footprint functions are summed and
                weighted as a percentage of the pixel of maximum contribution.
-            #. A text file which specifies the time dimensions of measurements, the
+      #. A text file which specifies the time dimensions of measurements, the
                initial aerodynamic and meteorological parameters which were input to
                the model and finally the weighted geometry in the footprint and thus
                the newly calculated roughness length (z:sub:`0`) and displacement
@@ -185,14 +181,18 @@ Urban Morphology: Source Area (Point)
                    height for specified method, footprint specific roughness length for
                    specified method]
 
-* Remarks：
+* Remarks
       - All DSMs need to have the same extent and pixel size.
       - Make certain that have set the projection correctly
-        - After you haved opened the the GeoTiff files (in a new project), right click on the layer name
-          - Set Project CRS from this layer
-            - Now you are ready to start adding the source areas to the image.
+      - After you haved opened the the GeoTiff files (in a new project), right click on the layer name. Set Project CRS from this layer. Now you are ready to start adding the source areas to the image.
 
-* References：
+* How to Cite
+      - Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).
+      - Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]
+      - Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering & Industrial Aerodynamics http://dx.doi.org/10.1016/j.jweia.2017.07.016
+            
+            
+* References
       + Footprint Model
           -  Kormann R and Meixner FX (2001) An analytical footprint model for
              non-neutral stratification. `Bound-Layer Meteorol, 99,

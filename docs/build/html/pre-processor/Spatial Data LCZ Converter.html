@@ -113,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -213,71 +213,46 @@
 </table>
 <ul>
 <li><dl class="first docutils">
-<dt>Introduction:</dt>
-<dd><ul class="first last simple">
-<li>The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the <a class="reference external" href="http://www.wudapt.org/">WUDAPT portal</a>. The local climate zone are urban area classified based on the <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">Stewart and Oke (2012)</a> scheme.</li>
-<li>The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">Stewart et al. (2014)</a>. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.</li>
-</ul>
+<dt><strong>Introduction</strong></dt>
+<dd><p class="first">The Local climate zone (LCZ) converter calculates land cover fractions (see land cover reclassifier) on a vector grid based on LCZ raster maps from the <a class="reference external" href="http://www.wudapt.org/">WUDAPT portal</a>. The local climate zone are urban area classified based on the <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">Stewart and Oke (2012)</a> scheme.</p>
+<p>The raster LCZ maps can be converted into maps of land cover fraction and morphometric properties. For this conversion we use paved, building and pervious fraction for each LCZ from <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">Stewart et al. (2014)</a>. However, what exactly the pervious fraction consists of (grass, trees, bare soil or water) needs to be user-specified. Similarly, morphometric properties for the buildings are specified in this scheme, but the vegetation morphometric properties still need to be specified by the user.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/700px-LCZ_description.png" src="../_images/700px-LCZ_description.png" />
+<p class="caption"><span class="caption-number">Fig. 3.15 </span><span class="caption-text">The definition of the different local climate zones (LCZ)</span></p>
+</div>
+<p class="last">Note: In UMEP we refer to the rural LCZ’s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
 </dd>
 </dl>
-<div class="figure" id="id1">
-<img alt="../_images/700px-LCZ_description.png" src="../_images/700px-LCZ_description.png" />
-<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">The definition of the different local climate zones (LCZ)</span></p>
-</div>
-<p>Note: In UMEP we refer to the rural LCZ’s as 101, 102, 103, 104, 105, 106 and 107 instead of A, B, C, D, E, F and G.</p>
-</li>
-<li><p class="first">Location:
-- The Tree LCZ converter is located at</p>
-<blockquote>
-<div><ul class="simple">
-<li>UMEP</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Pre-Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Spatial Data</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>LCZ converter</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 </li>
 <li><dl class="first docutils">
-<dt>Dialog box:</dt>
-<dd><ul class="first simple">
-<li>The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.</li>
-<li>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ’s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</li>
-<li>When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.</li>
-</ul>
-<div class="figure" id="id2">
+<dt><strong>Dialog box</strong></dt>
+<dd><p class="first">The first tab in the LCZ converter dialog shows a table. This table includes land cover fractions and morphometric properties for buildings and vegetation for each local climate zone. If the default values in the table are not appropriate for the selected city the user has a choice between editing the table directly or using the “pervious distribution” tab in order to provide approximate values for the distribution between grass, bare soil, trees and water and the height of the vegetation.</p>
+<p>Within the “pervious distribution” tab there are two options to change the pervious fraction distribution: Either per LCZ using the “Separate LCZ’s” button or for all LCZ’s together using “Same for all LCZ’s”. When selecting the first option <strong>make sure to select the LCZ raster first</strong>. Based on the LCZ raster, the dropdown boxes will show the LCZ classes ordered by the frequency of occurrence. Select the classes to specify the pervious distributions for and select the most appropriate pervious land cover options and vegetation heights.</p>
+<p>When choosing the “Same for all LCZ’s” option: choose the appropriate pervious land cover fractions and vegetation heights for all urban and all rural LCZ classes.</p>
+<blockquote class="last">
+<div><div class="figure align-center" id="id2">
 <img alt="../_images/700px-LCZdialog1.png" src="../_images/700px-LCZdialog1.png" />
-<p class="caption"><span class="caption-number">Fig. 3.12 </span><span class="caption-text">The <em>Table</em>-tab in the <em>LCZ Converter</em></span></p>
+<p class="caption"><span class="caption-number">Fig. 3.16 </span><span class="caption-text">The <em>Table</em>-tab in the <em>LCZ Converter</em></span></p>
 </div>
-<div class="figure" id="id3">
+<div class="figure align-center" id="id3">
 <img alt="../_images/700px-LCZdialog2.png" src="../_images/700px-LCZdialog2.png" />
-<p class="caption"><span class="caption-number">Fig. 3.13 </span><span class="caption-text">The <em>Pervious distribution</em>-tab in the <em>LCZ Converter</em>: Option 1</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.17 </span><span class="caption-text">The <em>Pervious distribution</em>-tab in the <em>LCZ Converter</em>: Option 1</span></p>
 </div>
-<div class="last figure" id="id4">
+<div class="figure align-center" id="id4">
 <img alt="../_images/700px-LCZdialog3.png" src="../_images/700px-LCZdialog3.png" />
-<p class="caption"><span class="caption-number">Fig. 3.14 </span><span class="caption-text">The <em>Pervious distribution</em>-tab in the <em>LCZ Converter</em>: Option 2</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.18 </span><span class="caption-text">The <em>Pervious distribution</em>-tab in the <em>LCZ Converter</em>: Option 2</span></p>
 </div>
+</div></blockquote>
 </dd>
 </dl>
 </li>
-<li><p class="first">Dialog sections:</p>
+<li><p class="first"><strong>Dialog sections</strong></p>
 </li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="30%" />
+<col width="70%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>upper</td>
@@ -296,42 +271,30 @@
 </table>
 <ul class="simple">
 <li><dl class="first docutils">
-<dt>LCZ raster:</dt>
-<dd><ul class="first last">
-<li>Select the LCZ raster from the <a class="reference external" href="http://www.wudapt.org">WUDAPT database</a>.</li>
-</ul>
-</dd>
+<dt><strong>LCZ raster</strong></dt>
+<dd>Select the LCZ raster from the <a class="reference external" href="http://www.wudapt.org">WUDAPT database</a>.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Vector grid:</dt>
-<dd><ul class="first last">
-<li>Select your predefined polygon grid (see Vector -&amp;gt; Research Tools -&amp;gt; Vector Grid; select polygons not lines)</li>
-</ul>
-</dd>
+<dt><strong>Vector grid</strong></dt>
+<dd>Select your predefined polygon grid (see Vector -&amp;gt; Research Tools -&amp;gt; Vector Grid; select polygons not lines)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Adjust default parameters:</dt>
-<dd><ul class="first last">
-<li>Tick this box if you would like to edit the table below with the land use fractions and tree and building heights for each of the local climate zones.</li>
-</ul>
-</dd>
+<dt><strong>Adjust default parameters</strong></dt>
+<dd>Tick this box if you would like to edit the table below with the land use fractions and tree and building heights for each of the local climate zones.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Separate LCZ’s:</dt>
-<dd><ul class="first last">
-<li>Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.</li>
-</ul>
-</dd>
+<dt><strong>Separate LCZ’s</strong></dt>
+<dd>Once selected it computes the most common LCZ classes in the Raster grid and allows you to alter the pervious fractions and tree heights in the dropdown boxes to the right for each individual LCZ.</dd>
 </dl>
 </li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>LCZ’s:</td>
@@ -347,18 +310,15 @@
 </table>
 <ul class="simple">
 <li><dl class="first docutils">
-<dt>Same for all LCZ’s:</dt>
-<dd><ul class="first last">
-<li>Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.</li>
-</ul>
-</dd>
+<dt>Same for all LCZ’s</dt>
+<dd>Allows you to alter the pervious fractions and tree heights for all urban and rural classes at the same time.</dd>
 </dl>
 </li>
 </ul>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Urban:</td>
@@ -374,57 +334,38 @@
 </table>
 <ul class="simple">
 <li><dl class="first docutils">
-<dt>Update Table:</dt>
-<dd><ul class="first last">
-<li>This updates the table from the default values to the user-specified distributions of the pervious fractions. Please check the table, to make sure your changes have taken effect.</li>
-</ul>
-</dd>
+<dt>Update Table</dt>
+<dd>This updates the table from the default values to the user-specified distributions of the pervious fractions. Please check the table, to make sure your changes have taken effect.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>File Prefix:</dt>
-<dd><ul class="first last">
-<li>A prefix that will be included in the beginning of the output files.</li>
-</ul>
-</dd>
+<dt>File Prefix</dt>
+<dd>A prefix that will be included in the beginning of the output files.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>Add results to polygon grid:</dt>
-<dd><ul class="first last">
-<li>Tick this in if you would like to save the results in the attribute table for your polygon vector grid.</li>
-</ul>
-</dd>
+<dd>Tick this in if you would like to save the results in the attribute table for your polygon vector grid.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output Folder:</dt>
-<dd><ul class="first last">
-<li>A specified folder where result will be saved.</li>
-</ul>
-</dd>
+<dt>Output Folder</dt>
+<dd>A specified folder where result will be saved.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run:</dt>
-<dd><ul class="first last">
-<li>Starts the calculation</li>
-</ul>
-</dd>
+<dt>Run</dt>
+<dd>Starts the calculation</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Close:</dt>
-<dd><ul class="first last">
-<li>Closes the plugin.</li>
-</ul>
-</dd>
+<dt>Close</dt>
+<dd>Closes the plugin.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
+<dt>Output</dt>
+<dd><dl class="first last docutils">
 <dt>Three files are saved after a successful run.</dt>
 <dd><ul class="first last">
 <li>One with the landcover fractions for each grid cell</li>
@@ -433,13 +374,11 @@
 </ul>
 </dd>
 </dl>
-</li>
-</ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Remarks:</dt>
+<dt>Remarks</dt>
 <dd><ul class="first last">
 <li>Rural LCZ’s are marked as 101, 102, etc instead of A, B, etc.</li>
 <li>Issues using .sdat rasters has been reported. GeoTiffs are recommended.</li>
@@ -448,7 +387,7 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>References:</dt>
+<dt>References</dt>
 <dd><ul class="first last">
 <li>Stewart, I.D. and Oke, T.R. 2012. Local Climate Zones for urban temperature studies. Bulletin of the American Meteorological Society, 93: <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/BAMS-D-11-00019.1">1879-1900</a>.</li>
 <li>Stewart, I.D., Oke, T.R., and E.S. Krayenhoff. 2014. Evaluation of the ‘local climate zone’ scheme using temperature observations and model simulations. International Journal of Climatology, 34: <a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1002/joc.3746/abstract">1062-80</a>.</li>

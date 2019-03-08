@@ -113,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -183,10 +183,10 @@
             
   <div class="section" id="urban-land-cover-land-cover-fraction-grid">
 <span id="landcoverfraction-grid"></span><h1>3.10. Urban Land Cover: Land Cover Fraction (Grid)<a class="headerlink" href="#urban-land-cover-land-cover-fraction-grid" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li>Contributor:</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<ul>
+<li><dl class="first docutils">
+<dt>Contributor</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -205,51 +205,27 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li><dl class="first docutils">
-<dt>Introduction:</dt>
-<dd><ul class="first last simple">
-<li>The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Land Cover Reclassifier</span></a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid…</em>).   |</li>
-</ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Location:
-- The Land Cover Fraction (Grid) is located at</p>
-<blockquote>
-<div><ul class="simple">
-<li>UMEP</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Pre-Processor</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Urban Morphology</li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li>Land Cover Fraction (Grid)</li>
-</ul>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
+<li><dl class="first docutils">
+<dt>Introduction</dt>
+<dd><p class="first last">The Land Cover Fraction (Grid) plugin calculates land cover fractions required for UMEP (see <a class="reference internal" href="Urban Land Cover Land Cover Reclassifier.html#landcoverreclassifier"><span class="std std-ref">Land Cover Reclassifier</span></a>) from a point location based on a land cover raster grid. A land cover grid suitable for the processor in UMEP can be derived using the Land Cover Classifier. The fraction will vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the land cover fractions for different directions. It is the same as the Land Cover Fraction (Point) except that this plugin calculates the fractions for each polygon object in polygon vector layer. The polygons should preferable be squares or any other regular shape. To create such a grid, built in functions in QGIS can be used (see <em>Vector -&gt; Research Tools -&gt; Vector Grid…</em>).   |</p>
+</dd>
+</dl>
 </li>
 <li><dl class="first docutils">
-<dt>Dialog Box:</dt>
-<dd><div class="first last figure" id="id1">
+<dt>Dialog Box</dt>
+<dd><div class="first last figure align-center" id="id1">
 <img alt="../_images/LandCoverFractionGrid2.png" src="../_images/LandCoverFractionGrid2.png" />
-<p class="caption"><span class="caption-number">Fig. 3.21 </span><span class="caption-text">The dialog for the Land Cover Fraction (Grid) calculator</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.25 </span><span class="caption-text">The dialog for the Land Cover Fraction (Grid) calculator</span></p>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first">Dialog sections：</p>
-</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<li><dl class="first docutils">
+<dt>Dialog sections</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
@@ -266,128 +242,93 @@
 </tr>
 </tbody>
 </table>
-<ul>
+</dd>
+</dl>
+</li>
 <li><dl class="first docutils">
-<dt>Search Throughout the Grid Extent :</dt>
-<dd><ul class="first simple">
-<li>Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the <strong>Search distance</strong> can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.</li>
-</ul>
-<div class="last figure" id="id2">
+<dt>Search Throughout the Grid Extent</dt>
+<dd><p class="first">Select if the search should be performed from one side of the grid to the opposite side. Select the other option (Search from Grid Centroid) if the search should start from the centroid of the grid. Setting the <strong>Search distance</strong> can then allow for the search to extent beyond the grid. See the figure below for illustration. The left performs a search using the grid extent whereas the right illustrates a search from the centroid and extending outside of the grid.</p>
+<div class="last figure align-center" id="id2">
 <img alt="../_images/Grid_Extent.png" src="../_images/Grid_Extent.png" />
-<p class="caption"><span class="caption-number">Fig. 3.22 </span><span class="caption-text">The two search methods for the Search Throughout the Grid Extent option</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.26 </span><span class="caption-text">The two search methods for the Search Throughout the Grid Extent option</span></p>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Wind Direction Search Interval (Degrees):</dt>
-<dd><ul class="first last simple">
-<li>This decides the interval in search directions for which the morphometric parameters will be calculated.</li>
-</ul>
+<dt>Wind Direction Search Interval (Degrees)</dt>
+<dd><p class="first last">This decides the interval in search directions for which the morphometric parameters will be calculated.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Vector Polygon Grid:</dt>
-<dd><ul class="first last simple">
-<li>Here the grid polygon layer should be specified.</li>
-</ul>
+<dt>Vector Polygon Grid</dt>
+<dd><p class="first last">Here the grid polygon layer should be specified.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>ID Field:</dt>
-<dd><ul class="first last simple">
-<li>Choose an attribute from the selected polygon layer that will be used to separate the different polygon objects from each other. An attribute field of unique numbers or letters should be used.</li>
-</ul>
+<dt>ID Field</dt>
+<dd><p class="first last">Choose an attribute from the selected polygon layer that will be used to separate the different polygon objects from each other. An attribute field of unique numbers or letters should be used.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Add results to polygon grid:</dt>
-<dd><ul class="first last simple">
-<li>Tick this in if you would like to save a isotropic results in the attribute table for your polygon vector grid.</li>
-</ul>
+<dt>Add results to polygon grid</dt>
+<dd><p class="first last">Tick this in if you would like to save a isotropic results in the attribute table for your polygon vector grid.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>UMEP Land Cover Grid:</dt>
-<dd><ul class="first last simple">
-<li>An integer raster land cover grid (e.g. geoTIFF) consisting of the various land covers specified above.</li>
-</ul>
+<dt>UMEP Land Cover Grid</dt>
+<dd><p class="first last">An integer raster land cover grid (e.g. geoTIFF) consisting of the various land covers specified above.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>File Prefix:</dt>
-<dd><ul class="first last simple">
-<li>A prefix that will be included in the beginning of the output files.</li>
-</ul>
+<dt>File Prefix</dt>
+<dd><p class="first last">A prefix that will be included in the beginning of the output files.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Ignore NoData pixels:</dt>
-<dd><ul class="first last simple">
-<li>Tick this in if NoData pixels should be ignored and calculation of grid should be performed eventhough NoData pixels exists within that grid. Nodata pixels are set to bare soil (6).</li>
-</ul>
+<dt>Ignore NoData pixels</dt>
+<dd><p class="first last">Tick this in if NoData pixels should be ignored and calculation of grid should be performed eventhough NoData pixels exists within that grid. Nodata pixels are set to bare soil (6).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output Folder:</dt>
-<dd><ul class="first last simple">
-<li>A specified folder where result will be saved.</li>
-</ul>
+<dt>Output Folder</dt>
+<dd><p class="first last">A specified folder where result will be saved.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run:</dt>
-<dd><ul class="first last simple">
-<li>Starts the calculations.</li>
-</ul>
+<dt>Run</dt>
+<dd><p class="first last">Starts the calculations.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Close:</dt>
-<dd><ul class="first last simple">
-<li>Closes the plugin.</li>
-</ul>
+<dt>Close</dt>
+<dd><p class="first last">Closes the plugin.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output:</dt>
-<dd><ul class="first last simple">
-<li><dl class="first docutils">
-<dt>Two different files are saved after a successful run.</dt>
-<dd><ol class="first last arabic">
+<dt>Output</dt>
+<dd><p class="first">Two different files are saved after a successful run.</p>
+<ul class="simple">
 <li><strong>anisotropic</strong> results: land cover fractions for each wind direction as specified are included.</li>
 <li><strong>isotropic</strong> results: all directions are integrated into one value for each land cover fraction.</li>
-</ol>
-</dd>
-</dl>
-</li>
-<li>If the raster data includes no data values within a polygon object, this grid will not be considered in the calculation.</li>
 </ul>
+<p class="last">If the raster data includes no data values within a polygon object, this grid will not be considered in the calculation.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Remarks：</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/issues">repository</a>).</dt>
-<dd><div class="first last line-block">
-<div class="line"><br /></div>
-</div>
-</dd>
-</dl>
-</li>
-</ul>
+<dt>Remarks</dt>
+<dd><p class="first last">Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the <a class="reference external" href="https://bitbucket.org/fredrik_ucg/umep/issues">repository</a>).</p>
 </dd>
 </dl>
 </li>

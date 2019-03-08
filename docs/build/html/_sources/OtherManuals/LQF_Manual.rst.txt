@@ -1,3 +1,5 @@
+.. _LQF_Manual:
+
 LQF Manual
 ################
 
@@ -42,6 +44,7 @@ describe model assumptions and the library of available data files.
  **Running the model**
 
   .. figure:: /images/300px-LUCY_main.png
+      :align: center
 
       LQF main dialogue box
 
@@ -49,7 +52,7 @@ describe model assumptions and the library of available data files.
 
  -  LQF needs spatial and temporal information about the population, energy consumption and transport in order to model Q\ :sub:`F` at high temporal and spatial resolution:
 
- -  Model parameters file `Parameters_file`_: Fortran-90 namelist file containing numerical parameters required in model calculations
+ -  `Model parameters file <Parameters_file_LQF>`: Fortran-90 namelist file containing numerical parameters required in model calculations
 
  -  `Data sources file`_: Fortran-90 namelist file that contains the locations of spatial and temporal input files used by the model
 
@@ -87,11 +90,13 @@ describe model assumptions and the library of available data files.
  **Visualising output**
 
      .. figure:: /images/300px-Visualise.png
+        :aling: center
 
         LQF results visualisation dialogue box
 
 
      .. figure:: /images/300px-Timeseries.png
+        :align: center
 
         Time series output example
 
@@ -118,7 +123,7 @@ each for total, building, transport and metabolism) and a row for each
 output area.
 
 -  Output files are timestamped with the pattern
-   **LQFYYYYmmdd\_HH-MM**.csv, with times stated in UTC.
+   **LQFYYYYmmdd\_HH-MM.csv**, with times stated in UTC.
 
    -  YYYY: 4-digit year
    -  mm: 2-digit month
@@ -191,7 +196,7 @@ time-varying quantities, and non-consecutive years are permitted. The
 entries are as follows:
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Attribute
@@ -273,7 +278,7 @@ the study area.
    shapefile attributes
 
 Temporal information
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 Information needed by LQF
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -308,7 +313,7 @@ traffic flow and building energy consumption, but these should be
 overridden with local data files whenever possible:
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Q\ :sub:`F` component
@@ -352,7 +357,7 @@ This file records daily air temperature, from which the model estimates
 the response in building energy consumption. These are expressed in
 degrees Celsius.
 
-The file consists of Two columns. The first is the day of year; the
+The file consists of two columns. The first is the day of year; the
 second is the temperature. The file must contain values for the days
 from StartDate to EndDate (inclusive), and the column and row headers
 must be identical to those shown.
@@ -557,7 +562,7 @@ year can be added to a single file, and multiple files can be added.
 
 
 Metabolic activity
-''''''''''''''''''''''''''''''''''''
+''''''''''''''''''
 
 Metabolic activity is calculated based on the parameters in the
 database, which do not change over time (unlike energy consumption,
@@ -646,14 +651,13 @@ occupied by:
 The GQF user interface requires two input files for this process.
 
 -  **Land cover fractions**: Land cover fractions calculated using the
-   `LandCoverReclassifier`
-    in the pre-processing toolbox.
+   `LandCoverReclassifier` in the pre-processing toolbox.
 -  **Corresponding polygon grid**: The ESRI shapefile grid of polygons
    represented by the land cover fractions. This is a required input for
    the UMEP land cover classifier.
 
 ''Note that this feature may be very slow and memory limitations may
-cause it to fail or produce very large output files. ''
+cause it to fail or produce very large output files.''
 
 The overall building, transport and metabolic Q\ :sub:`F` components in
 an MOA are attributed to each ROA based on a set of weightings that
@@ -719,8 +723,9 @@ Current limitations:
    data. If non-zero building energy is calculated in an MOA that has a
    building land cover of zero, then this energy is lost.
 
+   
 Temperature response functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Built-in response
 ^^^^^^^^^^^^^^^^^
@@ -735,8 +740,7 @@ dividing the annual consumption by the number of days in a year. For
 each modelled day, this figure is multiplied by the temperature response
 function for that day. This allows the model to estimate seasonal and
 day-to-day variations in energy consumption and therefore QF. `Lindberg
-et al.
-(2013) <http://www.sciencedirect.com/science/article/pii/S2212095513000059>`__
+et al. (2013) <http://www.sciencedirect.com/science/article/pii/S2212095513000059>`__
 details the response function and how it varies from country to country.
 
 User-defined response
@@ -746,8 +750,9 @@ An alternative temperature response function can be used to override the
 built-in values. This uses 7 parameters, illustrated below:
 
 .. figure:: /images/T_response.png
+     :align: center
 
-     ```to do```
+     Parameters used for the temperature response function
 
 
 #. Tc: Temperature above which air conditioning is used [°C]
@@ -768,18 +773,19 @@ To activate the custom response function, the parameters must be
 specified in the parameters file.
 
 Configuration data
----------------------
+------------------
 
 The LQFsoftware has two configuration files:
 
 -  `Data sources file`_: Manages the various input
    data files and their associated metadata
--  `Parameters_file`_: Contains numerical values and
+-  `Parameters file`_: Contains numerical values and
    assumptions used in model calculations.
 
 
 Parameters file
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+.. _Parameters_file_LQF:
 
 The LQF parameters file contains public holidays and numeric values used
 in calculations. The table below describes the entries in each
@@ -827,8 +833,8 @@ parameters file.
 
      - Assumed metabolic heat emission per person [W] while active (awake)
    * - **CustomTemperatureResponse**:
-     - **Optional parameters for a custom `temperature response <#Temperature_response_functions>`__ function**
-
+   
+     - **Optional parameters for a custom `temperature response <Temperature response functions>` function**
    * - -  Th
 
      - Daily mean Temperature below which heating is used (celsius)
@@ -908,7 +914,7 @@ here as examples)
 
 
 Data sources file
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 The data sources file manages the library of shapefiles and temporal
 profile files used by the model. It is divided into a number of sections
@@ -1058,10 +1064,10 @@ series can be modelled.
       /
 
 Troubleshooting
------------------------
+---------------
 
 Known issues
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Time zone problem
 ^^^^^^^^^^^^^^^^^
@@ -1099,6 +1105,7 @@ results from last time round.
 
 Appendix A: Converting a population raster to a vector shapefile using QGIS
 -----------------------------------------------------------------------------
+.. _AppendixA:
 
 Global population datasets are generally available as raster files, but
 LQF requires a set of population counts as vector polygons. This guide
@@ -1109,8 +1116,9 @@ at 250m resolution.
 #. Load the raster file into QGIS
 
 .. figure:: /images/RasterConvert1.png
+    :align: center
 
-    ```to do```
+    Population raster over central London (100 meter resolution)
 
 
 #. Rename the layer to “Pop” (this saves time later)
@@ -1118,8 +1126,9 @@ at 250m resolution.
    as for the raster. To change it, click the label and choose the
    correct CRS from the list:
 .. figure:: /images/RasterConvert2.png
+    :align: center
 
-    ```to do```
+    Coordinate reference system (CRS) information in QGIS
 
 
 #. Create a vector grid aligned to the raster:
@@ -1127,16 +1136,17 @@ at 250m resolution.
    -  Vector -> Research Tools -> Vector Grid
 
       .. figure:: /images/RasterConvert3.png
+          :align: center
 
-          ```to do```
+          Location of vector grid tool in QGIS 2.18
 
    -  This will show the Vector Grid dialog box:
 
       .. figure:: /images/RasterConvert4.png
+          :align: center
 
-          ```to do```
-
-
+          Dialog of the vector grid tool
+          
       -  In **Grid Extent**:
 
          -  Choose “Pop”
@@ -1162,12 +1172,14 @@ at 250m resolution.
    **Processing** > **Toolbox** > **SAGA** > **Vector to raster**:
 
    .. figure:: /images/Saga1.png
+        :align: center
 
-        ```to do```
+        Location of Vector to Raster tool
 
    .. figure:: /images/Saga2.png
+       :align: center
 
-        ```to do```
+       Vector to Raster tool
 
    -  In *Parameters*, choose:
 
@@ -1183,8 +1195,10 @@ at 250m resolution.
    -  Use this shapefile as the residential population in LQF (in the
       `Data sources file`_)
 
+
 Appendix B: Gathering information about shapefiles for QF modelling
----------------------------------------------------------------------
+-------------------------------------------------------------------
+.. _AppendixB:
 
 LQF and GQF usually need two pieces of information from within a
 shapefile. This section explains how to find that information:
@@ -1200,26 +1214,27 @@ Firstly, open QGIS and load the griddedResidentialPopulation.shp file by
 dragging it into the map area (canvas). An opaque grid should appear.
 
 Finding the shapefile EPSG code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the Layers panel, right-click “griddedResidentialPopulation” and
 choose “Set project CRS from Layer”.
 
 .. figure:: /images/300px-LQF_Tutorial_GetEPSG1.png
+    :align: center
 
-      ```to do```
+    Location of "Set project CRS from Layer"
 
-The
-project CRS code in the bottom right-hand corner of the QGIS window will
+The project CRS code in the bottom right-hand corner of the QGIS window will
 then change to match that of the output areas file. Use the numeric part
 of this to fill in the EPSGcode: entry of the data sources file:
 
 .. figure:: /images/GetEPSG2.png
+    :align: center
 
-    ```to do```
+    Coordinate reference system (CRS) information in QGIS
 
 Finding the unique feature identifier
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Right-click the layer again, and choose “Open Attribute Table”. The
 table that appears contains one row for every output area in the file,
@@ -1227,9 +1242,9 @@ and one attribute for each column.
 
 .. figure:: /images/LQF_Tutorial_FindIdentifier.png
    :alt: LQF_Tutorial_FindIdentifier.png
+   :align: center
 
-
-   ```to do```
+   An attribute table of a vector layer in QGIS
 
 In this case, the column with a unique value for every output area is
 called “ID”. Use this name in the DataSources file.

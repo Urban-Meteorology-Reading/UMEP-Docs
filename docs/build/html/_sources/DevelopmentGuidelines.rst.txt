@@ -33,7 +33,7 @@ Please use the python libraries that comes with the QGIS installation as
 much as possible without including external libraries when developing
 your plugin. All libraries are not included when a common installation
 of QGIS is installed. Go to our `Getting
-started <http://urban-climate.net/umep/UMEP_Manual#UMEP:_Getting_Started>`__
+started <Getting_Started>`
 section for further instructions.
 
 External Python libraries currently included in the UMEP plugin
@@ -369,7 +369,7 @@ Upcoming Developments
 Benchmarking system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Benchmark <http://urban-climate.net/umep/Benchmark>`__
+`Benchmark <Benchmark>`
 
 Coding Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

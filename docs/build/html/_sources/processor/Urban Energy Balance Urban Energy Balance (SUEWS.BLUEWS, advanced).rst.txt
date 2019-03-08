@@ -2,32 +2,32 @@
 
 Urban Energy Balance: Urban Energy Balance (SUEWS/BLUEWS, advanced)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Contributor:
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
+* Contributor
+   .. list-table::
+      :widths: 50 50
+      :header-rows: 1
 
-   * - Name
-     - Institution
+      * - Name
+        - Institution
+      * - Fredrik Lindberg
+        - Gothenburg
 
-   * - Fredrik Lindberg
-     - Gothenburg
-
-* Introduction:
+* Introduction
      - This plugin makes it possible to run the Surface Urban Energy and Water Balance Scheme (SUEWS). SUEWS is also available as a separate program and a simplified version within UMEP (SUEWS Simple).
      - SUEWS (Järvi et al. 2011, 2014, Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modeled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces.
      - The model uses seven surface types: paved, buildings, evergreen trees/shrubs, deciduous trees/shrubs, grass, bare soil and water. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is taken into account.
      - Model applicability: Local scale – so forcing data should be above the height of the roughness elements (trees, buildings)
 
-* Related Preprocessors:
-      - `MetPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `LandCoverFraction(Grid)`, `MorphometricCalculator(Point)`, `MorphometricCalculator(Grid)`, `SourceArea(Point)`
+* Related Preprocessors
+      `MetPreprocessor`, `WATCH`, `LandCoverReclassifier`, `LandCoverFraction(Point)`, `LandCoverFraction(Grid)`, `MorphometricCalculator(Point)`, `MorphometricCalculator(Grid)`, `SourceArea(Point)`
 
-* Dialog box ：
+* Dialog box
       .. figure:: /images/SUEWSAdvanced_SuewsAdvanced.png
+          :align: center
 
           The dialog for SUEWS Advanced
 
-* Dialog sections:
+* Dialog sections
      -  When you run the plugin, you will see the dialog shown above. To use this plugin, all input data needs to be prepared beforehand. This can be done using the various plugins in the pre-processor in UMEP (see `ToolApplications`). The settings available in this plugin is used for specifying the settings for a specific model run. You should consult the manual (`<http://suews-docs.readthedocs.io>`__) for instructions and information on what settings to use. 
      
      -  For extensive models run it is recommended to execute the model outside of QGIS (see manual). 

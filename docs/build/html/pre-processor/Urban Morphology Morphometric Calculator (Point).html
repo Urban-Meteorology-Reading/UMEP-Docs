@@ -113,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Known_Issues.html">9. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">10. FAQ (Frequently Asked Questions)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Abbreviations.html">11. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorial/docs/source/index.html">12. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">12. Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OtherManuals/OtherManuals.html">13. Other Manuals</a></li>
 </ul>
 
@@ -183,20 +183,10 @@
             
   <div class="section" id="urban-morphology-morphometric-calculator-point">
 <span id="morphometriccalculator-point"></span><h1>3.14. Urban Morphology: Morphometric Calculator (Point)<a class="headerlink" href="#urban-morphology-morphometric-calculator-point" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
+<ul>
 <li><dl class="first docutils">
-<dt>How to Cite：</dt>
-<dd><ul class="first last">
-<li>Kent et al. (2017a) unless you are including the impact of vegetation in the roughness calculations then your should cite Kent et al. (2017b).</li>
-<li>Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z <a class="reference external" href="https://link.springer.com/article/10.1007/s10546-017-0248-z">https://link.springer.com/article/10.1007/s10546-017-0248-z</a>]</li>
-<li>Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering &amp; Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10.1016/j.jweia.2017.07.016">http://dx.doi.org/10.1016/j.jweia.2017.07.016</a></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>Contributors:</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<dt>Contributors:</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -224,12 +214,12 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
+</dd>
+</dl>
+</li>
 <li><dl class="first docutils">
-<dt>Introduction:</dt>
-<dd><ul class="first last">
-<li>The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.</li>
-</ul>
+<dt>Introduction</dt>
+<dd><p class="first last">The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.</p>
 </dd>
 </dl>
 </li>
@@ -270,18 +260,17 @@
 </table>
 <ul>
 <li><dl class="first docutils">
-<dt>Dialog box:</dt>
-<dd><div class="first last figure" id="id1">
+<dt>Dialog box</dt>
+<dd><div class="first last figure align-center" id="id1">
 <img alt="../_images/Morph_Calc_point.png" src="../_images/Morph_Calc_point.png" />
-<p class="caption"><span class="caption-number">Fig. 3.27 </span><span class="caption-text">The dialog for the Morphometric Calculator (Point)</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.31 </span><span class="caption-text">The dialog for the Morphometric Calculator (Point)</span></p>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first">Dialog sections：</p>
-</li>
-</ul>
-<table border="1" class="colwidths-given docutils">
+<li><dl class="first docutils">
+<dt>Dialog sections</dt>
+<dd><table border="1" class="colwidths-given first last docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
@@ -305,138 +294,108 @@
 </tr>
 </tbody>
 </table>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>Select Point on Canvas:</dt>
-<dd><ul class="first last">
-<li>Click on this button to create a point from where the calculations will take place. When you click button, the plugin will be disabled until you have clicked the map canvas.</li>
-</ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Use Existing Single Point Vector Layer:</dt>
-<dd><ul class="first last">
-<li>Select if you want to use a point from a vector layer that already exist and are loaded to the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.</li>
-</ul>
+<dt>Select Point on Canvas</dt>
+<dd><p class="first last">Click on this button to create a point from where the calculations will take place. When you click button, the plugin will be disabled until you have clicked the map canvas.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Generate Study Area:</dt>
-<dd><ul class="first last">
-<li>This button is connected to the Search distance (m) and when you click the button a circular polygon layer (Study area) is generated. This is the area that will be used to obtain the morphometric parameters.</li>
-</ul>
+<dt>Use Existing Single Point Vector Layer</dt>
+<dd><p class="first last">Select if you want to use a point from a vector layer that already exist and are loaded to the QGIS-project. The Vector point layer dropdown list will be enabled and include all point vector layer available.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Wind Direction Search Interval (Degrees):</dt>
-<dd><ul class="first last">
-<li>This decides the interval in search directions for which the morphometric parameters will be calculated.</li>
-</ul>
+<dt>Generate Study Area</dt>
+<dd><p class="first last">This button is connected to the Search distance (m) and when you click the button a circular polygon layer (Study area) is generated. This is the area that will be used to obtain the morphometric parameters.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Raster DSM (only Building or Vegetation) Exist:</dt>
-<dd><ul class="first last">
-<li>Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.</li>
-</ul>
+<dt>Wind Direction Search Interval (Degrees)</dt>
+<dd><p class="first last">This decides the interval in search directions for which the morphometric parameters will be calculated.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Raster DSM (3D Object and Ground):</dt>
-<dd><ul class="first last">
-<li>A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (meters above sea level).</li>
-</ul>
+<dt>Raster DSM (only Building or Vegetation) Exist</dt>
+<dd><p class="first last">Select if a 3D-object DSM without ground heights is available. 3D objects (e.g. buildings) should be metres above ground.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Raster DEM (only Ground):</dt>
-<dd><ul class="first last">
-<li>A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).</li>
-</ul>
+<dt>Raster DSM (3D Object and Ground)</dt>
+<dd><p class="first last">A raster DSM (e.g. geoTIFF) consisting of ground and e.g. building height (meters above sea level).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Raster DSM (only 3D Objects):</dt>
-<dd><ul class="first last">
-<li>A DSM (e.g. geoTIFF) consisting of pixels with object (e.g. buildings or vegetation) heights above ground. Pixels where no objects are present should be set to zero.</li>
-</ul>
+<dt>Raster DEM (only Ground)</dt>
+<dd><p class="first last">A DEM (e.g. geoTIFF) consisting of pixels with ground heights (metres above sea level).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Roughness Calculation Method:</dt>
-<dd><ul class="first last">
-<li>Options to choose methods for roughness calculations regarding zero displacement height (zd) and roughness length (z0) are available.</li>
-</ul>
+<dt>Raster DSM (only 3D Objects)</dt>
+<dd><p class="first last">A DSM (e.g. geoTIFF) consisting of pixels with object (e.g. buildings or vegetation) heights above ground. Pixels where no objects are present should be set to zero.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>File Prefix:</dt>
-<dd><ul class="first last">
-<li>A prefix that will be included in the beginning of the output files.</li>
-</ul>
+<dt>Roughness Calculation Method</dt>
+<dd><p class="first last">Options to choose methods for roughness calculations regarding zero displacement height (zd) and roughness length (z0) are available.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output Folder:</dt>
-<dd><ul class="first last">
-<li>A specified folder where result will be saved.</li>
-</ul>
+<dt>File Prefix</dt>
+<dd><p class="first last">A prefix that will be included in the beginning of the output files.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run:</dt>
-<dd><ul class="first last">
-<li>Starts the calculation</li>
-</ul>
+<dt>Output Folder</dt>
+<dd><p class="first last">A specified folder where result will be saved.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Close:</dt>
-<dd><ul class="first last">
-<li>Closes the plugin.</li>
-</ul>
+<dt>Run</dt>
+<dd><p class="first last">Starts the calculation</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Output:</dt>
-<dd><ul class="first last">
+<dt>Close</dt>
+<dd><p class="first last">Closes the plugin.</p>
+</dd>
+</dl>
+</li>
 <li><dl class="first docutils">
-<dt>Two different files are saved after a successful run.</dt>
-<dd><ol class="first last arabic">
+<dt>Output</dt>
+<dd><p class="first">Two different files are saved after a successful run.</p>
+<ol class="last arabic simple">
 <li><strong>Anisotropic</strong> result where the morphometric parameters for each wind direction as selected are included.</li>
 <li><strong>Isotropic</strong> results where all directions are integrated into one value for each parameter.</li>
 </ol>
 </dd>
 </dl>
 </li>
-</ul>
+<li><dl class="first docutils">
+<dt>Remarks</dt>
+<dd><p class="first last">All DSMs need to have the same extent and pixel size.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Remarks:</dt>
-<dd><ul class="first last">
-<li>All DSMs need to have the same extent and pixel size.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>References:</dt>
-<dd><ul class="first last">
+<dt>References</dt>
+<dd><ul class="first last simple">
+<li>Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z <a class="reference external" href="https://link.springer.com/article/10.1007/s10546-017-0248-z">https://link.springer.com/article/10.1007/s10546-017-0248-z</a>]</li>
+<li>Kent CW, S Grimmond, D Gatey Aerodynamic roughness parameters in cities: inclusion of vegetation Journal of Wind Engineering &amp; Industrial Aerodynamics <a class="reference external" href="http://dx.doi.org/10.1016/j.jweia.2017.07.016">http://dx.doi.org/10.1016/j.jweia.2017.07.016</a></li>
 <li>Grimmond CSB and Oke TR (1999) Aerodynamic properties of urban areas derived from analysis of surface form. <a class="reference external" href="http://journals.ametsoc.org/doi/abs/10.1175/1520-0450(1999)038%3C1262%3AAPOUAD%3E2.0.CO%3B2">J Appl Meteorol 38: 1262-1292</a></li>
 </ul>
 </dd>
