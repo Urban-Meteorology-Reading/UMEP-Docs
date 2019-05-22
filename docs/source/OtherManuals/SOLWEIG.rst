@@ -3,13 +3,13 @@
 SOLWEIG Manual
 --------------
 
-The current version of SOLWEIG is v2018a (released 19 October 2018).
+The current version of SOLWEIG is v2019a (released 22 May 2019).
 
 NEW in this version: see `Version History`_.
 
 The manual for SOLWEIG should be referenced as follows:
 
-*F Lindberg, CSB Grimmond 2016. SOLWEIG_v2018a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
+*F Lindberg, CSB Grimmond 2019. SOLWEIG_v2018a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
 
 Introduction
 ~~~~~~~~~~~~
@@ -378,7 +378,7 @@ Sweden or London, UK. Here, you will use the Göteborg data.
    SOLWEIG and use the settings as shown below but replacing the paths
    to fit your computer environment. When you are finished, press Run.
 
-.. figure:: /images/SOLWEIGfirsttry.png
+.. figure:: /images/SOLWEIG_v2019a.png
    :width: 100%
    :alt:  none|Dialog for the SOLWEIG model
 
@@ -411,6 +411,7 @@ Acknowledgements
    co-authors of papers):
 -  Current contributors:
 
+   -  Nils Wallenberg (Göteborg University, Sweden)
    -  C.S.B. Grimmond (University of Reading; previously Indiana
       University, King’s College London, UK),
    -  Fredrik Lindberg (Göteborg University, Sweden)
@@ -479,6 +480,8 @@ Version History
 
    * - Version
      - Changes from previous version
+   * - v2019a 
+     - Possibilities to make use of an anisotrophic diffuse shortwave scheme is added. 
    * - v2018a
      - Minor bug fixing in ground view factor calculation. Introduction to PET and UTCI calculations for POIs. Available only for QGIS3.
    * - v2016a

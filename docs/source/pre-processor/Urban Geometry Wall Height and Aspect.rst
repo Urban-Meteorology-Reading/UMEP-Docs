@@ -67,5 +67,5 @@ Urban Geometry: Wall Height and Aspect
 
 * References：
           -  Goodwin NR, Coops NC, Tooke TR, Christen A, Voogt JA (2009) Characterizing urban surface cover and structure with airborne lidar technology. `Can J Remote Sens 35:297–309 <http://www.tandfonline.com/doi/abs/10.5589/m09-015>`__
-          -  Lindberg F., Jonsson, P. & Honjo, T. and Wästberg, D. (2015) Solar energy on building envelopes - 3D modelling in a 2D environment `Solar Energy 115 369–378 <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
-          -  Lindberg F., Grimmond, C.S.B. and Martilli, A. (2015) Sunlit fractions on urban facets - Impact of spatial resolution and approach `Urban Climate DOI: 10.1016/j.uclim.2014.11.006 <http://www.sciencedirect.com/science/article/pii/S221209551400090X>`__
+          -  Lindberg F., Grimmond, C.S.B. and Martilli, A. (2015a) Sunlit fractions on urban facets - Impact of spatial resolution and approach `Urban Climate DOI: 10.1016/j.uclim.2014.11.006 <http://www.sciencedirect.com/science/article/pii/S221209551400090X>`__
+          -  Lindberg F., Jonsson, P. & Honjo, T. and Wästberg, D. (2015b) Solar energy on building envelopes - 3D modelling in a 2D environment `Solar Energy 115 369–378 <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__

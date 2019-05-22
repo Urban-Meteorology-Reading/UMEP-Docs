@@ -14,14 +14,11 @@ Urban Geometry: Sky View Factor Calculator
       * - Sue Grimmond
         - Reading
 
-
-
 * Introduction
     The Sky View Factor plugin can be used to generate pixel wise sky view factor (SVF) using ground and building digital surface models (DSM). Optionally, vegetation DSMs could also be used. By definition, SVF is the ratio of the radiation received (or emitted) by a planar surface to the radiation emitted (or received) by the entire hemispheric environment (Watson and Johnson 1987). It is a dimensionless measure between zero and one, representing totally obstructed and free spaces, respectively. The methodology that is used to generate SVF here is described in Lindberg and Grimmond (2010).
 
-
 * Dialog box
-    .. figure:: /images/SVFCalculator.png
+    .. figure:: /images/SVFCalculator_new.png
         :align: center
    
         The dialog for the Sky View Factor calculator
@@ -33,6 +30,8 @@ Urban Geometry: Sky View Factor Calculator
 
         * - top
           - Specify input data
+        * - middle
+          - Use new option (faster) to be used with SOLWEIG>v2019a
         * - bottom
           - Specify output data and run calculation
 
@@ -56,6 +55,9 @@ Urban Geometry: Sky View Factor Calculator
 
 * Percentage of Canopy height
      If a trunk zone vegetation DSM is absent, this can be generated based on the height of the Canopy DSM. The default percentage is set to 25%.
+     
+* Use method with 145 shadow images instead of 655 (required for anisotrophic sky SOLWEIG>v2019a
+     If ticked, the model only interates 145 times instead of 655. This produce almost identical SVF images but is about three times faster.
 
 * Output Folder
      Specify folder where results will be saved.
@@ -70,7 +72,7 @@ Urban Geometry: Sky View Factor Calculator
      Closes the plugin.
 
 * Output
-     16 files (geoTIFF) will be saved if vegetation DSM is used. Otherwise, 5 SVFs are saved.
+     16 files (geoTIFF) will be saved if vegetation DSM is used. Otherwise, 5 SVFs are saved. If the option using 145 patches is tick in, a *.npz is also written to disk. This file can later be used in the (`SOLWEIG model <SOLWEIG>`).
 .. list-table::
    :widths: 30 70
    :header-rows: 1

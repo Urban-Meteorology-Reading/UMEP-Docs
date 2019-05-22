@@ -13,15 +13,14 @@ Outdoor Thermal Comfort: SOLWEIG
         - Gothenburg
 
 * Introduction
-    -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T~mrt~) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2016a.
+    -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T\ :sub:`mrt`) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2019a.
     -  The full manual of the SOLWEIG model can be found `here <SOLWEIG>`.
 
 * Related Preprocessors
    `MetPreprocessor`, `WATCH`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
 
-
 * Dialog box
-   .. figure:: /images/SOLWEIG.png
+   .. figure:: /images/SOLWEIG_v2019a.png
       :width: 100%
       :align: center
 
@@ -43,7 +42,7 @@ Outdoor Thermal Comfort: SOLWEIG
       * - Human exposure parameters
         - Settings for calculating mean radiant temperature.
       * - Output maps
-       - Options to choose the geotiffs to be saved for each iteration.
+        - Options to choose the geotiffs to be saved for each iteration.
 
 * Spatial data
    .. list-table::

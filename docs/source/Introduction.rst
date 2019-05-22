@@ -56,7 +56,7 @@ Please use the reference below when UMEP is used:
 
   *Lindberg F, Grimmond CSB, Gabey A, Huang B, Kent CW, Sun T, Theeuwes N, Järvi L, Ward H, Capel-
   Timms I, Chang YY, Jonsson P, Krave N, Liu D, Meyer D, Olofson F, Tan JG, Wästberg D, Xue L,
-  Zhang Z (2017) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based 
+  Zhang Z (2018) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based 
   climate services. Environmen tal Modelling and Software.99, 70-87 https://doi.org/10.1016/j.envsoft.2017.09.020 *
 
   
@@ -64,14 +64,16 @@ The manual should be cited as:
 
 .. epigraph::
 
-  *Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (2018) 
+  *Lindberg F, Grimmond CSB, A Gabey, L Jarvi, CW Kent, N Krave, T Sun, N Wallenberg, HC Ward (2019) 
   Urban Multi-scale Environmental Predictor (UMEP) Manual. https://umep-docs.readthedocs.io/  
   University of Reading UK, University of Gothenburg Sweden, SIMS China*
 
 Email list
 ----------
-To get updates and news, join our email list: `www.lists.reading.ac.uk/mailman/listinfo/met-umep <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
+To get updates, news and get help from other users, join our email list: `www.lists.reading.ac.uk/mailman/listinfo/met-umep <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
 
+
+For a detailed description including how to install QGIS on a Windows PC (see below) or watch this instruction `video <https://www.youtube.com/watch?v=ZEw_DVl772Q>`__. You can find more introductory videos on how to use UMEP on our `YouTube-channel <https://www.youtube.com/channel/UCTPkXncD3ghb5ZTdZe_u7gA>`__.
 
 .. _PluginArchitecture:
 
@@ -519,7 +521,7 @@ DSMGenerator  - Ready
 
 WATCHData  - READY
 
-GreaterQF  # TODO: Multiple changes required :Plugin blocker
+GreaterQF  - READY (BETA)
 
 ExtremeFinder - READY
 

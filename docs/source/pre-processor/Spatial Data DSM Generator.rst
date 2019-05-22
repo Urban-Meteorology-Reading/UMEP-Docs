@@ -15,18 +15,17 @@ Spatial Data: DSM Generator
 
 
 * Introduction:
-    Digital Surface Models (DSMs) is not always available for the area you want to investigate. The **DSM Generator** can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from `Open Street Map <http://www.openstreetmap.org>`_ data, is also available.
+    Digital Surface Models (DSMs) is not always available for the area you want to investigate. The **DSM Generator** can be used to create or alter a DSM by using information from a polygon building footprint layer where a building height attribute is available. An option to acquire building footprints, and also in some cases building height from `Open Street Map <http://www.openstreetmap.org>`_ data, is available from this plugin.
 
-* Dialog box:
+* Dialog box
     .. figure:: /images/DSMGenerator.png
-       :widths: 100%
-       :align: center
+        :align: center
 
         Dialog for the DSM generator plugin
 
 * Dialog sections:
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 0
 
    * - top
@@ -41,13 +40,13 @@ Spatial Data: DSM Generator
      - to run the calculations
 
 * Digital Elevation Model:
-    A raster file containing elevation values needed to create the DSM
+    A raster file containing elevation values needed to create the DSM. Raster elevation data (DEM) can be retrieved from e.g. `OpenDEM <http://www.opendem.info/>`__.
 
 * Polygon Vector File:
-    A polygon vector file including height values of buildings needed to create the DSM
+    A polygon vector file including height values of buildings needed to create the DSM.
 
 * Necessary attributes:
-    Building height values in meters
+    Building height values in meters.
 
 * Use Open Street Map:
     Tick this in if you do not have a polygon layer with building heights. Open Street Map (© OpenStreetMap contributors) data will be used instead. If no building height is found **building level height** will be used instead. Set to appropriate value, e.g. a three level building with building level height set to 3 will be 3 \* 3 = 9 meters high.
@@ -62,7 +61,7 @@ Spatial Data: DSM Generator
     Set output for the generated DSM. Also set output resolution.
 
 * Run:
-    Starts the calculations
+    Starts the calculations.
 
 * Close:
     Closes the plugin.

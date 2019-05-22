@@ -29,24 +29,22 @@ A major feature is the ability for a user to interact with spatial
 information to determine model parameters. The spatial data across a
 range of scales and sources are accessed through
 `QGIS <http://qgis.org>`__ - a cross-platform, free, open source
-desktop geographic information systems
-(`GIS <Abbreviations>`) application –
+desktop geographic information systems application –
 that provides data viewing, editing, and analysis capabilities.
  
 --------------
 
-**To downloading instructions and initial settings:**  :ref:`Getting_Started`
+`CLICK HERE TO GET STARTED <Getting_Started>`.
 
 --------------
-
-.. note:: The porting of UMEP into QGIS3 is almost ready (beta version) but require more testing. In the meantime, UMEP is still availabe for QGIS (2.18.x).
 
 We are keen to get inputs and contributions from others. Plesae contribute in the following ways:
 
 #. Submit comments or report issues about the UMEP plugin to the code `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
 #. Participate in `coding or adding new features <How_to_Contribute>`.
-#. Contribute by writing `tutorials and guidelines <https://tutorial-docs.readthedocs.io/en/latest/>`__ for other users to give examples of the many application possibilities of UMEP.
+#. Write `UMEP tutorials <https://tutorial-docs.readthedocs.io/en/latest/>`__ and share with other UMEP users.
 #. Submit comments or report issues about the UMEP manual `here <https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues>`__.
+#. To get updates, news and get help from other users, join our email list `here <https://www.lists.reading.ac.uk/mailman/listinfo/met-umep>`_.
 
 
 .. toctree::
