@@ -521,7 +521,7 @@ DSMGenerator  - Ready
 
 WATCHData  - READY
 
-GreaterQF  - READY (BETA)
+GreaterQF  - READY
 
 ExtremeFinder - READY
 
