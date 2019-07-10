@@ -16,7 +16,7 @@ Urban Geometry: Wall Height and Aspect
 
 
 * Introduction:
-    The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and height to width ratio.
+    The wall height and aspect pre-processor can be used to identify wall pixels and their height from ground and building digital surface models (DSM) by using a filter as presented by Lindberg et al. (2015a). Optionally, wall aspect can also be estimated using a specific linear filter as presented by Goodwin et al. (1999) and further developed by Lindberg et al. (2015b) to obtain the wall aspect. Wall aspect is given in degrees where a north facing wall pixel has a value of zero. The output of this plugin is used in other UMEP plugins such as SEBE (Solar Energy on Building Envelopes) and SOLWEIG (SOlar LongWave Environmental Irradiance Geometry model).
 
 * Dialog box
     .. figure:: /images/WallHeight.png
@@ -25,7 +25,7 @@ Urban Geometry: Wall Height and Aspect
         The dialog for the Wall Height and Aspect calculator
 
 * Building and Ground DSM:
-    A DSM (geoTIFF) consisting of ground and building heights.
+    A DSM (geoTIFF) consisting of ground and building heights. Use a CRS based on meters as units.
 
 * Calculate Wall Aspect:
     Tick this box if you want to include estimation and output of a wall aspect grid. This calculation is computational intensive and will make your computer work for a while (depending on the size of the input DSM).
@@ -59,8 +59,7 @@ Urban Geometry: Wall Height and Aspect
 
 
 * Remarks：
-          - This plugin make use of **Scipy** which in turn make use of **Pillow**. If this plugin is malfunctioning, try to install/reinstall these packages (see `here <http://umep-docs.readthedocs.io/en/latest/Getting_Started.html#adding-missing-python-libraries-and-other-osgeo-functionalities>`__).
-          -  **NOTE**: The azimuth of the wall is estimated based on a 9 meter linear feature. This implies that coarser pixel resolution gives less pixels and thus a more imprecise measure of wall azimuth as the number of pixels will be lower. It it therefore recommended that use pixel resolution not greater than 2 meter in order to obtain a reasonable result.
+          -  The azimuth of the wall is estimated based on a 9 meter linear feature. This implies that lower pixel resolution gives less pixels and thus a more imprecise measure of wall azimuth as the number of pixels will be lower. It it therefore recommended that use pixel resolution not greater than 2 meter in order to obtain a reasonable result.
           -  Wall pixels will be located ‘outside’ of the building footprint.
           -  The aspect algorithm gives reasonable result but improvements could be made by e.g. using a vector line layer which could be used to populate the wall pixels with aspect values.
           -  **NOTE**: QGIS scales loaded rasters by a *cumulative count out* approach (98%). As the height and aspect layers are filled with zeros where no wall are present it might appear as there is no walls identified. Rescale your results to see the wall identified (*Layer Properties > Style*).

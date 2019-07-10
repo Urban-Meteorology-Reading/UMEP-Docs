@@ -27,9 +27,10 @@ Meteorological Data: Download data (WATCH)
    * - Sue Grimmond
      - Reading
 
-
-
 * Introduction：
+  
+	  .. note:: (11/July/2019) The WATCH download plugin is not functional due to a shutdown of a data server. The UMEP team are working on a solution.
+
       Basic meteorological variables are required for most applications in the UMEP processor. If observed data are not available for a particular location, the global `WATCH <http://www.eu-watch.org/>`__ forcing datasets (Weedon et al. 2011, 2014) can be used to provide this information.
       The WATCH data downloader allows climate reanalysis data to be extracted for a specific location and period of interest, and (optionally) transformed into annual files in a format suitable for models within UMEP.
         -  The `WFD <Abbreviations>` dataset is based on 40-year `ECMWF <Abbreviations>` Re-analysis data (ERA-40) and is available at half-degree resolution for 1901-2001.

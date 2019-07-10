@@ -46,6 +46,7 @@ Detailed information on how to install can be found `here <Getting_Started>`.
 
 Information on version history can be found `here <https://bitbucket.org/fredrik_ucg/umep/commits/branch/master>`__.
 
+.. note:: One essential part when working with geodata in a GIS is to make sure that a common coordinate reference system (CRS) is used, both for the data itself and the current QGIS-project you are working in. For more info, see `here <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__. It is strongly recommended to reproject/transform all geodatasets into the same projected coordinate system before any processing starts as well using a CRS that is based on meters.
 
 UMEP: How to Cite
 -----------------
