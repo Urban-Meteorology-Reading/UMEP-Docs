@@ -7,7 +7,7 @@ Getting Started
 Recommended Installation Steps of QGIS on Windows
 -------------------------------------------------
 
-.. note:: As UMEP-version for QGIS2 is depreciated since February 2019, the new long-term release version of QGIS is 3.x.
+.. note:: As UMEP-version for QGIS2 has been depreciated since February 2019, the new long-term release version of QGIS is 3.x.
 
 #. Visit `QGIS <http://www.qgis.org>`__ and go to the download page. Preferably, choose the `OSGEO4W Network Installer (64-bit) <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__, start the installation and choose *installation (64-bit) For Advanced Users*.
 #. **To install the latest version (3.x)**, start the installation and choose *Express Desktop Install*.
