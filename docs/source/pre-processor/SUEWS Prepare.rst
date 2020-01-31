@@ -19,7 +19,7 @@ SUEWS Prepare
      - Reading
 
 * Introduction:
-     The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <SUEWS>`, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.
+     The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <SUEWSAdvanced>`, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.
 * Terminology：
       * Components of the plugin window:
             .. figure:: /images/SuewsPrepareTerminology.jpg
@@ -134,11 +134,10 @@ SUEWS Prepare
 
             Land use fraction (optional)：
                   This data needs to be added through a text file. Information needed is land use fractions for impervious and building land cover classes. It is possible to include three impervious and five building classes. The format of the text file should be:
-                  
                   ::
-                     ID fLUp1 fLUp2 fLUp3 Code_LUpaved1 Code_LUpaved2 Code_LUpaved3 fLUb1 fLUb2 fLUb3 fLUb4 fLUb5 Code_LUbuilding1 Code_LUbuilding2 Code_LUbuilding3 Code_LUbuilding4 Code_LUbuilding5
-                     1 0 0.62 0.38 806 807 808 0.90 0.10 0 0 0 801 802 803 804 805
-                     ...
+                    ID fLUp1 fLUp2 fLUp3 Code_LUpaved1 Code_LUpaved2 Code_LUpaved3 fLUb1 fLUb2 fLUb3 fLUb4 fLUb5 Code_LUbuilding1 Code_LUbuilding2 Code_LUbuilding3 Code_LUbuilding4 Code_LUbuilding5
+                    1 0 0.62 0.38 806 807 808 0.90 0.10 0 0 0 801 802 803 804 805
+                    ...
                   
                   where *f* is fraction, *LU* is land use and *p* is paved. Fractions must add up to 1 for paved and buildings respectively. A plugin to generate this text file is not yet created.
 

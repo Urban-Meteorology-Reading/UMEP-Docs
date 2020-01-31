@@ -17,7 +17,7 @@ Outdoor Thermal Comfort: SOLWEIG
     -  The full manual of the SOLWEIG model can be found `here <SOLWEIG>`.
 
 * Related Preprocessors
-   `MetPreprocessor`, `WATCH`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
+   `MetPreprocessor`, `ERA5`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
 
 * Dialog box
    .. figure:: /images/SOLWEIG_v2019a.png

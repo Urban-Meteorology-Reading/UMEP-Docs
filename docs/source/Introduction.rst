@@ -4,15 +4,6 @@
 Introduction
 ============
 
-The Urban Multi-scale Environmental Predictor (**UMEP**) is a climate
-services tool, designed for researchers, architects, urban planners,
-climatologists, and meteorologists. This tool can be used for a variety
-of applications related to outdoor thermal comfort, urban energy
-consumption, climate change mitigation etc. **UMEP** consists of a
-coupled modelling system which combines “state of the art” 1D and 2D
-models related to the processes essen tial for urban climate
-interactions.
-
 **UMEP** is a `community <People_Involved_&_Acknowledgements>` open
 source model that users can contribute to improve and extend the
 modelling capabilities. It is free to download. A major feature is the
@@ -41,12 +32,11 @@ will enable results to be plotted, statistics calculated etc. based on
 the model output. For more information on the content and archetecture,
 see `PluginArchitecture`.
 
-
 Detailed information on how to install can be found `here <Getting_Started>`.
 
-Information on version history can be found `here <https://bitbucket.org/fredrik_ucg/umep/commits/branch/master>`__.
+Information on version history can be found `here <https://bitbucket.org/fredrik_ucg/umep/commits/>`__.
 
-.. note:: One essential part when working with geodata in a GIS is to make sure that a common coordinate reference system (CRS) is used, both for the data itself and the current QGIS-project you are working in. For more info, see `here <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__. It is strongly recommended to reproject/transform all geodatasets into the same projected coordinate system before any processing starts as well using a CRS that is based on meters.
+.. note:: One essential part when working with geodata in a GIS is to make sure that a common coordinate reference system (CRS) is used, both for the data itself and the current QGIS-project you are working in. For more info, see `here <https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__. It is strongly recommended to reproject/transform all geodatasets into the same projected coordinate system before any processing starts as well using a CRS that is based on meters.
 
 UMEP: How to Cite
 -----------------
@@ -58,9 +48,8 @@ Please use the reference below when UMEP is used:
   *Lindberg F, Grimmond CSB, Gabey A, Huang B, Kent CW, Sun T, Theeuwes N, Järvi L, Ward H, Capel-
   Timms I, Chang YY, Jonsson P, Krave N, Liu D, Meyer D, Olofson F, Tan JG, Wästberg D, Xue L,
   Zhang Z (2018) Urban Multi-scale Environmental Predictor (UMEP) - An integrated tool for city-based 
-  climate services. Environmen tal Modelling and Software.99, 70-87 https://doi.org/10.1016/j.envsoft.2017.09.020 *
+  climate services. Environmen tal Modelling and Software.99, 70-87*
 
-  
 The manual should be cited as:
 
 .. epigraph::
@@ -103,9 +92,10 @@ Pre-Processor
    * - `Prepare Existing Data <MetPreprocessor>`
      - Transforms meteorological data into UMEP format
    * - `Download data (WATCH) <WATCH>`
-     - Prepare meteorological dataset from `WATCH <http://www.eu-watch.org/data_availability>`__
+     - Prepare meteorological dataset from `WATCH <http://www.eu-watch.org/data_availability>`__ (deprecated)
+   * - `Download data (ERA5) <ERA5>`
+     - Prepare meteorological dataset from `the Coopernicus programme <https://climate.copernicus.eu/>`__
 
-	 
 **Spatial Data**
 
 .. list-table::
@@ -166,7 +156,8 @@ Pre-Processor
    
    * - `SUEWS Prepare <SUEWSPrepare>`
      - Preprocessing and preparing input data for the SUEWS model
-
+   * - `SUEWS Converter <SUEWSConverter>`
+     - Tool for converting input forcing data from older versions of SUEWS
 
 Processor
 ~~~~~~~~~
@@ -177,15 +168,10 @@ Processor
    :widths: 35 65
    :header-rows: 0
 
-   * - Comfort Index (PET/UTCI) (planned)
-     - Spatial variations of thermal comfort indices in complex urban environments
    * - `Mean Radiant Temperature (SOLWEIG) <SOLWEIG>`
      - Spatial variations of T\ :sub:`mrt` in complex urban environments. *Human Health: Outdoor thermal comfort; Park planning; Heat/Health warning; Daily Operations: visitors to parks*
-   * - Pedestrian Wind Speed (planned)
-     - Spatial variations of pedestrian wind speed in complex urban environments
    * - `ExtremeFinder <ExtremeFinder>`
      - Identify heat waves and cold waves for a certain location. *Human Health: Outdoor thermal comfort; Daily City Operations: Energy use; Gas consumption*
-
 
 **Urban Energy Balance**
 
@@ -381,7 +367,7 @@ Evaluation and application studies
                  - `Lindberg et al. (2013) <http://www.sciencedirect.com/science/article/pii/S2212095513000059>`__
 
 
-* Urban Energy and Water Balance (`SUEWS <SUEWS>`)
+* Urban Energy and Water Balance (`SUEWS <SUEWSSimple>`)
             - References: Evaluation
 			
             .. list-table::

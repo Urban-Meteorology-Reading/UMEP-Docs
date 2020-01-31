@@ -18,7 +18,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     The **SEBE** plugin (Solar Energy on Building Envelopes) can be used to calculate pixel wise potential solar energy using ground and building digital surface models (DSM). SEBE is also able to estimate irradiance on building walls. Optionally, vegetation DSMs could also be used. The methodology that is used to generate irradiance is presented in Lindberg et al. (2015).
 
 * Related Preprocessors
-    `MetPreprocessor`, `WATCH`, `WallHeightandAspect`, `LandCoverReclassifier`
+    `MetPreprocessor`, `ERA5`, `WallHeightandAspect`, `LandCoverReclassifier`
 
 * Dialog box
     Consists of:

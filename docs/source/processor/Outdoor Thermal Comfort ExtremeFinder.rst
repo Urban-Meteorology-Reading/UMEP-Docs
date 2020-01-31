@@ -13,12 +13,14 @@ Outdoor Thermal Comfort: ExtremeFinder
         - Reading
       * - Andy Gabey
         - Reading
+      * - Fredrik Lindberg
+        - Gothenburg
 
 * Current Options
     Identifies extreme high events (e.g. Heat waves) and low events (e.g. Cold Waves). Designed primarily for temperature data (heat waves identified from daily maximum and mean T; cold waves from daily minimum), but can also be used to indicate potential high and low extremes in other meteorological variables.
 
 * Data must be provided by the user, and can be
-     -  Previously-downloaded WATCH data in a NetCDF (.nc) file (this can be obtained from the WATCH downloader)
+     -  Previously-downloaded ERA5 data in a NetCDF (*-scf.nc) file (this can be obtained from the ERA5 downloader)
      -  Other NetCDF (.nc) file containing sub-daily measurements, or daily maximum/mean/minimum values. Must contain a **'time**' dimension, and variable(s) with name(s) matching those being analysed using the ExtremeFinder.
      -  Text (.txt) file, daily T\ :sub:`max`, T\ :sub:`avg` or T\ :sub:`min` (`file sample <http://www.urban-climate.net/watch_data/data%20set%20sample.txt>`__: 1979-01-01 to 2009-12-31). Only temperature analysis can be performed using a text file.
 

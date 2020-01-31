@@ -9,7 +9,7 @@ UMEP Manual
 
 The Urban Multi-scale Environmental Predictor (**UMEP**) is a climate
 service tool, designed for researchers and service providers (e.g.
-architects, climatologists, energy, health and urban planners). This
+architects, climatologists, energy, health and urban planners) presented as a plugin for `QGIS <http://qgis.org>`__. This
 tool can be used for a variety of applications related to outdoor
 thermal comfort, urban energy consumption, climate change mitigation
 etc. **UMEP** consists of a coupled modelling system which combines
@@ -23,9 +23,8 @@ for scale independent urban climate estimations.
 
    Source area modelling with UMEP
 
-**UMEP** is a open source model, where users can contribute as well as extend the tool
-to improve modelling capabilities. It is freely available for download.
-A major feature is the ability for a user to interact with spatial
+**UMEP** is open source, where users can contribute as well as extend the tool
+to improve modelling capabilities. A major feature is the ability for a user to interact with spatial
 information to determine model parameters. The spatial data across a
 range of scales and sources are accessed through
 `QGIS <http://qgis.org>`__ - a cross-platform, free, open source
