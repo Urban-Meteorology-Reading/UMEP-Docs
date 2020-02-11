@@ -78,7 +78,7 @@ repository.
                 You need to run the shell as an administrator of your PC. To do this, right-click on **OSGeo4W shell** and choose *run as administrator*. To install e.g. pandas, write the command below in the command window that has appeared:
                 ::
                   py3_env
-                  pip install pandas
+                  python3 -m pip install pandas
                   
                 If nececcary, you can also install other versions of python libraries using **pip**  
                 ::
