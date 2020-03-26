@@ -82,4 +82,4 @@ Urban Land Cover: Land Cover Fraction (Grid)
      If the raster data includes no data values within a polygon object, this grid will not be considered in the calculation.
 
 * Remarks
-     Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__).
+     Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the `repository <https://github.com/UMEP-dev/UMEP/issues>`__).

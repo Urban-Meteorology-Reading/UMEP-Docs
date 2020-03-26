@@ -20,7 +20,7 @@ releases:
 #. **Long term release** - this may be obtained from the QGIS plugin
    manager `(see details) <Getting_Started>`.
 #. **Current development version** - this can be obtained from the plugin
-   `repository <http://www.bitbucket.org/fredrik_ucg/umep>`__. This
+   `repository <https://github.com/UMEP-dev/UMEP>`__. This
    version you need to manually install yourself `(see details) <Getting_Started>`.
 
 The UMEP plugin consist of three
@@ -34,7 +34,7 @@ see `PluginArchitecture`.
 
 Detailed information on how to install can be found `here <Getting_Started>`.
 
-Information on version history can be found `here <https://bitbucket.org/fredrik_ucg/umep/commits/>`__.
+Information on version history for version 3.x can be found `here <https://github.com/UMEP-dev/UMEP/commits/SuPy-QGIS3>`__.
 
 .. note:: One essential part when working with geodata in a GIS is to make sure that a common coordinate reference system (CRS) is used, both for the data itself and the current QGIS-project you are working in. For more info, see `here <https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/coordinate_reference_systems.html>`__. It is strongly recommended to reproject/transform all geodatasets into the same projected coordinate system before any processing starts as well using a CRS that is based on meters.
 
@@ -476,7 +476,7 @@ Evaluation and application studies
 Road map for QGIS3 Version
 --------------------------
 
-The migration of UMEP into QGIS3 is almost complete. Below you see the status of the different tools regarding implemetation for QGIS3. Please report any issues to our `repository <https://bitbucket.org/fredrik_ucg/umep/wiki/Home>`__. 
+The migration of UMEP into QGIS3 is almost complete. Below you see the status of the different tools regarding implemetation for QGIS3. Please report any issues to our `repository <https://github.com/UMEP-dev/UMEP>`__. 
 
 MetdataProcessor - READY
 

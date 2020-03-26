@@ -361,7 +361,7 @@ example files provided. Test/example files are given for Göteborg,
 Sweden or London, UK. Here, you will use the Göteborg data.
 
 #. Download and extract the test dataset to your computer
-   (`testdata\_UMEP.zip <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__).
+   (`testdata\_UMEP.zip <https://urban-meteorology-reading.github.io/>`__).
 #. Add the raster layers (DSM, CDSM and land cover) from the Goteborg
    folder into a new QGIS session. The coordinate system of the grids is
    Sweref99 1200 (EPSG:3007).
@@ -466,7 +466,7 @@ SOLWEIG is an an open source model that we are keen to get others inputs
 and contributions. There are two main ways to contribute:
 
 #. Submit comments or issues to the
-   `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
+   `issue tracker <https://urban-meteorology-reading.github.io/>`__
 #. Participate in Coding or adding new
    features `DevelopmentGuidelines`.
 

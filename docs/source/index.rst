@@ -39,7 +39,7 @@ that provides data viewing, editing, and analysis capabilities.
 
 We are keen to get inputs and contributions from others. Plesae contribute in the following ways:
 
-#. Submit comments or report issues about the UMEP plugin to the code `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__.
+#. Submit comments or report issues about the UMEP plugin to the code `repository <https://github.com/UMEP-dev/UMEP/issues>`__.
 #. Participate in `coding or adding new features <How_to_Contribute>`.
 #. Write `UMEP tutorials <https://tutorial-docs.readthedocs.io/en/latest/>`__ and share with other UMEP users.
 #. Submit comments or report issues about the UMEP manual `here <https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues>`__.

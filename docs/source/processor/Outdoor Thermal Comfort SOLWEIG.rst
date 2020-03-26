@@ -147,7 +147,7 @@ Outdoor Thermal Comfort: SOLWEIG
     Closes the plugin.
 
 * Quick example on how to run SOLWEIG
-             #. Download and extract (unzip) the test dataset (`testdata\_UMEP.zip <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__).
+             #. Download the (`test dataset <https://urban-meteorology-reading.github.io>`__).
              #. Add the raster layers (DSM, CDSM and land cover) from the Goteborg folder into a new QGIS session. The coordinate system of the grids is **Sweref99 1200 (EPSG:3007)**.
              #. In order to run SOLWEIG, some additional datasets must be created based on the raster grids you just added. Open the SkyViewFactor Calculator from the UMEP Pre-processor and calculate SVFs using both your DSM and CDSM. Leave all other settings as default.
              #. Open the Wall height and aspect plugin from the UMEP Pre-processor and calculate both wall height and aspect using the DSM and your input raster. Tick in the box to add them to your project. Leave all other settings as default.

@@ -27,7 +27,7 @@ FAQ (Frequently Asked Questions)
     Our method is only using one line through the center of the grid for each wind direction. This is because we rotate the DSM and hence it is only the center line that includes height information. We do this since we are using a pure raster-based approach and if we were to instead rotate the search direction vector we would end up with different lengths for each wind direction. If you want to investigate a certain wind direction I suggest that you use a section of wind directions; e.g. 45 degrees.
 
 * How do I report a bug?
-    Report it at the `repository <http://bitbucket.org/fredrik_ucg/umep/issues/>`__
+    Report it at the `repository <https://github.com/UMEP-dev/UMEP/issues>`__
 
 * How do I report an issue with the manual?
     Report it at the `manual repository <https://github.com/Urban-Meteorology-Reading/UMEP-Docs/issues>`__
@@ -49,4 +49,4 @@ FAQ (Frequently Asked Questions)
               QGIS installation dialog (Advanced)
 
 * How do I ask other questions?
-    There is an email list. Or you can ask them at the `repository <http://bitbucket.org/fredrik_ucg/umep/issues/>`__
+    There is an email list. Or you can ask them at the `repository <https://github.com/UMEP-dev/UMEP/issues>`__

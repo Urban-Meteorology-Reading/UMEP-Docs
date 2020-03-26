@@ -102,7 +102,7 @@ Urban Morphology: Morphometric Calculator (Grid)
 
 * Remarks
       All DSMs need to have the same extent and pixel size.
-      Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__).
+      Polygon grids must be squared (or rectangular) and allinged with the CRS used. This will be fixed in future versions so that any shaped grid can be used (see issue #12 in the `repository <https://github.com/UMEP-dev/UMEP/issues>`__).
 
 * References
       -  Kent CW, CSB Grimmond, J Barlow, D Gatey, S Kotthaus, F Lindberg, CH Halios 2017: Evaluation of urban local-scale aerodynamic parameters: implications for the vertical profile of wind and source areas Boundary Layer Meteorology 164 183–213 doi: [10.1007/s10546-017-0248-z https://link.springer.com/article/10.1007/s10546-017-0248-z]

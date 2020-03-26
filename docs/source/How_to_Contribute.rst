@@ -8,7 +8,7 @@ UMEP is an an open source tool that we are keen to get others inputs and
 contributions. There are two main ways to contribute:
 
 #. Submit comments or issues to the
-   `repository <https://bitbucket.org/fredrik_ucg/umep/issues>`__
+   `repository <https://github.com/UMEP-dev/UMEP/issues>`__
 #. Participate in `Coding or adding new
    features <http://umep-docs.readthedocs.io/en/latest/DevelopmentGuidelines.html>`__.
 #. Create new tutorials for the UMEP-plugin.
@@ -18,8 +18,8 @@ Reporting a Bug
 
 -  As a good citizen of the open source community please report bugs. If
    it is a UMEP plugin related issue - report this to the
-   `https://bitbucket.org/fredrik_ucg/umep/issues UMEP
-   plugin <https://bitbucket.org/fredrik_ucg/umep/issues>`__. You can
+   `https://github.com/UMEP-dev/UMEP/issues UMEP
+   plugin <https://github.com/UMEP-dev/UMEP/issues>`__. You can
    see if your bug is already reported. In order for the UMEP team to
    solve your issue as easy as fast as possible, please provide a full
    description of the problem including steps to repeat it. The more

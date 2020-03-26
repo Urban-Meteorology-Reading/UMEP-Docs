@@ -32,15 +32,15 @@ Long-term release (Recommended)
 Development release (could be unstable)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -> Manage and Install Plugins -> Installed -> UMEP” and click **Uninstall plugin**.
-#. To download UMEP from the repository click this `link <https://bitbucket.org/fredrik_ucg/umep/downloads>`__ and download repository.
+#. Download UMEP from the `repository <https://github.com/UMEP-dev/UMEP>`__, as a ZIP-file.
 #. Close QGIS if open.
 #. Extract the downloaded zip archive into the folder **C:\\Users\\your_username\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python\\plugins**. If the folder **plugins** does not exist, install any plugin using *Plugins -> Manage and Install Plugins* and the folder should appear.
 #. Rename the extracted folder to **UMEP**.
 #. Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -> Manage and Install Plugins -> All” and search for UMEP. Make sure that you also tick in the box *Show also experimental plugins* in the “Settings”-tab.
 
-Test `datasets <https://bitbucket.org/fredrik_ucg/umep/downloads/testdata_UMEP.zip>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out.
+Test `datasets <urban-meteorology-reading.github.io>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out.
 
-Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `code repository <https://bitbucket.org/fredrik_ucg/umep>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
+Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `issue tracker <https://github.com/UMEP-dev/UMEP/issues>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
 
 
 .. _Python_Libraries:
