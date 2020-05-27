@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'UMEP Manual'
-copyright = u'2018, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang'
+copyright = u'2018 - 2020, Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang'
 author = u'Fredrik Lindberg, Ting Sun, Sue Grimmond, Yihao Tang'
 
 # The short X.Y version
