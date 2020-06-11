@@ -1,5 +1,10 @@
 .. _Introduction:
 
+Reference for Manual:
+
+Reference for UMEP:
+Lindberg F, CSB Grimmond, A Gabey, B Huang, CW Kent, T Sun, NE Theeuwes, L Järvi, H Ward, I Capel-Timms, YY Chang, P Jonsson, N Krave, DW Liu, D Meyer, KFG Olofson, JG Tan, D Wästberg, L Xue, Z Zhang 2018: Urban multiscale environmental predictor (UMEP) - An integrated tool for city-based climate services Environmental Modelling and Software, 99, 70–87 [10.1016/j.envsoft.2017.09.020](https://doi.org/10.1016/j.envsoft.2017.09.020) 
+
 
 Introduction
 ============
@@ -23,7 +28,7 @@ releases*:
    `repository <https://github.com/UMEP-dev/UMEP>`__. This
    version you need to manually install yourself `(see details) <Getting_Started>`.
 
-As from Spring 2020, UMEP for processing is also available. Find more info `here <UMEPforProcessing>`. 
+As of Spring 2020, UMEP for processing is also available. Find more info `here <UMEPforProcessing>`. 
 
 The UMEP plugin consist of three
 parts; a pre-processor, a processor and a post-processor. The
