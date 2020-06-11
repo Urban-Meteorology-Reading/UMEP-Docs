@@ -90,7 +90,7 @@ describe model assumptions and the library of available data files.
  **Visualising output**
 
      .. figure:: /images/300px-Visualise.png
-        :aling: center
+        :align: center
 
         LQF results visualisation dialogue box
 
@@ -723,7 +723,7 @@ Current limitations:
    data. If non-zero building energy is calculated in an MOA that has a
    building land cover of zero, then this energy is lost.
 
-   
+
 Temperature response functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -833,7 +833,7 @@ parameters file.
 
      - Assumed metabolic heat emission per person [W] while active (awake)
    * - **CustomTemperatureResponse**:
-   
+
      - **Optional parameters for a custom `temperature response <Temperature response functions>` function**
    * - -  Th
 
@@ -1146,7 +1146,7 @@ at 250m resolution.
           :align: center
 
           Dialog of the vector grid tool
-          
+
       -  In **Grid Extent**:
 
          -  Choose “Pop”
