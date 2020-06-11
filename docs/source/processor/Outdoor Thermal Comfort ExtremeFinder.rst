@@ -35,7 +35,7 @@ Outdoor Thermal Comfort: ExtremeFinder
             -  Busuioc et al. (2010): 5 °C
 
 * Dialog box
-    .. figure:: /images/Extremefinder3.png
+    .. figure:: /images/Extremefinder.jpg
         :align: center
            
         The interface for the ExtremeFinder plugin

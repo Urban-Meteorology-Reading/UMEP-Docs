@@ -22,6 +22,8 @@ A raster grid including only ground heights given in meter above sea level.
 
 **ECMWF** - European Centre for Medium-Range Weather Forecasts
 
+**ERA5** - The fifth generation of ECMWF atmospheric reanalyses of the global climate
+
 **GIS** - Geographical Information System
 
 **LCZ** - Local Climate Zone
@@ -37,9 +39,11 @@ A raster grid including only ground heights given in meter above sea level.
 **m asl** - metres above sea level
 
 **OTF** - On the Fly
-Used in QGIS when different geodatasets with different coordinate systems are projected in the same automatically.
+Used in QGIS when different geodatasets with different coordinate systems are projected in the same, automatically.
 		
 **Q**\ :sub:`F` - Anthropogenic heat flux
+
+**QGIS** - A Free and Open Source Geographic Information System
 
 **SEBE** - Solar Energy on Building Envelopes
 

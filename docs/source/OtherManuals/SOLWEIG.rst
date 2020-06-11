@@ -9,7 +9,7 @@ NEW in this version: see `Version History`_.
 
 The manual for SOLWEIG should be referenced as follows:
 
-*F Lindberg, CSB Grimmond 2019. SOLWEIG_v2018a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
+*F Lindberg, CSB Grimmond 2019. SOLWEIG_v2019a Department of Earth Sciences, University of Gothenburg, Sweden, University of Reading, UK.*
 
 Introduction
 ~~~~~~~~~~~~
@@ -39,6 +39,17 @@ Suggested reading
 Read the manual and papers listed below to get a full explanation of the
 model and previous evaluation:
 
+-  Wallenberg, Nils, Lindberg F, Holmer B, and Thorsson S. (2020) 
+   The Influence of Anisotropic Diffuse Shortwave Radiation on Mean Radiant 
+   Temperature in Outdoor Urban Environments." Urban Climate 31 (2020).
+   (`link to paper <https://doi.org/10.1016/j.uclim.2020.100589>`__)
+-  Holmer, B., Lindberg, F., Rayner, D. and Thorsson, S. (2015) How to
+   transform the standing man from a box to a cylinder – a modified
+   methodology to calculate mean radiant temperature in field studies
+   and models, ICUC9 – 9 th International Conference on Urban Climate
+   jointly with 12th Symposium on the Urban Environment, BPH5: Human
+   perception and new indicators. Toulouse, July 2015. (`link to
+   paper <http://www.meteo.fr/icuc9/LongAbstracts/bph5-2-3271344_a.pdf>`__)
 -  Lindberg, F., Onomura, S. and Grimmond, C.S.B (2016) Influence of
    ground surface characteristics on the mean radiant temperature in
    urban areas. International Journal of Biometeorology. 60(9),
@@ -54,13 +65,7 @@ model and previous evaluation:
    temperature in complex urban settings. International Journal of
    Biometeorology 52, 697–713. (`link to
    paper <http://link.springer.com/article/10.1007/s00484-008-0162-7>`__)
--  Holmer, B., Lindberg, F., Rayner, D. and Thorsson, S. (2015) How to
-   transform the standing man from a box to a cylinder – a modified
-   methodology to calculate mean radiant temperature in field studies
-   and models, ICUC9 – 9 th International Conference on Urban Climate
-   jointly with 12th Symposium on the Urban Environment, BPH5: Human
-   perception and new indicators. Toulouse, July 2015. (`link to
-   paper <http://www.meteo.fr/icuc9/LongAbstracts/bph5-2-3271344_a.pdf>`__)
+
 
 Install the model
 ^^^^^^^^^^^^^^^^^
@@ -151,7 +156,7 @@ Preprocessor <MetPreprocessor>`
 could be used. If no data is available a single point in time can
 modelled using the SOLWEIG interface. There is also a possibility to
 download a dataset for any location on Earth using the `Download data
-(WATCH) <WATCH>`-plugin.
+(ERA5) <ERA5>`-plugin.
 The variables required for SOLWIEG are:
 
 -  *Air temperature* [degC]
@@ -178,7 +183,7 @@ temperature is parameterised for different surfaces is found in
 **landcoverclasses\_v2016a.txt**. For as detailed description of the
 ground cover scheme, see Lindberg et al. (2016)  [5]_.
 **landcoverclasses\_v2016a.txt** can be found in
-*C:\\Users\\your\_username\\.qgis2\\python\\plugins\\UMEP\\SOLWEIG*.
+*C:\\Users\\xlinfr\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python\\plugins\\UMEP\\SOLWEIG*.
 
 It should be noted that it is only grass and impervious surfaces that
 has been parameterisised and evaluated. Other surfaces such as bare soil
@@ -360,8 +365,7 @@ that you can run the test data and get the same results as in the
 example files provided. Test/example files are given for Göteborg,
 Sweden or London, UK. Here, you will use the Göteborg data.
 
-#. Download and extract the test dataset to your computer
-   (`testdata\_UMEP.zip <https://urban-meteorology-reading.github.io/>`__).
+#. Download and extract the Gothenburg `test dataset <https://urban-meteorology-reading.github.io/>`__ to your computer.
 #. Add the raster layers (DSM, CDSM and land cover) from the Goteborg
    folder into a new QGIS session. The coordinate system of the grids is
    Sweref99 1200 (EPSG:3007).
@@ -369,7 +373,7 @@ Sweden or London, UK. Here, you will use the Göteborg data.
    based on the raster grids you just added. Open the **SkyViewFactor
    Calculator** from the UMEP Pre-processor and calculate SVFs using
    both your DSM and CDSM. Leave all settings as default. This
-   calculation produces a file called **svf.zip**' which is used later
+   calculation produces a file called '*svf.zip*' which is used later
    in the calculations.
 #. Open the **Wall height and aspect** plugin from the UMEP
    Pre-processor and calculate both wall height and aspect using the DSM
@@ -397,7 +401,7 @@ Tips and Tricks
    by comparing the global solar radiation and the theoretical maximum
    of solar radiation (I0) from a solar exposed point of interest.
 -  Land cover grid should be in UMEP format.
--  A boolean building grid (building = 0, ground = 1) must be present, This grid is created either from a land cover or a ground DEM in conjunction with the building and ground DSM.
+-  A boolean building grid (building = 0, ground = 1) is used in the model. This grid is created either from the land cover grid or the ground DEM in conjunction with the building and ground DSM.
 -  If using the land cover grid to derive the building grid, it is
    important that it coincides with the ground and building DSM.
    Otherwise strange results will be produced.
@@ -407,29 +411,26 @@ Tips and Tricks
 Acknowledgements
 ~~~~~~~~~~~~~~~~
 
--  People who have contributed to the development of SOLWEIG (plus
-   co-authors of papers):
+People who have contributed to the development of SOLWEIG (plus co-authors of papers):
+
 -  Current contributors:
 
-   -  Nils Wallenberg (Göteborg University, Sweden)
-   -  C.S.B. Grimmond (University of Reading; previously Indiana
-      University, King’s College London, UK),
-   -  Fredrik Lindberg (Göteborg University, Sweden)
-   -  Björn Holmer (Göteborg University, Sweden)
+    -  Nils Wallenberg (Göteborg University, Sweden)
+    -  C.S.B. Grimmond (University of Reading; previously Indiana University, King’s College London, UK),
+    -  Fredrik Lindberg (Göteborg University, Sweden)
+    -  Björn Holmer (Göteborg University, Sweden)
 
 -  Past Contributors:
 
-   -  Shiho Onomura (Göteborg University, Sweden)
-   -  Sofia Thorsson (Göteborg University, Sweden)
-   -  Ingegärd Eliasson (Göteborg University, Sweden)
-   -  Janina Konarska (Göteborg University, Sweden)
-   -  David Rayner (Göteborg University, Sweden)
+    -  Shiho Onomura (Göteborg University, Sweden)
+    -  Sofia Thorsson (Göteborg University, Sweden)
+    -  Ingegärd Eliasson (Göteborg University, Sweden)
+    -  Janina Konarska (Göteborg University, Sweden)
+    -  David Rayner (Göteborg University, Sweden)
 
 -  Funding to support development:
 
-   -  FORMAS, National Science Foundation (USA, BCS-0095284,
-      ATM-0710631), EU Framework 7 BRIDGE (211345); EU emBRACE; UK Met
-      Office; NERC ClearfLO, NERC TRUC.
+    -  FORMAS, National Science Foundation (USA, BCS-0095284, ATM-0710631), EU Framework 7 BRIDGE (211345); EU emBRACE; UK Met Office; NERC ClearfLO, NERC TRUC.
 
 Abbreviations
 ~~~~~~~~~~~~~

@@ -33,8 +33,7 @@ Meteorological Data: MetPreprocessor
    * - middle left
      - Specify time-related columns in the imported data file.
    * - lower left
-     - Perform quality control (recommended)
-          - Select to perform a simple quality control which will check the input data for unreasonable values of each variable.
+     - *Perform quality control (recommended)*: Select to perform a simple quality control which will check the input data for unreasonable values of each variable.
    * - right
      - Choose columns from imported data file that correspond to the meteorological variables used in UMEP.
 

@@ -5,7 +5,7 @@ Urban Morphology: Morphometric Calculator (Point)
 
 * Contributors:
    .. list-table::
-      :widths: 50 50
+      :widths: 30 70
       :header-rows: 1
 
       * - Name
@@ -15,34 +15,34 @@ Urban Morphology: Morphometric Calculator (Point)
       * - Christoph Kent
         - Reading
       * - Brian Offerle
-        - previously Indiana University; Tyrens
+        - previously Indiana University; FluxSense AB
       * - Sue Grimmond
         - Reading
       * - Niklas Krave
         - Gothenburg
 
 * Introduction
-      The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.
-.. list-table::
-   :widths: 40 60
-   :header-rows: 1
+   The Morphometric Calculator (Point) plugin calculates various morphometric parameters based on digital surface models. These morphometric parameters are used to describe the roughness of a surface and are included in various local and mesoscale climate models (e.g. Grimmond and Oke 1999). They may vary depending on what angle (wind direction) you are interested in. Thus, this plugin is able to derive the parameters for different directions. Preferably, a ground and 3D-object DSM and DEM should be used as input data. The 3D objects are usually buildings but can also be 3D vegetation (i.e. trees and bushes). It is also possible to derive the parameters from a 3D object DSM with no ground heights.
+  .. list-table::
+     :widths: 40 60
+     :header-rows: 1
 
-   * - Morphometric parameters
-     - Description
-   * - Mean building height (|ZH|)
-     - Average building height measured from ground level [m].
-   * - Standard deviation of building heights (|ZHσ|).
-     - Standard deviation of building heights [m].
-   * - Maximum building height (|ZHMAX|).
-     - Height of the tallest building within the study area [m]
-   * - Plan area index (|lambdaP|)
-     - Area of building surfaces relative to the total ground area.
-   * - Frontal area index (|lambdaF|)
-     - Area of building walls normal to wind direction relative to the total ground area.
-   * - Roughness length (|Z0|)
-     - A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].
-   * - Zero-plane displacement height (|Zd|)
-     - Height above ground where the wind speed is 0 m s\ :sup:`-1` as a result of obstacles to the flow such as trees or buildings [m].
+     * - Morphometric parameters
+       - Description
+     * - Mean building height (|ZH|)
+       - Average building height measured from ground level [m].
+     * - Standard deviation of building heights (|ZHσ|).
+       - Standard deviation of building heights [m].
+     * - Maximum building height (|ZHMAX|).
+       - Height of the tallest building within the study area [m]
+     * - Plan area index (|lambdaP|)
+       - Area of building surfaces relative to the total ground area.
+     * - Frontal area index (|lambdaF|)
+       - Area of building walls normal to wind direction relative to the total ground area.
+     * - Roughness length (|Z0|)
+       - A parameter of some vertical wind profile equations that model the horizontal mean wind speed near the ground; in the log wind profile, it is equivalent to the height at which the wind speed theoretically becomes zero [m].
+     * - Zero-plane displacement height (|Zd|)
+       - Height above ground where the wind speed is 0 m s\ :sup:`-1` as a result of obstacles to the flow such as trees or buildings [m].
 
 * Dialog box
     .. figure:: /images/Morph_Calc_point.png

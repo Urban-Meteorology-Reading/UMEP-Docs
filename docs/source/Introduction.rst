@@ -14,14 +14,16 @@ desktop geographic information systems
 (`GIS <Abbreviations>`) application –
 that provides data viewing, editing, and analysis capabilities.
   
-This software is in continuous development. There are two types of
-releases:
+*This software is in continuous development. There are two types of
+releases*:
 
 #. **Long term release** - this may be obtained from the QGIS plugin
    manager `(see details) <Getting_Started>`.
 #. **Current development version** - this can be obtained from the plugin
    `repository <https://github.com/UMEP-dev/UMEP>`__. This
    version you need to manually install yourself `(see details) <Getting_Started>`.
+
+As from Spring 2020, UMEP for processing is also available. Find more info `here <UMEPforProcessing>`. 
 
 The UMEP plugin consist of three
 parts; a pre-processor, a processor and a post-processor. The
@@ -31,8 +33,6 @@ main calculations. To provide initial “quick looks” the post-processor
 will enable results to be plotted, statistics calculated etc. based on
 the model output. For more information on the content and archetecture,
 see `PluginArchitecture`.
-
-Detailed information on how to install can be found `here <Getting_Started>`.
 
 Information on version history for version 3.x can be found `here <https://github.com/UMEP-dev/UMEP/commits/SuPy-QGIS3>`__.
 
@@ -69,16 +69,6 @@ For a detailed description including how to install QGIS on a Windows PC (see be
 
 Plugin Architecture
 -------------------
-
-The UMEP plugin consist of three different parts; a pre-processor, a
-processor and a post-processor. The pre-processor is used to prepare
-spatial and meteorological data as inputs to the modelling system. The
-processor includes all the main models for the main calculations. To
-provide initial “quick looks” the post-processor will be enable results
-to be plotted, statistics calculated etc. based on the model output.
-
-.. note:: It is strongly recommended to transform all geodatasets into the same projected coordinate system (CRS) before any processing starts.
-
 
 Pre-Processor
 ~~~~~~~~~~~~~
@@ -299,6 +289,8 @@ Evaluation and application studies
            - `Lau et al. (2016) <http://www.sciencedirect.com/science/article/pii/S0378778815300645>`__
          * - Shanghai, China
            - `Chen et al. (2016) <http://www.sciencedirect.com/science/article/pii/S037877881630812X>`__
+         * - Szeged, Hungary
+           - `Gal and Kantor (2020) <https://www.sciencedirect.com/science/article/pii/S2212095519301804?via%3Dihub>`__
       - References: Application
 	  
       .. list-table::
@@ -368,51 +360,7 @@ Evaluation and application studies
 
 
 * Urban Energy and Water Balance (`SUEWS <SUEWSSimple>`)
-            - References: Evaluation
-			
-            .. list-table::
-               :widths: 50 50
-               :header-rows: 1
-
-               * - Spatial reference
-                 - Reference
-               * - Vancouver, Canada
-                 - `Järvi et al. (2011) <http://www.sciencedirect.com/science/article/pii/S0022169411006937>`__
-               * - Los Angeles, USA
-                 - `Järvi et al. (2011) <http://www.sciencedirect.com/science/article/pii/S0022169411006937>`__
-               * - Helsinki, Finland
-                 - `Järvi et al. (2014) <http://www.geosci-model-dev.net/7/1691/2014/>`__
-               * - Montreal, Canada
-                 - `Järvi et al. (2014) <http://www.geosci-model-dev.net/7/1691/2014/>`__
-               * - Dublin, Ireland
-                 - `Alexander et al. (2015) <http://dx.doi.org/10.1016/j.uclim.2015.05.001>`__
-               * - Swindon, UK
-                 - `Ward et al. (2016) <http://www.sciencedirect.com/science/article/pii/S2212095516300256>`__
-               * - London, UK
-                 - `Ward et al. (2016) <http://www.sciencedirect.com/science/article/pii/S2212095516300256>`__
-               * - Helsinki, Finlamd
-                 - `Karsisto et al. (2016) <http://onlinelibrary.wiley.com/doi/10.1002/qj.2659/full>`__
-               * - Shanghai, China
-                 - (Radiation) `Ao et al. (2016) <http://journals.ametsoc.org/doi/abs/10.1175/JAMC-D-16-0082.1>`__
-               * - Sacramento, US
-                 - `Onomura et al. (2015) <http://www.sciencedirect.com/science/article/pii/S2212095514000856>`__
-
-            - References: Application
-			
-            .. list-table::
-               :widths: 50 50
-               :header-rows: 1
-
-               * - Spatial reference
-                 - Reference
-               * - London, UK
-                 - Ward and Grimmond (2017)
-               * - Helsinki, Finland
-                 - `Nordbo et al. (2015) <http://www.sciencedirect.com/science/article/pii/S221209551500019X>`__
-               * - Dublin, Ireland
-                 - `Alexander et al. (2016) <http://www.sciencedirect.com/science/article/pii/S0169204616000128>`__
-               * - Porto, Portugal
-                 - `Rafael et al. (2016) <http://www.sciencedirect.com/science/article/pii/S0048969716312086>`__
+            Publications related to SUEWS is found `here <https://suews-docs.readthedocs.io/en/latest/recent-publications.html>`__.
 
 
 * Solar Energy on Building Envelopes (SEBE)
@@ -426,6 +374,8 @@ Evaluation and application studies
                  - Reference
                * - Gothenburg, Sweden
                  - `Lindberg et al. (2015) <http://www.sciencedirect.com/science/article/pii/S0038092X15001164>`__
+               * - Vienna, Austria
+                 - `Revez et al. (2020) <https://www.sciencedirect.com/science/article/pii/S0038092X20300827>`__
 
             - References: Application
 
@@ -476,59 +426,5 @@ Evaluation and application studies
 Road map for QGIS3 Version
 --------------------------
 
-The migration of UMEP into QGIS3 is almost complete. Below you see the status of the different tools regarding implemetation for QGIS3. Please report any issues to our `repository <https://github.com/UMEP-dev/UMEP>`__. 
-
-MetdataProcessor - READY
-
-ShadowGenerator - READY
-
-SkyViewFactorCalculator - READY
-
-ImageMorphParam - READY
-
-ImageMorphParmsPoint - READY
-
-LandCoverFractionGrid - READY
-
-LandCoverFractionPoint - READY
-
-LandCoverReclassifier - READY
-
-WallHeight - READY
-
-TreeGenerator - READY
-
-FootprintModel - READY
-
-LCZ_converter - READY
-
-UMEP_Data_Download  - READY
-
-DSMGenerator  - Ready
-
-WATCHData  - READY
-
-GreaterQF  - READY
-
-ExtremeFinder - READY
-
-LQF - READY
-
-SEBE - READY
-
-SuewsSimple - READY
-
-SUEWSPrepare - READY
-
-SUEWS - READY
-
-SOLWEIG - READY
-
-BenchMarking  - READY
-
-SEBEVisual # TODO: Multiple changes required :Plugin blocker
-
-SolweigAnalyzer - READY
-
-SUEWSAnalyzer - READY
+The migration of UMEP into QGIS3 is complete. Some plugins are still experimental. Please report any issues to our `repository <https://github.com/UMEP-dev/UMEP>`__. 
 

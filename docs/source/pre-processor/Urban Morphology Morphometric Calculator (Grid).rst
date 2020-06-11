@@ -5,7 +5,7 @@ Urban Morphology: Morphometric Calculator (Grid)
 
 * Contributor:
    .. list-table::
-      :widths: 50 50
+      :widths: 30 70
       :header-rows: 1
 
       * - Name
@@ -15,7 +15,7 @@ Urban Morphology: Morphometric Calculator (Grid)
       * - Fredrik Lindberg
         - Gothenburg
       * - Brian Offerle
-        - previously Indiana University; Tyrens
+        - previously Indiana University; FluxSense AB
       * - Sue Grimmond
         - Reading
       * - Niklas Krave

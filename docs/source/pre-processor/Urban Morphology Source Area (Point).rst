@@ -5,7 +5,7 @@ Urban Morphology: Source Area (Point)
 
 * Contributors
    .. list-table::
-      :widths: 40 60
+      :widths: 30 70
       :header-rows: 1
 
       * - Name
@@ -15,7 +15,7 @@ Urban Morphology: Source Area (Point)
       * - Fredrik Lindberg
         - Gothenburg
       * - Brian Offerle
-        - previously Indiana University; Fluxsense
+        - previously Indiana University; FluxSense AB
 
 * Introduction
      -  The Source Area or *Footprint Model* plugin calculates various morphometric parameters based on digital surface models and source area calculations. Footprint models can be used to determine the likely position and influence of the surface area which is contributing to a turbulent flux measurement at a specific point in time and space with imposed boundary conditions (e.g. meteorological conditions, sources/sinks of passive scalars or surface characteristics). The principle of footprint models is that the measured flux is the integral of all contributing surface elements, with a ‘footprint function’ describing the relative fractional contribution of a discretisized area.                                                                                                                                        
@@ -28,10 +28,11 @@ Urban Morphology: Source Area (Point)
      -   Note that the source area calculations are for one iteration. For the determination of roughness parameters, several iterations are recommended until the values converge (see Kent et al. 2017a).
 
 * Dialog box
-       .. figure:: /images/Footprint.png
-           :aling: center
+    .. figure:: /images/Footprint.png
+        :width: 100%
+        :align: center
 
-           The dialog for the Source Area (Point) calculator
+        The dialog for the Source Area (Point) calculator
 
 * Dialog sections
    .. list-table::

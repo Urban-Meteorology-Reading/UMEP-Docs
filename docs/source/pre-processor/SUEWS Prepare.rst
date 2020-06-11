@@ -19,38 +19,31 @@ SUEWS Prepare
      - Reading
 
 * Introduction:
-     The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <SUEWSAdvanced>`, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.
+    The pre-processor SUEWS Prepare generates surface-related input data from geographical data for `SUEWS <SUEWSAdvanced>`, the Surface Urban Energy and Water Balance Scheme. SUEWS (Järvi et al. 2011, 2014; Ward et al. 2016a, b) simulates the urban radiation, energy and water balances using commonly measured/modelled meteorological variables and information about the surface cover. It utilizes an evaporation-interception approach (Grimmond et al. 1991), similar to that used in forests, to model evaporation from urban surfaces. The surface state for each surface type at each time step is calculated from the running water balance of the canopy where the evaporation is calculated from the Penman-Monteith equation. The soil moisture below each surface type (excluding water) is also taken into account.
 * Terminology：
       * Components of the plugin window:
-            .. figure:: /images/SuewsPrepareTerminology.jpg
-               :widths: 100%
-               :align: center
+          .. figure:: /images/SuewsPrepareTerminology.jpg
+              :width: 100%
+              :align: center
 
-                Some naming conventions used in this document relating to the components of the plugin.
+              Some naming conventions used in this document relating to the components of the plugin.
 
-      * Plugin window:
+      #. Plugin window:
            Dialog window of the plugin. Any user interface components that are part of the plugin will be a part of the plugin window.
-
-      * Tab:
+      #. Tab:
            The plugin contains many tabs. The tabs can be cycled through to reveal different kinds of information.
-
-      * Widget:
+      #. Widget:
            One tab can contain one or more widgets. One widget contains two boxes, the selection box and the variable box.
-
-      * Variable box:
+      #. Variable box:
            Right part of a widget It contains a number of variables. One variable is comprised of a variable title and a variable text box.
-
-      * Variable title:
-           The variable title is a short description of the variable.
-
-      * Variable text box:
-           The variable text box contains the value of the variable for one site entry.
-
-      * Selection box:
-           The selection box is the left part of a widget. It contains a number of user interface components such as buttons and drop down menus.
-
-      * Drop down menu:
+      #. Drop down menu:
            The drop down menu allows a selection from a predetermined range of values.
+      #. Variable title:
+           The variable title is a short description of the variable.
+      #. Variable text box:
+           The variable text box contains the value of the variable for one site entry.
+      #. Selection box:
+           The selection box is the left part of a widget. It contains a number of user interface components such as buttons and drop down menus.
 
 * Terms relating to data used by the plugin (For more info see developer section below)：
       * Site Library:
@@ -62,29 +55,30 @@ SUEWS Prepare
       * Identification code:
            The identification code is used when there is a need to separate site entries into categories. If two site entries share the same identification code they belong to the same category.
 
-* **Using the plugin - The different components of the plugin and the plugin output.**：
+Using the plugin - The different components of the plugin and the plugin output：
+--------------------------------------------------------------------------------
       * Main window:
             The main window contains all the user interface components of the plugin. Navigation uses tabs, with each providing some of the information needed. The are two categories:
-               main settings tab
-               site library
+               - main settings tab
+               - site library (all other tabs)
 
             The main window has buttons to specify to:
                - indicate the folder where the output will be generated
                - to start the process of generating the output
                - to close the main window.
                
-               **Note** If the folder selected for the output files already contains files generated from SUEWS Prepare these files will be **overwritten**
-               
             Main settings tab：
                The main settings tab is where the plugin is provided with inputs from outside sources such as text files and vector layer attributes. Basically anything that is not part of the site library.
-                  
-               .. figure:: /images/SUEWSSpatial_Prepare1.png
 
-                      Plugin window with the main settings tab selected.
+               .. figure:: /images/SUEWSSpatial_Prepare1.png
+                   :width: 100%
+                   :align: center
+
+                   Plugin window with the main settings tab selected
 
             Polygon grid：
                The polygon grid is used to provide the plugin with further information through the grid attribute table. Each part of the grid will create a separate entry in the plugins output. The polygon grid can be in any vector file format compatible with QGIS, however, it is recommended to use the shape file format.
-               To use an existing polygon grid layer in the plugin add the layer to the QGIS interface. This can be done either by dragging and dropping the file into the QGIS program or by using the menu **Layers**. Any polygon layers added to the QGIS interface can then be selected for use in the plugin from the drop down menu in the main settings tab marked **Vector polygon grid** If no polygon grid layer is available, there are several opportunities to create these in QGIS. We  recommend to make use of the built-in **Vector tool** (Vector -> Research tools menu)>
+               To use an existing polygon grid layer in the plugin add the layer to the QGIS interface. This can be done either by dragging and dropping the file into the QGIS program or by using the menu **Layers**. Any polygon layers added to the QGIS interface can then be selected for use in the plugin from the drop down menu in the main settings tab marked **Vector polygon grid** If no polygon grid layer is available, there are several opportunities to create these in QGIS. We recommend to make use of the built-in **Create Grid** in the processing toolbox.
                When a relevant polygon grid has been selected for the plugin several separate drop down menus allow for data to be collected from the fields in the polygon grid attribute table. The initial selections in these drops down menus might not be correct and needs to be manually corrected by the user.
                The input in the drop down menu marked **ID field** in the box for polygon grid selection needs to correlate with the polygon layers attribute field for feature ids or any attribute field containing unique integer numbers. The polygon layer should be in a coordinate system that can be related to both lat/lon coordinates as well as meters. The polygon features included in the polygon vector grid can be of any shape and size.
                   
@@ -96,7 +90,7 @@ SUEWS Prepare
             Data for land cover fractions, building morphology and tree morphology：
                   To use SUEWS land cover and morphology data for buildings and vegetation are needed. This information can be acquired through other plugins in UMEP. This data can then be added into SUEWSPrepare by two different options:
                   Import the data as text
-                  To do this click the buttons in the boxes associated with these types of data and follow the import dialogs to select the correct text file. When a file has been selected the file path will be shown in the text boxes above the buttons. The text files on land cover and morphology are generated with the `Land Cover Fraction <#Urban_Land_Cover:_Land_Cover_Fraction_(Point)>`__ plugin and the `Image Morphometric Calculator <#Urban_Morphology:_Image_Morphometric_Parameters_Calculator_(Point)>`__, respectively.
+                  To do this click the buttons in the boxes associated with these types of data and follow the import dialogs to select the correct text file. When a file has been selected the file path will be shown in the text boxes above the buttons. The text files on land cover and morphology are generated with the `Land Cover Fraction <LandCoverFraction(Grid)>` plugin and the `Image Morphometric Calculator <MorphometricCalculator(Grid)>`, respectively.
                   Alternatively, the data need to be available in the attribute table of the polygon layer. If the data are available in this format simply check the check boxes below the buttons to change the interface from buttons into drop down menus. In the drop down menus select the correct attribute fields for the data and the selection is done.
                             
                   .. figure:: /images/SP_landcover.jpg
@@ -108,7 +102,7 @@ SUEWS Prepare
                      Box associated with land cover fractions when the checkbox is checked. The drop down menus can be used to import land cover fraction data.
 
             Meteorological data：
-                  The meteorological data have to be imported from a **text file**. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the `MetPreprocessor <#Meteorological_Data:_MetPreprocessor>`__ plugin. There you can also find more information on what parameters are required in the meteorological dataset.
+                  The meteorological data have to be imported from a **text file**. Use the button in the box for meteorological data, follow the dialog and select the correct text file. The meteorological data used in the various UMEP-plugins is format specific and can be generated from other data sources using the `MetPreprocessor <MetPreprocessor>` plugin. There you can also find more information on what parameters are required in the meteorological dataset.
                   
                   .. figure:: /images/SP_met.jpg
 

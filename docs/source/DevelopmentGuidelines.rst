@@ -95,30 +95,30 @@ system. If you carry out on both OS, please add to the list below or
 report to team.
 
 The process can also be applied to a 32-bit machine, but the choice of
-python2.7 and set up for MinGW-w64 will be different. This has not been
+Python 3.7 and set up for MinGW-w64 will be different. This has not been
 tested, and perhaps shouldn’t be encouraged if SUEWS is being developed
 and tested on/for 64-bit architecture.
 
 Before starting any of the required steps it is recommended that any
 version of Python, mingw, and Cygwin be removed from the machine if
-possible. If you already have Python 2.7 and MinGW installed, or have
+possible. If you already have Python 3.7 and MinGW installed, or have
 followed the procedure below then go to the instructions on developing
 fortran-python interface.
 
 System Setup
 ^^^^^^^^^^^^
 
-#. Download Python 2.7.XX : download from:
+#. Download Python 3.7.XX : download from:
    `here <http://www.python.org/downloads>`__ and install to directory
-   C:\\Python27<!--
+   C:\\Python37.
 
 
 
 #. Add to PATH environment variable:
 
-    C:\\Python27
+    C:\\Python37
 
-    C:\\Python27\\libs
+    C:\\Python37\\libs
 
     C:\\Python\\Scripts
 
@@ -126,17 +126,17 @@ System Setup
 #. Add to C\_INCLUDE\_PATH environment variable:
 
 
-    C:\\Python27\\include
+    C:\\Python37\\include
 
-    C:\\Python27\\libs
+    C:\\Python37\\libs
 
 
-**Note:** The *C:\\Python27\\Scripts* directory is required for use of
+**Note:** The *C:\\Python37\\Scripts* directory is required for use of
 pip in subsequent steps.
 
 #. Install latest NumPY package to get latest f2py
 
-    (i) Download numpy-1.11.0rc1+mkl-cp27-cp27m-win\_amd64.whl from
+    (i) Download numpy-1.18.5+mkl-cp37-cp37m-win_amd64.whl from
     `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy>`__
 
     (ii) Open command prompt and change directory to where numpy wheel is
@@ -144,16 +144,16 @@ pip in subsequent steps.
 
     ::
 
-      Pip install numpy-1.11.0rc1+mkl-cp27-cp27m-win_amd64.whl
+      Pip install numpy-1.18.5+mkl-cp37-cp37m-win_amd64.whl
 
     (iii) Check the directories for **numpy** and
-    **numpy-1.11.0rc1.dist-info** are under
-    **C:\\Python27\\Lib\\site-packages**. Dates and times of directory
+    **numpy-1.18.5rc1.dist-info** are under
+    **C:\\Python37\\Lib\\site-packages**. Dates and times of directory
     should indicate these are new from wheel.
 
 
 #. Download Mingw-w64 from
-   `here <https://sourceforge.net/projects/mingw_w64>`__
+   `here <https://sourceforge.net/projects/mingw-w64/>`__
 
 
    **Note:** This is suitable for 64 and 32 bit architecture.
@@ -192,8 +192,8 @@ pip in subsequent steps.
 
 
 #. This step is required to create/replace the import library found
-   under directory **C:\\Python27\\libs**. The import library is
-   **libpython27.a**.
+   under directory **C:\\Python37\\libs**. The import library is
+   **libpython37.a**.
 
     (i) Download the pexports binary **pexports-0.47-mingw32-bin.tar.xz**
     from
@@ -202,14 +202,14 @@ pip in subsequent steps.
     **Note:** pexports-0.47 could change for subsequent versions.
 
 
-    (ii) Unpack the tar file and put pexports.exe in **C:\\Python27\\libs**.
+    (ii) Unpack the tar file and put pexports.exe in **C:\\Python37\\libs**.
 
 
     #. Open a command prompt and run the following command:
 
     ::
 
-       pexports C:\Windows\System32\python27.dll > USERDIR\python27.def
+       pexports C:\Windows\System32\python37.dll > USERDIR\python37.def
 
 
     **Note:** *USERDIR* is the user directory you put the file in. As it is
@@ -217,20 +217,20 @@ pip in subsequent steps.
     shouldn’t matter, however, don’t try to put it in Windows\\System32
     directory, or any other directory in the system Path.
 
-#. Create the import library **libpython27.a** for helping the linker of
+#. Create the import library **libpython37.a** for helping the linker of
    MinGW link to the correct python DLL.
 
 
-   (i) Open Command Prompt and change directory to where *python27.def* was
+   (i) Open Command Prompt and change directory to where *python37.def* was
    created in step 8 (i.e.USERDIR*).
 
    (ii) Run command:
 
    ::
 
-     dlltool –D python27.dll –d python.def –l libpython27.a
+     dlltool –D python37.dll –d python.def –l libpython37.a
 
-   (iii) Move resulting *libpython27.a* into **C:\\Python27\\libs** ,
+   (iii) Move resulting *libpython37.a* into **C:\\Python37\\libs** ,
    replacing any existing version of this file in the directory
 
 Making Fortran-Python Interface ‘dll’ (.pyd file) with F2PY
@@ -324,10 +324,6 @@ Upcoming Developments
    * - SUEWS
      - Convective boundary layer development
      - Completed
-     - Göteborg Univ
-   * - SUEWS/SOLWEIG
-     - Mean radiant temperature model
-     - Active
      - Göteborg Univ
    * - SUEWS
      - Storage Heat flux - ESTM
@@ -451,7 +447,7 @@ your windows PC. Do the following:
 Python and PyCharm (Not so good alternative)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Install python 2.7.X, 64 bit from python.org (Windows x86-64 MSI
+#. Install python 3.7.X, 64 bit from python.org (Windows x86-64 MSI
    installer). Install with default settings.
 #. Visit JetBrain, Pycharm website and obtain a student account (go to
    **Discounted and Complimentary Licenses**,
@@ -498,7 +494,7 @@ Python and PyCharm (good alternative)
       SET QGISNAME=qgis
       SET QGIS=%OSGEO4W_ROOT%\apps\%QGISNAME%
       SET QGIS_PREFIX_PATH=%QGIS%
-      SET PYCHARM= “C:\Program   Files   (x86)\JetBrains\PyCharm   2017.3.5\bin\pycharm.exe
+      SET PYCHARM= “C:\Program   Files   (x86)\JetBrains\PyCharm   2020.1.3\bin\pycharm.exe
       CALL %OSGEO4W_ROOT%\bin\o4w_env.bat
       SET PATH=%PATH%;%QGIS%\bin
       SET PYTHONPATH=%QGIS%\python;%PYTHONPATH%
@@ -548,7 +544,7 @@ How to make standalone application using Pyinstaller (use this)
 
 #. Add the pip package (see above)
 #. You need to add the path to where pip.exe is located (usually
-   C:\\Python27\\Scripts\\). If you don’t know how to add a path in your
+   C:\\Python37\\Scripts\\). If you don’t know how to add a path in your
    environment settings you can temporarily add one in a command prompt
    by writing:
 

@@ -14,7 +14,7 @@ Outdoor Thermal Comfort: SOLWEIG
 
 * Introduction
     -  The **SOLWEIG** plugin can be used to calculate spatial variations of mean radiant temperature (T\ :sub:`mrt`) and radiant fluxes using digital surface models (DSM) and ground cover information. Optionally, vegetation DSMs could also be used. The methodology that is used to generate shadows originates from Ratti and Richens (1990) and is further developed and described in Lindberg and Grimmond (2011) and Lindberg et al. (2016). The current version of the model is 2019a.
-    -  The full manual of the SOLWEIG model can be found `here <SOLWEIG>`.
+    -  The full manual of the SOLWEIG model can be found `here <SOLWEIGManual>`.
 
 * Related Preprocessors
    `MetPreprocessor`, `ERA5`, `SkyViewFactorCalculator`, `WallHeightandAspect`, `LandCoverReclassifier`
@@ -99,7 +99,7 @@ Outdoor Thermal Comfort: SOLWEIG
       :header-rows: 0
 
       * - Include POIs
-        - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <SOLWEIG>` for more information.
+        - By ticking in the option to include POIs (Point of Interest), a vector point layer can be added and full model output are written out to text files for the specific POI. Multiple POIs can be used by including many points in the vector file. See the `full manual <SOLWEIGManual>` for more information.
       * - Adjust sky-emissivity according to Jonsson et al. (2006)
         - Tick this box to include adjustment (0.04) of sky emissivity which was present in the earlier versions of the SOLWEIG model (not recommended).
       * - Consider human as cylinder instead of box
@@ -170,4 +170,4 @@ There is also a meteorological file present in the test dataset that can be used
       -  Holmer, B., Lindberg, F., Rayner, D. and Thorsson, S. 2015: How to transform the standing man from a box to a cylinder – a modified methodology to calculate mean radiant temperature in field studies and models, ICUC9 – 9 th International Conference on Urban Climate jointly with 12th Symposium on the Urban Environment, BPH5: Human perception and new indicators. Toulouse, July 2015.
       -  Konarska J, Lindberg F, Larsson A, Thorsson S, Holmer B 2013. Transmissivity of solar radiation through crowns of single urban trees—application for outdoor thermal comfort modelling. `Theoret. Appl. Climatol., 1–14 <http://link.springer.com/article/10.1007/s00704-013-1000-3>`__
       -  Lindberg, F., Grimmond, C.S.B., 2011a. The influence of vegetation and building morphology on shadow patterns and mean radiant temperatures in urban areas: model development and evaluation. `Theoret. Appl. Climatol. 105, 311–323 <http://link.springer.com/article/10.1007/s00704-010-0382-8>`__
-      -  Riendl D.T., Beckman W.A. and Duffie J.A. (1990), Diffuse Fraction Correlations, Solar Energy, Vol. 45, No.1, pp. 1-7.
+      -  Riendl D.T., Beckman W.A. and Duffie J.A. (1990), Diffuse Fraction Correlations, `Solar Energy, Vol. 45, No.1, pp. 1-7. <https://www.sciencedirect.com/science/article/abs/pii/0038092X9090060P>`__

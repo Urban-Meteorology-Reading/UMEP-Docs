@@ -26,10 +26,10 @@ Outdoor Thermal Comfort: SOLWEIG Analyzer
 * Dialog sections
    .. list-table::
       :widths: 10 90
-      :header-rows: 1
+      :header-rows: 0
 
       * - top
-        - Input data is specified
+        - Input data is specified. Should be pointing towards a directory where result from a `SOLWEIG <SOLWEIG>` model run has been saved.
       * - left
         - Plotting of time series derived from Points of Interest during model calculations in SOLWEIG
       * - bottom

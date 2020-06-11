@@ -4,44 +4,31 @@
 Getting Started
 ===============
 
-Recommended Installation Steps of QGIS on Windows
--------------------------------------------------
-
-.. note:: As UMEP-version for QGIS2 has been depreciated since February 2019, the new long-term release version of QGIS is 3.x.
+Recommended Installation of QGIS on Windows
+-------------------------------------------
 
 #. Visit `QGIS <http://www.qgis.org>`__ and go to the download page. Preferably, choose the `OSGEO4W Network Installer (64-bit) <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__, start the installation and choose *installation (64-bit) For Advanced Users*.
 #. **To install the latest version (3.x)**, start the installation and choose *Express Desktop Install*.
-#. **To install the** `LTR <Abbreviations>`, start the installation and choose *Advanced Install*. Click through to *Select Packages* and select *qgis-ltr-full*.
 
 Visit `www.qgis.org <http://www.qgis.org>`__ for installation on other operating systems.
 
 Installing the UMEP-plugin
 --------------------------
+#. Go to: *Plugins -> Manage and Install Plugins...* in QGIS Desktop.
 
-Long-term release (Recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. Start **QGIS**
+#. Under the *All*-tab, Search for **UMEP**.
 
-#. Go to: *Plugins -> Manage and Install Plugins...*
+#. Click on **UMEP** and then click **Install Plugin**. We recommend you to click **OK** to the popup question below. That will save you troubles later on. The python libraries that will be installed (if not present on your system) can be found `here <https://github.com/sunt05/SuPy/blob/d48f58d8f35e852acd4e205ca4b0a3c9adcdebf2/src/setup.py#L40-L58>`__.
 
-#. Search for **UMEP**
+  .. figure:: /images/installsupy.jpg
+     :alt:  None
+     :align: center
 
-#. Click **Install Plugin** (or **Upgrade** if already have an older version installed from before).
+     When installing UMEP related Python packages can be installed by clicking **OK**. Packages can also be installed later (see below).
 
+As from Spring 2020 parts of UMEP is also available as a `processing plugin <UMEPforProcessing>`. Install the same way but search for **UMEP for processing**. Also Remember to tick in **show also experimental plugins** under the *Settings*-tab.
 
-Development release (could be unstable)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#. If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -> Manage and Install Plugins -> Installed -> UMEP” and click **Uninstall plugin**.
-#. Download UMEP from the `repository <https://github.com/UMEP-dev/UMEP>`__, as a ZIP-file.
-#. Close QGIS if open.
-#. Extract the downloaded zip archive into the folder **C:\\Users\\your_username\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python\\plugins**. If the folder **plugins** does not exist, install any plugin using *Plugins -> Manage and Install Plugins* and the folder should appear.
-#. Rename the extracted folder to **UMEP**.
-#. Start QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -> Manage and Install Plugins -> All” and search for UMEP. Make sure that you also tick in the box *Show also experimental plugins* in the “Settings”-tab.
-
-Test `datasets <urban-meteorology-reading.github.io>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out.
-
-Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `issue tracker <https://github.com/UMEP-dev/UMEP/issues>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
-
+Test `datasets <urban-meteorology-reading.github.io>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out. Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `issue tracker <https://github.com/UMEP-dev/UMEP/issues>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
 
 .. _Python_Libraries:
 
@@ -90,7 +77,7 @@ repository.
                   pip install netCDF4 --upgrade
                   
         #. Mac OS X
-            - Follow the instructions for Linux. ***Note***: this approach is tested to be working under Mac OS X 10.11.5.
+            - Follow the instructions for Linux. **Note**: this approach is tested to be working under Mac OS X 10.11.5.
         #. Other Platforms
             - Other platforms require the packages to be installed to the QGIS Python path, which differs depending on operating system. 
               Or refer to `startup.py <http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/intro.html#the-startup-py-file>`__
@@ -98,3 +85,11 @@ repository.
               ::
                  import sys
                  sys.path.insert(1,'/usr/local/lib/python3.7/site-packages')
+
+
+Installing development release (could be unstable)
+--------------------------------------------------
+#. Download UMEP from the `repository <https://github.com/UMEP-dev/UMEP>`__, as a ZIP-file.
+#. If you have an installed version of UMEP in your QGIS, uninstall it by going to “Plugins -> Manage and Install Plugins -> Installed -> UMEP” and click **Uninstall plugin**.
+#. Go to “Plugins -> Manage and Install Plugins -> Install from zip”. 
+#. Restart QGIS. The UMEP plugin should be visible in the QGIS toolbar. If not, go to “Plugins -> Manage and Install Plugins -> All” and search for UMEP. Make sure that you also tick in the box *Show also experimental plugins* in the “Settings”-tab.

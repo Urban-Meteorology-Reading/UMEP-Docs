@@ -11,7 +11,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
         - Institution
       * - Fredrik Lindberg
         - Gothenburg
-      * - Dag Wäsrberg
+      * - Dag Wästberg
         - Ramböll
 
 * Introduction
