@@ -37,7 +37,7 @@ that provides data viewing, editing, and analysis capabilities.
 
 --------------
 
-We are keen to get inputs and contributions from others. Plesae contribute in the following ways:
+We are keen to get inputs and contributions from others. Please contribute in the following ways:
 
 #. Submit comments or report issues about the UMEP plugin to the code `repository <https://github.com/UMEP-dev/UMEP/issues>`__.
 #. Participate in `coding or adding new features <How_to_Contribute>`.
