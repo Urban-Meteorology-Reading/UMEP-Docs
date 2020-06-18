@@ -26,7 +26,7 @@ Installing the UMEP-plugin
 
      When installing UMEP related Python packages can be installed by clicking **OK**. Packages can also be installed later (see below).
 
-As from Spring 2020 parts of UMEP is also available as a `processing plugin <UMEPforProcessing>`. Install the same way but search for **UMEP for processing**. Also Remember to tick in **show also experimental plugins** under the *Settings*-tab.
+As from Spring 2020 parts of UMEP is also available as a `processing plugin <UMEPforProcessing>`. Install the same way but search for **UMEP for processing**. Also remember to tick in **show also experimental plugins** under the *Settings*-tab.
 
 Test `datasets <urban-meteorology-reading.github.io>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out. Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `issue tracker <https://github.com/UMEP-dev/UMEP/issues>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
 
