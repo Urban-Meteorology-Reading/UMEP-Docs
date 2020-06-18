@@ -42,7 +42,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     Tick this box if you want to include vegetation (trees and bushes) into the analysis.
 
 * Trunk Zone DSM Exist
-    Tick this in if a trunk zone DSM already exist.
+    Tick this box if a trunk zone DSM already exist.
 
 * Transmissivity of Light Through Vegetation (%)
     Percentage of light that is penetrating through vegetation. Default value is set to 3 % according to Konarska et al. (2013).
@@ -54,7 +54,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     A raster of the same size and extent as the ground and building DSM including information of the wall pixels and its height in meters above ground should be specified here. Non wall pixels should be set to zero. This raster is used to estimate irradiance on building walls and can be generated using the Wall Height and Aspect plugin located at UMEP  -> Pre-processing  -> Urban Geometry  -> Wall Height and Aspect.
 
 * Wall Aspect Raster
-    A raster of the same size and extent as the ground and building DSM including information of the wall pixels and its aspect, i.e. angle, should be specified here. For example a wall facing towards the south has a value of 180°. Non wall pixels should be set to zero. This raster are used to estimate irradiance on building walls and can be generated using the Wall Height and Aspect plugin located at UMEP  -> Pre-processing  -> Urban Geometry  -> Wall Height and Aspect.
+    A raster of the same size and extent as the ground and building DSM including information of the wall pixels and its aspect, i.e. angle, should be specified here. For example a wall facing towards the south has a value of 180°. Non wall pixels should be set to zero. This raster is used to estimate irradiance on building walls and can be generated using the Wall Height and Aspect plugin located at UMEP  -> Pre-processing  -> Urban Geometry  -> Wall Height and Aspect.
 
 * Albedo
     This parameter specifies the reflectivity of shortwave radiation of all surfaces (ground, roofs, walls and vegetation). It should be a value between 0 and 1. The default value is set to 0.15.
@@ -63,7 +63,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     Time zone needs to be specified. Positive numbers increase when moving east (e.g. Stockholm UTC +1).
 
 * Estimate Diffuse and Direct Shortwave Components from Global Radiation
-    Tick this in if only global radiation is present. Diffuse and direct shortwave components will then be estimated from global radiation based on the statistical model presented by Reindl et al. (1990). If air temperature and relative humidity is present, the statistical model will perform better but it is able to estimate the components using only global shortwave radiation.
+    Tick this if only global radiation is present. Diffuse and direct shortwave components will then be estimated from global radiation based on the statistical model presented by Reindl et al. (1990). If air temperature and relative humidity is present, the statistical model will perform better but it is able to estimate the components using only global shortwave radiation.
 
 * Input Meteorological File
     Input meteorological data specifically formatted to be used in UMEP. This specific format can be created using UMEP  -> Pre-processing  -> Meteorological data  -> Prepare existing data. A dataset with **hourly** time resolution should be used for SEBE, preferably at least **one year in length**. The time should be in `LST <Abbreviations>` for the specific location to be modelled. Multiple years can also be used to improve the model outcome. Model output is dependent on the meteorological input data so if a short dataset is used, potential solar energy would be valid for that particular time period only.
@@ -75,7 +75,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
           +   where h is the sun altitude. Since diffuse and direct components of short wave radiation is not common data, it is also possible to calculate diffuse and direct shortwave radiation (see above).
 
 * Save Sky Irradiance Distribution
-    When the box is ticked in, it is possible to save the radiation distribution from the sky vault calculated from the meteorological file. SEBE first distributes the radiation on 145 sky patches on the sky vault and then generates shadows on the DSMs based on these patches, i.e. the core loop in the model iterates 145 times. For more detailed information on this, see Lindberg et al. (2015).
+    When the box is ticked, it is possible to save the radiation distribution from the sky vault calculated from the meteorological file. SEBE first distributes the radiation on 145 sky patches on the sky vault and then generates shadows on the DSMs based on these patches, i.e. the core loop in the model iterates 145 times. For more detailed information on this, see Lindberg et al. (2015).
 
 * Output Folder
     A specified folder where result will be saved should be specified here. One raster showing irradiance on ground and building roofs named Energyyearroof.tif is saved as well as a text file of wall irradiance (Energyyearwall.txt). Also, the ground and building DSM is saved in the output folder to be used later in a SEBE visualization plugin (UMEP  -> Post-processing  -> Solar Energy  -> SEBE (Visualisation)).
@@ -84,13 +84,13 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     This starts the calculations.
 
 * Add Roof and Ground Irradiance Result Raster to Project
-    If this is ticked in, **Energyyearroof.tif** will be loaded into to the map canvas.
+    If this is ticked, **Energyyearroof.tif** will be loaded into to the map canvas.
 
 * Close
     This button closes the plugin.
 
 * Output
-    As mentioned earlier, three mandatory datasets are save is the model was successful. The geoTIFF **Energyyearroof.tif** show pixel wise total irradiance in kWh. **Energyyearwall.txt** show total wall irradiance for each wall column. The **Energyyearwall.txt** is formatted in the following way: first and second column is the relative row and column number from upper left corner of the modelled grid. The following columns are irradiance for each wall voxel starting from the ground and moving upwards as going right in each row. If zero values are found  (especially in the end of the row that means that the wall column has reached its maximum height. The column voxel is decided based on the pixel resolution of the input data. Also, the ground and building DSM is saved in the output folder for later use. If the vegetation DSMs were added, one additional file (**Vegetationdata.txt**) including information of vegetation height and location are also saved. This file is also be used in the SBEB visualization plugin.
+    As mentioned earlier, three mandatory datasets are saved if the model runs successfully. The geoTIFF **Energyyearroof.tif** show pixel wise total irradiance in kWh. **Energyyearwall.txt** show total wall irradiance for each wall column. The **Energyyearwall.txt** is formatted in the following way: first and second column is the relative row and column number from upper left corner of the modelled grid. The following columns are irradiance for each wall voxel starting from the ground and moving upwards as going right in each row. If zero values are found  (especially at the end of the row) that means that the wall column has reached its maximum height. The column voxel is decided based on the pixel resolution of the input data. Also, the ground and building DSM is saved in the output folder for later use. If the vegetation DSMs were added, one additional file (**Vegetationdata.txt**) including information of vegetation height and location, is also saved. This file is also used in the SEBE visualization plugin.
 
 * Example of input data and result
 .. figure:: /images/SEBE2.jpg
