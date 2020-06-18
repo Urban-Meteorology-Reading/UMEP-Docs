@@ -54,7 +54,7 @@ repository.
 
         #. Windows
             -  As Windows has no Python installation included, QGIS make use of a separate Python installation added when QGIS was installed on your PC. There are two options available.
-              1. (**Try this first**) Installation of e.g. pandas Restart the *installation (64-bit) For Advanced Users* (see Getting started) and choose *Advanced Install*. When you come up to Select Packages search for pandas and click on *Skip* until you see a version number of pandas (see left picture). Finish the installation.
+              1. (**Try this first**) Run the *osgeo4w-setup-x86_64.exe* (or *osgeo4w-setup-x86_32.exe* depending on your system) executable. This can be found using the Windows search bar. Select *Advanced Install* -> *Install from Internet*. The next four pages will give options to select the *Installation Directory*, *Local Package Directory*, *Connection Type* and *Download Site*. Alter these as required. In most cases the default entries will be fine. When you come up to the *Select Packages* page, search for the requied package (e.g. pandas) and click on *Skip* until you see a version number of pandas (see left picture). Finish the installation.
 
                 .. figure::  /images/Pandas.png
 
