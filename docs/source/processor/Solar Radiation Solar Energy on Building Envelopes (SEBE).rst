@@ -99,7 +99,7 @@ Solar Radiation: Solar Energy on Building Envelopes (SEBE)
     Input DSM (left) and irradiance image (right) in Gothenburg using data from 1977. 
 
 * Remarks
-    - All DSMs need to have the same extent and pixel
+    - All DSMs need to have the same extent and pixel resolution.
     - This plugin is computationally intensive i.e. large grids will take a lot of time and very large grids will not be possible to use. Large grids e.g. larger than 4000000 pixels should be tiled before.
 
 * References
