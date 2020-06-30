@@ -30,6 +30,15 @@ As from Spring 2020 parts of UMEP is also available as a `processing plugin <UME
 
 Test `datasets <urban-meteorology-reading.github.io>`__ and `tutorials <http://umep-docs.readthedocs.io/en/latest/tutorial/docs/source/index.html>`__ are available to try some of the tools out. Since QGIS is a multi-platform software system it works on other platforms as well. UMEP is constanlty under development so there may be missing documentation and instability. Please report any issues to the `issue tracker <https://github.com/UMEP-dev/UMEP/issues>`__. Also, have a look in `FAQ <FAQ>` for further installation tips and issues.
 
+Updating the UMEP-plugin
+------------------------
+#. Go to: *Plugins -> Manage and Install Plugins...* in QGIS Desktop.
+
+#. Search for **UMEP**.
+
+#. Click on **UMEP**. If a new version is available, this will be stated here. If so, click **Upgrade Plugin**.
+
+
 .. _Python_Libraries:
 
 Adding missing Python libraries and other OSGeo functionalities
