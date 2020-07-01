@@ -6,7 +6,6 @@ The models can be accessed from the left panel.
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
    :hidden:
    :glob:
 
