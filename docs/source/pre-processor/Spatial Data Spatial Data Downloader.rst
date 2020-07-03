@@ -13,6 +13,8 @@ Spatial Data: Spatial Data Downloader
    * - Andy Gabey
      - Reading
 
+.. note:: This plugin is depracated as from July 2020. Visit our `YouTube Channel <https://www.youtube.com/channel/UCTPkXncD3ghb5ZTdZe_u7gA>`__ and watch the link on how to access Web Services using QGIS instead.
+
 
 * Introduction
    The Spatial Data Downloader downloads geo-datasets useful for UMEP applications. Only the necessary section of the data is downloaded, so that disk use and download time are minimised.
