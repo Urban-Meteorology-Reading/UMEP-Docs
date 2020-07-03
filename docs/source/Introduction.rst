@@ -262,6 +262,15 @@ other.
    temperature using the SOLWEIG model. Bold outlines are mandatory
    items. Yellow, orange and red indicates pre-processor, processor and
    post-processor tools, respectively. Grey boxes indicate geodatasets.
+   
+.. figure:: /images/SEBE_flowchart.jpg
+   :alt:   None
+   :width: 100%
+
+   Workflow and geodata used for analysing solar irradiance on building
+   envelopes using the SEBE model. Bold outlines are mandatory
+   items. Yellow, orange and red indicates pre-processor, processor and
+   post-processor tools, respectively. Grey boxes indicate geodatasets.   
 
 Evaluation and application studies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
