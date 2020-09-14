@@ -42,9 +42,9 @@ FootprintModel - NOT READY
 
 LCZ_converter - NOT READY
 
-UMEP_Data_Download  - NOT READY
+UMEP_Data_Download - NOT READY
 
-DSMGenerator  - NOT Ready
+DSMGenerator - NOT Ready
 
 ERA5 DownloadData  - READY
 
@@ -64,9 +64,9 @@ SUEWSConverter - Will not be migrated
 
 SUEWS - READY
 
-SOLWEIG - NOT READY
+SOLWEIG - READY
 
-BenchMarking  - Will not be migrated
+BenchMarking - Will not be migrated
 
 SEBEVisual - Will not be migrated
 
